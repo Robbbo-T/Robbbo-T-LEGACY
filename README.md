@@ -127,7 +127,7 @@ CAS → CAO → CAP → CAT → CAI → CAM → CAE → CAD
 
 ## C-AMEDEO Framework — Interactive Index (Full Breakdown)
 
-Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase del ciclo de vida (`CAX`) contiene la descomposición completa de los **15 dominios tecnológicos** del programa AMPEL360. Para una navegación eficiente, cada `CE` y `CA` se presenta como un hipervínculo a su sección detallada dentro de este mismo documento.
+Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase del ciclo de vida (`CAX`) contiene la descomposición completa de los **15 dominios tecnológicos** del programa AMPEL360. Cada `CE` y `CA` se presenta como un hipervínculo a su sección detallada dentro de este mismo documento.
 
 ---
 
@@ -135,122 +135,147 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 
 #### CAD-DESIGN (Artefactos de diseño: Modelos 3D, Planos, Especificaciones)
 
-*   **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**  
-    *   [**CE-CAD-Q100-CONF0000-53-FUSELAGE**](#ce-cad-q100-conf0000-53-fuselage-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-57-WINGS**](#ce-cad-q100-conf0000-57-wings-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-55-STABILIZERS**](#ce-cad-q100-conf0000-55-stabilizers-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-52-DOORS**](#ce-cad-q100-conf0000-52-doors-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-56-WINDOWS**](#ce-cad-q100-conf0000-56-windows-deoptimise-cad)
-*   **M-MECHANICAL_MATERIAL_MONITORING**  
-    *   [**CE-CAD-Q100-CONF0000-27-FLIGHT-CONTROLS**](#ce-cad-q100-conf0000-27-flight-controls-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-32-LANDING-GEAR**](#ce-cad-q100-conf0000-32-landing-gear-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER**](#ce-cad-q100-conf0000-29-hydraulic-power-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-52-STRUCTURES**](#ce-cad-q100-conf0000-52-structures-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-53-SYSTEMS**](#ce-cad-q100-conf0000-53-systems-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-36-PNEUMATIC**](#ce-cad-q100-conf0000-36-pneumatic-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-07-MAINTENANCE**](#ce-cad-q100-conf0000-07-maintenance-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-95-X_DOMAIN_INTF**](#ce-cad-q100-conf0000-95-x_domain_intf-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-08-AIRCRAFT_MEAS**](#ce-cad-q100-conf0000-08-aircraft_meas-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-09-GROUND_OPS**](#ce-cad-q100-conf0000-09-ground_ops-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-14-STD_HARDWARE**](#ce-cad-q100-conf0000-14-std_hardware-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-16-VIBRATION_TEST**](#ce-cad-q100-conf0000-16-vibration_test-deoptimise-cad)
-*   **E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY**  
-    *   [**CE-CAD-Q100-CONF0000-21-ECS**](#ce-cad-q100-conf0000-21-ecs-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-30-ICE_RAIN**](#ce-cad-q100-conf0000-30-ice_rain-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-26-FIRE_DETECTION**](#ce-cad-q100-conf0000-26-fire_detection-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-47-H2_SAFETY**](#ce-cad-q100-conf0000-47-h2_safety-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-38-WATER_WASTE**](#ce-cad-q100-conf0000-38-water_waste-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-20-NOISE_CONTRAIL**](#ce-cad-q100-conf0000-20-noise_contrail-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-21-THERMAL_MGMT**](#ce-cad-q100-conf0000-21-thermal_mgmt-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-20-CIRCULARITY**](#ce-cad-q100-conf0000-20-circularity-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-21-BIOSECURITY**](#ce-cad-q100-conf0000-21-biosecurity-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-21-DRAINS**](#ce-cad-q100-conf0000-21-drains-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-35-OXYGEN**](#ce-cad-q100-conf0000-35-oxygen-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-37-VACUUM**](#ce-cad-q100-conf0000-37-vacuum-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-18-VIBRATION_NOISE**](#ce-cad-q100-conf0000-18-vibration_noise-deoptimise-cad)  
-    *   [**CE-CAD-Q100-CONF0000-20-GROUND_ENV**](#ce-cad-q100-conf0000-20-ground_env-deoptimise-cad)
-*   *(...y los 12 dominios tecnológicos restantes en CAD-DESIGN, con sus CE/CA/CI completos...)*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#cad-design-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#cad-design-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#cad-design-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#cad-design-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#cad-design-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#cad-design-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#cad-design-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#cad-design-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#cad-design-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#cad-design-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#cad-design-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#cad-design-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#cad-design-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#cad-design-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#cad-design-a2-airports_adaptations)**  
 
 #### CAE-ENGINEERING (Artefactos de análisis: Resultados FEM/CFD, Simulaciones, Informes de Validación)
 
-*   **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**  
-    *   [**CE-CAE-Q100-CONF0000-06-AERO-CERT**](#ce-cae-q100-conf0000-06-aero-cert-deoptimise-cae)
-*   **M-MECHANICAL_MATERIAL_MONITORING**  
-    *   [**CE-CAE-Q100-CONF0000-16-VIBRATION-TEST**](#ce-cae-q100-conf0000-16-vibration-test-deoptimise-cae)  
-    *   [**CE-CAE-Q100-CONF0000-99-MACHINE-SIM**](#ce-cae-q100-conf0000-99-machine-sim-deoptimise-cae)
-*   **E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY**  
-    *   [**CE-CAE-Q100-CONF0000-18-VIBRATION-NOISE**](#ce-cae-q100-conf0000-18-vibration-noise-deoptimise-cae)  
-    *   [**CE-CAE-Q100-CONF0000-20-NOISE-EMISSIONS**](#ce-cae-q100-conf0000-20-noise-emissions-deoptimise-cae)
-*   *(...y los 12 dominios tecnológicos restantes en CAE-ENGINEERING, con sus CE/CA/CI completos...)*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#cae-engineering-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#cae-engineering-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#cae-engineering-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#cae-engineering-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#cae-engineering-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#cae-engineering-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#cae-engineering-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#cae-engineering-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#cae-engineering-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#cae-engineering-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#cae-engineering-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#cae-engineering-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#cae-engineering-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#cae-engineering-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#cae-engineering-a2-airports_adaptations)**  
 
-#### CAO-ORGANIZATION_RULES (Artefactos de gobernanza: Planes de Programa, Estructura Org., Políticas)
+#### CAO-ORGANIZATION\_RULES (Artefactos de gobernanza: Planes de Programa, Políticas, Estructura Org.)
 
-*   [**CA-CAO-Q100-CONF0000-01-PROGRAM-GOVERNANCE**](#ca-cao-q100-conf0000-01-program-governance-deoptimise-cao)
-*   [**CA-O2-00-11-REGULATORY-INTERFACE**](#ca-o2-00-11-regulatory-interface-deoptimise-cao)
-*   *(...y los demás CIs de O2-ORGANIZATIONAL para la fase CAO...)*
+*   **[O2-ORGANIZATIONAL](#cao-organization_rules-o2-organizational)**  
 
 #### CAP-PROCESS\_SAFETY\_VV\_AND\_COMPLIANCE (Artefactos de proceso: Planes de Certificación/V&V, Procedimientos)
 
-*   [**CA-CAP-Q100-CONF0000-01-LIFECYCLE-PROCESSES**](#ca-cap-q100-conf0000-01-lifecycle-processes-deoptimise-cap)
-*   [**CA-P2-00-71-GATES-AND-REVIEWS**](#ca-p2-00-71-gates-and-reviews-deoptimise-cap)
-*   *(...y los demás CIs de P2-PROCEDURAL para la fase CAP...)*
+*   **[P2-PROCEDURAL_FRAMEWORK](#cap-process_safety_vv_and_compliance-p2-procedural_framework)**  
 
 #### CAT-SOURCE\_CODE\_SYSTEMS (Repositorio de tecnología viva: Código SW/HW, Modelos AI, Agentes)
 
-*   **SW**
-    *   [AQUA-OS_BRIDGE/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/SW/AQUA-OS_BRIDGE/)
-    *   [GAIA_AIR_RTOS/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/SW/GAIA_AIR_RTOS/)
-    *   *(...y otros repositorios de software)*
-*   **HW_SPECS**
-    *   [FADEC_CONTROLLER_VHDL/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/HW_SPECS/FADEC_CONTROLLER_VHDL/)
-    *   *(...y otras especificaciones de hardware)*
-*   **AI_MODELS**
-    *   [RUL_ESTIMATION_MODELS/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/AI_MODELS/RUL_ESTIMATION_MODELS/)
-    *   *(...y otros modelos de IA)*
-*   **AGENTS**
-    *   [FLEET_OPTIMIZATION_AGENTS/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/AGENTS/FLEET_OPTIMIZATION_AGENTS/)
-    *   *(...y otros agentes)*
-*   **INSTRUCTION_LIBRARY**
-    *   [NC_CNC_TOOLPATHS/](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/INSTRUCTION_LIBRARY/NC_CNC_TOOLPATHS/)
-    *   *(...y otras librerías de instrucciones)*
+*   **[SW (Software Source Code)](#cat-source_code_systems-sw-software-source-code)**  
+*   **[HW_SPECS (Hardware Specifications & RTL)](#cat-source_code_systems-hw_specs-hardware-specifications--rtl)**  
+*   **[AI_MODELS (Trained AI/ML Models)](#cat-source_code_systems-ai_models-trained-aiml-models)**  
+*   **[AGENTS (Autonomous Agents Code)](#cat-source_code_systems-agents-autonomous-agents-code)**  
+*   **[INSTRUCTION_LIBRARY (NC/CNC Toolpaths, Automation Scripts)](#cat-source_code_systems-instruction_library-ncnc-toolpaths-automation-scripts)**  
 
 #### CAM-MANUFACTURING (Artefactos de producción: Planes de Fabricación, MBOM, Instrucciones)
 
-*   **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**  
-    *   [**CE-CAM-Q100-CONF0000-53-FUSELAGE**](#ce-cam-q100-conf0000-53-fuselage-deoptimise-cam)
-*   *(...y los 14 dominios tecnológicos restantes en CAM-MANUFACTURING, con sus CE/CA/CI completos...)*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#cam-manufacturing-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#cam-manufacturing-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#cam-manufacturing-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#cam-manufacturing-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#cam-manufacturing-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#cam-manufacturing-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#cam-manufacturing-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#cam-manufacturing-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#cam-manufacturing-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#cam-manufacturing-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#cam-manufacturing-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#cam-manufacturing-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#cam-manufacturing-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#cam-manufacturing-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#cam-manufacturing-a2-airports_adaptations)**  
 
 #### CAI (Computer-Aided Integrations) (Artefactos de integración: ICDs, Registros de Instalación, Resultados de Pruebas)
 
-*   **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**  
-    *   [**CE-CAI-Q100-CONF0000-53-FUSELAGE**](#ce-cai-q100-conf0000-53-fuselage-deoptimise-cai)
-*   *(...y los 14 dominios tecnológicos restantes en CAI, con sus CE/CA/CI completos...)*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#cai-integrations-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#cai-integrations-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#cai-integrations-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#cai-integrations-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#cai-integrations-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#cai-integrations-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#cai-integrations-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#cai-integrations-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#cai-integrations-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#cai-integrations-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#cai-integrations-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#cai-integrations-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#cai-integrations-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#cai-integrations-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#cai-integrations-a2-airports_adaptations)**  
 
 #### CAS-SUSTAINMENT (Artefactos de operación y soporte: Manuales, Datos de MRO)
 
-*   **A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**  
-    *   [**CE-CAS-Q100-CONF0000-53-FUSELAGE**](#ce-cas-q100-conf0000-53-fuselage-deoptimise-cas)
-*   *(...y los 14 dominios tecnológicos restantes en CAS-SUSTAINMENT, con sus CE/CA/CI completos...)*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#cas-sustainment-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#cas-sustainment-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#cas-sustainment-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#cas-sustainment-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#cas-sustainment-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#cas-sustainment-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#cas-sustainment-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#cas-sustainment-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#cas-sustainment-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#cas-sustainment-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#cas-sustainment-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#cas-sustainment-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#cas-sustainment-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#cas-sustainment-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#cas-sustainment-a2-airports_adaptations)**  
 
 #### CAEV (Computer-Aided Evolution) (Artefactos de evolución: Informes de Evaluación EoL, Directivas)
 
-*   [**CA-CAEV-Q100-CONF0000-01-EVALUATION-AND-ACTIVATION**](#ca-caev-q100-conf0000-01-evaluation-and-activation-deoptimise-caev)
-*   *(Este pilar, al ser transversal y de alto nivel, no se desglosa internamente por dominios tecnológicos, sino que genera artefactos que resumen la preparación para la evolución).*
+*   **[A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS](#caev-evolution-a-architectures_airframes_aerodynamics)**  
+*   **[M-MECHANICAL_MATERIAL_MONITORING](#caev-evolution-m-mechanical_material_monitoring)**  
+*   **[E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY](#caev-evolution-e1-environmental_remediation_circularity)**  
+*   **[D-DEFENCE_CYBERSECURITY_SAFETY](#caev-evolution-d-defence_cybersecurity_safety)**  
+*   **[E2-ENERGY_AND_RENEWABLE](#caev-evolution-e2-energy_and_renewable)**  
+*   **[O-OPERATING_SYSTEMS_NAVIGATION_HPC](#caev-evolution-o-operating_systems_navigation_hpc)**  
+*   **[P-PROPULSION_AND_FUELS](#caev-evolution-p-propulsion_and_fuels)**  
+*   **[E3-ELECTRONICS_DIGITAL_INSTRUMENTS](#caev-evolution-e3-electronics_digital_instruments)**  
+*   **[L1-LOGISTICS_INTEGRATED_BLOCKCHAIN](#caev-evolution-l1-logistics_integrated_blockchain)**  
+*   **[L2-LINKS_COMMUNICATIONS_CONTROL_IoT](#caev-evolution-l2-links_communications_control_iot)**  
+*   **[I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS](#caev-evolution-i-infrastructures_and_facilities_value_chains)**  
+*   **[C1-COCKPIT_CABIN_CARGO_SYSTEMS](#caev-evolution-c1-cockpit_cabin_cargo_systems)**  
+*   **[C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS](#caev-evolution-c2-cryogenics_quantum_interfaces_hydrogen_cells)**  
+*   **[I2-INTELLIGENT_SYSTEMS_ONBOARD_AI](#caev-evolution-i2-intelligent_systems_onboard_ai)**  
+*   **[A2-AIRPORTS_ADAPTATIONS](#caev-evolution-a2-airports_adaptations)**  
 
 ---
 
 ### **Fase 2: CA-OPTIMISED (Restoration & Evolution Flow)**
 
-*Esta fase contiene una estructura de directorios similar a `CA-DEOPTIMISE`, pero los artefactos se centran en la restauración, el retrabajo y la regeneración del diseño. Se aplicará la misma descomposición de 15 dominios dentro de cada pilar CAX relevante.*
+*Esta fase contiene una estructura de directorios similar a `CA-DEOPTIMISE`, pero los artefactos se centran en la restauración, el retrabajo y la regeneración del diseño. Se aplicará la misma descomposición de 15 dominios dentro de cada pilar CAX relevante, con sufijos como `-EVO1` para las CIs si es necesario.*
 
 ---
 
 ## Detalle de CEs, CAs y CIs por Dominio Tecnológico (H2-BWB-Q100-CONF0000)
 
+*(Las rutas base para estos detalles comienzan con `C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/<CAX_PILLAR>/H2-BWB-Q100-CONF0000/`)*
+
 ---
 
+<a name="cad-design-a-architectures_airframes_aerodynamics"></a>
+#### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**
+
 <a name="ce-cad-q100-conf0000-53-fuselage-deoptimise-cad"></a>
-### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS / CE-CAD-Q100-CONF0000-53-FUSELAGE**
+##### **CE-CAD-Q100-CONF0000-53-FUSELAGE**
 
 *   **CA-CAD-Q100-CONF0000-53-10-CENTER-BODY-BOX**  
     *   [`CI-CA-CAD-Q100-CONF0000-53-10-01-CB-PRIMARY-GRID`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-53-FUSELAGE/CA-CAD-Q100-CONF0000-53-10-CENTER-BODY-BOX/CI-CA-CAD-Q100-CONF0000-53-10-01-CB-PRIMARY-GRID/) **[STANDARDS/REGS: CS-25.301-351, FAR 25.301-351, ARP4754A]**
@@ -284,7 +309,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-57-wings-deoptimise-cad"></a>
-### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS / CE-CAD-Q100-CONF0000-57-WINGS**
+##### **CE-CAD-Q100-CONF0000-57-WINGS**
 
 *   **CA-CAD-Q100-CONF0000-57-10-CENTER-WING-BOX**  
     *   [`CI-CA-CAD-Q100-CONF0000-57-10-01-CWB-FRONT-SPAR`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-57-WINGS/CA-CAD-Q100-CONF0000-57-10-CENTER-WING-BOX/CI-CA-CAD-Q100-CONF0000-57-10-01-CWB-FRONT-SPAR/) **[STANDARDS/REGS: CS-25.305-351, FAR 25.305-351, MIL-HDBK-5J]**
@@ -305,7 +330,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-55-stabilizers-deoptimise-cad"></a>
-### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS / CE-CAD-Q100-CONF0000-55-STABILIZERS**
+##### **CE-CAD-Q100-CONF0000-55-STABILIZERS**
 
 *   **CA-CAD-Q100-CONF0000-55-10-HORIZONTAL-STABILIZER**  
     *   [`CI-CA-CAD-Q100-CONF0000-55-10-01-HORIZONTAL-STAB-STRUCTURE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-55-STABILIZERS/CA-CAD-Q100-CONF0000-55-10-HORIZONTAL-STABILIZER/CI-CA-CAD-Q100-CONF0000-55-10-01-HORIZONTAL-STAB-STRUCTURE/) **[STANDARDS/REGS: CS-25.301-351, FAR 25.301-351, CMH-17]**
@@ -323,7 +348,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-52-doors-deoptimise-cad"></a>
-### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS / CE-CAD-Q100-CONF0000-52-DOORS**
+##### **CE-CAD-Q100-CONF0000-52-DOORS**
 
 *   **CA-CAD-Q100-CONF0000-52-10-PASSENGER-DOORS**  
     *   [`CI-CA-CAD-Q100-CONF0000-52-10-01-DOOR-STRUCTURE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-52-DOORS/CA-CAD-Q100-CONF0000-52-10-PASSENGER-DOORS/CI-CA-CAD-Q100-CONF0000-52-10-01-DOOR-STRUCTURE/) **[STANDARDS/REGS: CS-25.783, FAR 25.783, SAE AS81934]**
@@ -340,7 +365,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-56-windows-deoptimise-cad"></a>
-### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS / CE-CAD-Q100-CONF0000-56-WINDOWS**
+##### **CE-CAD-Q100-CONF0000-56-WINDOWS**
 
 *   **CA-CAD-Q100-CONF0000-56-10-FLIGHT-DECK-WINDOWS**  
     *   [`CI-CA-CAD-Q100-CONF0000-56-10-01-WINDSHIELDS-HEATED`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-56-WINDOWS/CA-CAD-Q100-CONF0000-56-10-FLIGHT-DECK-WINDOWS/CI-CA-CAD-Q100-CONF0000-56-10-01-WINDSHIELDS-HEATED/) **[STANDARDS/REGS: CS-25.775, FAR 25.775, RTCA DO-160]**
@@ -357,7 +382,13 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 
 ---
 
-### **CAD-DESIGN / M-MECHANICAL_MATERIAL_MONITORING / CE-CAD-Q100-CONF0000-27-FLIGHT-CONTROLS**
+---
+
+<a name="cad-design-m-mechanical_material_monitoring"></a>
+#### **CAD-DESIGN / M-MECHANICAL_MATERIAL_MONITORING**
+
+<a name="ce-cad-q100-conf0000-27-flight-controls-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-27-FLIGHT-CONTROLS**
 
 *   **CA-CAD-Q100-CONF0000-27-10-FLIGHT-CONTROL-MECHANISMS**  
     *   [`CI-CA-CAD-Q100-CONF0000-27-10-01-FC-ELEVON-HINGE-LINES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-27-FLIGHT-CONTROLS/CA-CAD-Q100-CONF0000-27-10-FLIGHT-CONTROL-MECHANISMS/CI-CA-CAD-Q100-CONF0000-27-10-01-FC-ELEVON-HINGE-LINES/) **[STANDARDS/REGS: CS-25.397, FAR 25.397, SAE ARP4754A]**
@@ -381,7 +412,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-32-landing-gear-deoptimise-cad"></a>
-### **CAD-DESIGN / M-MECHANICAL_MATERIAL_MONITORING / CE-CAD-Q100-CONF0000-32-LANDING-GEAR**
+##### **CE-CAD-Q100-CONF0000-32-LANDING-GEAR**
 
 *   **CA-CAD-Q100-CONF0000-32-10-LANDING-GEAR-SYSTEM**  
     *   [`CI-CA-CAD-Q100-CONF0000-32-10-01-LG-NOSE-GEAR-ASSEMBLY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-32-LANDING-GEAR/CA-CAD-Q100-CONF0000-32-10-LANDING-GEAR-SYSTEM/CI-CA-CAD-Q100-CONF0000-32-10-01-LG-NOSE-GEAR-ASSEMBLY/) **[STANDARDS/REGS: CS-25.721, FAR 25.721, SAE ARP4754A]**
@@ -407,7 +438,7 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
 ---
 
 <a name="ce-cad-q100-conf0000-29-hydraulic-power-deoptimise-cad"></a>
-### **CAD-DESIGN / M-MECHANICAL_MATERIAL_MONITORING / CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER**
+##### **CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER**
 
 *   **CA-CAD-Q100-CONF0000-29-10-HYDRAULIC-POWER-DISTRIBUTION**  
     *   [`CI-CA-CAD-Q100-CONF0000-29-10-01-HYD-RESERVOIRS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER/CA-CAD-Q100-CONF0000-29-10-HYDRAULIC-POWER-DISTRIBUTION/CI-CA-CAD-Q100-CONF0000-29-10-01-HYD-RESERVOIRS/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309, AS1055, MIL-HDBK-774]**
@@ -419,54 +450,344 @@ Este índice detalla la estructura matricial de **C-AMEDEO**, donde cada fase de
     *   [`CI-CA-CAD-Q100-CONF0000-29-10-07-HYD-RETURN-LINES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER/CA-CAD-Q100-CONF0000-29-10-HYDRAULIC-POWER-DISTRIBUTION/CI-CA-CAD-Q100-CONF0000-29-10-07-HYD-RETURN-LINES/) **[STANDARDS/REGS: AS1055, ARP4754A]**
     *   [`CI-CA-CAD-Q100-CONF0000-29-10-08-HYD-OIL-COOLERS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER/CA-CAD-Q100-CONF0000-29-10-HYDRAULIC-POWER-DISTRIBUTION/CI-CA-CAD-Q100-CONF0000-29-10-08-HYD-OIL-COOLERS/) **[STANDARDS/REGS: MIL-STD-810G]**
     *   [`CI-CA-CAD-Q100-CONF0000-29-10-09-HYD-ISOLATION-VALVE-BRACKETS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/M-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-CONF0000-29-HYDRAULIC-POWER/CA-CAD-Q100-CONF0000-29-10-HYDRAULIC-POWER-DISTRIBUTION/CI-CA-CAD-Q100-CONF0000-29-10-09-HYD-ISOLATION-VALVE-BRACKETS/) **[STANDARDS/REGS: CS-25.601, FAR 25.601]**
-```
 
 ---
 
-**(Y así continuaría la expansión detallada de todos los 15 dominios tecnológicos dentro de cada pilar CAX pertinente. Por ejemplo, `E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY` dentro de `CAD-DESIGN` se expandiría con sus `CE` y `CA` como se vio en la respuesta anterior.)**
+<a name="cad-design-e1-environmental_remediation_circularity"></a>
+#### **CAD-DESIGN / E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY**
+
+<a name="ce-cad-q100-conf0000-21-ecs-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-21-ECS**
+
+*   **CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM**  
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-01-ECS-HEAT-EXCHANGER-CORES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-01-ECS-HEAT-EXCHANGER-CORES/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-02-ECS-MIX-MANIFOLD-DUCTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-02-ECS-MIX-MANIFOLD-DUCTS/) **[STANDARDS/REGS: CS-25.831, FAR 25.831]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-03-ECS-RECIRC-HEPA-ULPA-MODULES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-03-ECS-RECIRC-HEPA-ULPA-MODULES/) **[STANDARDS/REGS: ISO 29463, EN 1822]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-04-ECS-RECIRC-FANS-MOUNTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-04-ECS-RECIRC-FANS-MOUNTS/) **[STANDARDS/REGS: RTCA DO-160, AMCA 210]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-05-ECS-RAM-AIR-INLET-OUTLET-GEOM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-05-ECS-RAM-AIR-INLET-OUTLET-GEOM/) **[STANDARDS/REGS: CS-25.831, FAR 25.831]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-10-06-ECS-BYPASS-DOORS-LOUVERS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-10-ECS-CABIN-AIR-SYSTEM/CI-CA-CAD-Q100-CONF0000-21-10-06-ECS-BYPASS-DOORS-LOUVERS/) **[STANDARDS/REGS: CS-25.831, FAR 25.831]**
+*   **CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION**  
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-01-OUTFLOW-VALVE-STRUCTURES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-01-OUTFLOW-VALVE-STRUCTURES/) **[STANDARDS/REGS: CS-25.841, FAR 25.841, ARP4754A]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-02-SAFETY-RELIEF-VALVES-HOUSINGS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-02-SAFETY-RELIEF-VALVES-HOUSINGS/) **[STANDARDS/REGS: CS-25.841, FAR 25.841, ASME B31.3]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-03-CABIN-PRESSURE-SENSORS-MOUNTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-03-CABIN-PRESSURE-SENSORS-MOUNTS/) **[STANDARDS/REGS: RTCA DO-160, RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-04-DIFF-PRESS-DUCTING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-04-DIFF-PRESS-DUCTING/) **[STANDARDS/REGS: CS-25.841, FAR 25.841]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-05-CONTROLLED-LEAKAGE-PATHS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-05-CONTROLLED-LEAKAGE-PATHS/) **[STANDARDS/REGS: CS-25.841, FAR 25.841]**
+    *   [`CI-CA-CAD-Q100-CONF0000-21-30-06-VENT-INGESTION-SCREENS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-21-ECS/CA-CAD-Q100-CONF0000-21-30-PRESSURIZATION-VENTILATION/CI-CA-CAD-Q100-CONF0000-21-30-06-VENT-INGESTION-SCREENS/) **[STANDARDS/REGS: CS-25.841, FAR 25.841]**
 
 ---
 
-## Path Convention for Component Tracking
+<a name="ce-cad-q100-conf0000-30-ice_rain-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-30-ICE-RAIN**
 
-*   **Ejemplo de un artefacto de ingeniería (documento técnico) - Centro del Cuerpo:**  
-    [`C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-53-FUSELAGE/CA-CAD-Q100-CONF0000-53-10-CENTER-BODY-BOX/CI-CA-CAD-Q100-CONF0000-53-10-01-CB-PRIMARY-GRID/`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-CONF0000-53-FUSELAGE/CA-CAD-Q100-CONF0000-53-10-CENTER-BODY-BOX/CI-CA-CAD-Q100-CONF0000-53-10-01-CB-PRIMARY-GRID/) **[STANDARDS/REGS: CS-25.301-351, FAR 25.301-351, ARP4754A]**
-
-*   **Ejemplo de un artefacto de código (tecnología viva) - AQUA-OS Bridge:**  
-    [`C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/)
-
-## Fast Navigation
-
-- **Flagship →** [AMPEL360-BWB-Q](#1-ampel360-algorithmic-design--configuration-selection-framework)
-- **AQUA-OS BRIDGE v22.0 →** [overview](#2-aqua-os-bridge-mixed-operating-system-mos)
-- **C-AMEDEO map →** [circular lifecycle framework](#4-c-amedeo-circular-assisted-methods-for-evolutive-developments-and-entangled-operations)
-- **Tech stack →** [Standards & Tooling](#standards--tooling)
-
-## Standards & Tooling
-
-**Airworthiness & systems:** ARP4754A/4761A, CS-25, DO-178C/330/331/332/333, DO-254, DO-326A
-
-**Ops & networks:** ARINC 429/653/664 (AFDX), TSN profiles, PTP/TSP sync
-
-**Data & provenance:** UTCS-MI v5.0+, SBOM/MBOM/DBOM, QAUDIT ledger, DET (WORM)
-
-**Optimization/ML/Sim:** OR-Tools, CVaR, Python/C++/MATLAB, CFD/FEA multiphysics
-
-**Adapters:** CAD/PLM, OPC UA/SCADA, ROS 2, ERP/MES/MRO, ATM/AOC, Legacy bridges
-
-## Contact
-
-- **Email:** info@aqua.aerospace (routing)
-- **LinkedIn:** /in/amedeopelliccia
-- **Location**: Madrid, Spain
-
-## Licenses
-
-- **Code:** MIT/Apache-2.0 (per repo)
-- **Docs:** CC BY-SA 4.0 (where indicated)
-- **C-AMEDEO Framework:** © Amedeo Pelliccia 2025
+*   **CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION**  
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-01-ELEC-THERMAL-MATS-LE-ZONING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-01-ELEC-THERMAL-MATS-LE-ZONING/) **[STANDARDS/REGS: CS-25.1419, FAR 25.1419, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-02-DEICING-BOOTS-INTERFACES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-02-DEICING-BOOTS-INTERFACES/) **[STANDARDS/REGS: TSO C82]**
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-03-PICCOLO-MANIFOLDS-DUCTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-03-PICCOLO-MANIFOLDS-DUCTS/) **[STANDARDS/REGS: CS-25.1419, FAR 25.1419]**
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-04-ICE-SENSORS-BRACKETS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-04-ICE-SENSORS-BRACKETS/) **[STANDARDS/REGS: RTCA DO-160, TSO C138]**
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-05-DRAINAGE-AND-ANTI-ICE-DRIPS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-05-DRAINAGE-AND-ANTI-ICE-DRIPS/) **[STANDARDS/REGS: CS-25.1419, FAR 25.1419]**
+    *   [`CI-CA-CAD-Q100-CONF0000-30-10-06-LEADING-EDGE-THERMAL-INSUL`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-30-ICE-RAIN/CA-CAD-Q100-CONF0000-30-10-ICE-AND-RAIN-PROTECTION/CI-CA-CAD-Q100-CONF0000-30-10-06-LEADING-EDGE-THERMAL-INSUL/) **[STANDARDS/REGS: ASTM C1268]**
 
 ---
 
-**Design. Build. Operate. Prove it. — under a deterministic, quantum-extensible operating fabric.**
-```
+<a name="ce-cad-q100-conf0000-26-fire-detection-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-26-FIRE-DETECTION**
+
+*   **CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION**  
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-01-FIRE-BOTTLE-RACKS-BRACKETS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-01-FIRE-BOTTLE-RACKS-BRACKETS/) **[STANDARDS/REGS: CS-25.863, FAR 25.863, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-02-DISCHARGE-LINES-NOZZLES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-02-DISCHARGE-LINES-NOZZLES/) **[STANDARDS/REGS: CS-25.863, FAR 25.863]**
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-03-BURST-DISCS-VENT-PATHS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-03-BURST-DISCS-VENT-PATHS/) **[STANDARDS/REGS: ASME B31.3]**
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-04-DETECTOR-LOOPS-ROUTING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-04-DETECTOR-LOOPS-ROUTING/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-05-CARGO-BAY-SUPPRESSION-GEOM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-05-CARGO-BAY-SUPPRESSION-GEOM/) **[STANDARDS/REGS: CS-25.857, FAR 25.857, TSO C146]**
+    *   [`CI-CA-CAD-Q100-CONF0000-26-10-06-AVIONICS-BAY-FIRE-ZONING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-26-FIRE-DETECTION/CA-CAD-Q100-CONF0000-26-10-FIRE-DETECTION-SUPPRESSION/CI-CA-CAD-Q100-CONF0000-26-10-06-AVIONICS-BAY-FIRE-ZONING/) **[STANDARDS/REGS: CS-25.863, FAR 25.863]**
+
+---
+
+<a name="ce-cad-q100-conf0000-35-oxygen-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-35-OXYGEN**
+
+*   **CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM**  
+    *   [`CI-CA-CAD-Q100-CONF0000-35-10-01-CREW-OXYGEN-CYLINDERS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM/CI-CA-CAD-Q100-CONF0000-35-10-01-CREW-OXYGEN-CYLINDERS/) **[STANDARDS/REGS: CS-25.1450, FAR 25.1450, TSO C64a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-10-02-CREW-MASKS-REGULATORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM/CI-CA-CAD-Q100-CONF0000-35-10-02-CREW-MASKS-REGULATORS/) **[STANDARDS/REGS: CS-25.1450, FAR 25.1450, TSO C64a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-10-03-QUICK-DONNING-MASKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM/CI-CA-CAD-Q100-CONF0000-35-10-03-QUICK-DONNING-MASKS/) **[STANDARDS/REGS: TSO C64a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-10-04-PORTABLE-OXYGEN-BOTTLES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM/CI-CA-CAD-Q100-CONF0000-35-10-04-PORTABLE-OXYGEN-BOTTLES/) **[STANDARDS/REGS: TSO C64a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-10-05-OXYGEN-PRESSURE-INDICATORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-10-CREW-OXYGEN-SYSTEM/CI-CA-CAD-Q100-CONF0000-35-10-05-OXYGEN-PRESSURE-INDICATORS/) **[STANDARDS/REGS: CS-25.1305, FAR 25.1305, RTCA DO-160]**
+*   **CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN**  
+    *   [`CI-CA-CAD-Q100-CONF0000-35-20-01-CHEMICAL-OXYGEN-GENERATORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN/CI-CA-CAD-Q100-CONF0000-35-20-01-CHEMICAL-OXYGEN-GENERATORS/) **[STANDARDS/REGS: CS-25.1450, FAR 25.1450]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-20-02-PASSENGER-MASKS-PSU`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN/CI-CA-CAD-Q100-CONF0000-35-20-02-PASSENGER-MASKS-PSU/) **[STANDARDS/REGS: CS-25.1450, FAR 25.1450, TSO C69c]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-20-03-THERAPEUTIC-OXYGEN`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN/CI-CA-CAD-Q100-CONF0000-35-20-03-THERAPEUTIC-OXYGEN/) **[STANDARDS/REGS: CS-25.1450, FAR 25.1450]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-20-04-PORTABLE-BREATHING-EQUIPMENT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN/CI-CA-CAD-Q100-CONF0000-35-20-04-PORTABLE-BREATHING-EQUIPMENT/) **[STANDARDS/REGS: TSO C64a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-35-20-05-OXYGEN-SYSTEM-TEST-PORTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-35-OXYGEN/CA-CAD-Q100-CONF0000-35-20-PASSENGER-OXYGEN/CI-CA-CAD-Q100-CONF0000-35-20-05-OXYGEN-SYSTEM-TEST-PORTS/) **[STANDARDS/REGS: ATA 100]**
+
+---
+
+<a name="ce-cad-q100-conf0000-37-vacuum-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-37-VACUUM**
+
+*   **CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS**  
+    *   [`CI-CA-CAD-Q100-CONF0000-37-10-01-VACUUM-PUMPS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS/CI-CA-CAD-Q100-CONF0000-37-10-01-VACUUM-PUMPS/) **[STANDARDS/REGS: RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-10-02-VACUUM-RESERVOIRS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS/CI-CA-CAD-Q100-CONF0000-37-10-02-VACUUM-RESERVOIRS/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-10-03-VACUUM-REGULATORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS/CI-CA-CAD-Q100-CONF0000-37-10-03-VACUUM-REGULATORS/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-10-04-VACUUM-INDICATORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS/CI-CA-CAD-Q100-CONF0000-37-10-04-VACUUM-INDICATORS/) **[STANDARDS/REGS: RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-10-05-GYRO-INSTRUMENT-VACUUM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-10-VACUUM-SYSTEMS/CI-CA-CAD-Q100-CONF0000-37-10-05-GYRO-INSTRUMENT-VACUUM/) **[STANDARDS/REGS: TSO C4c]**
+*   **CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM**  
+    *   [`CI-CA-CAD-Q100-CONF0000-37-20-01-VACUUM-GENERATORS-WASTE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM/CI-CA-CAD-Q100-CONF0000-37-20-01-VACUUM-GENERATORS-WASTE/) **[STANDARDS/REGS: TSO C110a, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-20-02-VACUUM-LINES-VALVES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM/CI-CA-CAD-Q100-CONF0000-37-20-02-VACUUM-LINES-VALVES/) **[STANDARDS/REGS: TSO C110a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-20-03-VACUUM-BREAKERS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM/CI-CA-CAD-Q100-CONF0000-37-20-03-VACUUM-BREAKERS/) **[STANDARDS/REGS: TSO C110a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-20-04-DIFFERENTIAL-PRESSURE-CONTROL`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM/CI-CA-CAD-Q100-CONF0000-37-20-04-DIFFERENTIAL-PRESSURE-CONTROL/) **[STANDARDS/REGS: TSO C110a]**
+    *   [`CI-CA-CAD-Q100-CONF0000-37-20-05-VACUUM-SYSTEM-FILTERS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-37-VACUUM/CA-CAD-Q100-CONF0000-37-20-WASTE-VACUUM-SYSTEM/CI-CA-CAD-Q100-CONF0000-37-20-05-VACUUM-SYSTEM-FILTERS/) **[STANDARDS/REGS: ARP4761]**
+
+---
+
+<a name="ce-cad-q100-conf0000-18-vibration_noise-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE**
+
+*   **CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING**  
+    *   [`CI-CA-CAD-Q100-CONF0000-18-10-01-VIBRATION-SENSORS-NETWORK`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING/CI-CA-CAD-Q100-CONF0000-18-10-01-VIBRATION-SENSORS-NETWORK/) **[STANDARDS/REGS: RTCA DO-160, ISO 10816]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-10-02-SPECTRUM-ANALYSIS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING/CI-CA-CAD-Q100-CONF0000-18-10-02-SPECTRUM-ANALYSIS/) **[STANDARDS/REGS: ISO 10816]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-10-03-BALANCING-PROCEDURES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING/CI-CA-CAD-Q100-CONF0000-18-10-03-BALANCING-PROCEDURES/) **[STANDARDS/REGS: ISO 1940-1]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-10-04-ISOLATION-MOUNTS-TUNING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING/CI-CA-CAD-Q100-CONF0000-18-10-04-ISOLATION-MOUNTS-TUNING/) **[STANDARDS/REGS: MIL-STD-810G]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-10-05-VIBRATION-LIMITS-ALERTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-10-VIBRATION-MONITORING/CI-CA-CAD-Q100-CONF0000-18-10-05-VIBRATION-LIMITS-ALERTS/) **[STANDARDS/REGS: ISO 10816]**
+*   **CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL**  
+    *   [`CI-CA-CAD-Q100-CONF0000-18-20-01-NOISE-MEASUREMENT-POINTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL/CI-CA-CAD-Q100-CONF0000-18-20-01-NOISE-MEASUREMENT-POINTS/) **[STANDARDS/REGS: ICAO Annex 16, ISO 3891]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-20-02-ACOUSTIC-TREATMENT-ZONES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL/CI-CA-CAD-Q100-CONF0000-18-20-02-ACOUSTIC-TREATMENT-ZONES/) **[STANDARDS/REGS: ASTM E2611]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-20-03-ACTIVE-NOISE-CONTROL`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL/CI-CA-CAD-Q100-CONF0000-18-20-03-ACTIVE-NOISE-CONTROL/) **[STANDARDS/REGS: ISO 3891]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-20-04-CABIN-NOISE-CRITERIA`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL/CI-CA-CAD-Q100-CONF0000-18-20-04-CABIN-NOISE-CRITERIA/) **[STANDARDS/REGS: ISO 3891]**
+    *   [`CI-CA-CAD-Q100-CONF0000-18-20-05-CERTIFICATION-NOISE-COMPLIANCE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-18-VIBRATION-NOISE/CA-CAD-Q100-CONF0000-18-20-NOISE-CONTROL/CI-CA-CAD-Q100-CONF0000-18-20-05-CERTIFICATION-NOISE-COMPLIANCE/) **[STANDARDS/REGS: ICAO Annex 16, FAA AC 36-1G]**
+
+---
+
+<a name="ce-cad-q100-conf0000-20-ground_env-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-20-GROUND-ENV**
+
+*   **CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION**  
+    *   [`CI-CA-CAD-Q100-CONF0000-20-80-01-SPILL-CONTAINMENT-PANS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-20-GROUND-ENV/CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION/CI-CA-CAD-Q100-CONF0000-20-80-01-SPILL-CONTAINMENT-PANS/) **[STANDARDS/REGS: ISO 14001, NFPA 407]**
+    *   [`CI-CA-CAD-Q100-CONF0000-20-80-02-STORMWATER-CONTROL-CHANNELS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-20-GROUND-ENV/CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION/CI-CA-CAD-Q100-CONF0000-20-80-02-STORMWATER-CONTROL-CHANNELS/) **[STANDARDS/REGS: ISO 14001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-20-80-03-DEICING-FLUID-COLLECTION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-20-GROUND-ENV/CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION/CI-CA-CAD-Q100-CONF0000-20-80-03-DEICING-FLUID-COLLECTION/) **[STANDARDS/REGS: ISO 14001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-20-80-04-FOAM-FIRE-SYSTEM-INTERFACES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-20-GROUND-ENV/CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION/CI-CA-CAD-Q100-CONF0000-20-80-04-FOAM-FIRE-SYSTEM-INTERFACES/) **[STANDARDS/REGS: NFPA 407, NFPA 409]**
+    *   [`CI-CA-CAD-Q100-CONF0000-20-80-05-HAZMAT-STORAGE-BUNDING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-CONF0000-20-GROUND-ENV/CA-CAD-Q100-CONF0000-20-80-GROUND-ENV-SAFETY-REMEDIATION/CI-CA-CAD-Q100-CONF0000-20-80-05-HAZMAT-STORAGE-BUNDING/) **[STANDARDS/REGS: OSHA, EPA, IATA DGR]**
+
+---
+
+<a name="cad-design-d-defence_cybersecurity_safety"></a>
+#### **CAD-DESIGN / D-DEFENCE_CYBERSECURITY_SAFETY**
+
+<a name="ce-cad-q100-conf0000-91-platform-survivability-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY**
+
+*   **CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY**  
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-01-EMI-EMC-HARDENING-GUIDES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-01-EMI-EMC-HARDENING-GUIDES/) **[STANDARDS/REGS: RTCA DO-160, MIL-STD-461G]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-02-LIGHTNING-LPS-INTERFACES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-02-LIGHTNING-LPS-INTERFACES/) **[STANDARDS/REGS: CS-25.581, FAR 25.581, SAE ARP5412/5416]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-03-HIRF-EMP-PROTECTION-ZONES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-03-HIRF-EMP-PROTECTION-ZONES/) **[STANDARDS/REGS: CS-25.1317, FAR 25.1317, MIL-STD-461G]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-04-SHIELDING-TOPLOGIES-BONDING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-04-SHIELDING-TOPLOGIES-BONDING/) **[STANDARDS/REGS: MIL-HDBK-419A, SAE ARP1870]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-05-CABLE-ROUTING-SEGREGATION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-05-CABLE-ROUTING-SEGREGATION/) **[STANDARDS/REGS: CS-25.1701-1729, FAR 25.1701-1729]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-06-THERMAL-SMOKE-PARTITIONING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-06-THERMAL-SMOKE-PARTITIONING/) **[STANDARDS/REGS: CS-25.855, FAR 25.855]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-10-07-ENV-QUAL-DO160-MATRICES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PLATFORM-SURVIVABILITY/CA-CAD-Q100-CONF0000-91-10-PLATFORM-SURVIVABILITY/CI-CA-CAD-Q100-CONF0000-91-10-07-ENV-QUAL-DO160-MATRICES/) **[STANDARDS/REGS: RTCA DO-160]**
+
+---
+
+<a name="ce-cad-q100-conf0000-94-cybersecurity-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-94-CYBERSECURITY**
+
+*   **CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE**  
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-01-ZERO-TRUST-SEGMENTATION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-01-ZERO-TRUST-SEGMENTATION/) **[STANDARDS/REGS: NIST SP 800-207]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-02-RBAC-ABAC-POLICY-MODELS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-02-RBAC-ABAC-POLICY-MODELS/) **[STANDARDS/REGS: NIST SP 800-162]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-03-SERVICE-MESH-POLICY-ENFORCER`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-03-SERVICE-MESH-POLICY-ENFORCER/) **[STANDARDS/REGS: OWASP ASVS]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-04-SECURE-GATEWAYS-ARINC-AFDX-TSN`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-04-SECURE-GATEWAYS-ARINC-AFDX-TSN/) **[STANDARDS/REGS: ARINC 664, ARINC 818]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-05-DET-EVIDENCE-ANCHORING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-05-DET-EVIDENCE-ANCHORING/) **[STANDARDS/REGS: RTCA DO-356A, ISO/IEC 27001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-10-06-SECURITY-BY-DESIGN-CHECKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-CYBERSECURITY/CA-CAD-Q100-CONF0000-94-10-CYBERSECURITY-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-94-10-06-SECURITY-BY-DESIGN-CHECKS/) **[STANDARDS/REGS: ISO 21434, ARP4754A]**
+
+---
+
+<a name="ce-cad-q100-conf0000-34-gnss-integrity-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY**
+
+*   **CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM**  
+    *   [`CI-CA-CAD-Q100-CONF0000-34-40-01-RAIM-SBAS-CHECKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY/CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM/CI-CA-CAD-Q100-CONF0000-34-40-01-RAIM-SBAS-CHECKS/) **[STANDARDS/REGS: RTCA DO-229D, ICAO Annex 10]**
+    *   [`CI-CA-CAD-Q100-CONF0000-34-40-02-ANTI-SPOOF-DETECTION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY/CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM/CI-CA-CAD-Q100-CONF0000-34-40-02-ANTI-SPOOF-DETECTION/) **[STANDARDS/REGS: RTCA DO-363, EN 303 413]**
+    *   [`CI-CA-CAD-Q100-CONF0000-34-40-03-ANTENNA-PLACEMENT-AJ-STRATEGY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY/CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM/CI-CA-CAD-Q100-CONF0000-34-40-03-ANTENNA-PLACEMENT-AJ-STRATEGY/) **[STANDARDS/REGS: MIL-STD-188-164]**
+    *   [`CI-CA-CAD-Q100-CONF0000-34-40-04-TIME-SYNC-HOLDOVER-PROFILES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY/CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM/CI-CA-CAD-Q100-CONF0000-34-40-04-TIME-SYNC-HOLDOVER-PROFILES/) **[STANDARDS/REGS: IEEE 1588]**
+    *   [`CI-CA-CAD-Q100-CONF0000-34-40-05-INTEGRITY-ALERTING-THRESHOLDS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-34-GNSS-INTEGRITY/CA-CAD-Q100-CONF0000-34-40-GNSS-INTEGRITY-ANTI-JAM/CI-CA-CAD-Q100-CONF0000-34-40-05-INTEGRITY-ALERTING-THRESHOLDS/) **[STANDARDS/REGS: RTCA DO-229D]**
+
+---
+
+<a name="ce-cad-q100-conf0000-91-safety-engineering-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING**
+
+*   **CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING**  
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-01-FHA-FUNCTIONAL-HAZARD-ANALYSIS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-01-FHA-FUNCTIONAL-HAZARD-ANALYSIS/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-02-PSSA-PRELIM-SAFETY-ASSESSMENT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-02-PSSA-PRELIM-SAFETY-ASSESSMENT/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-03-SSA-SYSTEM-SAFETY-ASSESSMENT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-03-SSA-SYSTEM-SAFETY-ASSESSMENT/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-04-FTA-FAULT-TREE-ANALYSIS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-04-FTA-FAULT-TREE-ANALYSIS/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-05-FMEA-FMECA-LIBRARY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-05-FMEA-FMECA-LIBRARY/) **[STANDARDS/REGS: ARP4761, MIL-STD-1629A]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-20-06-SAFETY-REQUIREMENTS-RTM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-SAFETY-ENGINEERING/CA-CAD-Q100-CONF0000-91-20-SAFETY-ENGINEERING/CI-CA-CAD-Q100-CONF0000-91-20-06-SAFETY-REQUIREMENTS-RTM/) **[STANDARDS/REGS: ARP4754A]**
+
+---
+
+<a name="ce-cad-q100-conf0000-91-fault-management-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT**
+
+*   **CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM**  
+    *   [`CI-CA-CAD-Q100-CONF0000-91-30-01-FAULT-DETECTION-MONITORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT/CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM/CI-CA-CAD-Q100-CONF0000-91-30-01-FAULT-DETECTION-MONITORS/) **[STANDARDS/REGS: ARP4761, RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-30-02-ISOLATION-DIAGNOSTIC-TREES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT/CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM/CI-CA-CAD-Q100-CONF0000-91-30-02-ISOLATION-DIAGNOSTIC-TREES/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-30-03-RECOVERY-SAFE-STATES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT/CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM/CI-CA-CAD-Q100-CONF0000-91-30-03-RECOVERY-SAFE-STATES/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-30-04-SIMPLEX-FALLBACK-MODES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT/CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM/CI-CA-CAD-Q100-CONF0000-91-30-04-SIMPLEX-FALLBACK-MODES/) **[STANDARDS/REGS: ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-30-05-ALERTING-POLICIES-DO178C`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-FAULT-MANAGEMENT/CA-CAD-Q100-CONF0000-91-30-FAULT-MANAGEMENT-FDI-SRM/CI-CA-CAD-Q100-CONF0000-91-30-05-ALERTING-POLICIES-DO178C/) **[STANDARDS/REGS: RTCA DO-178C]**
+
+---
+
+<a name="ce-cad-q100-conf0000-94-secure-sc-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-94-SECURE-SUPPLY**
+
+*   **CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN**  
+    *   [`CI-CA-CAD-Q100-CONF0000-94-70-01-SBOM-SLSA-PROVENANCE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-SECURE-SC/CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN/CI-CA-CAD-Q100-CONF0000-94-70-01-SBOM-SLSA-PROVENANCE/) **[STANDARDS/REGS: SLSA, SPDX, CycloneDX]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-70-02-3RD-PARTY-COMPONENT-REVIEWS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-SECURE-SC/CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN/CI-CA-CAD-Q100-CONF0000-94-70-02-3RD-PARTY-COMPONENT-REVIEWS/) **[STANDARDS/REGS: RTCA DO-356A, ISO 21434]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-70-03-CVE-VULN-MANAGEMENT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-SECURE-SC/CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN/CI-CA-CAD-Q100-CONF0000-94-70-03-CVE-VULN-MANAGEMENT/) **[STANDARDS/REGS: CVE, CVSS]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-70-04-BUILD-HERMETICITY-CI-CD`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-SECURE-SC/CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN/CI-CA-CAD-Q100-CONF0000-94-70-04-BUILD-HERMETICITY-CI-CD/) **[STANDARDS/REGS: SLSA]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-70-05-HW-SERIALIZATION-TRACE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-SECURE-SC/CA-CAD-Q100-CONF0000-94-70-SECURE-SUPPLY-CHAIN/CI-CA-CAD-Q100-CONF0000-94-70-05-HW-SERIALIZATION-TRACE/) **[STANDARDS/REGS: ISO 15459, AS9100D]**
+
+---
+
+<a name="ce-cad-q100-conf0000-94-incident-res-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-94-INCIDENT-RES**
+
+*   **CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS**  
+    *   [`CI-CA-CAD-Q100-CONF0000-94-80-01-PLAYBOOKS-IR-ATM-AOC`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-INCIDENT-RES/CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS/CI-CA-CAD-Q100-CONF0000-94-80-01-PLAYBOOKS-IR-ATM-AOC/) **[STANDARDS/REGS: NIST SP 800-61, ISO/IEC 27035]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-80-02-TABLETOP-EXERCISES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-INCIDENT-RES/CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS/CI-CA-CAD-Q100-CONF0000-94-80-02-TABLETOP-EXERCISES/) **[STANDARDS/REGS: ISO/IEC 27035]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-80-03-RED-TEAM-EMULATION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-INCIDENT-RES/CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS/CI-CA-CAD-Q100-CONF0000-94-80-03-RED-TEAM-EMULATION/) **[STANDARDS/REGS: MITRE ATT&CK]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-80-04-POST-INCIDENT-DET-REPORTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-INCIDENT-RES/CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS/CI-CA-CAD-Q100-CONF0000-94-80-04-POST-INCIDENT-DET-REPORTS/) **[STANDARDS/REGS: RTCA DO-356A]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-80-05-SERVICE-RESTORE-RUNBOOKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-INCIDENT-RES/CA-CAD-Q100-CONF0000-94-80-INCIDENT-RESPONSE-DRILLS/CI-CA-CAD-Q100-CONF0000-94-80-05-SERVICE-RESTORE-RUNBOOKS/) **[STANDARDS/REGS: ISO/IEC 27035]**
+
+---
+
+<a name="ce-cad-q100-conf0000-94-quantum-sec-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-94-QUANTUM-SEC**
+
+*   **CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES**  
+    *   [`CI-CA-CAD-Q100-CONF0000-94-90-01-QKD-GW-ABSTRACTIONS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-QUANTUM-SEC/CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES/CI-CA-CAD-Q100-CONF0000-94-90-01-QKD-GW-ABSTRACTIONS/) **[STANDARDS/REGS: ETSI GS QKD]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-90-02-QSAFE-POLICY-COMPAT-MATRIX`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-QUANTUM-SEC/CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES/CI-CA-CAD-Q100-CONF0000-94-90-02-QSAFE-POLICY-COMPAT-MATRIX/) **[STANDARDS/REGS: NIST PQC]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-90-03-QPU-CONTAINMENT-BOUNDARIES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-QUANTUM-SEC/CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES/CI-CA-CAD-Q100-CONF0000-94-90-03-QPU-CONTAINMENT-BOUNDARIES/) **[STANDARDS/REGS: ISO/IEC 27001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-90-04-QAL-RESULT-VALIDATION-RULES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-QUANTUM-SEC/CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES/CI-CA-CAD-Q100-CONF0000-94-90-04-QAL-RESULT-VALIDATION-RULES/) **[STANDARDS/REGS: ISO/IEC 27001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-94-90-05-DET-FORENSICS-QUANTUM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-94-QUANTUM-SEC/CA-CAD-Q100-CONF0000-94-90-QUANTUM-SECURITY-INTERFACES/CI-CA-CAD-Q100-CONF0000-94-90-05-DET-FORENSICS-QUANTUM/) **[STANDARDS/REGS: RTCA DO-356A]**
+
+---
+
+<a name="ce-cad-q100-conf0000-91-physical-sec-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC**
+
+*   **CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER**  
+    *   [`CI-CA-CAD-Q100-CONF0000-91-40-01-TAMPER-EVIDENT-SEALS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC/CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER/CI-CA-CAD-Q100-CONF0000-91-40-01-TAMPER-EVIDENT-SEALS/) **[STANDARDS/REGS: ASTM F1678]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-40-02-MESH-TAMPER-SWITCHES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC/CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER/CI-CA-CAD-Q100-CONF0000-91-40-02-MESH-TAMPER-SWITCHES/) **[STANDARDS/REGS: UL 294]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-40-03-LOCKOUT-TAGOUT-INTERLOCKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC/CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER/CI-CA-CAD-Q100-CONF0000-91-40-03-LOCKOUT-TAGOUT-INTERLOCKS/) **[STANDARDS/REGS: OSHA 1910.147]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-40-04-ACCESS-CONTROL-HARDWARE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC/CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER/CI-CA-CAD-Q100-CONF0000-91-40-04-ACCESS-CONTROL-HARDWARE/) **[STANDARDS/REGS: ISO/IEC 27001]**
+    *   [`CI-CA-CAD-Q100-CONF0000-91-40-05-STORAGE-TRANSPORT-SECURITY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/D-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-CONF0000-91-PHYSICAL-SEC/CA-CAD-Q100-CONF0000-91-40-PHYSICAL-SECURITY-ANTI-TAMPER/CI-CA-CAD-Q100-CONF0000-91-40-05-STORAGE-TRANSPORT-SECURITY/) **[STANDARDS/REGS: ISO 28000]**
+
+---
+
+<a name="cad-design-e2-energy_and_renewable"></a>
+#### **CAD-DESIGN / E2-ENERGY_AND_RENEWABLE**
+
+<a name="ce-cad-q100-conf0000-24-electrical-power-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER**
+
+*   **CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE**  
+    *   [`CI-CA-CAD-Q100-CONF0000-24-10-01-BUS-TOPOLOGIES-HVDC-MVDC-LVDC`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-24-10-01-BUS-TOPOLOGIES-HVDC-MVDC-LVDC/) **[STANDARDS/REGS: RTCA DO-160, MIL-STD-704F]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-10-02-GALLEY-AND-SERVICE-BRANCHES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-24-10-02-GALLEY-AND-SERVICE-BRANCHES/) **[STANDARDS/REGS: ARINC 800, CS-25.1351, FAR 25.1351]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-10-03-SEGREGATION-ZONES-ISOLATION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-24-10-03-SEGREGATION-ZONES-ISOLATION/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-10-04-FAULT-LEVELS-PROTECTION-COORD`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-24-10-04-FAULT-LEVELS-PROTECTION-COORD/) **[STANDARDS/REGS: IEEE Std 3004.5]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-10-05-ENERGY-NOMENCLATURE-SCHEMAS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-10-POWER-ARCHITECTURE/CI-CA-CAD-Q100-CONF0000-24-10-05-ENERGY-NOMENCLATURE-SCHEMAS/) **[STANDARDS/REGS: ISO 80000]**
+*   **CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS**  
+    *   [`CI-CA-CAD-Q100-CONF0000-24-30-01-CELL-CHEMISTRY-SELECTION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS/CI-CA-CAD-Q100-CONF0000-24-30-01-CELL-CHEMISTRY-SELECTION/) **[STANDARDS/REGS: RTCA DO-311, UL 1642]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-30-02-PACK-ARCH-VENTING-PATHS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS/CI-CA-CAD-Q100-CONF0000-24-30-02-PACK-ARCH-VENTING-PATHS/) **[STANDARDS/REGS: RTCA DO-311]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-30-03-THERMAL-RUNAWAY-CONTAINMENT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS/CI-CA-CAD-Q100-CONF0000-24-30-03-THERMAL-RUNAWAY-CONTAINMENT/) **[STANDARDS/REGS: RTCA DO-311, SAE ARP6314]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-30-04-MECHANICAL-ISOLATION-MOUNTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS/CI-CA-CAD-Q100-CONF0000-24-30-04-MECHANICAL-ISOLATION-MOUNTS/) **[STANDARDS/REGS: CS-25.601, FAR 25.601, RTCA DO-160]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-30-05-BMS-INTERFACE-REQUIREMENTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-30-BATTERY-SYSTEMS/CI-CA-CAD-Q100-CONF0000-24-30-05-BMS-INTERFACE-REQUIREMENTS/) **[STANDARDS/REGS: RTCA DO-311, RTCA DO-178C]**
+*   **CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT**  
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-01-FC-STACK-MODULE-ENVELOPES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-01-FC-STACK-MODULE-ENVELOPES/) **[STANDARDS/REGS: IEC 62282, SAE ARP4754A]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-02-ANODE-CATHODE-MANIFOLDS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-02-ANODE-CATHODE-MANIFOLDS/) **[STANDARDS/REGS: ISO 14687]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-03-HUMIDIFIERS-WATER-MGMT`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-03-HUMIDIFIERS-WATER-MGMT/) **[STANDARDS/REGS: IEC 62282]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-04-VENTS-PURGE-LINES-ROUTING`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-04-VENTS-PURGE-LINES-ROUTING/) **[STANDARDS/REGS: CS-25.1309, FAR 25.1309]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-05-STARTUP-SHUTDOWN-LOGIC-IFC`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-05-STARTUP-SHUTDOWN-LOGIC-IFC/) **[STANDARDS/REGS: RTCA DO-178C, IEC 61508]**
+    *   [`CI-CA-CAD-Q100-CONF0000-24-70-06-FC-STACK-ISOLATION-INTERLOCKS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-24-ELECTRICAL-POWER/CA-CAD-Q100-CONF0000-24-70-FUEL-CELL-POWERPLANT/CI-CA-CAD-Q100-CONF0000-24-70-06-FC-STACK-ISOLATION-INTERLOCKS/) **[STANDARDS/REGS: IEC 62282, ARP4761]**
+
+---
+
+<a name="ce-cad-q100-conf0000-28-fuel-h2-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-28-FUEL-H2**
+
+*   **CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO**  
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-01-LH2-TANK-INTEGRATION`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-01-LH2-TANK-INTEGRATION/) **[STANDARDS/REGS: CS-H2.25.101-125, ISO 13985]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-02-MLI-VACUUM-JACKET-DESIGN`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-02-MLI-VACUUM-JACKET-DESIGN/) **[STANDARDS/REGS: ASTM C1268]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-03-PRESSURE-RELIEF-VALVES-BURST-DISCS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-03-PRESSURE-RELIEF-VALVES-BURST-DISCS/) **[STANDARDS/REGS: ASME B31.3, NFPA 2]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-04-BOIL-OFF-VENT-SYSTEM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-04-BOIL-OFF-VENT-SYSTEM/) **[STANDARDS/REGS: NFPA 2]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-05-CRYO-LINES-CONNECTORS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-05-CRYO-LINES-CONNECTORS/) **[STANDARDS/REGS: ASME B31.12]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-10-06-H2-LEAK-DETECTION-SYSTEM`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-10-H2-STORAGE-CRYO/CI-CA-CAD-Q100-CONF0000-28-10-06-H2-LEAK-DETECTION-SYSTEM/) **[STANDARDS/REGS: ISO 22734, NFPA 2]**
+*   **CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO**  
+    *   [`CI-CA-CAD-Q100-CONF0000-28-20-01-REGULATORS-VALVES-ARRAYS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO/CI-CA-CAD-Q100-CONF0000-28-20-01-REGULATORS-VALVES-ARRAYS/) **[STANDARDS/REGS: ISO 19880-3, ASME B31.12]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-20-02-MANIFOLDS-PIPING-SUPPORTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO/CI-CA-CAD-Q100-CONF0000-28-20-02-MANIFOLDS-PIPING-SUPPORTS/) **[STANDARDS/REGS: ASME B31.12]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-20-03-VENT-AND-RELIEF-PATHS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO/CI-CA-CAD-Q100-CONF0000-28-20-03-VENT-AND-RELIEF-PATHS/) **[STANDARDS/REGS: CS-H2.25.101-125, NFPA 2]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-20-04-LEAK-SEGMENTATION-TOPOLOGY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO/CI-CA-CAD-Q100-CONF0000-28-20-04-LEAK-SEGMENTATION-TOPOLOGY/) **[STANDARDS/REGS: ARP4754A, ARP4761]**
+    *   [`CI-CA-CAD-Q100-CONF0000-28-20-05-DRIP-PANS-DRAINAGE-INTERFACES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/E2-ENERGY_AND_RENEWABLE/CE-CAD-Q100-CONF0000-28-FUEL-H2/CA-CAD-Q100-CONF0000-28-20-H2-DISTRIBUTION-NONCRYO/CI-CA-CAD-Q100-CONF0000-28-20-05-DRIP-PANS-DRAINAGE-INTERFACES/) **[STANDARDS/REGS: NFPA 2]**
+
+---
+
+<a name="cad-design-o-operating_systems_navigation_hpc"></a>
+#### **CAD-DESIGN / O-OPERATING_SYSTEMS_NAVIGATION_HPC**
+
+<a name="ce-cad-q100-conf0000-42-os-bridge-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-42-OS-BRIDGE**
+
+*   **CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE**  
+    *   [`CI-CA-CAD-Q100-CONF0000-42-10-01-CONTROL-PLANE-ARCH`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-OS-BRIDGE/CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE/CI-CA-CAD-Q100-CONF0000-42-10-01-CONTROL-PLANE-ARCH/) **[STANDARDS/REGS: ARINC 653, RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-10-02-PARTITION-MANAGER`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-OS-BRIDGE/CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE/CI-CA-CAD-Q100-CONF0000-42-10-02-PARTITION-MANAGER/) **[STANDARDS/REGS: ARINC 653]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-10-03-SERVICE-REGISTRY`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-OS-BRIDGE/CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE/CI-CA-CAD-Q100-CONF0000-42-10-03-SERVICE-REGISTRY/) **[STANDARDS/REGS: ARINC 664, IEEE 802.1Q]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-10-04-CONFIG-POLICY-ENGINE`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-OS-BRIDGE/CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE/CI-CA-CAD-Q100-CONF0000-42-10-04-CONFIG-POLICY-ENGINE/) **[STANDARDS/REGS: RTCA DO-178C, ARP4754A]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-10-05-RUNTIME-CONTRACTS-DIGITAL-TWIN`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-OS-BRIDGE/CA-CAD-Q100-CONF0000-42-10-AQUA-OS-BRIDGE-CORE/CI-CA-CAD-Q100-CONF0000-42-10-05-RUNTIME-CONTRACTS-DIGITAL-TWIN/) **[STANDARDS/REGS: OPC UA, FMI]**
+
+---
+
+<a name="ce-cad-q100-conf0000-42-rtos-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-42-RTOS**
+
+*   **CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS**  
+    *   [`CI-CA-CAD-Q100-CONF0000-42-20-01-SCHEDULER-HTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-RTOS/CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS/CI-CA-CAD-Q100-CONF0000-42-20-01-SCHEDULER-HTS/) **[STANDARDS/REGS: ARINC 653, RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-20-02-TIME-SLOTS-ARINC653`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-RTOS/CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS/CI-CA-CAD-Q100-CONF0000-42-20-02-TIME-SLOTS-ARINC653/) **[STANDARDS/REGS: ARINC 653]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-20-03-INTERRUPT-CONTROLLER`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-RTOS/CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS/CI-CA-CAD-Q100-CONF0000-42-20-03-INTERRUPT-CONTROLLER/) **[STANDARDS/REGS: RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-20-04-DRIVERS-HAL-CRITICAL`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-RTOS/CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS/CI-CA-CAD-Q100-CONF0000-42-20-04-DRIVERS-HAL-CRITICAL/) **[STANDARDS/REGS: RTCA DO-178C]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-20-05-WCET-PROFILES`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-RTOS/CA-CAD-Q100-CONF0000-42-20-GAIA-AIR-RTOS/CI-CA-CAD-Q100-CONF0000-42-20-05-WCET-PROFILES/) **[STANDARDS/REGS: IEC 61508]**
+
+---
+
+<a name="ce-cad-q100-conf0000-42-ima-deoptimise-cad"></a>
+##### **CE-CAD-Q100-CONF0000-42-IMA**
+
+*   **CA-CAD-Q100-CONF0000-42-30-IMA-PARTITIONING-ARINC**  
+    *   [`CI-CA-CAD-Q100-CONF0000-42-30-01-PARTITION-LAYOUTS`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-IMA/CA-CAD-Q100-CONF0000-42-30-IMA-PARTITIONING-ARINC/CI-CA-CAD-Q100-CONF0000-42-30-01-PARTITION-LAYOUTS/) **[STANDARDS/REGS: ARINC 653, RTCA DO-297]**
+    *   [`CI-CA-CAD-Q100-CONF0000-42-30-02-HEALTH-MONITOR`](https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/O-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-CONF0000-42-IMA/CA-CAD-Q100-CONF0000-42-30-
+
+---
+
+### CAE-ENGINEERING (Análisis: FEM, CFD, Thermal, Systems)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAO-ORGANIZATION_RULES (Gobernanza, Políticas, WBS)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAP-PROCESS_SAFETY_VV_AND_COMPLIANCE (Certificación, V&V, Safety)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAT-SOURCE_CODE_SYSTEMS (Software, Hardware, AI Models)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAM-MANUFACTURING (MBOM, Instrucciones, Tooling)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAI-INTEGRATIONS (ICDs, Installation, Testing)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAS-SUSTAINMENT (Manuals, MRO, Service Bulletins)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+### CAEV-EVOLUTION (EoL Evaluation, Evolution Directives)
+*[Misma estructura de 15 dominios con sus CE correspondientes]*
+
+---
