@@ -38,6 +38,47 @@ graph TD
   OPT --> DEO
 ```
 
+## Genesis Prompt
+
+> "crear un ecosistema donde convergen IoT, AI, ML, Blockchain, Quantum, Sistemas complejos, nuevos materiales y nanotecnologías"
+
+### Convergence Trace Map
+
+* **IoT** → **LCC** dominio · redes deterministas · AIDC Spec 2000 Book 7 · telemetría al **DET**.
+* **AI · ML** → **IIS** a bordo · **AMPEL360** en tierra · particionado seguro en **GAIA AIR RTOS** · artefactos DO‑178C/DO‑254.
+* **Blockchain** → **LIB** dominio · trazabilidad supply‑chain **Spec 2000/2500** · notarización de evidencia en **DET**.
+* **Quantum** → **QAL** puente en **AQUA‑OS BRIDGE** · **CQH** para crio e interfaces H₂‑cuánticas · Q‑navegación y optimización.
+* **Sistemas complejos** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** en CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
+* **Nuevos materiales y nanotecnologías** → **MMM** dominio · composites CMH‑17, nanocoatings, metamateriales; **CAM** fabricación aditiva (NADCAP) · datos y procesos al **DET**.
+
+```mermaid
+flowchart LR
+  P[Genesis Prompt]
+  P --> IoT
+  P --> AI
+  P --> BC
+  P --> Q
+  P --> CS
+  P --> MAT
+  IoT --> LCC[Links Comms Control]
+  AI --> AMPEL360[AMPEL360 Risk Aware Design]
+  AI --> IIS[Intelligent Systems Onboard]
+  BC --> LIB[Logistics Blockchain]
+  Q --> QAL[Quantum Abstraction Layer]
+  Q --> CQH[Cryogenics Quantum H2]
+  MAT[Materials & Nanotech]
+  MMM[Mechanical Material Monitoring]
+  CS --> CAMEDEO[C‑AMEDEO Lifecycle]
+  MAT --> MMM
+  MAT --> AMPEL360
+  MMM --> AQUAOS
+  AMPEL360 --> AQUAOS[AQUA‑OS BRIDGE]
+  LCC --> AQUAOS
+  IIS --> GAIA[GAIA AIR RTOS]
+  AQUAOS --> DET[Digital Evidence Twin]
+  DET --> CADET[CADET KPIs]
+```
+
 ## Mission (one‑liner)
 
 Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/NC), and operations/services (ATM, cockpit/FBW, nav/comm, MRO/EOL/procurement)—under a single, time‑synchronized, evidence‑producing, quantum‑extensible operating fabric.
