@@ -1,5 +1,6 @@
-
-# AMPEL360-BWB-Q Program
+# C-AMEDEO  
+### Circular Assisted Methods for Evolutive Developments and Entangled Operations  
+**Bringing the AMPEL360-BWB-Q Program to Life**
 
 **Amedeo Pelliccia**  
 Aerospace Systems Engineer · Digital-Twin Architecture · Risk-Optimized Design  
