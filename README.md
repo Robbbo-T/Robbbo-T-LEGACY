@@ -183,6 +183,8 @@ flowchart LR
 
 ## C‑AMEDEO — Interactive Index (Matrix Overview)
 
+**Framework Root:** [C-AMEDEO-FRAMEWORK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK)
+
 > **Numbering standard (hard rule).** All **CE** use **ATA iSpec 2200 Subject Numbering System (SNS)** — `ATA CC-SS[-SS]` — and every deliverable resolves to an **S1000D Data Module Code (DMC)**:
 >
 > `DMC = <MIC>-<ATA SNS>-<DC>-<IC>-<ICV>-<LC>-<ISSUE>`

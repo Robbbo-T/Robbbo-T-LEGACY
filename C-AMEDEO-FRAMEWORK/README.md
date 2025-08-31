@@ -12,28 +12,28 @@ The C-AMEDEO Framework implements a circular, perpetual lifecycle methodology fo
 
 ## Framework Structure
 
-```
-C-AMEDEO-FRAMEWORK/
-├── CA-DEOPTIMISE/          # Forward Creation Flow
-│   ├── CAD-DESIGN/         # Design artifacts: models, drawings, specs
-│   ├── CAE-ENGINEERING/    # Engineering analysis and validation
-│   ├── CAO-ORGANIZATION/   # Organization & Operations
-│   ├── CAP-PROCESS/        # Process/Safety/V&V/Compliance
-│   ├── CAT-SOURCE/         # Source & Code Systems
-│   ├── CAI-INTEGRATIONS/   # System integrations
-│   ├── CAM-MANUFACTURING/  # Manufacturing processes
-│   ├── CAS-SUSTAINMENT/    # Sustainment and support
-│   └── CAEV-EVOLUTION/     # Evolution and improvement
-└── CA-OPTIMISED/           # Restoration & Evolution Flow
-    ├── CAD-DESIGN/         # Restoration-based design
-    ├── CAE-ENGINEERING/    # Re-engineering and optimization
-    ├── CAO-ORGANIZATION/   # Operational optimization
-    ├── CAP-PROCESS/        # Process optimization
-    ├── CAT-SOURCE/         # Code evolution and maintenance
-    ├── CAI-INTEGRATIONS/   # Integration optimization
-    ├── CAM-MANUFACTURING/  # Manufacturing optimization
-    └── CAS-SUSTAINMENT/    # Sustainability enhancement
-```
+### [CA-DEOPTIMISE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE) — Forward Creation Flow
+
+* [CAD-DESIGN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN) — Design artifacts: models, drawings, specs
+* [CAE-ENGINEERING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAE-ENGINEERING) — Engineering analysis and validation
+* [CAO-ORGANIZATION](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAO-ORGANIZATION) — Organization & Operations
+* [CAP-PROCESS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAP-PROCESS) — Process/Safety/V&V/Compliance
+* [CAT-SOURCE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAT-SOURCE) — Source & Code Systems
+* [CAI-INTEGRATIONS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAI-INTEGRATIONS) — System integrations
+* [CAM-MANUFACTURING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAM-MANUFACTURING) — Manufacturing processes
+* [CAS-SUSTAINMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAS-SUSTAINMENT) — Sustainment and support
+* [CAEV-EVOLUTION](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAEV-EVOLUTION) — Evolution and improvement
+
+### [CA-OPTIMISED](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED) — Restoration & Evolution Flow
+
+* [CAD-DESIGN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN) — Restoration-based design
+* [CAE-ENGINEERING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAE-ENGINEERING) — Re-engineering and optimization
+* [CAO-ORGANIZATION](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAO-ORGANIZATION) — Operational optimization
+* [CAP-PROCESS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAP-PROCESS) — Process optimization
+* [CAT-SOURCE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAT-SOURCE) — Code evolution and maintenance
+* [CAI-INTEGRATIONS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAI-INTEGRATIONS) — Integration optimization
+* [CAM-MANUFACTURING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAM-MANUFACTURING) — Manufacturing optimization
+* [CAS-SUSTAINMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAS-SUSTAINMENT) — Sustainability enhancement
 
 ## Configuration: H2-BWB-Q100-CONF0000
 

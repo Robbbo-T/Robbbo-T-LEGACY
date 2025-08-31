@@ -34,6 +34,13 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
+### Navigation — Configuration Elements
+
+* [CE-CAD-Q100-IIS-ATA-22-AI-AF](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-22-AI-AF) — Auto Flight (AI control assist)
+* [CE-CAD-Q100-IIS-ATA-31-AI-IR](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-31-AI-IR) — Indicating/Recording (AI analytics)
+* [CE-CAD-Q100-IIS-ATA-34-AI-NAV](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-34-AI-NAV) — Navigation (AI assistance)
+* [CE-CAD-Q100-IIS-ATA-46-AI-RTOS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-46-AI-RTOS) — Information Systems (AI/RTOS)
+
 ## Dependencies
 
 - **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs

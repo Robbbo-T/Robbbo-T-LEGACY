@@ -35,6 +35,15 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
+### Navigation — Configuration Elements
+
+* [CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT) — ATA 22 - Auto Flight
+* [CE-CAD-Q100-OOO-ATA-23-COMMS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-23-COMMS) — ATA 23 - Communications
+* [CE-CAD-Q100-OOO-ATA-31-INDICATING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-31-INDICATING) — ATA 31 - Indicating/Recording
+* [CE-CAD-Q100-OOO-ATA-34-NAV](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-34-NAV) — ATA 34 - Navigation
+* [CE-CAD-Q100-OOO-ATA-46-INFOSYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-46-INFOSYS) — ATA 46 - Information Systems
+
+
 ## Dependencies
 
 - **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
