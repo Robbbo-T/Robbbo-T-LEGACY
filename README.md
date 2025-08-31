@@ -1,4 +1,4 @@
-**Amedeo Pelliccia**  
+# **Amedeo Pelliccia** - Portfolio 
 Aerospace Systems Engineer · Digital-Twin Architecture · Risk-Optimized Design  
 Project Coordinator — Capgemini Engineering (Madrid) · Founder — GAIA Quantum Aerospace  
 Master's Candidate — Project Management (EAE Business Business School, 2025–2028)  
