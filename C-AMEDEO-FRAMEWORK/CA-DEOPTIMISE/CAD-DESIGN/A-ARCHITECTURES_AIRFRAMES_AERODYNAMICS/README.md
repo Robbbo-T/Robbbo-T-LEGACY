@@ -2,7 +2,63 @@
 
 *(Las rutas base para estos detalles comienzan con `C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/<CAX_PILLAR>/H2-BWB-Q100-CONF0000/`)*
 
----
+### 1. **Prefijo de Dominio AAA**
+```
+CA-CAD-Q100-AAA-CONF0000-53-10-CENTER-BODY-BOX
+```
+El **AAA** identifica el dominio A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+
+### 2. **Trazabilidad Completa de Estándares**
+Cada CI tiene sus estándares/regulaciones específicos:
+- **Estructurales**: CS-25.301-351, FAR 25.301-351, MIL-HDBK-5J
+- **Materiales Compuestos**: CMH-17, ASTM D5766, MIL-HDBK-17F
+- **Sistemas**: ARP4754A, ARP4761, RTCA DO-160
+- **Seguridad**: CS-25.783, FAR 25.783, SAE AS81934
+- **H₂ Específicos**: ISO 11114, ASME BPVC Section VIII
+
+### 3. **Estructura Jerárquica Completa**
+```
+CE-CAD-Q100-CONF0000-53-FUSELAGE/                     # Component Envelope
+├── CA-CAD-Q100-AAA-CONF0000-53-10-CENTER-BODY-BOX/   # Component Assembly
+│   └── CI-CA-CAD-Q100-AAA-CONF0000-53-10-01-CB-PRIMARY-GRID/  # Component Item
+```
+
+### 4. **Nomenclatura de Dominios**
+
+Para completar el framework, cada dominio debería tener su código de tres letras:
+
+```
+A   - AAA - ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+M   - MMM - MECHANICAL_MATERIAL_MONITORING
+E1  - EEE - ENVIRONMENTAL_REMEDIATION_CIRCULARITY
+D   - DDD - DEFENCE_CYBERSECURITY_SAFETY
+E2  - EER - ENERGY_AND_RENEWABLE
+O   - OOO - OPERATING_SYSTEMS_NAVIGATION_HPC
+P   - PPP - PROPULSION_AND_FUELS
+E3  - EDI - ELECTRONICS_DIGITAL_INSTRUMENTS
+L1  - LIB - LOGISTICS_INTEGRATED_BLOCKCHAIN
+L2  - LCC - LINKS_COMMUNICATIONS_CONTROL_IoT
+I   - IIF - INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS
+C1  - CCC - COCKPIT_CABIN_CARGO_SYSTEMS
+C2  - CQH - CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS
+I2  - IIS - INTELLIGENT_SYSTEMS_ONBOARD_AI
+A2  - AAP - AIRPORTS_ADAPTATIONS
+```
+
+### 5. **Rutas GitHub Estructuradas**
+
+La estructura de rutas sigue el patrón:
+```
+https://github.com/amedeopelliccia/C-AMEDEO-FRAMEWORK/tree/main/
+CA-DEOPTIMISE/
+CAD-DESIGN/
+H2-BWB-Q100-CONF0000/
+[DOMINIO]/
+[CE]/
+[CA]/
+[CI]/
+```
+
 
 <a name="cad-design-a-architectures_airframes_aerodynamics"></a>
 #### **CAD-DESIGN / A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS**
