@@ -33,6 +33,12 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
+### Navigation — Configuration Elements
+
+* [CE-CAD-Q100-AAP-ATA-09-GROUND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-09-GROUND) — Ground Handling
+* [CE-CAD-Q100-AAP-ATA-10-PARKING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-10-PARKING) — Parking/Mooring
+* [CE-CAD-Q100-AAP-ATA-49-GPU](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-49-GPU) — GPU/Power Interfaces
+
 ## Dependencies
 
 - **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs

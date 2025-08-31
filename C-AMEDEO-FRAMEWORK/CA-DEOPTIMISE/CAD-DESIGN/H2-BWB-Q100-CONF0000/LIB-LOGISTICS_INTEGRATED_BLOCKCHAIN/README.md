@@ -34,6 +34,14 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
+### Navigation — Configuration Elements
+
+* [CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING) — Configuration Element
+* [CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT) — Configuration Element
+* [CE-CAD-Q100-LIB-S2000-BK7-AIDC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK7-AIDC) — Configuration Element
+* [CE-CAD-Q100-LIB-S2500-TRANSFER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2500-TRANSFER) — Configuration Element
+
+
 ## Dependencies
 
 - **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs

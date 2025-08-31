@@ -33,6 +33,13 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
+### Navigation — Configuration Elements
+
+* [CE-CAD-Q100-IIF-ATA-09-TOWING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-09-TOWING) — ATA 09 - Towing Facilities
+* [CE-CAD-Q100-IIF-ATA-10-PARKING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-10-PARKING) — ATA 10 - Parking/Mooring
+* [CE-CAD-Q100-IIF-ATA-49-APU-GROUND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-49-APU-GROUND) — ATA 49 - APU Ground Interfaces
+
+
 ## Dependencies
 
 - **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
