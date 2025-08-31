@@ -17,6 +17,27 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ---
 
+## Visual Summary
+
+```mermaid
+graph TD
+  AMPEL360[AMPEL360 — Algorithmic Design · Feasible Set · CVaR Selection]
+  AQUAOS[AQUA-OS BRIDGE — Deterministic MOS · Single Source of Truth]
+  GAIA[GAIA AIR RTOS — ARINC 653 Partitioning]
+  DET[Digital Evidence Twin · DET]
+  CADET[CADET — Circularity Assurance · KPIs]
+  DEO[CA-DEOPTIMISE — Creation Flow]
+  OPT[CA-OPTIMISED — Restoration Flow]
+
+  DEO --> AMPEL360
+  AMPEL360 --> AQUAOS
+  GAIA --> AQUAOS
+  AQUAOS --> DET
+  DET --> CADET
+  CADET --> OPT
+  OPT --> DEO
+```
+
 ## Mission (one‑liner)
 
 Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/NC), and operations/services (ATM, cockpit/FBW, nav/comm, MRO/EOL/procurement)—under a single, time‑synchronized, evidence‑producing, quantum‑extensible operating fabric.
@@ -28,6 +49,10 @@ Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/
 * **GAIA AIR RTOS** provides ARINC 653‑style robust partitioning for safety‑critical execution.
 * **C‑AMEDEO** enforces a circular, perpetual lifecycle (DEOPTIMISE → OPTIMISED).
 * **CADET** continuously audits circularity using immutable evidence from the DET.
+
+## Problem Statement
+
+Fragmented lifecycle data and tools create blind spots, late surprises, and duplicated effort. Early program phases rarely quantify technical‑financial risk with rigor, lifecycles tend to be linear rather than circular, and introducing AI or Quantum raises cybersecurity and certification hurdles. This program closes those gaps with a single, deterministic evidence fabric and a risk‑aware design core.
 
 ## What I’m Building
 
@@ -103,6 +128,15 @@ flowchart LR
 * **Determinism + agility:** certification rigor with fast iteration
 * **Energy‑as‑Policy:** targeted −20–40% energy/CO₂ vs baseline
 * **Circular economy:** perpetual, auditable lifecycle via C‑AMEDEO + CADET
+
+## So What — Value by Audience
+
+* **Technical Leads and Engineers**
+  Reduce integration headaches via **one source of truth** in AQUA‑OS BRIDGE, consistent **DI → CE → CA → CI** structure, and automated **S1000D DMRL · DMC** generation. Evidence packs and reproducible runs remove he‑said she‑said from design reviews.
+* **Executives and Investors**
+  Lower downside with **CVaR‑driven selection** and cost savings from **circularity** proven by DET→CADET KPIs. Faster compliance close‑out and clearer time‑to‑certification through standards‑first docs (**ATA iSpec 2200, S1000D, Spec 1000BR, 2000, 2300, 2400, 2500, 42**).
+* **Sustainability Officers**
+  **Auditable ESG** with immutable evidence: reuse %, energy, CO₂, life‑extension. Automatic reporting aligned to **ISO 14001, CSRD, GRI** from the same Digital Evidence Twin.
 
 ---
 
@@ -344,6 +378,10 @@ All pillars/domains mirror **Phase 1** structure. Links begin at:
 * **Issues & Roadmap:** use GitHub Issues/Projects in the public repositories.
 * **Speaking/Advisory:** via LinkedIn.
 * **Licensing:** unless otherwise specified, MIT for code; documentation under CC BY‑SA 4.0.
+
+## Conclusion
+
+This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint**: standards‑first architecture, risk‑aware design, and a live evidence thread that makes innovation certifiable. The same rigor that convinces auditors also convinces engineers and investors.
 
 ---
 
