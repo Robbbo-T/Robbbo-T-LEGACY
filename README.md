@@ -51,17 +51,20 @@ Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/
 3) **GAIA AIR RTOS** — Safety‑certifiable real‑time execution foundation
 
 ```mermaid
-%% Program Overview — Pillars + Evidence + Quantum Bridge
 flowchart LR
-  A[AMPEL360\nDesign Space Compression + CVaR] --- B[AQUA‑OS BRIDGE\nDeterministic MOS · Single Source of Truth]
-  C[GAIA AIR RTOS\nARINC 653‑style Partitioning] --- B
+  A[AMPEL360<br/>Design Space Compression + CVaR] --- B[AQUA-OS BRIDGE<br/>Deterministic MOS - Single Source of Truth]
+  C[GAIA AIR RTOS<br/>ARINC 653-style Partitioning] --- B
   B --- QAL[Quantum Abstraction Layer]
-  B --- DET[Digital Evidence Twin (DET)\nWORM · Provenance · Audit]
-  CADET[CADET\nCircularity Assurance · KPIs · Audits] -. consumes .-> DET
-  classDef core fill:#f7f7f7,stroke:#111827,stroke-width:1.1px;
-  classDef layer fill:#eef2ff,stroke:#4338ca,stroke-width:1px;
-  classDef assure fill:#ecfeff,stroke:#0891b2,stroke-width:1px,stroke-dasharray:5 3;
-  class A,B,C core; class QAL,DET layer; class CADET assure;
+  B --- DET[Digital Evidence Twin DET<br/>WORM - Provenance - Audit]
+  CADET[CADET<br/>Circularity Assurance - KPIs - Audits] -.-> DET
+
+  classDef core fill:#1f2937,color:#ffffff,stroke:#111827,stroke-width:1.5px;
+  classDef layer fill:#374151,color:#ffffff,stroke:#000000,stroke-width:1.5px;
+  classDef assure fill:#4b5563,color:#ffffff,stroke:#000000,stroke-dasharray:5 3,stroke-width:1.5px;
+
+  class A,B,C core
+  class QAL,DET layer
+  class CADET assure
 ````
 
 ---
@@ -95,10 +98,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  subgraph DEOPTIMISE [CA‑DEOPTIMISE (Forward Creation Flow)]
+  subgraph DEOPTIMISE [CA‑DEOPTIMISE Forward Creation Flow]
     CAD --> CAE --> CAO --> CAP --> CAT --> CAM --> CAI --> CAS --> CAEV
   end
-  subgraph OPTIMISED [CA‑OPTIMISED (Restoration & Evolution Flow)]
+  subgraph OPTIMISED [CA‑OPTIMISED Restoration & Evolution Flow]
     CAS --> CAO --> CAP --> CAT --> CAI --> CAM --> CAE --> CAD
   end
 ```
