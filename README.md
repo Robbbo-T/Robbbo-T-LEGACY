@@ -128,19 +128,42 @@ CAS → CAO → CAP → CAT → CAI → CAM → CAE → CAD
 
 ## C-AMEDEO Framework Directory Structure
 
+
 ```text
 C-AMEDEO-FRAMEWORK/
 ├── CA-DEOPTIMISE/                    # Flujo de creación: desde el concepto hasta la operación.
-│   ├── CAD-DESIGN/                   # Artefactos de diseño (Modelos 3D, Planos). Contiene la estructura de 15 dominios.
+│   ├── CAD-DESIGN/                   # Artefactos de diseño (Modelos 3D, Planos).
 │   │   ├── A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
-│   │   └── ... (y los otros 14 dominios)
-│   ├── CAE-ENGINEERING/              # Artefactos de análisis (Resultados FEM/CFD). Contiene la estructura de 15 dominios.
+│   │   ├── M-MECHANICAL_MATERIAL_MONITORING/
+│   │   ├── E1-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/
+│   │   ├── D-DEFENCE_CYBERSECURITY_SAFETY/
+│   │   ├── E2-ENERGY_AND_RENEWABLE/
+│   │   ├── O-OPERATING_SYSTEMS_NAVIGATION_HPC/
+│   │   ├── P-PROPULSION_AND_FUELS/
+│   │   ├── E3-ELECTRONICS_DIGITAL_INSTRUMENTS/
+│   │   ├── L1-LOGISTICS_INTEGRATED_BLOCKCHAIN/
+│   │   ├── L2-LINKS_COMMUNICATIONS_CONTROL_IoT/
+│   │   ├── I-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/
+│   │   ├── C1-COCKPIT_CABIN_CARGO_SYSTEMS/
+│   │   ├── C2-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/
+│   │   ├── I2-INTELLIGENT_SYSTEMS_ONBOARD_AI/
+│   │   └── A2-AIRPORTS_ADAPTATIONS/
+│   ├── CAE-ENGINEERING/              # Artefactos de análisis (Resultados FEM/CFD).
+│   │   ├── A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+│   │   ├── M-MECHANICAL_MATERIAL_MONITORING/
+│   │   ├── ... (y los otros 13 dominios tecnológicos)
 │   ├── CAO-ORGANIZATION_RULES/       # Artefactos de gobernanza (Planes de Programa, Políticas).
-│   ├── CAP-PROCESS_SAFETY_VV_AND_COMPLIANCE/ # Artefactos de proceso (Planes de Certificación/V&V, Procedimientos).
-│   ├── CAT-SOURCE_CODE_SYSTEMS/        # Repositorio de tecnología viva (Código SW/HW, Modelos AI, Agentes).
-│   ├── CAM-MANUFACTURING/              # Artefactos de producción (Planes de Fabricación, MBOM). Contiene la estructura de 15 dominios.
-│   ├── CAI/                          # Artefactos de integración (ICDs, Registros de Instalación). Contiene la estructura de 15 dominios.
-│   ├── CAS-SUSTAINMENT/                # Artefactos de operación y soporte (Manuales, Datos de MRO). Contiene la estructura de 15 dominios.
+│   ├── CAP-PROCESS_SAFETY_VV_AND_COMPLIANCE/ # Artefactos de proceso (Planes de Certificación/V&V).
+│   ├── CAT-SOURCE_CODE_SYSTEMS/        # Repositorio de tecnología viva (Código SW/HW, Modelos AI).
+│   ├── CAM-MANUFACTURING/              # Artefactos de producción (Planes de Fabricación, MBOM).
+│   │   ├── A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+│   │   ├── ... (y los otros 14 dominios)
+│   ├── CAI/                          # Artefactos de integración (ICDs, Registros de Instalación).
+│   │   ├── A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+│   │   ├── ... (y los otros 14 dominios)
+│   ├── CAS-SUSTAINMENT/                # Artefactos de operación y soporte (Manuales, Datos de MRO).
+│   │   ├── A-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+│   │   ├── ... (y los otros 14 dominios)
 │   └── CAEV/                         # Artefactos de evolución (Informes de Evaluación EoL, Directivas).
 │ 
 └── CA-OPTIMISED/                       # Flujo de restauración y evolución (con una estructura interna similar).
