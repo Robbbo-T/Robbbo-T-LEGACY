@@ -1,7 +1,7 @@
 # Amedeo Pelliccia — Portfolio
 
 Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized Design
-Project Coordinator — Capgemini Engineering (Madrid) · Founder — GAIA Quantum Aerospace
+Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR and AMPEL360 ecosystems
 Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/Robbbo-T)
@@ -13,7 +13,7 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 **EstándarUniversal:** DocumentoTecnico-Divulgacion-ISO9001-IntroduccionSeccionPrincipal-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-9f3a7c2e-RestoDeVidaUtil
 
-> UTCS‑MI v5.0 identifier (13 campos) aplicado al artefacto de portafolio público.
+> UTCS‑MI v5.0 identifier (13 fields) applied to the public portfolio artifact.
 
 ---
 
@@ -40,16 +40,16 @@ graph TD
 
 ## Genesis Prompt
 
-> "crear un ecosistema donde convergen IoT, AI, ML, Blockchain, Quantum, Sistemas complejos, nuevos materiales y nanotecnologías"
+> "create an ecosystem where IoT, AI, ML, Blockchain, Quantum, complex systems, new materials and nanotechnologies converge"
 
 ### Convergence Trace Map
 
-* **IoT** → **LCC** dominio · redes deterministas · AIDC Spec 2000 Book 7 · telemetría al **DET**.
-* **AI · ML** → **IIS** a bordo · **AMPEL360** en tierra · particionado seguro en **GAIA AIR RTOS** · artefactos DO‑178C/DO‑254.
-* **Blockchain** → **LIB** dominio · trazabilidad supply‑chain **Spec 2000/2500** · notarización de evidencia en **DET**.
-* **Quantum** → **QAL** puente en **AQUA‑OS BRIDGE** · **CQH** para crio e interfaces H₂‑cuánticas · Q‑navegación y optimización.
-* **Sistemas complejos** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** en CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
-* **Nuevos materiales y nanotecnologías** → **MMM** dominio · composites CMH‑17, nanocoatings, metamateriales; **CAM** fabricación aditiva (NADCAP) · datos y procesos al **DET**.
+* **IoT** → **LCC** domain · deterministic networks · AIDC (Spec 2000 Book 7) · telemetry to **DET**.
+* **AI · ML** → **IIS** onboard · **AMPEL360** on ground · safe partitioning in **GAIA AIR RTOS** · DO‑178C/DO‑254.
+* **Blockchain** → **LIB** domain · traceability supply‑chain **Spec 2000/2500** · evidence notarization in **DET**.
+* **Quantum** → **QAL** bridge in **AQUA‑OS BRIDGE** · **CQH** for cryogenics and interfaces H₂‑quantum · quantum navigation & optimization.
+* **Complex systems** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** in CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
+* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites CMH‑17, nanocoatings, metamateriales; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
 
 ```mermaid
 flowchart LR
@@ -220,14 +220,14 @@ The matrix below organizes the **15 technological domains** across both lifecycl
 
 ### CE Index — **ATA‑aligned** (CAD‑DESIGN · CA‑DEOPTIMISE)
 
-> **Política de cruce ATA↔Dominios** (resumen): CE ancladas a ATA, **OwnerDomain** canónico, **CoDomains** listados. Publicación S1000D genera **DMC** únicos; los aliases de dominio apuntan al DMC canónico.
+> **ATA↔Domain cross‑policy** (resumen): CE ancladas a ATA, **OwnerDomain** canónico, **CoDomains** listados. Publicación S1000D genera **DMC** únicos; los aliases de dominio apuntan al DMC canónico.
 
-> **Reglas de numeración (no exclusivas).**
+> **Numbering rules (non‑exclusive).**
 >
-> 1. Cada **CE** comienza por su **ATA iSpec 2200 (SNS)**.
-> 2. **Un capítulo ATA puede pertenecer a múltiples dominios** (no hay asignación exclusiva).
-> 3. Para evitar duplicidades, cada CE tiene un **OwnerDomain** canónico y **CoDomains** referenciados; los índices de otros dominios enlazan a la CE canónica (symlink/alias).
-> 4. Los envoltorios no‑ATA viven sólo en **DI**.
+> 1. Each **CE** begins with its **ATA iSpec 2200 (SNS)**.
+> 2. **An ATA chapter may belong to multiple domains** (non‑exclusive mapping).
+> 3. To avoid duplication, each CE declares a canonical **OwnerDomain** and listed **CoDomains**; other domain indices link to the canonical CE (alias/symlink).
+> 4. Non‑ATA wrappers live only at **DI**.
 
 * **AAA** (Airframe & Aerodynamics)
 
@@ -364,9 +364,9 @@ The matrix below organizes the **15 technological domains** across both lifecycl
 
 > **S1000D binding.** For each **CE**, the publication pipeline will instantiate **DMRL** entries and generate **DMCs** with `MIC=Q100`, `SNS=<ATA>`, `DC/IC/ICV` per content type (e.g., Description, Removal/Installation, Test, Fault Isolation), and register them under the DI.
 
-### **ATA ↔ Dominios — Matriz de cruce (extracto)**
+### **ATA ↔ Domains — Cross‑matrix (excerpt)**
 
-|       ATA | Descripción breve             | OwnerDomain | CoDomains     |
+|       ATA | Short description             | OwnerDomain | CoDomains     |
 | --------: | ----------------------------- | ----------- | ------------- |
 |        02 | Weight & Balance              | AAA         | —             |
 |        06 | Dimensions & Areas            | AAA         | —             |
@@ -388,7 +388,7 @@ The matrix below organizes the **15 technological domains** across both lifecycl
 |     S2000 | e-Business backbone           | LIB         | LCC, EDI      |
 |     S2500 | Asset transfer records        | LIB         | AAP, IIF      |
 
-> **Nota:** Esta matriz es **no exhaustiva**; sirve de guía de cruce. La fuente de verdad es el **owner** de la CE (ruta canónica) y los **co‑domains** apuntan mediante alias.
+> **Note:** This matrix is **not exhaustive**; the source of truth is the CE **owner** (canonical path). **CoDomains** link via alias.
 
 ### Phase 2 — **CA‑OPTIMISED** (Restoration & Evolution Flow)
 
@@ -433,45 +433,45 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 
 ## Appendix — Proof Points & DET↔CADET Matrix
 
-**Objetivo.** Mostrar cómo cada artefacto CAX emite evidencia (DET) y cómo **CADET** la audita en KPIs de circularidad y sostenibilidad.
+**Objective.** Show how each CAX artifact emits evidence (DET) and how **CADET** audits it into circularity and sustainability KPIs.
 
-### A1. Proof Points (muestras representativas)
+### A1. Proof Points (representative samples)
 
-| Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (ejemplo)                                         | Proof Point                                                           |
-| ------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------- |
-| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Reducción de masa de retrabajo en CB Grid gracias a reuso de features |
-| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargen **+0.12**, Reproducibilidad **100%**                 | Cierre de margen sin penalización de peso                             |
-| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI ok, SPC dentro de Cp/Cpk    | Scrap **−22%**, Rework **−18%**                              | Disminución scrap por kit “as-designed”                               |
-| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integración-defects **0**, Tiempo integración **−30%**       | Integración first-time-right                                          |
-| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Disponibilidad **0.98**                       | Extensión de vida útil post-refuerzo                                  |
-| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Trazabilidad supply-chain lista para auditoría                        |
+| Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (example)                                         | Proof Point                                        |
+| ------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- |
+| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
+| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargen **+0.12**, Reproducibilidad **100%**                 | Cierre de margen sin penalización de peso          |
+| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |
+| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |
+| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |
+| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |
 
-> **Evidence Triggers:** cada transición “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
-> **Prueba auditable:** si no hay DET, no existe.
-
----
-
-### A2. DET→CADET KPI Map (qué calcula CADET por cada CAX)
-
-| CAX     | DET fields consumidos                           | KPIs de CADET (ejemplos)                                           |
-| ------- | ----------------------------------------------- | ------------------------------------------------------------------ |
-| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuso (features / MBOM), Δpeso, Δcoste, lead-time decisión        |
-| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Cobertura de casos, Reproducibilidad, Δmargen vs req., QoR solver  |
-| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                       |
-| **CAI** | `icd.rev`, `install.log`, `tests`               | Incidencias integración, Tiempo integración, %interfaces validadas |
-| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, TAT MRO, Disponibilidad, Extensión EoL                 |
-| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | Cobertura SBOM, SLA vulnerabilidades, Integridad firma             |
+> **Evidence Triggers:** every transition “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
+> **Auditable proof:** if there is no DET, it didn’t happen.
 
 ---
 
-### A3. Mini-Dashboard (estático de referencia)
+### A2. DET→CADET KPI Map (what CADET calculates per CAX)
 
-**Circularidad (último corte):**
+| CAX     | DET fields consumed                             | CADET KPIs (examples)                                             |
+| ------- | ----------------------------------------------- | ----------------------------------------------------------------- |
+| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuso (features / MBOM), Δpeso, Δcoste, lead-time decisión       |
+| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Cobertura de casos, Reproducibilidad, Δmargen vs req., QoR solver |
+| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                      |
+| **CAI** | `icd.rev`, `install.log`, `tests`               | Incidencias integración, Integration time, %interfaces validadas  |
+| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension                  |
+| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | Cobertura SBOM, SLA vulnerabilidades, Integridad firma            |
 
-* **Reuse%:** 42% (objetivo 35%)
+---
+
+### A3. Mini‑Dashboard (static reference)
+
+**Circularity (latest snapshot):**
+
+* **Reuse%:** 42% (target 35%)
 * **CO₂ saved:** 120 kg
 * **Energy saved:** 38 kWh
-* **EoL pospuesto:** +14 meses
+* **EoL postponed:** +14 meses
 
 ```mermaid
 flowchart TD
@@ -486,9 +486,53 @@ flowchart TD
   Dash --> R & C & E & L
 ```
 
-> **Cómo actualizar datos:** el dashboard lee agregados de DET (`sbom, bom.delta, asRun, sensor.trend`). CADET recalcula KPIs en cada *pack* y fija el corte por versión/fecha y **CONF** (p. ej., `Q100-CONF0000`).
+> **How to update data:** the dashboard reads DET aggregates (`sbom, bom.delta, asRun, sensor.trend`). CADET recalcula KPIs en cada *pack* y fija el corte por versión/fecha y **CONF** (p. ej., `Q100-CONF0000`).
 
 ---
+
+### A4. Evidence format (minimum schema)
+
+```json
+{
+  "det_id": "DET:CAM:FAI:CB-ASSY-V3",
+  "ts": "2025-08-31T12:04:55Z",
+  "inputs": { "ref": "CI-...-PRIMARY-GRID", "rev": "C" },
+  "processing": { "tool": "AQUA-OS:cam-ci@22.0", "params": { "spc": ["Cp","Cpk"] }},
+  "outputs": { "faiv": "OK", "cp": 1.37, "cpk": 1.21 },
+  "hash": "ccaa11...",
+  "sig": { "alg": "Ed25519", "by": "build-bot@gaia" }
+}
+```
+
+---
+
+### A5. DET Event Cheatsheet (optional)
+
+**Objective.** Standardize DET events emitted by AQUA‑OS/GAIA AIR INFRANET so all evidence packs share the same shape.
+
+| Event                    | `det_id` (pattern)               | Typical trigger                  | Minimum fields                                                                          | Signature          |
+| ------------------------ | -------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- | ------------------ |
+| `save_model`             | `DET:CAD:<DI/CE/CA/CI>:V<rev>`   | Save CAD / revision bump         | `ts, inputs.ref, inputs.rev, processing.tool, outputs.rev, hash, sig`                   | Ed25519            |
+| `solver_run`             | `DET:CAE:<solver>:<case>-V<rev>` | Solver execution, `meshQ≥0.9`    | `ts, inputs.meshQ, processing.params, outputs.margins, reproducibility.seed, hash, sig` | Dilithium2/Ed25519 |
+| `ci_build`               | `DET:CAT:CI:<mod>-V<rev>`        | Build CI/CD successful           | `ts, inputs.commit, processing.tool, outputs.artifacts[], tests.passed, hash, sig`      | Ed25519            |
+| `sbom_generate`          | `DET:CAT:SBOM:<spec>-V<rev>`     | SBOM generation and verification | `ts, inputs.repo, outputs.sbom, slsa.level, vuln.summary, hash, sig`                    | Ed25519            |
+| `install_signoff`        | `DET:CAI:ICD:<sys>-V<rev>`       | Installation and ICD sign‑off    | `ts, inputs.icd.rev, install.log, tests, outputs.status, hash, sig`                     | Ed25519            |
+| `service_bulletin_issue` | `DET:CAS:SB:<area>-V<rev>`       | SB issuance / config update      | `ts, inputs.config.delta, outputs.sb.id, wo.refs[], mtbf.delta, hash, sig`              | Ed25519            |
+
+**Event skeleton (template):**
+
+```json
+{
+  "det_id": "DET:<CAX>:<topic>:<tag>-V<rev>",
+  "ts": "<ISO8601>",
+  "inputs": { /* references to CIs, commits, BOM/MBOM, etc. */ },
+  "processing": { "tool": "<stack@version>", "params": { /* contextual keys */ }},
+  "outputs": { /* key metrics and artifacts */ },
+  "hash": "<sha256/keccak>",
+  "sig": { "alg": "Ed25519|Dilithium2", "by": "<actor@domain>" }
+}
+```
+
 
 ### A4. Formato de evidencia (schema mínimo)
 
