@@ -1,191 +1,149 @@
----
-# CADET Root Assurance Configuration
-version: "1.0.0"
-schema_version: "cadet-v1"
-timestamp: "2025-01-14T12:00:00Z"
+```yaml
+# UTCS-BLOCKCHAIN/CADET/cadet-config.yaml
+# CADET — Circular Assurance by Digital Evolutive Twin
+# Configuration for computing monthly KPI cuts from DET evidence.
 
-# Root assurance ledger configuration
-cadet:
-  id: "CADET-ROOT-Q100-CONF0000"
-  description: "Circular Assurance by Digital Evolutive Twin - Root Registry"
-  blockchain_type: "hierarchical"
-  consensus_mechanism: "proof_of_evidence"
-  
-# Cryptographic configuration
-crypto:
-  hash_algorithm: "SHA-256"
-  signature_algorithm: "Ed25519"
-  merkle_tree: true
-  immutable_ledger: true
-
-# Domain registry (15 domains × 7 CAX = 105 nodes)
-domains:
-  AAA:
-    name: "ARCHITECTURES_AIRFRAMES_AERODYNAMICS"
-    description: "Airframe structures, aerodynamic surfaces, and architectural systems"
-    owner_domain: "AAA"
-    co_domains: ["MMM", "EEE", "OOO"]
-    
-  AAP:
-    name: "AIRPORTS_ADAPTATIONS"
-    description: "Airport infrastructure interfaces and ground operation adaptations"
-    owner_domain: "AAP"
-    co_domains: ["IIF", "LIB", "EDI"]
-    
-  CCC:
-    name: "COCKPIT_CABIN_CARGO_SYSTEMS"
-    description: "Cockpit controls, cabin systems, and cargo handling"
-    owner_domain: "CCC"
-    co_domains: ["EDI", "IIS", "AAA"]
-    
-  CQH:
-    name: "CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS"
-    description: "Cryogenic systems, quantum interfaces, and hydrogen fuel cells"
-    owner_domain: "CQH"
-    co_domains: ["PPP", "EER", "DDD"]
-    
-  DDD:
-    name: "DEFENCE_CYBERSECURITY_SAFETY"
-    description: "Defense systems, cybersecurity protocols, and safety assurance"
-    owner_domain: "DDD"
-    co_domains: ["EDI", "IIS", "OOO"]
-    
-  EDI:
-    name: "ELECTRONICS_DIGITAL_INSTRUMENTS"
-    description: "Electronic systems and digital instrumentation"
-    owner_domain: "EDI"
-    co_domains: ["LCC", "IIS", "OOO"]
-    
-  EEE:
-    name: "ENVIRONMENTAL_REMEDIATION_CIRCULARITY"
-    description: "Environmental systems and circular economy implementation"
-    owner_domain: "EEE"
-    co_domains: ["EER", "LIB", "AAA"]
-    
-  EER:
-    name: "ENERGY_AND_RENEWABLE"
-    description: "Energy systems and renewable power generation"
-    owner_domain: "EER"
-    co_domains: ["PPP", "CQH", "EDI"]
-    
-  IIF:
-    name: "INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS"
-    description: "Infrastructure systems and value chain management"
-    owner_domain: "IIF"
-    co_domains: ["LIB", "AAP", "MMM"]
-    
-  IIS:
-    name: "INTELLIGENT_SYSTEMS_ONBOARD_AI"
-    description: "Intelligent systems and onboard artificial intelligence"
-    owner_domain: "IIS"
-    co_domains: ["EDI", "OOO", "LCC"]
-    
-  LCC:
-    name: "LINKS_COMMUNICATIONS_CONTROL_IoT"
-    description: "Communication links, control systems, and IoT integration"
-    owner_domain: "LCC"
-    co_domains: ["EDI", "IIS", "OOO"]
-    
-  LIB:
-    name: "LOGISTICS_INTEGRATED_BLOCKCHAIN"
-    description: "Logistics management and integrated blockchain systems"
-    owner_domain: "LIB"
-    co_domains: ["IIF", "EEE", "AAP"]
-    
-  MMM:
-    name: "MECHANICAL_MATERIAL_MONITORING"
-    description: "Mechanical systems, materials engineering, and monitoring"
-    owner_domain: "MMM"
-    co_domains: ["AAA", "IIF", "PPP"]
-    
-  OOO:
-    name: "OPERATING_SYSTEMS_NAVIGATION_HPC"
-    description: "Operating systems, navigation, and high-performance computing"
-    owner_domain: "OOO"
-    co_domains: ["IIS", "EDI", "LCC"]
-    
-  PPP:
-    name: "PROPULSION_AND_FUEL"
-    description: "Propulsion systems and fuel management"
-    owner_domain: "PPP"
-    co_domains: ["CQH", "EER", "MMM"]
-
-# CAX pillars deployed in each domain
-cax_pillars:
-  CAD:
-    name: "Computer-Aided Design"
-    description: "Design systems and modeling"
-    
-  CAE:
-    name: "Computer-Aided Engineering"
-    description: "Engineering analysis and simulation"
-    
-  CAM:
-    name: "Computer-Aided Manufacturing"
-    description: "Manufacturing processes and production"
-    
-  CAT:
-    name: "Computer-Aided Testing"
-    description: "Testing frameworks and tools"
-    
-  CAI:
-    name: "Computer-Aided Integration"
-    description: "System integration and interfaces"
-    
-  CAS:
-    name: "Computer-Aided Sustainment"
-    description: "Sustainment and maintenance operations"
-    
-  CAO:
-    name: "Computer-Aided Organization"
-    description: "Organizational operations and ORGOPS"
-
-# Traceability framework
-traces:
-  enabled: true
-  bidirectional: true
-  cross_domain_refs: true
-  ata_sns_mapping: true
-  
-# Evidence requirements
-evidence:
-  mandatory_fields:
-    - "det_id"
-    - "ts"
-    - "refs.ce"
-    - "refs.ci" 
-    - "inputs"
-    - "processing.tool"
-    - "processing.params"
-    - "outputs.units"
-    - "hash"
-    - "sig"
-  
-  naming_pattern: "DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>"
-  versioning: "evolutionary"
-  immutable: true
-
-# Circular assurance KPIs
-circularity_kpis:
-  reuse_percentage: 
-    target: 35
-    unit: "%"
-    
-  co2_savings:
-    target: 1000
-    unit: "kg"
-    
-  energy_savings: 
-    target: 500
-    unit: "kWh"
-    
-  lifecycle_extension:
-    target: 12
-    unit: "months"
-
-# Metadata
 meta:
-  owner: "CADET-Registry-Admin"
-  reviewer: "Chief-Architect" 
-  last_updated: "2025-01-14T12:00:00Z"
-  change_ref: "INIT-CADET-REGISTRY-V1"
+  spec: CADET-CONFIG-1.0
+  owner: "sustainability@your-org"
+  updated: "2025-09-01T00:00:00Z"
+  notes: >
+    CADET records are monthly KPI cuts derived from signed DET packets.
+    Tokenomics normalization/weights belong to TekTok (PoI oracle).
+    CADET keeps raw, SI-based KPIs with light aggregation and quality gates.
+
+storage:
+  kpi_dir: "UTCS-BLOCKCHAIN/CADET/kpis"
+  filename_template: "%Y-%m.yaml"        # e.g., 2025-09.yaml
+  schema_ref: "UTCS-BLOCKCHAIN/DET/schemas/cadet-record.schema.json"
+  write_signature:
+    enabled: false                       # set true if you want to sign CADET files off-chain
+    alg: "Ed25519"
+    signer_id: "cadet-signer@your-org"
+
+time:
+  # All cuts use UTC month boundaries.
+  timezone: "UTC"
+  period: "monthly"
+  close_policy: "end_of_month_23_59_59Z"
+  grace_window_days: 2                   # allow late-arriving DET packets within 2 days
+
+sources:
+  det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+  # Map KPI to the DET activities that are allowed to contribute.
+  kpi_activity_map:
+    reuse_percent:        ["design", "save_model", "baseline_freeze"]
+    energy_saved_kwh:     ["baseline_freeze", "process_update", "wo_close"]
+    co2_saved_kg:         ["baseline_freeze", "process_update", "wo_close"]
+    life_extension_months:["baseline_freeze", "wo_close", "baseline_freeze"]  # sustainment/prolongation
+    risk_reduction:       ["feasibility_run", "trade_study", "solver_run", "risk_review"]
+  # Mandatory packet fields and constraints
+  packet_requirements:
+    require_refs:
+      ce: true
+      ci: false
+      cc: false
+    require_units_in_outputs: true       # outputs.units must be present (SI)
+    signature:
+      alg: "Ed25519"
+      required: true
+    hash:
+      algo: "sha256"
+      hex_length: 64
+    timestamp_monotonic: true
+
+guards:
+  min_packets_per_cut: 3
+  min_independent_sources: 2             # distinct CE IDs or domains contributing
+  sigma_outlier: 3                       # discard points beyond ±3σ per KPI
+  deduplicate_by_det_id: true
+  # If a DET packet contributes to multiple KPIs, it is allowed; to the same KPI twice, it is not.
+  forbid_duplicate_kpi_contribution: true
+
+units:
+  # Expected SI units for the metrics payload (DET -> outputs.units)
+  reuse_percent:        "%"         # 0..100 (percentage points)
+  energy_saved_kwh:     "kWh"
+  co2_saved_kg:         "kg"
+  life_extension_months:"months"
+  risk_reduction:       "fraction"  # e.g., ΔCVaR in [-1..+1]
+
+aggregation:
+  # CADET keeps raw values with light aggregation. PoI oracle will normalize/weight for tokenomics.
+  reuse_percent:
+    method: "avg"                   # average across window
+    decimals: 1
+    floor: 0.0
+    ceil: 100.0
+  energy_saved_kwh:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  co2_saved_kg:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  life_extension_months:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  risk_reduction:
+    method: "avg"                   # average ΔCVaR
+    decimals: 3
+
+cross_domain:
+  enabled: true
+  # Allow contributions from other domains to AAA’s cut when referenced through TRACES and canonical aliases.
+  require_trace_record: false       # set true if you want mandatory TRACES links for cross-domain claims
+  alias_validation: true
+
+traceability:
+  traces_glob: "UTCS-BLOCKCHAIN/TRACES/**/*.trace.yaml"
+  require_bidirectional: false      # if true, CADET includes only artifacts with verified req↔artifact traces
+
+output_policy:
+  include_evidence_list: true       # add the list of contributing DET IDs under `evidence`
+  include_methodology_block: true   # add a short methodology summary block in each KPI cut
+  rounding: "bankers"               # bankers|floor|ceil for display rounding of decimals
+
+validation:
+  # Hard errors that abort the cut generation:
+  hard:
+    - "missing_units"
+    - "invalid_signature"
+    - "invalid_hash"
+  # Soft warnings logged but not aborting:
+  soft:
+    - "late_packet_within_grace_window"
+    - "non_monotonic_timestamp"
+    - "cross_domain_without_trace"
+
+governance:
+  dao_contact: "dao@your-org"
+  change_control:
+    proposal_required: true
+    min_reviewers: 2
+    cooldown_days: 3
+  audit:
+    keep_history: true
+    history_dir: "UTCS-BLOCKCHAIN/CADET/history"
+    include_diff_hash: true
+
+# Example of how a generated cut will look like (for human reference only):
+example_cut:
+  namespace: "DET:CAD:AAA"
+  cut: "2025-09"
+  kpis:
+    reuse_percent: 41.8
+    energy_saved_kwh: 38500
+    co2_saved_kg: 1180
+    life_extension_months: 12
+    risk_reduction: 0.07
+  evidence:
+    - "DET:CAD:AAA:53-10:design:V5"
+    - "DET:CAE:AAA:53-10:solver_run:V3"
+  methodology: |
+    Aggregation window: month-end UTC. Reuse% averaged across valid packets;
+    energy and CO₂ summed; life extension summed; ΔCVaR averaged.
+    Packets failing signature/hash/units checks or beyond ±3σ were excluded.
+```
