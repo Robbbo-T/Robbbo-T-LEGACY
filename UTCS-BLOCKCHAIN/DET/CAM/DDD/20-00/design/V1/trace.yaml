@@ -1,0 +1,16 @@
+det_id: DET:CAM:DDD:20-00:design:V1
+traceability:
+  artifacts:
+    bidirectional: true
+    cross_domain_refs: []
+    downstream_refs: []
+  requirements:
+    compliance_framework: ATA iSpec 2200
+    upstream_refs:
+    - REQ-DDD-20-00-001
+    verification_method: Analysis
+  traces_registry: ../../../../../TRACES/DDD-CAM-trace-map.yaml
+validation:
+  hash_verified: true
+  signature_verified: true
+  timestamp_monotonic: true

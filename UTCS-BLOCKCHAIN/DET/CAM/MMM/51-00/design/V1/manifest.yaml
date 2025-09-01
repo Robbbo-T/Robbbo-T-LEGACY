@@ -1,0 +1,13 @@
+activity: design
+cax: CAM
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: MMM-Domain-Lead
+  sns_code: 51-00
+created: '2025-09-01T05:11:27.286954Z'
+det_id: DET:CAM:MMM:51-00:design:V1
+domain: MMM
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 51-00
+version: V1

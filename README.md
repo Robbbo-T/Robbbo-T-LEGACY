@@ -80,11 +80,26 @@ Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/
 
 ## TL;DR
 
+* **UTCS-BLOCKCHAIN** implements the complete CAX framework with **105 DET registry nodes** (15 domains × 7 pillars) under unified blockchain architecture.
 * **AMPEL360** compresses a $>2×10^16$ design space to \~10,000 feasible candidates, then selects an optimum via **CVaR** risk minimization.
 * **AQUA‑OS BRIDGE** is the deterministic, certifiable digital backbone with **DET** (Digital Evidence Twin) and a **Quantum Abstraction Layer**.
 * **GAIA AIR RTOS** provides ARINC 653‑style robust partitioning for safety‑critical execution.
 * **C‑AMEDEO** enforces a circular, perpetual lifecycle (DEOPTIMISE → OPTIMISED).
-* **CADET** continuously audits circularity using immutable evidence from the DET.
+* **CADET** continuously audits circularity using immutable evidence from the DET blockchain nodes.
+
+### 🏗️ UTCS-BLOCKCHAIN Implementation
+
+Complete Computer-Aided Excellence (CAX) framework architecture with hierarchical blockchain structure:
+
+```
+UTCS-BLOCKCHAIN/
+├── CADET/     # Circular Assurance by Digital Evolutive Twin
+├── DET/       # 105 cryptographic evidence registry nodes  
+├── TRACES/    # Traceability Records for Aerospace Certification
+└── DOMAINS/   # 15 technical domains × 7 CAX pillars
+```
+
+**Registry Nodes**: 105 DET nodes following pattern `DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/` with complete file set (manifest.yaml, det_packet.json, signature.ed25519, previous_hash, trace.yaml, cadet.yaml)
 
 ## Problem Statement
 
