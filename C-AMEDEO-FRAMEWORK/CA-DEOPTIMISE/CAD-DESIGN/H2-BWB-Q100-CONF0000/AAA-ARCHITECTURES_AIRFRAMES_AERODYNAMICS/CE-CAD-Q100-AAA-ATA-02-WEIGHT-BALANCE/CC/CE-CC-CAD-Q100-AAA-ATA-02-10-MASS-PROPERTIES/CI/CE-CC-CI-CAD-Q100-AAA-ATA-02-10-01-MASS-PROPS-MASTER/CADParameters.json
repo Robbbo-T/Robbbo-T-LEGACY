@@ -2,8 +2,25 @@
   "datums": ["PLN_XY", "PLN_YZ", "PLN_ZX"],
   "skeleton_ref": "MASTER_SKELETON_PART.prt",
   "parameters": {
-    "OEW_kg": "TBD",
+    "OEW_kg": 42150.0,
     "GRID_SPACING_MM": 100,
     "PANEL_THICK_MM": 2.5
+  },
+  "metadata": {
+    "units": {
+      "mass": "kg",
+      "length": "mm"
+    },
+    "version": "V3",
+    "last_updated": "2025-01-14T10:00:00Z",
+    "tbd_resolved": {
+      "OEW_kg": {
+        "previous": "TBD",
+        "resolved": 42150.0,
+        "resolution_date": "2025-01-14",
+        "authority": "Weight & Balance Lead",
+        "reference": "REQ-DES-STR-001"
+      }
+    }
   }
 }
