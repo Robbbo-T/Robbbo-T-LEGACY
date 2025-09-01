@@ -1,0 +1,7 @@
+---
+mic: Q100
+sns: "53-10-01"
+effectivities:
+  - config: CONF0000
+    from_rev: A
+    notes: Initial baseline
