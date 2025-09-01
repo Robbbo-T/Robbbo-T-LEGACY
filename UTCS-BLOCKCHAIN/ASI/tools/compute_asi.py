@@ -365,8 +365,85 @@ def main():
         
         leaderboard.append(entry)
 
-    # Sort by composite score
-    leaderboard.sort(key=lambda x: x["composite"], reverse=True)
+    # --- Certification bonus (bonus_only) ---
+    cert_cfg = config.get("certification", {})
+    cert_bonus_enabled = cert_cfg.get("enabled", False) and cert_cfg.get("mode") == "bonus_only"
+    max_bonus = float(cert_cfg.get("max_cert_bonus", 0.10))
+    decay_days = float(cert_cfg.get("decay_days", 365))
+    mapping_ref = cert_cfg.get("mapping_ref", "ASI/cert/cert-mapping.yaml")
+    
+    # Handle path resolution for mapping_ref
+    if mapping_ref.startswith("UTCS-BLOCKCHAIN/"):
+        mapping_path = os.path.join(args.root, mapping_ref[len("UTCS-BLOCKCHAIN/"):])
+    else:
+        mapping_path = os.path.join(args.root, mapping_ref)
+
+    def recency_decay(days, half_life):
+        if half_life <= 0: 
+            return 1.0
+        return math.pow(0.5, max(0.0, days) / half_life)
+
+    mapping = {}
+    if cert_bonus_enabled and os.path.exists(mapping_path):
+        mapping = load_yaml(mapping_path)
+
+    def cert_points_for_anchor(anchor):
+        # scan related DET packets for certification activities
+        pts = 0.0
+        if not cert_bonus_enabled: 
+            return 0.0
+        lookback = int(config["windows"]["lookback_days"])
+        
+        # Use the same DET glob pattern as main collection
+        det_glob_pattern = config["eligibility"]["det_glob"]
+        if det_glob_pattern.startswith("UTCS-BLOCKCHAIN/"):
+            det_glob = os.path.join(args.root, det_glob_pattern[len("UTCS-BLOCKCHAIN/"):])
+        else:
+            det_glob = os.path.join(args.root, det_glob_pattern)
+            
+        for path in glob.glob(det_glob, recursive=True):
+            try:
+                pkt = load_json(path)
+            except: 
+                continue
+            if get_nested(pkt, "refs.ci") != anchor and get_nested(pkt, "refs.ce") != anchor: 
+                continue
+            det_id = pkt.get("det_id", "")
+            parts = det_id.split(":")
+            act = parts[4] if len(parts) >= 5 else ""
+            if act not in ["cert_event", "audit_pass", "conformity", "approval"]:
+                continue
+            outm = pkt.get("outputs", {}).get("metrics", {})
+            # match mapping rules
+            for ev in mapping.get("events", []):
+                m = ev.get("match", {})
+                ok = all(str(outm.get(k, "")).upper() == str(v).upper() for k, v in m.items())
+                if ok:
+                    ts = pkt.get("ts", "")
+                    try: 
+                        tsdt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                    except: 
+                        tsdt = None
+                    days = (datetime.now(timezone.utc) - tsdt).days if tsdt else 0
+                    half_life = mapping.get("aggregation", {}).get("recency_half_life_days", 180)
+                    pts = max(pts, float(ev.get("points", 0.0)) * recency_decay(days, half_life))
+        return min(1.0, pts)
+
+    # compute bonus and display_score per entry
+    for e in leaderboard:
+        bonus = 0.0
+        if cert_bonus_enabled:
+            bonus = min(max_bonus, cert_points_for_anchor(e["anchor"]) * max_bonus)
+        e["cert_bonus"] = bonus
+        e["display_score"] = e["composite"] + bonus
+
+    # SORT: keep core composite for actual ranking, use display_score for UI only
+    if cert_cfg.get("tiebreaker", False):
+        # Tie-breaker using certification bonus
+        leaderboard.sort(key=lambda e: (e["composite"], e.get("cert_bonus", 0.0)), reverse=True)
+    else:
+        # Standard sort by composite only
+        leaderboard.sort(key=lambda x: x["composite"], reverse=True)
 
     # Create output directory
     output_dir_pattern = config["outputs"]["out_dir"]
