@@ -1,0 +1,32 @@
+domain:
+  code: IIS
+  name: INTELLIGENT_SYSTEMS_ONBOARD_AI
+  description: Intelligent systems and onboard artificial intelligence
+  version: 1.0.0
+cax_integration:
+  pillar: CAE-ENGINEERING
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '22'
+  - '31'
+  - '42'
+  - '46'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - EDI
+  - OOO
+  - LCC
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAE:IIS:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

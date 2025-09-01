@@ -1,0 +1,61 @@
+{
+  "det_id": "DET:CAS:MMM:76:template:V1",
+  "ts": "2025-09-01T04:25:12.342242Z",
+  "refs": {
+    "ce": "CE-CAS-Q100-MMM-ATA-76-TEMPLATE",
+    "ci": "CE-CC-CI-CAS-Q100-MMM-ATA-76-01-TEMPLATE-ITEM",
+    "cadet_chain": "CADET:MMM:CAS:V1"
+  },
+  "inputs": {
+    "domain": "MMM",
+    "domain_name": "MECHANICAL_MATERIAL_MONITORING",
+    "cax_pillar": "CAS",
+    "cax_description": "Computer-Aided Sustainment",
+    "ata_sns": "76",
+    "configuration": "H2-BWB-Q100-CONF0000"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cas-registry@1.0",
+    "params": {
+      "domain_owner": "MMM",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true
+    }
+  },
+  "outputs": {
+    "registry_status": "TEMPLATE_CREATED",
+    "traceability_links": [],
+    "compliance_status": "ATA_ALIGNED",
+    "circularity_metrics": {
+      "reuse_potential": "TBD",
+      "sustainability_score": "TBD",
+      "lifecycle_stage": "DESIGN"
+    },
+    "units": "dimensionless"
+  },
+  "traces": {
+    "upstream_refs": [],
+    "downstream_refs": [],
+    "cross_domain_refs": [],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "reuse_percentage": null,
+      "co2_savings_kg": null,
+      "energy_savings_kwh": null,
+      "lifecycle_extension_months": null
+    },
+    "sustainability_kpis": {
+      "iso14001_compliance": "PENDING",
+      "csrd_reporting": "ENABLED",
+      "gri_alignment": "TRACKED"
+    }
+  },
+  "hash": "SHA256_PLACEHOLDER_CAS_MMM_76",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cadet-registry@mmm"
+  }
+}

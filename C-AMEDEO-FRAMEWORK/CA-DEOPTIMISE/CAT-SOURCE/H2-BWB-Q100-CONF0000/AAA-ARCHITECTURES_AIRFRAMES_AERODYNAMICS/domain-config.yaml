@@ -1,0 +1,39 @@
+domain:
+  code: AAA
+  name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+  description: Airframe structures, aerodynamic surfaces, and architectural systems
+  version: 1.0.0
+cax_integration:
+  pillar: CAT-SOURCE
+  flow: CA-DEOPTIMISE
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '02'
+  - '06'
+  - '11'
+  - '18'
+  - '20'
+  - '51'
+  - '52'
+  - '53'
+  - '55'
+  - '56'
+  - '57'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - MMM
+  - EEE
+  - OOO
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAT:AAA:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

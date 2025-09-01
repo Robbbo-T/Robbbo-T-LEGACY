@@ -1,0 +1,36 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: DDD
+domain_name: DEFENCE_CYBERSECURITY_SAFETY
+description: Defense systems, cybersecurity protocols, and safety assurance
+co_domains:
+- EDI
+- IIS
+- OOO
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/
+cross_references:
+  EDI: ../../../CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-*/
+  IIS: ../../../CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-*/
+  OOO: ../../../CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-*/
+ata_sns_primary:
+- '20'
+- '46'
+- '97'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAD:DDD:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: DDD-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-DDD-DOMAIN-V1

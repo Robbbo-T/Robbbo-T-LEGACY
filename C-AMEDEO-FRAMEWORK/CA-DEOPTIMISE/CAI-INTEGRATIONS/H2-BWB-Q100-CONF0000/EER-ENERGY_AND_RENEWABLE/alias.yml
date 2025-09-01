@@ -1,0 +1,37 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: EER
+domain_name: ENERGY_AND_RENEWABLE
+description: Energy systems and renewable power generation
+co_domains:
+- PPP
+- CQH
+- EDI
+canonical_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/
+cross_references:
+  PPP: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/PPP-*/
+  CQH: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/CQH-*/
+  EDI: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/EDI-*/
+ata_sns_primary:
+- '24'
+- '26'
+- '60'
+- '61'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAI:EER:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: EER-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-EER-DOMAIN-V1

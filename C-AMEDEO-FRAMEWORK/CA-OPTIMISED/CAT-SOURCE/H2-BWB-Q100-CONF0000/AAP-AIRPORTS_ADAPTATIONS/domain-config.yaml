@@ -1,0 +1,32 @@
+domain:
+  code: AAP
+  name: AIRPORTS_ADAPTATIONS
+  description: Airport infrastructure interfaces and ground operation adaptations
+  version: 1.0.0
+cax_integration:
+  pillar: CAT-SOURCE
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '01'
+  - '07'
+  - '12'
+  - '96'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - IIF
+  - LIB
+  - EDI
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAT:AAP:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

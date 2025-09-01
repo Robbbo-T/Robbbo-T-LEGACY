@@ -1,0 +1,38 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: LCC
+domain_name: LINKS_COMMUNICATIONS_CONTROL_IoT
+description: Communication links, control systems, and IoT integration
+co_domains:
+- EDI
+- IIS
+- OOO
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAM-MANUFACTURING/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/
+cross_references:
+  EDI: ../../../CAM-MANUFACTURING/H2-BWB-Q100-CONF0000/EDI-*/
+  IIS: ../../../CAM-MANUFACTURING/H2-BWB-Q100-CONF0000/IIS-*/
+  OOO: ../../../CAM-MANUFACTURING/H2-BWB-Q100-CONF0000/OOO-*/
+ata_sns_primary:
+- '23'
+- '31'
+- '34'
+- '42'
+- '46'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAM:LCC:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: LCC-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-LCC-DOMAIN-V1

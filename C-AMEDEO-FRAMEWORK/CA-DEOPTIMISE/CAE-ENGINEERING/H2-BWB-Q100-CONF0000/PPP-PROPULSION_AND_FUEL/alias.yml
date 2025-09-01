@@ -1,0 +1,49 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: PPP
+domain_name: PROPULSION_AND_FUEL
+description: Propulsion systems and fuel management
+co_domains:
+- CQH
+- EER
+- MMM
+canonical_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAE-ENGINEERING/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUEL/
+cross_references:
+  CQH: ../../../CAE-ENGINEERING/H2-BWB-Q100-CONF0000/CQH-*/
+  EER: ../../../CAE-ENGINEERING/H2-BWB-Q100-CONF0000/EER-*/
+  MMM: ../../../CAE-ENGINEERING/H2-BWB-Q100-CONF0000/MMM-*/
+ata_sns_primary:
+- '70'
+- '71'
+- '72'
+- '73'
+- '74'
+- '75'
+- '76'
+- '77'
+- '78'
+- '79'
+- '80'
+- '81'
+- '82'
+- '83'
+- '84'
+- '85'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAE:PPP:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: PPP-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-PPP-DOMAIN-V1

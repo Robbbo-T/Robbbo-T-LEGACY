@@ -1,0 +1,37 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: EEE
+domain_name: ENVIRONMENTAL_REMEDIATION_CIRCULARITY
+description: Environmental systems and circular economy implementation
+co_domains:
+- EER
+- LIB
+- AAA
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAT-SOURCE/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/
+cross_references:
+  EER: ../../../CAT-SOURCE/H2-BWB-Q100-CONF0000/EER-*/
+  LIB: ../../../CAT-SOURCE/H2-BWB-Q100-CONF0000/LIB-*/
+  AAA: ../../../CAT-SOURCE/H2-BWB-Q100-CONF0000/AAA-*/
+ata_sns_primary:
+- '20'
+- '30'
+- '36'
+- '98'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAT:EEE:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: EEE-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-EEE-DOMAIN-V1

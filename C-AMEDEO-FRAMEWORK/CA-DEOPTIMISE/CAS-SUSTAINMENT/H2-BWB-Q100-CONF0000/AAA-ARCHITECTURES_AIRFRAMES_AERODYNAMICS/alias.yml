@@ -1,0 +1,44 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: AAA
+domain_name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+description: Airframe structures, aerodynamic surfaces, and architectural systems
+co_domains:
+- MMM
+- EEE
+- OOO
+canonical_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+cross_references:
+  MMM: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/MMM-*/
+  EEE: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/EEE-*/
+  OOO: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/OOO-*/
+ata_sns_primary:
+- '02'
+- '06'
+- '11'
+- '18'
+- '20'
+- '51'
+- '52'
+- '53'
+- '55'
+- '56'
+- '57'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAS:AAA:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: AAA-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-AAA-DOMAIN-V1
