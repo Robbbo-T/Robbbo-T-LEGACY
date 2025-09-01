@@ -1,0 +1,16 @@
+# CATIA V5 Product File - fpb_assy_v3.CATProduct  
+# Forward Pressure Bulkhead Assembly
+# Part Number: Q100-53-10-01-001
+# Revision: A
+# This is a placeholder for a native CATIA V5 assembly file
+Version: V5R30
+Assembly: Forward_Pressure_Bulkhead
+Components:
+  - fpb_skin_panel.CATPart
+  - fpb_core_sandwich.CATPart  
+  - fpb_peripheral_flange.CATPart
+  - fpb_hardpoint_insert_x8.CATPart
+Constraints:
+  - Coincident surfaces
+  - Assembly mates
+  - Fixed constraints
