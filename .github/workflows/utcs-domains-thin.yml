@@ -22,7 +22,7 @@ jobs:
               echo "::error file=$f::README too long ($lines lines). Keep thin and link to C-AMEDEO."
               exit_code=1
             fi
-            if grep -Eqi 'EBOM.yaml|MBOM.yaml|PN|qty|material' "$f"; then
+            if grep -Eqi 'EBOM.yaml|MBOM.yaml|PN[[:space:]]*:|qty[[:space:]]*:|material[[:space:]]*:' "$f"; then
               echo "::error file=$f::Detected EBOM/MBOM content. Put engineering in C-AMEDEO."
               exit_code=1
             fi
