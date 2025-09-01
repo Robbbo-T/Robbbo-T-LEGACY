@@ -128,7 +128,7 @@ def generate_det_template(cax, domain, ata_sns):
 
 def main():
     """Generate complete DET registry structure"""
-    base_dir = "DET-REGISTRY"
+    base_dir = "UTCS-BLOCKCHAIN/DET/DET-REGISTRY"
     os.makedirs(base_dir, exist_ok=True)
     
     # Create registry index

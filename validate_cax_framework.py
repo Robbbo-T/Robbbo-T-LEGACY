@@ -40,7 +40,7 @@ def validate_cadet_registry():
 
 def validate_det_registry():
     """Validate DET evidence registry"""
-    det_dir = Path("DET-REGISTRY")
+    det_dir = Path("UTCS-BLOCKCHAIN/DET/DET-REGISTRY")
     if not det_dir.exists():
         return False, "DET-REGISTRY directory missing"
     
