@@ -1,0 +1,8 @@
+{
+  "pbs_id": "Q100-02-30-01-0001",
+  "owner_domain": "AAA",
+  "sns": "02-30-01",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-02-30-LOADING-SCHEMES",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-02-30-01-STD-LOADING-CASES"
+}

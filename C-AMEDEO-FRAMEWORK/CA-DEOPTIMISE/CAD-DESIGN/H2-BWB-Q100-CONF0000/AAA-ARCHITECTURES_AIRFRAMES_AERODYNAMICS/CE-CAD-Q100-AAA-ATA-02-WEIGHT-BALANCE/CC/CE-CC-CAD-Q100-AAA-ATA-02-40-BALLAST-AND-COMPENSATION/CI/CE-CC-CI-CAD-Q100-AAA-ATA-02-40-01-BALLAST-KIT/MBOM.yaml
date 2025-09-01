@@ -1,0 +1,11 @@
+top_pn: Q100-02-40-01-BALLAST-ASSY
+routing:
+  - op: 10
+    name: Assemble ballast
+    workcenter: WC-ASSY
+    time_min: 20
+quality:
+  fai_required: true
+  spc:
+    - cp: 1.33
+    - cpk: 1.25

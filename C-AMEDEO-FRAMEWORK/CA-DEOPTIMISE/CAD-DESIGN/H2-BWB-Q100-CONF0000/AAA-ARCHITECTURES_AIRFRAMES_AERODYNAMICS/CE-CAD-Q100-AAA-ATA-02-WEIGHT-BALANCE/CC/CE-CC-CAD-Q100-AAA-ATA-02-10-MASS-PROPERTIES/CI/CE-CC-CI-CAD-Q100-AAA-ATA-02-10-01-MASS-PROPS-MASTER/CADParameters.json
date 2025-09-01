@@ -1,0 +1,9 @@
+{
+  "datums": ["PLN_XY", "PLN_YZ", "PLN_ZX"],
+  "skeleton_ref": "MASTER_SKELETON_PART.prt",
+  "parameters": {
+    "OEW_kg": "TBD",
+    "GRID_SPACING_MM": 100,
+    "PANEL_THICK_MM": 2.5
+  }
+}
