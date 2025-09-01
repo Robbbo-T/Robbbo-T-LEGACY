@@ -1,3 +1,4 @@
+---
 # UTCS-BLOCKCHAIN/DOMAINS/domains-summary.yaml
 meta:
   spec: UTCS-DOMAINS-SUMMARY-1.0
@@ -108,21 +109,22 @@ domains:
     det_namespaces: ["DET:CAD:MMM","DET:CAE:MMM","DET:CAM:MMM","DET:CAT:MMM","DET:CAI:MMM","DET:CAS:MMM","DET:CAO:MMM"]
     canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/
 
+
   - code: OOO
     name: OPERATING_SYSTEMS_NAVIGATION_HPC
-    ata_sns_examples: ["22-00","23-00","31-00","34-00","46-00"]
-    det_namespaces: ["DET:CAD:OOO","DET:CAE:OOO","DET:CAM:OOO","DET:CAT:OOO","DET:CAI:OOO","DET:CAS:OOO","DET:CAO:OOO"]
+    ata_sns_examples: ["22-00", "23-00", "31-00", "34-00", "46-00"]
+    det_namespaces: ["DET:CAD:OOO", "DET:CAE:OOO", "DET:CAM:OOO", "DET:CAT:OOO", "DET:CAI:OOO", "DET:CAS:OOO", "DET:CAO:OOO"]
     canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/
 
   - code: PPP
     name: PROPULSION_AND_FUEL
-    ata_sns_examples: ["70-00","71-00","72-00","73-00","74-00","75-00","76-00","77-00","78-00","79-00","80-00"]
-    det_namespaces: ["DET:CAD:PPP","DET:CAE:PPP","DET:CAM:PPP","DET:CAT:PPP","DET:CAI:PPP","DET:CAS:PPP","DET:CAO:PPP"]
+    ata_sns_examples: ["70-00", "71-00", "72-00", "73-00", "74-00", "75-00", "76-00", "77-00", "78-00", "79-00", "80-00"]
+    det_namespaces: ["DET:CAD:PPP", "DET:CAE:PPP", "DET:CAM:PPP", "DET:CAT:PPP", "DET:CAI:PPP", "DET:CAS:PPP", "DET:CAO:PPP"]
     canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUEL/
 
 totals:
   domains: 15
   pillars_per_domain: 7
   namespaces_total: 105
-```
+
 

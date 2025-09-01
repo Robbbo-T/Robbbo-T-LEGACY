@@ -1,3 +1,4 @@
+---
 # UTCS-BLOCKCHAIN/CADET/cadet-config.yaml
 # CADET — Circular Assurance by Digital Evolutive Twin
 # Configuration for computing monthly KPI cuts from DET evidence.
@@ -13,10 +14,10 @@ meta:
 
 storage:
   kpi_dir: "UTCS-BLOCKCHAIN/CADET/kpis"
-  filename_template: "%Y-%m.yaml"        # e.g., 2025-09.yaml
+  filename_template: "%Y-%m.yaml" # e.g., 2025-09.yaml
   schema_ref: "UTCS-BLOCKCHAIN/DET/schemas/cadet-record.schema.json"
   write_signature:
-    enabled: false                       # set true if you want to sign CADET files off-chain
+    enabled: false # set true if you want to sign CADET files off-chain
     alg: "Ed25519"
     signer_id: "cadet-signer@your-org"
 
@@ -25,17 +26,17 @@ time:
   timezone: "UTC"
   period: "monthly"
   close_policy: "end_of_month_23_59_59Z"
-  grace_window_days: 2                   # allow late-arriving DET packets within 2 days
+  grace_window_days: 2 # allow late-arriving DET packets within 2 days
 
 sources:
   det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
   # Map KPI to the DET activities that are allowed to contribute.
   kpi_activity_map:
-    reuse_percent:        ["design", "save_model", "baseline_freeze"]
-    energy_saved_kwh:     ["baseline_freeze", "process_update", "wo_close"]
-    co2_saved_kg:         ["baseline_freeze", "process_update", "wo_close"]
-    life_extension_months:["baseline_freeze", "wo_close", "baseline_freeze"]  # sustainment/prolongation
-    risk_reduction:       ["feasibility_run", "trade_study", "solver_run", "risk_review"]
+    reuse_percent: ["design", "save_model", "baseline_freeze"]
+    energy_saved_kwh: ["baseline_freeze", "process_update", "wo_close"]
+    co2_saved_kg: ["baseline_freeze", "process_update", "wo_close"]
+    life_extension_months: ["baseline_freeze", "wo_close", "baseline_freeze"] # sustainment/prolongation
+    risk_reduction: ["feasibility_run", "trade_study", "solver_run", "risk_review"]
   # Mandatory packet fields and constraints
   packet_requirements:
     require_refs:
@@ -61,11 +62,11 @@ guards:
 
 units:
   # Expected SI units for the metrics payload (DET -> outputs.units)
-  reuse_percent:        "%"         # 0..100 (percentage points)
-  energy_saved_kwh:     "kWh"
-  co2_saved_kg:         "kg"
-  life_extension_months:"months"
-  risk_reduction:       "fraction"  # e.g., ΔCVaR in [-1..+1]
+  reuse_percent: "%"         # 0..100 (percentage points)
+  energy_saved_kwh: "kWh"
+  co2_saved_kg: "kg"
+  life_extension_months: "months"
+  risk_reduction: "fraction"  # e.g., ΔCVaR in [-1..+1]
 
 aggregation:
   # CADET keeps raw values with light aggregation. PoI oracle will normalize/weight for tokenomics.
@@ -143,6 +144,5 @@ example_cut:
     - "DET:CAE:AAA:53-10:solver_run:V3"
   methodology: |
     Aggregation window: month-end UTC. Reuse% averaged across valid packets;
-    energy and CO₂ summed; life extension summed; ΔCVaR averaged.
-    Packets failing signature/hash/units checks or beyond ±3σ were excluded.
-```
+    energy and CO₂ summed; life extension sumada; ΔCVaR promediada.
+    Paquetes que fallaron firma/hash/unidades o fuera de ±3σ fueron excluidos.
