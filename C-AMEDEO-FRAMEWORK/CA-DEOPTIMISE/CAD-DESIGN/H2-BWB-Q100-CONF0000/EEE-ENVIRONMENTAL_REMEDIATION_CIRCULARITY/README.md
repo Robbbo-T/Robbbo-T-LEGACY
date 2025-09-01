@@ -1,54 +1,53 @@
-# EEE - Environmental Remediation & Circularity
+# EEE - ENVIRONMENTAL_REMEDIATION_CIRCULARITY
 
-**Domain:** EEE - Environmental Remediation & Circularity  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: EEE  
+**Name**: ENVIRONMENTAL_REMEDIATION_CIRCULARITY  
+**Description**: Environmental systems and circular economy implementation
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-20, ATA-30, ATA-36, ATA-98
 
-This domain focuses on environmental control systems, waste management, and circular economy principles for sustainable aircraft operations.
+## Cross-Domain References
+Co-domains that reference this domain:
+[EER](../EER-*/), [LIB](../LIB-*/), [AAA](../AAA-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Environmental control systems
-- Waste management and recycling
-- Energy recovery systems
-- Circular economy implementation
-- Environmental impact reduction
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:EEE:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 12 - Servicing — Routine Maintenance**
-- **ATA 21 - Air Conditioning**
-- **ATA 36 - Pneumatic (Bleed Mgmt)**
-- **ATA 38 - Water & Waste**
-- **ATA 49 - APU (Energy Recovery)**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-EEE-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-EEE-ATA-12-SERVICING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-12-SERVICING) — ATA 12 - Servicing — Routine Maintenance
-* [CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND) — ATA 21 - Air Conditioning
-* [CE-CAD-Q100-EEE-ATA-36-BLEED-MGMT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-36-BLEED-MGMT) — ATA 36 - Pneumatic (Bleed Mgmt)
-* [CE-CAD-Q100-EEE-ATA-38-WATER-WASTE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-38-WATER-WASTE) — ATA 38 - Water & Waste
-* [CE-CAD-Q100-EEE-ATA-49-APU-ENERGY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-49-APU-ENERGY) — ATA 49 - APU (Energy Recovery)
-
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Environmental systems and circular economy implementation*

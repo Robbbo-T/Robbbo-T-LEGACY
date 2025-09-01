@@ -1,0 +1,36 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: IIF
+domain_name: INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS
+description: Infrastructure systems and value chain management
+co_domains:
+- LIB
+- AAP
+- MMM
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAO-ORGANIZATION/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/
+cross_references:
+  LIB: ../../../CAO-ORGANIZATION/H2-BWB-Q100-CONF0000/LIB-*/
+  AAP: ../../../CAO-ORGANIZATION/H2-BWB-Q100-CONF0000/AAP-*/
+  MMM: ../../../CAO-ORGANIZATION/H2-BWB-Q100-CONF0000/MMM-*/
+ata_sns_primary:
+- '07'
+- '12'
+- '96'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAO:IIF:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: IIF-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-IIF-DOMAIN-V1

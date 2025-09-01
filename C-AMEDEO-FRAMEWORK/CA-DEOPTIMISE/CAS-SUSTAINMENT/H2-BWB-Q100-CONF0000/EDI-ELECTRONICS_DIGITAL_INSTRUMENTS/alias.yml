@@ -1,0 +1,38 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: EDI
+domain_name: ELECTRONICS_DIGITAL_INSTRUMENTS
+description: Electronic systems and digital instrumentation
+co_domains:
+- LCC
+- IIS
+- OOO
+canonical_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/
+cross_references:
+  LCC: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/LCC-*/
+  IIS: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/IIS-*/
+  OOO: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/OOO-*/
+ata_sns_primary:
+- '22'
+- '23'
+- '31'
+- '34'
+- '42'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAS:EDI:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: EDI-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-EDI-DOMAIN-V1

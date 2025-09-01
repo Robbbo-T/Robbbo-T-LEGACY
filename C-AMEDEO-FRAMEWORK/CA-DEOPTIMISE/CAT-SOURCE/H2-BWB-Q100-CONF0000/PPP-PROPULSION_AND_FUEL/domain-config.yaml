@@ -1,0 +1,44 @@
+domain:
+  code: PPP
+  name: PROPULSION_AND_FUEL
+  description: Propulsion systems and fuel management
+  version: 1.0.0
+cax_integration:
+  pillar: CAT-SOURCE
+  flow: CA-DEOPTIMISE
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '70'
+  - '71'
+  - '72'
+  - '73'
+  - '74'
+  - '75'
+  - '76'
+  - '77'
+  - '78'
+  - '79'
+  - '80'
+  - '81'
+  - '82'
+  - '83'
+  - '84'
+  - '85'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - CQH
+  - EER
+  - MMM
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAT:PPP:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

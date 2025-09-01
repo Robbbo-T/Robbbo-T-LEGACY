@@ -1,0 +1,36 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: LIB
+domain_name: LOGISTICS_INTEGRATED_BLOCKCHAIN
+description: Logistics management and integrated blockchain systems
+co_domains:
+- IIF
+- EEE
+- AAP
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/
+cross_references:
+  IIF: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/IIF-*/
+  EEE: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/EEE-*/
+  AAP: ../../../CAI-INTEGRATIONS/H2-BWB-Q100-CONF0000/AAP-*/
+ata_sns_primary:
+- '05'
+- '07'
+- '12'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAI:LIB:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: LIB-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-LIB-DOMAIN-V1

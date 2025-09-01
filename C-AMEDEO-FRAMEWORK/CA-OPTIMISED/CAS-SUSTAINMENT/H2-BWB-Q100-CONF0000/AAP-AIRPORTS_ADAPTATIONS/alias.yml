@@ -1,0 +1,37 @@
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: AAP
+domain_name: AIRPORTS_ADAPTATIONS
+description: Airport infrastructure interfaces and ground operation adaptations
+co_domains:
+- IIF
+- LIB
+- EDI
+canonical_path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/
+cross_references:
+  IIF: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/IIF-*/
+  LIB: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/LIB-*/
+  EDI: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/EDI-*/
+ata_sns_primary:
+- '01'
+- '07'
+- '12'
+- '96'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAS:AAP:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: AAP-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-AAP-DOMAIN-V1

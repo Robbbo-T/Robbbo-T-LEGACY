@@ -1,50 +1,53 @@
-# LCC - Links, Communications, Control & IoT
+# LCC - LINKS_COMMUNICATIONS_CONTROL_IoT
 
-**Domain:** LCC - Links, Communications, Control & IoT  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: LCC  
+**Name**: LINKS_COMMUNICATIONS_CONTROL_IoT  
+**Description**: Communication links, control systems, and IoT integration
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-23, ATA-31, ATA-34, ATA-42, ATA-46
 
-This domain covers communication networks, data links, IoT systems, and control systems integration.
+## Cross-Domain References
+Co-domains that reference this domain:
+[EDI](../EDI-*/), [IIS](../IIS-*/), [OOO](../OOO-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Communication networks
-- Data link systems
-- Internet of Things (IoT) integration
-- Control system networks
-- Deterministic communication protocols
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:LCC:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 23 - Communications Network**
-- **ATA 34 - Navigation Data Links**
-- **ATA 46 - Information Systems (IoT)**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-LCC-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-LCC-ATA-23-NETWORK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-23-NETWORK) — ATA 23 - Communications Network
-* [CE-CAD-Q100-LCC-ATA-34-DATALINK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-34-DATALINK) — ATA 34 - Navigation Data Links
-* [CE-CAD-Q100-LCC-ATA-46-IOT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-46-IOT) — ATA 46 - Information Systems (IoT)
-
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Communication links, control systems, and IoT integration*

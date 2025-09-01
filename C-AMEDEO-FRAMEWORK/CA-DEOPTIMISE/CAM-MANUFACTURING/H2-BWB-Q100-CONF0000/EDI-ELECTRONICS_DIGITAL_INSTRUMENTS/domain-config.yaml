@@ -1,0 +1,33 @@
+domain:
+  code: EDI
+  name: ELECTRONICS_DIGITAL_INSTRUMENTS
+  description: Electronic systems and digital instrumentation
+  version: 1.0.0
+cax_integration:
+  pillar: CAM-MANUFACTURING
+  flow: CA-DEOPTIMISE
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '22'
+  - '23'
+  - '31'
+  - '34'
+  - '42'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - LCC
+  - IIS
+  - OOO
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAM:EDI:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

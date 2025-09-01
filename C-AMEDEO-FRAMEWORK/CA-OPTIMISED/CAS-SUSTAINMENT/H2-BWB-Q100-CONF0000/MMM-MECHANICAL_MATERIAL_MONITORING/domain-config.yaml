@@ -1,0 +1,44 @@
+domain:
+  code: MMM
+  name: MECHANICAL_MATERIAL_MONITORING
+  description: Mechanical systems, materials engineering, and monitoring
+  version: 1.0.0
+cax_integration:
+  pillar: CAS-SUSTAINMENT
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '51'
+  - '52'
+  - '53'
+  - '54'
+  - '55'
+  - '56'
+  - '57'
+  - '71'
+  - '72'
+  - '73'
+  - '74'
+  - '75'
+  - '76'
+  - '77'
+  - '78'
+  - '79'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - AAA
+  - IIF
+  - PPP
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAS:MMM:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

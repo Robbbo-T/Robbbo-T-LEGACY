@@ -1,56 +1,53 @@
-# DDD - Defence, Cybersecurity & Safety
+# DDD - DEFENCE_CYBERSECURITY_SAFETY
 
-**Domain:** DDD - Defence, Cybersecurity & Safety  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: DDD  
+**Name**: DEFENCE_CYBERSECURITY_SAFETY  
+**Description**: Defense systems, cybersecurity protocols, and safety assurance
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-20, ATA-46, ATA-97
 
-This domain encompasses cybersecurity, information security, and safety-critical systems protection for the BWB aircraft.
+## Cross-Domain References
+Co-domains that reference this domain:
+[EDI](../EDI-*/), [IIS](../IIS-*/), [OOO](../OOO-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Cybersecurity frameworks
-- Information systems security
-- Safety-critical system protection
-- Digital information security
-- Communication security
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:DDD:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 23 - Communications Security**
-- **ATA 31 - Indicating/Recording (Security)**
-- **ATA 34 - Navigation Integrity**
-- **ATA 45 - EWIS Safety**
-- **ATA 46 - Information Systems Security**
-- **ATA 42 (Spec) - Digital Information Security Baseline**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-DDD-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-DDD-ATA-23-COMMS-SEC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-23-COMMS-SEC) — ATA 23 - Communications Security
-* [CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE) — ATA 31 - Indicating/Recording (Security)
-* [CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY) — ATA 34 - Navigation Integrity
-* [CE-CAD-Q100-DDD-ATA-45-EWIS-SAFETY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-45-EWIS-SAFETY) — ATA 45 - EWIS Safety
-* [CE-CAD-Q100-DDD-ATA-46-INFOSYS-SEC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-46-INFOSYS-SEC) — ATA 46 - Information Systems Security
-* [CE-CAD-Q100-DDD-ATA42-SPEC-CYBER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA42-SPEC-CYBER) — Configuration Envelope
-
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+DDD-DEFENCE_CYBERSECURITY_SAFETY/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Defense systems, cybersecurity protocols, and safety assurance*
