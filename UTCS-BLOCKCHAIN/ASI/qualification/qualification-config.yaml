@@ -1,0 +1,76 @@
+---
+meta:
+  spec: ASI-QUAL-1.0
+  owner: "asi@your-org"
+  updated: "2025-09-01T00:00:00Z"
+  notes: >
+    Automatic, PMI-like qualification over ASI rankings.
+    Certification does not gate; bonus may affect tie-breaks only (handled in ASI).
+
+inputs:
+  # ASI core rankings (composite score is cert-agnostic)
+  asi_scores_json: "UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json"
+  # DET packets (for provenance checks and contributor mapping)
+  det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+  # Affiliates allowlist (official repos only)
+  affiliates_ref: "UTCS-BLOCKCHAIN/ASI/affiliates.yaml"
+
+eligibility:
+  require_affiliated_repo: true
+  require_ed25519_signature: true
+  require_si_units_in_outputs: true
+  lookback_days: 180
+
+grouping:
+  # Artifact identity and contributor extraction paths
+  artifact_key: "anchor"                        # (from ASI scores: refs.ci or refs.ce)
+  contributor_fields:                           # extract from DET packets to attribute contributions
+    - "sig.by"                                  # signer id (bot/user id)
+    - "inputs.provenance.commit_author"         # optional VCS author (string)
+    - "inputs.provenance.actor"                 # optional actor
+  min_packets_per_contributor: 2
+
+floors:                                          # sustainability & quality floors
+  # Artifact must not violate these floors (based on ASI inputs/CADET deltas)
+  co2_saved_kg_min: 0
+  energy_saved_kwh_min: 0
+  reuse_percent_min: 0
+  # Allow exceptions if risk reduction is clearly positive
+  allow_if_risk_reduction_gt: 0.05
+
+classes:
+  # Qualification Classes (Q1..Q5) – thresholds based on ASI composite percentiles (cert-agnostic)
+  # Tiers are deliberately broad; adjust after you see initial distributions.
+  artifact:
+    Q5-Exemplar: {percentile_min: 95}     # top 5%
+    Q4-Advanced: {percentile_min: 80}
+    Q3-Competent: {percentile_min: 60}
+    Q2-Emerging: {percentile_min: 40}
+    Q1-Seed: {percentile_min: 0}
+  contributor:
+    Q5-Exemplar: {percentile_min: 95, min_artifacts: 3}
+    Q4-Advanced: {percentile_min: 80, min_artifacts: 2}
+    Q3-Competent: {percentile_min: 60, min_artifacts: 1}
+    Q2-Emerging: {percentile_min: 40, min_artifacts: 1}
+    Q1-Seed: {percentile_min: 0, min_artifacts: 1}
+
+scoring:
+  # Composite to use for ranking – must be cert-agnostic
+  field: "composite"
+  # Optional display score with cert_bonus – NOT used for qualification tiering
+  display_field: "display_score"
+  # Tie-breakers: favor robustness and trace completeness (comes from ASI)
+  tie_breaker_fields: ["metrics.robustness", "metrics.trace_completeness"]
+
+outputs:
+  dir: "UTCS-BLOCKCHAIN/ASI/out"
+  artifact_file_json: "qualification-artifacts.json"
+  artifact_file_md: "qualification-artifacts.md"
+  contributor_file_json: "qualification-contributors.json"
+  contributor_file_md: "qualification-contributors.md"
+  tekcred_queue: "qualification-tekcred-queue.json"   # optional SBT issuance queue
+
+det_emit:
+  enable: true
+  dir: "UTCS-BLOCKCHAIN/DET/ASI/qualification_publish"
+  signer: "asi-qual-bot@tek"

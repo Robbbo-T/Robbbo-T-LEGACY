@@ -1,0 +1,26 @@
+{
+  "det_id": "DET:ASI:qualification_publish:ASI-QUAL-2025-09-01T08:55:20Z:V1",
+  "ts": "2025-09-01T08:55:20Z",
+  "refs": {
+    "ce": ""
+  },
+  "inputs": {
+    "asi_scores": "UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json"
+  },
+  "processing": {
+    "tool": "compute_qualification@1.0",
+    "params": {}
+  },
+  "outputs": {
+    "units": "class",
+    "metrics": {
+      "artifacts": 0,
+      "contributors": 0
+    }
+  },
+  "hash": "",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "asi-qual-bot@tek"
+  }
+}

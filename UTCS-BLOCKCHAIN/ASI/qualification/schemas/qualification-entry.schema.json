@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"ASI Qualification Entry (Artifact)",
+  "type":"object",
+  "required":["anchor","domain","pillar","sns","qualification","percentile","composite"],
+  "properties":{
+    "anchor":{"type":"string"},
+    "domain":{"type":"string","pattern":"^[A-Z]{3}$"},
+    "pillar":{"type":"string","pattern":"^(CAD|CAE|CAM|CAT|CAI|CAS|CAO)$"},
+    "sns":{"type":"string"},
+    "qualification":{"type":"string","pattern":"^Q[1-5]-[A-Za-z]+$"},
+    "percentile":{"type":"number","minimum":0,"maximum":100},
+    "composite":{"type":"number"},
+    "display_score":{"type":"number"},
+    "provenance":{
+      "type":"object",
+      "properties":{
+        "repo":{"type":"string"},
+        "det_ids":{"type":"array","items":{"type":"string"}}
+      }
+    }
+  }
+}

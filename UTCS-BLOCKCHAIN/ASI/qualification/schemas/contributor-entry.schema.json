@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"ASI Qualification Entry (Contributor)",
+  "type":"object",
+  "required":["contributor_id","qualification","percentile","composite","artifacts"],
+  "properties":{
+    "contributor_id":{"type":"string"},
+    "qualification":{"type":"string","pattern":"^Q[1-5]-[A-Za-z]+$"},
+    "percentile":{"type":"number","minimum":0,"maximum":100},
+    "composite":{"type":"number"},
+    "artifacts":{"type":"array","items":{"type":"string"}}
+  }
+}
