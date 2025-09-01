@@ -141,13 +141,13 @@
 ```mermaid
 stateDiagram-v2
     [*] --> Waiting
-    Waiting --> Aggregating : weekly cron
-    Aggregating --> SignedFeeds : validate + sign (PoI, Recovery)
-    SignedFeeds --> MintReady : cooldown ok & cap available
-    MintReady --> Minted : MonetaryPolicy.mintAccordingToFeeds()
-    Minted --> EmittedDET : write DET:TOK:EMIT
-    EmittedDET --> Grants : TekDAO rounds (DET:TOK:GRANT)
-    Grants --> Waiting : next window
+    Waiting --> Aggregating: weekly cron
+    Aggregating --> SignedFeeds: validate and sign PoI and Recovery
+    SignedFeeds --> MintReady: cooldown ok and cap available
+    MintReady --> Minted: call mintAccordingToFeeds
+    Minted --> EmittedDET: write DET TOK EMIT
+    EmittedDET --> Grants: TekDAO rounds DET TOK GRANT
+    Grants --> Waiting: next window
 ```
 
 **Cooldown:** one mint per week (`MonetaryPolicy.lastMintWeek`).
