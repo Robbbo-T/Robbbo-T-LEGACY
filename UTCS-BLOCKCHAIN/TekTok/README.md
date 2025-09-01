@@ -44,14 +44,14 @@ flowchart LR
   subgraph Evidence
     D[DET packs<br/>sha256 + Ed25519] --> C[CADET KPI cuts]
   end
-  O1[PoI Oracle<br/>(DET+CADET feed)] --> MP[MonetaryPolicy]
-  O2[Recovery Oracle<br/>(audited recouped funds)] --> MP
+  O1[PoI Oracle<br/>DET+CADET feed] --> MP[MonetaryPolicy]
+  O2[Recovery Oracle<br/>audited recouped funds] --> MP
   MP -->|mint| TKTK[TekTok ERC-20]
   MP -->|emit DET:TOK:EMIT| Evt[DET:TOK events]
-  TKTK --> DAO[TekDAO (timelock)]
+  TKTK --> DAO[TekDAO timelock]
   TKTK --> SUST[Sustainability Fund]
   TKTK --> INNO[Innovators]
-  TKTK --> TREAS[Treasury (grants)]
+  TKTK --> TREAS[Treasury grants]
   Cred[TekCred SBT] --> DAO
 ```
 
