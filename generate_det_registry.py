@@ -249,7 +249,7 @@ DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>
 Example: `DET:CAD:AAA:52-10:design:V3`
 """
     
-    with open(os.path.join(base_dir, "README.md"), 'w') as f:
+    with open(os.path.join(base_dir, "README.md"), 'w', encoding='utf_8') as f:
         f.write(main_readme)
     
     print(f"Generated complete DET registry:")
