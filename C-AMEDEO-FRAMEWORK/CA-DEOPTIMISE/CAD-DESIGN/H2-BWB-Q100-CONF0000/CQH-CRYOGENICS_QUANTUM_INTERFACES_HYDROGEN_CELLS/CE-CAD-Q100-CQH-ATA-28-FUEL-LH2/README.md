@@ -1,6 +1,6 @@
 # CE-CAD-Q100-CQH-ATA-28-FUEL-LH2
 
-**Configuration Element:** CE-CAD-Q100-CQH-ATA-28-FUEL-LH2  
+**Configuration Envelope:** CE-CAD-Q100-CQH-ATA-28-FUEL-LH2  
 **ATA Chapter:** 28  
 **Description:** Fuel Systems (LH₂)  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements fuel systems (lh₂) requirements as defined in ATA iSpec 2200 Chapter 28 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements fuel systems (lh₂) requirements as defined in ATA iSpec 2200 Chapter 28 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

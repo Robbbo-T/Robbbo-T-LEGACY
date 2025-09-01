@@ -18,7 +18,7 @@ This domain encompasses all aspects related to aircraft structural design, aerod
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following ATA chapters:
+This domain includes Configuration Envelopes (CE) covering the following ATA chapters:
 
 - **ATA 02** - Weight & Balance
 - **ATA 04** - Airworthiness Limitations (ALS/SSID)
@@ -39,7 +39,7 @@ This domain includes Configuration Elements (CE) covering the following ATA chap
 - **ATA 56** - Windows
 - **ATA 57** - Wings
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-AAA-ATA-XX-DESCRIPTION`
 
@@ -48,7 +48,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE) — ATA 02** - Weight & Balance
 * [CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS) — ATA 04** - Airworthiness Limitations (ALS/SSID)

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-55-STABILIZERS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-55-STABILIZERS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-55-STABILIZERS  
 **ATA Chapter:** 55  
 **Description:** Stabilizers  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements stabilizers requirements as defined in ATA iSpec 2200 Chapter 55 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements stabilizers requirements as defined in ATA iSpec 2200 Chapter 55 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

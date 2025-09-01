@@ -1,6 +1,6 @@
 # CE-CAD-Q100-MMM-ATA-32-LG-MON
 
-**Configuration Element:** CE-CAD-Q100-MMM-ATA-32-LG-MON  
+**Configuration Envelope:** CE-CAD-Q100-MMM-ATA-32-LG-MON  
 **ATA Chapter:** 32  
 **Description:** Landing Gear  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements landing gear requirements as defined in ATA iSpec 2200 Chapter 32 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements landing gear requirements as defined in ATA iSpec 2200 Chapter 32 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

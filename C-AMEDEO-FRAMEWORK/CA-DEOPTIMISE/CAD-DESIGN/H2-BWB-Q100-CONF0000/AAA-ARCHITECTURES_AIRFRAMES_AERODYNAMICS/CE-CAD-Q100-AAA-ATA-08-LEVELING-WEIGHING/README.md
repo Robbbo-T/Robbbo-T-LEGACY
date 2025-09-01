@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-08-LEVELING-WEIGHING
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-08-LEVELING-WEIGHING  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-08-LEVELING-WEIGHING  
 **ATA Chapter:** 08  
 **Description:** Leveling & Weighing  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements leveling & weighing requirements as defined in ATA iSpec 2200 Chapter 08 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements leveling & weighing requirements as defined in ATA iSpec 2200 Chapter 08 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

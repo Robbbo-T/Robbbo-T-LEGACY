@@ -1,6 +1,6 @@
 # CE-CAD-Q100-CCC-ATA-44-CABIN
 
-**Configuration Element:** CE-CAD-Q100-CCC-ATA-44-CABIN  
+**Configuration Envelope:** CE-CAD-Q100-CCC-ATA-44-CABIN  
 **ATA Chapter:** 44  
 **Description:** Cabin Systems  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements cabin systems requirements as defined in ATA iSpec 2200 Chapter 44 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements cabin systems requirements as defined in ATA iSpec 2200 Chapter 44 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

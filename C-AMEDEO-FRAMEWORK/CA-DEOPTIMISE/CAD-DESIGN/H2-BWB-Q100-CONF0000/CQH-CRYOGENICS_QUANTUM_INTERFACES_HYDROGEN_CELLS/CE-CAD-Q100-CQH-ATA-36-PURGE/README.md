@@ -1,6 +1,6 @@
 # CE-CAD-Q100-CQH-ATA-36-PURGE
 
-**Configuration Element:** CE-CAD-Q100-CQH-ATA-36-PURGE  
+**Configuration Envelope:** CE-CAD-Q100-CQH-ATA-36-PURGE  
 **ATA Chapter:** 36  
 **Description:** Pneumatic  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements pneumatic requirements as defined in ATA iSpec 2200 Chapter 36 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements pneumatic requirements as defined in ATA iSpec 2200 Chapter 36 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-EEE-ATA-49-APU-ENERGY
 
-**Configuration Element:** CE-CAD-Q100-EEE-ATA-49-APU-ENERGY  
+**Configuration Envelope:** CE-CAD-Q100-EEE-ATA-49-APU-ENERGY  
 **ATA Chapter:** 49  
 **Description:** APU (Auxiliary Power Unit)  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements apu (auxiliary power unit) requirements as defined in ATA iSpec 2200 Chapter 49 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements apu (auxiliary power unit) requirements as defined in ATA iSpec 2200 Chapter 49 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

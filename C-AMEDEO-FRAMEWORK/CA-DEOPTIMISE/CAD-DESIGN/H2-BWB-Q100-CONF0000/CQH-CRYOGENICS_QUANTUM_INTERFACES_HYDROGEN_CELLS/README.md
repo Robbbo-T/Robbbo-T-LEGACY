@@ -18,14 +18,14 @@ This domain covers cryogenic systems for hydrogen storage, quantum computing int
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 28 - Fuel (LH₂ distribution)**
 - **ATA 35 - Oxygen (cryogenic interfaces)**
 - **ATA 36 - Pneumatic (purge)**
 - **ATA 73 - Engine Fuel/Control (H₂)**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-CQH-ATA-XX-DESCRIPTION`
 
@@ -34,7 +34,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-CQH-ATA-28-FUEL-LH2](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-28-FUEL-LH2) — ATA 28 - Fuel (LH₂ distribution)
 * [CE-CAD-Q100-CQH-ATA-35-OXYGEN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-35-OXYGEN) — ATA 35 - Oxygen (cryogenic interfaces)

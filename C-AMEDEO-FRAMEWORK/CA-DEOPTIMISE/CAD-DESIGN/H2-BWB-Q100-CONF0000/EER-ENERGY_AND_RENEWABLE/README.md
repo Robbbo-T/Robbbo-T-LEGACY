@@ -18,14 +18,14 @@ This domain covers electrical power systems, energy management, and renewable en
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 24 - Electrical Power**
 - **ATA 36 - Pneumatic (Energy)**
 - **ATA 49 - APU**
 - **ATA 73 - Engine Fuel & Control (H₂)**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-EER-ATA-XX-DESCRIPTION`
 
@@ -34,7 +34,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER) — ATA 24 - Electrical Power
 * [CE-CAD-Q100-EER-ATA-36-PNEUMATIC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-36-PNEUMATIC) — ATA 36 - Pneumatic (Energy)

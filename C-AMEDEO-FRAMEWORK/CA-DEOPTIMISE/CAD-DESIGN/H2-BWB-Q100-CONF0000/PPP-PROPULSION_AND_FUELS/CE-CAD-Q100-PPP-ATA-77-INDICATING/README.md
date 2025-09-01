@@ -1,6 +1,6 @@
 # CE-CAD-Q100-PPP-ATA-77-INDICATING
 
-**Configuration Element:** CE-CAD-Q100-PPP-ATA-77-INDICATING  
+**Configuration Envelope:** CE-CAD-Q100-PPP-ATA-77-INDICATING  
 **ATA Chapter:** 77  
 **Description:** Engine Indicating  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements engine indicating requirements as defined in ATA iSpec 2200 Chapter 77 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements engine indicating requirements as defined in ATA iSpec 2200 Chapter 77 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

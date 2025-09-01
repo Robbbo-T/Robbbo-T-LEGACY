@@ -1,6 +1,6 @@
 # CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND
 
-**Configuration Element:** CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND  
+**Configuration Envelope:** CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND  
 **ATA Chapter:** 21  
 **Description:** Air Conditioning  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements air conditioning requirements as defined in ATA iSpec 2200 Chapter 21 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements air conditioning requirements as defined in ATA iSpec 2200 Chapter 21 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

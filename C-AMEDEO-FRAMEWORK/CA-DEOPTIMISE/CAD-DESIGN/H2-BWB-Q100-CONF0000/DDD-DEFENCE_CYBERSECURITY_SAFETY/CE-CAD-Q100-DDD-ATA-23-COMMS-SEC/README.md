@@ -1,6 +1,6 @@
 # CE-CAD-Q100-DDD-ATA-23-COMMS-SEC
 
-**Configuration Element:** CE-CAD-Q100-DDD-ATA-23-COMMS-SEC  
+**Configuration Envelope:** CE-CAD-Q100-DDD-ATA-23-COMMS-SEC  
 **ATA Chapter:** 23  
 **Description:** Communications  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements communications requirements as defined in ATA iSpec 2200 Chapter 23 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements communications requirements as defined in ATA iSpec 2200 Chapter 23 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

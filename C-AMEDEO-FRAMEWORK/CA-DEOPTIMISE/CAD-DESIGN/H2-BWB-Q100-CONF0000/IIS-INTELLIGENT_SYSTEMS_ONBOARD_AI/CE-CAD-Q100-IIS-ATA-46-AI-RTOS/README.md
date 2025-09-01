@@ -1,6 +1,6 @@
 # CE-CAD-Q100-IIS-ATA-46-AI-RTOS
 
-**Configuration Element:** CE-CAD-Q100-IIS-ATA-46-AI-RTOS  
+**Configuration Envelope:** CE-CAD-Q100-IIS-ATA-46-AI-RTOS  
 **ATA Chapter:** 46  
 **Description:** Information Systems  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements information systems requirements as defined in ATA iSpec 2200 Chapter 46 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements information systems requirements as defined in ATA iSpec 2200 Chapter 46 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

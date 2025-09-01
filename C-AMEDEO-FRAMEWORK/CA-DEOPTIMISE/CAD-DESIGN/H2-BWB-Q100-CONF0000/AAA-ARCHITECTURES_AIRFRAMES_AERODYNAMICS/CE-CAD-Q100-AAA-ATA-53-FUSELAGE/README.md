@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-53-FUSELAGE
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-53-FUSELAGE  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-53-FUSELAGE  
 **ATA Chapter:** 53  
 **Description:** Fuselage  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements fuselage requirements as defined in ATA iSpec 2200 Chapter 53 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements fuselage requirements as defined in ATA iSpec 2200 Chapter 53 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

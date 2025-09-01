@@ -1,6 +1,6 @@
 # CE-CAD-Q100-IIS-ATA-22-AI-AF
 
-**Configuration Element:** CE-CAD-Q100-IIS-ATA-22-AI-AF  
+**Configuration Envelope:** CE-CAD-Q100-IIS-ATA-22-AI-AF  
 **ATA Chapter:** 22  
 **Description:** Auto Flight  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements auto flight requirements as defined in ATA iSpec 2200 Chapter 22 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements auto flight requirements as defined in ATA iSpec 2200 Chapter 22 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

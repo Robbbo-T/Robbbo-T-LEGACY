@@ -1,6 +1,6 @@
 # CE-CAD-Q100-PPP-ATA-76-CONTROLS
 
-**Configuration Element:** CE-CAD-Q100-PPP-ATA-76-CONTROLS  
+**Configuration Envelope:** CE-CAD-Q100-PPP-ATA-76-CONTROLS  
 **ATA Chapter:** 76  
 **Description:** Engine Controls  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements engine controls requirements as defined in ATA iSpec 2200 Chapter 76 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements engine controls requirements as defined in ATA iSpec 2200 Chapter 76 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

@@ -18,7 +18,7 @@ This domain encompasses propulsion systems, hydrogen fuel systems, and engine co
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 70 - Std Practices Powerplant**
 - **ATA 71 - Powerplant**
@@ -32,7 +32,7 @@ This domain includes Configuration Elements (CE) covering the following chapters
 - **ATA 79 - Oil**
 - **ATA 80 - Starting**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-PPP-ATA-XX-DESCRIPTION`
 
@@ -41,7 +41,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-PPP-ATA-70-STD-PRACT-PP](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-70-STD-PRACT-PP) — ATA 70 - Std Practices Powerplant
 * [CE-CAD-Q100-PPP-ATA-71-POWERPLANT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-71-POWERPLANT) — ATA 71 - Powerplant

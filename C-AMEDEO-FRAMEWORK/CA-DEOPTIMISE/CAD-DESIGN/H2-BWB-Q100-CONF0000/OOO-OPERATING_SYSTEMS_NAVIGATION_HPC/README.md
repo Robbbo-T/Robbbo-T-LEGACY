@@ -18,7 +18,7 @@ This domain covers flight management systems, navigation, communication systems,
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 22 - Auto Flight**
 - **ATA 23 - Communications**
@@ -26,7 +26,7 @@ This domain includes Configuration Elements (CE) covering the following chapters
 - **ATA 34 - Navigation**
 - **ATA 46 - Information Systems**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-OOO-ATA-XX-DESCRIPTION`
 
@@ -35,7 +35,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT) — ATA 22 - Auto Flight
 * [CE-CAD-Q100-OOO-ATA-23-COMMS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-23-COMMS) — ATA 23 - Communications

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-07-LIFTING-SHORING
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-07-LIFTING-SHORING  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-07-LIFTING-SHORING  
 **ATA Chapter:** 07  
 **Description:** Lifting & Shoring  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements lifting & shoring requirements as defined in ATA iSpec 2200 Chapter 07 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements lifting & shoring requirements as defined in ATA iSpec 2200 Chapter 07 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 
