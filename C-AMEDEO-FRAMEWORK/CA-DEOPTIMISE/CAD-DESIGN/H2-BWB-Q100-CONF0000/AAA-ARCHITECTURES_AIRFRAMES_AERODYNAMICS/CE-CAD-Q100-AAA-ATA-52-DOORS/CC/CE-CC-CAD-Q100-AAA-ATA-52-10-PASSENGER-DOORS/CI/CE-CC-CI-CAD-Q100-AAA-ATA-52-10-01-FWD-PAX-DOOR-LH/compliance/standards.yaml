@@ -1,0 +1,69 @@
+version: 1
+meta:
+  owner: structures@aqua-os
+  reviewer: airworthiness@aqua-os
+  last_updated: 2025-09-01
+  change_ref: CDR-AAA-2025-09
+  
+applies_to:
+  cax: CAD
+  mic: Q100
+  sns: "52-10-01"
+  id: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
+  description: "Forward Passenger Door LH Component Item"
+
+inherited_from:
+  - CE-CC-CAD-Q100-AAA-ATA-52-10-PASSENGER-DOORS
+
+co_domains: [EDI, OOO]  # Warning system crosses into avionics
+
+standards:
+  - id: CS-25.783
+    org: EASA
+    title: Doors - Structural
+    clause: 25.783(a)(b)(c)
+    applicability: [Design, Analysis, Test]
+    level: MUST
+    verification: [FEA, Static Test, Fatigue Test]
+    acceptance:
+      - "Ultimate load: 1.5 x limit load with no failure"
+      - "Limit load: No permanent deformation"
+      - "Pressure differential: 56.7 kPa ultimate"
+    evidence:
+      det_patterns:
+        - DET:CAD:Q100:52-10-01:design:V*
+        - DET:CAE:Q100:52-10-01:fea_ultimate:V*
+    downstream:
+      dmc:
+        - type: "000"  # Description
+          code: Q100-52-10-01-00A-000A-D
+        - type: "300"  # Testing
+          code: Q100-52-10-01-00A-300A-D
+          
+  - id: CS-25.807
+    org: EASA  
+    title: Emergency Exits
+    clause: 25.807(a)
+    applicability: [Design, Test]
+    level: MUST
+    verification: [Test, Demonstration]
+    acceptance:
+      - "Escape time: <90 seconds"
+      - "Opening force: <50 lbs"
+    evidence:
+      det_patterns:
+        - DET:CAT:Q100:52-10-01:escape_test:V*
+        
+  - id: CS-25.365
+    org: EASA
+    title: Pressurization Loads  
+    clause: 25.365(a)
+    applicability: [Design, Analysis]
+    level: MUST
+    verification: [Analysis, Test]
+    acceptance:
+      - "Design pressure: 42.5 kPa"
+      - "Ultimate pressure: 56.7 kPa"
+    evidence:
+      det_patterns:
+        - DET:CAE:Q100:52-10-01:pressure_analysis:V*

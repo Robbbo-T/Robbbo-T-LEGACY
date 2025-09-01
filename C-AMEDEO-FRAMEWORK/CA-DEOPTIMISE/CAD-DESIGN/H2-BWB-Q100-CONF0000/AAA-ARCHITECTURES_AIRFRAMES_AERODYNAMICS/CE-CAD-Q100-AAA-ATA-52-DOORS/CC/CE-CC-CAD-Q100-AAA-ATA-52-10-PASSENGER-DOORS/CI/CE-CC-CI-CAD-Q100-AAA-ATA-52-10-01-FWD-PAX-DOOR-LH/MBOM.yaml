@@ -1,0 +1,68 @@
+version: 1.0
+meta:
+  item: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
+  created: 2025-09-01
+  author: manufacturing@aqua-os
+  effectivity: CONF0000
+
+manufacturing_sequence:
+  - operation: 10
+    description: "Frame Welding"
+    workcenter: "WC-WELD-001"
+    time_hours: 24.5
+    routing: ["Prep", "Weld", "Inspect"]
+    quality:
+      inspection_type: "FAI"
+      tolerances: "±0.5mm"
+      
+  - operation: 20
+    description: "Skin Panel Preparation"
+    workcenter: "WC-COMP-001"
+    time_hours: 8.2
+    routing: ["Cut", "Trim", "Inspect"]
+    quality:
+      inspection_type: "SPC"
+      tolerances: "±0.2mm"
+      
+  - operation: 30
+    description: "Composite Bonding"
+    workcenter: "WC-BOND-001"
+    time_hours: 12.1
+    routing: ["Prep", "Apply", "Cure", "Inspect"]
+    quality:
+      inspection_type: "NDT"
+      method: "Ultrasonic"
+      
+  - operation: 40
+    description: "Mechanism Installation"
+    workcenter: "WC-ASSY-001"
+    time_hours: 16.8
+    routing: ["Install", "Adjust", "Test"]
+    quality:
+      inspection_type: "Functional"
+      test_cycles: 1000
+      
+  - operation: 50
+    description: "Final Assembly"
+    workcenter: "WC-ASSY-002"
+    time_hours: 14.3
+    routing: ["Assemble", "Adjust", "Test", "Inspect"]
+    quality:
+      inspection_type: "FAI"
+      acceptance_criteria: "All functions operational"
+
+kits:
+  - kit_id: "KIT-52-10-01-A"
+    description: "Frame & Structure Kit"
+    parts: ["Q100-52-10-01-001", "Q100-52-10-01-004", "Q100-52-10-01-005"]
+    
+  - kit_id: "KIT-52-10-01-B"
+    description: "Skin & Sealing Kit"
+    parts: ["Q100-52-10-01-002", "Q100-52-10-01-003", "Q100-52-10-01-006"]
+    
+  - kit_id: "KIT-52-10-01-C"
+    description: "Hardware & Accessories Kit"
+    parts: ["Q100-52-10-01-007", "Q100-52-10-01-008"]
+
+total_build_time_hours: 75.9
+critical_path: ["Operation 10", "Operation 30", "Operation 40"]

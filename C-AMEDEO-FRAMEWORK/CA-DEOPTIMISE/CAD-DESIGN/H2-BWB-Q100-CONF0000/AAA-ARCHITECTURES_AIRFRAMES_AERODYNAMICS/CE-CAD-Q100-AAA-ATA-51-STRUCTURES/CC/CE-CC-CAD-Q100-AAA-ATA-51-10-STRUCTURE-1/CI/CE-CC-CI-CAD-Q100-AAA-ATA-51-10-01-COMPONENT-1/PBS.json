@@ -1,0 +1,12 @@
+{
+  "wbs_id": "Q100-51-10-01",
+  "name": "1",
+  "owner_domain": "AAA",
+  "cax": "CAD",
+  "sns": "Q100511001",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-51-10-STRUCTURE-1",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-51-10-01-COMPONENT-1",
+  "description": "Component 1 for ATA 51",
+  "effectivity": "CONF0000",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

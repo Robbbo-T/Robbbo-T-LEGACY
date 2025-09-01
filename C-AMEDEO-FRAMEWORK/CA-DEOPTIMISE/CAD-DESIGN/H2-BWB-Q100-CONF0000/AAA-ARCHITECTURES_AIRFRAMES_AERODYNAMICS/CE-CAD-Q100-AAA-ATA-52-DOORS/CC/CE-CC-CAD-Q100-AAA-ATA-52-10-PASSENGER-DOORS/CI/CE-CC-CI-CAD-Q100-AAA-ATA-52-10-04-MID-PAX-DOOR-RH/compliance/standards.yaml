@@ -1,0 +1,15 @@
+version: 1
+meta:
+  owner: structures@aqua-os
+  last_updated: 2025-09-01
+  
+applies_to:
+  ci_id: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-04-MID-PAX-DOOR-RH
+  description: "Mid passenger door right hand"
+
+standards:
+  - id: CS-25.783
+    org: EASA
+    title: Doors
+    level: MUST
+    verification: [Analysis, Test]
