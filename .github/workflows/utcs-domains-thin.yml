@@ -10,7 +10,11 @@ jobs:
         run: |
           set -e
           # find README.md under UTCS-BLOCKCHAIN/DOMAINS except top-level
-          files=$(find UTCS-BLOCKCHAIN/DOMAINS -name README.md -not -path "UTCS-BLOCKCHAIN/DOMAINS/README.md" || true)
+          if [ -d UTCS-BLOCKCHAIN/DOMAINS ]; then
+            files=$(find UTCS-BLOCKCHAIN/DOMAINS -name README.md -not -path "UTCS-BLOCKCHAIN/DOMAINS/README.md")
+          else
+            files=""
+          fi
           exit_code=0
           for f in $files; do
             lines=$(wc -l < "$f" | tr -d ' ')
