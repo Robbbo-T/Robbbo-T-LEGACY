@@ -1,0 +1,7 @@
+---
+owner_domain: AAA
+canonical_engineering_path: >-
+  C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+det_namespace: "DET:CAD:AAA"
+ata_sns_examples: ["02-10", "52-10", "53-10", "57-10"]
+notes: "UTCS-BLOCKCHAIN is evidence-first; engineering text stays in C-AMEDEO."
