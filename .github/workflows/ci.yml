@@ -38,6 +38,11 @@ jobs:
           config_file: .yamllint.yml
         continue-on-error: true  # Remove if you want to fail the job on lint errors
 
+      - name: Validate DET packets and trace files
+        run: |
+          python validate_det_traces.py
+        continue-on-error: false
+
       - name: Run tests (if tests are present)
         run: |
           if [ -f pytest.ini ] || [ -d tests ]; then
