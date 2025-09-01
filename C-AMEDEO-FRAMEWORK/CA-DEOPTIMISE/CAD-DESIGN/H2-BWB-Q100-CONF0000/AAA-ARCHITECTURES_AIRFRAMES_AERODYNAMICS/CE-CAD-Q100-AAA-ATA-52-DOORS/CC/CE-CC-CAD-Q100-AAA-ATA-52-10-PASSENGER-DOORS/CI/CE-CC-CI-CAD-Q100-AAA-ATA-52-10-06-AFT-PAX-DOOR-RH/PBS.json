@@ -1,0 +1,16 @@
+{
+  "wbs_id": "Q100-52-10-06",
+  "name": "RH",
+  "owner_domain": "AAA",
+  "co_domains": ["EDI", "OOO"],
+  "cax": "CAD",
+  "sns": "Q100521006",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-52-DOORS",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-52-10-PASSENGER-DOORS",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-52-10-06-AFT-PAX-DOOR-RH",
+  "parent": "Q100-52-10",
+  "description": "Aft passenger door right hand",
+  "effectivity": "CONF0000",
+  "certification_basis": ["CS-25.783"],
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

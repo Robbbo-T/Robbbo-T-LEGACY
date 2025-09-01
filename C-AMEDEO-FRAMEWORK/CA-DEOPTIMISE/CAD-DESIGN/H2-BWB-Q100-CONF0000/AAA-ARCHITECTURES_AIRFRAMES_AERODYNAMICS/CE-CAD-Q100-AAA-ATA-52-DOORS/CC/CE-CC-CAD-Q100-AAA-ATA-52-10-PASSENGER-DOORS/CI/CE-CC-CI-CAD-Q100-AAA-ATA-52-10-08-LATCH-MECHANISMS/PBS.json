@@ -1,0 +1,16 @@
+{
+  "wbs_id": "Q100-52-10-08",
+  "name": "MECHANISMS",
+  "owner_domain": "AAA",
+  "co_domains": ["EDI", "OOO"],
+  "cax": "CAD",
+  "sns": "Q100521008",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-52-DOORS",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-52-10-PASSENGER-DOORS",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-52-10-08-LATCH-MECHANISMS",
+  "parent": "Q100-52-10",
+  "description": "Latch mechanisms and hardware",
+  "effectivity": "CONF0000",
+  "certification_basis": ["CS-25.783"],
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}
