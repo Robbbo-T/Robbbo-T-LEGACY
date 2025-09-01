@@ -1,0 +1,18 @@
+# AutoCAD DWG File - fpb_assy_v3.dwg
+# Forward Pressure Bulkhead Assembly Drawing
+# Part Number: Q100-53-10-01-001
+# Revision: A
+# This is a placeholder for a native AutoCAD DWG file
+Version: AutoCAD 2024
+Drawing_Scale: 1:10
+Views:
+  - Front View
+  - Side View  
+  - Section A-A
+  - Detail Views
+Dimensions:
+  - Overall: 5200 x 5200 x 180 mm
+  - Critical features with GD&T
+  - Material callouts
+  - Assembly notes
+Standards: ASME Y14.5-2018

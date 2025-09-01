@@ -1,0 +1,82 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1021
+  9
+$DWGCODEPAGE
+  3
+ANSI_1252
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+TEXT
+  5
+1A0
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+100.0
+ 20
+100.0
+ 30
+0.0
+ 40
+5.0
+  1
+Q100-53-10-01-001 Forward Pressure Bulkhead Assembly
+  0
+TEXT
+  5
+1A1
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+100.0
+ 20
+80.0
+ 30
+0.0
+ 40
+3.0
+  1
+Revision: A
+  0
+TEXT
+  5
+1A2
+100
+AcDbEntity
+  8
+0
+100
+AcDbText
+ 10
+100.0
+ 20
+60.0
+ 30
+0.0
+ 40
+3.0
+  1
+Overall Dimensions: 5200 x 5200 x 180 mm
+  0
+ENDSEC
+  0
+EOF
