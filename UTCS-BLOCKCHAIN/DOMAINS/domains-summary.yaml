@@ -1,231 +1,129 @@
-domains_registry:
-  version: 1.0.0
-  total_domains: 15
-  total_cax_pillars: 7
-  total_flows: 2
-  total_combinations: 210
-  domains:
-    AAA:
-      name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
-      description: Airframe structures, aerodynamic surfaces, and architectural systems
-      ata_primary:
-      - '02'
-      - '06'
-      - '11'
-      - '18'
-      - '20'
-      - '51'
-      - '52'
-      - '53'
-      - '55'
-      - '56'
-      - '57'
-      co_domains:
-      - MMM
-      - EEE
-      - OOO
-    AAP:
-      name: AIRPORTS_ADAPTATIONS
-      description: Airport infrastructure interfaces and ground operation adaptations
-      ata_primary:
-      - '01'
-      - '07'
-      - '12'
-      - '96'
-      co_domains:
-      - IIF
-      - LIB
-      - EDI
-    CCC:
-      name: COCKPIT_CABIN_CARGO_SYSTEMS
-      description: Cockpit controls, cabin systems, and cargo handling
-      ata_primary:
-      - '11'
-      - '21'
-      - '25'
-      - '33'
-      - '44'
-      - '45'
-      co_domains:
-      - EDI
-      - IIS
-      - AAA
-    CQH:
-      name: CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS
-      description: Cryogenic systems, quantum interfaces, and hydrogen fuel cells
-      ata_primary:
-      - '28'
-      - '29'
-      - '75'
-      - '79'
-      co_domains:
-      - PPP
-      - EER
-      - DDD
-    DDD:
-      name: DEFENCE_CYBERSECURITY_SAFETY
-      description: Defense systems, cybersecurity protocols, and safety assurance
-      ata_primary:
-      - '20'
-      - '46'
-      - '97'
-      co_domains:
-      - EDI
-      - IIS
-      - OOO
-    EDI:
-      name: ELECTRONICS_DIGITAL_INSTRUMENTS
-      description: Electronic systems and digital instrumentation
-      ata_primary:
-      - '22'
-      - '23'
-      - '31'
-      - '34'
-      - '42'
-      co_domains:
-      - LCC
-      - IIS
-      - OOO
-    EEE:
-      name: ENVIRONMENTAL_REMEDIATION_CIRCULARITY
-      description: Environmental systems and circular economy implementation
-      ata_primary:
-      - '20'
-      - '30'
-      - '36'
-      - '98'
-      co_domains:
-      - EER
-      - LIB
-      - AAA
-    EER:
-      name: ENERGY_AND_RENEWABLE
-      description: Energy systems and renewable power generation
-      ata_primary:
-      - '24'
-      - '26'
-      - '60'
-      - '61'
-      co_domains:
-      - PPP
-      - CQH
-      - EDI
-    IIF:
-      name: INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS
-      description: Infrastructure systems and value chain management
-      ata_primary:
-      - '07'
-      - '12'
-      - '96'
-      co_domains:
-      - LIB
-      - AAP
-      - MMM
-    IIS:
-      name: INTELLIGENT_SYSTEMS_ONBOARD_AI
-      description: Intelligent systems and onboard artificial intelligence
-      ata_primary:
-      - '22'
-      - '31'
-      - '42'
-      - '46'
-      co_domains:
-      - EDI
-      - OOO
-      - LCC
-    LCC:
-      name: LINKS_COMMUNICATIONS_CONTROL_IoT
-      description: Communication links, control systems, and IoT integration
-      ata_primary:
-      - '23'
-      - '31'
-      - '34'
-      - '42'
-      - '46'
-      co_domains:
-      - EDI
-      - IIS
-      - OOO
-    LIB:
-      name: LOGISTICS_INTEGRATED_BLOCKCHAIN
-      description: Logistics management and integrated blockchain systems
-      ata_primary:
-      - '05'
-      - '07'
-      - '12'
-      co_domains:
-      - IIF
-      - EEE
-      - AAP
-    MMM:
-      name: MECHANICAL_MATERIAL_MONITORING
-      description: Mechanical systems, materials engineering, and monitoring
-      ata_primary:
-      - '51'
-      - '52'
-      - '53'
-      - '54'
-      - '55'
-      - '56'
-      - '57'
-      - '71'
-      - '72'
-      - '73'
-      - '74'
-      - '75'
-      - '76'
-      - '77'
-      - '78'
-      - '79'
-      co_domains:
-      - AAA
-      - IIF
-      - PPP
-    OOO:
-      name: OPERATING_SYSTEMS_NAVIGATION_HPC
-      description: Operating systems, navigation, and high-performance computing
-      ata_primary:
-      - '22'
-      - '31'
-      - '34'
-      - '42'
-      - '46'
-      co_domains:
-      - IIS
-      - EDI
-      - LCC
-    PPP:
-      name: PROPULSION_AND_FUEL
-      description: Propulsion systems and fuel management
-      ata_primary:
-      - '70'
-      - '71'
-      - '72'
-      - '73'
-      - '74'
-      - '75'
-      - '76'
-      - '77'
-      - '78'
-      - '79'
-      - '80'
-      - '81'
-      - '82'
-      - '83'
-      - '84'
-      - '85'
-      co_domains:
-      - CQH
-      - EER
-      - MMM
-  cax_pillars:
-  - CAD-DESIGN
-  - CAE-ENGINEERING
-  - CAM-MANUFACTURING
-  - CAT-SOURCE
-  - CAI-INTEGRATIONS
-  - CAS-SUSTAINMENT
-  - CAO-ORGANIZATION
-  lifecycle_flows:
-  - CA-DEOPTIMISE
-  - CA-OPTIMISED
+```yaml
+# UTCS-BLOCKCHAIN/DOMAINS/domains-summary.yaml
+meta:
+  spec: UTCS-DOMAINS-SUMMARY-1.0
+  updated: "2025-09-01T00:00:00Z"
+  contact: airworthiness@your-org
+  note: >
+    Thin evidence index for 15 technical domains across 7 CAX pillars.
+    Engineering source of truth remains in C-AMEDEO; UTCS-BLOCKCHAIN stores
+    evidence (DET), traceability (TRACES), and circular KPIs (CADET).
+
+pillars: [CAD, CAE, CAM, CAT, CAI, CAS, CAO]
+
+policy:
+  english_only: true
+  link_policy: "Markdown links to C-AMEDEO; no long-form engineering text here."
+  s1000d_policy:
+    cas_only: true
+    allowed_pattern: "C-AMEDEO-FRAMEWORK/<FLOW>/CAS-SUSTAINMENT/**/S1000D/"
+    elsewhere_use_downstream_pointers: true
+
+evidence_paths:
+  det_pattern: "UTCS-BLOCKCHAIN/DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/"
+  traces_pattern: "UTCS-BLOCKCHAIN/TRACES/**.trace.yaml"
+  cadet_pattern: "UTCS-BLOCKCHAIN/CADET/kpis/<YYYY-MM>.yaml"
+  det_id_rule: "DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>"
+  ata_sns_rule: "CC-SS[-SS] (ATA iSpec 2200)"
+
+canonical_engineering_path_template: >
+  C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/<CAX_PILLAR>/H2-BWB-Q100-CONF0000/<DOMAIN-NAME>/
+
+domains:
+
+  - code: AAA
+    name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+    ata_sns_examples: ["02-10","52-10","53-10","57-10"]
+    det_namespaces: ["DET:CAD:AAA","DET:CAE:AAA","DET:CAM:AAA","DET:CAT:AAA","DET:CAI:AAA","DET:CAS:AAA","DET:CAO:AAA"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+
+  - code: AAP
+    name: AIRPORTS_ADAPTATIONS
+    ata_sns_examples: ["09-10","10-00","49-00"]
+    det_namespaces: ["DET:CAD:AAP","DET:CAE:AAP","DET:CAM:AAP","DET:CAT:AAP","DET:CAI:AAP","DET:CAS:AAP","DET:CAO:AAP"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/
+
+  - code: CCC
+    name: COCKPIT_CABIN_CARGO_SYSTEMS
+    ata_sns_examples: ["25-20","44-00"]
+    det_namespaces: ["DET:CAD:CCC","DET:CAE:CCC","DET:CAM:CCC","DET:CAT:CCC","DET:CAI:CCC","DET:CAS:CCC","DET:CAO:CCC"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS/
+
+  - code: CQH
+    name: CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS
+    ata_sns_examples: ["28-00","36-00","35-00"]
+    det_namespaces: ["DET:CAD:CQH","DET:CAE:CQH","DET:CAM:CQH","DET:CAT:CQH","DET:CAI:CQH","DET:CAS:CQH","DET:CAO:CQH"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/
+
+  - code: DDD
+    name: DEFENCE_CYBERSECURITY_SAFETY
+    ata_sns_examples: ["42-00","45-00","46-00","34-00","23-00"]
+    det_namespaces: ["DET:CAD:DDD","DET:CAE:DDD","DET:CAM:DDD","DET:CAT:DDD","DET:CAI:DDD","DET:CAS:DDD","DET:CAO:DDD"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/
+
+  - code: EDI
+    name: ELECTRONICS_DIGITAL_INSTRUMENTS
+    ata_sns_examples: ["23-00","31-00","33-00","34-00","45-00","46-00"]
+    det_namespaces: ["DET:CAD:EDI","DET:CAE:EDI","DET:CAM:EDI","DET:CAT:EDI","DET:CAI:EDI","DET:CAS:EDI","DET:CAO:EDI"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/
+
+  - code: EEE
+    name: ENVIRONMENTAL_REMEDIATION_CIRCULARITY
+    ata_sns_examples: ["12-00","21-00","38-00","20-40","20-60","20-80"]
+    det_namespaces: ["DET:CAD:EEE","DET:CAE:EEE","DET:CAM:EEE","DET:CAT:EEE","DET:CAI:EEE","DET:CAS:EEE","DET:CAO:EEE"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/
+
+  - code: EER
+    name: ENERGY_AND_RENEWABLE
+    ata_sns_examples: ["24-00","49-00","73-00"]
+    det_namespaces: ["DET:CAD:EER","DET:CAE:EER","DET:CAM:EER","DET:CAT:EER","DET:CAI:EER","DET:CAS:EER","DET:CAO:EER"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/
+
+  - code: IIF
+    name: INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS
+    ata_sns_examples: ["09-00","10-00","49-00"]
+    det_namespaces: ["DET:CAD:IIF","DET:CAE:IIF","DET:CAM:IIF","DET:CAT:IIF","DET:CAI:IIF","DET:CAS:IIF","DET:CAO:IIF"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/
+
+  - code: IIS
+    name: INTELLIGENT_SYSTEMS_ONBOARD_AI
+    ata_sns_examples: ["22-00","31-00","34-00","46-00"]
+    det_namespaces: ["DET:CAD:IIS","DET:CAE:IIS","DET:CAM:IIS","DET:CAT:IIS","DET:CAI:IIS","DET:CAS:IIS","DET:CAO:IIS"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/
+
+  - code: LCC
+    name: LINKS_COMMUNICATIONS_CONTROL_IoT
+    ata_sns_examples: ["23-00","34-00","46-00"]
+    det_namespaces: ["DET:CAD:LCC","DET:CAE:LCC","DET:CAM:LCC","DET:CAT:LCC","DET:CAI:LCC","DET:CAS:LCC","DET:CAO:LCC"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/
+
+  - code: LIB
+    name: LOGISTICS_INTEGRATED_BLOCKCHAIN
+    ata_sns_examples: ["S2000","S2500"]
+    det_namespaces: ["DET:CAD:LIB","DET:CAE:LIB","DET:CAM:LIB","DET:CAT:LIB","DET:CAI:LIB","DET:CAS:LIB","DET:CAO:LIB"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/
+
+  - code: MMM
+    name: MECHANICAL_MATERIAL_MONITORING
+    ata_sns_examples: ["26-00","27-00","32-00","36-00","53-00","57-00"]
+    det_namespaces: ["DET:CAD:MMM","DET:CAE:MMM","DET:CAM:MMM","DET:CAT:MMM","DET:CAI:MMM","DET:CAS:MMM","DET:CAO:MMM"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/
+
+  - code: OOO
+    name: OPERATING_SYSTEMS_NAVIGATION_HPC
+    ata_sns_examples: ["22-00","23-00","31-00","34-00","46-00"]
+    det_namespaces: ["DET:CAD:OOO","DET:CAE:OOO","DET:CAM:OOO","DET:CAT:OOO","DET:CAI:OOO","DET:CAS:OOO","DET:CAO:OOO"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/
+
+  - code: PPP
+    name: PROPULSION_AND_FUEL
+    ata_sns_examples: ["70-00","71-00","72-00","73-00","74-00","75-00","76-00","77-00","78-00","79-00","80-00"]
+    det_namespaces: ["DET:CAD:PPP","DET:CAE:PPP","DET:CAM:PPP","DET:CAT:PPP","DET:CAI:PPP","DET:CAS:PPP","DET:CAO:PPP"]
+    canonical_engineering_path: C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUEL/
+
+totals:
+  domains: 15
+  pillars_per_domain: 7
+  namespaces_total: 105
+```
+
