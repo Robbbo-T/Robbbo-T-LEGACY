@@ -182,14 +182,10 @@ flowchart LR
 
 ```mermaid
 graph LR
-  DI[DI — Domain Invariant] --> CE[CE — Configuration Envelope 
- ATA CC-SS[-SS]]
-  CE --> CC[CC — Component Cell 
- ATA CC-SS]
-  CC --> CI[CI — Component Item 
- ATA CC-SS-SS]
-  CI --> CP[CP — Component Particle 
- PBS leaf]
+  DI[DI — Domain Invariant] --> CE[CE — Configuration Envelope<br/>ATA CC-SS&#91;-SS&#93;]
+  CE --> CC[CC — Component Cell<br/>ATA CC-SS]
+  CC --> CI[CI — Component Item<br/>ATA CC-SS-SS]
+  CI --> CP[CP — Component Particle<br/>PBS leaf]
 ```
 
 **Naming patterns**
@@ -540,24 +536,13 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 ### A1. Proof Points (representative samples)
 
 | Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (example)                                         | Proof Point                                        |
-| ------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- |
-| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂‑saved **120 kg**, Energy‑saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
+|--------------|------------------------------------------------------------------|----------------------------------------------------|---------------------------------|--------------------------------------------------------------|----------------------------------------------------|
+| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
 | **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                  | Margin closure with no weight penalty              |
-| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |
-| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight‑auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |
-| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |
-| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM‑Coverage **92%**, Vuln‑fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |
-
-> **Evidence Triggers:** every transition “save/run/publish” emits an *evidence pack* (inputs, parameters, outputs, logs, signature).
-> **Auditable proof:** if there is no DET, it didn’t happen.
-
-\------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- | - | --------------------------------------------------- | ------------------------------------------------- | ------------------------- | ------------------------------------------- | ----------------------------------------- |
-\| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |   |                                                     |                                                   |                           |                                             |                                           |
-\| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                  | Margin closure with no weight penalty              |   |                                                     |                                                   |                           |                                             |                                           |
-\| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |   |                                                     |                                                   |                           |                                             |                                           |
-\| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |   |                                                     |                                                   |                           |                                             |                                           |
-\| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |   |                                                     |                                                   |                           |                                             |                                           |
-\| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |   | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/` | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519 | SBOM gen, Sig ok, CI pass | SBOM-Coverage **92%**, Vuln-fix SLA **<7d** | Supply‑chain traceability ready for audit |
+| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as-designed” kit              |
+| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration-defects **0**, Integration time **−30%**         | First-time-right integration                       |
+| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post-reinforcement                  |
+| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply-chain traceability ready for audit          |
 
 > **Evidence Triggers:** every transition “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
 > **Auditable proof:** if there is no DET, it didn’t happen.
@@ -575,13 +560,7 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 | **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension               |
 | **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | SBOM coverage, vulnerability SLA, signature integrity          |
 
-\------- | ----------------------------------------------- | ---------------------------------------------------------------- |
-\| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuso (features / MBOM), Δpeso, Δcoste, lead-time decisión      |
-\| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Cobertura de casos, Reproducibility, Δmargen vs req., QoR solver |
-\| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                     |
-\| **CAI** | `icd.rev`, `install.log`, `tests`               | Incidencias integración, Integration time, %interfaces validadas |
-\| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension                 |
-\| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | Cobertura SBOM, SLA vulnerabilidades, Integridad firma           |
+
 
 ---
 
