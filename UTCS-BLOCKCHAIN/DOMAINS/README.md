@@ -1,52 +1,111 @@
-# DOMAINS Registry - Complete Technical Domain Coverage
+# DOMAINS — Evidence Index (thin)
 
-## Overview
-Complete deployment of all 15 technical domains across the CAX framework.
+This directory is a **navigation index** for the 15 technical domains across all **CAX pillars**.  
+**Engineering source of truth lives in C-AMEDEO.** Here we only reference **evidence** (DET), **traceability** (TRACES), and **circularity KPIs** (CADET).
 
-**Total Deployment:**
-- **15 Domains** × **7 CAX Pillars** × **2 Flows** = **210 Total Combinations**
+---
 
-## 15 Technical Domains
+## What lives here (and what does not)
 
-| Code | Name | Description | Primary ATA Codes |
-|------|------|-------------|-------------------|
-| **AAA** | ARCHITECTURES_AIRFRAMES_AERODYNAMICS | Airframe structures, aerodynamic surfaces, and architectural systems | 02, 06, 11, 18, 20... |
-| **AAP** | AIRPORTS_ADAPTATIONS | Airport infrastructure interfaces and ground operation adaptations | 01, 07, 12, 96 |
-| **CCC** | COCKPIT_CABIN_CARGO_SYSTEMS | Cockpit controls, cabin systems, and cargo handling | 11, 21, 25, 33, 44... |
-| **CQH** | CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS | Cryogenic systems, quantum interfaces, and hydrogen fuel cells | 28, 29, 75, 79 |
-| **DDD** | DEFENCE_CYBERSECURITY_SAFETY | Defense systems, cybersecurity protocols, and safety assurance | 20, 46, 97 |
-| **EDI** | ELECTRONICS_DIGITAL_INSTRUMENTS | Electronic systems and digital instrumentation | 22, 23, 31, 34, 42 |
-| **EEE** | ENVIRONMENTAL_REMEDIATION_CIRCULARITY | Environmental systems and circular economy implementation | 20, 30, 36, 98 |
-| **EER** | ENERGY_AND_RENEWABLE | Energy systems and renewable power generation | 24, 26, 60, 61 |
-| **IIF** | INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS | Infrastructure systems and value chain management | 07, 12, 96 |
-| **IIS** | INTELLIGENT_SYSTEMS_ONBOARD_AI | Intelligent systems and onboard artificial intelligence | 22, 31, 42, 46 |
-| **LCC** | LINKS_COMMUNICATIONS_CONTROL_IoT | Communication links, control systems, and IoT integration | 23, 31, 34, 42, 46 |
-| **LIB** | LOGISTICS_INTEGRATED_BLOCKCHAIN | Logistics management and integrated blockchain systems | 05, 07, 12 |
-| **MMM** | MECHANICAL_MATERIAL_MONITORING | Mechanical systems, materials engineering, and monitoring | 51, 52, 53, 54, 55... |
-| **OOO** | OPERATING_SYSTEMS_NAVIGATION_HPC | Operating systems, navigation, and high-performance computing | 22, 31, 34, 42, 46 |
-| **PPP** | PROPULSION_AND_FUEL | Propulsion systems and fuel management | 70, 71, 72, 73, 74... |
+- ✅ **Thin indexes** per domain/pillar pointing to:
+  - **DET** nodes: `UTCS-BLOCKCHAIN/DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/`
+  - **TRACES** records: `UTCS-BLOCKCHAIN/TRACES/**.trace.yaml`
+  - **CADET** KPI cuts: `UTCS-BLOCKCHAIN/CADET/kpis/<YYYY-MM>.yaml`
+  - **alias.yml** with canonical engineering path and DET namespaces
+- ❌ No EBOM/MBOM, long requirements, or heavy design text (keep those in **C-AMEDEO**)
+- ❌ No S1000D except under **CAS-SUSTAINMENT/** (downstream only)
 
-## CAX Pillars (7 total)
-- **CAD** - Computer-Aided Design
-- **CAE** - Computer-Aided Engineering  
-- **CAM** - Computer-Aided Manufacturing
-- **CAT** - Computer-Aided Testing
-- **CAI** - Computer-Aided Integration
-- **CAS** - Computer-Aided Sustainment
-- **CAO** - Computer-Aided Organization
+> **DET ID rule:** `DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>`  
+> Example: `DET:CAD:AAA:52-10:design:V3`
 
-## Lifecycle Flows (2 total)
-- **CA-DEOPTIMISE** - Initial design and optimization
-- **CA-OPTIMISED** - Optimized and production-ready
+---
 
-## Cross-Domain Integration
-Each domain includes:
-- **Cross-domain references** via alias.yml
-- **ATA SNS compliance** mapping
-- **DET evidence** generation
-- **CADET integration** for circular assurance
-- **TRACES framework** for traceability
+## Domains (codes → names)
 
-## Registry Files
-- [domains-summary.yaml](domains-summary.yaml) - Complete domain registry
-- Domain implementations in C-AMEDEO-FRAMEWORK/*/*/H2-BWB-Q100-CONF0000/
+- **AAA** — ARCHITECTURES_AIRFRAMES_AERODYNAMICS  
+- **AAP** — AIRPORTS_ADAPTATIONS  
+- **CCC** — COCKPIT_CABIN_CARGO_SYSTEMS  
+- **CQH** — CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS  
+- **DDD** — DEFENCE_CYBERSECURITY_SAFETY  
+- **EDI** — ELECTRONICS_DIGITAL_INSTRUMENTS  
+- **EEE** — ENVIRONMENTAL_REMEDIATION_CIRCULARITY  
+- **EER** — ENERGY_AND_RENEWABLE  
+- **IIF** — INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS  
+- **IIS** — INTELLIGENT_SYSTEMS_ONBOARD_AI  
+- **LCC** — LINKS_COMMUNICATIONS_CONTROL_IoT  
+- **LIB** — LOGISTICS_INTEGRATED_BLOCKCHAIN  
+- **MMM** — MECHANICAL_MATERIAL_MONITORING  
+- **OOO** — OPERATING_SYSTEMS_NAVIGATION_HPC  
+- **PPP** — PROPULSION_AND_FUEL
+
+Each domain contains **7 pillars**: **CAD, CAE, CAM, CAT, CAI, CAS, CAO**.  
+Inside each pillar folder you’ll find a **thin README** (evidence index) and an optional `alias.yml`.
+
+---
+
+## Canonical engineering (C-AMEDEO)
+
+Keep engineering content in:
+```
+
+C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/\<CAX\_PILLAR>/H2-BWB-Q100-CONF0000/<DOMAIN-NAME>/
+
+```
+Example (AAA CAD):
+```
+
+C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES\_AIRFRAMES\_AERODYNAMICS/
+
+```
+
+---
+
+## Evidence locations (repeatable pattern)
+
+- **DET** evidence (append-only, sha256 + Ed25519):
+```
+
+UTCS-BLOCKCHAIN/DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/
+├─ det\_packet.json
+├─ signature.ed25519
+├─ previous\_hash
+├─ trace.yaml
+└─ cadet.yaml
+
+```
+- **TRACES** (bidirectional): `UTCS-BLOCKCHAIN/TRACES/**.trace.yaml`  
+- **CADET** KPIs (monthly): `UTCS-BLOCKCHAIN/CADET/kpis/<YYYY-MM>.yaml`
+
+---
+
+## Link policy (no duplication)
+
+- Make **Markdown links** to the canonical **C-AMEDEO** CE/CC/CI folders when needed.
+- **Do not** paste EBOM/MBOM tables, long requirements, or large narratives here.
+- Keep files **English-only**.
+
+---
+
+## S1000D policy
+
+S1000D artifacts are allowed **only** under:
+```
+
+C-AMEDEO-FRAMEWORK/<FLOW>/CAS-SUSTAINMENT/\*\*/S1000D/
+
+```
+Everywhere else, reference downstream **DMC** pointers.
+
+---
+
+## Quick start for a new evidence slice
+
+1. Put the engineering in **C-AMEDEO** (CE/CC/CI/CP).  
+2. Emit **DET** packet in `UTCS-BLOCKCHAIN/DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/`.  
+3. Create **TRACES** record linking requirement(s) ↔ `det_id`.  
+4. Update the relevant domain/pillar **thin README** with links (keep it short).  
+5. If KPIs changed, update the monthly **CADET** cut.
+
+---
+```
+
