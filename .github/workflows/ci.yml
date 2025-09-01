@@ -32,6 +32,9 @@ jobs:
             echo "requirements.txt not found; skipping dependency installation."
           fi
 
+      - name: List files in workspace
+        run: ls -la
+
       - name: Lint YAML files (optional)
         uses: ibiqlik/action-yamllint@v3
         with:
