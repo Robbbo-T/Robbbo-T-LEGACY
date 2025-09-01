@@ -224,7 +224,7 @@ The matrix below organizes the **15 technological domains** across both lifecycl
 
 ### CE Index — **ATA‑aligned** (CAD‑DESIGN · CA‑DEOPTIMISE)
 
-> **ATA↔Domain cross‑policy** (resumen): CE ancladas a ATA, **OwnerDomain** canónico, **CoDomains** listados. Publicación S1000D genera **DMC** únicos; los aliases de dominio apuntan al DMC canónico.
+> **ATA↔Domain cross‑policy (summary):** CEs are anchored to ATA; each CE has a canonical **OwnerDomain** and listed **CoDomains**. S1000D publication produces unique **DMCs**; domain aliases always point to the canonical DMC.
 
 > **Numbering rules (non‑exclusive).**
 >
@@ -444,13 +444,13 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 | Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (example)                                         | Proof Point                                        |
 | ------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- |
 | **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
-| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargen **+0.12**, Reproducibilidad **100%**                 | Cierre de margen sin penalización de peso          |
+| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                 | Margin closure without weight penalty          |
 | **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |
 | **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |
 | **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |
 | **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |
 
-> **Evidence Triggers:** every transition “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
+> **Evidence Triggers:** every transition "save/execute/publish" emits an *evidence pack* (inputs, parameters, outputs, logs, signature).
 > **Auditable proof:** if there is no DET, it didn’t happen.
 
 ---
@@ -459,12 +459,12 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 
 | CAX     | DET fields consumed                             | CADET KPIs (examples)                                             |
 | ------- | ----------------------------------------------- | ----------------------------------------------------------------- |
-| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuso (features / MBOM), Δpeso, Δcoste, lead-time decisión       |
-| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Cobertura de casos, Reproducibilidad, Δmargen vs req., QoR solver |
+| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuse (features / MBOM), Δweight, Δcost, decision lead-time       |
+| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Test case coverage, Reproducibility, Δmargin vs req., Solver QoR |
 | **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                      |
-| **CAI** | `icd.rev`, `install.log`, `tests`               | Incidencias integración, Integration time, %interfaces validadas  |
+| **CAI** | `icd.rev`, `install.log`, `tests`               | Integration incidents, Integration time, %interfaces validated  |
 | **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension                  |
-| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | Cobertura SBOM, SLA vulnerabilidades, Integridad firma            |
+| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | SBOM Coverage, Vulnerability SLA, Signature Integrity            |
 
 ---
 
@@ -538,44 +538,30 @@ flowchart TD
 ```
 
 
-### A4. Formato de evidencia (schema mínimo)
-
-```json
-{
-  "det_id": "DET:CAM:FAI:CB-ASSY-V3",
-  "ts": "2025-08-31T12:04:55Z",
-  "inputs": { "ref": "CI-...-PRIMARY-GRID", "rev": "C" },
-  "processing": { "tool": "AQUA-OS:cam-ci@22.0", "params": { "spc": ["Cp","Cpk"] }},
-  "outputs": { "faiv": "OK", "cp": 1.37, "cpk": 1.21 },
-  "hash": "ccaa11...",
-  "sig": { "alg": "Ed25519", "by": "build-bot@gaia" }
-}
-```
-
 ---
 
-### A5. DET Event Cheatsheet (opcional)
+### A5. DET Event Cheatsheet (optional)
 
-**Objetivo.** Normalizar los eventos DET emitidos por AQUA‑OS/GAIA AIR INFRANET para que todos los *evidence packs* tengan el mismo *shape*.
+**Objective.** Normalize DET events emitted by AQUA‑OS/GAIA AIR INFRANET so all *evidence packs* have the same *shape*.
 
-| Evento                   | `det_id` (patrón)                | Trigger típico                 | Campos mínimos                                                                          | Firma              |
+| Event                   | `det_id` (pattern)                | Typical Trigger                 | Minimum Fields                                                                          | Signature              |
 | ------------------------ | -------------------------------- | ------------------------------ | --------------------------------------------------------------------------------------- | ------------------ |
-| `save_model`             | `DET:CAD:<DI/CE/CA/CI>:V<rev>`   | Guardar CAD / bump de revisión | `ts, inputs.ref, inputs.rev, processing.tool, outputs.rev, hash, sig`                   | Ed25519            |
-| `solver_run`             | `DET:CAE:<solver>:<case>-V<rev>` | Ejecución solver, `meshQ≥0.9`  | `ts, inputs.meshQ, processing.params, outputs.margins, reproducibility.seed, hash, sig` | Dilithium2/Ed25519 |
-| `ci_build`               | `DET:CAT:CI:<mod>-V<rev>`        | Build CI/CD exitoso            | `ts, inputs.commit, processing.tool, outputs.artifacts[], tests.passed, hash, sig`      | Ed25519            |
-| `sbom_generate`          | `DET:CAT:SBOM:<spec>-V<rev>`     | Generación SBOM y verificación | `ts, inputs.repo, outputs.sbom, slsa.level, vuln.summary, hash, sig`                    | Ed25519            |
-| `install_signoff`        | `DET:CAI:ICD:<sys>-V<rev>`       | Instalación y firma de ICD     | `ts, inputs.icd.rev, install.log, tests, outputs.status, hash, sig`                     | Ed25519            |
-| `service_bulletin_issue` | `DET:CAS:SB:<area>-V<rev>`       | Emisión de SB / config update  | `ts, inputs.config.delta, outputs.sb.id, wo.refs[], mtbf.delta, hash, sig`              | Ed25519            |
+| `save_model`             | `DET:CAD:<DI/CE/CA/CI>:V<rev>`   | Save CAD / revision bump | `ts, inputs.ref, inputs.rev, processing.tool, outputs.rev, hash, sig`                   | Ed25519            |
+| `solver_run`             | `DET:CAE:<solver>:<case>-V<rev>` | Solver execution, `meshQ≥0.9`  | `ts, inputs.meshQ, processing.params, outputs.margins, reproducibility.seed, hash, sig` | Dilithium2/Ed25519 |
+| `ci_build`               | `DET:CAT:CI:<mod>-V<rev>`        | Successful CI/CD build            | `ts, inputs.commit, processing.tool, outputs.artifacts[], tests.passed, hash, sig`      | Ed25519            |
+| `sbom_generate`          | `DET:CAT:SBOM:<spec>-V<rev>`     | SBOM generation and verification | `ts, inputs.repo, outputs.sbom, slsa.level, vuln.summary, hash, sig`                    | Ed25519            |
+| `install_signoff`        | `DET:CAI:ICD:<sys>-V<rev>`       | Installation and ICD signoff     | `ts, inputs.icd.rev, install.log, tests, outputs.status, hash, sig`                     | Ed25519            |
+| `service_bulletin_issue` | `DET:CAS:SB:<area>-V<rev>`       | SB issuance / config update  | `ts, inputs.config.delta, outputs.sb.id, wo.refs[], mtbf.delta, hash, sig`              | Ed25519            |
 
-**Esqueleto de evento (plantilla):**
+**Event skeleton (template):**
 
 ```json
 {
   "det_id": "DET:<CAX>:<topic>:<tag>-V<rev>",
   "ts": "<ISO8601>",
-  "inputs": { /* referencias a CIs, commits, BOM/MBOM, etc. */ },
+  "inputs": { /* references to CIs, commits, BOM/MBOM */ },
   "processing": { "tool": "<stack@version>", "params": { /* claves contextuales */ }},
-  "outputs": { /* métricas y artefactos clave */ },
+  "outputs": { /* metrics and artifacts */ },
   "hash": "<sha256/keccak>",
   "sig": { "alg": "Ed25519|Dilithium2", "by": "<actor@domain>" }
 }
