@@ -1,0 +1,41 @@
+---
+version: 1
+# Map normalized certification achievements to points in [0..1].
+# Source events are DET packets with activity in {cert_event, audit_pass, conformity, approval}
+# and outputs.metrics fields like { dal, stage, standard, status }.
+
+events:
+  # Software DO-178C (example)
+  - match: {standard: "DO-178C", dal: "A", status: "SOI-4_PASS"}
+    points: 1.00
+  - match: {standard: "DO-178C", dal: "B", status: "SOI-4_PASS"}
+    points: 0.85
+  - match: {standard: "DO-178C", dal: "C", status: "SOI-4_PASS"}
+    points: 0.70
+
+  # Hardware DO-254 (example)
+  - match: {standard: "DO-254", dal: "A", status: "CONFORMITY_PASS"}
+    points: 0.90
+
+  # Systems ARP4754A/4761 milestones
+  - match: {standard: "ARP4754A", stage: "CDR_APPROVED"}
+    points: 0.50
+  - match: {standard: "ARP4761", stage: "SSA_COMPLETE"}
+    points: 0.60
+
+  # Airworthiness artifacts (illustrative)
+  - match: {authority: "EASA", status: "TIA_GRANTED"}
+    points: 0.75
+  - match: {authority: "FAA", status: "TIA_GRANTED"}
+    points: 0.75
+
+aggregation:
+  # Combine multiple events for same anchor (refs.ci→refs.ce fallback)
+  method: "max"        # take the strongest achieved signal
+  recency_half_life_days: 180   # exponential decay: recent signals count more
+
+guards:
+  # Certification must never be required:
+  required: false
+  # Only count official repos (same affiliates allowlist used elsewhere)
+  affiliates_ref: "UTCS-BLOCKCHAIN/CADET/affiliates.yaml"

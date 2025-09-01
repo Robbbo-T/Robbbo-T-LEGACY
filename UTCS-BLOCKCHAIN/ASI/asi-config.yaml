@@ -104,3 +104,11 @@ proposals:
     new_high_performer: 0.90    # trigger if new artifact scores above 90th percentile
     cluster_emergence: 5        # trigger if new cluster has 5+ high-scoring artifacts
   template_ref: "UTCS-BLOCKCHAIN/ASI/proposals/templates/weight-change-proposal.md"
+
+certification:
+  enabled: true
+  mode: "bonus_only"              # NEVER inside core composite; for display/ties only
+  mapping_ref: "UTCS-BLOCKCHAIN/ASI/cert/cert-mapping.yaml"
+  max_cert_bonus: 0.10            # ≤10% of composite score (hard cap)
+  decay_days: 365                 # recent certifications weigh more; decays to avoid legacy lock-in
+  tiebreaker: true                # use bonus only as final tiebreaker

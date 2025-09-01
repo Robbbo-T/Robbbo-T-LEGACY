@@ -15,7 +15,15 @@
     },
     "composite": {
       "type": "number",
-      "description": "Overall ASI score"
+      "description": "Certification-agnostic core score"
+    },
+    "cert_bonus": {
+      "type": "number",
+      "description": "[0..max_cert_bonus] capped bonus"
+    },
+    "display_score": {
+      "type": "number",
+      "description": "composite + cert_bonus (for display only)"
     },
     "metrics": {
       "type": "object",

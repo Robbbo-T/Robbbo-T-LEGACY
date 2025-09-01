@@ -18,4 +18,7 @@
 - **DET:ASI** events (`cluster_update`, `score_publish`, `proposal_submit`)
 - **DAO proposal drafts** (weight adjustments, guardrail alerts)
 
+> **Certification policy:** Certification signals provide a **capped, decaying bonus** for **display and tie-breaks only**.  
+> The **core ASI composite score never depends on certification**, so teams in slower certification workflows are not penalized.
+
 > S1000D is **CAS-only**; ASI uses downstream DMC pointers, never stores S1000D here.
