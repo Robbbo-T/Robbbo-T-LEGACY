@@ -1,12 +1,13 @@
+---
 version: 1
 inputs:
   det_recoveries: ["UTCS-BLOCKCHAIN/DET/TOK/RECOVER/**/DET:TOK:RECOVER:*:*:recovery_attest:V*"]
   auditor_reports: ["UTCS-BLOCKCHAIN/TekTok/oracle/audits/**.json"]
 normalization:
-  recouped_funds_usd: { fn: "sum_confirmed", window_days: 90 }
-guards: { min_signers: 3, sigma_outlier: 3, kyc_aml: true, sanctions_check: true }
+  recouped_funds_usd: {fn: "sum_confirmed", window_days: 90}
+guards: {min_signers: 3, sigma_outlier: 3, kyc_aml: true, sanctions_check: true}
 aggregation:
-  signers: ["oracle1@tek","oracle2@tek","oracle3@tek"]
+  signers: ["oracle1@tek", "oracle2@tek", "oracle3@tek"]
   signature: "Ed25519"
 output:
   file: "UTCS-BLOCKCHAIN/TekTok/oracle/recovery_feed.json"
