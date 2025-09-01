@@ -1,4 +1,3 @@
-guards: { min_signers: 3, sigma_outlier: 3, kyc_aml: true, sanctions_check: true }
 ---
 version: 1
 inputs:
