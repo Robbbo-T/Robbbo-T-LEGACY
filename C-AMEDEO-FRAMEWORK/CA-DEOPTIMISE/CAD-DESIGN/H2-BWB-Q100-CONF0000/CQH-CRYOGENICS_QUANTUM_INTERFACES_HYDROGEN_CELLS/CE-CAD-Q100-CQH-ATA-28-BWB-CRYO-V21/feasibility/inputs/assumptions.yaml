@@ -1,0 +1,124 @@
+---
+# BWB-Q100 v2.1 ZBO System Feasibility - Assumptions
+# CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21
+
+version: "1.0"
+date: "2025-01-15T10:20:00Z"
+study_type: "zero_boil_off_feasibility"
+
+# Design Assumptions
+design_assumptions:
+  aircraft_configuration:
+    type: "blended_wing_body"
+    designation: "BWB-Q100"
+    version: "v2.1"
+    wing_span_m: 52.0
+    overall_length_m: 47.0
+    max_takeoff_weight_kg: 180000
+
+  storage_system:
+    lh2_capacity_kg: 5000
+    lh2_density_kg_m3: 70.8  # at 20 K
+    storage_temperature_k: 20
+    storage_pressure_bar: 1.5
+    net_volume_available_m3: 126
+    volume_utilization_factor: 0.56
+
+  thermal_environment:
+    ambient_temp_k: 288.15  # 15°C standard atmosphere
+    cruise_altitude_m: 12000
+    outside_air_temp_k: 216.65  # -56.5°C at FL390
+    solar_flux_w_m2: 1368
+    earth_albedo: 0.3
+
+# Physical Constants
+physical_constants:
+  lh2_latent_heat_kj_kg: 445  # latent heat of vaporization
+  lh2_specific_heat_kj_kg_k: 9.69  # at 20 K
+  thermal_conductivity_air_w_m_k: 0.024
+  thermal_conductivity_insulation_w_m_k: 0.002  # MLI vacuum
+  stefan_boltzmann_w_m2_k4: 5.67e-8
+
+# Heat Transfer Assumptions
+heat_transfer:
+  surface_areas:
+    central_zone_m2: 120
+    semi_wings_m2: 80
+    total_wetted_area_m2: 200
+
+  heat_flux_assumptions:
+    central_zone_w_m2: 0.8
+    semi_wings_w_m2: 1.2
+    penetrations_supports_w: 108  # additional
+    safety_margin_factor: 1.15
+
+  insulation_system:
+    mli_layers: 40
+    vacuum_level_torr: 1e-5
+    thermal_bridge_factor: 1.2
+    aging_degradation_factor: 1.1
+
+# ZBO System Assumptions
+zbo_system:
+  technology: "claude_brayton_hybrid"
+  operating_temperature_k: 20
+  refrigeration_power_w: 300  # at 20 K
+  electrical_cop_range: [0.01, 0.02]  # electrical COP at 20 K
+  electrical_power_max_kw: 30
+  fuel_cell_efficiency: 0.6
+  heat_rejection_location: "external_wing_surface"
+
+# Operational Assumptions
+operational:
+  mission_duration_h: 12.0
+  ground_hold_h: 2.0
+  refueling_time_h: 1.0
+  ambient_temperature_variation_k: 20  # ±10 K
+  mission_profile:
+    taxi_duration_min: 30
+    climb_duration_min: 15
+    cruise_duration_h: 10.0
+    descent_duration_min: 20
+    taxi_in_duration_min: 15
+
+# Safety Factors
+safety_factors:
+  boiloff_allowance_factor: 2.0  # 2x margin
+  thermal_load_factor: 1.5
+  structural_load_factor: 1.25
+  electrical_power_margin: 1.2
+  component_reliability_factor: 0.99
+
+# Regulatory Constraints
+regulatory:
+  cs25_compliance: true
+  special_conditions_h2: true
+  do160_environmental: true
+  maximum_boiloff_pct_day: 0.1
+  hydrogen_concentration_limit_vol_pct: 0.4
+  ventilation_ach_min: 20
+
+# Economic Assumptions
+economic:
+  lh2_cost_usd_kg: 8.0
+  electrical_power_cost_usd_kwh: 0.15
+  zbo_system_cost_usd_m: 2.5  # million USD
+  maintenance_cost_factor: 0.05  # 5% of system cost annually
+  fuel_loss_penalty_usd_kg: 50.0  # including operational impact
+
+# Technology Readiness
+technology_readiness:
+  zbo_refrigeration_trl: 6
+  mli_insulation_trl: 9
+  cryogenic_pumps_trl: 8
+  hydrogen_sensors_trl: 9
+  control_systems_trl: 7
+  integration_risk: "medium"
+
+# AMPEL360 Integration
+ampel360_ties:
+  optimization_algorithm: "milp_cp_sat"
+  risk_assessment: "cvar_ranking"
+  uncertainty_quantification: true
+  monte_carlo_samples: 10000
+  sensitivity_analysis: true
