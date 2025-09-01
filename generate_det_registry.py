@@ -228,7 +228,7 @@ Complete registry of Digital Evidence Twin templates for the CAX framework.
     for domain_code, domain_name in DOMAINS.items():
         main_readme += f"- **{domain_code}** - [{domain_name}]({domain_code}/)\n"
     
-    main_readme += f"""
+    main_readme += """
 ## CAX Pillars
 """
     
