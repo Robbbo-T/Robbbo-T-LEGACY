@@ -1,0 +1,26 @@
+name: asi-qualification
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json"      # run when ASI scores change
+      - "UTCS-BLOCKCHAIN/ASI/qualification/**"
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Compute ASI qualification
+        run: |
+          python UTCS-BLOCKCHAIN/ASI/qualification/tools/compute_qualification.py
+      - name: Commit ASI qualification
+        run: |
+          git config user.name "asi-qual-bot"
+          git config user.email "asi-qual-bot@users.noreply.github.com"
+          git add UTCS-BLOCKCHAIN/ASI/out/qualification-*.json || true
+          git add UTCS-BLOCKCHAIN/ASI/out/qualification-*.md || true
+          git add UTCS-BLOCKCHAIN/DET/ASI/qualification_publish/*.json || true
+          git commit -m "chore(asi): update qualification leaderboards" || echo "no changes"
+          git push
