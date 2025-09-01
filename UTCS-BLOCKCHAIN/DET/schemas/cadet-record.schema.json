@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"CADET KPI Cut",
+  "type":"object",
+  "required":["namespace","cut","kpis"],
+  "properties":{
+    "namespace":{"type":"string","pattern":"^DET:[A-Z]{3}:[A-Z]{3}$"},
+    "cut":{"type":"string","pattern":"^\\d{4}-\\d{2}$"},
+    "kpis":{
+      "type":"object",
+      "properties":{"reuse_percent":{"type":"number"}, "energy_saved_kwh":{"type":"number"}, "co2_saved_kg":{"type":"number"}, "life_extension_months":{"type":"number"}, "risk_reduction":{"type":"number"}},
+      "required":["reuse_percent"]
+    },
+    "evidence":{"type":"array","items":{"type":"string"}}
+  }
+}

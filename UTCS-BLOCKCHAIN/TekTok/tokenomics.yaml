@@ -1,0 +1,46 @@
+version: 2
+symbol: TKTK
+name: "TeknIA Tokens (TekTok)"
+decimals: 18
+supply:
+  cap: 1000000000
+  genesis: 0
+  emission: { cadence: "weekly", max_weekly_percent_cap: 0.20%, cooldown_days: 7 }
+
+proof_of_innovation:
+  kpis:
+    reuse_percent:      { weight: 1.00, normalize: "pct" }
+    energy_saved_kwh:   { weight: 0.05, normalize: "per_100k_kwh" }
+    co2_saved_kg:       { weight: 0.02, normalize: "per_10k_kg" }
+    life_ext_months:    { weight: 0.50, normalize: "per_12m" }
+    risk_reduction:     { weight: 0.80, normalize: "delta_cvar" }
+    recouped_funds_usd: { weight: 0.90, normalize: "per_1M_usd" }   # anti-corruption recoveries
+  guards:
+    min_signers: 3
+    min_sources: 2
+    anti_gaming: { time_weighting_days: 30, duplicate_detector: true, revert_if_abnormal_sigma: 3 }
+
+revenue_sources:
+  innovation_poi: true
+  corruption_recoveries:
+    enabled: true
+    oracle: "RecoveryOracle"
+    proof_required:
+      - "DET:TOK:RECOVER:*:recovery_attest:V*"
+      - auditor_attestation: true
+      - legal_opinion: true
+      - kyc_aml_screening: true
+      - sanctions_check: true
+    netting: { max_legal_costs_pct: 20% }
+
+allocations:
+  innovation_weekly: { innovators_rewards: 55%, ecosystem_treasury: 25%, sustainability_fund: 10%, long_term_vesting: 10% }
+  recoveries:        { whistleblowers_and_investigators: 25%, adopting_organization: 30%, ecosystem_treasury: 20%, sustainability_fund: 15%, antifraud_r_and_d: 10% }
+
+governance:
+  dao: TekDAO
+  voting: { model: "token + reputation", quorum: 8%, timelock_days: 3, emergency_veto: true }
+sustainability: { carbon_accounting: "CADET/CO2", opex_runway_months: 18 }
+compliance:
+  frameworks: ["FCPA","UK Bribery Act","SOX","ISO 37001","GDPR"]
+  disclaimer: "This is not financial or legal advice."

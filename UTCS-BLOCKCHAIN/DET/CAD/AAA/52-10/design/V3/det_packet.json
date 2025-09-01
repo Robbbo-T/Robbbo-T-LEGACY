@@ -1,0 +1,10 @@
+{
+  "det_id": "DET:CAD:AAA:52-10:design:V3",
+  "ts": "2025-09-01T12:00:00Z",
+  "refs": { "ce": "CE-CAD-Q100-AAA-ATA-52-DOORS", "ci": "CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH" },
+  "inputs": { "cad_files": ["./door_assy.SLDASM"] },
+  "processing": { "tool": "SW@2025.0", "params": { "regen": true } },
+  "outputs": { "units": "mm, kg", "metrics": { "mass_kg": 125.5, "cg_x_mm": 15120 } },
+  "hash": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef",
+  "sig": { "alg": "Ed25519", "by": "wb-bot@aqua" }
+}

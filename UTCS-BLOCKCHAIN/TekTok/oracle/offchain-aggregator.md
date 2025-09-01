@@ -1,0 +1,3 @@
+- Run weekly: read DET/CADET, compute PoI score and recoveries, sign (Ed25519), write feed.json / recovery_feed.json.
+- MonetaryPolicy consumes feeds; mints to innovators/treasury/sustainability/vesting.
+- Emit DET:TOK:* events for minting and grants.
