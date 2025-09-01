@@ -205,7 +205,7 @@ DET:{cax_code}:{domain_code}:<SNS>:<activity>:<version>
                 readme_content += f"- [{filename}]({filename}) - ATA {ata_sns} evidence template\n"
             
             readme_path = os.path.join(domain_cax_dir, "README.md")
-            with open(readme_path, 'w') as f:
+            with open(readme_path, 'w', encoding='utf_8') as f:
                 f.write(readme_content)
     
     # Save registry index
