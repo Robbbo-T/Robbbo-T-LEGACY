@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS  
 **ATA Chapter:** 04  
 **Description:** Airworthiness Limitations (ALS/SSID)  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements airworthiness limitations (als/ssid) requirements as defined in ATA iSpec 2200 Chapter 04 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements airworthiness limitations (als/ssid) requirements as defined in ATA iSpec 2200 Chapter 04 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

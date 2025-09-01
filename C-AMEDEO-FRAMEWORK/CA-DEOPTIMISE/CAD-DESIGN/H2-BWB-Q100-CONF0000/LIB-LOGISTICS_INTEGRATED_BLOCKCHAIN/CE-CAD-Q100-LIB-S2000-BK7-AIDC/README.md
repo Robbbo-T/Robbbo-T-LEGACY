@@ -1,6 +1,6 @@
 # CE-CAD-Q100-LIB-S2000-BK7-AIDC
 
-**Configuration Element:** CE-CAD-Q100-LIB-S2000-BK7-AIDC  
+**Configuration Envelope:** CE-CAD-Q100-LIB-S2000-BK7-AIDC  
 **ATA Chapter:** S2000  
 **Description:** Aidc  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements aidc requirements as defined in ATA iSpec 2200 Chapter S2000 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements aidc requirements as defined in ATA iSpec 2200 Chapter S2000 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

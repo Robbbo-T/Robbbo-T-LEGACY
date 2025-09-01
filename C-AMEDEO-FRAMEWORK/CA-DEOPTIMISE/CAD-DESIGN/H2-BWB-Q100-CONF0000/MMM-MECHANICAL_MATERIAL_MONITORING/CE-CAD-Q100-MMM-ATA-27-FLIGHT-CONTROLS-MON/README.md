@@ -1,6 +1,6 @@
 # CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON
 
-**Configuration Element:** CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON  
+**Configuration Envelope:** CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON  
 **ATA Chapter:** 27  
 **Description:** Flight Controls  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements flight controls requirements as defined in ATA iSpec 2200 Chapter 27 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements flight controls requirements as defined in ATA iSpec 2200 Chapter 27 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

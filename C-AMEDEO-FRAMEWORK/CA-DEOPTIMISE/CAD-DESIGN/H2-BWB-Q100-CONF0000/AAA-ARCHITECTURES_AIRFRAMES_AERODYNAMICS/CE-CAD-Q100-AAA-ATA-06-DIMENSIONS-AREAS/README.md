@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-06-DIMENSIONS-AREAS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-06-DIMENSIONS-AREAS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-06-DIMENSIONS-AREAS  
 **ATA Chapter:** 06  
 **Description:** Dimensions & Areas  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements dimensions & areas requirements as defined in ATA iSpec 2200 Chapter 06 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements dimensions & areas requirements as defined in ATA iSpec 2200 Chapter 06 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-PPP-ATA-71-POWERPLANT
 
-**Configuration Element:** CE-CAD-Q100-PPP-ATA-71-POWERPLANT  
+**Configuration Envelope:** CE-CAD-Q100-PPP-ATA-71-POWERPLANT  
 **ATA Chapter:** 71  
 **Description:** Powerplant  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements powerplant requirements as defined in ATA iSpec 2200 Chapter 71 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements powerplant requirements as defined in ATA iSpec 2200 Chapter 71 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

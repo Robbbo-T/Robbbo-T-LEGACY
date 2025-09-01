@@ -1,6 +1,6 @@
 # CE-CAD-Q100-PPP-ATA-79-OIL
 
-**Configuration Element:** CE-CAD-Q100-PPP-ATA-79-OIL  
+**Configuration Envelope:** CE-CAD-Q100-PPP-ATA-79-OIL  
 **ATA Chapter:** 79  
 **Description:** Oil  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements oil requirements as defined in ATA iSpec 2200 Chapter 79 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements oil requirements as defined in ATA iSpec 2200 Chapter 79 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE
 
-**Configuration Element:** CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE  
+**Configuration Envelope:** CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE  
 **ATA Chapter:** 31  
 **Description:** Indicating/Recording Systems  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements indicating/recording systems requirements as defined in ATA iSpec 2200 Chapter 31 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements indicating/recording systems requirements as defined in ATA iSpec 2200 Chapter 31 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

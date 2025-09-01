@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAP-ATA-09-GROUND
 
-**Configuration Element:** CE-CAD-Q100-AAP-ATA-09-GROUND  
+**Configuration Envelope:** CE-CAD-Q100-AAP-ATA-09-GROUND  
 **ATA Chapter:** 09  
 **Description:** Towing & Taxiing  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements towing & taxiing requirements as defined in ATA iSpec 2200 Chapter 09 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements towing & taxiing requirements as defined in ATA iSpec 2200 Chapter 09 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

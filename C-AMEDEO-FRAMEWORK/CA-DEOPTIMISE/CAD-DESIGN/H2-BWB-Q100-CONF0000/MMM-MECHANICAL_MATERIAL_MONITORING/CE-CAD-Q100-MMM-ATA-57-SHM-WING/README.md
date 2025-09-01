@@ -1,6 +1,6 @@
 # CE-CAD-Q100-MMM-ATA-57-SHM-WING
 
-**Configuration Element:** CE-CAD-Q100-MMM-ATA-57-SHM-WING  
+**Configuration Envelope:** CE-CAD-Q100-MMM-ATA-57-SHM-WING  
 **ATA Chapter:** 57  
 **Description:** Wings  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements wings requirements as defined in ATA iSpec 2200 Chapter 57 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements wings requirements as defined in ATA iSpec 2200 Chapter 57 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

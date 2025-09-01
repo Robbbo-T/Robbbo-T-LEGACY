@@ -1,6 +1,6 @@
 # CE-CAD-Q100-EDI-ATA-33-LIGHTS
 
-**Configuration Element:** CE-CAD-Q100-EDI-ATA-33-LIGHTS  
+**Configuration Envelope:** CE-CAD-Q100-EDI-ATA-33-LIGHTS  
 **ATA Chapter:** 33  
 **Description:** Lights  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements lights requirements as defined in ATA iSpec 2200 Chapter 33 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements lights requirements as defined in ATA iSpec 2200 Chapter 33 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

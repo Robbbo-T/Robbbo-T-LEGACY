@@ -1,6 +1,6 @@
 # CE-CAD-Q100-PPP-ATA-72-ENGINE
 
-**Configuration Element:** CE-CAD-Q100-PPP-ATA-72-ENGINE  
+**Configuration Envelope:** CE-CAD-Q100-PPP-ATA-72-ENGINE  
 **ATA Chapter:** 72  
 **Description:** Engine — Turbine  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements engine — turbine requirements as defined in ATA iSpec 2200 Chapter 72 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements engine — turbine requirements as defined in ATA iSpec 2200 Chapter 72 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

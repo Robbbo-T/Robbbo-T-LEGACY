@@ -18,14 +18,14 @@ This domain covers supply chain management, logistics, and blockchain-based trac
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA Spec 2000 - Book 1 Provisioning**
 - **ATA Spec 2000 - Book 2 Procurement**
 - **ATA Spec 2000 - Book 7 AIDC/RFID**
 - **ATA Spec 2500 - Electronic Transfer Records**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-LIB-ATA-XX-DESCRIPTION`
 
@@ -34,12 +34,12 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
-* [CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING) — Configuration Element
-* [CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT) — Configuration Element
-* [CE-CAD-Q100-LIB-S2000-BK7-AIDC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK7-AIDC) — Configuration Element
-* [CE-CAD-Q100-LIB-S2500-TRANSFER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2500-TRANSFER) — Configuration Element
+* [CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING) — Configuration Envelope
+* [CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT) — Configuration Envelope
+* [CE-CAD-Q100-LIB-S2000-BK7-AIDC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK7-AIDC) — Configuration Envelope
+* [CE-CAD-Q100-LIB-S2500-TRANSFER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2500-TRANSFER) — Configuration Envelope
 
 
 ## Dependencies

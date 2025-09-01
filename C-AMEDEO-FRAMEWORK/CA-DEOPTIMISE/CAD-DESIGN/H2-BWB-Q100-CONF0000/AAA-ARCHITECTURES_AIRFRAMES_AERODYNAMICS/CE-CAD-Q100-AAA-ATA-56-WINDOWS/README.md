@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-56-WINDOWS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-56-WINDOWS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-56-WINDOWS  
 **ATA Chapter:** 56  
 **Description:** Windows  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements windows requirements as defined in ATA iSpec 2200 Chapter 56 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements windows requirements as defined in ATA iSpec 2200 Chapter 56 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

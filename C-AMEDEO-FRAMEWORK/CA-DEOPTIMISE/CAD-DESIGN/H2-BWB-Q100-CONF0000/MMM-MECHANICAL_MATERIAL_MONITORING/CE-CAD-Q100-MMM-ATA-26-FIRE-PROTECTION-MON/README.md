@@ -1,6 +1,6 @@
 # CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON
 
-**Configuration Element:** CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON  
+**Configuration Envelope:** CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON  
 **ATA Chapter:** 26  
 **Description:** Fire Protection  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements fire protection requirements as defined in ATA iSpec 2200 Chapter 26 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements fire protection requirements as defined in ATA iSpec 2200 Chapter 26 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

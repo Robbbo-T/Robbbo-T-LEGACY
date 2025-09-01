@@ -18,7 +18,7 @@ This domain focuses on environmental control systems, waste management, and circ
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 12 - Servicing — Routine Maintenance**
 - **ATA 21 - Air Conditioning**
@@ -26,7 +26,7 @@ This domain includes Configuration Elements (CE) covering the following chapters
 - **ATA 38 - Water & Waste**
 - **ATA 49 - APU (Energy Recovery)**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-EEE-ATA-XX-DESCRIPTION`
 
@@ -35,7 +35,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-EEE-ATA-12-SERVICING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-12-SERVICING) — ATA 12 - Servicing — Routine Maintenance
 * [CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND) — ATA 21 - Air Conditioning

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-54-NACELLES-PYLONS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-54-NACELLES-PYLONS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-54-NACELLES-PYLONS  
 **ATA Chapter:** 54  
 **Description:** Nacelles/Pylons  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements nacelles/pylons requirements as defined in ATA iSpec 2200 Chapter 54 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements nacelles/pylons requirements as defined in ATA iSpec 2200 Chapter 54 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

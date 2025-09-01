@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE  
 **ATA Chapter:** 02  
 **Description:** Weight & Balance  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements weight & balance requirements as defined in ATA iSpec 2200 Chapter 02 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements weight & balance requirements as defined in ATA iSpec 2200 Chapter 02 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

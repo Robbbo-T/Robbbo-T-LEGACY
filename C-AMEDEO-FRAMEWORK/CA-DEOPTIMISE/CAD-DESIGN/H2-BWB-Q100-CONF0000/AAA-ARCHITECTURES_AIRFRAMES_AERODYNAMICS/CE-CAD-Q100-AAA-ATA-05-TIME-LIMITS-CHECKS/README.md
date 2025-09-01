@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-05-TIME-LIMITS-CHECKS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-05-TIME-LIMITS-CHECKS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-05-TIME-LIMITS-CHECKS  
 **ATA Chapter:** 05  
 **Description:** Time Limits & Maintenance Checks  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements time limits & maintenance checks requirements as defined in ATA iSpec 2200 Chapter 05 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements time limits & maintenance checks requirements as defined in ATA iSpec 2200 Chapter 05 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

@@ -1,6 +1,6 @@
 # CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER
 
-**Configuration Element:** CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER  
+**Configuration Envelope:** CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER  
 **ATA Chapter:** 24  
 **Description:** Electrical Power  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements electrical power requirements as defined in ATA iSpec 2200 Chapter 24 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements electrical power requirements as defined in ATA iSpec 2200 Chapter 24 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

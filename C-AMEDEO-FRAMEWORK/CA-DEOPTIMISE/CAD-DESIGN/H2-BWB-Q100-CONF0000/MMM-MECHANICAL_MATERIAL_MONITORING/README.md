@@ -18,7 +18,7 @@ This domain covers structural health monitoring, mechanical systems monitoring, 
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 26 - Fire Protection**
 - **ATA 27 - Flight Controls**
@@ -28,7 +28,7 @@ This domain includes Configuration Elements (CE) covering the following chapters
 - **ATA 53 - Fuselage SHM**
 - **ATA 57 - Wing SHM**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-MMM-ATA-XX-DESCRIPTION`
 
@@ -37,7 +37,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON) — ATA 26 - Fire Protection
 * [CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON) — ATA 27 - Flight Controls

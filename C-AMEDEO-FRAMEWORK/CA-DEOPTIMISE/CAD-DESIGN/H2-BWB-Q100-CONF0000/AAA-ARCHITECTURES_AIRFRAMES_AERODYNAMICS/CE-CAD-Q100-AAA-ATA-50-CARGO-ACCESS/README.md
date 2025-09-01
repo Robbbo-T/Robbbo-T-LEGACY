@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-50-CARGO-ACCESS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-50-CARGO-ACCESS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-50-CARGO-ACCESS  
 **ATA Chapter:** 50  
 **Description:** Cargo/Accessory Compartments  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements cargo/accessory compartments requirements as defined in ATA iSpec 2200 Chapter 50 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements cargo/accessory compartments requirements as defined in ATA iSpec 2200 Chapter 50 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

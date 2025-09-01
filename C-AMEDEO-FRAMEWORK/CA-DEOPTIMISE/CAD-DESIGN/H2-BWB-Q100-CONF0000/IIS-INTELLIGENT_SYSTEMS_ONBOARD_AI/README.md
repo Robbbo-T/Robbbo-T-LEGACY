@@ -18,14 +18,14 @@ This domain covers artificial intelligence systems, machine learning algorithms,
 
 ## ATA iSpec 2200 Coverage
 
-This domain includes Configuration Elements (CE) covering the following chapters:
+This domain includes Configuration Envelopes (CE) covering the following chapters:
 
 - **ATA 22 - Auto Flight (AI control assist)**
 - **ATA 31 - Indicating/Recording (AI analytics)**
 - **ATA 34 - Navigation (AI assistance)**
 - **ATA 46 - Information Systems (AI/RTOS)**
 
-## Configuration Elements (CE)
+## Configuration Envelopes (CE)
 
 Each CE follows the naming convention: `CE-CAD-Q100-IIS-ATA-XX-DESCRIPTION`
 
@@ -34,7 +34,7 @@ All CEs in this domain generate S1000D Data Module Codes (DMC) with:
 - **SNS (Subject Numbering System):** Per ATA iSpec 2200
 - **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
 
-### Navigation — Configuration Elements
+### Navigation — Configuration Envelopes
 
 * [CE-CAD-Q100-IIS-ATA-22-AI-AF](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-22-AI-AF) — Auto Flight (AI control assist)
 * [CE-CAD-Q100-IIS-ATA-31-AI-IR](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-31-AI-IR) — Indicating/Recording (AI analytics)

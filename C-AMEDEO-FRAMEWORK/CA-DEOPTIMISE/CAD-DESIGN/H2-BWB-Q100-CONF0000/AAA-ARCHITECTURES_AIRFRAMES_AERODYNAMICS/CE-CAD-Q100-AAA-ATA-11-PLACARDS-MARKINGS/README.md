@@ -1,6 +1,6 @@
 # CE-CAD-Q100-AAA-ATA-11-PLACARDS-MARKINGS
 
-**Configuration Element:** CE-CAD-Q100-AAA-ATA-11-PLACARDS-MARKINGS  
+**Configuration Envelope:** CE-CAD-Q100-AAA-ATA-11-PLACARDS-MARKINGS  
 **ATA Chapter:** 11  
 **Description:** Placards & Markings  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements placards & markings requirements as defined in ATA iSpec 2200 Chapter 11 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements placards & markings requirements as defined in ATA iSpec 2200 Chapter 11 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

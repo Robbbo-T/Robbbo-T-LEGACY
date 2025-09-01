@@ -1,6 +1,6 @@
 # CE-CAD-Q100-CCC-ATA-25-EQUIP-FURN
 
-**Configuration Element:** CE-CAD-Q100-CCC-ATA-25-EQUIP-FURN  
+**Configuration Envelope:** CE-CAD-Q100-CCC-ATA-25-EQUIP-FURN  
 **ATA Chapter:** 25  
 **Description:** Equipment/Furnishings  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements equipment/furnishings requirements as defined in ATA iSpec 2200 Chapter 25 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements equipment/furnishings requirements as defined in ATA iSpec 2200 Chapter 25 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

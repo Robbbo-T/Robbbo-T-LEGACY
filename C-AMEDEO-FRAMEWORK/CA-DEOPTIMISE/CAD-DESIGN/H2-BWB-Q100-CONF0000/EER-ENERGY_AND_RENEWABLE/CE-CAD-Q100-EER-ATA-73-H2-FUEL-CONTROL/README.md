@@ -1,6 +1,6 @@
 # CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL
 
-**Configuration Element:** CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL  
+**Configuration Envelope:** CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL  
 **ATA Chapter:** 73  
 **Description:** Engine Fuel & Control  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements engine fuel & control requirements as defined in ATA iSpec 2200 Chapter 73 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements engine fuel & control requirements as defined in ATA iSpec 2200 Chapter 73 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

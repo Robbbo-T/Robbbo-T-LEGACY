@@ -1,6 +1,6 @@
 # CE-CAD-Q100-MMM-ATA-29-HYDRAULIC-MON
 
-**Configuration Element:** CE-CAD-Q100-MMM-ATA-29-HYDRAULIC-MON  
+**Configuration Envelope:** CE-CAD-Q100-MMM-ATA-29-HYDRAULIC-MON  
 **ATA Chapter:** 29  
 **Description:** Hydraulic Power  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements hydraulic power requirements as defined in ATA iSpec 2200 Chapter 29 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements hydraulic power requirements as defined in ATA iSpec 2200 Chapter 29 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 

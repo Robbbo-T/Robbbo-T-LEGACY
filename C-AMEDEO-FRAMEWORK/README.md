@@ -62,7 +62,7 @@ The framework organizes all activities across 15 technological domains:
 ## Standards Compliance
 
 ### ATA iSpec 2200 Integration
-All Configuration Elements (CE) use the **ATA iSpec 2200 Subject Numbering System (SNS)** following the format:
+All Configuration Envelopes (CE) use the **ATA iSpec 2200 Subject Numbering System (SNS)** following the format:
 ```
 CE-CAD-Q100-{DOMAIN}-ATA-{CC}-{DESCRIPTION}
 ```

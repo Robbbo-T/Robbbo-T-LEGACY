@@ -1,6 +1,6 @@
 # CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY
 
-**Configuration Element:** CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY  
+**Configuration Envelope:** CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY  
 **ATA Chapter:** 34  
 **Description:** Navigation  
 **Configuration:** H2-BWB-Q100-CONF0000  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This Configuration Element (CE) implements navigation requirements as defined in ATA iSpec 2200 Chapter 34 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
+This Configuration Envelope (CE) implements navigation requirements as defined in ATA iSpec 2200 Chapter 34 for the hydrogen-powered Blended Wing Body (BWB) aircraft.
 
 ## S1000D Integration
 
