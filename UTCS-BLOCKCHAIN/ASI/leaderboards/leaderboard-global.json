@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "anchor": "CI-CAD-AAA-53-10-CB-001",
+    "domain": "AAA",
+    "composite": 0.4,
+    "metrics": {
+      "cav_reuse_multiplier": 0.0,
+      "cav_energy_efficiency": 0.0,
+      "cav_spillover_effect": 0.0,
+      "cli_novelty_score": 0.0,
+      "cli_coherence": 0.0,
+      "cli_emergence_rate": 1.0,
+      "baf_roi_projection": 0.0,
+      "baf_sustainability_alignment": 0.0,
+      "baf_risk_mitigation": 0.0
+    },
+    "provenance": {
+      "repo": "https://github.com/Robbbo-t/Robbbo-t",
+      "signer": "",
+      "det_ids": [
+        "DET:CAD:AAA:53-10:design:V1"
+      ]
+    },
+    "timestamp": "2025-09-01T08:33:22.968774+00:00"
+  }
+]
