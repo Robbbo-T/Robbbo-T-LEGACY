@@ -1,0 +1,26 @@
+---
+name: guard-domains-thin
+"on": [pull_request]
+jobs:
+  enforce-thin-readmes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if DOMAIN readmes are long-form
+        run: |
+          set -e
+          # find README.md under UTCS-BLOCKCHAIN/DOMAINS except top-level
+          files=$(find UTCS-BLOCKCHAIN/DOMAINS -name README.md -not -path "UTCS-BLOCKCHAIN/DOMAINS/README.md" || true)
+          exit_code=0
+          for f in $files; do
+            lines=$(wc -l < "$f" | tr -d ' ')
+            if [ "$lines" -gt 40 ]; then
+              echo "::error file=$f::README too long ($lines lines). Keep thin and link to C-AMEDEO."
+              exit_code=1
+            fi
+            if grep -Eqi 'EBOM.yaml|MBOM.yaml|PN|qty|material' "$f"; then
+              echo "::error file=$f::Detected EBOM/MBOM content. Put engineering in C-AMEDEO."
+              exit_code=1
+            fi
+          done
+          exit $exit_code
