@@ -1,0 +1,160 @@
+---
+document:
+  version: 2.0
+  last_updated: "2025-02-01"
+  next_review: "2025-05-01"
+
+oversight:
+  tokenomics_autoexec: false
+  tekdao_required: true
+  emergency_stop_sla_sec: 60
+  human_review_triggers:
+    weight_change_pct: [20, 100]
+    new_top_percentile: 90
+    algorithm_modification: true
+    cross_domain_policy_change: true
+
+provenance:
+  affiliates_ref: "UTCS-BLOCKCHAIN/ASI/affiliates.yaml"
+  signature_alg: "Ed25519"
+  hash_alg: "sha256"
+  validation_sequence:
+    - repo_check
+    - signature_check
+    - hash_check
+    - timestamp_monotonic
+    - previous_hash_link
+
+data_quality:
+  outlier_sigma: 3.0
+  min_evidence:
+    per_metric: 3
+    per_contributor_verified_artifacts: 1
+    per_window_packets: 5
+  units_required: true
+  max_clock_skew_sec: 300
+  reject_future_horizon_sec: 3600
+
+bias_prevention:
+  entropy_min: 2.0
+  cross_metric_min: 3
+  gradient_bounds:
+    per_cycle_pct: 5
+    per_week_pct: 10
+    per_month_pct: 20
+    emergency_halt_pct: 50
+  diversity_targets:
+    gini_max: 0.35
+    domain_min_share: 0.15
+    top_contributor_max_share: 0.40
+
+security:
+  rate_limits:
+    computations_per_minute: 10
+    max_concurrent_jobs: 3
+    queue_depth: 100
+    throttle_strategy: "delay_then_reject"
+    burst_allowance: 20
+  input_limits:
+    max_json_mb: 10
+    max_nesting_depth: 10
+  access:
+    read: "public"
+    compute: "authenticated"
+    modify_weights: "tekdao_members"
+    emergency_stop: "designated_operators"
+
+bounds:
+  composite_score: [0.0, 10.0]
+  zscore_range: [-3.0, 3.0]
+  percentile: [0, 100]
+  confidence_interval: 0.95
+  constraints:
+    max_det_packets_per_ci: 50
+    max_det_packets_per_ce: 100
+    min_namespaces: 1
+    max_artifacts_per_contributor: 500
+    max_contributors: 10000
+
+temporal:
+  lookback_days: 90
+  compute_cycle: "weekly"
+  cycle_day: "sunday"
+  cycle_time_utc: "00:00"
+  grace:
+    late_evidence_hours: 48
+    retro_correction_days: 7
+  cooldowns:
+    weight_change_days: 7
+    algorithm_update_days: 30
+    emergency_recovery_hours: 4
+
+review_triggers:
+  automatic_weight_change_pct: [0, 5]
+  logged_weight_change_pct: [5, 10]
+  human_review_weight_change_pct: [10, 20]
+  emergency_halt_weight_change_pct: [20, 100]
+  clustering_detection:
+    min_artifacts: 5
+    time_window_hours: 24
+    author_concentration: 0.8
+    metric_correlation: 0.95
+
+alerts:
+  critical:
+    signature_fail_rate_gt: 0.1
+    composite_spike_sigma_gt: 5
+    compute_time_sec_gt: 300
+    memory_mb_gt: 8192
+  warning:
+    new_cluster_detected: true
+    unusual_temporal_pattern: true
+    domain_imbalance_gt: 0.5
+    retry_rate_gt: 0.3
+
+responses:
+  sla:
+    detection_to_suspension_sec: 60
+    operator_notification_sec: 300
+    audit_log_sec: 3600
+    rollback_complete_sec: 14400
+
+rollback:
+  checkpoint: "per_computation"
+  state:
+    - scoring_weights
+    - computed_scores
+    - det_validations
+    - contributor_registry
+
+self_modification:
+  algorithm_changes_allowed: false
+  weight_adjustments:
+    allowed: true
+    max_per_cycle_pct: 5
+    requires_justification: true
+    sandbox_required: true
+  new_metrics_allowed: false
+  new_metrics_requires: "TekDAO approval"
+  emergency_overrides:
+    allowed: true
+    for: ["security_patches", "critical_bugs"]
+    immediate_human_review: true
+
+performance:
+  accuracy_min: 0.85
+  latency_ms:
+    p50: 1000
+    p95: 3000
+    p99: 5000
+  availability_target: 99.5
+  maintenance_window: "sunday_00:00-02:00_utc"
+  degradation_triggers:
+    accuracy_below_for_cycles: [0.85, 3]
+    p99_latency_ms_gt: 5000
+    error_rate_gt: 0.05
+  degradation_responses:
+    - increase_human_review
+    - reduce_complexity
+    - fallback_model
+    - alert_team

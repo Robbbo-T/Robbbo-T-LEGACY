@@ -1,0 +1,74 @@
+{
+  "det_id": "DET:ASI:decision:example-001:V1",
+  "ts": "2025-02-01T10:00:00Z",
+  "inputs": {
+    "policy_snapshot": "sha256:df1f9dc78b75fd03b81593861fd0661e3aeecb9f29c8c35be0eaf42dc91dc051",
+    "policy_path": "UTCS-BLOCKCHAIN/ASI/policies/guardrails.config.yaml",
+    "optimizer": "asi-agent@1.2",
+    "constraints": ["energy_efficiency", "domain_balance", "human_oversight"],
+    "det_packets": ["DET:CAD:AAA:52-10:design:V3", "DET:CAE:EER:24-00:analysis:V2"],
+    "weights_used": {"reuse": 0.25, "energy": 0.30, "innovation": 0.20, "sustainability": 0.25},
+    "provenance": {
+      "git_url": "https://github.com/Robbbo-t/Robbbo-t"
+    }
+  },
+  "processing": {
+    "tool": "asi-ranking-engine@2.0",
+    "algorithm_version": "1.2.3",
+    "params": {
+      "lookback_days": 90,
+      "entropy_threshold": 2.0,
+      "outlier_sigma": 3.0,
+      "bias_prevention_enabled": true
+    }
+  },
+  "outputs": {
+    "scores": {
+      "composite": 1.732,
+      "percentile": 88.6,
+      "confidence": 0.87
+    },
+    "metrics": {
+      "energy_kwh": 125.5,
+      "pattern_reuse_pct": 68.3,
+      "autonomy_level": 0.45,
+      "learning_efficiency": 0.72,
+      "domain_entropy": 2.15
+    },
+    "units": {
+      "energy_kwh": "kilowatt-hours",
+      "pattern_reuse_pct": "percent",
+      "autonomy_level": "ratio",
+      "learning_efficiency": "ratio",
+      "domain_entropy": "bits"
+    },
+    "outliers_removed": 2,
+    "warnings": []
+  },
+  "computation": {
+    "duration_ms": 1234,
+    "memory_mb": 256,
+    "cpu_cores": 2,
+    "started_at": "2025-02-01T09:59:45Z",
+    "completed_at": "2025-02-01T10:00:01Z"
+  },
+  "validation": {
+    "human_review": null,
+    "automated_checks": "passed",
+    "bias_analysis": {
+      "gini_coefficient": 0.28,
+      "domain_balance": "adequate",
+      "top_contributor_share": 0.32
+    },
+    "guardrails_compliance": {
+      "policy_version": "2.0",
+      "all_checks_passed": true,
+      "emergency_halt_triggered": false
+    }
+  },
+  "hash": "SHA256_EXAMPLE_ASI_DECISION_001_V1_2025_02_01",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "asi-oracle@tekdao"
+  }
+}

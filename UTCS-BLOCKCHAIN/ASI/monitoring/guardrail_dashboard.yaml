@@ -1,0 +1,36 @@
+---
+version: 1
+last_updated: "2025-02-01T00:00:00Z"
+sources:
+  asi_scores: "UTCS-BLOCKCHAIN/ASI/out/asi-scores.json"
+  qualification_artifacts: "UTCS-BLOCKCHAIN/ASI/out/qualification-artifacts.json"
+  qualification_contributors: "UTCS-BLOCKCHAIN/ASI/out/qualification-contributors.json"
+  decision_packets_glob: "UTCS-BLOCKCHAIN/DET/ASI/decision/**/det_packet.json"
+widgets:
+  - id: domain_entropy
+    type: scalar
+    target: ">=2.0"
+  - id: signature_fail_rate
+    type: scalar
+    target: "0.0"
+  - id: composite_spike_sigma
+    type: scalar
+    target: "<=3.0"
+  - id: decision_energy_sum_kwh
+    type: timeseries
+  - id: gini_scores
+    type: scalar
+    target: "<=0.35"
+  - id: top_contributor_share
+    type: scalar
+    target: "<=0.40"
+  - id: domain_min_share
+    type: scalar
+    target: ">=0.15"
+alerts_bindings:
+  critical:
+    - signature_fail_rate
+    - composite_spike_sigma
+  warning:
+    - domain_entropy
+    - gini_scores
