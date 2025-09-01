@@ -32,14 +32,21 @@ def extract_vp(step_path: Path) -> dict:
     return results
 
 def update_manifest(manifest_path: Path, vp: dict):
-    man = yaml.safe_load(manifest_path.read_text())
+    manifest_text = manifest_path.read_text()
+    man = yaml.safe_load(manifest_text)
     for model in man["artifacts"]["3d_models"]:
         if model["file"].endswith(".step"):
             if "validation" not in model:
                 model["validation"] = {}
             for k, v in vp.items():
                 model["validation"][k] = v
-    manifest_path.write_text(yaml.safe_dump(man, sort_keys=False))
+    
+    # Preserve YAML document start
+    yaml_output = yaml.safe_dump(man, sort_keys=False)
+    if not yaml_output.startswith('---'):
+        yaml_output = '---\n' + yaml_output
+    
+    manifest_path.write_text(yaml_output)
     print(f"✅ Manifest actualizado con VP extraídos: {vp}")
 
 if __name__ == "__main__":
