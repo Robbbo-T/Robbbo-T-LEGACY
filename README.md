@@ -4,6 +4,8 @@ Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized De
 Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR and AMPEL360 ecosystems
 Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
+&#x20; &#x20;
+
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/Robbbo-T)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://linkedin.com/in/amedeopelliccia)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +13,7 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ---
 
-**EstándarUniversal:** DocumentoTecnico-Divulgacion-ISO9001-IntroduccionSeccionPrincipal-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-9f3a7c2e-RestoDeVidaUtil
+**UniversalStandard:** TechnicalDocument-Dissemination-ISO9001-MainSectionIntroduction-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-CROSS-AmedeoPelliccia-9f3a7c2e-RemainingUsefulLife
 
 > UTCS‑MI v5.0 identifier (13 fields) applied to the public portfolio artifact.
 
@@ -46,10 +48,10 @@ graph TD
 
 * **IoT** → **LCC** domain · deterministic networks · AIDC (Spec 2000 Book 7) · telemetry to **DET**.
 * **AI · ML** → **IIS** onboard · **AMPEL360** on ground · safe partitioning in **GAIA AIR RTOS** · DO‑178C/DO‑254.
-* **Blockchain** → **LIB** domain · traceability supply‑chain **Spec 2000/2500** · evidence notarization in **DET**.
+* **Blockchain** → **LIB** domain · supply‑chain traceability (**Spec 2000/2500**) · evidence notarization in **DET**.
 * **Quantum** → **QAL** bridge in **AQUA‑OS BRIDGE** · **CQH** for cryogenics and interfaces H₂‑quantum · quantum navigation & optimization.
 * **Complex systems** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** in CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
-* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites CMH‑17, nanocoatings, metamateriales; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
+* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites CMH‑17, nanocoatings, metamaterials; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
 
 ```mermaid
 flowchart LR
