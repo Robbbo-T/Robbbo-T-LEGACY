@@ -1,0 +1,82 @@
+---
+# DET Namespace Registry for ASI
+
+version: 1.0
+updated: "2025-09-01T00:00:00Z"
+
+# Namespace patterns for ASI scoring eligibility
+namespaces:
+  DET:CAD:
+    description: "Computer-Aided Design evidence"
+    activities: ["design", "save_model", "baseline_freeze", "feasibility_run", "trade_study"]
+    asi_relevance: ["cav_reuse_multiplier", "cli_novelty_score"]
+
+  DET:CAE:
+    description: "Computer-Aided Engineering evidence"
+    activities: ["solver_run", "analysis", "simulation", "validation"]
+    asi_relevance: ["baf_risk_mitigation", "cli_coherence"]
+
+  DET:CAM:
+    description: "Computer-Aided Manufacturing evidence"
+    activities: ["process_update", "wo_close", "fai", "spc"]
+    asi_relevance: ["cav_energy_efficiency", "baf_roi_projection"]
+
+  DET:CAI:
+    description: "Computer-Aided Integration evidence"
+    activities: ["install_signoff", "sys_test", "integration"]
+    asi_relevance: ["baf_risk_mitigation", "cli_coherence"]
+
+  DET:CAT:
+    description: "Computer-Aided Testing evidence"
+    activities: ["test_execute", "sbom_generate", "ci_build"]
+    asi_relevance: ["baf_risk_mitigation", "cli_novelty_score"]
+
+  DET:CAS:
+    description: "Computer-Aided Sustainment evidence"
+    activities: ["maintenance", "upgrade", "life_extension"]
+    asi_relevance: ["cav_spillover_effect", "baf_sustainability_alignment"]
+
+  DET:CAO:
+    description: "Computer-Aided Operations evidence"
+    activities: ["ops_deploy", "monitoring", "optimization"]
+    asi_relevance: ["cav_energy_efficiency", "baf_roi_projection"]
+
+# Domain codes and their ASI clustering affinity
+domains:
+  AAA:
+    name: "ARCHITECTURES_AIRFRAMES_AERODYNAMICS"
+    cluster_affinity: ["structural", "aerodynamic", "integration"]
+
+  EEE:
+    name: "ENVIRONMENTAL_REMEDIATION_CIRCULARITY"
+    cluster_affinity: ["sustainability", "circular_economy", "waste_reduction"]
+
+  EDI:
+    name: "ELECTRONICS_DIGITAL_INSTRUMENTS"
+    cluster_affinity: ["digital", "instrumentation", "automation"]
+
+  MMM:
+    name: "MECHANICAL_MATERIAL_MONITORING"
+    cluster_affinity: ["materials", "mechanical", "monitoring"]
+
+  CCC:
+    name: "COCKPIT_CABIN_CARGO_SYSTEMS"
+    cluster_affinity: ["human_factors", "safety", "ergonomics"]
+
+# Metric mapping rules
+metric_sources:
+  cav_reuse_multiplier:
+    primary_namespace: "DET:CAD"
+    supporting_namespaces: ["DET:CAM", "DET:CAS"]
+
+  cav_energy_efficiency:
+    primary_namespace: "DET:CAM"
+    supporting_namespaces: ["DET:CAO", "DET:CAE"]
+
+  cli_novelty_score:
+    primary_namespace: "DET:CAD"
+    supporting_namespaces: ["DET:CAT", "DET:CAE"]
+
+  baf_sustainability_alignment:
+    primary_namespace: "DET:CAS"
+    supporting_namespaces: ["DET:CAM", "DET:CAO"]
