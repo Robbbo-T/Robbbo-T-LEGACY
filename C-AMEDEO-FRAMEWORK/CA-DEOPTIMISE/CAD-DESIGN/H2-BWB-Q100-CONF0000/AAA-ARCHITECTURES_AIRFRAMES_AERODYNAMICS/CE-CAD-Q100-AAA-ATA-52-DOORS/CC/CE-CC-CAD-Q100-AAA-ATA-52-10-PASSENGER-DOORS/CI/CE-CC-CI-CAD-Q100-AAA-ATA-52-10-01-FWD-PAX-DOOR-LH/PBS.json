@@ -1,0 +1,21 @@
+{
+  "wbs_id": "Q100-52-10-01",
+  "name": "FWD-PAX-DOOR-LH",
+  "owner_domain": "AAA",
+  "co_domains": ["EDI", "OOO"],
+  "cax": "CAD",
+  "sns": "52-10-01",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-52-DOORS",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-52-10-PASSENGER-DOORS",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH",
+  "parent": "Q100-52-10",
+  "weight_kg": 125.5,
+  "material": "CFRP/AL2024-T3",
+  "criticality": "DAL-A",
+  "effectivity": "CONF0000",
+  "certification_basis": ["CS-25.783", "CS-25.807", "CS-25.365"],
+  "description": "Forward passenger door left hand - primary entrance",
+  "manufacturer": "AeroDoors GmbH",
+  "part_number": "Q100-52-10-01-A001",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

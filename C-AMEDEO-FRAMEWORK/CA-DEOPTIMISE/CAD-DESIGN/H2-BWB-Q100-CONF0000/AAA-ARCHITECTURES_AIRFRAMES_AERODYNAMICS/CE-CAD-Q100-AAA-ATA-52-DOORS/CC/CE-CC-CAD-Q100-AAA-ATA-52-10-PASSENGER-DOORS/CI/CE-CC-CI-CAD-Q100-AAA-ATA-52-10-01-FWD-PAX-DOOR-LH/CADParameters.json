@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "meta": {
+    "item": "CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH",
+    "created": "2025-09-01",
+    "author": "cad@aqua-os"
+  },
+  "datums": {
+    "PLN_XY": "Aircraft waterline at FS 0",
+    "PLN_YZ": "Aircraft centerline",
+    "PLN_ZX": "Aircraft buttline at WL 0"
+  },
+  "master_skeleton": {
+    "file": "MASTER_SKELETON_52-10-01.SLDPRT",
+    "description": "Door master skeleton with key planes and datums"
+  },
+  "parameters": {
+    "DOOR_WIDTH_MM": {
+      "value": 850,
+      "tolerance": "±5",
+      "description": "Door opening width"
+    },
+    "DOOR_HEIGHT_MM": {
+      "value": 1950,
+      "tolerance": "±5", 
+      "description": "Door opening height"
+    },
+    "DOOR_THICKNESS_MM": {
+      "value": 85,
+      "tolerance": "±2",
+      "description": "Door panel thickness"
+    },
+    "FRAME_CORNER_RADIUS_MM": {
+      "value": 25,
+      "tolerance": "±1",
+      "description": "Frame corner radius"
+    },
+    "SEAL_GROOVE_WIDTH_MM": {
+      "value": 12,
+      "tolerance": "±0.5",
+      "description": "Seal groove width"
+    },
+    "HINGE_SPACING_MM": {
+      "value": 650,
+      "tolerance": "±10",
+      "description": "Spacing between hinges"
+    }
+  },
+  "ranges": {
+    "PRESSURE_DIFF_KPA": {
+      "min": 0,
+      "max": 56.7,
+      "design": 42.5,
+      "description": "Cabin pressure differential range"
+    },
+    "OPERATING_TEMP_C": {
+      "min": -65,
+      "max": 85,
+      "description": "Operating temperature range"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# SOLIDWORKS Assembly File Placeholder
+# This would be the actual SOLIDWORKS assembly file
+# File: FWD_PAX_DOOR_LH_ASSY.SLDASM
+#
+# Assembly Structure:
+# - Door Frame (Q100-52-10-01-001)
+# - Outer Skin Panel (Q100-52-10-01-002)  
+# - Inner Skin Panel (Q100-52-10-01-003)
+# - Primary Latch Mechanism (Q100-52-10-01-004)
+# - Hinge Assemblies (3x Q100-52-10-01-005)
+# - Seal Assembly (Q100-52-10-01-006)
+# - Window Assembly (Q100-52-10-01-007)
+# - Handle Assembly (Q100-52-10-01-008)
+#
+# Assembly Constraints:
+# - Fixed: Door Frame to Master Skeleton
+# - Mated: All components per assembly drawing
+# - Motion: Hinge rotation, latch engagement
+#
+# Created: 2025-09-01
+# Author: CAD Team  
+# Version: Rev A
+
+[PLACEHOLDER - SOLIDWORKS NATIVE ASSEMBLY FILE]
+
+# Mass Properties:
+# Total Mass: 125.5 kg
+# Center of Gravity: X=425mm, Y=975mm, Z=42mm
+# Moments of Inertia calculated for dynamic analysis

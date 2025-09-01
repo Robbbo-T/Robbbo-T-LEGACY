@@ -1,0 +1,42 @@
+version: 1.0
+meta:
+  item: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
+  created: 2025-09-01
+  author: configuration@aqua-os
+
+configurations:
+  - config_id: CONF0000
+    description: "Baseline H2-BWB-Q100 Configuration"
+    applicability: "All aircraft"
+    effective_from: "Aircraft 001"
+    status: "Active"
+    
+  - config_id: CONF0001
+    description: "Optional Emergency Lighting Kit"
+    applicability: "Customer option"
+    effective_from: "Aircraft 010"
+    status: "Planned"
+    modifications:
+      - add_part: "Q100-52-10-01-009"
+        description: "Emergency LED Strip"
+        
+variants:
+  - variant_id: "LH"
+    description: "Left Hand Door"
+    mirror_of: null
+    
+  - variant_id: "RH"  
+    description: "Right Hand Door"
+    mirror_of: "LH"
+    modifications:
+      - mirror_axis: "YZ"
+      - part_suffix: "-RH"
+
+production_breaks:
+  - break_id: "PB-001"
+    description: "Improved seal design"
+    effective_aircraft: "050"
+    changes:
+      - part: "Q100-52-10-01-006"
+        revision: "B"
+        reason: "Enhanced durability"

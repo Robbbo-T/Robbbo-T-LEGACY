@@ -1,0 +1,43 @@
+version: 1
+meta:
+  owner: airworthiness@aqua-os
+  reviewer: systemsafety@aqua-os
+  last_updated: 2025-09-01
+  change_ref: CDR-AAA-2025-09
+  
+applies_to:
+  cax: CAD
+  mic: Q100
+  sns: "52"
+  id: CE-CAD-Q100-AAA-ATA-52-DOORS
+  description: "Doors Configuration Envelope"
+
+co_domains: [EDI, OOO]  # Warning/monitoring systems integration
+
+standards:
+  - id: CS-25.783
+    org: EASA
+    title: Doors
+    clause: 25.783
+    applicability: [Design, Analysis, Test]
+    level: MUST
+    verification: [Analysis, Test, Inspection]
+    scope: "All passenger and crew doors"
+    
+  - id: CS-25.807
+    org: EASA
+    title: Emergency Exits
+    clause: 25.807
+    applicability: [Design, Test]
+    level: MUST
+    verification: [Test, Demonstration]
+    scope: "Emergency exits and escape slides"
+    
+  - id: CS-25.365
+    org: EASA
+    title: Pressurization Loads
+    clause: 25.365
+    applicability: [Design, Analysis]
+    level: MUST
+    verification: [Analysis, Test]
+    scope: "Pressure differential loads on doors"

@@ -1,0 +1,23 @@
+# SOLIDWORKS Part File Placeholder
+# This would be the actual SOLIDWORKS master skeleton part file
+# File: MASTER_SKELETON_52-10-01.SLDPRT
+#
+# Key Features:
+# - Reference planes for door coordinate system
+# - Attachment points for mechanism mounting
+# - Envelope boundaries for interference checking
+# - Master parameters driving all downstream components
+#
+# Created: 2025-09-01
+# Author: CAD Team
+# Version: Rev A
+
+[PLACEHOLDER - SOLIDWORKS NATIVE FILE]
+
+# Key Parameters:
+# DOOR_WIDTH_MM = 850
+# DOOR_HEIGHT_MM = 1950  
+# DOOR_THICKNESS_MM = 85
+# FRAME_CORNER_RADIUS_MM = 25
+# SEAL_GROOVE_WIDTH_MM = 12
+# HINGE_SPACING_MM = 650
