@@ -24,7 +24,7 @@ CADET (Root Assurance Ledger)
 - **Location**: [CADET-REGISTRY/](CADET-REGISTRY/)
 - **Purpose**: Root assurance ledger with evolutionary capability
 - **Features**: Circularity KPIs, sustainability metrics, ESG reporting
-- **Config**: [cadet-config.yaml](CADET-REGISTRY/cadet-config.yaml)
+- **Config**: [cadet-config.yaml](UTCS-BLOCKCHAIN/CADET/cadet-config.yaml)
 
 ### **2. DET - Digital Evidence Twin Registry**
 - **Location**: [UTCS-BLOCKCHAIN/DET/DET-REGISTRY/](UTCS-BLOCKCHAIN/DET/DET-REGISTRY/)
