@@ -6,7 +6,7 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ---
 
-**UniversalStandard:** TechnicalDocument-Dissemination-ISO9001-MainSectionIntroduction-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-CROSS-AmedeoPelliccia-9f3a7c2e-RemainingUsefulLife
+**UniversalStandard:** TechnicalDocument-Dissemination-ISO9001-MainSectionIntroduction-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-CROSS-AmedeoPelliccia-4a4596d0-RemainingUsefulLife
 
 > UTCS‑MI v5.0 identifier (13 fields) applied to the public portfolio artifact.
 

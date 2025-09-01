@@ -1,0 +1,66 @@
+# .github/workflows/cad-pbs-bom-validate.yml
+name: CAD PBS/BOM Validate
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Install deps
+        run: pip install pyyaml
+      - name: Validate PBS Structure
+        run: |
+          python -c "
+          import os
+          import yaml
+          import json
+          
+          def check_effectivities():
+              '''Check that Effectivities.yaml files exist and are valid'''
+              effectivities_files = []
+              for root, dirs, files in os.walk('.'):
+                  if 'Effectivities.yaml' in files:
+                      file_path = os.path.join(root, 'Effectivities.yaml')
+                      effectivities_files.append(file_path)
+                      try:
+                          with open(file_path, 'r') as f:
+                              data = yaml.safe_load(f)
+                              if 'aircraft' not in data or 'variants' not in data:
+                                  print(f'ERROR: {file_path} missing required fields')
+                                  return False
+                              print(f'OK: {file_path}')
+                      except Exception as e:
+                          print(f'ERROR: {file_path} - {e}')
+                          return False
+              
+              if not effectivities_files:
+                  print('WARNING: No Effectivities.yaml files found')
+              return True
+          
+          def check_det_structure():
+              '''Check DET directory exists'''
+              if os.path.exists('./det/.keep.json'):
+                  try:
+                      with open('./det/.keep.json', 'r') as f:
+                          json.load(f)
+                      print('OK: DET directory structure valid')
+                      return True
+                  except:
+                      print('ERROR: DET .keep.json is not valid JSON')
+                      return False
+              else:
+                  print('ERROR: DET directory missing')
+                  return False
+          
+          # Run validations
+          success = True
+          success and= check_effectivities()
+          success and= check_det_structure()
+          
+          if not success:
+              exit(1)
+          print('All validations passed!')
+          "
