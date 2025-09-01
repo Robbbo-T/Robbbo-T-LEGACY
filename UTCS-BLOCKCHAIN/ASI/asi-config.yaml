@@ -73,6 +73,56 @@ metrics:
     normalize: "zscore"
     description: "Risk reduction and robustness measures"
 
+  # Sustainability Focus (SUS)
+  sus:
+    energy_per_decision_kwh:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.energy_kwh"   # fallback if breakdown missing
+      weight: 0.25
+      normalize: "inv_energy_norm"
+      min_evidence: 3
+    pattern_reuse_pct:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.pattern_reuse_pct"
+      weight: 0.25
+      normalize: "minmax01"
+      min_evidence: 3
+    co2e_per_decision_kg:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.co2e_kg"
+      weight: 0.30
+      normalize: "inv_energy_norm"
+      min_evidence: 3
+    learning_efficiency:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.learning_efficiency"
+      weight: 0.20
+      normalize: "zscore"
+      min_evidence: 5
+
+  # Decision Quality (DQ)
+  dq:
+    autonomy_level:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.autonomy_level"
+      weight: 0.20
+      normalize: "minmax01"
+    sustainability_of_choice:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.sustainability_score"
+      weight: 0.30
+      normalize: "minmax01"
+    resource_optimization_intelligence:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.resource_opt_score"
+      weight: 0.30
+      normalize: "zscore"
+    improvement_rate:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.improvement_rate"
+      weight: 0.20
+      normalize: "zscore"
+
 guards:
   signature_required: true
   units_required: true
@@ -81,6 +131,25 @@ guards:
   cap_per_ci: 50
   min_namespaces: 1
   english_only: true
+
+weights:
+  composite:
+    cav: 0.40
+    cli: 0.20
+    baf: 0.20
+    sus: 0.10   # +SUS cap 10%
+    dq: 0.10   # +DQ cap 10%
+
+normalizers:
+  inv_energy_norm: {fn: "inverse", H: 0.25}   # ~0.25 kWh/decision = neutral
+
+autonomy_levels:
+  A0: 0.0  # Human-only
+  A1: 0.2  # Agent suggests
+  A2: 0.4  # Agent recommends w/ rationale
+  A3: 0.6  # Agent decides in tight constraints
+  A4: 0.8  # Agent decides in loose constraints
+  A5: 1.0  # Agent fully autonomous (watchdog on)
 
 scoring:
   composite: "weighted_sum"

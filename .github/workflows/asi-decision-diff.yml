@@ -1,0 +1,36 @@
+---
+name: asi-decision-diff
+"on":
+  pull_request:
+    paths:
+      - "UTCS-BLOCKCHAIN/DET/ASI/decision/**/det_packet.json"
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Find latest/new previous decision packets
+        id: pick
+        run: |
+          NEW=$(git diff --name-only origin/${{ github.base_ref }}... | \
+            grep 'UTCS-BLOCKCHAIN/DET/ASI/decision/.*/det_packet.json' || true)
+          echo "new=$NEW" >> $GITHUB_OUTPUT
+      - name: Generate diff comment
+        if: steps.pick.outputs.new != ''
+        run: |
+          python UTCS-BLOCKCHAIN/ASI/tools/decision_diff.py \
+            $(echo ${{ steps.pick.outputs.new }} | tr ' ' '\n' | tail -n1) \
+            $(echo ${{ steps.pick.outputs.new }} | tr ' ' '\n' | head -n1) > /tmp/comment.md
+      - name: Comment on PR
+        if: steps.pick.outputs.new != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('/tmp/comment.md','utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              issue_number: context.issue.number, body
+            });

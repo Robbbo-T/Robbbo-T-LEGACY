@@ -1,0 +1,25 @@
+---
+modes:
+  shadow:
+    min_days: 30
+    min_decisions: 50
+    require_kpi_stability: true  # no KPI worse than baseline for 7 consecutive days
+  supervised:
+    min_days: 14
+    guardrails:
+      max_boiloff_drift_pct_day: 0.01
+      max_power_kw: 30.0
+      zero_constraint_violations: true
+  autonomous:
+    prerequisites:
+      consecutive_green_cycles: 3   # supervised cycles w/o violations
+      risk_reduction_trend_positive: true
+      human_review_signoff: true
+rollback_triggers:
+  - name: "KPI degradation"
+    condition: "boiloff_pct_day > baseline + 0.01"
+  - name: "Constraint violation"
+    condition: "constraint_violations > 0"
+  - name: "Power overrun"
+    condition: "zbo_power_kw > 30.0"
+action: "immediate_rollback_to_supervised_and_open_issue"
