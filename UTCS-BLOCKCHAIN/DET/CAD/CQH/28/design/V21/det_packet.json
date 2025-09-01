@@ -1,0 +1,86 @@
+{
+  "det_id": "DET:CAD:CQH:28:design:V21",
+  "ts": "2025-01-15T10:20:00Z",
+  "refs": {
+    "ce": "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21",
+    "ci": "CI-CAD-CQH-28-01-ZBO-SYSTEM",
+    "cadet_chain": "CADET:CQH:CAD:V21"
+  },
+  "inputs": {
+    "cad_files": ["bwb_cryogenic_layout.step", "zbo_system_assembly.catpart"],
+    "requirements": ["REQ-CQH-28-00-001", "REQ-CQH-28-00-002", "REQ-CQH-28-00-003"],
+    "feasibility_study": "zbo_feasibility_results.yaml",
+    "configuration": "H2-BWB-Q100-CONF0000",
+    "design_baseline": "BWB-Q100-v2.1"
+  },
+  "processing": {
+    "tool": "CAD@2025.0",
+    "params": {
+      "MLI": true,
+      "vacuum_gaps_mm": 150,
+      "dewar_configuration": "4xML-20_4xML-8",
+      "zbo_refrigeration_w": 300,
+      "thermal_analysis": true
+    }
+  },
+  "outputs": {
+    "units": "mm,W,kg,K",
+    "metrics": {
+      "heat_leak_W_20K": 300,
+      "clearances_mm": 150,
+      "total_mass_kg": 1650,
+      "lh2_capacity_kg": 5000,
+      "volume_utilization_pct": 56,
+      "zbo_electrical_power_kW": 25.0,
+      "boiloff_target_pct_day": 0.1,
+      "structural_frequency_hz": 65.2
+    },
+    "design_outputs": {
+      "cad_model": "bwb_q100_v21_cryogenic_system.step",
+      "thermal_model": "zbo_thermal_analysis.xlsx",
+      "mass_properties": "mass_breakdown_v21.csv",
+      "interface_drawings": "cryogenic_interfaces_v21.pdf"
+    }
+  },
+  "traces": {
+    "upstream_refs": [
+      "REQ-CQH-28-00-001",
+      "REQ-CQH-28-00-002", 
+      "REQ-CQH-28-00-003",
+      "DET:CAD:CQH:28:feasibility_run:V1"
+    ],
+    "downstream_refs": [
+      "DET:CAE:CQH:28:thermal_analysis:V7",
+      "DET:CAM:CQH:28:mbom_release:V2"
+    ],
+    "cross_domain_refs": [
+      "DET:CAD:AAA:53-10:structural_integration:V1"
+    ],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "reuse_percentage": 65.0,
+      "co2_savings_kg": 2400.0,
+      "energy_savings_kwh": 1800.0,
+      "lifecycle_extension_months": 36
+    },
+    "sustainability_kpis": {
+      "iso14001_compliance": "COMPLIANT",
+      "csrd_reporting": "ENABLED",
+      "gri_alignment": "TRACKED"
+    }
+  },
+  "compliance": {
+    "standards": ["CS-25.365", "CS-25.963", "CS-25.981"],
+    "special_conditions": ["SC-H2-001", "SC-H2-002"],
+    "verification_status": "PRELIMINARY",
+    "certification_path": "TYPE_CERTIFICATION"
+  },
+  "hash": "SHA256_BWB_Q100_V21_ZBO_DESIGN_20250115",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cad-design@cqh",
+    "timestamp": "2025-01-15T10:20:00Z"
+  }
+}
