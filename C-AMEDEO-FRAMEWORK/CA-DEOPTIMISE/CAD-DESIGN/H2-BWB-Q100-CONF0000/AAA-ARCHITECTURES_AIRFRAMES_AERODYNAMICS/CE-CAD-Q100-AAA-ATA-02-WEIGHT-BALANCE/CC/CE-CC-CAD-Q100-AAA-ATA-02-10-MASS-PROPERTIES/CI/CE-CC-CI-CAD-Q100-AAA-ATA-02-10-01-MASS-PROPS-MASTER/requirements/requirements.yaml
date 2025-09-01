@@ -1,0 +1,45 @@
+---
+# Requirements for Mass Properties Master CI
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: REQ-DES-STR-001
+    text: >-
+      Structural analysis requires defined loads based on operational
+      empty weight (OEW)
+    source: "Structural Design Standards"
+    driver: "safety"
+    acceptance: >-
+      OEW value must be numeric and within range 35000-50000 kg
+      for Q100 aircraft
+    verification: "Analysis"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-02-10-MASS-PROPERTIES"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-02-10-01-MASS-PROPS-MASTER"
+    status: "baselined"
+    owner: "wb-lead@aqua-os"
+    last_updated: "2025-01-14T10:00:00Z"
+
+  - id: REQ-BLD-BOM-001
+    text: >-
+      Bill of Materials cannot be frozen with TBD mass properties values
+    source: "Configuration Management Process"
+    driver: "performance"
+    acceptance: >-
+      All mass-related parameters must have resolved numeric values
+      before BOM baseline
+    verification: "Inspection"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-02-10-MASS-PROPERTIES"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-02-10-01-MASS-PROPS-MASTER"
+    status: "baselined"
+    owner: "config-mgmt@aqua-os"
+    last_updated: "2025-01-14T10:00:00Z"
+
+meta:
+  owner: "wb-lead@aqua-os"
+  reviewer: "systems-lead@aqua-os"
+  last_updated: "2025-01-14T10:00:00Z"
+  change_ref: "TBD-001-RESOLUTION"

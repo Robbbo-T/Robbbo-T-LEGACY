@@ -1,0 +1,34 @@
+{
+  "det_id": "DET:CAD:Q100:SKELETON:tbd_resolution:V1",
+  "ts": "2025-01-14T10:00:00Z",
+  "refs": {
+    "ce": "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE",
+    "ci": "CE-CC-CI-CAD-Q100-AAA-ATA-02-10-01-MASS-PROPS-MASTER"
+  },
+  "inputs": {
+    "tbd_item": "OEW_kg",
+    "requirement": "REQ-DES-STR-001",
+    "previous_value": "TBD"
+  },
+  "processing": {
+    "method": "Weight buildup analysis",
+    "tool": "W&B-Calc@1.0",
+    "assumptions": [
+      "Standard configuration CONF0000",
+      "Based on similar aircraft class analysis",
+      "Includes contingency margin"
+    ]
+  },
+  "outputs": {
+    "resolved_value": 42150.0,
+    "units": "kg",
+    "confidence": "95%",
+    "margin": "+500kg contingency included",
+    "validation": "Within acceptable range 35000-50000 kg for Q100 aircraft"
+  },
+  "hash": "a1b2c3d4e5f6789",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "wb-lead@aqua-os"
+  }
+}
