@@ -1,3 +1,4 @@
+---
 name: asi-qualification
 on:
   workflow_dispatch: {}
@@ -11,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: '3.11' }
+        with: {python-version: '3.11'}
       - name: Compute ASI qualification
         run: |
           python UTCS-BLOCKCHAIN/ASI/qualification/tools/compute_qualification.py
