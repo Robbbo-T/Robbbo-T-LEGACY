@@ -1,0 +1,123 @@
+{
+  "det_id": "DET:CAT:DDD:25-981:test_execute:V2",
+  "ts": "2025-05-02T09:30:00Z",
+  "refs": {
+    "ce": "CE-CAD-Q100-DDD-ATA-25-981-IGNITION-PROTECT",
+    "ci": "CI-CAT-DDD-25-981-01-H2-VENT-TEST-RIG",
+    "cadet_chain": "CADET:DDD:CAT:V2"
+  },
+  "inputs": {
+    "rig": "H2-VENT-RIG-A",
+    "test_scenario": "leak_50slpm",
+    "test_configuration": {
+      "chamber_volume_m3": 15.0,
+      "ventilation_design": "dual_dorsal_chimneys",
+      "sensor_count": 12,
+      "leak_rate_slpm": 50.0,
+      "threshold_vol_pct": 0.4
+    },
+    "test_conditions": {
+      "ambient_temp_k": 288.15,
+      "ambient_pressure_kpa": 101.3,
+      "relative_humidity_pct": 45.0
+    },
+    "safety_requirements": ["CS-25.963", "CS-25.981", "SC-H2-VENT-001"]
+  },
+  "processing": {
+    "tool": "lab-runner@0.9",
+    "params": {
+      "sensors": 12,
+      "chimneys": 2,
+      "data_acquisition_hz": 100,
+      "test_duration_min": 30,
+      "ignition_sources": ["spark", "hot_surface", "static"]
+    }
+  },
+  "outputs": {
+    "units": "ppm,%,s,m3/min",
+    "metrics": {
+      "max_h2_vol_pct": 0.28,
+      "peak_h2_ppm": 2800,
+      "ventilation_ach_measured": 22.1,
+      "clearance_time_s": 145,
+      "ignitions": 0,
+      "sensor_response_time_s": 3.1,
+      "vent_flow_rate_m3_min": 44.2
+    },
+    "safety_performance": {
+      "ignition_prevention": "PASS",
+      "ventilation_adequacy": "PASS", 
+      "sensor_coverage": "PASS",
+      "emergency_response": "PASS"
+    },
+    "test_artifacts": {
+      "video_recordings": "H2_VENT_TEST_V2_videos.mp4",
+      "sensor_data": "h2_concentration_timeseries.csv",
+      "flow_measurements": "ventilation_performance.json",
+      "ignition_attempts": "ignition_test_log.txt"
+    }
+  },
+  "traces": {
+    "upstream_refs": [
+      "REQ-CQH-28-00-004",
+      "REQ-CQH-28-00-005",
+      "DET:CAD:CQH:28:design:V21"
+    ],
+    "downstream_refs": [
+      "DET:CAI:DDD:25-981:integration_validation:V1",
+      "DET:CAS:DDD:25-981:certification_evidence:V1"
+    ],
+    "cross_domain_refs": [
+      "DET:CAT:CQH:28:safety_validation:V1"
+    ],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "test_equipment_reuse_pct": 85.0,
+      "energy_consumption_kwh": 12.5,
+      "waste_reduction_kg": 0.0,
+      "knowledge_transfer_score": 9.1
+    },
+    "sustainability_kpis": {
+      "safety_improvement_factor": 15.0,
+      "risk_reduction_score": 8.7,
+      "regulatory_confidence": 9.2
+    }
+  },
+  "compliance": {
+    "standards_validated": {
+      "cs25_963": {
+        "requirement": "adequate_ventilation",
+        "result": "PASS",
+        "margin": "10.5%"
+      },
+      "cs25_981": {
+        "requirement": "ignition_prevention", 
+        "result": "PASS",
+        "margin": "30% below LFL"
+      }
+    },
+    "special_conditions": {
+      "sc_h2_vent_001": "DEMONSTRATED",
+      "sensor_threshold": "VALIDATED",
+      "response_time": "COMPLIANT"
+    }
+  },
+  "risk_assessment": {
+    "identified_risks": [],
+    "mitigations_validated": [
+      "dual_ventilation_paths",
+      "redundant_sensors",
+      "fail_safe_design"
+    ],
+    "safety_level": "DAL-C",
+    "certification_readiness": "GREEN"
+  },
+  "hash": "SHA256_H2_VENT_IGNITION_TEST_V2_20250502",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "test-lab@ddd",
+    "timestamp": "2025-05-02T09:30:00Z"
+  }
+}

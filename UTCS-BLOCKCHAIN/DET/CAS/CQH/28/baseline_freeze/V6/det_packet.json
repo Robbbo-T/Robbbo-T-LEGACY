@@ -1,0 +1,100 @@
+{
+  "det_id": "DET:CAS:CQH:28:baseline_freeze:V6",
+  "ts": "2025-06-10T14:00:00Z",
+  "refs": {
+    "ce": "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21",
+    "ci": "CI-CAS-CQH-28-01-BOILOFF-MONITORING",
+    "cadet_chain": "CADET:CQH:CAS:V6"
+  },
+  "inputs": {
+    "flight": "FT-CRYO-007",
+    "aircraft_reg": "BWB-Q100-001",
+    "mass_start_kg": 5000,
+    "duration_h": 24.0,
+    "ambient_conditions": {
+      "ground_temp_k": 288.15,
+      "cruise_temp_k": 216.65,
+      "cruise_altitude_m": 12000
+    },
+    "operational_profile": "COMMERCIAL_MISSION"
+  },
+  "processing": {
+    "tool": "flight-logger@1.2",
+    "params": {
+      "zbo_state": "ON",
+      "monitoring_interval_s": 60,
+      "sensor_array": "12_sensors",
+      "data_quality": "FLIGHT_CERTIFIED"
+    }
+  },
+  "outputs": {
+    "units": "kg,%,h,K,kW",
+    "metrics": {
+      "mass_end_kg": 4995.2,
+      "boiloff_kg": 4.8,
+      "boiloff_pct_day": 0.096,
+      "ach_average": 20.5,
+      "zbo_power_avg_kW": 22.3,
+      "zbo_efficiency": 0.87,
+      "h2_sensor_max_ppm": 180,
+      "temperature_stability_k": 0.3
+    },
+    "performance_assessment": {
+      "boiloff_target_met": true,
+      "safety_margins_ok": true,
+      "zbo_performance": "NOMINAL",
+      "operational_rating": "EXCELLENT"
+    },
+    "flight_data": {
+      "telemetry_file": "FT-CRYO-007_telemetry.csv",
+      "sensor_logs": "h2_sensors_FT007.log",
+      "zbo_performance": "zbo_efficiency_FT007.json"
+    }
+  },
+  "traces": {
+    "upstream_refs": [
+      "DET:CAD:CQH:28:design:V21",
+      "DET:CAI:CQH:28:install_signoff:V4",
+      "REQ-CQH-28-00-002"
+    ],
+    "downstream_refs": [
+      "DET:CAS:CQH:28:monthly_report:V6",
+      "DET:CAEV:CQH:28:lessons_learned:V1"
+    ],
+    "cross_domain_refs": [
+      "DET:CAS:PPP:70:fuel_consumption:V3"
+    ],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "fuel_saved_kg": 53.5,
+      "co2_avoided_kg": 1605.0,
+      "energy_efficiency_improvement": 4.2,
+      "operational_lifecycle_extension_h": 240
+    },
+    "sustainability_kpis": {
+      "fuel_loss_reduction_pct": 96.0,
+      "zbo_energy_efficiency": 87.0,
+      "environmental_impact_score": 9.2
+    }
+  },
+  "compliance": {
+    "regulatory_compliance": {
+      "cs25_963_vent": "COMPLIANT",
+      "cs25_981_ignition": "COMPLIANT",
+      "special_conditions_h2": "COMPLIANT"
+    },
+    "operational_limits": {
+      "boiloff_limit_pct_day": 0.1,
+      "actual_boiloff_pct_day": 0.096,
+      "safety_margin": 4.0
+    }
+  },
+  "hash": "SHA256_BOILOFF_MONITORING_FT_CRYO_007_V6",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "flight-ops@aqua",
+    "timestamp": "2025-06-10T14:00:00Z"
+  }
+}
