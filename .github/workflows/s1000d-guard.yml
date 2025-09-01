@@ -1,0 +1,28 @@
+---
+name: s1000d-guard
+on:
+  pull_request:
+    branches: [main, trunk]
+  push:
+    branches: [main]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if S1000D/DMRL/DMC appear outside CAS-SUSTAINMENT
+        run: |
+          set -euo pipefail
+          MATCHES="$(git ls-files | grep -E '/(S1000D|DMRL|DMC)/' || true)"
+          if [ -z "$MATCHES" ]; then
+            echo "No S1000D-like paths found."
+            exit 0
+          fi
+            grep -vE '^C-AMEDEO-FRAMEWORK/(CA-DEOPTIMIZE|CA-OPTIMIZED)/CAS-SUSTAINMENT/.*/S1000D/' || true)"
+          if [ -n "$BAD" ]; then
+            echo "::error::S1000D/DMRL/DMC paths outside CAS-SUSTAINMENT are forbidden:"
+            printf "%s\n" "$BAD"
+            exit 1
+          fi
+          echo "All S1000D paths are under CAS-SUSTAINMENT. OK."

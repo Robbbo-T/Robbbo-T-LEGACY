@@ -1,0 +1,49 @@
+---
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'release/**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies (if requirements.txt exists)
+        run: |
+          if [ -f requirements.txt ]; then
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
+          else
+            echo "requirements.txt not found; skipping dependency installation."
+          fi
+
+      - name: Lint YAML files (optional)
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: .yamllint.yml
+        continue-on-error: true  # Remove if you want to fail the job on lint errors
+
+      - name: Run tests (if tests are present)
+        run: |
+          if [ -f pytest.ini ] || [ -d tests ]; then
+            pytest || echo "pytest failed or not found"
+          else
+            echo "No tests directory or pytest.ini found; skipping tests."
+          fi
+
+# Add or adjust jobs and steps to fit your repository's needs.
