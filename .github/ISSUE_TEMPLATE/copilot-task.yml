@@ -1,0 +1,24 @@
+---
+name: "Copilot task"
+description: "Delegate a scoped task to @copilot"
+labels: [agent, scope:small]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What this changes and why.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Build/test/validation outcomes required.
+      placeholder: |
+        - passes ci (lint/schema/tests)
+        - english-only, markdown links for DI/CE/CC/CI/CP
+        - DET updates provided for EBOM/MBOM/analysis/integration/requirements/feasibility/compliance changes
+  - type: textarea
+    id: files
+    attributes:
+      label: Files to touch
+      description: Identify DI/CE/CC/CI paths, schemas, etc.

@@ -1,0 +1,7 @@
+# Compliance and schemas require human review
+**/compliance/**   @your-team/airworthiness
+**/schemas/**      @your-team/tooling
+
+# S1000D changes require tech pubs review
+C-AMEDEO-FRAMEWORK/*/CAS-SUSTAINMENT/**/S1000D/**  @your-team/techpubs
+**/(S1000D|DMRL|DMC)/**                             @your-team/techpubs

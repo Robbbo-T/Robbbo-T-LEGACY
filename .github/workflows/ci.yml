@@ -1,0 +1,33 @@
+---
+name: ci
+on:
+  pull_request:
+    branches: [main, trunk]
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r .github/requirements.txt
+          npm i -g markdown-link-check
+      - name: YAML lint
+        run: yamllint -s .
+      - name: Markdown links
+        run: |
+          find . -name "*.md" -not -path "./.git/*" -print0 | \
+          xargs -0 -n1 markdown-link-check -q
+      - name: Schema checks (placeholder)
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          print("schema checks placeholder ok")
+          PY
