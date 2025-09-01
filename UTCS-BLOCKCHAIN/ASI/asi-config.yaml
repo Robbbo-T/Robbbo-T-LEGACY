@@ -1,0 +1,106 @@
+---
+meta:
+  spec: ASI-1.0
+  owner: "asi@your-org"
+  updated: "2025-09-01T00:00:00Z"
+
+windows:
+  lookback_days: 90
+  weekly_cycle_day_utc: "SUN"
+
+eligibility:
+  # Reuse CADET affiliates allowlist to ensure official provenance
+  affiliates_ref: "UTCS-BLOCKCHAIN/ASI/affiliates.yaml"
+  det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+  require_si_units: true
+  require_ed25519: true
+
+grouping:
+  # Score granularity
+  artifact_key: "refs.ci"     # fallback to refs.ce
+  cluster_by:
+    - "domain"                # AAA, EDI, etc.
+    - "pillar"                # CAD, CAE, etc.
+    - "ata_sns"               # ATA chapter codes
+    - "sustainability_theme"  # energy, co2, reuse, life_ext
+
+metrics:
+  # Catalyze Additional Value (CAV)
+  cav_reuse_multiplier:
+    weight: 1.00
+    normalize: "zscore"
+    description: "Reuse uplift * downstream adoption factor"
+
+  cav_energy_efficiency:
+    weight: 0.80
+    normalize: "zscore"
+    description: "Energy saved per unit effort invested"
+
+  cav_spillover_effect:
+    weight: 0.60
+    normalize: "domain_norm"
+    description: "Cross-domain innovation adoption rate"
+
+  # Cluster Innovation (CLI)
+  cli_novelty_score:
+    weight: 0.70
+    normalize: "minmax01"
+    description: "First-of-kind methods or breakthrough approaches"
+
+  cli_coherence:
+    weight: 0.50
+    normalize: "zscore"
+    description: "Internal cluster consistency and synergy"
+
+  cli_emergence_rate:
+    weight: 0.40
+    normalize: "inv_days_norm"
+    description: "Speed of cluster formation and growth"
+
+  # Boost Auto Finance (BAF)
+  baf_roi_projection:
+    weight: 0.90
+    normalize: "zscore"
+    description: "Projected return on investment efficiency"
+
+  baf_sustainability_alignment:
+    weight: 0.85
+    normalize: "minmax01"
+    description: "Alignment with sustainability goals"
+
+  baf_risk_mitigation:
+    weight: 0.75
+    normalize: "zscore"
+    description: "Risk reduction and robustness measures"
+
+guards:
+  signature_required: true
+  units_required: true
+  sigma_outlier: 3
+  deduplicate_by_det_id: true
+  cap_per_ci: 50
+  min_namespaces: 1
+  english_only: true
+
+scoring:
+  composite: "weighted_sum"
+  domain_balancing: true
+  tie_breaker: ["baf_sustainability_alignment", "cli_novelty_score", "earliest_ts"]
+
+outputs:
+  out_dir: "UTCS-BLOCKCHAIN/ASI/leaderboards"
+  files:
+    - "leaderboard-global.json"
+    - "leaderboard-global.md"
+    - "leaderboard-cav.md"      # CAV-focused ranking
+    - "leaderboard-cli.md"      # CLI-focused ranking
+    - "leaderboard-baf.md"      # BAF-focused ranking
+  schema_ref: "UTCS-BLOCKCHAIN/ASI/schemas/asi-score.schema.json"
+
+proposals:
+  auto_generate: true
+  threshold_changes:
+    major_weight_shift: 0.20    # trigger proposal if weight changes exceed 20%
+    new_high_performer: 0.90    # trigger if new artifact scores above 90th percentile
+    cluster_emergence: 5        # trigger if new cluster has 5+ high-scoring artifacts
+  template_ref: "UTCS-BLOCKCHAIN/ASI/proposals/templates/weight-change-proposal.md"
