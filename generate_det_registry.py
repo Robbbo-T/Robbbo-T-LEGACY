@@ -235,7 +235,7 @@ Complete registry of Digital Evidence Twin templates for the CAX framework.
     for cax_code, cax_name in CAX_PILLARS.items():
         main_readme += f"- **{cax_code}** - {cax_name}\n"
     
-    main_readme += f"""
+    main_readme += """
 ## Registry Files
 - [registry-index.json](registry-index.json) - Complete registry index
 - Domain directories contain CAX pillar subdirectories
