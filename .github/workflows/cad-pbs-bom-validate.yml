@@ -57,8 +57,8 @@ jobs:
           
           # Run validations
           success = True
-          success and= check_effectivities()
-          success and= check_det_structure()
+          success &= check_effectivities()
+          success &= check_det_structure()
           
           if not success:
               exit(1)
