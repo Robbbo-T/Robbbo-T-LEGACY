@@ -1,0 +1,16 @@
+{
+  "geometry": {
+    "DIAMETER_MM": 5200,
+    "THICKNESS_SKIN_MM": 3.2,
+    "CORE_THICKNESS_MM": 18.0,
+    "FLANGE_WIDTH_MM": 120
+  },
+  "loads": {
+    "DELTA_P_KPA": 58.0,
+    "FACTOR_OF_SAFETY": 1.5
+  },
+  "constraints": {
+    "MASS_TARGET_KG": 420.0,
+    "FREQ_MIN_HZ": 60.0
+  }
+}

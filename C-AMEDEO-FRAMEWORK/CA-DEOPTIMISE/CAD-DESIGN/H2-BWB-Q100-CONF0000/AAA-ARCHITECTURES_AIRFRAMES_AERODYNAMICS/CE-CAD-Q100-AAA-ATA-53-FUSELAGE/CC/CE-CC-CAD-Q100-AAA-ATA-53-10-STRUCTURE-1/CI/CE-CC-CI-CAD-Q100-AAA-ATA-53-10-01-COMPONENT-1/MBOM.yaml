@@ -1,0 +1,27 @@
+---
+assembly: Q100-53-10-01-001
+route:
+  - op: 10
+    workcenter: LAYUP
+    desc: CFRP layup on tool
+    time_min: 180
+  - op: 20
+    workcenter: AUTOCLAVE
+    desc: Cure cycle 180°C
+    time_min: 240
+  - op: 30
+    workcenter: TRIM_DRILL
+    desc: Trim & drill per pattern
+    time_min: 90
+  - op: 40
+    workcenter: BONDING
+    desc: Bond flange and inserts
+    time_min: 120
+quality:
+  fai: required
+  ndt: UT-PA for bondlines
+spc:
+  features:
+    - id: HOLE_PCD
+      cp_min: 1.33
+      cpk_min: 1.00

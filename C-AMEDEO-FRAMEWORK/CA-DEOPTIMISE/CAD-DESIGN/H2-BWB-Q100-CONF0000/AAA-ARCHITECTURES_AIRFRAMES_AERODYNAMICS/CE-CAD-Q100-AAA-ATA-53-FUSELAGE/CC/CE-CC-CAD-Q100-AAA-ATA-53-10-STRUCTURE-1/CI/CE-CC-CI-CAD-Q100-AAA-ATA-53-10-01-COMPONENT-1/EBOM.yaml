@@ -1,0 +1,24 @@
+---
+part_number: Q100-53-10-01-001
+description: Forward Pressure Bulkhead Assembly
+revision: A
+units: EA
+quantity: 1
+weight_kg: 412.5
+components:
+  - pn: Q100-53-10-01-010
+    description: Skin panel CFRP
+    qty: 1
+    material: CFRP-T800
+  - pn: Q100-53-10-01-020
+    description: Core sandwich
+    qty: 1
+    material: PMI-FOAM
+  - pn: Q100-53-10-01-030
+    description: Peripheral flange
+    qty: 1
+    material: CFRP-T800
+  - pn: Q100-53-10-01-040
+    description: Hardpoint inserts
+    qty: 8
+    material: Ti-6Al-4V

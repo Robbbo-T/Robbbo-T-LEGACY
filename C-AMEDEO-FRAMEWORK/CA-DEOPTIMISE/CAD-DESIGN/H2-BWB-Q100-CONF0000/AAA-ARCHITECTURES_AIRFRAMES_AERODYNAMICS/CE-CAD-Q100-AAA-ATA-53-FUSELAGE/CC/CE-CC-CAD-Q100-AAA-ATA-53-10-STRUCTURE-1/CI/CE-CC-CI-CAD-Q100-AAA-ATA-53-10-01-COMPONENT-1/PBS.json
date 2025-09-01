@@ -1,12 +1,24 @@
 {
   "wbs_id": "Q100-53-10-01",
-  "name": "1",
+  "name": "Forward Pressure Bulkhead",
   "owner_domain": "AAA",
   "cax": "CAD",
-  "sns": "Q100531001",
+  "sns": "53-10-01",
+  "mic": "Q100",
+  "configuration": "H2-BWB-Q100-CONF0000",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-53-FUSELAGE",
   "cc_id": "CE-CC-CAD-Q100-AAA-ATA-53-10-STRUCTURE-1",
   "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-53-10-01-COMPONENT-1",
-  "description": "Component 1 for ATA 53",
+  "parent": "Q100-53-10",
+  "interfaces": ["53-10-03", "53-10-06", "28-00"],
+  "weight_kg": 412.5,
+  "materials": ["CFRP", "Core-foam"],
+  "criticality": "DAL-A",
   "effectivity": "CONF0000",
-  "lifecycle_phase": "CA-DEOPTIMISE"
+  "certification_basis": ["CS-25.305", "CS-25.365", "CS-25.571"],
+  "provenance": {
+    "git_url": "",
+    "authors": [],
+    "created": "2025-09-01T00:00:00Z"
+  }
 }
