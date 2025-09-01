@@ -1,0 +1,13 @@
+activity: design
+cax: CAE
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: AAP-Domain-Lead
+  sns_code: 01-00
+created: '2025-09-01T05:11:27.110847Z'
+det_id: DET:CAE:AAP:01-00:design:V1
+domain: AAP
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 01-00
+version: V1

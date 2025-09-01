@@ -1,0 +1,13 @@
+activity: design
+cax: CAS
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: CQH-Domain-Lead
+  sns_code: 28-00
+created: '2025-09-01T05:11:27.151269Z'
+det_id: DET:CAS:CQH:28-00:design:V1
+domain: CQH
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 28-00
+version: V1

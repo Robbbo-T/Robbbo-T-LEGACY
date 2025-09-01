@@ -1,0 +1,13 @@
+activity: design
+cax: CAT
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: PPP-Domain-Lead
+  sns_code: 70-00
+created: '2025-09-01T05:11:27.320676Z'
+det_id: DET:CAT:PPP:70-00:design:V1
+domain: PPP
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 70-00
+version: V1

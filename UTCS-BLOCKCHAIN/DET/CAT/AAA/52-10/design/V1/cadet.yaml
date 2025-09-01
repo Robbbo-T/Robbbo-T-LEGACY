@@ -1,0 +1,19 @@
+cadet_integration:
+  circular_assurance:
+    kpi_cut_reference: CADET:AAA:CAT:V1
+    sustainability_metrics:
+      co2_savings_kg: null
+      energy_savings_kwh: null
+      lifecycle_extension_months: null
+      reuse_percentage: null
+  esg_compliance:
+    csrd_reporting: ENABLED
+    gri_alignment: TRACKED
+    iso14001_compliance: PENDING
+  evolutionary_capability:
+    evolution_driver: BLOCKCHAIN_INTEGRATION
+    next_evolution: TBD
+    version_chain:
+    - V1
+cadet_registry: ../../../../../CADET/AAA-CAT-cadet-metrics.yaml
+det_id: DET:CAT:AAA:52-10:design:V1

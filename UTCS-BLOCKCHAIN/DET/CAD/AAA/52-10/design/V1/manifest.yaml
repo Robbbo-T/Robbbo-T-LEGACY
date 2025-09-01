@@ -1,0 +1,13 @@
+activity: design
+cax: CAD
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: AAA-Domain-Lead
+  sns_code: 52-10
+created: '2025-09-01T05:11:27.092183Z'
+det_id: DET:CAD:AAA:52-10:design:V1
+domain: AAA
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 52-10
+version: V1

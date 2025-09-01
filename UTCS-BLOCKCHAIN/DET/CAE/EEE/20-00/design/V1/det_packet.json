@@ -1,0 +1,39 @@
+{
+  "det_id": "DET:CAE:EEE:20-00:design:V1",
+  "ts": "2025-09-01T05:11:27.189347Z",
+  "inputs": {
+    "domain": "EEE",
+    "domain_name": "ENVIRONMENTAL_REMEDIATION_CIRCULARITY",
+    "cax_pillar": "CAE",
+    "cax_description": "Computer-Aided Engineering",
+    "ata_sns": "20-00",
+    "configuration": "H2-BWB-Q100-CONF0000",
+    "activity_type": "design"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cae-registry@1.0",
+    "params": {
+      "domain_owner": "EEE",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true,
+      "blockchain_enabled": true
+    }
+  },
+  "outputs": {
+    "registry_status": "NODE_CREATED",
+    "traceability_links": [],
+    "compliance_status": "ATA_ALIGNED",
+    "circularity_metrics": {
+      "reuse_potential": "TBD",
+      "sustainability_score": "TBD",
+      "lifecycle_stage": "DESIGN"
+    },
+    "units": "dimensionless"
+  },
+  "hash": "SHA256_PLACEHOLDER_CAE_EEE_20_00",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "utcs-blockchain@eee"
+  }
+}

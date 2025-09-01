@@ -1,0 +1,13 @@
+activity: design
+cax: CAE
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: CCC-Domain-Lead
+  sns_code: 11-00
+created: '2025-09-01T05:11:27.126529Z'
+det_id: DET:CAE:CCC:11-00:design:V1
+domain: CCC
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 11-00
+version: V1
