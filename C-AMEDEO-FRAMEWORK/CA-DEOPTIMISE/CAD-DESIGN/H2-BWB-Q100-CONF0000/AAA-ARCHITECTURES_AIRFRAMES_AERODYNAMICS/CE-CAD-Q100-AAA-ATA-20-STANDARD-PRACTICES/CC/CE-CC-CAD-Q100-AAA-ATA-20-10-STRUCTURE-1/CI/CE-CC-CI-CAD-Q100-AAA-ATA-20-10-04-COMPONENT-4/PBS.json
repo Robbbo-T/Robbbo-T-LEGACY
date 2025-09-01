@@ -1,0 +1,12 @@
+{
+  "wbs_id": "Q100-20-10-04",
+  "name": "4",
+  "owner_domain": "AAA",
+  "cax": "CAD",
+  "sns": "Q100201004",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-20-10-STRUCTURE-1",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-20-10-04-COMPONENT-4",
+  "description": "Component 4 for ATA 20",
+  "effectivity": "CONF0000",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

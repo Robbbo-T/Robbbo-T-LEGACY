@@ -1,0 +1,12 @@
+{
+  "wbs_id": "Q100-53-30-06",
+  "name": "6",
+  "owner_domain": "AAA",
+  "cax": "CAD",
+  "sns": "Q100533006",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-53-30-STRUCTURE-3",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-53-30-06-COMPONENT-6",
+  "description": "Component 6 for ATA 53",
+  "effectivity": "CONF0000",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}
