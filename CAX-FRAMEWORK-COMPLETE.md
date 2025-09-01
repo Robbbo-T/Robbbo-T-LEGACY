@@ -27,10 +27,10 @@ CADET (Root Assurance Ledger)
 - **Config**: [cadet-config.yaml](CADET-REGISTRY/cadet-config.yaml)
 
 ### **2. DET - Digital Evidence Twin Registry**
-- **Location**: [DET-REGISTRY/](DET-REGISTRY/)
+- **Location**: [UTCS-BLOCKCHAIN/DET/DET-REGISTRY/](UTCS-BLOCKCHAIN/DET/DET-REGISTRY/)
 - **Purpose**: Cryptographic evidence packets for all 105 domain×CAX combinations
 - **Features**: Immutable evidence, SHA-256 hashing, Ed25519 signatures
-- **Index**: [registry-index.json](DET-REGISTRY/registry-index.json)
+- **Index**: [registry-index.json](UTCS-BLOCKCHAIN/DET/DET-REGISTRY/registry-index.json)
 
 ### **3. TRACES - Traceability Framework**
 - **Location**: [TRACES-REGISTRY/](TRACES-REGISTRY/)
@@ -146,7 +146,7 @@ cat CAX-FRAMEWORK-REGISTRY.yaml
 ls C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/*/H2-BWB-Q100-CONF0000/
 
 # Check DET templates
-ls DET-REGISTRY/*/
+ls UTCS-BLOCKCHAIN/DET/DET-REGISTRY/*/
 ```
 
 ### **2. Generate Evidence**
@@ -190,7 +190,7 @@ CAX-Framework/
 ├── CADET-REGISTRY/                       # Root assurance ledger
 │   ├── README.md
 │   └── cadet-config.yaml
-├── DET-REGISTRY/                         # Evidence templates (105 combinations)
+├── UTCS-BLOCKCHAIN/DET/DET-REGISTRY/         # Evidence templates (105 combinations)
 │   ├── README.md
 │   ├── registry-index.json
 │   └── [DOMAIN]/[CAX]/DET-*.json

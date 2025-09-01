@@ -32,8 +32,8 @@ registries:
     description: "Root assurance ledger with evolutionary capability"
     
   det:
-    location: "DET-REGISTRY/"
-    index: "DET-REGISTRY/registry-index.json"
+    location: "UTCS-BLOCKCHAIN/DET/DET-REGISTRY/"
+    index: "UTCS-BLOCKCHAIN/DET/DET-REGISTRY/registry-index.json"
     description: "Digital Evidence Twin templates for all domain×CAX combinations"
     
   traces:
@@ -263,7 +263,7 @@ compliance:
 # Implementation Paths
 implementation:
   cadet_registry: "CADET-REGISTRY/"
-  det_templates: "DET-REGISTRY/"
+  det_templates: "UTCS-BLOCKCHAIN/DET/DET-REGISTRY/"
   traces_framework: "TRACES-REGISTRY/"
   domain_structures: "C-AMEDEO-FRAMEWORK/*/*/H2-BWB-Q100-CONF0000/*/"
   evidence_storage: "det/"
