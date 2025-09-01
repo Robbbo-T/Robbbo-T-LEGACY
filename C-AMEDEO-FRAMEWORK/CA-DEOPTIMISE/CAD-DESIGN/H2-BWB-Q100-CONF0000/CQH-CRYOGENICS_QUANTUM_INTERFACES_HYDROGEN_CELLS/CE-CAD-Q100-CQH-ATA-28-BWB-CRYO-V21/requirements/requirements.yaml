@@ -1,0 +1,169 @@
+---
+# BWB-Q100 v2.1 Cryogenic System Requirements
+# CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21
+
+version: "1.0"
+last_updated: "2025-01-15T10:20:00Z"
+configuration: "H2-BWB-Q100-CONF0000"
+
+requirements:
+  - id: "REQ-CQH-28-00-001"
+    text: "The cryogenic system shall store 5,000 kg of liquid hydrogen at 20 K"
+    source: "BWB-Q100 Program Requirements Document"
+    driver: "performance"
+    acceptance: "Mass measurement ±1% accuracy, temperature stable ±0.5 K"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-STORAGE-SYSTEM"
+      ci: "CI-CAD-CQH-28-01-LH2-TANK-ASSEMBLY"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-002"
+    text: "The ZBO system shall maintain boil-off rate below 0.1% per day"
+    source: "CS-25 Special Conditions Hydrogen"
+    driver: "safety"
+    acceptance: "Measured boil-off ≤0.1%/day over 24h test period"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-ZBO-SYSTEM"
+      ci: "CI-CAD-CQH-28-02-ZBO-CONTROLLER"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-003"
+    text: "The thermal protection system shall limit heat leak to ≤300 W at 20 K"
+    source: "Thermal Design Requirements"
+    driver: "performance"
+    acceptance: "Measured heat leak ≤300 W during steady-state operation"
+    verification: "Analysis"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-THERMAL-PROTECTION"
+      ci: "CI-CAD-CQH-28-03-MLI-SYSTEM"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-004"
+    text: "The hydrogen detection system shall trigger alert at ≤0.4% volume concentration"
+    source: "CS-25.981 Fuel Tank Ignition Prevention"
+    driver: "safety"
+    acceptance: "System alert within 5 seconds when H₂ reaches 0.4% vol"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-SAFETY-SYSTEM"
+      ci: "CI-CAD-CQH-28-04-H2-SENSOR-ARRAY"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-005"
+    text: "The ventilation system shall provide ≥20 air changes per hour"
+    source: "CS-25.963 Fuel Tank Venting"
+    driver: "safety"
+    acceptance: "Measured ACH ≥20 h⁻¹ in all operational configurations"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-VENTILATION"
+      ci: "CI-CAD-CQH-28-05-VENT-SYSTEM"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-006"
+    text: "The fuel transfer system shall provide 50 kg/min total transfer capacity"
+    source: "Operational Requirements Document"
+    driver: "performance"
+    acceptance: "Measured transfer rate ≥50 kg/min with N+N redundancy"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-FUEL-TRANSFER"
+      ci: "CI-CAD-CQH-28-06-PUMP-ASSEMBLY"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-007"
+    text: "The structural supports shall maintain natural frequency >60 Hz"
+    source: "Vibration Requirements Specification"
+    driver: "performance"
+    acceptance: "Modal analysis confirms f₁ >60 Hz for all tank support modes"
+    verification: "Analysis"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-STRUCTURAL-SUPPORTS"
+      ci: "CI-CAD-CQH-28-07-TANK-BRACKETS"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-008"
+    text: "The electrical systems in cryogenic chamber shall meet IP67 rating"
+    source: "DO-160 Environmental Standards"
+    driver: "safety"
+    acceptance: "IP67 qualification test passed for all electrical components"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-ELECTRICAL-SAFETY"
+      ci: "CI-CAD-CQH-28-08-ELECTRICAL-PENETRATIONS"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-009"
+    text: "The quantum oasis v0 shall implement QKD and non-cryogenic sensors only"
+    source: "Quantum Technology Roadmap"
+    driver: "sustainability"
+    acceptance: "QKD operational, quantum sensors functional without cryogenics"
+    verification: "Inspection"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-75-QUANTUM-SYSTEMS"
+      ci: "CI-CAD-CQH-75-01-QKD-TERMINAL"
+    status: "draft"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+  - id: "REQ-CQH-28-00-010"
+    text: "The ZBO electrical power consumption shall not exceed 30 kW"
+    source: "Power Budget Specification"
+    driver: "performance"
+    acceptance: "Measured ZBO power ≤30 kW during steady-state operation"
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-CQH-ATA-28-BWB-CRYO-V21"
+      cc: "CC-CAD-CQH-28-ZBO-SYSTEM"
+      ci: "CI-CAD-CQH-28-02-ZBO-CONTROLLER"
+    status: "baselined"
+    owner: "CQH-Domain-Lead"
+    last_updated: "2025-01-15T10:20:00Z"
+
+# Traceability matrix
+traceability:
+  upstream_standards:
+    - "CS-25.365 - Pressurization"
+    - "CS-25.963 - Fuel Tank Venting"
+    - "CS-25.981 - Fuel Tank Ignition Prevention"
+    - "DO-160 - Environmental Conditions"
+    - "ARP4761 - Safety Assessment Guidelines"
+
+  downstream_verification:
+    - "DET:CAE:CQH:28:thermal_analysis:V7"
+    - "DET:CAT:CQH:28:zbo_controller:V3"
+    - "DET:CAT:CQH:28:safety_test:V2"
+    - "DET:CAI:CQH:28:valve_matrix:V4"
+
+compliance_mapping:
+  cs25_365: ["REQ-CQH-28-00-001", "REQ-CQH-28-00-003"]
+  cs25_963: ["REQ-CQH-28-00-005"]
+  cs25_981: ["REQ-CQH-28-00-004", "REQ-CQH-28-00-008"]
+  do160: ["REQ-CQH-28-00-008"]
