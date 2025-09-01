@@ -1,0 +1,61 @@
+{
+  "det_id": "DET:CAE:CCC:11:template:V1",
+  "ts": "2025-09-01T06:24:54.463539Z",
+  "refs": {
+    "ce": "CE-CAE-Q100-CCC-ATA-11-TEMPLATE",
+    "ci": "CE-CC-CI-CAE-Q100-CCC-ATA-11-01-TEMPLATE-ITEM",
+    "cadet_chain": "CADET:CCC:CAE:V1"
+  },
+  "inputs": {
+    "domain": "CCC",
+    "domain_name": "COCKPIT_CABIN_CARGO_SYSTEMS",
+    "cax_pillar": "CAE",
+    "cax_description": "Computer-Aided Engineering",
+    "ata_sns": "11",
+    "configuration": "H2-BWB-Q100-CONF0000"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cae-registry@1.0",
+    "params": {
+      "domain_owner": "CCC",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true
+    }
+  },
+  "outputs": {
+    "registry_status": "TEMPLATE_CREATED",
+    "traceability_links": [],
+    "compliance_status": "ATA_ALIGNED",
+    "circularity_metrics": {
+      "reuse_potential": "TBD",
+      "sustainability_score": "TBD",
+      "lifecycle_stage": "DESIGN"
+    },
+    "units": "dimensionless"
+  },
+  "traces": {
+    "upstream_refs": [],
+    "downstream_refs": [],
+    "cross_domain_refs": [],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "reuse_percentage": null,
+      "co2_savings_kg": null,
+      "energy_savings_kwh": null,
+      "lifecycle_extension_months": null
+    },
+    "sustainability_kpis": {
+      "iso14001_compliance": "PENDING",
+      "csrd_reporting": "ENABLED",
+      "gri_alignment": "TRACKED"
+    }
+  },
+  "hash": "SHA256_PLACEHOLDER_CAE_CCC_11",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cadet-registry@ccc"
+  }
+}

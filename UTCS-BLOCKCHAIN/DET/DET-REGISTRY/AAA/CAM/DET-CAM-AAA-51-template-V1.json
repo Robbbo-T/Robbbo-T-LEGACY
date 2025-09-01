@@ -1,0 +1,61 @@
+{
+  "det_id": "DET:CAM:AAA:51:template:V1",
+  "ts": "2025-09-01T06:24:54.450754Z",
+  "refs": {
+    "ce": "CE-CAM-Q100-AAA-ATA-51-TEMPLATE",
+    "ci": "CE-CC-CI-CAM-Q100-AAA-ATA-51-01-TEMPLATE-ITEM",
+    "cadet_chain": "CADET:AAA:CAM:V1"
+  },
+  "inputs": {
+    "domain": "AAA",
+    "domain_name": "ARCHITECTURES_AIRFRAMES_AERODYNAMICS",
+    "cax_pillar": "CAM",
+    "cax_description": "Computer-Aided Manufacturing",
+    "ata_sns": "51",
+    "configuration": "H2-BWB-Q100-CONF0000"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cam-registry@1.0",
+    "params": {
+      "domain_owner": "AAA",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true
+    }
+  },
+  "outputs": {
+    "registry_status": "TEMPLATE_CREATED",
+    "traceability_links": [],
+    "compliance_status": "ATA_ALIGNED",
+    "circularity_metrics": {
+      "reuse_potential": "TBD",
+      "sustainability_score": "TBD",
+      "lifecycle_stage": "DESIGN"
+    },
+    "units": "dimensionless"
+  },
+  "traces": {
+    "upstream_refs": [],
+    "downstream_refs": [],
+    "cross_domain_refs": [],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "reuse_percentage": null,
+      "co2_savings_kg": null,
+      "energy_savings_kwh": null,
+      "lifecycle_extension_months": null
+    },
+    "sustainability_kpis": {
+      "iso14001_compliance": "PENDING",
+      "csrd_reporting": "ENABLED",
+      "gri_alignment": "TRACKED"
+    }
+  },
+  "hash": "SHA256_PLACEHOLDER_CAM_AAA_51",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cadet-registry@aaa"
+  }
+}
