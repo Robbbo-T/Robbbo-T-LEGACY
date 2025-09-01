@@ -4,13 +4,6 @@ Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized De
 Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR and AMPEL360 ecosystems
 Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
-&#x20; &#x20;
-
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/Robbbo-T)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://linkedin.com/in/amedeopelliccia)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status](https://img.shields.io/badge/Status-Active-green)](#)
-
 ---
 
 **UniversalStandard:** TechnicalDocument-Dissemination-ISO9001-MainSectionIntroduction-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-CROSS-AmedeoPelliccia-9f3a7c2e-RemainingUsefulLife
@@ -49,9 +42,9 @@ graph TD
 * **IoT** → **LCC** domain · deterministic networks · AIDC (Spec 2000 Book 7) · telemetry to **DET**.
 * **AI · ML** → **IIS** onboard · **AMPEL360** on ground · safe partitioning in **GAIA AIR RTOS** · DO‑178C/DO‑254.
 * **Blockchain** → **LIB** domain · supply‑chain traceability (**Spec 2000/2500**) · evidence notarization in **DET**.
-* **Quantum** → **QAL** bridge in **AQUA‑OS BRIDGE** · **CQH** for cryogenics and interfaces H₂‑quantum · quantum navigation & optimization.
+* **Quantum** → **QAL** bridge in **AQUA‑OS BRIDGE** · **CQH** for cryogenics and H₂‑quantum interfaces · quantum navigation & optimization.
 * **Complex systems** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** in CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
-* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites CMH‑17, nanocoatings, metamaterials; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
+* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites, nanocoatings, metamaterials; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
 
 ```mermaid
 flowchart LR
@@ -183,15 +176,78 @@ flowchart LR
 
 ---
 
+## Atomic Decomposition — Visual & Textual Guide
+
+**Goal:** make the DI → CE → CC → CI → CP atomization obvious at a glance, and tie it to CAD → PBS → BOM.
+
+```mermaid
+graph LR
+  DI[DI — Domain Invariant] --> CE[CE — Configuration Envelope 
+ ATA CC-SS[-SS]]
+  CE --> CC[CC — Component Cell 
+ ATA CC-SS]
+  CC --> CI[CI — Component Item 
+ ATA CC-SS-SS]
+  CI --> CP[CP — Component Particle 
+ PBS leaf]
+```
+
+**Naming patterns**
+
+```
+DI-<CAX>-<MIC>-<DOM>-CONF<NNNN>
+CE-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
+CE-CC-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
+CE-CC-CI-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
+CE-CC-CI-CP-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>-PBS-<WBSID>
+```
+
+**Folder shape (example · AAA · ATA 53‑10‑01)**
+
+```
+AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
+  DI-CAD-Q100-AAA-CONF0000/
+  CE-CAD-Q100-AAA-ATA-53-FUSELAGE/
+    CC/CE-CC-CAD-Q100-AAA-ATA-53-10-CENTER-BODY-BOX/
+      CI/CE-CC-CI-CAD-Q100-AAA-ATA-53-10-01-CB-PRIMARY-GRID/
+        PBS.json · EBOM.yaml · MBOM.yaml · CADParameters.json · Effectivities.yaml · cad/
+        cp/CE-CC-CI-CP-CAD-Q100-AAA-ATA-53-10-01-CB-PRIMARY-GRID-PBS-Q100-53-10-01-0001/
+```
+
+**When to split (atomic checklist)**
+
+* Different function • Certification boundary (DAL/hazard) • Effectivity/variant
+* Supplier boundary • Load path / material class • New ATA subsection
+
+**CAD‑first rules**
+
+* This layer is **CAD → PBS → BOM**. Documentation (S1000D DMRL/DMC) is generated **downstream**.
+* **EBOM vs MBOM:** EBOM = engineering intent; MBOM = routing/resources/QA/kits. Maintain EBOM↔MBOM trace by `pn` and kitlists; add CP children if the shop split diverges.
+* **Design intent:** master datums `PLN_XY/PLN_YZ/PLN_ZX`; one `MASTER_SKELETON_PART` per assembly; named driving parameters (e.g., `GRID_SPACING_MM`). No circular refs; CamelCase names.
+* **Evidence (DET):** every meaningful `save_model`, `solver_run`, `ebom_change`, `mbom_change` emits a signed evidence pack.
+
+---
+
+## CAD‑first Constitution — PBS/BOM Rules
+
+* **Identifiers:**
+
+  * `DI-<CAX>-<MIC>-<DOM>-CONF<NNNN>`
+  * `CE-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
+  * `CE-CC-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
+  * `CE-CC-CI-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
+  * `CE-CC-CI-CP-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>-PBS-<WBSID>`
+* **Per‑CI required files:** `PBS.json`, `EBOM.yaml`*, `MBOM.yaml`*, `CADParameters.json`, `Effectivities.yaml`, `cad/`, `cp/`
+
+  * \*For **physical** items; data‑centric CIs use `design-data/` instead of EBOM/MBOM.
+* **Ownership & aliases:** canonical **OwnerDomain** per CE; **CoDomains** link by alias (ATA is **non‑exclusive**).
+* **Link policy:** CE/CC/CI/CP names in lists must be **Markdown links** to their path (no backticks).
+
+---
+
 ## C‑AMEDEO — Interactive Index (Matrix Overview)
 
-**Framework Root:** [C-AMEDEO-FRAMEWORK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK)
-
-> **Numbering standard (hard rule).** All **CE** use **ATA iSpec 2200 Subject Numbering System (SNS)** — `ATA CC-SS[-SS]` — and every deliverable resolves to an **S1000D Data Module Code (DMC)**:
->
-> `DMC = <MIC>-<ATA SNS>-<DC>-<IC>-<ICV>-<LC>-<ISSUE>`
->
-> where **MIC** (Model Identification Code) = `Q100`, **SNS** follows ATA, **DC** (Disassembly Code), **IC/ICV** (Information Code / Variant), **LC** (Language Code), **ISSUE** per S1000D. Non-ATA binders are prohibited in CE names; use DI-only for cross-domain notes.
+> **Numbering standard (CAD‑first).** At the **CAD‑DESIGN** layer, all **CE** follow **ATA iSpec 2200 SNS** — `ATA CC-SS[-SS]` — to anchor scope and traceability. **S1000D publication (DMRL/DMC)** is **downstream** and generated later from **PBS/EBOM/MBOM** and headers; S1000D artifacts do **not** live in the CAD tree.
 
 The matrix below organizes the **15 technological domains** across both lifecycle flows. Links navigate to the public GitHub structure for **H2‑BWB‑Q100‑CONF0000**.
 
@@ -370,34 +426,33 @@ The matrix below organizes the **15 technological domains** across both lifecycl
 
 ### **ATA ↔ Domains — Cross‑matrix (excerpt)**
 
-|       ATA | Short description             | OwnerDomain | CoDomains     |
-| --------: | ----------------------------- | ----------- | ------------- |
-|        02 | Weight & Balance              | AAA         | —             |
-|        06 | Dimensions & Areas            | AAA         | —             |
-|        11 | Placards & Markings           | AAA         | CCC           |
-|        18 | Vibration & Noise             | AAA         | MMM           |
-|        20 | Standard Practices (Airframe) | AAA         | DDD           |
-|        23 | Communications                | OOO         | EDI, LCC, DDD |
-|        24 | Electrical Power              | EER         | EDI           |
-|        28 | Fuel (LH₂)                    | CQH         | PPP, EER      |
-|        31 | Indicating/Recording          | OOO         | EDI, IIS      |
-|        34 | Navigation                    | OOO         | IIS, LCC, DDD |
-|        36 | Pneumatic                     | EER         | EEE, MMM, CQH |
-|        38 | Water & Waste                 | EEE         | CCC           |
+| ATA       | Short description             | OwnerDomain | CoDomains     |
+| --------- | ----------------------------- | ----------- | ------------- |
+| 02        | Weight & Balance              | AAA         | —             |
+| 06        | Dimensions & Areas            | AAA         | —             |
+| 11        | Placards & Markings           | AAA         | CCC           |
+| 18        | Vibration & Noise             | AAA         | MMM           |
+| 20        | Standard Practices (Airframe) | AAA         | DDD           |
+| 23        | Communications                | OOO         | EDI, LCC, DDD |
+| 24        | Electrical Power              | EER         | EDI           |
+| 28        | Fuel (LH₂)                    | CQH         | PPP, EER      |
+| 31        | Indicating/Recording          | OOO         | EDI, IIS      |
+| 34        | Navigation                    | OOO         | IIS, LCC, DDD |
+| 36        | Pneumatic                     | EER         | EEE, MMM, CQH |
+| 38        | Water & Waste                 | EEE         | CCC           |
 | 42 (Spec) | Digital Info Security         | DDD         | OOO, LCC, EDI |
-|        45 | EWIS                          | DDD         | EDI, LCC, AAA |
-|        46 | Information Systems           | OOO         | EDI, IIS      |
-|        49 | APU                           | EER         | IIF, AAP      |
-|     70–80 | Powerplant suite              | PPP         | EER, CQH, IIS |
-|     S2000 | e-Business backbone           | LIB         | LCC, EDI      |
-|     S2500 | Asset transfer records        | LIB         | AAP, IIF      |
+| 45        | EWIS                          | DDD         | EDI, LCC, AAA |
+| 46        | Information Systems           | OOO         | EDI, IIS      |
+| 49        | APU                           | EER         | IIF, AAP      |
+| 70–80     | Powerplant suite              | PPP         | EER, CQH, IIS |
+| S2000     | e-Business backbone           | LIB         | LCC, EDI      |
+| S2500     | Asset transfer records        | LIB         | AAP, IIF      |
 
 > **Note:** This matrix is **not exhaustive**; the source of truth is the CE **owner** (canonical path). **CoDomains** link via alias.
 
 ### Phase 2 — **CA‑OPTIMISED** (Restoration & Evolution Flow)
 
-**CA‑OPTIMISED** (Restoration & Evolution Flow)
-All pillars/domains mirror **Phase 1** structure. Links begin at:
+**CA‑OPTIMISED** (Restoration & Evolution Flow) All pillars/domains mirror **Phase 1** structure. Links begin at:
 
 * CAD‑DESIGN root:
   [https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN/H2-BWB-Q100-CONF0000/](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN/H2-BWB-Q100-CONF0000/)
@@ -430,6 +485,49 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 
 ---
 
+## Acronyms
+
+| Acronym                     | Expansion                                                               | Note                                                    |
+| --------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------- |
+| **UTCS‑MI**                 | Universal Technical Communication Standard – Model Interface v5.0       | 13-field header; used across all artifacts              |
+| **UniversalStandard**       | UTCS‑MI header label                                                    | Must remain exact; English fields used                  |
+| **CAX**                     | Lifecycle pillar (CAD/CAE/CAO/CAP/CAT/CAM/CAI/CAS/CAEV)                 | Used in IDs and folders                                 |
+| **MIC**                     | Model Identification Code                                               | e.g., **Q100**                                          |
+| **CONF**                    | Configuration code                                                      | e.g., **CONF0000**                                      |
+| **DI**                      | Domain Invariant                                                        | Domain root (owner of numbering & aliases)              |
+| **CE**                      | Configuration Envelope                                                  | ATA‑anchored scope (ATA SNS)                            |
+| **CC**                      | Component Cell                                                          | Subsystem (ATA CC‑SS)                                   |
+| **CI**                      | Component Item                                                          | Installable/maintainable item (ATA CC‑SS‑SS)            |
+| **CP**                      | Component Particle                                                      | PBS leaf / variant                                      |
+| **ATA SNS**                 | ATA iSpec 2200 Subject Numbering System                                 | CC‑SS‑SS hierarchy                                      |
+| **PBS**                     | Product Breakdown Structure                                             | Product tree; owner at CI/CP                            |
+| **EBOM / MBOM**             | Engineering / Manufacturing Bill of Materials                           | EBOM = intent; MBOM = routing/resources/QA/kits         |
+| **WBS**                     | Work Breakdown Structure                                                | For PBS/WBS cross‑refs                                  |
+| **DET**                     | Digital Evidence Twin                                                   | Write‑once evidence packs (save/run/publish)            |
+| **DMRL / DMC**              | Data Module Requirements List / Data Module Code                        | **Downstream** generation (not in CAD tree)             |
+| **QAL**                     | Quantum Abstraction Layer                                               | Safe interface for quantum offload                      |
+| **RTOS**                    | Real‑Time Operating System                                              | GAIA AIR RTOS (ARINC 653)                               |
+| **IMA**                     | Integrated Modular Avionics                                             | Partitioned avionics architecture                       |
+| **DAL**                     | Design Assurance Level                                                  | Certification criticality                               |
+| **IPD**                     | Illustrated Parts Data                                                  | Optional bridge from CP                                 |
+| **AIDC**                    | Automatic Identification & Data Capture                                 | Spec 2000 Book 7                                        |
+| **SBOM / SLSA**             | Software Bill of Materials / Supply‑chain Levels for Software Artifacts | Security & provenance                                   |
+| **ESG / KPI**               | Environmental, Social, Governance / Key Performance Indicator           | CADET metrics                                           |
+| **MRO / EoL**               | Maintenance, Repair & Overhaul / End of Life                            | Sustainment context                                     |
+| **OwnerDomain / CoDomains** | Canonical owner / referencing domains                                   | ATA is **non‑exclusive**; aliases point to canonical CE |
+| **GAIA AIR Infranet**       | Deterministic secure comms                                              | Intra‑ecosystem data plane                              |
+
+## Glossary (selected)
+
+* **OwnerDomain / CoDomains** — Canonical domain that owns a CE, and other domains that reference it via alias/symlink.
+* **Subject Numbering System (SNS)** — ATA iSpec 2200 hierarchical numbering (e.g., 53‑10‑01) used to anchor CE names.
+* **Data Module Code (DMC)** — S1000D identifier: `<MIC>-<ATA SNS>-<DC>-<IC>-<ICV>-<LC>-<ISSUE>`.
+* **Evidence pack** — Bundle emitted on save/run/publish with inputs, parameters, outputs, logs, and signature.
+* **Canonical path** — Repository location of the CE owned by the OwnerDomain.
+* **Alias** — Pointer from CoDomain indices to the canonical CE (no duplication of content).
+
+---
+
 ### Versioning
 
 * **This file:** v1.0.0
@@ -443,28 +541,47 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 
 | Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (example)                                         | Proof Point                                        |
 | ------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- |
-| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
-| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                 | Margin closure without weight penalty          |
+| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂‑saved **120 kg**, Energy‑saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
+| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                  | Margin closure with no weight penalty              |
 | **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |
-| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |
+| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight‑auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |
 | **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |
-| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |
+| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM‑Coverage **92%**, Vuln‑fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |
 
-> **Evidence Triggers:** every transition "save/execute/publish" emits an *evidence pack* (inputs, parameters, outputs, logs, signature).
+> **Evidence Triggers:** every transition “save/run/publish” emits an *evidence pack* (inputs, parameters, outputs, logs, signature).
+> **Auditable proof:** if there is no DET, it didn’t happen.
+
+\------------ | ---------------------------------------------------------------- | -------------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | -------------------------------------------------- | - | --------------------------------------------------- | ------------------------------------------------- | ------------------------- | ------------------------------------------- | ----------------------------------------- |
+\| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |   |                                                     |                                                   |                           |                                             |                                           |
+\| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                  | Margin closure with no weight penalty              |   |                                                     |                                                   |                           |                                             |                                           |
+\| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as‑designed” kit              |   |                                                     |                                                   |                           |                                             |                                           |
+\| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration‑defects **0**, Integration time **−30%**         | First‑time‑right integration                       |   |                                                     |                                                   |                           |                                             |                                           |
+\| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post‑reinforcement                  |   |                                                     |                                                   |                           |                                             |                                           |
+\| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply‑chain traceability ready for audit          |   | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/` | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519 | SBOM gen, Sig ok, CI pass | SBOM-Coverage **92%**, Vuln-fix SLA **<7d** | Supply‑chain traceability ready for audit |
+
+> **Evidence Triggers:** every transition “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
 > **Auditable proof:** if there is no DET, it didn’t happen.
 
 ---
 
 ### A2. DET→CADET KPI Map (what CADET calculates per CAX)
 
-| CAX     | DET fields consumed                             | CADET KPIs (examples)                                             |
-| ------- | ----------------------------------------------- | ----------------------------------------------------------------- |
-| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuse (features / MBOM), Δweight, Δcost, decision lead-time       |
-| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Test case coverage, Reproducibility, Δmargin vs req., Solver QoR |
-| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                      |
-| **CAI** | `icd.rev`, `install.log`, `tests`               | Integration incidents, Integration time, %interfaces validated  |
-| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension                  |
-| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | SBOM Coverage, Vulnerability SLA, Signature Integrity            |
+| CAX     | DET fields consumed                             | CADET KPIs (examples)                                          |
+| ------- | ----------------------------------------------- | -------------------------------------------------------------- |
+| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuse (features / MBOM), Δweight, Δcost, decision lead‑time   |
+| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Case coverage, Reproducibility, Δmargin vs req., solver QoR    |
+| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                   |
+| **CAI** | `icd.rev`, `install.log`, `tests`               | Integration incidents, Integration time, %validated interfaces |
+| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension               |
+| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | SBOM coverage, vulnerability SLA, signature integrity          |
+
+\------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+\| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuso (features / MBOM), Δpeso, Δcoste, lead-time decisión      |
+\| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Cobertura de casos, Reproducibility, Δmargen vs req., QoR solver |
+\| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                     |
+\| **CAI** | `icd.rev`, `install.log`, `tests`               | Incidencias integración, Integration time, %interfaces validadas |
+\| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension                 |
+\| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | Cobertura SBOM, SLA vulnerabilidades, Integridad firma           |
 
 ---
 
@@ -475,11 +592,11 @@ This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint
 * **Reuse%:** 42% (target 35%)
 * **CO₂ saved:** 120 kg
 * **Energy saved:** 38 kWh
-* **EoL postponed:** +14 meses
+* **EoL postponed:** +14 months
 
 ```mermaid
 flowchart TD
-  DET[Digital Evidence Twin] -->|packs firmados| CADET[CADET Auditor]
+  DET[Digital Evidence Twin] -->|signed packs| CADET[CADET Auditor]
   CADET -->|KPIs| Dash[Circularity & Sustainability Dashboard]
   subgraph KPIs
     R[% Reuse]
@@ -490,7 +607,7 @@ flowchart TD
   Dash --> R & C & E & L
 ```
 
-> **How to update data:** the dashboard reads DET aggregates (`sbom, bom.delta, asRun, sensor.trend`). CADET recalcula KPIs en cada *pack* y fija el corte por versión/fecha y **CONF** (p. ej., `Q100-CONF0000`).
+> **How to update data:** the dashboard reads DET aggregates (`sbom, bom.delta, asRun, sensor.trend`). CADET recalculates KPIs with each pack and sets the snapshot by version/date and **CONF** (e.g., `Q100‑CONF0000`).
 
 ---
 
@@ -532,36 +649,6 @@ flowchart TD
   "inputs": { /* references to CIs, commits, BOM/MBOM, etc. */ },
   "processing": { "tool": "<stack@version>", "params": { /* contextual keys */ }},
   "outputs": { /* key metrics and artifacts */ },
-  "hash": "<sha256/keccak>",
-  "sig": { "alg": "Ed25519|Dilithium2", "by": "<actor@domain>" }
-}
-```
-
-
----
-
-### A5. DET Event Cheatsheet (optional)
-
-**Objective.** Normalize DET events emitted by AQUA‑OS/GAIA AIR INFRANET so all *evidence packs* have the same *shape*.
-
-| Event                   | `det_id` (pattern)                | Typical Trigger                 | Minimum Fields                                                                          | Signature              |
-| ------------------------ | -------------------------------- | ------------------------------ | --------------------------------------------------------------------------------------- | ------------------ |
-| `save_model`             | `DET:CAD:<DI/CE/CA/CI>:V<rev>`   | Save CAD / revision bump | `ts, inputs.ref, inputs.rev, processing.tool, outputs.rev, hash, sig`                   | Ed25519            |
-| `solver_run`             | `DET:CAE:<solver>:<case>-V<rev>` | Solver execution, `meshQ≥0.9`  | `ts, inputs.meshQ, processing.params, outputs.margins, reproducibility.seed, hash, sig` | Dilithium2/Ed25519 |
-| `ci_build`               | `DET:CAT:CI:<mod>-V<rev>`        | Successful CI/CD build            | `ts, inputs.commit, processing.tool, outputs.artifacts[], tests.passed, hash, sig`      | Ed25519            |
-| `sbom_generate`          | `DET:CAT:SBOM:<spec>-V<rev>`     | SBOM generation and verification | `ts, inputs.repo, outputs.sbom, slsa.level, vuln.summary, hash, sig`                    | Ed25519            |
-| `install_signoff`        | `DET:CAI:ICD:<sys>-V<rev>`       | Installation and ICD signoff     | `ts, inputs.icd.rev, install.log, tests, outputs.status, hash, sig`                     | Ed25519            |
-| `service_bulletin_issue` | `DET:CAS:SB:<area>-V<rev>`       | SB issuance / config update  | `ts, inputs.config.delta, outputs.sb.id, wo.refs[], mtbf.delta, hash, sig`              | Ed25519            |
-
-**Event skeleton (template):**
-
-```json
-{
-  "det_id": "DET:<CAX>:<topic>:<tag>-V<rev>",
-  "ts": "<ISO8601>",
-  "inputs": { /* references to CIs, commits, BOM/MBOM */ },
-  "processing": { "tool": "<stack@version>", "params": { /* claves contextuales */ }},
-  "outputs": { /* metrics and artifacts */ },
   "hash": "<sha256/keccak>",
   "sig": { "alg": "Ed25519|Dilithium2", "by": "<actor@domain>" }
 }
