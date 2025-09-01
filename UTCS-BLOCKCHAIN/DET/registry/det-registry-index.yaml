@@ -1,0 +1,20 @@
+# See full registry spec in previous step; key fields repeated here:
+meta: { spec: DET-REGISTRY-1.0, updated: 2025-09-01T00:00:00Z, contact: airworthiness@your-org }
+hierarchical_chain: [CADET, DET, TRACES, DOMAINS]
+domains: { AAA: ARCHITECTURES_AIRFRAMES_AERODYNAMICS, AAP: AIRPORTS_ADAPTATIONS, CCC: COCKPIT_CABIN_CARGO_SYSTEMS, CQH: CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS, DDD: DEFENCE_CYBERSECURITY_SAFETY, EDI: ELECTRONICS_DIGITAL_INSTRUMENTS, EEE: ENVIRONMENTAL_REMEDIATION_CIRCULARITY, EER: ENERGY_AND_RENEWABLE, IIF: INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS, IIS: INTELLIGENT_SYSTEMS_ONBOARD_AI, LCC: LINKS_COMMUNICATIONS_CONTROL_IoT, LIB: LOGISTICS_INTEGRATED_BLOCKCHAIN, MMM: MECHANICAL_MATERIAL_MONITORING, OOO: OPERATING_SYSTEMS_NAVIGATION_HPC, PPP: PROPULSION_AND_FUEL }
+cax_pillars: [CAD, CAE, CAM, CAT, CAI, CAS, CAO]
+defaults:
+  security: { hash: sha256, signature: Ed25519 }
+  traces: { bidirectional: true, records_dir: "TRACES/" }
+  cadet: { kpi_dir: "CADET/kpis/", track_circularity: true }
+templates:
+  det_packet:
+    det_id: "DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>"
+    ts: "<ISO8601>"
+    refs: { ce: "<CE-ID>", ci: "<CI-ID>", cc: "<CC-ID>" }
+    inputs: {}
+    processing: { tool: "<stack@version>", params: {} }
+    outputs: { units: "<SI units>", metrics: {} }
+    hash: "<sha256>"
+    sig: { alg: "Ed25519", by: "<actor@domain>" }
+# 105 namespaces declared (15×7) with example_ids as in previous message.

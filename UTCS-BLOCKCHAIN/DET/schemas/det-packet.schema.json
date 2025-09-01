@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DET Packet",
+  "type": "object",
+  "required": ["det_id","ts","refs","inputs","processing","outputs","hash","sig"],
+  "properties": {
+    "det_id":   {"type":"string","pattern":"^DET:[A-Z]{3}:[A-Z]{3}:[0-9A-Z-]+:[a-z0-9_\\-]+:V[0-9]+$"},
+    "ts":       {"type":"string","format":"date-time"},
+    "refs":     {
+      "type":"object",
+      "properties": {"ce":{"type":"string"}, "ci":{"type":"string"}, "cc":{"type":"string"}},
+      "required":["ce"]
+    },
+    "inputs":   {"type":"object"},
+    "processing":{"type":"object","properties":{"tool":{"type":"string"},"params":{"type":"object"}},"required":["tool"]},
+    "outputs":  {"type":"object","properties":{"units":{"type":"string"},"metrics":{"type":"object"}},"required":["units"]},
+    "hash":     {"type":"string","minLength":64,"maxLength":64},
+    "sig":      {"type":"object","properties":{"alg":{"type":"string"},"by":{"type":"string"}}, "required":["alg","by"]}
+  }
+}

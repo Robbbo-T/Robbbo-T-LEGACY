@@ -1,0 +1,3 @@
+- 10% of every mint → Sustainability Fund.
+- Grants prioritized by CADET: CO₂ saved, energy saved, reuse%.
+- Publish monthly KPI cuts in `UTCS-BLOCKCHAIN/CADET/kpis/<YYYY-MM>.yaml`.

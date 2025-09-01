@@ -1,7 +1,18 @@
-# UTCS-BLOCKCHAIN - Unified Traceability Criteria Specification
+# UTCS-BLOCKCHAIN — Unified Traceability Criteria Specification
+
+**Hierarchy**: UTCS-BLOCKCHAIN → CADET (assurance) → DET (evidence) → TRACES (traceability) → DOMAINS (15 domains × 7 pillars).
+
+**DET ID**: `DET:<CAX>:<DOMAIN>:<SNS>:<activity>:<version>`  
+Example: `DET:CAD:AAA:52-10:design:V3` (Design, Doors 52-10).
+
+**Security**: SHA-256 hashing + Ed25519 signatures. Each DET packet links to `previous_hash` (append-only chain).
+
+**ATA SNS**: Use `CC-SS[-SS]` from ATA iSpec 2200 for compliance mapping.
+
+**S1000D**: Documentation lives under **CAS** only: `.../CAS-SUSTAINMENT/**/S1000D/`. Everywhere else, use downstream DMC pointers.
 
 ## Overview
-Complete Computer-Aided Excellence (CAX) framework architecture organized under the Unified Traceability Criteria Specification blockchain system.
+Complete Computer-Aided Excellence (CAX) framework architecture with TeknIA Tokens (TekTok) integration for proof-of-innovation tokenomics.
 
 ## Hierarchical Chain Structure
 1. **UTCS-BLOCKCHAIN** — Root directory

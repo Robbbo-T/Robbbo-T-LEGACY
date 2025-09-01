@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Trace Record",
+  "type":"object",
+  "required":["requirement_id","artifacts","status","last_updated"],
+  "properties":{
+    "requirement_id":{"type":"string"},
+    "artifacts":{"type":"array","items":{"type":"object","required":["det_id"],"properties":{"det_id":{"type":"string"},"file":{"type":"string"}}}},
+    "status":{"enum":["Draft","Verified","Rejected"]},
+    "last_updated":{"type":"string","format":"date-time"}
+  }
+}
