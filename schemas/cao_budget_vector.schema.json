@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CAO Budget Vector",
+  "description": "Schema for validating Budget Vector artifacts with financial allocations and constraints",
+  "type": "object",
+  "required": [
+    "utcs_mi_id",
+    "program",
+    "period",
+    "det_ref",
+    "allocations"
+  ],
+  "properties": {
+    "utcs_mi_id": {
+      "$ref": "utcs_mi.schema.json",
+      "description": "UTCS-MI v5.0 compliant universal identifier"
+    },
+    "program": {
+      "type": "string",
+      "description": "Target program identifier"
+    },
+    "period": {
+      "type": "string",
+      "pattern": "^FY\\d{4}Q[1-4]$",
+      "description": "Fiscal period (e.g., FY2026Q2)"
+    },
+    "det_ref": {
+      "type": "string",
+      "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$",
+      "description": "Reference to corresponding DET (Digital Evidence Twin)"
+    },
+    "allocations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "domain",
+          "pillar", 
+          "amount",
+          "currency"
+        ],
+        "properties": {
+          "domain": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "description": "Domain code (3-letter)"
+          },
+          "pillar": {
+            "type": "string",
+            "enum": ["CAB", "CAD", "CAE", "CAT", "CAV", "CAM", "CAP", "CAS", "CAO", "CAI"],
+            "description": "CAX pillar"
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Budget allocation amount"
+          },
+          "currency": {
+            "type": "string",
+            "enum": ["EUR", "USD", "GBP", "JPY"],
+            "description": "Currency code"
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Conditional constraints for budget release"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
