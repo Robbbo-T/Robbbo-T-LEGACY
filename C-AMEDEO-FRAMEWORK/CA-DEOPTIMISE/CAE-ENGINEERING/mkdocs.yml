@@ -1,0 +1,107 @@
+---
+site_name: AMPEL360 CVaR Selection & Automated CAE Pipeline
+site_description: Professional Engineering Optimization with Digital Twin Integration
+site_author: CAE Engineering Team
+site_url: https://robbbo-t.github.io/Robbbo-T/
+
+repo_name: Robbbo-T/Robbbo-T
+repo_url: https://github.com/Robbbo-T/Robbbo-T
+edit_uri: edit/main/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: true
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      base_path: ['C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAE-ENGINEERING']
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: 
+    - index.md
+    - Architecture Overview: architecture.md
+    - Quick Start: quickstart.md
+  - AMPEL360 CVaR Selection:
+    - Overview: ampel360/overview.md
+    - G1 Feasible Set Generation: ampel360/g1-generation.md
+    - G2 CVaR Optimization: ampel360/g2-cvar.md
+    - Evidence Generation: ampel360/evidence.md
+    - API Reference: ampel360/api.md
+  - CAE Pipeline:
+    - Pipeline Architecture: cae/architecture.md
+    - Multi-Physics Solvers: cae/solvers.md
+    - Digital Twin Integration: cae/digital-twin.md
+    - Results Analysis: cae/analysis.md
+    - CAV Integration: cae/cav-integration.md
+  - Workflows:
+    - Complete Pipeline: workflows/complete-pipeline.md
+    - Development Workflow: workflows/development.md
+    - CI/CD Integration: workflows/cicd.md
+  - Standards & Compliance:
+    - QAL Framework: compliance/qal.md
+    - DET Evidence System: compliance/det.md
+    - Aerospace Standards: compliance/aerospace.md
+  - Reference:
+    - Configuration: reference/configuration.md
+    - Troubleshooting: reference/troubleshooting.md
+    - FAQ: reference/faq.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Robbbo-T/Robbbo-T
+  version:
+    provider: mike
+
+copyright: Copyright &copy; 2024 CAE Engineering Team. Licensed under QAL Framework.
