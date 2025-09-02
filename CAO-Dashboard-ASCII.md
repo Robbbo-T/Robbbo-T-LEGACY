@@ -1,6 +1,6 @@
 # CAO Dashboard ASCII Wireframe
 
-## Main Dashboard Layout (ASCII Alternative)
+## Main Dashboard Layout (ASCII Alternative) - for DEMO purposes
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
