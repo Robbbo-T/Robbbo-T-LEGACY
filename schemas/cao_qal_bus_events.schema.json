@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CAO QAL Bus Events",
+  "description": "Schema for validating QAL Bus event collections from CAO services",
+  "type": "object",
+  "required": ["events"],
+  "properties": {
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "event_type",
+          "timestamp",
+          "producer",
+          "payload",
+          "signature"
+        ],
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "pattern": "^evt-\\d{4}-[A-Z]{3}-[A-Za-z0-9\\-]+$",
+            "description": "Unique event identifier"
+          },
+          "event_type": {
+            "type": "string",
+            "enum": [
+              "CAO.PolicyPublished",
+              "CAO.BudgetAllocated", 
+              "CAO.RiskRegisterUpdated",
+              "CAO.ComplianceUpdated",
+              "CAO.StrategicObjectiveSet"
+            ],
+            "description": "Type of CAO event"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Event timestamp in ISO 8601 format"
+          },
+          "producer": {
+            "type": "string",
+            "pattern": "^CAO\\.[A-Za-z]+Service$",
+            "description": "CAO service that produced the event"
+          },
+          "payload": {
+            "type": "object",
+            "description": "Event-specific payload data",
+            "anyOf": [
+              {
+                "description": "Policy Published Event",
+                "required": ["utcs_mi_id", "det_ref", "summary", "domains", "pillars"],
+                "properties": {
+                  "utcs_mi_id": {"$ref": "utcs_mi.schema.json"},
+                  "det_ref": {"type": "string", "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$"},
+                  "summary": {"type": "string"},
+                  "domains": {
+                    "type": "array",
+                    "items": {"type": "string", "pattern": "^[A-Z]{3}$"}
+                  },
+                  "pillars": {
+                    "type": "array", 
+                    "items": {"type": "string", "enum": ["CAB", "CAD", "CAE", "CAT", "CAV", "CAM", "CAP", "CAS", "CAO", "CAI"]}
+                  }
+                }
+              },
+              {
+                "description": "Budget Allocated Event",
+                "required": ["period", "utcs_mi_id", "det_ref"],
+                "properties": {
+                  "period": {"type": "string", "pattern": "^FY\\d{4}Q[1-4]$"},
+                  "utcs_mi_id": {"$ref": "utcs_mi.schema.json"},
+                  "det_ref": {"type": "string", "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$"},
+                  "allocations_ref": {"type": "string"}
+                }
+              },
+              {
+                "description": "Risk Register Updated Event",
+                "required": ["risk_utcs_mi_id", "det_ref", "severity", "likelihood", "status"],
+                "properties": {
+                  "risk_utcs_mi_id": {"$ref": "utcs_mi.schema.json"},
+                  "det_ref": {"type": "string", "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$"},
+                  "severity": {"type": "integer", "minimum": 1, "maximum": 5},
+                  "likelihood": {"type": "integer", "minimum": 1, "maximum": 5},
+                  "status": {"type": "string", "enum": ["Open", "Mitigating", "Closed", "Accepted"]}
+                }
+              }
+            ]
+          },
+          "signature": {
+            "type": "string",
+            "pattern": "^0x[a-f0-9]+$",
+            "description": "Cryptographic signature for event integrity"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

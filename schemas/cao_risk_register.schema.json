@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CAO Risk Register",
+  "description": "Schema for validating Risk Register artifacts with CVaR-based risk management",
+  "type": "object",
+  "required": [
+    "register_utcs_mi_id",
+    "program",
+    "det_manifest",
+    "risks"
+  ],
+  "properties": {
+    "register_utcs_mi_id": {
+      "$ref": "utcs_mi.schema.json",
+      "description": "UTCS-MI v5.0 compliant universal identifier for the register"
+    },
+    "program": {
+      "type": "string",
+      "description": "Target program identifier"
+    },
+    "det_manifest": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$"
+      },
+      "description": "List of DET references for all risks in the register"
+    },
+    "risks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "utcs_mi_id",
+          "title",
+          "owner",
+          "domain",
+          "severity",
+          "likelihood",
+          "status",
+          "det_ref"
+        ],
+        "properties": {
+          "utcs_mi_id": {
+            "$ref": "utcs_mi.schema.json",
+            "description": "UTCS-MI v5.0 compliant universal identifier for this risk"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 10,
+            "description": "Risk title and description"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Risk owner (person or role)"
+          },
+          "domain": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "description": "Associated domain code"
+          },
+          "severity": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Risk severity (1=Low, 5=Critical)"
+          },
+          "likelihood": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Risk likelihood (1=Rare, 5=Almost Certain)"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Open", "Mitigating", "Closed", "Accepted"],
+            "description": "Current risk status"
+          },
+          "linked_requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Associated requirements or standards"
+          },
+          "mitigation": {
+            "type": "string",
+            "description": "Mitigation strategy and actions"
+          },
+          "det_ref": {
+            "type": "string",
+            "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$",
+            "description": "Reference to corresponding DET for this risk"
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

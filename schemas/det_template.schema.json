@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DET Template",
+  "description": "Schema for validating Digital Evidence Twin (DET) template files",
+  "type": "object",
+  "required": [
+    "det_id",
+    "utcs_mi_id",
+    "object_ref",
+    "hash",
+    "issued_by",
+    "signatures"
+  ],
+  "properties": {
+    "det_id": {
+      "type": "string",
+      "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:[A-Za-z0-9\\-]*:V\\d+\\.\\d+$",
+      "description": "DET unique identifier following CAX:Domain:SNS:Activity:Version pattern"
+    },
+    "utcs_mi_id": {
+      "$ref": "utcs_mi.schema.json",
+      "description": "UTCS-MI v5.0 compliant universal identifier"
+    },
+    "object_ref": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9\\-_\\.]+\\.(json|yaml|yml)(#[A-Za-z0-9\\-_/\\[\\]]+)?$",
+      "description": "Reference to the object being evidenced (filename with optional JSON pointer)"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^sha3-256:0x[a-f0-9]{64}$",
+      "description": "SHA3-256 hash of the referenced object"
+    },
+    "issued_by": {
+      "type": "string",
+      "description": "Authority that issued this DET"
+    },
+    "signatures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "List of cryptographic signatures validating this DET"
+    },
+    "effects": {
+      "type": "object",
+      "properties": {
+        "domains": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "description": "Affected domain codes"
+        },
+        "pillars": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["CAB", "CAD", "CAE", "CAT", "CAV", "CAM", "CAP", "CAS", "CAO", "CAI"]
+          },
+          "description": "Affected CAX pillars"
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^DET:[A-Z]{3}:[A-Za-z]+:[A-Za-z0-9\\-]+:[A-Za-z0-9\\-]*:V\\d+\\.\\d+$"
+      },
+      "description": "Links to related DET entries for traceability"
+    },
+    "summary": {
+      "type": "object",
+      "description": "Optional summary information specific to the DET type"
+    }
+  },
+  "additionalProperties": false
+}
