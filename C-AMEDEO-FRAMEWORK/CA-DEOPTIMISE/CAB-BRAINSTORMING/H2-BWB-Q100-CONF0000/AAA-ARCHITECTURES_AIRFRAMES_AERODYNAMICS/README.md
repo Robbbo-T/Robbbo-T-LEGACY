@@ -11,6 +11,35 @@ This domain participates in **CAB BRAINSTORMING** activities within the **CA-DEO
 ## CAB-Specific Focus
 Domain-specific concept exploration for the hydrogen-powered blended wing body configuration.
 
+## Examples of Use
+
+### Quantum Confidence Scores
+![Quantum Confidence](quantum_confidence_bar_chart.png)
+
+### Trade Study Criteria Scores
+![Trade Study Radar](trade_study_radar_chart.png)
+
+### DET Evidence Flow
+![DET Flow](det_flow_diagram.png)
+
+## FAQ
+
+**Q: What is the role of the AAA domain?**  
+A: It explores airframe architectures and aerodynamic concepts for the hydrogen-powered BWB configuration.
+
+**Q: How are quantum algorithms used?**  
+A: QML is used for latent space exploration, Grover's algorithm for patent search, and Max Entropy for novelty discovery.
+
+**Q: How is evidence generated?**  
+A: All activities generate DET entries with quantum metrics and are validated via QAUDIT.
+
+
+## CAX Pillar Integration
+This domain participates in **CAB BRAINSTORMING** activities within the **CA-DEOPTIMISE** forward creation flow.
+
+## CAB-Specific Focus
+Domain-specific concept exploration for the hydrogen-powered blended wing body configuration.
+
 ### Quantum-Enhanced Concept Generation
 - **QML Latent Space Navigation**: Exploration of novel ARCHITECTURES_AIRFRAMES_AERODYNAMICS concepts
 - **Grover's Algorithm**: Accelerated patent and literature search for domain innovations  
