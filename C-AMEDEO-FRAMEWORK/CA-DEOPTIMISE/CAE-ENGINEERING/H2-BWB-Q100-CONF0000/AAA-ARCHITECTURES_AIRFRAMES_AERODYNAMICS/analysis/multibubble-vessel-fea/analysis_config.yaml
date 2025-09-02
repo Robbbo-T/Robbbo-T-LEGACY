@@ -1,0 +1,65 @@
+---
+# FEA Analysis Configuration
+# BWB-Q100 Multi-Bubble Vessel Structural Analysis
+
+analysis:
+  type: "static_structural"
+  solver: "NASTRAN"
+  version: "2023.1"
+
+  load_cases:
+    LC1:
+      name: "2.5g symmetric pull-up"
+      acceleration: [0, 0, 24.525]  # m/s²
+      load_factor: 2.5
+
+    LC2:
+      name: "-1.0g pushover"
+      acceleration: [0, 0, -9.81]   # m/s²
+      load_factor: -1.0
+
+    LC3:
+      name: "cabin pressurization"
+      pressure: 75000  # Pa (0.75 bar differential)
+
+    LC4:
+      name: "cryogenic thermal"
+      temperature_range: [20, 293]  # K
+      thermal_expansion: true
+
+mesh:
+  global_element_size: 0.05  # m
+  element_types:
+    - "CQUAD4"
+    - "CTRIA3"
+    - "CHEXA8"
+
+  refinement:
+    inter_bubble_joints: 0.005  # m
+    fastener_holes: 0.002      # m
+    crack_tips: 0.0005         # m
+
+materials:
+  titanium_6al_4v:
+    density: 4430      # kg/m³
+    youngs_modulus: 113e9  # Pa at 293K
+    poissons_ratio: 0.342
+    yield_strength: 880e6   # Pa
+    thermal_expansion: 8.6e-6  # /K
+
+  cfrp_t800_m21:
+    density: 1600      # kg/m³
+    damage_model: "hashin"
+    temperature_dependent: true
+    quantum_enhanced: true
+
+output:
+  stress_results: true
+  displacement: true
+  safety_factors: true
+  modal_frequencies: true
+
+quantum_enhancement:
+  vqe_material_sim: true
+  microcrack_prediction: true
+  quantum_backend: "ibm_quantum"
