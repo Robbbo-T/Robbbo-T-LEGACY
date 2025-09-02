@@ -1,0 +1,98 @@
+{
+  "det_id": "DET:CAT:AAA:52-10:test_execution:V1",
+  "ts": "2025-01-15T10:30:00.000Z",
+  "refs": {
+    "ce": "CE-CAT-Q100-AAA-ATA-52-TEST_CAMPAIGN",
+    "ci": "CE-CC-CI-CAT-Q100-AAA-ATA-52-10-01-FATIGUE_TEST"
+  },
+  "inputs": {
+    "test_article": "3-bubble subcomponent (1:4 scale)",
+    "test_facility": "IABG Stuttgart",
+    "test_setup": {
+      "fixture": "6-DOF hydraulic test rig",
+      "environment": "thermal chamber -55°C to +70°C",
+      "loading": "combined pressure and mechanical"
+    },
+    "instrumentation": {
+      "strain_gauges": 96,
+      "pressure_transducers": 12,
+      "temperature_sensors": 24,
+      "quantum_sensors": {
+        "nv_magnetometers": 2,
+        "quantum_ndi": "continuous crack monitoring"
+      }
+    },
+    "test_conditions": {
+      "cycles_target": 180000,
+      "frequency_hz": 5.0,
+      "stress_ratio": -1.0,
+      "temperature_range": "ambient to cryogenic"
+    }
+  },
+  "processing": {
+    "tool": "CAT-TestExecution@BWB-Q100",
+    "version": "v2.1.0",
+    "params": {
+      "quantum_enhanced": true,
+      "real_time_correlation": true,
+      "automatic_inspection": true,
+      "data_fusion": "classical+quantum"
+    },
+    "quantum": {
+      "algo": "QML",
+      "seed": 42,
+      "backend": "hardware",
+      "applications": ["sensor_fusion", "anomaly_detection"]
+    }
+  },
+  "outputs": {
+    "test_status": "COMPLETED_SUCCESS",
+    "cycles_achieved": 212000,
+    "failure_mode": "none_detected",
+    "metrics": {
+      "crack_growth_rate": {
+        "value": 0.0,
+        "units": "mm/cycle",
+        "measurement_method": "quantum_ndi"
+      },
+      "strain_amplitude": {
+        "max": 2850,
+        "mean": 1420,
+        "units": "microstrain"
+      },
+      "temperature_stability": {
+        "value": 0.1,
+        "units": "degC_deviation"
+      }
+    },
+    "correlation_with_cae": {
+      "cycles_to_failure": {
+        "cae_prediction": 195000,
+        "test_result": 212000,
+        "error_percent": 8.7,
+        "correlation_quality": "EXCELLENT"
+      },
+      "strain_distribution": {
+        "correlation_coefficient": 0.94,
+        "max_error_percent": 12.3
+      }
+    },
+    "quantum_advantages": {
+      "ndi_sensitivity": "10x improvement over classical",
+      "magnetic_field_mapping": "1pT resolution achieved",
+      "anomaly_detection": "5 micro-defects detected early"
+    },
+    "units": "cycles,microstrain,degC,mm,pT"
+  },
+  "attachments": {
+    "raw_data": "sha256:a1b2c3d4...",
+    "processed_data": "sha256:e5f6g7h8...",
+    "correlation_report": "sha256:i9j0k1l2...",
+    "quantum_measurements": "sha256:m3n4o5p6..."
+  },
+  "hash": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cat-testing@bwb-q100"
+  }
+}

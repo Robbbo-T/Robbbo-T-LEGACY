@@ -202,16 +202,16 @@ graph TD
 | **🔗 Outputs** | Reportes de análisis, modelos validados, certificaciones |
 
 <a id="ca-cat"></a>
-### CAT — Computer Aided Tooling and Testing
+### CAT — Computer Aided Testing
 
-**Descripción:** Herramientas y pruebas asistidas por computadora.
+**Descripción:** Validación física y pruebas asistidas por computadora.
 
 | Atributo | Descripción |
 | :--- | :--- |
-| **📋 Alcance** | Pipelines CI/CD, SBOM/SLSA, automatización de pruebas, herramientas de desarrollo |
-| **🎯 Objetivos** | - Implementar DevSecOps para código crítico<br>- Automatización de pruebas y validación<br>- Gestión de vulnerabilidades |
-| **📊 KPIs** | Cobertura SBOM, SLA de vulnerabilidades, tiempo de build |
-| **🔗 Outputs** | Pipelines automatizados, reportes de seguridad, herramientas |
+| **📋 Alcance** | Planificación de pruebas y DoE, instrumentación cuántica, ejecución de ensayos, correlación digital-física |
+| **🎯 Objetivos** | - Validar predicciones de [CAE](CA-OPTIMISED/CAE-ENGINEERING/)<br>- Correlacionar gemelos digitales con realidad física<br>- Generar evidencia empírica para certificación |
+| **📊 KPIs** | Fidelidad del modelo (error CAE vs CAT), eficiencia de prueba, cobertura de validación, tasa "First-Time-Right" |
+| **🔗 Outputs** | Reportes de correlación, modelos actualizados, evidencia DET de pruebas físicas |
 
 <a id="ca-cav"></a>
 ### CAV — Computer Aided V&V and Certification

@@ -1,0 +1,130 @@
+---
+# Evidence package manifest for CAT test execution
+package_info:
+  det_id: "DET:CAT:AAA:52-10:test_execution:V1"
+  package_type: "physical_test_evidence"
+  creation_date: "2025-01-15T10:30:00.000Z"
+  created_by: "cat-testing@bwb-q100"
+
+test_evidence:
+  test_id: "CAT-BWB-FAT-001"
+  test_type: "fatigue_testing"
+  test_article: "3-bubble subcomponent"
+  test_facility: "IABG Stuttgart"
+
+files:
+  core_evidence:
+    - name: "det_packet.json"
+      size_bytes: 2741
+      hash: "sha256:${SHA256_DET_PACKET}"
+      description: "Primary DET evidence packet"
+
+    - name: "trace.yaml"
+      size_bytes: 2528
+      hash: "sha256:${SHA256_TRACE}"
+      description: "Traceability links"
+
+    - name: "cadet.yaml"
+      size_bytes: 2187
+      hash: "sha256:${SHA256_CADET}"
+      description: "CADET integration metrics"
+
+  attachments:
+    raw_data:
+      - name: "strain_gauge_data.tdms"
+        size_gb: 12.5
+        hash: "sha256:a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6"
+        description: "Raw strain measurements 180k cycles"
+
+      - name: "pressure_data.tdms"
+        size_gb: 8.2
+        hash: "sha256:q7r8s9t0u1v2w3x4y5z6a7b8c9d0e1f2"
+        description: "Pressure transducer data"
+
+      - name: "temperature_data.tdms"
+        size_gb: 4.1
+        hash: "sha256:g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8"
+        description: "Temperature monitoring"
+
+    quantum_data:
+      - name: "nv_magnetometry.hdf5"
+        size_gb: 15.8
+        hash: "sha256:w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4"
+        description: "NV-center magnetic field measurements"
+
+      - name: "quantum_ndi_scans.qdat"
+        size_gb: 22.3
+        hash: "sha256:m5n6o7p8q9r0s1t2u3v4w5x6y7z8a9b0"
+        description: "Entangled photon NDI data"
+
+    processed_data:
+      - name: "correlation_analysis.csv"
+        size_mb: 45.2
+        hash: "sha256:c1d2e3f4g5h6i7j8k9l0m1n2o3p4q5r6"
+        description: "CAE vs test correlation results"
+
+      - name: "fatigue_life_analysis.xlsx"
+        size_mb: 12.8
+        hash: "sha256:s7t8u9v0w1x2y3z4a5b6c7d8e9f0g1h2"
+        description: "SN curve analysis and life prediction"
+
+    reports:
+      - name: "test_execution_report.pdf"
+        size_mb: 25.6
+        hash: "sha256:i3j4k5l6m7n8o9p0q1r2s3t4u5v6w7x8"
+        description: "Comprehensive test report"
+
+      - name: "quantum_advantage_summary.pdf"
+        size_mb: 8.9
+        hash: "sha256:y9z0a1b2c3d4e5f6g7h8i9j0k1l2m3n4"
+        description: "Quantum sensor benefits analysis"
+
+validation:
+  calibration_certificates:
+    - "strain_gauge_cal_2025_001.pdf"
+    - "pressure_transducer_cal_2025_002.pdf"
+    - "nv_magnetometer_cal_2025_003.pdf"
+    - "quantum_ndi_cal_2025_004.pdf"
+
+  verification_records:
+    - "test_setup_verification.pdf"
+    - "data_quality_verification.pdf"
+    - "correlation_verification.pdf"
+
+  standards_compliance:
+    - standard: "CS-25.571"
+      compliance_level: "FULL"
+      evidence: "fatigue_life_validation"
+
+    - standard: "ASTM D7791"
+      compliance_level: "FULL"
+      evidence: "composite_fatigue_testing"
+
+quantum_provenance:
+  sensor_traceability:
+    nv_centers: "diamond_substrate_batch_NV2024-15"
+    calibration_standard: "NIST_quantum_flux_reference"
+    measurement_uncertainty: "1_pT_sqrt_Hz"
+
+  quantum_algorithms:
+    - algorithm: "QML_anomaly_detection"
+      version: "v2.1"
+      backend: "IBM_Quantum_System_Two"
+      circuit_depth: 12
+
+integrity:
+  package_hash: "sha256:${SHA256_PACKAGE}"
+  signature_method: "Ed25519"
+  signer: "cat-testing@bwb-q100"
+  timestamp: "2025-01-15T10:30:00.000Z"
+
+chain_of_custody:
+  test_execution: "IABG Stuttgart Test Lab"
+  data_processing: "BWB-Q100 Quantum Computing Center"
+  evidence_packaging: "UTCS-BLOCKCHAIN DET System"
+  storage_location: "Secure distributed storage"
+
+retention:
+  primary_retention: "25 years"
+  archive_retention: "aircraft_lifetime"
+  destruction_date: "TBD_upon_aircraft_retirement"
