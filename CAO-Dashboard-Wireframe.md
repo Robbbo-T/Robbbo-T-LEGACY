@@ -65,8 +65,8 @@ graph TB
 - **User Context**: Current user, role, and last login
 - **Navigation Breadcrumbs**: CAO → H2-BWB-Q100-CONF0000 → Dashboard
 
-### 2. Key Performance Indicators (KPIs)
-```mermaid
+### 2. Key Performance Indicators (KPIs) - for DEMO purposes
+```mermaidor 
 graph LR
     subgraph "KPI Dashboard"
         Budget["`**Budget Health**
