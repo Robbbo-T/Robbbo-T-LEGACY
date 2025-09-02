@@ -342,11 +342,11 @@ CAD pillar emits Digital Evidence Twin entries for key milestones:
 
 ## 10. Compliance Framework
 
-- **ATA iSpec 2200 SNS** compliance for all component identifiers
-- **DI → CE → CC → CI → CP** hierarchy maintained throughout
-- **S1000D** integration for downstream documentation (CAS pillar)
-- **ISO 14306** MBD standards for PMI annotation
-- **STEP AP242** for neutral CAD data exchange
+- **ATA iSpec 2200 SNS**: Ensures standardized component identifiers and documentation structure, supporting interoperability and regulatory compliance.
+- **DI → CE → CC → CI → CP** hierarchy: Maintains a strict Design Item to Component Part breakdown, ensuring traceability and configuration control throughout the design process.
+- **S1000D**: Integrates international specification for technical publications, enabling downstream documentation and support in the CAS pillar.
+- **ISO 14306**: Applies Model-Based Definition (MBD) standards for Product Manufacturing Information (PMI) annotation, ensuring 3D data is unambiguously communicated.
+- **STEP AP242**: Implements the neutral CAD data exchange standard, facilitating interoperability between different CAD systems and long-term data retention.
 
 ## 11. Artifact Structure
 
