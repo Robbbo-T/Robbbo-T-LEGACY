@@ -54,6 +54,100 @@ Unificar el ciclo aeroespacial —diseño (CAD/CAM/CAE/PLM), producción (SCADA/
 
 ---
 
+## Amedeo Pelliccia Methodology to Handle Aerospace Projects
+
+### Aerospace Project Domain Hierarchy Navigation Index
+
+**UniversalStandard:** Artifact-ProductBreakdown-ATA+S1000D-01.00-ProductBreakdownStructure-0001-v1.0-YourAerospaceCompany-ProjectName-Phase-YourName-uuid-LifecycleStatus
+
+### Project Lifecycle Pillars
+
+| Pillar | Function | Scope |
+|--------|----------|-------|
+| [CAO](#cao---organization) | Organization | Resource allocation, risk management |
+| [CAB](#cab---brainstorming) | Brainstorming | Conceptual design studies, trade-off analyses |
+| [CAD](#cad---design) | Design | Detailed design, system integration |
+| [CAE](#cae---engineering) | Engineering | Simulation, analysis (FEA, CFD), performance modeling |
+| [CAT](#cat---testing) | Testing | Component & system level testing, validation campaigns |
+| [CAV](#cav---vv-certification) | V&V/Certification | Verification, Validation, Certification (e.g., CS-25, DO-178C) |
+| [CAM](#cam---manufacturing) | Manufacturing | Manufacturing processes, assembly procedures |
+| [CAP](#cap---production) | Production | Production planning, supply chain management |
+| [CAS](#cas---sustainment) | Sustainment | In-service support, maintenance, technical documentation (S1000D) |
+| [CAEpost](#caepost---end-of-life) | End-of-Life | Decommissioning, disposal, material recycling |
+
+### Domain Navigation Matrix
+
+| Domain | Description | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+|--------|-------------|-----------|-----------|-----------|-----------|-----------|-----------|
+| **AAA** | Structures/Aero | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **AAP** | Ground Support | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **CCC** | Cabin/Cockpit | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **CQH** | Cryo/H₂ | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **DDD** | Safety/Cyber | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **EDI** | Electronics | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **EEE** | Environmental | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **EER** | Energy/Battery | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **IIF** | Infrastructure | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **IIS** | AI Systems | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **LCC** | Controls/Comms | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **LIB** | Logistics/Chain | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **MMM** | Mechanical | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **OOO** | OS/Navigation | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+| **PPP** | Propulsion/Fuel | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+
+### Quick Reference
+
+#### Critical Path Items
+- Airframe fatigue validation (e.g., full-scale test article)
+- Avionics system integration and reliability
+- Propulsion system performance validation
+- Advanced material qualification
+
+#### Key Metrics
+- **Structural Weight Fraction:** < 25% MTOW
+- **Payload Capacity:** 20,000 kg
+- **Power Requirement:** 20 MW
+- **Fundamental Frequencies:** > 5 Hz
+
+#### Gate Schedule
+- **Preliminary Design Review ([PDR](#pdr)):** Q4 2025
+- **Critical Design Review ([CDR](#cdr)):** Q2 2026
+- **First Flight Readiness ([FFR](#ffr)):** Q1 2027
+
+### Pillar Section Details
+
+#### CAO - Organization
+Resource allocation for primary structures (e.g., 50% fuselage, 30% wing, 20% empennage).
+
+#### CAB - Brainstorming
+Evaluation of multiple airframe configurations and novel propulsion systems.
+
+#### CAD - Design
+Detailed structural design per [ATA](#ata) chapters, interface control document ([ICD](#icd)) management.
+
+#### CAE - Engineering
+High-fidelity structural and aerodynamic analysis ([FEA](#fea)/[CFD](#cfd)), full airframe fatigue and damage tolerance analysis.
+
+#### CAT - Testing
+Full-scale static and fatigue testing, wind tunnel model testing, non-destructive inspection ([NDI](#ndi)) development.
+
+#### CAV - V&V/Certification
+Compliance demonstration against certification standards (e.g., [CS-25](#cs-25)), development of system safety cases.
+
+#### CAM - Manufacturing
+Definition of manufacturing processes (e.g., composite curing cycles, metallic machining), assembly line design.
+
+#### CAP - Production
+Production rate targets, takt time optimization, supply chain risk assessment.
+
+#### CAS - Sustainment
+Structural Health Monitoring ([SHM](#shm)) system design, scheduled maintenance plan, [S1000D](#s1000d)-compliant documentation.
+
+#### CAEpost - End-of-Life
+End-of-life plan, including material recovery and recycling processes.
+
+---
+
 ## TL;DR (con gates QAL)
 
 * **UTCS‑BLOCKCHAIN**: CAX completo con **105 nodos DET** (15 dominios × 7 pilares) bajo QAUDIT.
@@ -224,3 +318,7 @@ graph LR
 
 * **Este archivo:** v1.0.0
 * **Changelog:** Añadido identificador UTCS‑MI v5.0; aviso QAL; evento QAL Bus; límites S1000D; evidencias DET; TL;DR con gates; diagramas Mermaid QAL.
+
+---
+
+© 2024 AerospaceAndQuantumUnitedAdvancedVenture. All rights reserved.
