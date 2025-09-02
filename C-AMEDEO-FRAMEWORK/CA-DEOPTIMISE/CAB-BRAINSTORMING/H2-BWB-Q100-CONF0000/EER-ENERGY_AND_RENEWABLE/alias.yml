@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for EER (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:EER:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:EER:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:EER:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:EER:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:EER:MAXENT:NOVELTY-SEARCH"

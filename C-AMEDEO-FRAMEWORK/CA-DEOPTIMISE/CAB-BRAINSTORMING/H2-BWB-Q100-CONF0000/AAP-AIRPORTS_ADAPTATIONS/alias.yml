@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for AAP (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:AAP:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:AAP:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:AAP:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:AAP:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:AAP:MAXENT:NOVELTY-SEARCH"

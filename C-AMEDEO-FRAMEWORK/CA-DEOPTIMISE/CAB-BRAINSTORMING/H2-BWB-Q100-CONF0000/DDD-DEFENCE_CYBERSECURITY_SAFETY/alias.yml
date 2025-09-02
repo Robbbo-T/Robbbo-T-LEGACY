@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for DDD (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:DDD:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:DDD:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:DDD:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:DDD:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:DDD:MAXENT:NOVELTY-SEARCH"

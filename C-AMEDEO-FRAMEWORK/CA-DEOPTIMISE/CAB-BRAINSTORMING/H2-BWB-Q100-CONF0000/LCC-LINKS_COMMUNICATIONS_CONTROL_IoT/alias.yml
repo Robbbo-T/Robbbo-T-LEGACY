@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for LCC (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:LCC:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:LCC:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:LCC:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:LCC:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:LCC:MAXENT:NOVELTY-SEARCH"
