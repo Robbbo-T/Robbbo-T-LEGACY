@@ -36,9 +36,9 @@ graph TD
 | **Resource Reallocation** | Dynamic reallocation; Capacity optimization; Portfolio rebalancing; Resource sharing | Resource-Optimization.json; Investment-Rebalance.yaml |
 | **Compliance Evolution** | Compliance optimization; Risk mitigation evolution; Audit integration; Automation | Compliance-Evolution.json; Risk-Mitigation-Updates.yaml |
 
-## 3. Restoration & Evolution Lifecycle Integration
+## 3. QAL Lifecycle Integration
 
-CAO in the CA-OPTIMISED flow operates as a **continuous improvement engine** that learns from operational experience and evolves organizational capabilities.
+CAO in the CA-OPTIMISED flow operates within the canonical QAL sequence (`CAB → CAD → CAE → CAT → CAV → CAM → CAP → CAS → CAEpost`) as a **continuous improvement engine** that learns from operational experience and evolves organizational capabilities across all phases.
 
 ### Primary Inputs (From Operations):
 - Operational performance data from [CAS]

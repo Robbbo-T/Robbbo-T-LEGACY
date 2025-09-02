@@ -37,9 +37,9 @@ graph TD
 | **Data Analysis and Post-processing** | - Filtering, cleaning, and processing of raw data<br>- Test results comparison with [CAE](../CAE-ENGINEERING/) predictions<br>- Detailed test report creation | `Processed-Data.csv`<br>`Test-vs-CAE-Correlation-Report.pdf` |
 | **Digital Twin Synchronization** | - CAE model update with correlated test data<br>- Post-correlation model uncertainty quantification<br>- Immutable test event evidence generation | `Correlated-Model-parameters.json`<br>`DET:CAT:Test:GVT:V1.0` |
 
-## 3. Integration in QAL Lifecycle
+## 3. QAL Lifecycle Integration
 
-CAT is the final validator of the design and analysis chain, providing "field truth."
+CAT operates within the canonical QAL flow (`CAB → CAD → CAE → CAT → CAV → CAM → CAP → CAS → CAEpost`) as the final validator of the design and analysis chain, providing "field truth."
 
 ### Main Inputs:
 - Validation requirements and predictions from [CAE](../CAE-ENGINEERING/) Evidence Packs

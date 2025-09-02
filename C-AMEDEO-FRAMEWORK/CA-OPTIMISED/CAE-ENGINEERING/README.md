@@ -16,9 +16,10 @@ graph TD
     Impl[5. Implementation Guidance]
   end
 
+  CAD(CAD) -->|Design Baseline| Data
   OPS(Operational Data) -->|Performance Metrics| Data
-  Impl -->|Optimized Designs| CAD_OPT(CAD-OPT)
-  Val -->|Validation Evidence| CAV_OPT(CAV-OPT)
+  Impl -->|Optimized Designs| CAD(CAD)
+  Val -->|Validation Evidence| CAT(CAT)
   Corr -->|Correlation Updates| Historical(Historical Models)
 
   style CAE_OPT fill:#e6fffa,stroke:#333,stroke-width:2px
@@ -34,9 +35,9 @@ graph TD
 | **Digital Twin Evolution** | Physics-informed learning; Predictive maintenance; Performance forecasting; System health monitoring | Digital-Twin-v2.model; Health-Monitoring.json; Predictive-Maintenance.yaml |
 | **Quantum-Enhanced Optimization** | Quantum optimization algorithms; Enhanced material simulation; Complex system optimization; Hybrid classical-quantum workflows | Quantum-Optimization.qasm; VQE-Results.json; Hybrid-Workflow.yaml |
 
-## 3. Restoration & Evolution Lifecycle Integration
+## 3. QAL Lifecycle Integration
 
-CAE optimization focuses on continuous improvement and adaptive performance enhancement.
+CAE optimization operates within the canonical QAL flow (`CAB → CAD → CAE → CAT → CAV → CAM → CAP → CAS → CAEpost`) while focusing on continuous improvement and adaptive performance enhancement for existing systems.
 
 ### Primary Inputs:
 - Operational performance data and sensor readings
