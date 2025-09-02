@@ -1,0 +1,6 @@
+Concept_ID,Feasibility_Score,Technical_Risk,Innovation_Score,Economic_Viability,Safety_Score,BWB_Integration,Quantum_Confidence,Final_Ranking
+BWB-H2-001,8.5,3.2,9.5,7.2,9.1,8.8,0.87,1
+BWB-H2-002,7.9,4.1,8.2,8.5,8.9,9.2,0.82,2
+BWB-H2-003,6.8,5.5,7.1,9.1,8.7,7.5,0.74,3
+BWB-H2-004,9.2,2.1,6.8,8.9,9.5,8.1,0.68,4
+BWB-H2-005,7.5,3.8,8.9,6.7,8.2,8.9,0.79,5

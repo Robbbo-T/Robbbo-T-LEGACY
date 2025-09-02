@@ -14,6 +14,7 @@ The C-AMEDEO Framework implements a circular, perpetual lifecycle methodology fo
 
 ### [CA-DEOPTIMISE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE) — Forward Creation Flow
 
+* [CAB-BRAINSTORMING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAB-BRAINSTORMING) — Concept exploration and brainstorming
 * [CAD-DESIGN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN) — Design artifacts: models, drawings, specs
 * [CAE-ENGINEERING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAE-ENGINEERING) — Engineering analysis and validation
 * [CAO-ORGANIZATION](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAO-ORGANIZATION) — Organization & Operations
