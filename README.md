@@ -37,7 +37,7 @@ graph TD
   AQUAOS[AQUA‑OS BRIDGE — MOS determinista · Single Source of Truth]
   GAIA[GAIA AIR RTOS — ARINC 653]
   DET[Digital Evidence Twin · QAUDIT]
-  CADET[CADET — Auditoría de Circularidad (KPIs)]
+  CADET[CADET — Auditoría de Circularidad KPIs]
 
   AMPEL360 --> AQUAOS
   GAIA --> AQUAOS
@@ -251,10 +251,10 @@ End-of-life plan, including material recovery and recycling processes.
 
 ```mermaid
 graph LR
-  DI[Domain Invariant] --> CE[Configuration Envelope (ATA CC-SS[-SS])]
-  CE --> CC[Component Cell (ATA CC-SS)]
-  CC --> CI[Component Item (ATA CC-SS-SS)]
-  CI --> CP[Component Particle (PBS leaf)]
+  DI[Domain Invariant] --> CE[Configuration Envelope ATA CC-SS-SS]
+  CE --> CC[Component Cell ATA CC-SS]
+  CC --> CI[Component Item ATA CC-SS-SS]
+  CI --> CP[Component Particle PBS leaf]
 ```
 
 ---
