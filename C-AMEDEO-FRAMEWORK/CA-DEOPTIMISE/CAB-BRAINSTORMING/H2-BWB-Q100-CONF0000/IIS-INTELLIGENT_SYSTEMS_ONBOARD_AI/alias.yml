@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for IIS (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:IIS:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:IIS:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:IIS:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:IIS:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:IIS:MAXENT:NOVELTY-SEARCH"

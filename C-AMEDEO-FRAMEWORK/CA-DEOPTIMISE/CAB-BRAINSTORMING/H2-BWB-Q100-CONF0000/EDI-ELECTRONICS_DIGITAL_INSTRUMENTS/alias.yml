@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for EDI (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:EDI:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:EDI:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:EDI:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:EDI:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:EDI:MAXENT:NOVELTY-SEARCH"

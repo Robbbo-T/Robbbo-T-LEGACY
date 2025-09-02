@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for CQH (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:CQH:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:CQH:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:CQH:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:CQH:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:CQH:MAXENT:NOVELTY-SEARCH"
