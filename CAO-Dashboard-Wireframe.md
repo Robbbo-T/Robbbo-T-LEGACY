@@ -58,15 +58,16 @@ graph TB
     Footer --> ViewCompliance
 ```
 
-## Detailed Component Specifications
+## Detailed Component Specifications -  for DEMO purposes
 
 ### 1. Header Section
 - **CAO Program Title**: "Computer-Aided Organization - BWB-Q100 Program Dashboard"
 - **User Context**: Current user, role, and last login
 - **Navigation Breadcrumbs**: CAO → H2-BWB-Q100-CONF0000 → Dashboard
 
-### 2. Key Performance Indicators (KPIs) - for DEMO purposes
-```mermaidor 
+### 2. Key Performance Indicators (KPIs) 
+
+```mermaid 
 graph LR
     subgraph "KPI Dashboard"
         Budget["`**Budget Health**
