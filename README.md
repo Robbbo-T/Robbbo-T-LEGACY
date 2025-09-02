@@ -1,651 +1,226 @@
-# Amedeo Pelliccia — Portfolio
+# Amedeo Pelliccia — Portfolio (QAL‑conforme)
 
-Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized Design
-Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR and AMPEL360 ecosystems
+Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized Design  
+Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR y AMPEL360  
 Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ---
 
-**UniversalStandard:** TechnicalDocument-Dissemination-ISO9001-MainSectionIntroduction-PersonalPortfolioReadme-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-CROSS-AmedeoPelliccia-4a4596d0-RemainingUsefulLife
+**EstándarUniversal:** DocumentoTecnico-Difusion-ISO9001-01.00-PersonalPortfolioReadme-0001-v1.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-CROSS-Amedeo Pelliccia-4a4596d0-RestoDeVidaUtil
 
-> UTCS‑MI v5.0 identifier (13 fields) applied to the public portfolio artifact.
+> Identificador UTCS‑MI v5.0 (13 campos) aplicado a este artefacto público.
+
+**Evidencia (anclas)**
+- DET anchor: `DET:PORTFOLIO:README:V1` · `sha256:<a rellenar>` · `sig:Ed25519`
+- QAUDIT tx: `qaudit://aqua/blocks/.../4a4596d0`
+
+**Aviso de conformidad QAL**
+- Este artefacto **no** genera S1000D; CAS es el único punto de publicación S1000D.  
+- Este README emite un **evento QAL Bus** de registro documental y se encadena a DET/QAUDIT.
 
 ---
 
-## Visual Summary
+## Resumen Visual (QAL + Evidencia)
+
+```mermaid
+flowchart LR
+  CAO(((CAO))):::ctrl --> CAB
+  CAB --> CAD --> CAE --> CAT --> CAV --> CAM --> CAP --> CAS --> CAEpost --> CAB
+  CAO -. políticas, presupuestos, riesgos .-> CAD
+  CAO -. org & supply constraints .-> CAM
+  classDef ctrl stroke-width:2,stroke-dasharray:3 3
+```
 
 ```mermaid
 graph TD
-  AMPEL360[AMPEL360 — Algorithmic Design · Feasible Set · CVaR Selection]
-  AQUAOS[AQUA-OS BRIDGE — Deterministic MOS · Single Source of Truth]
-  GAIA[GAIA AIR RTOS — ARINC 653 Partitioning]
-  DET[Digital Evidence Twin · DET]
-  CADET[CADET — Circularity Assurance · KPIs]
-  DEO[CA-DEOPTIMISE — Creation Flow]
-  OPT[CA-OPTIMISED — Restoration Flow]
+  AMPEL360[AMPEL360 — Feasible Set · Selección CVaR]
+  AQUAOS[AQUA‑OS BRIDGE — MOS determinista · Single Source of Truth]
+  GAIA[GAIA AIR RTOS — ARINC 653]
+  DET[Digital Evidence Twin · QAUDIT]
+  CADET[CADET — Auditoría de Circularidad (KPIs)]
 
-  DEO --> AMPEL360
   AMPEL360 --> AQUAOS
   GAIA --> AQUAOS
   AQUAOS --> DET
   DET --> CADET
-  CADET --> OPT
-  OPT --> DEO
+  CADET -->|KPIs| AMPEL360
 ```
-
-## Genesis Prompt
-
-> "create an ecosystem where IoT, AI, ML, Blockchain, Quantum, complex systems, new materials and nanotechnologies converge"
-
-### Convergence Trace Map
-
-* **IoT** → **LCC** domain · deterministic networks · AIDC (Spec 2000 Book 7) · telemetry to **DET**.
-* **AI · ML** → **IIS** onboard · **AMPEL360** on ground · safe partitioning in **GAIA AIR RTOS** · DO‑178C/DO‑254.
-* **Blockchain** → **LIB** domain · supply‑chain traceability (**Spec 2000/2500**) · evidence notarization in **DET**.
-* **Quantum** → **QAL** bridge in **AQUA‑OS BRIDGE** · **CQH** for cryogenics and H₂‑quantum interfaces · quantum navigation & optimization.
-* **Complex systems** → **C‑AMEDEO** (DI→CE→CA→CI) · **ATA iSpec 2200** in CEs · **S1000D** DMRL/DMC · **ARP4754A/4761**.
-* **New materials & nanotechnologies** → **MMM** domain · CMH‑17 composites, nanocoatings, metamaterials; **CAM** additive manufacturing (NADCAP) · data and processes into **DET**.
-
-```mermaid
-flowchart LR
-  P[Genesis Prompt]
-  P --> IoT
-  P --> AI
-  P --> BC
-  P --> Q
-  P --> CS
-  P --> MAT
-  IoT --> LCC[Links Comms Control]
-  AI --> AMPEL360[AMPEL360 Risk Aware Design]
-  AI --> IIS[Intelligent Systems Onboard]
-  BC --> LIB[Logistics Blockchain]
-  Q --> QAL[Quantum Abstraction Layer]
-  Q --> CQH[Cryogenics Quantum H2]
-  MAT[Materials & Nanotech]
-  MMM[Mechanical Material Monitoring]
-  CS --> CAMEDEO[C‑AMEDEO Lifecycle]
-  MAT --> MMM
-  MAT --> AMPEL360
-  MMM --> AQUAOS
-  AMPEL360 --> AQUAOS[AQUA‑OS BRIDGE]
-  LCC --> AQUAOS
-  IIS --> GAIA[GAIA AIR RTOS]
-  AQUAOS --> DET[Digital Evidence Twin]
-  DET --> CADET[CADET KPIs]
-```
-
-## Mission (one‑liner)
-
-Unify the aerospace lifecycle—design (CAD/CAM/CAE/PLM), production (SCADA/ROS/NC), and operations/services (ATM, cockpit/FBW, nav/comm, MRO/EOL/procurement)—under a single, time‑synchronized, evidence‑producing, quantum‑extensible operating fabric.
-
-## TL;DR
-
-* **UTCS-BLOCKCHAIN** implements the complete CAX framework with **105 DET registry nodes** (15 domains × 7 pillars) under unified blockchain architecture.
-* **AMPEL360** compresses a $>2×10^16$ design space to \~10,000 feasible candidates, then selects an optimum via **CVaR** risk minimization.
-* **AQUA‑OS BRIDGE** is the deterministic, certifiable digital backbone with **DET** (Digital Evidence Twin) and a **Quantum Abstraction Layer**.
-* **GAIA AIR RTOS** provides ARINC 653‑style robust partitioning for safety‑critical execution.
-* **C‑AMEDEO** enforces a circular, perpetual lifecycle (DEOPTIMISE → OPTIMISED).
-* **CADET** continuously audits circularity using immutable evidence from the DET blockchain nodes.
-
-### 🏗️ UTCS-BLOCKCHAIN Implementation
-
-Complete Computer-Aided Excellence (CAX) framework architecture with hierarchical blockchain structure:
-
-```
-UTCS-BLOCKCHAIN/
-├── CADET/     # Circular Assurance by Digital Evolutive Twin
-├── DET/       # 105 cryptographic evidence registry nodes  
-├── TRACES/    # Traceability Records for Aerospace Certification
-└── DOMAINS/   # 15 technical domains × 7 CAX pillars
-```
-
-**Registry Nodes**: 105 DET nodes following pattern `DET/<CAX>/<DOMAIN>/<SNS>/<activity>/<version>/` with complete file set (manifest.yaml, det_packet.json, signature.ed25519, previous_hash, trace.yaml, cadet.yaml)
-
-## Problem Statement
-
-Fragmented lifecycle data and tools create blind spots, late surprises, and duplicated effort. Early program phases rarely quantify technical‑financial risk with rigor, lifecycles tend to be linear rather than circular, and introducing AI or Quantum raises cybersecurity and certification hurdles. This program closes those gaps with a single, deterministic evidence fabric and a risk‑aware design core.
-
-## What I’m Building
-
-### AMPEL360‑BWB‑Q Program
-
-**Program Type:** Integrated Aerospace Development Program
-**Primary Objective:** Design, certify, produce, and operate a hydrogen‑powered Blended Wing Body (BWB) aircraft through a unified digital framework that optimizes performance, manages technical‑financial risk, and ensures certifiable safety and traceability end‑to‑end.
-
-**Program Constituents (3 pillars):**
-
-1. **AMPEL360** — Algorithmic Design & Configuration Selection Framework
-2. **AQUA‑OS BRIDGE** — Mixed Operating System (MOS), the unified digital backbone
-3. **GAIA AIR RTOS** — Safety‑certifiable real‑time execution foundation
 
 ---
 
-### 1) AMPEL360 — Algorithmic Design & Configuration Selection
+## Misión (one‑liner)
 
-**Nature:** Two‑stage algorithmic reduction and risk‑aware selection.
-**Phase I – Feasible Enumeration:** MILP/CP‑SAT prune to \~10,000 candidates under physics, safety, compatibility.
-**Phase II – Risk‑Based Selection:** CVaR model selects the configuration with the most robust technical‑financial profile.
-**Formal Output:** A definitive, risk‑optimized configuration ready for detailed design inside AQUA‑OS.
+Unificar el ciclo aeroespacial —diseño (CAD/CAM/CAE/PLM), producción (SCADA/ROS/NC) y operaciones/servicios (ATM, cockpit/FBW, nav/comm, MRO/EOL/procurement)— bajo un **tejido operativo determinista, extensible a cuántica y productor de evidencia**.
 
-### 2) AQUA‑OS BRIDGE — Mixed Operating System (MOS)
+---
 
-**Deterministic Control Plane:** Time/space partitioning aligned with ARINC 653; built on GAIA AIR RTOS.
-**Digital Evidence Twin · DET:** WORM evidence for every action; audit‑grade traceability.
-**Quantum Abstraction Layer (QAL):** Offload non‑critical optimizations to quantum resources while keeping safety‑critical paths on certified classical hardware.
-**Formal Function:** A single source of truth, determinism, and evidence across lifecycle.
+## TL;DR (con gates QAL)
 
-### 3) GAIA AIR RTOS — Real‑Time Operating System
+* **UTCS‑BLOCKCHAIN**: CAX completo con **105 nodos DET** (15 dominios × 7 pilares) bajo QAUDIT.
+* **AMPEL360**: reduce $>2×10^{16}$ configuraciones a \~10 000 factibles (**G1→G2**); óptimo por **CVaR\@0.95** (**G2**).
+* **AQUA‑OS BRIDGE**: columna digital determinista; **DET** + **QAL**; **G5** consolida evidencias de V\&V.
+* **GAIA AIR RTOS**: particionado ARINC 653; soporte a rutas críticas (DAL).
+* **CADET**: KPIs de circularidad con packs firmados desde DET (**G8/G9**).
+* **Límite S1000D**: solo **CAS** publica IETP/IETM; el resto emite **punteros**.
 
-**Nature:** Safety‑certifiable, partitioned RTOS for avionics/robotics/IoT.
-**Core Principle:** Robust partitioning ensures non‑critical failures cannot propagate to safety‑critical partitions.
-**Subsidiary Technology:** **GAIA AIR INFRANET**, the deterministic, secure protocol for intra‑ecosystem data exchange.
-**Formal Function:** Guarantees safety, security, and predictability for time‑critical functions.
+---
 
-### 4) C‑AMEDEO — Circular Assisted Methods for Evolutive Developments and Entangled Operations
+## Alineación QAL (fases → contenido de este portfolio)
 
-*© Amedeo Pelliccia 2025*
+| Fase        | En este README                        | Evidencia / Métrica                 |
+| ----------- | ------------------------------------- | ----------------------------------- |
+| **CAO**     | Estrategia, alcance, normas, riesgo   | IRR/NPV, cobertura de conformidad   |
+| **CAB**     | Genesis Prompt, mapa de convergencia  | Trazabilidad de ideas, priorización |
+| **CAD**     | Reglas CAD‑first, DI→CE→CC→CI→CP      | Δpeso, Δcosto, reuse% en EBOM       |
+| **CAE**     | FEM/global loads, márgenes, QoR       | Model error bound, reproducibilidad |
+| **CAT**     | SBOM/SLSA, pipelines                  | SBOM coverage, vuln SLA             |
+| **CAV**     | Matriz de certificación (trenzado)    | Requirement coverage, auditability  |
+| **CAM**     | FAI/SPC, yield                        | Scrap−%, Rework−%, Cp/Cpk           |
+| **CAP**     | Logística, MRP/MPS (resumen)          | OTD, turns, cost variance           |
+| **CAS**     | SB/PHM, config state (puntero S1000D) | MTBF/MTBUR, disponibilidad          |
+| **CAEpost** | EoL/recuperación                      | %valor recuperado, CO₂e ↓           |
 
-**Purpose:** Govern the complete lifecycle using two complementary flows.
+---
 
-```mermaid
-flowchart LR
-  subgraph DEOPTIMISE [CA‑DEOPTIMISE — Forward Creation Flow]
-    CAD-->CAE-->CAO-->CAP-->CAT-->CAI-->CAM-->CAS-->CAEV
-  end
-  subgraph OPTIMISED [CA‑OPTIMISED — Restoration & Evolution Flow]
-    CAS-->CAO-->CAP-->CAT-->CAI-->CAM-->CAE-->CAD
-  end
+## Evento QAL Bus — Registro de portfolio
+
+```json
+{
+  "utcs_id": "EstándarUniversal: DocumentoTecnico-Difusion-ISO9001-01.00-PersonalPortfolioReadme-0001-v1.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-CROSS-Amedeo Pelliccia-4a4596d0-RestoDeVidaUtil",
+  "phase": "CAO",
+  "artifact_type": "PortfolioReadme",
+  "inputs": ["sha256:<prev-readme-orig>", "sha256:<policies-v>"],
+  "outputs": ["sha256:<this-file>"],
+  "req_trace": [{"req_id":"QAL-COMPLIANCE-README","status":"pass","evidence":"sha256:<this-file>"}],
+  "risk": {"cvar_alpha": 0.95, "cvar_value": 0.0, "hazards":[]},
+  "quantum": {"algo":"QML","seed":12345,"p":3,"backend":"simulator"},
+  "pqc_signature": {"alg":"Dilithium3","sig":"<placeholder>"},
+  "provenance": {"tool":"AQUA‑OS","version":"v22.0","agent":"GAIA AIR v4.0","time_utc":"<ISO8601>"}
+}
 ```
 
-**Pillars (glossary):**
-**CAD** (Design), **CAE** (Engineering), **CAO** (Organization & Ops), **CAP** (Process/Safety/V\&V/Compliance), **CAT** (Source & Code Systems), **CAI** (Integrations), **CAM** (Manufacturing), **CAS** (Sustainment), **CAEV** (Evolution).
-
-### 5) CADET — Circularity Assurance by Digital Evolutive Twin
-
-*© Amedeo Pelliccia 2025*
-
-**Role:** Assurance layer that audits DET evidence to prove circularity and sustainability.
-
-* Traceability verification across DEOPTIMISE→OPTIMISED
-* Circularity KPIs (reuse %, waste reduction, life‑extension)
-* Automated sustainability reporting (ISO 14001, CSRD, GRI)
-* Lifecycle closure audits with evidence‑backed directives
+> **Nota:** El evento debe validarse con `schemas/qal_bus.schema.json` y el ID UTCS con `UTCS-BLOCKCHAIN/validate_utcs_mi.py`.
 
 ---
 
-## Why It Matters
+## Genesis Prompt (CAB) y Mapa de Convergencia
 
-* **Single source of truth:** twin + evidence
-* **Determinism + agility:** certification rigor with fast iteration
-* **Energy‑as‑Policy:** targeted −20–40% energy/CO₂ vs baseline
-* **Circular economy:** perpetual, auditable lifecycle via C‑AMEDEO + CADET
+> "crear un ecosistema donde IoT, IA/ML, Blockchain, Cuántica, sistemas complejos, nuevos materiales y nanotecnologías convergen"
 
-## So What — Value by Audience
-
-* **Technical Leads and Engineers**
-  Reduce integration headaches via **one source of truth** in AQUA‑OS BRIDGE, consistent **DI → CE → CA → CI** structure, and automated **S1000D DMRL · DMC** generation. Evidence packs and reproducible runs remove he‑said she‑said from design reviews.
-* **Executives and Investors**
-  Lower downside with **CVaR‑driven selection** and cost savings from **circularity** proven by DET→CADET KPIs. Faster compliance close‑out and clearer time‑to‑certification through standards‑first docs (**ATA iSpec 2200, S1000D, Spec 1000BR, 2000, 2300, 2400, 2500, 42**).
-* **Sustainability Officers**
-  **Auditable ESG** with immutable evidence: reuse %, energy, CO₂, life‑extension. Automatic reporting aligned to **ISO 14001, CSRD, GRI** from the same Digital Evidence Twin.
+* **IoT → LCC**: redes deterministas, AIDC (Spec 2000 Book 7), telemetría a **DET**.
+* **IA/ML**: **IIS** a bordo; **AMPEL360** en tierra; particionado seguro **GAIA AIR RTOS** (DO‑178C/DO‑254).
+* **Blockchain → LIB**: trazabilidad Spec 2000/2500; notarización de evidencia en **DET**.
+* **Cuántica → QAL**: offload seguro (QAOA/VQE/QML) fuera de rutas DAL.
+* **Sistemas complejos**: **C‑AMEDEO** (DI→CE→CC→CI→CP) + **ARP4754A/4761**.
+* **Materiales/Nano → MMM**: CMH‑17, nano‑coatings, metamateriales; **CAM** aditiva (NADCAP).
 
 ---
 
-## Atomic Decomposition — Visual & Textual Guide
+## Qué estoy construyendo (resumen sobrio)
 
-**Goal:** make the DI → CE → CC → CI → CP atomization obvious at a glance, and tie it to CAD → PBS → BOM.
+### AMPEL360 — Reducción + Selección por Riesgo (CAB→CAD→CAE)
+
+* **Fase I:** MILP/CP‑SAT → \~10 000 candidatos (filtros de física/seguridad/compatibilidad).
+* **Fase II:** **CVaR\@0.95** → selección robusta técnico‑financiera (**G2**).
+* **Salida formal:** configuración óptima lista para diseño detallado en AQUA‑OS.
+
+### AQUA‑OS BRIDGE — MOS determinista (CAT→CAV→CAP)
+
+* Plano determinista (tiempo/espacio) con GAIA AIR RTOS (ARINC 653).
+* **DET** WORM + **QAUDIT**; **QAL** para optimización no‑DAL.
+* **Función:** fuente única de verdad, determinismo y evidencia.
+
+### GAIA AIR RTOS — Ejecución en tiempo real (CAE→CAT)
+
+* Particionado robusto: fallos no críticos **no** contaminan rutas DAL.
+* **Infranet** determinista/segura para datos intra‑ecosistema.
+
+### C‑AMEDEO — Flujo dual circular (DEOPTIMISE ⇄ OPTIMISED)
+
+* DEOPTIMISE (creación) y OPTIMISED (restauración/evolución) con **pruebas de circularidad** auditadas por CADET.
+
+### CADET — Auditor de circularidad (CAS→CAEpost)
+
+* Verifica trazabilidad y calcula KPIs (Reuse %, CO₂e, Energía, Life‑extension).
+
+---
+
+## CAD‑first (constitución mínima, QAL‑ready)
+
+* **Árbol DI→CE→CC→CI→CP** anclado a **ATA iSpec 2200 (SNS)**.
+* **EBOM vs MBOM:** mantener traza EBOM↔MBOM (kitlists + pn); divergencias → CP hijos.
+* **Intento de diseño:** `MASTER_SKELETON_PART`, datums `PLN_XY/PLN_YZ/PLN_ZX`, parámetros `CamelCase` (ej. `GridSpacingMm`).
+* **Disparadores de evidencia (DET):** `save_model`, `solver_run`, `ebom_change`, `mbom_change` (firmados).
+* **S1000D**: solo **CAS**; aquí **punteros** a DMRL/DMC.
+
+**Descomposición atómica (atajo visual)**
 
 ```mermaid
 graph LR
-  DI[DI — Domain Invariant] --> CE[CE — Configuration Envelope<br/>ATA CC-SS&#91;-SS&#93;]
-  CE --> CC[CC — Component Cell<br/>ATA CC-SS]
-  CC --> CI[CI — Component Item<br/>ATA CC-SS-SS]
-  CI --> CP[CP — Component Particle<br/>PBS leaf]
-```
-
-**Naming patterns**
-
-```
-DI-<CAX>-<MIC>-<DOM>-CONF<NNNN>
-CE-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
-CE-CC-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
-CE-CC-CI-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>
-CE-CC-CI-CP-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>-PBS-<WBSID>
-```
-
-**Folder shape (example · AAA · ATA 53‑10‑01)**
-
-```
-AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
-  DI-CAD-Q100-AAA-CONF0000/
-  CE-CAD-Q100-AAA-ATA-53-FUSELAGE/
-    CC/CE-CC-CAD-Q100-AAA-ATA-53-10-CENTER-BODY-BOX/
-      CI/CE-CC-CI-CAD-Q100-AAA-ATA-53-10-01-CB-PRIMARY-GRID/
-        PBS.json · EBOM.yaml · MBOM.yaml · CADParameters.json · Effectivities.yaml · cad/
-        cp/CE-CC-CI-CP-CAD-Q100-AAA-ATA-53-10-01-CB-PRIMARY-GRID-PBS-Q100-53-10-01-0001/
-```
-
-**When to split (atomic checklist)**
-
-* Different function • Certification boundary (DAL/hazard) • Effectivity/variant
-* Supplier boundary • Load path / material class • New ATA subsection
-
-**CAD‑first rules**
-
-* This layer is **CAD → PBS → BOM**. Documentation (S1000D DMRL/DMC) is generated **downstream**.
-* **EBOM vs MBOM:** EBOM = engineering intent; MBOM = routing/resources/QA/kits. Maintain EBOM↔MBOM trace by `pn` and kitlists; add CP children if the shop split diverges.
-* **Design intent:** master datums `PLN_XY/PLN_YZ/PLN_ZX`; one `MASTER_SKELETON_PART` per assembly; named driving parameters (e.g., `GRID_SPACING_MM`). No circular refs; CamelCase names.
-* **Evidence (DET):** every meaningful `save_model`, `solver_run`, `ebom_change`, `mbom_change` emits a signed evidence pack.
-
----
-
-## CAD‑first Constitution — PBS/BOM Rules
-
-* **Identifiers:**
-
-  * `DI-<CAX>-<MIC>-<DOM>-CONF<NNNN>`
-  * `CE-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
-  * `CE-CC-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
-  * `CE-CC-CI-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>`
-  * `CE-CC-CI-CP-<CAX>-<MIC>-<DOM>-ATA-<SNS>-<descriptor>-PBS-<WBSID>`
-* **Per‑CI required files:** `PBS.json`, `EBOM.yaml`*, `MBOM.yaml`*, `CADParameters.json`, `Effectivities.yaml`, `cad/`, `cp/`
-
-  * \*For **physical** items; data‑centric CIs use `design-data/` instead of EBOM/MBOM.
-* **Ownership & aliases:** canonical **OwnerDomain** per CE; **CoDomains** link by alias (ATA is **non‑exclusive**).
-* **Link policy:** CE/CC/CI/CP names in lists must be **Markdown links** to their path (no backticks).
-
----
-
-## C‑AMEDEO — Interactive Index (Matrix Overview)
-
-> **Numbering standard (CAD‑first).** At the **CAD‑DESIGN** layer, all **CE** follow **ATA iSpec 2200 SNS** — `ATA CC-SS[-SS]` — to anchor scope and traceability. **S1000D publication (DMRL/DMC)** is **downstream** and generated later from **PBS/EBOM/MBOM** and headers; S1000D artifacts do **not** live in the CAD tree.
-
-The matrix below organizes the **15 technological domains** across both lifecycle flows. Links navigate to the public GitHub structure for **H2‑BWB‑Q100‑CONF0000**.
-
-> Base path prefix:
-> `https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/<FLOW>/<CAX_PILLAR>/H2-BWB-Q100-CONF0000/`
-
-### Phase 1 — **CA‑DEOPTIMISE** (Forward Creation Flow)
-
-#### CAD‑DESIGN (Design artifacts: models, drawings, specs)
-
-**Domain Invariants (DI) — roots**
-
-* **AAA** → [DI-CAD-Q100-AAA-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS)
-* **MMM** → [DI-CAD-Q100-MMM-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING)
-* **EEE** → [DI-CAD-Q100-EEE-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY)
-* **DDD** → [DI-CAD-Q100-DDD-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY)
-* **EER** → [DI-CAD-Q100-EER-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE)
-* **OOO** → [DI-CAD-Q100-OOO-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC)
-* **PPP** → [DI-CAD-Q100-PPP-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS)
-* **EDI** → [DI-CAD-Q100-EDI-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS)
-* **LIB** → [DI-CAD-Q100-LIB-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN)
-* **LCC** → [DI-CAD-Q100-LCC-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT)
-* **IIF** → [DI-CAD-Q100-IIF-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS)
-* **CCC** → [DI-CAD-Q100-CCC-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS)
-* **CQH** → [DI-CAD-Q100-CQH-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS)
-* **IIS** → [DI-CAD-Q100-IIS-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI)
-* **AAP** → [DI-CAD-Q100-AAP-CONF0000](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS)
-
----
-
-### CE Index — **ATA‑aligned** (CAD‑DESIGN · CA‑DEOPTIMISE)
-
-> **ATA↔Domain cross‑policy (summary):** CEs are anchored to ATA; each CE has a canonical **OwnerDomain** and listed **CoDomains**. S1000D publication produces unique **DMCs**; domain aliases always point to the canonical DMC.
-
-> **Numbering rules (non‑exclusive).**
->
-> 1. Each **CE** begins with its **ATA iSpec 2200 (SNS)**.
-> 2. **An ATA chapter may belong to multiple domains** (non‑exclusive mapping).
-> 3. To avoid duplication, each CE declares a canonical **OwnerDomain** and listed **CoDomains**; other domain indices link to the canonical CE (alias/symlink).
-> 4. Non‑ATA wrappers live only at **DI**.
-
-* **AAA** (Airframe & Aerodynamics)
-
-  * **ATA 04** — Airworthiness Limitations (ALS/SSID) → [CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-04-AIRWORTHINESS-LIMITS)
-  * **ATA 05** — Time Limits & Maintenance Checks → [CE-CAD-Q100-AAA-ATA-05-TIME-LIMITS-CHECKS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-05-TIME-LIMITS-CHECKS)
-  * **ATA 02** — Weight & Balance → [CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE)
-  * **ATA 06** — Dimensions & Areas → [CE-CAD-Q100-AAA-ATA-06-DIMENSIONS-AREAS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-06-DIMENSIONS-AREAS)
-  * **ATA 07** — Lifting & Shoring → [CE-CAD-Q100-AAA-ATA-07-LIFTING-SHORING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-07-LIFTING-SHORING)
-  * **ATA 08** — Leveling & Weighing → [CE-CAD-Q100-AAA-ATA-08-LEVELING-WEIGHING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-08-LEVELING-WEIGHING)
-  * **ATA 09** — Towing & Taxiing → [CE-CAD-Q100-AAA-ATA-09-TOWING-TAXIING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-09-TOWING-TAXIING)
-  * **ATA 11** — Placards & Markings → [CE-CAD-Q100-AAA-ATA-11-PLACARDS-MARKINGS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-11-PLACARDS-MARKINGS)
-  * **ATA 18** — Vibration & Noise (incl. GVT) → [CE-CAD-Q100-AAA-ATA-18-VIBRATION-NOISE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-18-VIBRATION-NOISE)
-  * **ATA 20** — Standard Practices (Airframe) → [CE-CAD-Q100-AAA-ATA-20-STANDARD-PRACTICES](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-20-STANDARD-PRACTICES)
-  * **ATA 50** — Cargo/Accessory Compartments → [CE-CAD-Q100-AAA-ATA-50-CARGO-ACCESS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-50-CARGO-ACCESS)
-  * **ATA 51** — Standard Practices — Structures → [CE-CAD-Q100-AAA-ATA-51-STRUCTURES](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-51-STRUCTURES)
-  * **ATA 52** — Doors → [CE-CAD-Q100-AAA-ATA-52-DOORS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-52-DOORS)
-  * **ATA 53** — Fuselage → [CE-CAD-Q100-AAA-ATA-53-FUSELAGE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-53-FUSELAGE)
-  * **ATA 54** — Nacelles/Pylons → [CE-CAD-Q100-AAA-ATA-54-NACELLES-PYLONS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-54-NACELLES-PYLONS)
-  * **ATA 55** — Stabilizers → [CE-CAD-Q100-AAA-ATA-55-STABILIZERS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-55-STABILIZERS)
-  * **ATA 56** — Windows → [CE-CAD-Q100-AAA-ATA-56-WINDOWS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-56-WINDOWS)
-  * **ATA 57** — Wings → [CE-CAD-Q100-AAA-ATA-57-WINGS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/CE-CAD-Q100-AAA-ATA-57-WINGS)
-
-* **MMM** (Mechanical & Material Monitoring)
-
-  * **ATA 26** — Fire Protection → [CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-26-FIRE-PROTECTION-MON)
-  * **ATA 27** — Flight Controls → [CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-27-FLIGHT-CONTROLS-MON)
-  * **ATA 29** — Hydraulic Power → [CE-CAD-Q100-MMM-ATA-29-HYDRAULIC-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-29-HYDRAULIC-MON)
-  * **ATA 32** — Landing Gear → [CE-CAD-Q100-MMM-ATA-32-LG-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-32-LG-MON)
-  * **ATA 36** — Pneumatic → [CE-CAD-Q100-MMM-ATA-36-PNEUMATIC-MON](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-36-PNEUMATIC-MON)
-  * **ATA 53** — Fuselage SHM → [CE-CAD-Q100-MMM-ATA-53-SHM-FUSELAGE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-53-SHM-FUSELAGE)
-  * **ATA 57** — Wing SHM → [CE-CAD-Q100-MMM-ATA-57-SHM-WING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/MMM-MECHANICAL_MATERIAL_MONITORING/CE-CAD-Q100-MMM-ATA-57-SHM-WING)
-
-* **EEE** (Environmental & Circularity)
-
-  * **ATA 12** — Servicing — Routine Maintenance → [CE-CAD-Q100-EEE-ATA-12-SERVICING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-12-SERVICING)
-  * **ATA 21** — Air Conditioning → [CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-21-ENV-AIRCOND)
-  * **ATA 36** — Pneumatic (Bleed Mgmt) → [CE-CAD-Q100-EEE-ATA-36-BLEED-MGMT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-36-BLEED-MGMT)
-  * **ATA 38** — Water & Waste → [CE-CAD-Q100-EEE-ATA-38-WATER-WASTE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-38-WATER-WASTE)
-  * **ATA 49** — APU (Energy Recovery) → [CE-CAD-Q100-EEE-ATA-49-APU-ENERGY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EEE-ENVIRONMENTAL_REMEDIATION_CIRCULARITY/CE-CAD-Q100-EEE-ATA-49-APU-ENERGY)
-
-* **DDD** (Defence/Cyber/Safety)
-
-  * **ATA 23** — Communications Security → [CE-CAD-Q100-DDD-ATA-23-COMMS-SEC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-23-COMMS-SEC)
-  * **ATA 31** — Indicating/Recording (Security) → [CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-31-RECORDING-ASSURE)
-  * **ATA 34** — Navigation Integrity → [CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-34-NAV-INTEGRITY)
-  * **ATA 45** — EWIS Safety → [CE-CAD-Q100-DDD-ATA-45-EWIS-SAFETY](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-45-EWIS-SAFETY)
-  * **ATA 46** — Information Systems Security → [CE-CAD-Q100-DDD-ATA-46-INFOSYS-SEC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA-46-INFOSYS-SEC)
-  * **ATA 42 (Spec)** — Digital Information Security Baseline → [CE-CAD-Q100-DDD-ATA42-SPEC-CYBER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/DDD-DEFENCE_CYBERSECURITY_SAFETY/CE-CAD-Q100-DDD-ATA42-SPEC-CYBER) (Spec 42 mapping)
-
-* **EER** (Energy & Renewable)
-
-  * **ATA 24** — Electrical Power → [CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER)
-  * **ATA 36** — Pneumatic (Energy) → [CE-CAD-Q100-EER-ATA-36-PNEUMATIC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-36-PNEUMATIC)
-  * **ATA 49** — APU → [CE-CAD-Q100-EER-ATA-49-APU](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-49-APU)
-  * **ATA 73** — Engine Fuel & Control (H₂) → [CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL)
-
-* **OOO** (Operating Systems, Navigation, HPC)
-
-  * **ATA 22** — Auto Flight → [CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-22-AUTOFLIGHT)
-  * **ATA 23** — Communications → [CE-CAD-Q100-OOO-ATA-23-COMMS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-23-COMMS) *(CoDomains: EDI, LCC, DDD)*
-  * **ATA 31** — Indicating/Recording → [CE-CAD-Q100-OOO-ATA-31-INDICATING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-31-INDICATING) *(CoDomains: EDI, IIS)*
-  * **ATA 34** — Navigation → [CE-CAD-Q100-OOO-ATA-34-NAV](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-34-NAV) *(CoDomains: IIS, LCC, DDD)*
-  * **ATA 46** — Information Systems → [CE-CAD-Q100-OOO-ATA-46-INFOSYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/CE-CAD-Q100-OOO-ATA-46-INFOSYS) *(CoDomains: EDI, IIS)*
-
-* **PPP** (Propulsion & Fuels)
-
-  * **ATA 70** — Std Practices Powerplant → [CE-CAD-Q100-PPP-ATA-70-STD-PRACT-PP](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-70-STD-PRACT-PP)
-  * **ATA 71** — Powerplant → [CE-CAD-Q100-PPP-ATA-71-POWERPLANT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-71-POWERPLANT)
-  * **ATA 72** — Engine — Turbine → [CE-CAD-Q100-PPP-ATA-72-ENGINE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-72-ENGINE)
-  * **ATA 73** — Engine Fuel & Control → [CE-CAD-Q100-PPP-ATA-73-FUEL-CONTROL](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-73-FUEL-CONTROL) *(CoDomains: EER, CQH)*
-  * **ATA 74** — Ignition → [CE-CAD-Q100-PPP-ATA-74-IGNITION](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-74-IGNITION)
-  * **ATA 75** — Air → [CE-CAD-Q100-PPP-ATA-75-AIR](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-75-AIR) *(CoDomain: EER)*
-  * **ATA 76** — Engine Controls → [CE-CAD-Q100-PPP-ATA-76-CONTROLS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-76-CONTROLS)
-  * **ATA 77** — Engine Indicating → [CE-CAD-Q100-PPP-ATA-77-INDICATING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-77-INDICATING) *(CoDomains: EER, IIS)*
-  * **ATA 78** — Exhaust → [CE-CAD-Q100-PPP-ATA-78-EXHAUST](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-78-EXHAUST)
-  * **ATA 79** — Oil → [CE-CAD-Q100-PPP-ATA-79-OIL](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-79-OIL)
-  * **ATA 80** — Starting → [CE-CAD-Q100-PPP-ATA-80-STARTING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUELS/CE-CAD-Q100-PPP-ATA-80-STARTING) *(CoDomain: LIB-S2000 for parts flow)*
-
-* **EDI** (Electronics & Digital Instruments)
-
-  * **ATA 23** — Communications → [CE-CAD-Q100-EDI-ATA-23-COMMS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-23-COMMS)
-  * **ATA 31** — Indicating/Recording → [CE-CAD-Q100-EDI-ATA-31-DISPLAYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-31-DISPLAYS)
-  * **ATA 33** — Lights → [CE-CAD-Q100-EDI-ATA-33-LIGHTS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-33-LIGHTS) *(CoDomain: EER for energy)*
-  * **ATA 45** — EWIS → [CE-CAD-Q100-EDI-ATA-45-EWIS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-45-EWIS)
-  * **ATA 46** — Information Systems → [CE-CAD-Q100-EDI-ATA-46-INFOSYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-46-INFOSYS)
-
-* **LIB** (Logistics & Blockchain)
-
-  * **ATA Spec 2000** — Book 1 Provisioning → [CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK1-PROVISIONING) *(CoDomains: IIF, AAP)*
-  * **ATA Spec 2000** — Book 2 Procurement → [CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK2-PROCUREMENT)
-  * **ATA Spec 2000** — Book 7 AIDC/RFID → [CE-CAD-Q100-LIB-S2000-BK7-AIDC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2000-BK7-AIDC) *(CoDomains: LCC, EDI)*
-  * **ATA Spec 2500** — Electronic Transfer Records → [CE-CAD-Q100-LIB-S2500-TRANSFER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LIB-LOGISTICS_INTEGRATED_BLOCKCHAIN/CE-CAD-Q100-LIB-S2500-TRANSFER) *(CoDomains: AAP, IIF)*
-
-* **LCC** (Links/Comms/Control/IoT)
-
-  * **ATA 23** — Communications Network → [CE-CAD-Q100-LCC-ATA-23-NETWORK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-23-NETWORK)
-  * **ATA 34** — Navigation Data Links → [CE-CAD-Q100-LCC-ATA-34-DATALINK](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-34-DATALINK)
-  * **ATA 46** — Information Systems (IoT) → [CE-CAD-Q100-LCC-ATA-46-IOT](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/LCC-LINKS_COMMUNICATIONS_CONTROL_IoT/CE-CAD-Q100-LCC-ATA-46-IOT)
-
-* **IIF** (Infrastructures & Facilities)
-
-  * **ATA 09** — Towing Facilities → [CE-CAD-Q100-IIF-ATA-09-TOWING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-09-TOWING)
-  * **ATA 10** — Parking/Mooring → [CE-CAD-Q100-IIF-ATA-10-PARKING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-10-PARKING)
-  * **ATA 49** — APU Ground Interfaces → [CE-CAD-Q100-IIF-ATA-49-APU-GROUND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIF-INFRASTRUCTURES_AND_FACILITIES_VALUE_CHAINS/CE-CAD-Q100-IIF-ATA-49-APU-GROUND)
-
-* **CCC** (Cockpit/Cabin/Cargo)
-
-  * **ATA 25** — Equipment/Furnishings → [CE-CAD-Q100-CCC-ATA-25-EQUIP-FURN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS/CE-CAD-Q100-CCC-ATA-25-EQUIP-FURN)
-  * **ATA 35** — Oxygen → [CE-CAD-Q100-CCC-ATA-35-OXYGEN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS/CE-CAD-Q100-CCC-ATA-35-OXYGEN)
-  * **ATA 38** — Water/Waste → [CE-CAD-Q100-CCC-ATA-38-WATER-WASTE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS/CE-CAD-Q100-CCC-ATA-38-WATER-WASTE)
-  * **ATA 44** — Cabin Systems → [CE-CAD-Q100-CCC-ATA-44-CABIN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CCC-COCKPIT_CABIN_CARGO_SYSTEMS/CE-CAD-Q100-CCC-ATA-44-CABIN)
-
-* **CQH** (Cryogenics/Quantum/H₂ Cells)
-
-  * **ATA 28** — Fuel (LH₂ distribution) → [CE-CAD-Q100-CQH-ATA-28-FUEL-LH2](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-28-FUEL-LH2)
-  * **ATA 36** — Pneumatic (purge) → [CE-CAD-Q100-CQH-ATA-36-PURGE](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-36-PURGE)
-  * **ATA 35** — Oxygen (cryogenic interfaces) → [CE-CAD-Q100-CQH-ATA-35-OXYGEN](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-35-OXYGEN)
-  * **ATA 73** — Engine Fuel/Control (H₂) → [CE-CAD-Q100-CQH-ATA-73-H2-ENGINE-FUEL](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/CE-CAD-Q100-CQH-ATA-73-H2-ENGINE-FUEL)
-
-* **IIS** (Intelligent Systems On‑board AI)
-
-  * **ATA 22** — Auto Flight (AI control assist) → [CE-CAD-Q100-IIS-ATA-22-AI-AF](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-22-AI-AF)
-  * **ATA 31** — Indicating/Recording (AI analytics) → [CE-CAD-Q100-IIS-ATA-31-AI-IR](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-31-AI-IR)
-  * **ATA 34** — Navigation (AI assistance) → [CE-CAD-Q100-IIS-ATA-34-AI-NAV](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-34-AI-NAV)
-  * **ATA 46** — Information Systems (AI/RTOS) → [CE-CAD-Q100-IIS-ATA-46-AI-RTOS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-46-AI-RTOS)
-
-* **AAP** (Airports Adaptations)
-
-  * **ATA 09** — Ground Handling → [CE-CAD-Q100-AAP-ATA-09-GROUND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-09-GROUND)
-  * **ATA 10** — Parking/Mooring → [CE-CAD-Q100-AAP-ATA-10-PARKING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-10-PARKING)
-  * **ATA 49** — GPU/Power Interfaces → [CE-CAD-Q100-AAP-ATA-49-GPU](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-49-GPU)
-
----
-
-> **S1000D binding.** For each **CE**, the publication pipeline will instantiate **DMRL** entries and generate **DMCs** with `MIC=Q100`, `SNS=<ATA>`, `DC/IC/ICV` per content type (e.g., Description, Removal/Installation, Test, Fault Isolation), and register them under the DI.
-
-### **ATA ↔ Domains — Cross‑matrix (excerpt)**
-
-| ATA       | Short description             | OwnerDomain | CoDomains     |
-| --------- | ----------------------------- | ----------- | ------------- |
-| 02        | Weight & Balance              | AAA         | —             |
-| 06        | Dimensions & Areas            | AAA         | —             |
-| 11        | Placards & Markings           | AAA         | CCC           |
-| 18        | Vibration & Noise             | AAA         | MMM           |
-| 20        | Standard Practices (Airframe) | AAA         | DDD           |
-| 23        | Communications                | OOO         | EDI, LCC, DDD |
-| 24        | Electrical Power              | EER         | EDI           |
-| 28        | Fuel (LH₂)                    | CQH         | PPP, EER      |
-| 31        | Indicating/Recording          | OOO         | EDI, IIS      |
-| 34        | Navigation                    | OOO         | IIS, LCC, DDD |
-| 36        | Pneumatic                     | EER         | EEE, MMM, CQH |
-| 38        | Water & Waste                 | EEE         | CCC           |
-| 42 (Spec) | Digital Info Security         | DDD         | OOO, LCC, EDI |
-| 45        | EWIS                          | DDD         | EDI, LCC, AAA |
-| 46        | Information Systems           | OOO         | EDI, IIS      |
-| 49        | APU                           | EER         | IIF, AAP      |
-| 70–80     | Powerplant suite              | PPP         | EER, CQH, IIS |
-| S2000     | e-Business backbone           | LIB         | LCC, EDI      |
-| S2500     | Asset transfer records        | LIB         | AAP, IIF      |
-
-> **Note:** This matrix is **not exhaustive**; the source of truth is the CE **owner** (canonical path). **CoDomains** link via alias.
-
-### Phase 2 — **CA‑OPTIMISED** (Restoration & Evolution Flow)
-
-**CA‑OPTIMISED** (Restoration & Evolution Flow) All pillars/domains mirror **Phase 1** structure. Links begin at:
-
-* CAD‑DESIGN root:
-  [https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN/H2-BWB-Q100-CONF0000/](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAD-DESIGN/H2-BWB-Q100-CONF0000/)
-* CAE‑ENGINEERING root:
-  [https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAE-ENGINEERING/H2-BWB-Q100-CONF0000/](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAE-ENGINEERING/H2-BWB-Q100-CONF0000/)
-* … and similarly for CAO, CAP, CAT, CAM, CAI, CAS, CAEV under `CA‑OPTIMISED/`.
-
-> **Note:** Where feasible, Phase 2 artifacts reference Phase 1 evidence via DET cross‑links to maintain a continuous, verifiable digital thread.
-
----
-
-## Governance & Compliance (concise)
-
-* **Safety & Systems:** ARP4754A, ARP4761, DO‑178C, DO‑254, DO‑297
-* **Airworthiness:** EASA CS‑25 / FAA 14 CFR Part 25 (applicable sub‑parts)
-* **Security:** DO‑326A/ED‑202A, NIST SP 800‑53
-* **Sustainability:** ISO 14001, CSRD, GRI
-* **Quality:** AS9100, ISO 9001
-* **Supportability:** MSG‑3, ATA iSpec 2200/S1000D
-
-## Contribution & Contact
-
-* **Issues & Roadmap:** use GitHub Issues/Projects in the public repositories.
-* **Speaking/Advisory:** via LinkedIn.
-* **Licensing:** unless otherwise specified, MIT for code; documentation under CC BY‑SA 4.0.
-
-## Conclusion
-
-This is intentionally not a vanity portfolio. It is a **manifesto plus blueprint**: standards‑first architecture, risk‑aware design, and a live evidence thread that makes innovation certifiable. The same rigor that convinces auditors also convinces engineers and investors.
-
----
-
-## Acronyms
-
-| Acronym                     | Expansion                                                               | Note                                                    |
-| --------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------- |
-| **UTCS‑MI**                 | Universal Technical Communication Standard – Model Interface v5.0       | 13-field header; used across all artifacts              |
-| **UniversalStandard**       | UTCS‑MI header label                                                    | Must remain exact; English fields used                  |
-| **CAX**                     | Lifecycle pillar (CAD/CAE/CAO/CAP/CAT/CAM/CAI/CAS/CAEV)                 | Used in IDs and folders                                 |
-| **MIC**                     | Model Identification Code                                               | e.g., **Q100**                                          |
-| **CONF**                    | Configuration code                                                      | e.g., **CONF0000**                                      |
-| **DI**                      | Domain Invariant                                                        | Domain root (owner of numbering & aliases)              |
-| **CE**                      | Configuration Envelope                                                  | ATA‑anchored scope (ATA SNS)                            |
-| **CC**                      | Component Cell                                                          | Subsystem (ATA CC‑SS)                                   |
-| **CI**                      | Component Item                                                          | Installable/maintainable item (ATA CC‑SS‑SS)            |
-| **CP**                      | Component Particle                                                      | PBS leaf / variant                                      |
-| **ATA SNS**                 | ATA iSpec 2200 Subject Numbering System                                 | CC‑SS‑SS hierarchy                                      |
-| **PBS**                     | Product Breakdown Structure                                             | Product tree; owner at CI/CP                            |
-| **EBOM / MBOM**             | Engineering / Manufacturing Bill of Materials                           | EBOM = intent; MBOM = routing/resources/QA/kits         |
-| **WBS**                     | Work Breakdown Structure                                                | For PBS/WBS cross‑refs                                  |
-| **DET**                     | Digital Evidence Twin                                                   | Write‑once evidence packs (save/run/publish)            |
-| **DMRL / DMC**              | Data Module Requirements List / Data Module Code                        | **Downstream** generation (not in CAD tree)             |
-| **QAL**                     | Quantum Abstraction Layer                                               | Safe interface for quantum offload                      |
-| **RTOS**                    | Real‑Time Operating System                                              | GAIA AIR RTOS (ARINC 653)                               |
-| **IMA**                     | Integrated Modular Avionics                                             | Partitioned avionics architecture                       |
-| **DAL**                     | Design Assurance Level                                                  | Certification criticality                               |
-| **IPD**                     | Illustrated Parts Data                                                  | Optional bridge from CP                                 |
-| **AIDC**                    | Automatic Identification & Data Capture                                 | Spec 2000 Book 7                                        |
-| **SBOM / SLSA**             | Software Bill of Materials / Supply‑chain Levels for Software Artifacts | Security & provenance                                   |
-| **ESG / KPI**               | Environmental, Social, Governance / Key Performance Indicator           | CADET metrics                                           |
-| **MRO / EoL**               | Maintenance, Repair & Overhaul / End of Life                            | Sustainment context                                     |
-| **OwnerDomain / CoDomains** | Canonical owner / referencing domains                                   | ATA is **non‑exclusive**; aliases point to canonical CE |
-| **GAIA AIR Infranet**       | Deterministic secure comms                                              | Intra‑ecosystem data plane                              |
-
-## Glossary (selected)
-
-* **OwnerDomain / CoDomains** — Canonical domain that owns a CE, and other domains that reference it via alias/symlink.
-* **Subject Numbering System (SNS)** — ATA iSpec 2200 hierarchical numbering (e.g., 53‑10‑01) used to anchor CE names.
-* **Data Module Code (DMC)** — S1000D identifier: `<MIC>-<ATA SNS>-<DC>-<IC>-<ICV>-<LC>-<ISSUE>`.
-* **Evidence pack** — Bundle emitted on save/run/publish with inputs, parameters, outputs, logs, and signature.
-* **Canonical path** — Repository location of the CE owned by the OwnerDomain.
-* **Alias** — Pointer from CoDomain indices to the canonical CE (no duplication of content).
-
----
-
-### Versioning
-
-* **This file:** v1.0.0
-* **Change log:** Introduced UTCS‑MI v5.0 identifier; added TL;DR; consolidated index; added Mermaid lifecycle diagram; normalized terminology.
-
-## Appendix — Proof Points & DET↔CADET Matrix
-
-**Objective.** Show how each CAX artifact emits evidence (DET) and how **CADET** audits it into circularity and sustainability KPIs.
-
-### A1. Proof Points (representative samples)
-
-| Pillar (CAX) | Representative Artifact                                          | DET evidence (id · hash · sig)                     | Evidence Triggers               | CADET KPIs (example)                                         | Proof Point                                        |
-|--------------|------------------------------------------------------------------|----------------------------------------------------|---------------------------------|--------------------------------------------------------------|----------------------------------------------------|
-| **CAD**      | `.../CAD-DESIGN/.../AAA/.../CI-...-53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` · Ed25519 | Save model, Rev bump, MBOM sync | **Reuse% 42**, CO₂-saved **120 kg**, Energy-saved **38 kWh** | Rework mass reduction in CB Grid via feature reuse |
-| **CAE**      | `.../CAE-ENGINEERING/.../GLOBAL-FEM-LOADS-ANALYSIS/`             | `DET:CAE:FEM:GLB-V5` · `bb12c4…` · Dilithium2      | Solver run, Mesh QC≥0.9         | ΔMargin **+0.12**, Reproducibility **100%**                  | Margin closure with no weight penalty              |
-| **CAM**      | `.../CAM-MANUFACTURING/.../FAI-REPORT/`                          | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…` · Ed25519     | FAI OK, SPC within Cp/Cpk       | Scrap **−22%**, Rework **−18%**                              | Scrap reduction via “as-designed” kit              |
-| **CAI**      | `.../CAI/.../ICD/INSTALLATION-RECORDS/`                          | `DET:CAI:ICD:V4` · `77aa99…` · Ed25519             | ICD sign, Install flight-auth   | Integration-defects **0**, Integration time **−30%**         | First-time-right integration                       |
-| **CAS**      | `.../CAS-SUSTAINMENT/.../SERVICE-BULLETIN/`                      | `DET:CAS:SB:Q100-53-10` · `ff09ab…` · Ed25519      | SB issue, Config update         | MTBF **+28%**, Availability **0.98**                         | Life extension post-reinforcement                  |
-| **CAT**      | `.../CAT-SOURCE_CODE_SYSTEMS/AQUA-OS_BRIDGE/v22.0/`              | `DET:CAT:SBOM:CYCLONEDX-V1` · `d0c0de…` · Ed25519  | SBOM gen, Sig ok, CI pass       | SBOM-Coverage **92%**, Vuln-fix SLA **<7d**                  | Supply-chain traceability ready for audit          |
-
-> **Evidence Triggers:** every transition “guardar/ejecutar/publicar” emite un *evidence pack* (inputs, parámetros, outputs, logs, firma).
-> **Auditable proof:** if there is no DET, it didn’t happen.
-
----
-
-### A2. DET→CADET KPI Map (what CADET calculates per CAX)
-
-| CAX     | DET fields consumed                             | CADET KPIs (examples)                                          |
-| ------- | ----------------------------------------------- | -------------------------------------------------------------- |
-| **CAD** | `rev`, `author`, `bom.delta`, `footprint.delta` | %Reuse (features / MBOM), Δweight, Δcost, decision lead‑time   |
-| **CAE** | `meshQ`, `seed`, `cases`, `margins`             | Case coverage, Reproducibility, Δmargin vs req., solver QoR    |
-| **CAM** | `FAI`, `SPC`, `trace.lot`, `asRun`              | Scrap%, Rework%, Cp/Cpk, OEE                                   |
-| **CAI** | `icd.rev`, `install.log`, `tests`               | Integration incidents, Integration time, %validated interfaces |
-| **CAS** | `wo.close`, `sensor.trend`, `config.delta`      | MTBF/MTBUR, MRO TAT, Availability, EoL extension               |
-| **CAT** | `sbom`, `slsa`, `sign`, `vuln`                  | SBOM coverage, vulnerability SLA, signature integrity          |
-
-
-
----
-
-### A3. Mini‑Dashboard (static reference)
-
-**Circularity (latest snapshot):**
-
-* **Reuse%:** 42% (target 35%)
-* **CO₂ saved:** 120 kg
-* **Energy saved:** 38 kWh
-* **EoL postponed:** +14 months
-
-```mermaid
-flowchart TD
-  DET[Digital Evidence Twin] -->|signed packs| CADET[CADET Auditor]
-  CADET -->|KPIs| Dash[Circularity & Sustainability Dashboard]
-  subgraph KPIs
-    R[% Reuse]
-    C[CO₂ saved]
-    E[Energy saved]
-    L[Life extension]
-  end
-  Dash --> R & C & E & L
-```
-
-> **How to update data:** the dashboard reads DET aggregates (`sbom, bom.delta, asRun, sensor.trend`). CADET recalculates KPIs with each pack and sets the snapshot by version/date and **CONF** (e.g., `Q100‑CONF0000`).
-
----
-
-### A4. Evidence format (minimum schema)
-
-```json
-{
-  "det_id": "DET:CAM:FAI:CB-ASSY-V3",
-  "ts": "2025-08-31T12:04:55Z",
-  "inputs": { "ref": "CI-...-PRIMARY-GRID", "rev": "C" },
-  "processing": { "tool": "AQUA-OS:cam-ci@22.0", "params": { "spc": ["Cp","Cpk"] }},
-  "outputs": { "faiv": "OK", "cp": 1.37, "cpk": 1.21 },
-  "hash": "ccaa11...",
-  "sig": { "alg": "Ed25519", "by": "build-bot@gaia" }
-}
+  DI[Domain Invariant] --> CE[Configuration Envelope (ATA CC-SS[-SS])]
+  CE --> CC[Component Cell (ATA CC-SS)]
+  CC --> CI[Component Item (ATA CC-SS-SS)]
+  CI --> CP[Component Particle (PBS leaf)]
 ```
 
 ---
 
-### A5. DET Event Cheatsheet (optional)
+## Trenzado de certificación (QAL‑aware)
 
-**Objective.** Standardize DET events emitted by AQUA‑OS/GAIA AIR INFRANET so all evidence packs share the same shape.
+* **ARP4754A/4761**: CAB/CAD (asignación/validación) · CAV (matriz de verificación).
+* **DO‑178C / DO‑254**: CAD/CAE/CAT/CAV (planes/revisiones/pruebas); **DET** guarda cobertura y V\&V.
+* **S1000D / iSpec 2200**: **CAS** publica IETP/IETM + IPD (UTCS‑tagged).
+* **CS‑25**: CAV emite conformidad; CAM/CAP evidencian FAI/PC.
 
-| Event                    | `det_id` (pattern)               | Typical trigger                  | Minimum fields                                                                          | Signature          |
-| ------------------------ | -------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- | ------------------ |
-| `save_model`             | `DET:CAD:<DI/CE/CA/CI>:V<rev>`   | Save CAD / revision bump         | `ts, inputs.ref, inputs.rev, processing.tool, outputs.rev, hash, sig`                   | Ed25519            |
-| `solver_run`             | `DET:CAE:<solver>:<case>-V<rev>` | Solver execution, `meshQ≥0.9`    | `ts, inputs.meshQ, processing.params, outputs.margins, reproducibility.seed, hash, sig` | Dilithium2/Ed25519 |
-| `ci_build`               | `DET:CAT:CI:<mod>-V<rev>`        | Build CI/CD successful           | `ts, inputs.commit, processing.tool, outputs.artifacts[], tests.passed, hash, sig`      | Ed25519            |
-| `sbom_generate`          | `DET:CAT:SBOM:<spec>-V<rev>`     | SBOM generation and verification | `ts, inputs.repo, outputs.sbom, slsa.level, vuln.summary, hash, sig`                    | Ed25519            |
-| `install_signoff`        | `DET:CAI:ICD:<sys>-V<rev>`       | Installation and ICD sign‑off    | `ts, inputs.icd.rev, install.log, tests, outputs.status, hash, sig`                     | Ed25519            |
-| `service_bulletin_issue` | `DET:CAS:SB:<area>-V<rev>`       | SB issuance / config update      | `ts, inputs.config.delta, outputs.sb.id, wo.refs[], mtbf.delta, hash, sig`              | Ed25519            |
+---
 
-**Event skeleton (template):**
+## Pruebas de valor (muestras, con ancla de evidencia)
 
-```json
-{
-  "det_id": "DET:<CAX>:<topic>:<tag>-V<rev>",
-  "ts": "<ISO8601>",
-  "inputs": { /* references to CIs, commits, BOM/MBOM, etc. */ },
-  "processing": { "tool": "<stack@version>", "params": { /* contextual keys */ }},
-  "outputs": { /* key metrics and artifacts */ },
-  "hash": "<sha256/keccak>",
-  "sig": { "alg": "Ed25519|Dilithium2", "by": "<actor@domain>" }
-}
-```
+| Pilar   | Artefacto                             | Evidencia DET                            | Disparador         | KPI (CADET)                                         |
+| ------- | ------------------------------------- | ---------------------------------------- | ------------------ | --------------------------------------------------- |
+| **CAD** | CI `.../53-10-01-CB-PRIMARY-GRID/` v2 | `DET:CAD:Q100:53-10:CB:V2` · `a9f3d2e1…` | Save/Rev/MBOM sync | Reuse **42%**, CO₂ **−120 kg**, energía **−38 kWh** |
+| **CAE** | Global FEM Loads                      | `DET:CAE:FEM:GLB-V5` · `bb12c4…`         | solver\_run        | ΔMargen **+0.12**, Repro **100%**                   |
+| **CAM** | FAI CB Assy                           | `DET:CAM:FAI:CB-ASSY-V3` · `ccaa11…`     | FAI OK, SPC        | Scrap **−22%**, Rework **−18%**                     |
 
+> Si no hay **DET**, no pasó.
 
+---
+
+## Gobernanza & Cumplimiento (conciso)
+
+* **Seguridad/Sistemas:** ARP4754A, ARP4761, DO‑178C, DO‑254, DO‑297
+* **Aerocertificación:** EASA CS‑25 / FAA 14 CFR Part 25
+* **Seguridad info.:** DO‑326A/ED‑202A, NIST SP 800‑53
+* **Sostenibilidad:** ISO 14001, CSRD, GRI
+* **Calidad:** AS9100, ISO 9001
+* **Soportabilidad:** MSG‑3, ATA iSpec 2200/S1000D
+
+---
+
+## Contribución & Contacto
+
+* **Issues & Roadmap:** GitHub Issues/Projects (repos públicos).
+* **Charlas/Advisory:** LinkedIn.
+* **Licencias:** Código MIT; documentación CC BY‑SA 4.0 salvo indicación.
+
+---
+
+## Acrónimos (curado para UTCS‑MI)
+
+| Acrónimo              | Expansión                                                         | Nota                                                                           |
+| --------------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **UTCS‑MI**           | Universal Technical Communication Standard — Model Interface v5.0 | Cabecera de 13 campos                                                          |
+| **EstándarUniversal** | Etiqueta de cabecera UTCS‑MI                                      | Debe ser exacta; **Generación/Periodo en español**; Capítulo‑Sección = `NN.NN` |
+| **CAX**               | Pilares ciclo (CAD/CAE/CAO/CAP/CAT/CAM/CAI/CAS/CAEV)              | Uso libre en cuerpo (no en campos UTCS)                                        |
+| **DET**               | Digital Evidence Twin                                             | Evidencia firmada                                                              |
+| **QAL**               | Quantum Abstraction Layer / Quantum‑Aided Lifecycle               | Offload seguro (no DAL)                                                        |
+| **RTOS**              | Real‑Time Operating System                                        | GAIA AIR RTOS (ARINC 653)                                                      |
+| **CVaR**              | Conditional Value at Risk                                         | Selección robusta                                                              |
+| **IETP/IETM**         | Interactive Electronic Technical Pub/Manual                       | Solo CAS                                                                       |
+
+---
+
+## Versionado
+
+* **Este archivo:** v1.0.0
+* **Changelog:** Añadido identificador UTCS‑MI v5.0; aviso QAL; evento QAL Bus; límites S1000D; evidencias DET; TL;DR con gates; diagramas Mermaid QAL.
