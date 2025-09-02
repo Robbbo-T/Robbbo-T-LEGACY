@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for EER (CAB-BRAINSTORMING)
+aliases:
+  cqh_integration: "ALIAS:EER:CQH:INTEGRATION-CONCEPTS"
+  ppp_integration: "ALIAS:EER:PPP:INTEGRATION-CONCEPTS"
+  ooo_integration: "ALIAS:EER:OOO:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:EER:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:EER:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:EER:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:EER:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:EER:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:EER:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:EER:MAXENT:NOVELTY-SEARCH"
+

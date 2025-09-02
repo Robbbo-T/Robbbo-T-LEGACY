@@ -149,14 +149,31 @@ graph TD
 <a id="ca-cab"></a>
 ### CAB — Computer Aided Brainstorming
 
-**Descripción:** Ideación y conceptualización asistida por computadora para innovaciones disruptivas.
+**Descripción:** Fase de exploración y génesis conceptual del ecosistema QAL. Traduce necesidades del mercado y objetivos estratégicos en conceptos de solución diversos y evaluados.
 
 | Atributo | Descripción |
 | :--- | :--- |
-| **📋 Alcance** | Genesis de ideas, mapas de convergencia tecnológica, exploración de conceptos |
-| **🎯 Objetivos** | - Explorar configuraciones BWB innovadoras<br>- Integrar tecnologías emergentes (IA, Cuántica, Blockchain)<br>- Optimización multi-objetiva inicial |
-| **📊 KPIs** | Número de conceptos evaluados, viabilidad técnica, potencial disruptivo |
-| **🔗 Outputs** | Mapas conceptuales, matrices de convergencia, propuestas de innovación |
+| **📋 Alcance** | Exploración de espacios de diseño, generación de conceptos, análisis de viabilidad, estudios de trade-off |
+| **🎯 Objetivos** | - Explorar configuraciones BWB innovadoras con algoritmos cuánticos<br>- Generar conceptos multi-burbuja para almacenamiento H₂<br>- Optimizar arquitecturas BLI y ZBO<br>- Seleccionar conceptos prometedores para CAD |
+| **📊 KPIs** | Amplitud de exploración, calidad de conceptos, trazabilidad de requisitos, eficiencia del embudo, confianza cuántica |
+| **🔗 Outputs** | [Selected-Concept-Set.json](C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/), [Rationale-Graph.json](C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/), [Feasibility-Scorecard.csv](C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/), DET:CAB:* |
+
+#### Aumentos Cuánticos para CAB
+- **QML Latent Space Navigation**: Exploración de espacios latentes de diseños con modelos de Machine Learning Cuántico
+- **Grover's Algorithm**: Búsqueda acelerada en bases de datos de patentes y literatura científica
+- **Maximum Entropy Principle**: Generación de conceptos hacia áreas radicalmente diferentes del espacio de diseño
+
+#### Módulos Principales
+1. **Análisis de Necesidades**: Captura estructurada de necesidades de stakeholders y descomposición de objetivos
+2. **Exploración del Espacio de Soluciones**: Búsqueda en bases de datos, mapeo de tecnologías emergentes, arquitecturas morfológicas
+3. **Generación de Conceptos**: Brainstorming digital, síntesis con algoritmos generativos, bocetos de baja fidelidad
+4. **Análisis de Viabilidad**: Evaluaciones preliminares, estudios de trade-off multicriterio, ranking automatizado
+5. **Selección de Conceptos**: Selección de candidatos prometedores, documentación de rationale, transferencia a CAD
+
+#### Desafíos Específicos BWB-Q100
+- **Recipientes de Presión Multi-Burbuja**: Alternativas a cilindros convencionales, configuraciones tetraédricas, células bio-inspiradas
+- **Arquitecturas de Sistema H₂**: Conceptos ZBO (Zero Boil-Off), enfriamiento activo vs. aislamiento pasivo
+- **Integración BLI**: Control de flujo activo, propulsión distribuida, integración aerodinámica
 
 <a id="ca-cad"></a>
 ### CAD — Computer Aided Design

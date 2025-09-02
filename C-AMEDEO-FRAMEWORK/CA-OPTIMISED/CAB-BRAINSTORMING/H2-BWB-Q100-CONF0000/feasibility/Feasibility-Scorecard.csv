@@ -1,0 +1,11 @@
+Concept ID,Type,Technical Feasibility,Economic Viability,Safety Score,Innovation Index,Quantum Confidence,Overall Score
+BWB-Q100-MB-v3.2,Tetrahedral multi-bubble array,8.5,7.2,9.1,9.5,0.87,8.4
+BWB-Q100-TC-v1.1,Twin-cylinder conventional,9.8,9.0,9.5,3.0,0.72,7.8
+BWB-Q100-FC-v2.1,Fractal pressure distribution,6.0,5.5,7.0,10.0,0.62,6.2
+BWB-Q100-BL-v1.3,Bio-inspired cellular,7.2,6.8,8.2,9.8,0.79,7.7
+BWB-Q100-HY-v2.0,Hybrid cylindrical-bubble,8.9,8.1,9.0,6.5,0.81,8.1
+BWB-Q100-AM-v1.0,Additive manufactured,7.5,6.0,7.8,8.9,0.68,7.2
+BWB-Q100-CR-v3.1,Composite reinforced,8.7,7.9,8.8,7.2,0.75,8.2
+BWB-Q100-MD-v1.5,Modular design,8.2,8.5,8.5,8.0,0.77,8.3
+BWB-Q100-IF-v2.2,Integrated fuselage,7.8,7.0,8.0,9.2,0.73,7.8
+BWB-Q100-SC-v1.4,Smart composite,7.0,6.5,7.5,9.5,0.69,7.4

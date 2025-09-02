@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for AAP (CAB-BRAINSTORMING)
+aliases:
+  iif_integration: "ALIAS:AAP:IIF:INTEGRATION-CONCEPTS"
+  lcc_integration: "ALIAS:AAP:LCC:INTEGRATION-CONCEPTS"
+  ppp_integration: "ALIAS:AAP:PPP:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:AAP:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:AAP:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:AAP:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:AAP:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:AAP:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:AAP:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:AAP:MAXENT:NOVELTY-SEARCH"
+

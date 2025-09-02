@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for EEE (CAB-BRAINSTORMING)
+aliases:
+  aaa_integration: "ALIAS:EEE:AAA:INTEGRATION-CONCEPTS"
+  ppp_integration: "ALIAS:EEE:PPP:INTEGRATION-CONCEPTS"
+  mmm_integration: "ALIAS:EEE:MMM:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:EEE:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:EEE:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:EEE:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:EEE:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:EEE:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:EEE:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:EEE:MAXENT:NOVELTY-SEARCH"
+

@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for LCC (CAB-BRAINSTORMING)
+aliases:
+  edi_integration: "ALIAS:LCC:EDI:INTEGRATION-CONCEPTS"
+  ddd_integration: "ALIAS:LCC:DDD:INTEGRATION-CONCEPTS"
+  iif_integration: "ALIAS:LCC:IIF:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:LCC:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:LCC:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:LCC:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:LCC:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:LCC:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:LCC:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:LCC:MAXENT:NOVELTY-SEARCH"
+
