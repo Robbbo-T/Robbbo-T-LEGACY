@@ -258,9 +258,9 @@ quantum_inverse_result = {
 
 **QAOA Topology Optimization**
 The quantum topology optimization discovered non-intuitive reinforcement patterns:
-- Spiral load paths between bubbles (15% weight reduction)
-- Variable thickness zones (8-12mm gradient)
-- Frequency-tuned stiffeners (modal separation achieved)
+- Spiral load paths were created between bubbles, resulting in a 15% weight reduction.
+- Variable thickness zones were implemented, featuring an 8–12mm gradient.
+- Frequency-tuned stiffeners were added, which achieved modal separation.
 
 ## 7. Key CAD Deliverables Timeline
 
