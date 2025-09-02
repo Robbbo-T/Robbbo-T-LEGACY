@@ -1,0 +1,155 @@
+{
+  "det_id": "DET:CAO:BWB:96:strategy_decision:V1",
+  "ts": "2025-01-01T00:00:00Z",
+  "refs": {
+    "ce": "CE-CAO-Q100-BWB-ATA-96-STRATEGIC-DECISION",
+    "ci": "CI-CAO-Q100-BWB-ATA-96-01-STRATEGIC-DECISION-ITEM",
+    "cadet_chain": "CADET:BWB:CAO:V1"
+  },
+  "inputs": {
+    "policy_pack": "sha256:QAL-Policy-Pack.json",
+    "strategic_objectives": "sha256:Strategic-Objectives.yaml",
+    "budget_vector": "sha256:Budget-Vector.json",
+    "risk_register": "sha256:Risk-Register.json",
+    "compliance_matrix": "sha256:Compliance-Matrix.json",
+    "market_analysis": "sha256:BWB-Market-Analysis-2025.json",
+    "technology_readiness": "sha256:TRL-Assessment-H2-BWB.json"
+  },
+  "processing": {
+    "tool": "CAO-Strategic-Decision-Engine",
+    "version": "v1.0",
+    "quantum_optimization": {
+      "algorithm": "QAOA",
+      "backend": "IBM Quantum",
+      "p_layers": 3,
+      "seed": 42,
+      "optimization_time_hours": 12,
+      "convergence_criteria": "Energy variance < 0.001"
+    },
+    "cvar_analysis": {
+      "alpha": 0.95,
+      "monte_carlo_samples": 100000,
+      "risk_scenarios": 1000,
+      "tail_risk_threshold": 0.10
+    },
+    "decision_criteria": {
+      "strategic_alignment": 0.30,
+      "technical_feasibility": 0.25,
+      "financial_viability": 0.25,
+      "risk_tolerance": 0.20
+    }
+  },
+  "outputs": {
+    "units": "EUR,percentage,probability",
+    "metrics": {
+      "program_continuation_probability": 0.92,
+      "expected_roi_percentage": 18.5,
+      "cvar_95_eur": 125000000,
+      "strategic_alignment_score": 0.85,
+      "quantum_optimization_improvement": 0.23
+    },
+    "decisions": {
+      "program_approval": "APPROVED",
+      "budget_allocation": "CONFIRMED",
+      "risk_tolerance": "ACCEPTABLE",
+      "quantum_integration": "FULL_DEPLOYMENT"
+    },
+    "quantum_results": {
+      "qaoa_convergence": true,
+      "optimal_energy": -0.987,
+      "approximation_ratio": 0.94,
+      "circuit_depth": 45,
+      "gate_count": 2340
+    }
+  },
+  "req_trace": [
+    {
+      "req_id": "QAL-STRATEGIC-GOVERNANCE-001",
+      "status": "pass",
+      "evidence": "sha256:strategic-decision-evidence.pdf"
+    },
+    {
+      "req_id": "BWB-PROGRAM-APPROVAL-001",
+      "status": "pass", 
+      "evidence": "sha256:program-approval-document.pdf"
+    },
+    {
+      "req_id": "QUANTUM-OPTIMIZATION-REQ-001",
+      "status": "pass",
+      "evidence": "sha256:quantum-optimization-results.json"
+    }
+  ],
+  "risk": {
+    "cvar_alpha": 0.95,
+    "cvar_value": 0.08,
+    "hazards": ["technical", "financial", "regulatory", "market"],
+    "risk_mitigation": {
+      "primary": "Quantum-enhanced risk optimization",
+      "fallback": "Classical risk management protocols",
+      "monitoring": "Continuous CVaR tracking"
+    }
+  },
+  "quantum": {
+    "algo": "QAOA",
+    "seed": 42,
+    "p": 3,
+    "backend": "hardware",
+    "provider": "IBM Quantum",
+    "quantum_volume": 128,
+    "fidelity": 0.97,
+    "decoherence_time_ms": 100
+  },
+  "pqc_signature": {
+    "alg": "Dilithium3",
+    "sig": "pqc_signature_placeholder_strategic_decision_v1_quantum_verified"
+  },
+  "compliance": {
+    "regulatory_alignment": [
+      "CS-25 Special Conditions preparation",
+      "DO-178C DAL-A software planning",
+      "Environmental compliance framework"
+    ],
+    "audit_trail": "Immutable blockchain anchor",
+    "certification_impact": "Critical path item for Type Certificate"
+  },
+  "sustainability": {
+    "carbon_impact": "Net zero operational emissions target",
+    "circular_design": "Full lifecycle circularity assessment",
+    "social_impact": "Sustainable aviation transformation leadership"
+  },
+  "attachments": [
+    {
+      "name": "Strategic Decision Matrix",
+      "hash": "sha256:strategic-decision-matrix-qaoa-optimized.xlsx",
+      "type": "analysis"
+    },
+    {
+      "name": "Quantum Optimization Report",
+      "hash": "sha256:qaoa-portfolio-optimization-report.pdf", 
+      "type": "quantum_analysis"
+    },
+    {
+      "name": "CVaR Risk Assessment",
+      "hash": "sha256:cvar-tail-risk-analysis.json",
+      "type": "risk_assessment"
+    },
+    {
+      "name": "BWB-Q100 Program Charter",
+      "hash": "sha256:bwb-q100-program-charter-approved.pdf",
+      "type": "governance"
+    }
+  ],
+  "provenance": {
+    "tool": "CAO-Strategic-Decision-Engine",
+    "version": "v1.0",
+    "agent": "GAIA AIR v4.0",
+    "time_utc": "2025-01-01T00:00:00Z",
+    "quantum_provenance": {
+      "quantum_backend_id": "ibm_quebec",
+      "job_id": "qaoa_strategic_optimization_20250101",
+      "calibration_date": "2024-12-30T18:00:00Z",
+      "error_mitigation": "symmetry_verification"
+    }
+  },
+  "hash": "sha256:strategic_decision_det_packet_v1_hash_placeholder"
+}
