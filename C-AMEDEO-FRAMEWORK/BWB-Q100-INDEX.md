@@ -82,9 +82,6 @@ graph TD
 
 ---
 
-<!-- CA phases -->
-<a id="ca-cao"></a> <a id="ca-cab"></a> <a id="ca-cad"></a> <a id="ca-cae"></a> <a id="ca-cat"></a> <a id="ca-cav"></a> <a id="ca-cam"></a> <a id="ca-cap"></a> <a id="ca-cas"></a> <a id="ca-caepost"></a>
-
 <!-- DI→FE per domain: AAA -->
 <a id="di-aaa"></a> <a id="ce-aaa"></a> <a id="cc-aaa"></a> <a id="ci-aaa"></a> <a id="cp-aaa"></a> <a id="fe-aaa"></a>
 
@@ -132,6 +129,130 @@ graph TD
 
 <!-- Main domain anchors -->
 <a id="aaa"></a> <a id="aap"></a> <a id="ccc"></a> <a id="cqh"></a> <a id="ddd"></a> <a id="edi"></a> <a id="eee"></a> <a id="eer"></a> <a id="iif"></a> <a id="iis"></a> <a id="lcc"></a> <a id="lib"></a> <a id="mmm"></a> <a id="ooo"></a> <a id="ppp"></a>
+
+---
+
+## CA (Constituent Article/Artifact) — Fases QAL
+
+<a id="ca-cao"></a>
+### CAO — Computer Aided Organization
+
+**Descripción:** Organización empresarial y estratégica del proyecto BWB-Q100.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Gobernanza, estrategia empresarial, gestión de riesgos, políticas organizacionales |
+| **🎯 Objetivos** | - Definir estructura organizacional para el programa BWB-Q100<br>- Establecer marcos de cumplimiento normativo<br>- Gestión de riesgos financieros y técnicos |
+| **📊 KPIs** | ROI, NPV, cumplimiento regulatorio, gestión de riesgos |
+| **🔗 Outputs** | Políticas organizacionales, matrices de riesgo, planes estratégicos |
+
+<a id="ca-cab"></a>
+### CAB — Computer Aided Brainstorming
+
+**Descripción:** Ideación y conceptualización asistida por computadora para innovaciones disruptivas.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Genesis de ideas, mapas de convergencia tecnológica, exploración de conceptos |
+| **🎯 Objetivos** | - Explorar configuraciones BWB innovadoras<br>- Integrar tecnologías emergentes (IA, Cuántica, Blockchain)<br>- Optimización multi-objetiva inicial |
+| **📊 KPIs** | Número de conceptos evaluados, viabilidad técnica, potencial disruptivo |
+| **🔗 Outputs** | Mapas conceptuales, matrices de convergencia, propuestas de innovación |
+
+<a id="ca-cad"></a>
+### CAD — Computer Aided Design
+
+**Descripción:** Diseño asistido por computadora con enfoque en jerarquía DI→CE→CC→CI→CP.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Modelos 3D, especificaciones técnicas, EBOM/MBOM, configuraciones paramétricas |
+| **🎯 Objetivos** | - Desarrollar diseños detallados BWB-Q100<br>- Establecer jerarquía de productos (PBS)<br>- Optimización de peso y rendimiento |
+| **📊 KPIs** | Δpeso, Δcosto, % reutilización, tiempo de diseño |
+| **🔗 Outputs** | Modelos CAD, planos técnicos, EBOM, especificaciones |
+
+<a id="ca-cae"></a>
+### CAE — Computer Aided Engineering
+
+**Descripción:** Ingeniería y análisis computacional para validación y verificación.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Análisis FEM, CFD, simulaciones multi-física, validación de diseño |
+| **🎯 Objetivos** | - Validar diseño estructural y aerodinámico<br>- Análisis de cargas globales y locales<br>- Certificación de márgenes de seguridad |
+| **📊 KPIs** | Márgenes de seguridad, precisión de modelos, reproducibilidad |
+| **🔗 Outputs** | Reportes de análisis, modelos validados, certificaciones |
+
+<a id="ca-cat"></a>
+### CAT — Computer Aided Tooling and Testing
+
+**Descripción:** Herramientas y pruebas asistidas por computadora.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Pipelines CI/CD, SBOM/SLSA, automatización de pruebas, herramientas de desarrollo |
+| **🎯 Objetivos** | - Implementar DevSecOps para código crítico<br>- Automatización de pruebas y validación<br>- Gestión de vulnerabilidades |
+| **📊 KPIs** | Cobertura SBOM, SLA de vulnerabilidades, tiempo de build |
+| **🔗 Outputs** | Pipelines automatizados, reportes de seguridad, herramientas |
+
+<a id="ca-cav"></a>
+### CAV — Computer Aided V&V and Certification
+
+**Descripción:** Verificación, validación y certificación asistida por computadora.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Matrices de certificación, trazabilidad de requisitos, compliance |
+| **🎯 Objetivos** | - Certificación EASA CS-25/FAA Part 25<br>- Cumplimiento DO-178C/DO-254<br>- Auditoría y trazabilidad completa |
+| **📊 KPIs** | Cobertura de requisitos, auditorías pasadas, tiempo de certificación |
+| **🔗 Outputs** | Certificados, matrices de compliance, reportes de auditoría |
+
+<a id="ca-cam"></a>
+### CAM — Computer Aided Manufacturing
+
+**Descripción:** Manufactura asistida por computadora y control de calidad.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Procesos de fabricación, FAI/SPC, control de calidad, yield optimization |
+| **🎯 Objetivos** | - Optimizar procesos de manufactura BWB<br>- Implementar control estadístico (SPC)<br>- Minimizar scrap y rework |
+| **📊 KPIs** | % scrap, % rework, Cp/Cpk, yield de producción |
+| **🔗 Outputs** | Planes de manufactura, reportes FAI, datos SPC |
+
+<a id="ca-cap"></a>
+### CAP — Computer Aided Plan and Production
+
+**Descripción:** Planificación y producción asistida por computadora.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Logística, MRP/MPS, cadena de suministro, programación de producción |
+| **🎯 Objetivos** | - Optimizar cadena de suministro BWB-Q100<br>- Planificación de recursos y materiales<br>- Gestión de inventarios JIT |
+| **📊 KPIs** | OTD (On-Time Delivery), inventory turns, variación de costos |
+| **🔗 Outputs** | Planes de producción, cronogramas, reportes logísticos |
+
+<a id="ca-cas"></a>
+### CAS — Computer Aided Services and Sustainment
+
+**Descripción:** Servicios y sostenimiento asistido por computadora.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Mantenimiento predictivo (PHM), S1000D IETP/IETM, configuración de estado |
+| **🎯 Objetivos** | - Implementar mantenimiento predictivo<br>- Publicar documentación S1000D<br>- Optimizar disponibilidad operacional |
+| **📊 KPIs** | MTBF/MTBUR, disponibilidad, costos de mantenimiento |
+| **🔗 Outputs** | Manuales S1000D, sistemas PHM, reportes de estado |
+
+<a id="ca-caepost"></a>
+### CAEpost — Computer Aided EoL Post‑treatments
+
+**Descripción:** Tratamientos post-vida útil asistidos por computadora.
+
+| Atributo | Descripción |
+| :--- | :--- |
+| **📋 Alcance** | Reciclaje, recuperación de materiales, economía circular, sostenibilidad |
+| **🎯 Objetivos** | - Maximizar recuperación de valor al final de vida<br>- Implementar economía circular<br>- Minimizar huella de carbono |
+| **📊 KPIs** | % valor recuperado, reducción CO₂e, tasa de reciclaje |
+| **🔗 Outputs** | Planes de desmontaje, reportes de sostenibilidad |
 
 ---
 
