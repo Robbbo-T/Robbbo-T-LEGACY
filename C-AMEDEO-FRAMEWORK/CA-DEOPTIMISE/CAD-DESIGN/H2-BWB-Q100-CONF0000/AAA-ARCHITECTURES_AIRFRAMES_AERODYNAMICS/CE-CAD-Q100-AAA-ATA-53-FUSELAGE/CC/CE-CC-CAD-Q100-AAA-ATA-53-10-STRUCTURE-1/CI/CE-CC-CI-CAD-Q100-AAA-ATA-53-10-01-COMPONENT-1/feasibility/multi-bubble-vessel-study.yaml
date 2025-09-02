@@ -49,9 +49,10 @@ assessment_criteria:
 quantum_optimization:
   algorithm: "QAOA_topology"
   parameters:
+    # depth: Number of QAOA layers (unitless, integer, valid range: 1–10)
     depth: 3
     optimization_target: "weight_stiffness_pareto"
-    backend: "simulator"
+    backend: "qiskit_aer_simulator"  # Specify simulator type for reproducibility
 
 results_summary:
   recommended_configuration: "Tetrahedral_12_Bubble"
