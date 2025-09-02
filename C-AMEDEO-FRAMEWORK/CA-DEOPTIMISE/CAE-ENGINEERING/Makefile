@@ -81,7 +81,7 @@ test: ## Run basic functionality tests
 
 validate: ## Validate YAML files and run linting
 	@echo "🔍 Validating YAML files..."
-	yamllint -s C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAE-ENGINEERING/ || true
+	yamllint -s . || true
 	@echo "🔍 Checking Python syntax..."
 	python -m py_compile $(CVAR_TOOL)
 	python -m py_compile $(CAE_TOOL)
