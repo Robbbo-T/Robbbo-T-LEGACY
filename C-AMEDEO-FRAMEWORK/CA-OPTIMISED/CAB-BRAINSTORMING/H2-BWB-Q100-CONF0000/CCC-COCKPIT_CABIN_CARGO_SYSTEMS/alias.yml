@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for CCC (CAB-BRAINSTORMING)
+aliases:
+  edi_integration: "ALIAS:CCC:EDI:INTEGRATION-CONCEPTS"
+  iis_integration: "ALIAS:CCC:IIS:INTEGRATION-CONCEPTS"
+  ddd_integration: "ALIAS:CCC:DDD:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:CCC:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:CCC:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:CCC:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:CCC:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:CCC:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:CCC:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:CCC:MAXENT:NOVELTY-SEARCH"
+

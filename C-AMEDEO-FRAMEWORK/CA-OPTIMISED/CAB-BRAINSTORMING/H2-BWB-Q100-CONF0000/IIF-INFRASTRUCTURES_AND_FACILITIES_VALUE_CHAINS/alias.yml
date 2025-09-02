@@ -1,0 +1,20 @@
+---
+# Cross-Domain References for IIF (CAB-BRAINSTORMING)
+aliases:
+  aap_integration: "ALIAS:IIF:AAP:INTEGRATION-CONCEPTS"
+  lib_integration: "ALIAS:IIF:LIB:INTEGRATION-CONCEPTS"
+  lcc_integration: "ALIAS:IIF:LCC:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:IIF:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:IIF:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:IIF:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:IIF:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:IIF:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:IIF:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:IIF:MAXENT:NOVELTY-SEARCH"
+
