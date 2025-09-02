@@ -14,13 +14,22 @@ Domain-specific concept exploration for the hydrogen-powered blended wing body c
 ## Examples of Use
 
 ### Quantum Confidence Scores
-![Quantum Confidence](quantum_confidence_bar_chart.png)
+
+```mermaid
+xychart-beta
+    title "Quantum Confidence Scores"
+    x-axis ["AAA-MB-TET-12", "AAA-MB-HEX-8", "AAA-CYL-TWIN"]
+    y-axis "Confidence Score" 0 --> 1
+    bar [0.87, 0.82, 0.95]
+```
 
 ### Trade Study Criteria Scores
-![Trade Study Radar](trade_study_radar_chart.png)
+<img width="600" height="600" alt="generated_image" src="https://github.com/user-attachments/assets/1a790c18-98f2-404c-a59e-343896030378" />
+
 
 ### DET Evidence Flow
-![DET Flow](det_flow_diagram.png)
+<img width="1000" height="600" alt="generated_image (1)" src="https://github.com/user-attachments/assets/17c0e996-1dde-4a7f-85f7-e61efddadbde" />
+
 
 ## FAQ
 
