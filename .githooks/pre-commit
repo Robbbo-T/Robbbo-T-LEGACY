@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# 1) Large files
+max_kb=10240
+files=$(git diff --cached --name-only --diff-filter=AM)
+for f in $files; do
+  [ -f "$f" ] || continue
+  sz=$(wc -c <"$f")
+  if [ "$sz" -gt $((max_kb*1024)) ] && ! git lfs track "$f" >/dev/null 2>&1; then
+    echo "✖ Large file without LFS: $f ($sz bytes)"; exit 1
+  fi
+done
+
+# 2) Secrets (optional if git-secrets installed)
+if command -v git-secrets >/dev/null 2>&1; then
+  git-secrets --scan
+fi
+
+# 3) Syntax
+if command -v jq >/dev/null 2>&1; then
+  git diff --cached --name-only --diff-filter=AM | grep -E '\.json$' | xargs -r jq empty
+fi
+if command -v yamllint >/dev/null 2>&1; then
+  yamllint -s .
+fi
+
+# 4) UTCS‑MI regex check inside changed files
+re='^EstándarUniversal:[^:]+-[^:]+-[A-Z0-9+\-]+-[0-9]{2}\.[0-9]{2}-[A-Z][a-zA-Z0-9]+-[0-9]{4}-v[0-9]+\.[0-9]+-[A-Z][a-zA-Z0-9 ]+-(GeneracionHumana|GeneracionHybrida|GeneracionAuto)-(AIR|SPACE|DEFENSE|GROUND|CROSS)-[^:]+-[a-f0-9]{8}-(RestoDeVidaUtil|[A-Za-z→]+)$'
+grep -Hn "EstándarUniversal:" $files | awk -F: '{print $1":"$2}' | while read -r loc; do
+  file="${loc%:*}"; line="${loc#*:}"
+  val=$(sed -n "${line}p" "$file" | tr -d '
+')
+  echo "$val" | grep -Eq "$re" || { echo "✖ UTCS‑MI invalid in $file:$line"; exit 1; }
+done
+
+# 5) Diff size (excluding docs/)
+added=$(git diff --cached --numstat | awk '!/^-/ && $3 !~ /^docs\// {a+=$1; c+=$2} END {print a+c+0}')
+if [ "${added:-0}" -gt 300 ]; then
+  echo "✖ Staged changes exceed 300 lines (actual: $added). Split the PR."
+  exit 1
+fi
+
+echo "✔ pre-commit checks passed"
