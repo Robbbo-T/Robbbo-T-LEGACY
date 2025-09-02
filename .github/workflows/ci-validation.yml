@@ -11,95 +11,90 @@ on:
 jobs:
   validate-ci-packages:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        lfs: true  # For large CAD files if using Git LFS
-    
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    
-    - name: Install dependencies
-      run: |
-        pip install pyyaml jsonschema
-        sudo apt-get update
-        sudo apt-get install -y jq
-    
-    - name: Find CI packages
-      id: find-ci
-      run: |
-        CI_DIRS=$(find . -type d -name "CE-CC-CI-*" | grep -v ".git")
-        echo "ci_dirs<<EOF" >> $GITHUB_OUTPUT
-        echo "$CI_DIRS" >> $GITHUB_OUTPUT
-        echo "EOF" >> $GITHUB_OUTPUT
-    
-    - name: Validate each CI package
-      run: |
-        for CI_DIR in ${{ steps.find-ci.outputs.ci_dirs }}; do
-          echo "Validating: $CI_DIR"
-          
-          # Check required files exist
-          if [ -f "$CI_DIR/PBS.json" ] && \
-             [ -f "$CI_DIR/EBOM.yaml" ] && \
-             [ -f "$CI_DIR/MBOM.yaml" ]; then
-            
-            # Generate hashes if script exists
-            if [ -f "$CI_DIR/Integrity/generate_hashes.sh" ]; then
-              cd "$CI_DIR"
-              bash Integrity/generate_hashes.sh
-              cd - > /dev/null
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          lfs: true  # For large CAD files if using Git LFS
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml jsonschema
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Find CI packages
+        id: find-ci
+        run: |
+          find . -type d -name "CE-CC-CI-*" | grep -v ".git" > ci_dirs.txt
+          echo "ci_dirs<<EOF" >> $GITHUB_OUTPUT
+          cat ci_dirs.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Validate each CI package
+        run: |
+          while IFS= read -r CI_DIR; do
+            echo "Validating: $CI_DIR"
+            # Check required files exist
+            if [ -f "$CI_DIR/PBS.json" ] && \
+               [ -f "$CI_DIR/EBOM.yaml" ] && \
+               [ -f "$CI_DIR/MBOM.yaml" ]; then
+
+              # Generate hashes if script exists
+              if [ -f "$CI_DIR/Integrity/generate_hashes.sh" ]; then
+                (cd "$CI_DIR" && bash Integrity/generate_hashes.sh)
+              fi
+
+              # Run Python validator if exists
+              if [ -f "$CI_DIR/Integrity/validate_ci_package.py" ]; then
+                python "$CI_DIR/Integrity/validate_ci_package.py" "$CI_DIR"
+              fi
+
+              # Validate JSON syntax
+              jq empty "$CI_DIR/PBS.json" || exit 1
+              jq empty "$CI_DIR/CADParameters.json" 2>/dev/null || true
+
+              # Validate YAML syntax
+              python -c "import yaml; yaml.safe_load(open('$CI_DIR/EBOM.yaml'))"
+              python -c "import yaml; yaml.safe_load(open('$CI_DIR/MBOM.yaml'))"
+
+              echo "✅ $CI_DIR validated"
+            else
+              echo "⚠️ Skipping incomplete CI: $CI_DIR"
             fi
-            
-            # Run Python validator if exists
-            if [ -f "$CI_DIR/Integrity/validate_ci_package.py" ]; then
-              python "$CI_DIR/Integrity/validate_ci_package.py" "$CI_DIR"
+          done < ci_dirs.txt
+
+      - name: Check hash consistency
+        run: |
+          while IFS= read -r CI_DIR; do
+            if [ -f "$CI_DIR/Integrity/SHA256SUMS.txt" ]; then
+              (cd "$CI_DIR" && sha256sum -c Integrity/SHA256SUMS.txt) || exit 1
             fi
-            
-            # Validate JSON syntax
-            jq empty "$CI_DIR/PBS.json" || exit 1
-            jq empty "$CI_DIR/CADParameters.json" 2>/dev/null || true
-            
-            # Validate YAML syntax
-            python -c "import yaml; yaml.safe_load(open('$CI_DIR/EBOM.yaml'))"
-            python -c "import yaml; yaml.safe_load(open('$CI_DIR/MBOM.yaml'))"
-            
-            echo "✅ $CI_DIR validated"
-          else
-            echo "⚠️ Skipping incomplete CI: $CI_DIR"
-          fi
-        done
-    
-    - name: Check hash consistency
-      run: |
-        for CI_DIR in ${{ steps.find-ci.outputs.ci_dirs }}; do
-          if [ -f "$CI_DIR/Integrity/SHA256SUMS.txt" ]; then
-            cd "$CI_DIR"
-            sha256sum -c Integrity/SHA256SUMS.txt || exit 1
-            cd - > /dev/null
-          fi
-        done
-    
-    - name: Generate validation report
-      if: always()
-      run: |
-        echo "# CI Validation Report" > validation_report.md
-        echo "Date: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> validation_report.md
-        echo "" >> validation_report.md
-        
-        for CI_DIR in ${{ steps.find-ci.outputs.ci_dirs }}; do
-          if [ -f "$CI_DIR/PBS.json" ]; then
-            CI_ID=$(jq -r '.ci_id' "$CI_DIR/PBS.json")
-            echo "- $CI_ID: ✅" >> validation_report.md
-          fi
-        done
-    
-    - name: Upload validation report
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: ci-validation-report
-        path: validation_report.md
+          done < ci_dirs.txt
+
+      - name: Generate validation report
+        if: always()
+        run: |
+          echo "# CI Validation Report" > validation_report.md
+          echo "Date: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> validation_report.md
+          echo "" >> validation_report.md
+
+          while IFS= read -r CI_DIR; do
+            if [ -f "$CI_DIR/PBS.json" ]; then
+              CI_ID=$(jq -r '.ci_id' "$CI_DIR/PBS.json")
+              echo "- $CI_ID: ✅" >> validation_report.md
+            fi
+          done < ci_dirs.txt
+
+      - name: Upload validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-validation-report
+          path: validation_report.md

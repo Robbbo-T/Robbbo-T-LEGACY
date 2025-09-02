@@ -161,14 +161,16 @@ graph TD
 <a id="ca-cad"></a>
 ### CAD — Computer Aided Design
 
-**Descripción:** Diseño asistido por computadora con enfoque en jerarquía DI→CE→CC→CI→CP.
+**Description:** Computer-aided design with focus on DI→CE→CC→CI→CP hierarchy and Digital Master Model (DMM) creation.
 
-| Atributo | Descripción |
+| Attribute | Description |
 | :--- | :--- |
-| **📋 Alcance** | Modelos 3D, especificaciones técnicas, EBOM/MBOM, configuraciones paramétricas |
-| **🎯 Objetivos** | - Desarrollar diseños detallados BWB-Q100<br>- Establecer jerarquía de productos (PBS)<br>- Optimización de peso y rendimiento |
-| **📊 KPIs** | Δpeso, Δcosto, % reutilización, tiempo de diseño |
-| **🔗 Outputs** | Modelos CAD, planos técnicos, EBOM, especificaciones |
+| **📋 Scope** | 3D models, technical specifications, EBOM/MBOM, parametric configurations, quantum-enhanced design |
+| **🎯 Objectives** | - Develop detailed BWB-Q100 designs with multi-bubble vessel architecture<br>- Establish product hierarchy (PBS) and Digital Master Model<br>- Quantum-optimized weight and performance with inverse design capabilities |
+| **📊 KPIs** | Δweight, Δcost, % reusability, design time, quantum optimization efficiency |
+| **🔗 Outputs** | CAD models, technical drawings, EBOM/MBOM, DMM specifications, Interface Control Documents |
+
+**📚 Comprehensive Specification:** See [CAD-DESIGN/README.md](CA-DEOPTIMISE/CAD-DESIGN/README.md) for complete pillar implementation including quantum enhancements, BWB-Q100 multi-bubble vessel design, Model-Based Definition (MBD), and Digital Evidence Twin (DET) integration.
 
 <a id="ca-cae"></a>
 ### CAE — Computer Aided Engineering
