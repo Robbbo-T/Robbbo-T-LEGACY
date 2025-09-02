@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QAL Bus Event",
+  "type": "object",
+  "required": ["utcs_id", "phase", "artifact_type", "inputs", "outputs", "provenance"],
+  "properties": {
+    "utcs_id": {"type":"string", "pattern":"^EstándarUniversal:.{10,}$"},
+    "phase": {"type":"string", "enum":["CAO","CAB","CAD","CAE","CAT","CAV","CAM","CAP","CAS","CAEpost"]},
+    "artifact_type": {"type":"string"},
+    "inputs": {"type":"array", "items":{"type":"string", "pattern":"^sha256:[0-9a-f]{64}$"}},
+    "outputs": {"type":"array", "items":{"type":"string", "pattern":"^sha256:[0-9a-f]{64}$"}},
+    "req_trace": {
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["req_id","status","evidence"],
+        "properties":{
+          "req_id":{"type":"string"},
+          "status":{"type":"string","enum":["pass","fail","na"]},
+          "evidence":{"type":"string","pattern":"^sha256:[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "risk": {
+      "type":"object",
+      "properties":{
+        "cvar_alpha":{"type":"number","minimum":0.5,"maximum":0.9999},
+        "cvar_value":{"type":"number"},
+        "hazards":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "quantum": {
+      "type":"object",
+      "properties":{
+        "algo":{"type":"string","enum":["QAOA","VQE","QML"]},
+        "seed":{"type":"integer","minimum":0},
+        "p":{"type":"integer","minimum":1},
+        "backend":{"type":"string","enum":["simulator","hardware"]}
+      }
+    },
+    "pqc_signature": {
+      "type":"object",
+      "properties":{
+        "alg":{"type":"string"},
+        "sig":{"type":"string"}
+      }
+    },
+    "provenance": {
+      "type":"object",
+      "required":["tool","version","agent","time_utc"],
+      "properties":{
+        "tool":{"type":"string"},
+        "version":{"type":"string"},
+        "agent":{"type":"string"},
+        "time_utc":{"type":"string","format":"date-time"}
+      }
+    }
+  },
+  "additionalProperties": false
+}
