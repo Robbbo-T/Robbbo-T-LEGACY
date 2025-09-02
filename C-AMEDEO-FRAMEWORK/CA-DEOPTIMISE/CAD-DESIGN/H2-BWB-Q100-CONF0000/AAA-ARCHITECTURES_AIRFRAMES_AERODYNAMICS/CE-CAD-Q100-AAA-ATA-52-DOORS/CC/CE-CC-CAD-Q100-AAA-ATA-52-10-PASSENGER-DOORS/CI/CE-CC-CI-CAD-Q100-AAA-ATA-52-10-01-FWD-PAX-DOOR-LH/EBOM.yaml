@@ -9,7 +9,7 @@ meta:
 assembly:
   name: "FWD-PAX-DOOR-LH"
   description: "Forward Passenger Door Left Hand Assembly"
-  
+
 components:
   - id: Q100-52-10-01-001
     description: "Door Structure Frame"
@@ -18,7 +18,7 @@ components:
     quantity: 1
     weight_kg: 45.2
     joining_method: "Welded"
-    
+
   - id: Q100-52-10-01-002
     description: "Door Skin Panel Outer"
     part_number: "FWD-DOOR-SKIN-OUT-LH-002"
@@ -26,7 +26,7 @@ components:
     quantity: 1
     weight_kg: 18.7
     joining_method: "Bonded"
-    
+
   - id: Q100-52-10-01-003
     description: "Door Skin Panel Inner"
     part_number: "FWD-DOOR-SKIN-IN-LH-003"
@@ -34,7 +34,7 @@ components:
     quantity: 1
     weight_kg: 16.3
     joining_method: "Bonded"
-    
+
   - id: Q100-52-10-01-004
     description: "Latch Mechanism Primary"
     part_number: "DOOR-LATCH-PRI-004"
@@ -42,7 +42,7 @@ components:
     quantity: 1
     weight_kg: 8.2
     joining_method: "Bolted"
-    
+
   - id: Q100-52-10-01-005
     description: "Hinge Assembly"
     part_number: "DOOR-HINGE-ASSY-005"
@@ -50,7 +50,7 @@ components:
     quantity: 3
     weight_kg: 12.1
     joining_method: "Bolted"
-    
+
   - id: Q100-52-10-01-006
     description: "Seal Assembly"
     part_number: "DOOR-SEAL-ASSY-006"
@@ -58,7 +58,7 @@ components:
     quantity: 1
     weight_kg: 4.8
     joining_method: "Adhesive"
-    
+
   - id: Q100-52-10-01-007
     description: "Window Assembly"
     part_number: "DOOR-WINDOW-ASSY-007"
@@ -66,7 +66,7 @@ components:
     quantity: 1
     weight_kg: 3.2
     joining_method: "Sealed"
-    
+
   - id: Q100-52-10-01-008
     description: "Handle Assembly"
     part_number: "DOOR-HANDLE-ASSY-008"

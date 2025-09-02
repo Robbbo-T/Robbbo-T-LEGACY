@@ -3,7 +3,7 @@ version: 1
 meta:
   owner: structures@aqua-os
   last_updated: 2025-09-01
-  
+
 applies_to:
   cc_id: CE-CC-CAD-Q100-AAA-ATA-02-10-STRUCTURE-1
   description: "1"

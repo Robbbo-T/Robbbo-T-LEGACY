@@ -21,7 +21,7 @@ waivers:
       reference: "EASA-WAIVER-2025-0842"
     status: "Approved"
     expiry: "2030-08-15"
-    
+
   - id: WAIVER-52-10-01-002
     standard: CS-25.807(c)
     requirement: "Emergency lighting must be battery powered for 10 minutes"

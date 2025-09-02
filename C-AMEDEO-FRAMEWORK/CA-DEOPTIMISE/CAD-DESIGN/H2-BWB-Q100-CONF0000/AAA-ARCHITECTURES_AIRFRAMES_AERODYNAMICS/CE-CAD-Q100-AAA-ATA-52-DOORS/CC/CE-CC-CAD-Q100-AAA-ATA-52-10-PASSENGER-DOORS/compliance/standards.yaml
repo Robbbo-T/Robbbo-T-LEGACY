@@ -5,7 +5,7 @@ meta:
   reviewer: airworthiness@aqua-os
   last_updated: 2025-09-01
   change_ref: CDR-AAA-2025-09
-  
+
 applies_to:
   cax: CAD
   mic: Q100
@@ -28,7 +28,7 @@ standards:
     verification: [FEA, Static Test, Fatigue Test]
     acceptance:
       - "Ultimate load: 1.5 x limit load with no failure"
-      - "Limit load: No permanent deformation" 
+      - "Limit load: No permanent deformation"
       - "Pressure differential: 56.7 kPa ultimate"
     evidence:
       det_patterns:

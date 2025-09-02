@@ -15,14 +15,14 @@ hazards:
       - "Dual redundant latching system"
       - "Pressure differential prevents opening"
       - "Pilot door warning system"
-    verification: 
+    verification:
       - "Fail-safe analysis"
       - "Pressure test"
     status: "Closed"
-    
+
   - id: HAZ-52-10-01-002
     description: "Door structural failure under pressure"
-    category: "Catastrophic" 
+    category: "Catastrophic"
     probability: "Extremely Remote"
     risk_level: "Acceptable"
     mitigation:
@@ -33,7 +33,7 @@ hazards:
       - "Ultimate load test"
       - "Fatigue test"
     status: "Closed"
-    
+
   - id: HAZ-52-10-01-003
     description: "Door jamming preventing emergency egress"
     category: "Hazardous"
@@ -49,7 +49,7 @@ hazards:
     status: "Open"
     actions:
       - "Complete emergency release testing by 2025-09-30"
-      
+
   - id: HAZ-52-10-01-004
     description: "Door seal failure causing rapid decompression"
     category: "Major"
