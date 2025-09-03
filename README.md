@@ -23,7 +23,7 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 ## Resumen Visual (QAL + Evidencia)
 
 ```mermaid
-%%{init: {
+%%{init: {"themeVariables":{"fontFamily":"Inter,Segoe UI,Roboto,sans-serif"}}}%%
 flowchart LR
 
 subgraph STRATEGY["QAL Strategy & Ideation"]
@@ -74,12 +74,15 @@ TRACES -- "Req→Test Map" --> CAT
 QAUDIT -.->|Fixture Sign| CAT
 
 DET -->|"Submit for Signing"| QAUDIT
-QAUDIT -. "Signature+Hash" .->|Auditable| DET
+QAUDIT -. "Signature+Hash, Auditable" .-> DET
 QAUDIT -. "Non-repudiation" .-> CAV
 CAV -. "Sealing" .-> QAUDIT
 
 TEKTOK -- "Tokens for events" --> GAMMA
 CAV -- "Milestone Cert." --> TEKTOK
+
+%% UNIVERSAL HIGH CONTRAST & LARGE FONT
+classDef default fill:#fff,stroke:#222,stroke-width:3px,color:#1a237e,font-size:22px,font-weight:bold;
 ```
 
 ---
