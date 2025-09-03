@@ -24,146 +24,62 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ```mermaid
 %%{init: {
-  "theme": "base",
-  "themeVariables": {
-    "fontFamily": "Inter,Segoe UI,Roboto,sans-serif",
-    "primaryColor": "#4CAF50",
-    "primaryTextColor": "#fff",
-    "tertiaryColor": "#B18BFE"
-  }
-}}%%
 flowchart LR
-  %% --- Subgraph: STRATEGY ROOT (CAO, CAB)---
-  subgraph STRATEGY["QAL Strategy & Ideation"]
-    direction TB
-    CAO([CAO (Org/Governance)
-🏛️ Strategy, Requirements &
-Budgets/Policies ])
-    CAB([CAB (Ideation)
-💡 Brainstorm, Concepts, Risk Vectors])
-    classDef caoClass fill:#009688,stroke:#fff,stroke-width:3px,color:#fff;
-    class CAO caoClass;
-    classDef cabClass fill:#ffb300,stroke:#fff,stroke-width:3px,color:#222;
-    class CAB cabClass;
-  end
 
-  %% --- Subgraph: UTCS Blockchain ---
-  subgraph UTCS_BLOCKCHAIN["UTCS_BLOCKCHAIN"]
-    direction TB
-    CADET([CADET (KPI Ledger)
-📊 QC: 0.79 | Risk: 0.10 | Thru:128 | E:4.7MWh
-Pareto: ▄▆█▇▁▃▅ ])
-    DET[/DET (Evidence Packages)
-📦 Concept, Interface, CAE, Test/]
-    TRACES{{TRACES (Req. linking)
-🔗 Cobertura 94%}}
-    QAUDIT((QAUDIT 🔒
-Signatures
-PQC-Dilithium3
-sha3-256))
-    classDef kpiClass fill:#51c3d9,stroke:#222,stroke-width:2px,color:#fff;
-    class CADET,QAUDIT kpiClass;
-  end
+subgraph STRATEGY["QAL Strategy & Ideation"]
+  CAO(["CAO (Org/Gov)\n🏛️ Strategy, Req. & Budget"])
+  CAB(["CAB (Ideation)\n💡 Brainstorm, Concepts"])
+end
 
-  TEKTOK([🪙 TekTok Tokenization
-Milestone DAO Rewards])
+subgraph UTCS_BLOCKCHAIN["UTCS_BLOCKCHAIN"]
+  CADET(["CADET (KPI Ledger)\nQC:0.79 | Risk:0.10"])
+  DET["DET (Evidence Pkg)"]
+  TRACES{{"TRACES (Req. linking)\nCobertura 94%"}}
+  QAUDIT(("QAUDIT\nPQC-Dilithium3\nsha3-256"))
+end
 
-  %% --- Subgraph: BWB_Q100 ---
-  subgraph BWB_Q100["BWB_Q100"]
-    direction TB
-    GAMMA["⚙️ Gamma Conf. (QC 0.79)<br/>ICDs, CVaR, DETs"]
-    CAT{{CAT (Test/Sensors)
-🧪 QAOA DoE Sensors}}
-    CAV((📑 CAV (Certification Dossier)
-• CAE Results
-• Physical Test DET
-• QAUDIT Signature))
-    classDef catClass fill:#FF5722,stroke:#fff,stroke-width:3px,color:#fff;
-    class CAT catClass;
-    classDef cavClass fill:#B18BFE,stroke:#222,stroke-width:2px,color:#fff;
-    class CAV cavClass;
-  end
+TEKTOK(["🪙 TekTok Tokenization\nMilestone DAO Rewards"])
 
-  AMPEL360[/AMPEL360 CAE Pipeline:
-CVaR opt. & Gamma Sim Batch/]
+subgraph BWB_Q100["BWB_Q100"]
+  GAMMA["⚙️ Gamma Conf. (QC 0.79)\nICDs, CVaR, DETs"]
+  CAT{{"CAT (Test/Sensors)\n🧪 QAOA DoE Sensors"}}
+  CAV(("📑 CAV (Cert Dossier)\n• CAE Results\n• Test DET\n• QAUDIT Sign"))
+end
 
-  %% --- Relaciones de estrategia/linaje---
-  CAO -- "Governance, Budget" --> TRACES
-  CAB -- "Concepts, Risk Vector" --> TRACES
-  CAO -.->|Inputs<br/>KPI Strat.| CADET
-  CAB -.->|Portfolio, Risk| CADET
-  CAO -.->|Audit Policies| QAUDIT
+AMPEL360["AMPEL360 CAE Pipeline:\nCVaR opt. & Gamma Sim"]
 
-  %% Feedback (cierre de lazo)
-  CAV -- "Findings, Waivers, Policy Update" --> CAO
-  CADET -- "KPI Insights" --> CAO
-  CADET -- "KPI Signals" --> CAB
+%% Relations
+CAO -- "Governance, Budget" --> TRACES
+CAB -- "Concepts, Risk Vector" --> TRACES
+CAO -.->|Inputs, KPI Strat.| CADET
+CAB -.->|Portfolio, Risk| CADET
+CAO -.->|Audit Pol.| QAUDIT
 
-  %% Relaciones UTCS/BWB_Q100
-  CADET -- KPIs --> GAMMA
-  DET -- "Anchors Evidence" --> GAMMA
-  TRACES -- "Links Req." --> GAMMA
+CAV -- "Findings/Policy" --> CAO
+CADET -- "KPI Insights" --> CAO
+CADET -- "KPI Signals" --> CAB
 
-  GAMMA -- "Simulación" --> AMPEL360
-  AMPEL360 -- "CAE Results & Metrics" --> DET
-  DET -- "Paquetes CAE/ICD/Test" --> CAV
-  CAT -- "Test Result DET" --> CAV
+CADET -- KPIs --> GAMMA
+DET -- "Anchors Evidence" --> GAMMA
+TRACES -- "Links Req." --> GAMMA
 
-  %% CAT integración extra
-  GAMMA -- "Test Plan & Sensor Configs" --> CAT
-  AMPEL360 -- "Loads & Env. Cases" --> CAT
-  TRACES -- "Req.→Test Map" --> CAT
-  QAUDIT -.->|Fixture/Calib Sign| CAT
+GAMMA -- "Simulation" --> AMPEL360
+AMPEL360 -- "CAE Results" --> DET
+DET -- "Pkg CAE/ICD/Test" --> CAV
+CAT -- "Test Result DET" --> CAV
 
-  %% QAUDIT signing (destacado)
-  DET -->|"Submit for Signing"| QAUDIT
-  QAUDIT -. "Signature+Hash" .->|Auditable| DET
-  QAUDIT -. "Non-repudiation" .-> CAV
-  CAV -. "Sealing" .-> QAUDIT
+GAMMA -- "Test Plan & Sensors" --> CAT
+AMPEL360 -- "Loads & Env." --> CAT
+TRACES -- "Req→Test Map" --> CAT
+QAUDIT -.->|Fixture Sign| CAT
 
-  %% ICD links (document style)
-  GAMMA -- "ICD:AAA:8.9" --> ICD1[["📄 ICD-AAA-CQH-001\nScore: 8.9"]]
-  GAMMA -- "ICD:PPP:8.6" --> ICD2[["📄 ICD-AAA-PPP-002\nScore: 8.6"]]
-  GAMMA -- "ICD:DDD:8.7" --> ICD3[["📄 ICD-AAA-DDD-003\nScore: 8.7"]]
-  ICD1 --> DET_AAA[["DET:CAD:ICD:CQH:V1.0"]]
-  ICD2 --> DET_PPP[["DET:CAD:ICD:PPP:V1.0"]]
-  ICD3 --> DET_DDD[["DET:CAD:ICD:DDD:V1.0"]]
+DET -->|"Submit for Signing"| QAUDIT
+QAUDIT -. "Signature+Hash" .->|Auditable| DET
+QAUDIT -. "Non-repudiation" .-> CAV
+CAV -. "Sealing" .-> QAUDIT
 
-  %% Tokens and milestone flow
-  TEKTOK -- "Tokens for major events" --> GAMMA
-  CAV -- "Milestone Cert." --> TEKTOK
-
-  %% --- Leyenda Dinámica ---
-  subgraph Legend["Legend"]
-    direction LR
-    L1([Stadium]):::l; 
-    L2((Double)):::l; 
-    L3{{Rhombus}}:::l;
-    L4[/Parallelogram/]:::l; 
-    L5[["Doc"]]:::l; 
-    L6{{CAT: Test/Sensors}}:::catClass;
-    L7([KPIs: Pareto ▄▆█▇▁▃▅ ]):::kpiClass;
-    L8([CAO]):::caoClass;
-    L9([CAB]):::cabClass;
-  end
-  classDef l fill:#f0f0f0,stroke:#bbb,color:#222;
-
-  %% Estilos de subgrafos
-  style STRATEGY fill:#26C6DA,stroke:#222,stroke-width:2px,color:#fff
-  style UTCS_BLOCKCHAIN fill:#4CAF50,stroke:#222,stroke-width:2px,color:#fff
-  style BWB_Q100 fill:#FFD700,stroke:#444,stroke-width:2px
-  style TEKTOK fill:#6F42C1,stroke:#222,color:#fff
-
-  %% Enlaces (anchors) UTCS-MI (opcionales; tooltips y URIs)
-  click CADET "CADET://BWB_Q100/KPI" "Open CADET KPIs"
-  click TRACES "TRACES://BWB_Q100/REQMAP" "Open TRACES coverage"
-  click DET "DET://BWB_Q100/PKG" "Open DET package index"
-  click QAUDIT "QAUDIT://BWB_Q100/SIGN" "Open QAUDIT signatures"
-  click GAMMA "CFG://BWB_Q100/GAMMA" "Open Gamma Configuration"
-  click AMPEL360 "CAE://AMPEL360/RUNS" "Open AMPEL360 runs"
-  click CAT "CAT://BWB_Q100/TESTS" "Open CAT test runs"
-  click CAV "CAV://BWB_Q100/DOSSIER" "Open Certification dossier"
-  click TEKTOK "TOK://BWB_Q100/REWARDS" "Open tokenization ledger"
+TEKTOK -- "Tokens for events" --> GAMMA
+CAV -- "Milestone Cert." --> TEKTOK
 ```
 
 ---
