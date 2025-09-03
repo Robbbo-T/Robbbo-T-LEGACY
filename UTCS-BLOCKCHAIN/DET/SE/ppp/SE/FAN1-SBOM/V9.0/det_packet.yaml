@@ -1,0 +1,95 @@
+# SBOM DET Evidence Package
+id: "DET:SE:ppp:SE:FAN1-SBOM:V9.0"
+owner: "MRO Engineering Lead"
+signer: "PQC-Dilithium3"
+timestamp: "2025-12-02T12:12:00Z"
+domain: "ppp"
+asset: "FAN1"
+activity: "SBOM release"
+
+qaudit:
+  reviewer: "CAS Authority"
+  verdict: "pending"
+  review_date: null
+  compliance_checks: ["UTCS-MI", "S1000D-mapping", "FRU-catalog"]
+
+inputs:
+  - artifact: "MBOM Q100-72-10-01-FAN1 V9.0"
+    hash: "sha256:7f2a9c41..."
+    source: "CAM Engineering"
+  - artifact: "Service procedures definition"
+    hash: "sha256:2345bcde..."
+    source: "CAS Engineering"
+  - artifact: "FRU catalog requirements"
+    hash: "sha256:6789fghi..."
+    source: "MRO Planning"
+  - artifact: "S1000D DMC mapping"
+    hash: "sha256:0123jklm..."
+    source: "Technical Publications"
+
+processing:
+  tool: "SBOM Generator"
+  version: "v3.0.1"
+  parameters:
+    service_levels: ["O-Level", "I-Level", "D-Level"]
+    fru_classification: "enabled"
+    s1000d_integration: "enabled"
+    vendor_mapping: "enabled"
+  environment: "PLM-SECURE"
+
+outputs:
+  - artifact: "SBOM Q100-72-10-01-FAN1"
+    hash: "sha256:c18e04d3..."
+    format: "YAML"
+    size_bytes: 7995
+  - artifact: "FRU catalog"
+    hash: "sha256:d29f15e4..."
+    format: "YAML"
+    fru_count: 10
+  - artifact: "Service procedure mapping"
+    hash: "sha256:e3a026f5..."
+    format: "YAML"
+    dmc_count: 8
+  - artifact: "Vendor supply chain data"
+    hash: "sha256:f4b137g6..."
+    format: "YAML"
+    vendor_count: 3
+
+validation:
+  schema_check: "PASS"
+  utcs_mi_check: "PASS"
+  fru_consistency: "PASS"
+  s1000d_mapping: "PASS"
+  vendor_validation: "PASS"
+
+links:
+  - "AMP-BWB-Q100-25MAP0001-MRO-IPC-ENG-AS-PA-FAN1-RDIG-072-10-00-v9.0.0"
+  - "AMM 72-10-01"
+  - "AMM 72-10-02"
+  - "AMM 72-10-03"
+  - "AMM 72-10-04"
+  - "AMM 72-10-05"
+  - "AMM 72-10-10"
+  - "FIM 72-10-F01"
+  - "IPC Kit: KIT-BLD-FST-01"
+  - "DMC: 72-10-01-020-801-A"
+  - "DMC: 72-10-02-020-801-A"
+  - "DMC: 72-10-03-020-801-A"
+
+traceability:
+  mbom_linkage:
+    - mbom_item: "BLD1 ×24"
+      sbom_fru: "BLD1-SVC"
+      transformation: "1:1 with service packaging"
+    - mbom_item: "FST7-B/N/W (96 c/u)"
+      sbom_fru: "KIT-BLD-FST-01"
+      transformation: "Individual pieces → Kit"
+    - mbom_item: "QSN5 ×4"
+      sbom_fru: "QSN5-SVC"
+      transformation: "1:1 with calibration requirements"
+
+signature:
+  algorithm: "PQC-Dilithium3"
+  public_key_hash: "sha256:ghi789..."
+  signature_hash: "sha256:jkl012..."
+  timestamp: "2025-12-02T12:12:00Z"

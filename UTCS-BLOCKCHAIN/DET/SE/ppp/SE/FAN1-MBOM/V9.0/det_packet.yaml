@@ -1,0 +1,85 @@
+# MBOM DET Evidence Package
+id: "DET:SE:ppp:SE:FAN1-MBOM:V9.0"
+owner: "Manufacturing Engineering Lead"
+signer: "PQC-Dilithium3"
+timestamp: "2025-12-02T12:10:00Z"
+domain: "ppp"
+asset: "FAN1"
+activity: "MBOM release"
+
+qaudit:
+  reviewer: "Compliance"
+  verdict: "pending"
+  review_date: null
+  compliance_checks: ["UTCS-MI", "ATA-spec", "BOM-schema"]
+
+inputs:
+  - artifact: "EBOM Q100-72-10-01-FAN1 V9.0"
+    hash: "sha256:9a8b7c6d..."
+    source: "CAD Design"
+  - artifact: "Manufacturing process definitions"
+    hash: "sha256:1234abcd..."
+    source: "CAM Engineering"
+  - artifact: "Quality control requirements"
+    hash: "sha256:5678efgh..."
+    source: "Quality Engineering"
+
+processing:
+  tool: "MBOM Transformer"
+  version: "v2.1.0"
+  parameters:
+    routing_method: "station_envelope"
+    qa_gates: "enabled"
+    quantum_optimization: "enabled"
+  environment: "PLM-SECURE"
+
+outputs:
+  - artifact: "MBOM Q100-72-10-01-FAN1"
+    hash: "sha256:7f2a9c41..."
+    format: "YAML"
+    size_bytes: 7555
+  - artifact: "BOP routing plan"
+    hash: "sha256:8e3b0d52..."
+    format: "YAML"
+    stations: ["SE:ppp:ROT-A", "SE:ppp:BAL-01", "SE:ppp:CLEAN", "SE:ppp:INTEG", "SE:ppp:FINAL"]
+  - artifact: "Quality control plan"
+    hash: "sha256:9f4c1e63..."
+    format: "YAML"
+    checkpoints: 4
+
+validation:
+  schema_check: "PASS"
+  utcs_mi_check: "PASS"
+  cross_ref_check: "PASS"
+  quantum_integration: "PASS"
+
+links:
+  - "AMP-BWB-Q100-25MAP0001-MFG-BOM-ENG-AS-PA-FAN1-RDIG-072-10-00-v9.0.0"
+  - "WI-72-10-00"
+  - "WI-72-10-02"
+  - "WI-72-10-03"
+  - "WI-72-10-05"
+  - "WI-72-10-07"
+  - "WI-72-10-09"
+  - "WI-72-10-15"
+  - "WI-72-10-19"
+  - "SE:ppp:ROT-A"
+  - "SE:ppp:BAL-01"
+  - "SE:ppp:CLEAN"
+  - "SE:ppp:INTEG"
+  - "SE:ppp:FINAL"
+
+traceability:
+  requirement_links:
+    - req_id: "REQ-MFG-PROC-001"
+      status: "satisfied"
+      evidence: "BOP routing definition"
+    - req_id: "REQ-QA-GATE-001"
+      status: "satisfied"
+      evidence: "Quality control checkpoints"
+
+signature:
+  algorithm: "PQC-Dilithium3"
+  public_key_hash: "sha256:abc123..."
+  signature_hash: "sha256:def456..."
+  timestamp: "2025-12-02T12:10:00Z"

@@ -1,0 +1,76 @@
+{
+  "event": "CAM.MBOMReleased",
+  "ts": "2025-12-02T12:10:00Z",
+  "program": "BWB-Q100",
+  "domain": "ppp",
+  "asset": "FAN1",
+  "utcs_id": "EstándarUniversal:Artefacto-ListaMateriales-ATA+S1000D-72.10-ManufacturingBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-7f2a9c41-RestoDeVidaUtil",
+  "det_ref": "DET:SE:ppp:SE:FAN1-MBOM:V9.0",
+  "signature": "PQC-Dilithium3",
+  "provenance": {
+    "tool": "MBOM-Generator",
+    "version": "v2.1.0",
+    "agent": "CAM-Engineering-Lead",
+    "time_utc": "2025-12-02T12:10:00Z"
+  },
+  "meta": {
+    "bop": [
+      "SE:ppp:ROT-A",
+      "SE:ppp:BAL-01",
+      "SE:ppp:CLEAN",
+      "SE:ppp:INTEG",
+      "SE:ppp:FINAL"
+    ],
+    "operations_count": 8,
+    "qa_gates": 8,
+    "quantum_optimizations": [
+      "QML balanceo convergencia",
+      "QUBO ruteo libre cruces",
+      "VQE validacion NV-center"
+    ],
+    "cycle_time_min": 1260,
+    "quality_checkpoints": [
+      "QC-01: Torque fijaciones",
+      "QC-02: Imbalance rotor", 
+      "QC-03: Limpieza ISO 7",
+      "QC-04: Continuidad Q-bus"
+    ]
+  },
+  "phase": "CAM",
+  "artifact_type": "ManufacturingBOM",
+  "inputs": [
+    "sha256:9a8b7c6d...",
+    "sha256:1234abcd...",
+    "sha256:5678efgh..."
+  ],
+  "outputs": [
+    "sha256:7f2a9c41...",
+    "sha256:8e3b0d52...",
+    "sha256:9f4c1e63..."
+  ],
+  "req_trace": [
+    {
+      "req_id": "REQ-MFG-PROC-001",
+      "status": "pass",
+      "evidence": "sha256:8e3b0d52..."
+    },
+    {
+      "req_id": "REQ-QA-GATE-001", 
+      "status": "pass",
+      "evidence": "sha256:9f4c1e63..."
+    }
+  ],
+  "risk": {
+    "cvar_alpha": 0.95,
+    "cvar_value": 0.02,
+    "hazards": [
+      "Manufacturing defect",
+      "Quantum sensor misalignment"
+    ]
+  },
+  "compliance": {
+    "standards": ["ATA iSpec 2200", "DO-160G"],
+    "certification_basis": "FAA Part 25",
+    "audit_trail": "QAUDIT:ppp:MBOM:V9.0"
+  }
+}

@@ -1,0 +1,261 @@
+---
+# SBOM — UTCS-MI canónico
+# EstándarUniversal:Artefacto-CatalogoPiezas-ATA+S1000D-72.10-ServiceBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-c18e04d3-RestoDeVidaUtil
+# DET:SE:ppp:SE:FAN1-SBOM:V9.0
+
+utcs_mi_header: "EstándarUniversal:Artefacto-CatalogoPiezas-ATA+S1000D-72.10-ServiceBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-c18e04d3-RestoDeVidaUtil"
+det_reference: "DET:SE:ppp:SE:FAN1-SBOM:V9.0"
+
+assembly: Q100-72-10-01-FAN1
+description: Fan Section Assembly - Service BOM
+revision: V9.0
+program: BWB-Q100
+domain: ppp
+ata_chapter: "72.10"
+owner_domain: "PPP-PROPULSION_AND_FUELS"
+sns: "72-10"
+ce_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+cc_id: "CE-CC-CAD-Q100-PPP-ATA-72-10-FAN-SECTION"
+ci_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+criticality: "DAL-B"
+effectivity: "All serial numbers"
+
+# EBOM → MBOM → SBOM crosswalk mapping
+service_mapping:
+  description: "Transformation from engineering/manufacturing to service perspective"
+  transformation_rules:
+    - ebom_item: "BLD1"
+      mbom_items: ["BLD1 ×24 (rotor)"]
+      sbom_fru: "BLD1-SVC"
+      service_level: "O-Level"
+      replacement_unit: "individual"
+      special_notes: "Re-equilibrar si >2 palas cambiadas"
+
+    - ebom_item: "HUB2"
+      mbom_items: ["HUB2 ×1"]
+      sbom_fru: "HUB2-NR"
+      service_level: "D-Level"
+      replacement_unit: "No-Reemplazable"
+      special_notes: "En SBOM como No-Reemplazable (D-Level)"
+
+    - ebom_item: "BRH6"
+      mbom_items: ["BRH6 ×24"]
+      sbom_fru: "BRH6-NR"
+      service_level: "D-Level"
+      replacement_unit: "No-Reemplazable"
+      special_notes: "Integrado al cubo en servicio; D-Level"
+
+    - ebom_item: "FST7"
+      mbom_items: ["FST7-B/N/W (96 c/u)"]
+      sbom_fru: "KIT-BLD-FST-01"
+      service_level: "O-Level"
+      replacement_unit: "Kit"
+      special_notes: "EBOM set → MBOM piezas; SBOM → Kit"
+
+    - ebom_item: "CWL3"
+      mbom_items: ["CWL3 ×2"]
+      sbom_fru: "CWL3-SVC"
+      service_level: "O-Level"
+      replacement_unit: "paired"
+      special_notes: "Suministro pareado (matcheado en fabricación)"
+
+    - ebom_item: "SPN4"
+      mbom_items: ["SPN4 ×1"]
+      sbom_fru: "SPN4-SVC"
+      service_level: "O-Level"
+      replacement_unit: "individual"
+      special_notes: "FRU O-Level"
+
+    - ebom_item: "SHR8"
+      mbom_items: ["SHR8 ×1"]
+      sbom_fru: "SHR8-SVC"
+      service_level: "O-Level"
+      replacement_unit: "individual"
+      special_notes: "Inspección térmica previa (nota SBOM)"
+
+    - ebom_item: "QSN5"
+      mbom_items: ["QSN5 ×4"]
+      sbom_fru: "QSN5-SVC"
+      service_level: "I-Level"
+      replacement_unit: "individual"
+      special_notes: "Requiere recalibración T-QCAL-100"
+
+    - ebom_item: "QIC9"
+      mbom_items: ["QIC9 ×2"]
+      sbom_fru: "QIC9-SVC"
+      service_level: "I-Level"
+      replacement_unit: "individual"
+      special_notes: "Verif. conectores/prior routing"
+
+# Field Replaceable Units (FRU) and service parts
+fru_catalog:
+  o_level_parts:
+    - fru_pn: "BLD1-SVC"
+      description: "Fan blade assembly"
+      quantity_per_assembly: 24
+      service_action: "Remove/Install"
+      s1000d_dmc: "72-10-01-020-801-A"
+      amm_ref: "AMM 72-10-01"
+      service_time_hrs: 2.5
+      special_tools: ["T-BAL-015"]
+      service_notes: "Re-equilibrar si >2 palas cambiadas"
+
+    - fru_pn: "CWL3-SVC"
+      description: "Cowl assembly (pair)"
+      quantity_per_assembly: 1
+      service_action: "Remove/Install"
+      s1000d_dmc: "72-10-02-020-801-A"
+      amm_ref: "AMM 72-10-02"
+      service_time_hrs: 1.5
+      special_tools: ["Útil posicionamiento"]
+      service_notes: "Suministro pareado (matching)"
+
+    - fru_pn: "SPN4-SVC"
+      description: "Spinner assembly"
+      quantity_per_assembly: 1
+      service_action: "Remove/Install"
+      s1000d_dmc: "72-10-03-020-801-A"
+      amm_ref: "AMM 72-10-03"
+      service_time_hrs: 1.0
+      special_tools: []
+      service_notes: "Revisión de holguras"
+
+    - fru_pn: "SHR8-SVC"
+      description: "Shroud assembly"
+      quantity_per_assembly: 1
+      service_action: "Remove/Install"
+      s1000d_dmc: "72-10-04-020-801-A"
+      amm_ref: "AMM 72-10-04"
+      service_time_hrs: 2.0
+      special_tools: []
+      service_notes: "Inspección térmica previa (nota SBOM)"
+
+    - fru_pn: "KIT-BLD-FST-01"
+      description: "Blade fastener kit"
+      quantity_per_assembly: 1
+      service_action: "Replace kit"
+      s1000d_dmc: "72-10-05-020-801-A"
+      amm_ref: "AMM 72-10-05"
+      service_time_hrs: 3.0
+      special_tools: ["T-TORQ-150"]
+      service_notes: "Kit completo FST7-B/N/W"
+
+  i_level_parts:
+    - fru_pn: "QSN5-SVC"
+      description: "Quantum sensor node"
+      quantity_per_assembly: 4
+      service_action: "Test/Calibrate"
+      s1000d_dmc: "72-10-10-720-801-A"
+      fim_ref: "FIM 72-10-F01"
+      service_time_hrs: 4.0
+      special_tools: ["T-QCAL-100"]
+      facility_req: "CLEANROOM-ISO7"
+      service_notes: "Calibración T-QCAL-100"
+
+    - fru_pn: "QIC9-SVC"
+      description: "Quantum interface cable"
+      quantity_per_assembly: 2
+      service_action: "Remove/Install"
+      s1000d_dmc: "72-10-10-020-801-A"
+      amm_ref: "AMM 72-10-10"
+      service_time_hrs: 1.5
+      special_tools: []
+      facility_req: "CLEANROOM-ISO7"
+      service_notes: "Radio curvatura ≥ 4×Ø"
+
+  d_level_parts:
+    - fru_pn: "HUB2-NR"
+      description: "Hub assembly (Non-Repairable)"
+      quantity_per_assembly: 1
+      service_action: "Depot overhaul only"
+      service_level: "D-Level"
+      service_notes: "No field replacement"
+
+    - fru_pn: "BRH6-NR"
+      description: "Blade root housing (Non-Repairable)"
+      quantity_per_assembly: 24
+      service_action: "Depot overhaul only"
+      service_level: "D-Level"
+      service_notes: "Integrated with hub"
+
+# Overhaul modules
+overhaul_modules:
+  - module_pn: "FAN-MOD-OH"
+    description: "Fan module - Overhaul exchange"
+    service_action: "Swap OH"
+    s1000d_dmc: "72-10-00-040-801-A"
+    amm_ref: "AMM 72-10-00"
+    service_time_hrs: 8.0
+    core_return_policy: "Mandatory"
+    service_notes: "Devolver core con etiquetas"
+
+# Vendor information and supply chain (CV)
+suppliers:
+  - fru: "QSN5-SVC"
+    vendor_name: "Q-Sense NV"
+    cage_code: "3F7Q2"
+    cv_pn: "QSN5-NV-2026"
+    requirements: "Certif. DO-160G Sec. 20, Trazas QA lot/wafer"
+
+  - fru: "KIT-BLD-FST-01"
+    vendor_name: "HiLock Aero"
+    cage_code: "1XK21"
+    cv_pn: "FST7-KIT-01"
+    requirements: "Coating Ti, lote único por rotor"
+
+  - fru: "CWL3-SVC"
+    vendor_name: "CompositeWorks"
+    cage_code: "7C9L1"
+    cv_pn: "CWL3-PAIR-M"
+    requirements: "Par emparejado con cert. emparejamiento"
+
+# Service procedures and S1000D mapping
+service_procedures:
+  maintenance_actions:
+    - action: "Remove fan blade"
+      dmc: "72-10-01-020-801-A"
+      amm_section: "AMM 72-10-01"
+      estimated_time: "2.5 hrs"
+      skill_level: "Technician"
+
+    - action: "Install fan blade"
+      dmc: "72-10-01-030-801-A"
+      amm_section: "AMM 72-10-01"
+      estimated_time: "3.0 hrs"
+      skill_level: "Technician"
+      post_install: "Dynamic balance check required"
+
+    - action: "Calibrate quantum sensors"
+      dmc: "72-10-10-720-801-A"
+      fim_section: "FIM 72-10-F01"
+      estimated_time: "4.0 hrs"
+      skill_level: "Specialist"
+      facility: "CLEANROOM-ISO7"
+
+# Core return and RMA policies
+core_policies:
+  - component: "FAN-MOD-OH"
+    policy: "Core return mandatory"
+    rma_process: "DET de recepción required"
+    turnaround_time: "30 days"
+
+# IPC (Illustrated Parts Catalog) references
+ipc_structure:
+  figure_01: "Fan assembly overview"
+  figure_02: "Blade installation detail"
+  figure_03: "Quantum sensor locations"
+  figure_04: "Service access points"
+
+# DET linkages for service
+det_refs:
+  sbom_baseline: "DET:SE:ppp:SE:FAN1-SBOM:V9.0"
+  linked_mbom: "DET:SE:ppp:SE:FAN1-MBOM:V9.0"
+  service_manual: "DET:CAS:ppp:72-10:FAN1-SVC:V9.0"
+
+# Metadata
+meta:
+  owner: "MRO Engineering Lead"
+  reviewer: "CAS Authority"
+  last_updated: "2025-12-02T12:12:00Z"
+  change_ref: "ECO-FAN1-SBOM-V9.0"
+  qaudit_status: "pending"

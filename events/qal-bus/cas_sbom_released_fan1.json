@@ -1,0 +1,87 @@
+{
+  "event": "CAS.SBOMReleased",
+  "ts": "2025-12-02T12:12:00Z",
+  "program": "BWB-Q100",
+  "domain": "ppp",
+  "asset": "FAN1",
+  "utcs_id": "EstándarUniversal:Artefacto-CatalogoPiezas-ATA+S1000D-72.10-ServiceBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-c18e04d3-RestoDeVidaUtil",
+  "det_ref": "DET:SE:ppp:SE:FAN1-SBOM:V9.0",
+  "signature": "PQC-Dilithium3",
+  "provenance": {
+    "tool": "SBOM-Generator",
+    "version": "v3.0.1", 
+    "agent": "CAS-Engineering-Lead",
+    "time_utc": "2025-12-02T12:12:00Z"
+  },
+  "meta": {
+    "ipc": [
+      "BLD1-SVC",
+      "KIT-BLD-FST-01",
+      "FAN-MOD-OH"
+    ],
+    "fru_count": 10,
+    "service_levels": ["O-Level", "I-Level", "D-Level"],
+    "s1000d_dmcs": [
+      "72-10-01-020-801-A",
+      "72-10-02-020-801-A",
+      "72-10-03-020-801-A",
+      "72-10-04-020-801-A",
+      "72-10-05-020-801-A",
+      "72-10-10-020-801-A",
+      "72-10-10-720-801-A",
+      "72-10-00-040-801-A"
+    ],
+    "vendor_count": 3,
+    "core_return_policies": ["FAN-MOD-OH"],
+    "quantum_components": [
+      "QSN5-SVC: Quantum sensor nodes",
+      "QIC9-SVC: Quantum interface cables"
+    ],
+    "special_facilities": ["CLEANROOM-ISO7", "T-QCAL-100"]
+  },
+  "phase": "CAS",
+  "artifact_type": "ServiceBOM",
+  "inputs": [
+    "sha256:7f2a9c41...",
+    "sha256:2345bcde...",
+    "sha256:6789fghi...",
+    "sha256:0123jklm..."
+  ],
+  "outputs": [
+    "sha256:c18e04d3...",
+    "sha256:d29f15e4...",
+    "sha256:e3a026f5...",
+    "sha256:f4b137g6..."
+  ],
+  "req_trace": [
+    {
+      "req_id": "REQ-SVC-FRU-001",
+      "status": "pass",
+      "evidence": "sha256:d29f15e4..."
+    },
+    {
+      "req_id": "REQ-S1000D-MAP-001",
+      "status": "pass", 
+      "evidence": "sha256:e3a026f5..."
+    },
+    {
+      "req_id": "REQ-VENDOR-AVL-001",
+      "status": "pass",
+      "evidence": "sha256:f4b137g6..."
+    }
+  ],
+  "risk": {
+    "cvar_alpha": 0.95,
+    "cvar_value": 0.01,
+    "hazards": [
+      "Service documentation error",
+      "Wrong FRU identification",
+      "Quantum calibration loss"
+    ]
+  },
+  "compliance": {
+    "standards": ["ATA iSpec 2200", "S1000D Issue 5.0"],
+    "service_manual_refs": ["AMM 72-10", "FIM 72-10-F01"],
+    "audit_trail": "QAUDIT:ppp:SBOM:V9.0"
+  }
+}
