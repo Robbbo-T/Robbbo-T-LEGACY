@@ -1,0 +1,39 @@
+---
+# QAL kit — Dominio CQH (Criogenia/Cuántica/H2)
+dom: CQH
+program: BWB-Q100
+tfa_ref: "#tfa-bwb"
+
+metadata:
+  owner: "Cryogenic Systems Lead"
+  version: "v1.0"
+  qaudit_rollup: "QAUDIT:CQH:KIT:V1.0"
+
+se:  # Station Envelop
+  - id: SE-CQH-28
+    name: "Cryogenic tank integration"
+    takt: "7d"
+    resources: {operators: 8, special_tools: 4, area_m2: 600}
+    kits: ["KIT-CQ-INSUL-01", "KIT-CQ-VALVE-01"]
+    det_ref: "DET:SE:CQH:28:SE-CQH-28:V1.0"
+
+di:  # Domain Interface
+  - id: ICD_CQH_AAA_001
+    title: "Cryo tank thermal interface to structure"
+    version: "v1.0"
+    det_ref: "DET:DI:CQH:ICD:ICD_CQH_AAA_001:V1.0"
+
+ce:  # Component Equipped
+  - id: CE-CQH-28-20
+    desc: "Zero boil-off system equipped"
+    items: ["CI-28-20-TANK", "CI-28-20-INSUL"]
+    vendor_kit: ["AVL-CHART-ZBO"]
+    as_built_rev: "AB1"
+    det_ref: "DET:CE:CQH:28:CE-CQH-28-20:V1.0"
+
+# QS hooks para criogenia
+qs_hooks:
+  - ref: >
+      EstándarUniversal:EstadoCuantico-VQE-02.00-CQH-CI-28-20-TANK-0001-v1.0-BlendedWingBodyQ100-GeneracionHybrida-AIR-Amedeo Pelliccia-def456ab-RestoDeVidaUtil
+    det_ref: "DET:QS:CQH:CI:28-20-TANK:V1.0"
+    note: "VQE for cryogenic material optimization"

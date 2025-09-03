@@ -1,0 +1,15 @@
+{
+  "event": "QS.Published",
+  "ts": "2025-09-03T00:31:47.848Z",
+  "program": "BWB-Q100",
+  "domain": "AAA",
+  "level": "CI",
+  "entity": "53-30-RINGS-0002-v1",
+  "qs_type": "QML",
+  "utcs_mi_id": "EstándarUniversal:EstadoCuantico-QML-02.00-AAA-CI-53-30-RINGS-0002-v1.0-BlendedWingBodyQ100-GeneracionHybrida-AIR-Amedeo Pelliccia-9a3f2b1c-RestoDeVidaUtil\n",
+  "det_ref": "DET:QS:AAA:CI:53-30-RINGS:V1.0",
+  "signature": "PQC-Dilithium3",
+  "meta": {
+    "source": "qal/AAA/kit.yaml"
+  }
+}

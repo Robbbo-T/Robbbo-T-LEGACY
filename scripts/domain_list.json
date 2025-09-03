@@ -1,0 +1,19 @@
+{
+  "domains": [
+    { "code": "AAA", "name": "Arquitecturas/Aeroestructuras/Aerodinámica", "lower": "aaa" },
+    { "code": "AAP", "name": "Aeropuertos/Soporte Tierra", "lower": "aap" },
+    { "code": "CCC", "name": "Cabina/Cockpit/Carga", "lower": "ccc" },
+    { "code": "CQH", "name": "Criogenia/Cuántica/H2", "lower": "cqh" },
+    { "code": "DDD", "name": "Defensa/Ciberseguridad/Safety", "lower": "ddd" },
+    { "code": "EDI", "name": "Electrónica/Instrumentos", "lower": "edi" },
+    { "code": "EEE", "name": "Medioambiente/Circularidad", "lower": "eee" },
+    { "code": "EER", "name": "Energía/Renovables", "lower": "eer" },
+    { "code": "IIF", "name": "Infraestructuras/Instalaciones", "lower": "iif" },
+    { "code": "IIS", "name": "Sistemas Inteligentes/IA", "lower": "iis" },
+    { "code": "LCC", "name": "Enlaces/Comunicaciones/Control", "lower": "lcc" },
+    { "code": "LIB", "name": "Logística/Blockchain", "lower": "lib" },
+    { "code": "MMM", "name": "Mecánica/Materiales/Monitorización", "lower": "mmm" },
+    { "code": "OOO", "name": "SO/Navegación/HPC", "lower": "ooo" },
+    { "code": "ppp", "name": "Propulsión/Combustibles", "lower": "ppp" }
+  ]
+}

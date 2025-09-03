@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QS.Published",
+  "type": "object",
+  "required": ["event","ts","program","domain","level","entity","qs_type","utcs_mi_id","det_ref","signature"],
+  "properties": {
+    "event": { "const": "QS.Published" },
+    "ts": { "type": "string", "format": "date-time" },
+    "program": { "type": "string", "minLength": 1 },
+    "domain": { "type": "string", "pattern": "^(?:[A-Z]{3}|ppp)$" },
+    "level":  { "type": "string", "enum": ["TFA","SI","CV","SE","DI","CE","CC","CI","CP","FE","QS"] },
+    "entity": { "type": "string", "minLength": 1 },
+    "qs_type":{ "type": "string", "enum": ["QUBO","VQE","QML"] },
+    "utcs_mi_id": { "type": "string", "minLength": 40 },
+    "det_ref": { "type": "string", "pattern": "^DET:QS:(?:[A-Z]{3}|ppp):[A-Z0-9]{2,8}:[A-Za-z0-9\\-_]+:V\\d+\\.\\d+$" },
+    "signature": { "type": "string", "pattern": "^PQC-(?:Dilithium3|Falcon|SPHINCS\\+)$" },
+    "meta": { "type": "object", "additionalProperties": true }
+  },
+  "additionalProperties": false
+}
