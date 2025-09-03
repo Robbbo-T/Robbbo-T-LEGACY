@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AGUA-TRIPS Protocol Events",
+  "description": "Schema for AGUA-TRIPS Protocol events (Track, Record, Inspect, Paradigm Shift)",
+  "type": "object",
+  "required": ["event_type", "timestamp", "program", "domain", "version", "producer"],
+  "properties": {
+    "event_type": {
+      "type": "string",
+      "enum": ["TRIPS.Track", "TRIPS.Record", "TRIPS.Inspect", "TRIPS.ParadigmShift"],
+      "description": "TRIPS lifecycle event type"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event timestamp in ISO 8601 format"
+    },
+    "program": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9\\-]+$",
+      "description": "Program identifier (e.g., BWB-Q100)"
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "Domain code (AAA, CQH, etc.)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v\\d+\\.\\d+(_(v\\d+\\.\\d+))?$",
+      "description": "Version identifier or comparison (e.g., v1.4 or v1.3_v1.4)"
+    },
+    "producer": {
+      "type": "string",
+      "pattern": "^TRIPS\\.[A-Za-z]+Service$",
+      "description": "TRIPS service that produced the event"
+    },
+    "payload": {
+      "type": "object",
+      "anyOf": [
+        {
+          "description": "Track Event Payload",
+          "required": ["monitored_changes", "real_time"],
+          "properties": {
+            "monitored_changes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["change_type", "component", "timestamp"],
+                "properties": {
+                  "change_type": {
+                    "type": "string",
+                    "enum": ["CAD", "CAE", "CAT", "Requirements", "Quantum", "SupplyChain", "Interface"]
+                  },
+                  "component": {"type": "string"},
+                  "timestamp": {"type": "string", "format": "date-time"},
+                  "description": {"type": "string"},
+                  "magnitude": {"type": "number", "minimum": 0, "maximum": 10}
+                }
+              }
+            },
+            "real_time": {"type": "boolean"}
+          }
+        },
+        {
+          "description": "Record Event Payload",
+          "required": ["snapshot_id", "context", "det_hash", "qaudit_signature"],
+          "properties": {
+            "snapshot_id": {"type": "string"},
+            "context": {"type": "string"},
+            "det_hash": {"type": "string", "pattern": "^0x[a-f0-9]{64}$"},
+            "qaudit_signature": {"type": "string", "pattern": "^PQC-[A-Za-z0-9\\-]+$"},
+            "system_state": {
+              "type": "object",
+              "properties": {
+                "cad_models": {"type": "object"},
+                "cae_results": {"type": "object"},
+                "requirements": {"type": "object"},
+                "quantum_metrics": {"type": "object"}
+              }
+            }
+          }
+        },
+        {
+          "description": "Inspect Event Payload",
+          "required": ["from_version", "to_version", "delta_summary"],
+          "properties": {
+            "from_version": {"type": "string"},
+            "to_version": {"type": "string"},
+            "delta_summary": {
+              "type": "object",
+              "required": ["architecture_changes", "interface_updates", "requirements_impact", "performance_delta"],
+              "properties": {
+                "architecture_changes": {"type": "object"},
+                "interface_updates": {"type": "object"},
+                "requirements_impact": {"type": "object"},
+                "performance_delta": {"type": "object"},
+                "sdl_operations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["operation", "level", "component", "magnitude"],
+                    "properties": {
+                      "operation": {"type": "string", "enum": ["+", "-", "~", "↑", "↓", "!"]},
+                      "level": {"type": "string", "enum": ["Component", "Interface", "Requirement", "Performance", "Architecture"]},
+                      "component": {"type": "string"},
+                      "magnitude": {"type": "number", "minimum": 0, "maximum": 10},
+                      "risk": {"type": "string", "enum": ["Low", "Medium", "High"]},
+                      "impact": {"type": "string", "enum": ["Local", "System", "Global"]},
+                      "reversible": {"type": "boolean"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "description": "Paradigm Shift Event Payload",
+          "required": ["shift_score", "innovation_index", "risk_assessment", "certification_impact", "recommended_action"],
+          "properties": {
+            "shift_score": {"type": "number", "minimum": 0, "maximum": 10},
+            "innovation_index": {"type": "number", "minimum": 0, "maximum": 10},
+            "risk_assessment": {"type": "string", "enum": ["LOW", "MEDIUM", "HIGH"]},
+            "certification_impact": {"type": "string", "enum": ["NONE", "LOW", "MEDIUM", "HIGH"]},
+            "rollback_feasibility": {"type": "boolean"},
+            "recommended_action": {"type": "string", "enum": ["PROCEED", "REVIEW", "BOARD_APPROVAL", "STRATEGIC_DECISION"]},
+            "classification": {
+              "type": "string",
+              "enum": ["Patch", "Incremental", "Architectural", "Revolutionary"]
+            },
+            "impact_areas": {
+              "type": "array",
+              "items": {"type": "string"}
+            }
+          }
+        }
+      ]
+    },
+    "det_ref": {
+      "type": "string",
+      "pattern": "^DET:TRIPS:[A-Z]{3}:[A-Za-z0-9\\-]+:V\\d+\\.\\d+$",
+      "description": "Reference to associated DET entry"
+    },
+    "trace_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(REQ|TRACE):[A-Za-z0-9\\-]+$"
+      },
+      "description": "References to related requirements and traces"
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^0x[a-f0-9]+$",
+      "description": "Cryptographic signature for event integrity"
+    }
+  },
+  "additionalProperties": false
+}
