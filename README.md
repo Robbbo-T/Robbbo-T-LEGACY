@@ -95,44 +95,62 @@ Unificar el ciclo aeroespacial —diseño (CAD/CAM/CAE/PLM), producción (SCADA/
 
 ## Amedeo Pelliccia Methodology to Handle Aerospace Projects
 
-### Aerospace Project Domain Hierarchy Navigation Index
+### UTCS-MI Header (canonical example)
 
-**UniversalStandard:** Artifact-ProductBreakdown-ATA+S1000D-01.00-ProductBreakdownStructure-0001-v1.0-YourAerospaceCompany-ProjectName-Phase-YourName-uuid-LifecycleStatus
+**EstándarUniversal:Artefacto-DesgloseDeProducto-ATA+S1000D-01.00-ProductBreakdownStructure-0001-v1.1-Aerospace and Quantum United Advanced Venture-ProjectName-Phase-Amedeo Pelliccia-deadbeef-RestoDeVidaUtil**
+
+> **Notas:**
+> • Campo 4 = **Capítulo-Sección `NN.NN`** (p. ej., `01.00`).  
+> • Campo 5 = **Categoría en CamelCase** (sin siglas).  
+> • Campo 7 = **Versión `vX.Y`**.  
+> • Dominio **Propulsión/Combustibles** usa ancla **`ppp`** en minúsculas.
 
 ### Project Lifecycle Pillars
 
-| Pillar | Function | Scope |
-|--------|----------|-------|
-| [CAO](#cao---organization) | Organization | Resource allocation, risk management |
-| [CAB](#cab---brainstorming) | Brainstorming | Conceptual design studies, trade-off analyses |
-| [CAD](#cad---design) | Design | Detailed design, system integration |
-| [CAE](#cae---engineering) | Engineering | Simulation, analysis (FEA, CFD), performance modeling |
-| [CAT](#cat---testing) | Testing | Component & system level testing, validation campaigns |
-| [CAV](#cav---vv-certification) | V&V/Certification | Verification, Validation, Certification (e.g., CS-25, DO-178C) |
-| [CAM](#cam---manufacturing) | Manufacturing | Manufacturing processes, assembly procedures |
-| [CAP](#cap---production) | Production | Production planning, supply chain management |
-| [CAS](#cas---sustainment) | Sustainment | In-service support, maintenance, technical documentation (S1000D) |
-| [CAEpost](#caepost---end-of-life) | End-of-Life | Decommissioning, disposal, material recycling |
+| Pillar                            | Function           | Scope                                                    |
+| --------------------------------- | ------------------ | -------------------------------------------------------- |
+| [CAO](docs/c-amedeo/cao/README.md#ca-cao) | Organization       | Governance, policies, resource/risk allocation           |
+| [CAB](#cab---brainstorming)       | Brainstorming      | Concept creation, trade studies, rationale               |
+| [CAD](#cad---design)              | Design             | Parametric product definition, MBD, EBOM                 |
+| [CAE](#cae---engineering)         | Engineering        | High-fidelity simulation (FEA/CFD/thermal), performance  |
+| [CAT](#cat---testing)             | Testing            | Physical validation, test planning/DoE, data correlation |
+| [CAV](#cav---vv-certification)    | V&V/Certification  | Compliance mapping, evidence roll-up (CS-25, DO-178C)    |
+| [CAM](#cam---manufacturing)       | Manufacturing      | BOP/MBOM, processes, stations, QA gates                  |
+| [CAP](#cap---production)          | Production         | MPS/MRP, takt, supply chain                              |
+| [CAS](#cas---sustainment)         | Sustainment        | In-service support, IPC/IETP (S1000D), SBs/PHM           |
+| [CAEpost](#caepost---end-of-life) | End-of-Life        | Decommissioning, recovery, circularity                   |
 
-### Domain Navigation Matrix
+### Aerospace Project Domain × Level Navigation Matrix (TFA → QS)
 
-| Domain | Description | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-|--------|-------------|-----------|-----------|-----------|-----------|-----------|-----------|
-| **AAA** | Structures/Aero | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **AAP** | Ground Support | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **CCC** | Cabin/Cockpit | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **CQH** | Cryo/H₂ | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **DDD** | Safety/Cyber | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **EDI** | Electronics | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **EEE** | Environmental | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **EER** | Energy/Battery | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **IIF** | Infrastructure | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **IIS** | AI Systems | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **LCC** | Controls/Comms | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **LIB** | Logistics/Chain | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **MMM** | Mechanical | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **OOO** | OS/Navigation | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
-| **PPP** | Propulsion/Fuel | [DI](#di) | [CE](#ce) | [CC](#cc) | [CI](#ci) | [CP](#cp) | [FE](#fe) |
+> Cada celda salta a su ancla `#<nivel>-<dom>`; **TFA** es global (`#tfa-bwb`).  
+> Niveles: **TFA** · **SI** · **CV** · **SE** · **DI** · **CE** · **CC** · **CI** · **CP** · **FE** · **QS**.
+
+| Domain  | Description     |       TFA       |       SI      |       CV      |       SE      |       DI      |       CE      |       CC      |       CI      |       CP      |       FE      |       QS      |
+| ------- | --------------- | :-------------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: | :-----------: |
+| **AAA** | Structures/Aero | [TFA](#tfa-bwb) | [SI](#si-aaa) | [CV](#cv-aaa) | [SE](#se-aaa) | [DI](#di-aaa) | [CE](#ce-aaa) | [CC](#cc-aaa) | [CI](#ci-aaa) | [CP](#cp-aaa) | [FE](#fe-aaa) | [QS](#qs-aaa) |
+| **AAP** | Ground Support  | [TFA](#tfa-bwb) | [SI](#si-aap) | [CV](#cv-aap) | [SE](#se-aap) | [DI](#di-aap) | [CE](#ce-aap) | [CC](#cc-aap) | [CI](#ci-aap) | [CP](#cp-aap) | [FE](#fe-aap) | [QS](#qs-aap) |
+| **CCC** | Cabin/Cockpit   | [TFA](#tfa-bwb) | [SI](#si-ccc) | [CV](#cv-ccc) | [SE](#se-ccc) | [DI](#di-ccc) | [CE](#ce-ccc) | [CC](#cc-ccc) | [CI](#ci-ccc) | [CP](#cp-ccc) | [FE](#fe-ccc) | [QS](#qs-ccc) |
+| **CQH** | Cryo/H₂         | [TFA](#tfa-bwb) | [SI](#si-cqh) | [CV](#cv-cqh) | [SE](#se-cqh) | [DI](#di-cqh) | [CE](#ce-cqh) | [CC](#cc-cqh) | [CI](#ci-cqh) | [CP](#cp-cqh) | [FE](#fe-cqh) | [QS](#qs-cqh) |
+| **DDD** | Safety/Cyber    | [TFA](#tfa-bwb) | [SI](#si-ddd) | [CV](#cv-ddd) | [SE](#se-ddd) | [DI](#di-ddd) | [CE](#ce-ddd) | [CC](#cc-ddd) | [CI](#ci-ddd) | [CP](#cp-ddd) | [FE](#fe-ddd) | [QS](#qs-ddd) |
+| **EDI** | Electronics     | [TFA](#tfa-bwb) | [SI](#si-edi) | [CV](#cv-edi) | [SE](#se-edi) | [DI](#di-edi) | [CE](#ce-edi) | [CC](#cc-edi) | [CI](#ci-edi) | [CP](#cp-edi) | [FE](#fe-edi) | [QS](#qs-edi) |
+| **EEE** | Environmental   | [TFA](#tfa-bwb) | [SI](#si-eee) | [CV](#cv-eee) | [SE](#se-eee) | [DI](#di-eee) | [CE](#ce-eee) | [CC](#cc-eee) | [CI](#ci-eee) | [CP](#cp-eee) | [FE](#fe-eee) | [QS](#qs-eee) |
+| **EER** | Energy/Battery  | [TFA](#tfa-bwb) | [SI](#si-eer) | [CV](#cv-eer) | [SE](#se-eer) | [DI](#di-eer) | [CE](#ce-eer) | [CC](#cc-eer) | [CI](#ci-eer) | [CP](#cp-eer) | [FE](#fe-eer) | [QS](#qs-eer) |
+| **IIF** | Infrastructure  | [TFA](#tfa-bwb) | [SI](#si-iif) | [CV](#cv-iif) | [SE](#se-iif) | [DI](#di-iif) | [CE](#ce-iif) | [CC](#cc-iif) | [CI](#ci-iif) | [CP](#cp-iif) | [FE](#fe-iif) | [QS](#qs-iif) |
+| **IIS** | AI Systems      | [TFA](#tfa-bwb) | [SI](#si-iis) | [CV](#cv-iis) | [SE](#se-iis) | [DI](#di-iis) | [CE](#ce-iis) | [CC](#cc-iis) | [CI](#ci-iis) | [CP](#cp-iis) | [FE](#fe-iis) | [QS](#qs-iis) |
+| **LCC** | Controls/Comms  | [TFA](#tfa-bwb) | [SI](#si-lcc) | [CV](#cv-lcc) | [SE](#se-lcc) | [DI](#di-lcc) | [CE](#ce-lcc) | [CC](#cc-lcc) | [CI](#ci-lcc) | [CP](#cp-lcc) | [FE](#fe-lcc) | [QS](#qs-lcc) |
+| **LIB** | Logistics/Chain | [TFA](#tfa-bwb) | [SI](#si-lib) | [CV](#cv-lib) | [SE](#se-lib) | [DI](#di-lib) | [CE](#ce-lib) | [CC](#cc-lib) | [CI](#ci-lib) | [CP](#cp-lib) | [FE](#fe-lib) | [QS](#qs-lib) |
+| **MMM** | Mechanical      | [TFA](#tfa-bwb) | [SI](#si-mmm) | [CV](#cv-mmm) | [SE](#se-mmm) | [DI](#di-mmm) | [CE](#ce-mmm) | [CC](#cc-mmm) | [CI](#ci-mmm) | [CP](#cp-mmm) | [FE](#fe-mmm) | [QS](#qs-mmm) |
+| **OOO** | OS/Navigation   | [TFA](#tfa-bwb) | [SI](#si-ooo) | [CV](#cv-ooo) | [SE](#se-ooo) | [DI](#di-ooo) | [CE](#ce-ooo) | [CC](#cc-ooo) | [CI](#ci-ooo) | [CP](#cp-ooo) | [FE](#fe-ooo) | [QS](#qs-ooo) |
+| **PPP** | Propulsion/Fuel | [TFA](#tfa-bwb) | [SI](#si-ppp) | [CV](#cv-ppp) | [SE](#se-ppp) | [DI](#di-ppp) | [CE](#ce-ppp) | [CC](#cc-ppp) | [CI](#ci-ppp) | [CP](#cp-ppp) | [FE](#fe-ppp) | [QS](#qs-ppp) |
+
+> **Anchor pack (pegar en cualquier parte del doc, sin bloque de código):**  
+> `<a id="tfa-bwb"></a>`  
+> Para cada dominio (`aaa…ppp`):  
+> `<a id="si-<dom>"></a><a id="cv-<dom>"></a><a id="se-<dom>"></a><a id="di-<dom>"></a><a id="ce-<dom>"></a><a id="cc-<dom>"></a><a id="ci-<dom>"></a><a id="cp-<dom>"></a><a id="fe-<dom>"></a><a id="qs-<dom>"></a>`  
+> Ej.: `si-aaa`, `cv-aaa`, …, `qs-ppp`.  
+> *Alias legado:* `<a id="ta-bwb"></a>` → `#tfa-bwb`.
+
+---
 
 ### Quick Reference
 
