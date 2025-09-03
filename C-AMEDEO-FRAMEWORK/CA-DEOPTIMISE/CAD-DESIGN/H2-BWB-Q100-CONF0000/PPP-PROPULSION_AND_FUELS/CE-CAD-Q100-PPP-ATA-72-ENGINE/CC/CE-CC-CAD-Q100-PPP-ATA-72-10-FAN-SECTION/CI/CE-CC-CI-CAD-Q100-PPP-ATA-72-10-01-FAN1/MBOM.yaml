@@ -1,0 +1,299 @@
+---
+# MBOM — UTCS-MI canónico
+# EstándarUniversal:Artefacto-ListaMateriales-ATA+S1000D-72.10-ManufacturingBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-7f2a9c41-RestoDeVidaUtil
+# DET:SE:ppp:SE:FAN1-MBOM:V9.0
+
+utcs_mi_header: "EstándarUniversal:Artefacto-ListaMateriales-ATA+S1000D-72.10-ManufacturingBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-7f2a9c41-RestoDeVidaUtil"
+det_reference: "DET:SE:ppp:SE:FAN1-MBOM:V9.0"
+
+assembly: Q100-72-10-01-FAN1
+description: Fan Section Assembly - Manufacturing BOM
+revision: V9.0
+program: BWB-Q100
+domain: ppp
+ata_chapter: "72.10"
+owner_domain: "PPP-PROPULSION_AND_FUELS"
+sns: "72-10"
+ce_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+cc_id: "CE-CC-CAD-Q100-PPP-ATA-72-10-FAN-SECTION"
+ci_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+criticality: "DAL-B"
+effectivity: "All serial numbers"
+
+# EBOM → MBOM crosswalk mapping
+ebom_source: "Q100-72-10-01-FAN1-EBOM"
+mbom_structure:
+  level_1:
+    - item: CWL3
+      description: "Cowl"
+      quantity: 2
+      material: "CFRP-T800"
+      routing_ref: "SE:ppp:INTEG"
+
+    - item: SPN4
+      description: "Spinner"
+      quantity: 1
+      material: "Al-7075"
+      routing_ref: "SE:ppp:INTEG"
+
+    - item: SHR8
+      description: "Shroud"
+      quantity: 1
+      material: "CFRP-T800"
+      routing_ref: "SE:ppp:INTEG"
+
+  level_2:
+    - item: HUB2
+      description: "Cubo"
+      quantity: 1
+      material: "Ti-6Al-4V"
+      routing_ref: "SE:ppp:ROT-A"
+      assembly_notes: "En SBOM como No-Reemplazable (D-Level)"
+
+    - item: BRH6
+      description: "Aloj. raíz"
+      quantity: 24
+      material: "Ti-6Al-4V"
+      routing_ref: "SE:ppp:ROT-A"
+      assembly_notes: "Integrado al cubo en servicio; D-Level"
+
+    - item: BLD1
+      description: "Pala fan"
+      quantity: 24
+      material: "CFRP-T800"
+      routing_ref: "SE:ppp:ROT-A"
+      process_notes: "Requiere re-equilibrado si >2 palas cambiadas"
+
+    - item: QSN5
+      description: "Nodo sensor"
+      quantity: 4
+      material: "Si-Quantum"
+      routing_ref: "SE:ppp:CLEAN"
+      special_req: "CLEANROOM-ISO7, T-QCAL-100"
+
+    - item: QIC9
+      description: "Cable cuántico"
+      quantity: 2
+      material: "Quantum-fiber"
+      routing_ref: "SE:ppp:CLEAN"
+      special_req: "Radio curvatura ≥ 4×Ø"
+
+# Explosión MBOM para fijaciones (EBOM "set" → MBOM piezas)
+consumables_and_fasteners:
+  - item: FST7-B
+    description: "Fastener bolts"
+    quantity: 96
+    material: "Ti-Hi-Lok"
+    process: "CNS10 coating"
+    routing_ref: "SE:ppp:ROT-A"
+
+  - item: FST7-N
+    description: "Fastener nuts"
+    quantity: 96
+    material: "Ti-Hi-Lok"
+    process: "CNS10 coating"
+    routing_ref: "SE:ppp:ROT-A"
+
+  - item: FST7-W
+    description: "Fastener washers"
+    quantity: 96
+    material: "Ti-Hi-Lok"
+    process: "CNS10 coating"
+    routing_ref: "SE:ppp:ROT-A"
+
+  - item: CNS10
+    description: "Anti-seize compound"
+    quantity: "0.5L"
+    material: "Molykote"
+    consumable: true
+
+  - item: CNS11
+    description: "Cleaning solvent"
+    quantity: "2L"
+    material: "IPA-99.9%"
+    consumable: true
+
+  - item: CNS12
+    description: "Sealant"
+    quantity: "0.3L"
+    material: "PR-1440"
+    consumable: true
+
+# Bill of Process (BOP) y ruta de fabricación
+routing:
+  - op: "010"
+    station: "SE:ppp:ROT-A"
+    description: "Recepción HUB2/BRH6"
+    work_instruction: "WI-72-10-00"
+    resources:
+      - "T-NDT-MPI-K01"
+    time_min: 60
+    qa_gate:
+      type: "IQC"
+      criterion: "HT OK / NDT sin indicaciones"
+      aql: "100%"
+
+  - op: "020"
+    station: "SE:ppp:ROT-A"
+    description: "Ensamblar BRH6 en HUB2"
+    work_instruction: "WI-72-10-02"
+    resources:
+      - "Llave control par"
+    time_min: 180
+    qa_gate:
+      type: "Visual inspection"
+      criterion: "100% inspección visual sedes microretícula"
+      aql: "100%"
+
+  - op: "030"
+    station: "SE:ppp:ROT-A"
+    description: "Montaje BLD1 secuencia equilibrado"
+    work_instruction: "WI-72-10-03"
+    resources:
+      - "T-AFP-001"
+    time_min: 240
+    qa_gate:
+      type: "Poka-Yoke"
+      criterion: "orientación; torque preliminar"
+      aql: "100%"
+
+  - op: "040"
+    station: "SE:ppp:ROT-A"
+    description: "FST7-B/N/W x96, aplicar CNS10"
+    work_instruction: "WI-72-10-05"
+    resources:
+      - "T-TORQ-150"
+    time_min: 300
+    qa_gate:
+      type: "Gate"
+      criterion: "150 Nm ±3%; sello testigo"
+      aql: "100%"
+
+  - op: "050"
+    station: "SE:ppp:BAL-01"
+    description: "Balanceo dinámico"
+    work_instruction: "WI-72-10-07"
+    resources:
+      - "T-BAL-015"
+    time_min: 120
+    qa_gate:
+      type: "Gate"
+      criterion: "Residuo < 0,25 g·cm; rework si no cumple"
+      aql: "100%"
+    quantum_boost: "QML asiste al balanceo con surrogate de convergencia"
+
+  - op: "060"
+    station: "SE:ppp:INTEG"
+    description: "Montaje CWL3, SHR8, SPN4"
+    work_instruction: "WI-72-10-09"
+    resources:
+      - "Útil posicionamiento"
+    time_min: 180
+    qa_gate:
+      type: "Dimensional"
+      criterion: "Gap/Flush ≤ 0,5 mm; estanqueidad"
+      aql: "100%"
+
+  - op: "070"
+    station: "SE:ppp:CLEAN"
+    description: "Instalar QSN5/QIC9"
+    work_instruction: "WI-72-10-15"
+    resources:
+      - "CLEANROOM-ISO7"
+      - "T-QCAL-100"
+    time_min: 240
+    qa_gate:
+      type: "Gate"
+      criterion: "continuidad, ruido EMI dentro DO-160G"
+      aql: "100%"
+    quantum_boost:
+      - "QUBO sugiere ruteo libre de cruces para QIC9"
+      - "VQE valida cadena NV-center bajo perfil térmico DO-160G"
+
+  - op: "080"
+    station: "SE:ppp:FINAL"
+    description: "Pruebas funcionales & e2e"
+    work_instruction: "WI-72-10-19"
+    resources:
+      - "SimBridge"
+      - "DAS"
+    time_min: 180
+    qa_gate:
+      type: "FAT"
+      criterion: "vibración, telemetría, trazas DET emitidas"
+      aql: "100%"
+
+# Plan de Control de Calidad
+quality_control:
+  - point: "QC-01"
+    characteristic: "Torque fijaciones"
+    method: "Llave digital, trazable"
+    frequency: "100%"
+    limit: "150 Nm ±3%"
+    det_ref: "DET:SE:ppp:SE:FAN1-QC-TORQUE:V9.0"
+
+  - point: "QC-02"
+    characteristic: "Imbalance rotor"
+    method: "ISO 1940 G0.4"
+    frequency: "100%"
+    limit: "< 0,25 g·cm"
+    det_ref: "DET:SE:ppp:SE:FAN1-QC-BAL:V9.0"
+
+  - point: "QC-03"
+    characteristic: "Limpieza ISO 7"
+    method: "Partículas ISO14644"
+    frequency: "100%"
+    limit: "Clase 7"
+    det_ref: "DET:SE:ppp:SE:FAN1-QC-CLEAN:V9.0"
+
+  - point: "QC-04"
+    characteristic: "Continuidad Q-bus"
+    method: "DAS-Q, DO-160G"
+    frequency: "100%"
+    limit: "Pass"
+    det_ref: "DET:SE:ppp:SE:FAN1-QC-QBUS:V9.0"
+
+# Kit assembly information
+kits:
+  - kit_id: "KIT-BLD-FST-01"
+    description: "Blade fastener kit"
+    components: ["FST7-B", "FST7-N", "FST7-W"]
+    quantity_per_kit: 96
+    supplier: "HiLock Aero (1XK21)"
+    cv_pn: "FST7-KIT-01"
+
+# Station Envelop references
+stations:
+  - se_id: "SE:ppp:ROT-A"
+    name: "Rotor Assembly Station"
+    operations: ["010", "020", "030", "040"]
+
+  - se_id: "SE:ppp:BAL-01"
+    name: "Dynamic Balancing Station"
+    operations: ["050"]
+
+  - se_id: "SE:ppp:INTEG"
+    name: "Integration Station"
+    operations: ["060"]
+
+  - se_id: "SE:ppp:CLEAN"
+    name: "Clean Room Assembly"
+    operations: ["070"]
+
+  - se_id: "SE:ppp:FINAL"
+    name: "Final Test Station"
+    operations: ["080"]
+
+# DET linkages
+det_refs:
+  mbom_baseline: "DET:SE:ppp:SE:FAN1-MBOM:V9.0"
+  previous_version: null
+  linked_ebom: "DET:CAD:ppp:72-10:FAN1-EBOM:V9.0"
+
+# Metadata
+meta:
+  owner: "Manufacturing Engineering Lead"
+  reviewer: "CAM Authority"
+  last_updated: "2025-12-02T12:10:00Z"
+  change_ref: "ECO-FAN1-MBOM-V9.0"
+  qaudit_status: "pending"
