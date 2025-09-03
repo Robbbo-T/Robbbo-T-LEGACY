@@ -1,10 +1,11 @@
+---
 version: 1
 meta:
   owner: structures@aqua-os
   reviewer: airworthiness@aqua-os
   last_updated: 2025-09-01
   change_ref: CDR-AAA-2025-09
-  
+
 applies_to:
   cax: CAD
   mic: Q100
@@ -39,9 +40,9 @@ standards:
           code: Q100-52-10-01-00A-000A-D
         - type: "300"  # Testing
           code: Q100-52-10-01-00A-300A-D
-          
+
   - id: CS-25.807
-    org: EASA  
+    org: EASA
     title: Emergency Exits
     clause: 25.807(a)
     applicability: [Design, Test]
@@ -53,10 +54,10 @@ standards:
     evidence:
       det_patterns:
         - DET:CAT:Q100:52-10-01:escape_test:V*
-        
+
   - id: CS-25.365
     org: EASA
-    title: Pressurization Loads  
+    title: Pressurization Loads
     clause: 25.365(a)
     applicability: [Design, Analysis]
     level: MUST

@@ -17,4 +17,3 @@ quantum_tools:
   qml_models: "ALIAS:PPP:QML:LATENT-SPACE-MODELS"
   grover_search: "ALIAS:PPP:GROVER:PATENT-SEARCH"
   entropy_maximization: "ALIAS:PPP:MAXENT:NOVELTY-SEARCH"
-

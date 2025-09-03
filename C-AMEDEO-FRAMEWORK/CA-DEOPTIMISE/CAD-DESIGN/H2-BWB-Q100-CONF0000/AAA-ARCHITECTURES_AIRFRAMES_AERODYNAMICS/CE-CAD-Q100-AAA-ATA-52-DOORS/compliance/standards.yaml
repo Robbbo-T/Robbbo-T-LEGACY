@@ -1,10 +1,11 @@
+---
 version: 1
 meta:
   owner: airworthiness@aqua-os
   reviewer: systemsafety@aqua-os
   last_updated: 2025-09-01
   change_ref: CDR-AAA-2025-09
-  
+
 applies_to:
   cax: CAD
   mic: Q100
@@ -23,7 +24,7 @@ standards:
     level: MUST
     verification: [Analysis, Test, Inspection]
     scope: "All passenger and crew doors"
-    
+
   - id: CS-25.807
     org: EASA
     title: Emergency Exits
@@ -32,7 +33,7 @@ standards:
     level: MUST
     verification: [Test, Demonstration]
     scope: "Emergency exits and escape slides"
-    
+
   - id: CS-25.365
     org: EASA
     title: Pressurization Loads

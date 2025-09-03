@@ -1,8 +1,9 @@
+---
 version: 1
 meta:
   owner: structures@aqua-os
   last_updated: 2025-09-01
-  
+
 applies_to:
   ci_id: CE-CC-CI-CAD-Q100-AAA-ATA-52-40-01-OVERWING-EXIT-LH
   description: "LH"

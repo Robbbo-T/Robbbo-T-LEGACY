@@ -1,8 +1,9 @@
+---
 version: 1
 meta:
   owner: structures@aqua-os
   last_updated: 2025-09-01
-  
+
 applies_to:
   ci_id: CE-CC-CI-CAD-Q100-AAA-ATA-02-30-02-COMPONENT-2
   description: "Component 2 for ATA 02"

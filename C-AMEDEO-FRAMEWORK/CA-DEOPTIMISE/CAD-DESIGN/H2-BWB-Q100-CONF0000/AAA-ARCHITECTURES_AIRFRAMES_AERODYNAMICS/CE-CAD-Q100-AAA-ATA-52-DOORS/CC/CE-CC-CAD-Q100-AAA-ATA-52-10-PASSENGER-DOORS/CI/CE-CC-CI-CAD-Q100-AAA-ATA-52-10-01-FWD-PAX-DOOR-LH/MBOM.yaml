@@ -1,3 +1,4 @@
+---
 version: 1.0
 meta:
   item: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
@@ -14,7 +15,7 @@ manufacturing_sequence:
     quality:
       inspection_type: "FAI"
       tolerances: "±0.5mm"
-      
+
   - operation: 20
     description: "Skin Panel Preparation"
     workcenter: "WC-COMP-001"
@@ -23,7 +24,7 @@ manufacturing_sequence:
     quality:
       inspection_type: "SPC"
       tolerances: "±0.2mm"
-      
+
   - operation: 30
     description: "Composite Bonding"
     workcenter: "WC-BOND-001"
@@ -32,7 +33,7 @@ manufacturing_sequence:
     quality:
       inspection_type: "NDT"
       method: "Ultrasonic"
-      
+
   - operation: 40
     description: "Mechanism Installation"
     workcenter: "WC-ASSY-001"
@@ -41,7 +42,7 @@ manufacturing_sequence:
     quality:
       inspection_type: "Functional"
       test_cycles: 1000
-      
+
   - operation: 50
     description: "Final Assembly"
     workcenter: "WC-ASSY-002"
@@ -55,11 +56,11 @@ kits:
   - kit_id: "KIT-52-10-01-A"
     description: "Frame & Structure Kit"
     parts: ["Q100-52-10-01-001", "Q100-52-10-01-004", "Q100-52-10-01-005"]
-    
+
   - kit_id: "KIT-52-10-01-B"
     description: "Skin & Sealing Kit"
     parts: ["Q100-52-10-01-002", "Q100-52-10-01-003", "Q100-52-10-01-006"]
-    
+
   - kit_id: "KIT-52-10-01-C"
     description: "Hardware & Accessories Kit"
     parts: ["Q100-52-10-01-007", "Q100-52-10-01-008"]
