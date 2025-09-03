@@ -9,6 +9,22 @@
 Primary ATA codes owned by this domain:
 ATA-70, ATA-71, ATA-72, ATA-73, ATA-74, ATA-75, ATA-76, ATA-77, ATA-78, ATA-79, ATA-80, ATA-81, ATA-82, ATA-83, ATA-84, ATA-85
 
+## Manufacturing Artifacts
+
+### FAN1 Fan Section Assembly (ATA 72.10)
+- **MBOM**: [FAN1_MBOM.md](FAN1_MBOM.md)
+- **QAL Bus Event**: [CAM.MBOMReleased.json](../../../../../events/out/CAM.MBOMReleased.json)  
+- **QAUDIT**: [QAUDIT:CAM:ppp:MBOM:V9.0](../../../../../UTCS-BLOCKCHAIN/QAUDIT/CAM/ppp/MBOM-V9.0.yaml)
+- **DET Reference**: DET:CAM:ppp:72-10:FAN1-MBOM:V9.0
+
+#### Manufacturing Features
+- ✅ Complete Bill of Process (BOP) with 8 operations
+- ✅ Station Envelop (SE) routing across 5 manufacturing stations  
+- ✅ QA gates and quality control checkpoints
+- ✅ Quantum optimization integration (QML, QUBO, VQE)
+- ✅ FST7 fastener explosion (EBOM set → MBOM individual pieces)
+- ✅ UTCS-MI canonical headers and DET traceability
+
 ## Cross-Domain References
 Co-domains that reference this domain:
 [CQH](../CQH-*/), [EER](../EER-*/), [MMM](../MMM-*/)
@@ -46,6 +62,7 @@ PPP-PROPULSION_AND_FUEL/
 ├── README.md (this file)
 ├── alias.yml (cross-domain references)
 ├── domain-config.yaml (domain configuration)
+├── FAN1_MBOM.md (FAN1 Manufacturing BOM)
 └── [CE directories will be created as needed]
 ```
 
