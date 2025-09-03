@@ -9,6 +9,22 @@
 Primary ATA codes owned by this domain:
 ATA-70, ATA-71, ATA-72, ATA-73, ATA-74, ATA-75, ATA-76, ATA-77, ATA-78, ATA-79, ATA-80, ATA-81, ATA-82, ATA-83, ATA-84, ATA-85
 
+## Service Artifacts
+
+### FAN1 Fan Section Assembly (ATA 72.10)
+- **SBOM**: [FAN1_SBOM.md](FAN1_SBOM.md)
+- **QAL Bus Event**: [CAS.SBOMReleased.json](../../../../../events/out/CAS.SBOMReleased.json)
+- **QAUDIT**: [QAUDIT:CAS:ppp:SBOM:V9.0](../../../../../UTCS-BLOCKCHAIN/QAUDIT/CAS/ppp/SBOM-V9.0.yaml)
+- **DET Reference**: DET:CAS:ppp:72-10:FAN1-SBOM:V9.0
+
+#### Service Features
+- ✅ Complete FRU catalog with O/I/D-Level classification
+- ✅ S1000D DMC integration (9 procedures)
+- ✅ Vendor supply chain data (4 specialized vendors)
+- ✅ Quantum service capabilities (T-QCAL-100, CLEANROOM-ISO7)
+- ✅ Core return policies and RMA procedures
+- ✅ UTCS-MI canonical headers and service traceability
+
 ## Cross-Domain References
 Co-domains that reference this domain:
 [CQH](../CQH-*/), [EER](../EER-*/), [MMM](../MMM-*/)
