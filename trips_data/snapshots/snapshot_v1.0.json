@@ -1,0 +1,35 @@
+{
+  "event_type": "TRIPS.Record",
+  "timestamp": "2025-09-03T00:12:06.701300+00:00",
+  "program": "BWB-Q100",
+  "domain": "SYS",
+  "version": "v1.0",
+  "producer": "TRIPS.RecordService",
+  "payload": {
+    "snapshot_id": "v1.0",
+    "context": "AGUA-TRIPS Demo",
+    "det_hash": "0xf83911d728d9dd1b81674425dc2b2470b635805b748c1a2abe6e11519a54a626",
+    "qaudit_signature": "PQC-Dilithium3-2879b07bae31128b",
+    "system_state": {
+      "cad_models": {
+        "count": 147,
+        "size_gb": 2.3
+      },
+      "cae_results": {
+        "count": 89,
+        "size_gb": 1.8
+      },
+      "requirements": {
+        "count": 234,
+        "traced": 234
+      },
+      "quantum_metrics": {
+        "confidence": 0.79,
+        "cvar": 0.1
+      },
+      "timestamp": "2025-09-03T00:12:06.700894+00:00"
+    }
+  },
+  "det_ref": "DET:TRIPS:SYS:snapshot:V1.0",
+  "signature": "0x0fc94fa733056caeaefb57462d0188c150d3999c27683732b38b2f1e1257fccc"
+}

@@ -1,0 +1,28 @@
+{
+  "det_id": "DET:TRIPS:SYS:snapshot:V1.3",
+  "timestamp": "2025-09-03T00:11:34.430982+00:00",
+  "phase": "TRIPS",
+  "artifact_type": "Record",
+  "inputs": [
+    "sha256:14d77c4ef120fe4ca6617ffcb939908e4b3c1036c9f038504fa12ceec981146e"
+  ],
+  "outputs": [
+    "sha256:0975a65a1d37bd7496d5a3477f267a0a79a32600b2b5d86e3c4ada09fedd5baa"
+  ],
+  "refs": {
+    "ce": "CE-TRIPS-SYS-snapshot",
+    "ci": "CI-TRIPS-SYS-snapshot"
+  },
+  "processing": {
+    "tool": "agua-trips-cli",
+    "version": "1.0.0",
+    "params": {
+      "snapshot_id": "v1.3",
+      "context": "Test baseline"
+    }
+  },
+  "signature": {
+    "algorithm": "Ed25519",
+    "hash": "9215fdc48ecf9e8576364b48ec3d59e8ec885ab5cfb18299e6039b4bb91114f5"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "event_type": "TRIPS.Track",
+  "timestamp": "2025-09-03T00:12:06.647420+00:00",
+  "program": "BWB-Q100",
+  "domain": "CQH",
+  "version": "v1.0",
+  "producer": "TRIPS.TrackService",
+  "payload": {
+    "monitored_changes": [
+      {
+        "change_type": "Quantum",
+        "component": "CQH-Quantum-Component",
+        "timestamp": "2025-09-03T00:12:06.647439+00:00",
+        "description": "Confidence recalculating...",
+        "magnitude": 3.5
+      }
+    ],
+    "real_time": true,
+    "domain": "CQH",
+    "monitor_types": [
+      "CAD",
+      "CAE",
+      "CAT",
+      "Requirements",
+      "Quantum",
+      "SupplyChain"
+    ]
+  },
+  "det_ref": "DET:TRIPS:CQH:monitoring:V1.0",
+  "signature": "0xceeaa692069c70aba5bb59e8e8db0d79d03bb62e44c53327ae60c627da6b7caa"
+}
