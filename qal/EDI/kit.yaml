@@ -1,0 +1,90 @@
+# qal/EDI/kit.yaml
+dom: EDI                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-EDI-10
+    objetivo: "EDI primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-EDI-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-EDI-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:EDI:10:SE-EDI-10:V1.0"
+  - id: SE-EDI-20
+    objetivo: "EDI integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-EDI-02" ]
+    kits:
+      bom_ref: "MBOM-EDI-20-v1.0"
+    det_ref: "DET:SE:EDI:20:SE-EDI-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-EDI↔AAA-01
+    tipo: ICD
+    descripcion: "EDI to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:EDI:ICD:DI-EDI-AAA:V1.0"
+  - id: DI-EDI↔EDI-02
+    tipo: ICD
+    descripcion: "EDI electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:EDI:ICD:DI-EDI-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-EDI-PRIMARY
+    scope: "Primary EDI components with kit and vendor"
+    as_built: "EBOM-EDI-PRIMARY-v1.0"
+    vendor_pack: "AVL-EDI-2025Q3"
+    det_ref: "DET:CE:EDI:PRIMARY:CE-EDI-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "EDI01"
+    proveedor: "EDI Vendor Primary"
+    alcance: [ "EDI main components", "EDI materials" ]
+    ppap: "PPAP-EDI01-001-v1.0"
+    fai:  "FAI-EDI01-001-v1.0"
+    lt_dias: 45
+  - cage: "EDI02"
+    proveedor: "EDI Vendor Secondary"
+    alcance: [ "EDI secondary components", "EDI consumables" ]
+    ppap: "PPAP-EDI02-002-v1.0"
+    fai:  "FAI-EDI02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-EDI-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-EDI-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:EDI:CI:PRIMARY:V1.0"
+    note: "VQE for EDI primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-EDI-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-EDI-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:EDI:SE:10:V1.0"
+    note: "QML surrogate for EDI station optimization"
+
+# Metadata
+metadata:
+  owner: "EDI Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:EDI:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-edi -> #se-edi"
+  di_invariant: "#dinv-edi -> #di-edi"
+  ce_envelope: "#cenv-edi -> #ce-edi"

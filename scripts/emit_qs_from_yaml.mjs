@@ -22,10 +22,12 @@ function processKit(file) {
     const dom = y.dom;
     const entity = (q.ref.match(/-CI-([A-Za-z0-9\-]+)/) || [])[1] || "N_A";
     const qsType = /QUBO/.test(q.ref) ? "QUBO" : (/VQE/.test(q.ref) ? "VQE" : "QML");
+    // Use canonical program name from kit.yaml, fallback to legacy
+    const program = y.programa || y.program || "BWB-Q100";
     const payload = {
       event: "QS.Published",
       ts: new Date().toISOString(),
-      program: "BWB-Q100",
+      program: program,
       domain: dom,
       level: "CI",
       entity,

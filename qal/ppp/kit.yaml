@@ -1,7 +1,10 @@
 ---
 # QAL kit — Dominio ppp (Propulsión/Combustibles)
 dom: ppp
-program: BWB-Q100
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
 tfa_ref: "#tfa-bwb"
 
 metadata:

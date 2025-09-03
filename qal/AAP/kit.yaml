@@ -1,0 +1,90 @@
+# qal/AAP/kit.yaml
+dom: AAP                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-AAP-10
+    objetivo: "AAP primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-AAP-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-AAP-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:AAP:10:SE-AAP-10:V1.0"
+  - id: SE-AAP-20
+    objetivo: "AAP integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-AAP-02" ]
+    kits:
+      bom_ref: "MBOM-AAP-20-v1.0"
+    det_ref: "DET:SE:AAP:20:SE-AAP-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-AAP↔AAA-01
+    tipo: ICD
+    descripcion: "AAP to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:AAP:ICD:DI-AAP-AAA:V1.0"
+  - id: DI-AAP↔EDI-02
+    tipo: ICD
+    descripcion: "AAP electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:AAP:ICD:DI-AAP-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-AAP-PRIMARY
+    scope: "Primary AAP components with kit and vendor"
+    as_built: "EBOM-AAP-PRIMARY-v1.0"
+    vendor_pack: "AVL-AAP-2025Q3"
+    det_ref: "DET:CE:AAP:PRIMARY:CE-AAP-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "AAP01"
+    proveedor: "AAP Vendor Primary"
+    alcance: [ "AAP main components", "AAP materials" ]
+    ppap: "PPAP-AAP01-001-v1.0"
+    fai:  "FAI-AAP01-001-v1.0"
+    lt_dias: 45
+  - cage: "AAP02"
+    proveedor: "AAP Vendor Secondary"
+    alcance: [ "AAP secondary components", "AAP consumables" ]
+    ppap: "PPAP-AAP02-002-v1.0"
+    fai:  "FAI-AAP02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-AAP-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-AAP-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:AAP:CI:PRIMARY:V1.0"
+    note: "VQE for AAP primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-AAP-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-AAP-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:AAP:SE:10:V1.0"
+    note: "QML surrogate for AAP station optimization"
+
+# Metadata
+metadata:
+  owner: "AAP Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:AAP:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-aap -> #se-aap"
+  di_invariant: "#dinv-aap -> #di-aap"
+  ce_envelope: "#cenv-aap -> #ce-aap"
