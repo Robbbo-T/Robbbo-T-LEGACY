@@ -1,0 +1,90 @@
+# qal/EER/kit.yaml
+dom: EER                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-EER-10
+    objetivo: "EER primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-EER-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-EER-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:EER:10:SE-EER-10:V1.0"
+  - id: SE-EER-20
+    objetivo: "EER integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-EER-02" ]
+    kits:
+      bom_ref: "MBOM-EER-20-v1.0"
+    det_ref: "DET:SE:EER:20:SE-EER-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-EER↔AAA-01
+    tipo: ICD
+    descripcion: "EER to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:EER:ICD:DI-EER-AAA:V1.0"
+  - id: DI-EER↔EDI-02
+    tipo: ICD
+    descripcion: "EER electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:EER:ICD:DI-EER-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-EER-PRIMARY
+    scope: "Primary EER components with kit and vendor"
+    as_built: "EBOM-EER-PRIMARY-v1.0"
+    vendor_pack: "AVL-EER-2025Q3"
+    det_ref: "DET:CE:EER:PRIMARY:CE-EER-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "EER01"
+    proveedor: "EER Vendor Primary"
+    alcance: [ "EER main components", "EER materials" ]
+    ppap: "PPAP-EER01-001-v1.0"
+    fai:  "FAI-EER01-001-v1.0"
+    lt_dias: 45
+  - cage: "EER02"
+    proveedor: "EER Vendor Secondary"
+    alcance: [ "EER secondary components", "EER consumables" ]
+    ppap: "PPAP-EER02-002-v1.0"
+    fai:  "FAI-EER02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-EER-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-EER-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:EER:CI:PRIMARY:V1.0"
+    note: "VQE for EER primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-EER-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-EER-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:EER:SE:10:V1.0"
+    note: "QML surrogate for EER station optimization"
+
+# Metadata
+metadata:
+  owner: "EER Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:EER:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-eer -> #se-eer"
+  di_invariant: "#dinv-eer -> #di-eer"
+  ce_envelope: "#cenv-eer -> #ce-eer"

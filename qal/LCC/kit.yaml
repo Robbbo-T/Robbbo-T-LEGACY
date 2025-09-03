@@ -1,0 +1,90 @@
+# qal/LCC/kit.yaml
+dom: LCC                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-LCC-10
+    objetivo: "LCC primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-LCC-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-LCC-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:LCC:10:SE-LCC-10:V1.0"
+  - id: SE-LCC-20
+    objetivo: "LCC integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-LCC-02" ]
+    kits:
+      bom_ref: "MBOM-LCC-20-v1.0"
+    det_ref: "DET:SE:LCC:20:SE-LCC-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-LCC↔AAA-01
+    tipo: ICD
+    descripcion: "LCC to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:LCC:ICD:DI-LCC-AAA:V1.0"
+  - id: DI-LCC↔EDI-02
+    tipo: ICD
+    descripcion: "LCC electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:LCC:ICD:DI-LCC-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-LCC-PRIMARY
+    scope: "Primary LCC components with kit and vendor"
+    as_built: "EBOM-LCC-PRIMARY-v1.0"
+    vendor_pack: "AVL-LCC-2025Q3"
+    det_ref: "DET:CE:LCC:PRIMARY:CE-LCC-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "LCC01"
+    proveedor: "LCC Vendor Primary"
+    alcance: [ "LCC main components", "LCC materials" ]
+    ppap: "PPAP-LCC01-001-v1.0"
+    fai:  "FAI-LCC01-001-v1.0"
+    lt_dias: 45
+  - cage: "LCC02"
+    proveedor: "LCC Vendor Secondary"
+    alcance: [ "LCC secondary components", "LCC consumables" ]
+    ppap: "PPAP-LCC02-002-v1.0"
+    fai:  "FAI-LCC02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-LCC-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-LCC-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:LCC:CI:PRIMARY:V1.0"
+    note: "VQE for LCC primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-LCC-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-LCC-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:LCC:SE:10:V1.0"
+    note: "QML surrogate for LCC station optimization"
+
+# Metadata
+metadata:
+  owner: "LCC Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:LCC:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-lcc -> #se-lcc"
+  di_invariant: "#dinv-lcc -> #di-lcc"
+  ce_envelope: "#cenv-lcc -> #ce-lcc"

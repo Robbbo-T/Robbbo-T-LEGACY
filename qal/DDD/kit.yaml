@@ -1,0 +1,90 @@
+# qal/DDD/kit.yaml
+dom: DDD                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-DDD-10
+    objetivo: "DDD primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-DDD-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-DDD-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:DDD:10:SE-DDD-10:V1.0"
+  - id: SE-DDD-20
+    objetivo: "DDD integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-DDD-02" ]
+    kits:
+      bom_ref: "MBOM-DDD-20-v1.0"
+    det_ref: "DET:SE:DDD:20:SE-DDD-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-DDD↔AAA-01
+    tipo: ICD
+    descripcion: "DDD to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:DDD:ICD:DI-DDD-AAA:V1.0"
+  - id: DI-DDD↔EDI-02
+    tipo: ICD
+    descripcion: "DDD electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:DDD:ICD:DI-DDD-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-DDD-PRIMARY
+    scope: "Primary DDD components with kit and vendor"
+    as_built: "EBOM-DDD-PRIMARY-v1.0"
+    vendor_pack: "AVL-DDD-2025Q3"
+    det_ref: "DET:CE:DDD:PRIMARY:CE-DDD-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "DDD01"
+    proveedor: "DDD Vendor Primary"
+    alcance: [ "DDD main components", "DDD materials" ]
+    ppap: "PPAP-DDD01-001-v1.0"
+    fai:  "FAI-DDD01-001-v1.0"
+    lt_dias: 45
+  - cage: "DDD02"
+    proveedor: "DDD Vendor Secondary"
+    alcance: [ "DDD secondary components", "DDD consumables" ]
+    ppap: "PPAP-DDD02-002-v1.0"
+    fai:  "FAI-DDD02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-DDD-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-DDD-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:DDD:CI:PRIMARY:V1.0"
+    note: "VQE for DDD primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-DDD-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-DDD-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:DDD:SE:10:V1.0"
+    note: "QML surrogate for DDD station optimization"
+
+# Metadata
+metadata:
+  owner: "DDD Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:DDD:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-ddd -> #se-ddd"
+  di_invariant: "#dinv-ddd -> #di-ddd"
+  ce_envelope: "#cenv-ddd -> #ce-ddd"

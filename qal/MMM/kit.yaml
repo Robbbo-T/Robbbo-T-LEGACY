@@ -1,0 +1,90 @@
+# qal/MMM/kit.yaml
+dom: MMM                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-MMM-10
+    objetivo: "MMM primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-MMM-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-MMM-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:MMM:10:SE-MMM-10:V1.0"
+  - id: SE-MMM-20
+    objetivo: "MMM integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-MMM-02" ]
+    kits:
+      bom_ref: "MBOM-MMM-20-v1.0"
+    det_ref: "DET:SE:MMM:20:SE-MMM-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-MMM↔AAA-01
+    tipo: ICD
+    descripcion: "MMM to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:MMM:ICD:DI-MMM-AAA:V1.0"
+  - id: DI-MMM↔EDI-02
+    tipo: ICD
+    descripcion: "MMM electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:MMM:ICD:DI-MMM-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-MMM-PRIMARY
+    scope: "Primary MMM components with kit and vendor"
+    as_built: "EBOM-MMM-PRIMARY-v1.0"
+    vendor_pack: "AVL-MMM-2025Q3"
+    det_ref: "DET:CE:MMM:PRIMARY:CE-MMM-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "MMM01"
+    proveedor: "MMM Vendor Primary"
+    alcance: [ "MMM main components", "MMM materials" ]
+    ppap: "PPAP-MMM01-001-v1.0"
+    fai:  "FAI-MMM01-001-v1.0"
+    lt_dias: 45
+  - cage: "MMM02"
+    proveedor: "MMM Vendor Secondary"
+    alcance: [ "MMM secondary components", "MMM consumables" ]
+    ppap: "PPAP-MMM02-002-v1.0"
+    fai:  "FAI-MMM02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-MMM-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-MMM-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:MMM:CI:PRIMARY:V1.0"
+    note: "VQE for MMM primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-MMM-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-MMM-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:MMM:SE:10:V1.0"
+    note: "QML surrogate for MMM station optimization"
+
+# Metadata
+metadata:
+  owner: "MMM Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:MMM:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-mmm -> #se-mmm"
+  di_invariant: "#dinv-mmm -> #di-mmm"
+  ce_envelope: "#cenv-mmm -> #ce-mmm"

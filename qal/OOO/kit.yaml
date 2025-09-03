@@ -1,0 +1,90 @@
+# qal/OOO/kit.yaml
+dom: OOO                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-OOO-10
+    objetivo: "OOO primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-OOO-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-OOO-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:OOO:10:SE-OOO-10:V1.0"
+  - id: SE-OOO-20
+    objetivo: "OOO integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-OOO-02" ]
+    kits:
+      bom_ref: "MBOM-OOO-20-v1.0"
+    det_ref: "DET:SE:OOO:20:SE-OOO-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-OOO↔AAA-01
+    tipo: ICD
+    descripcion: "OOO to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:OOO:ICD:DI-OOO-AAA:V1.0"
+  - id: DI-OOO↔EDI-02
+    tipo: ICD
+    descripcion: "OOO electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:OOO:ICD:DI-OOO-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-OOO-PRIMARY
+    scope: "Primary OOO components with kit and vendor"
+    as_built: "EBOM-OOO-PRIMARY-v1.0"
+    vendor_pack: "AVL-OOO-2025Q3"
+    det_ref: "DET:CE:OOO:PRIMARY:CE-OOO-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "OOO01"
+    proveedor: "OOO Vendor Primary"
+    alcance: [ "OOO main components", "OOO materials" ]
+    ppap: "PPAP-OOO01-001-v1.0"
+    fai:  "FAI-OOO01-001-v1.0"
+    lt_dias: 45
+  - cage: "OOO02"
+    proveedor: "OOO Vendor Secondary"
+    alcance: [ "OOO secondary components", "OOO consumables" ]
+    ppap: "PPAP-OOO02-002-v1.0"
+    fai:  "FAI-OOO02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-OOO-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-OOO-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:OOO:CI:PRIMARY:V1.0"
+    note: "VQE for OOO primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-OOO-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-OOO-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:OOO:SE:10:V1.0"
+    note: "QML surrogate for OOO station optimization"
+
+# Metadata
+metadata:
+  owner: "OOO Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:OOO:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-ooo -> #se-ooo"
+  di_invariant: "#dinv-ooo -> #di-ooo"
+  ce_envelope: "#cenv-ooo -> #ce-ooo"
