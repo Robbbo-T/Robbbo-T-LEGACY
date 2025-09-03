@@ -1,0 +1,42 @@
+---
+name: QAL-CI
+
+on:
+  push:
+    paths:
+      - "schemas/**"
+      - "qal/**"
+      - "scripts/**"
+      - "docs/**"
+      - ".github/workflows/qal-ci.yml"
+  pull_request: null
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20}
+      - run: PUPPETEER_SKIP_DOWNLOAD=true npm ci
+      - name: Generate index/anchors & diagrams
+        run: |
+          node scripts/gen_index_and_anchors.mjs
+          node scripts/gen_placeholders.mjs
+          # Skip mermaid SVG generation due to chromium download issues
+          # bash scripts/mermaid_to_svg.sh
+      - name: Emit QS events from domain YAML
+        run: node scripts/emit_qs_from_yaml.mjs
+      - name: Validate QS events
+        run: node scripts/validate_qs_events.mjs events/out/*.json
+      - name: Validate DET refs inside kits (YAML-aware)
+        run: node scripts/validate_det_refs_in_kits.mjs qal/**/kit.yaml
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: qal-artifacts
+          path: |
+            docs/taxonomy/index-table.md
+            docs/taxonomy/anchors.html
+            docs/taxonomy/placeholders/*.md
+            events/out/*.json

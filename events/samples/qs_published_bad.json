@@ -1,0 +1,12 @@
+{
+  "event": "QS.Published",
+  "ts": "2025-09-02T00:00:00Z",
+  "program": "BWB-Q100",
+  "domain": "A4A",
+  "level": "CI",
+  "entity": "X",
+  "qs_type": "QUBO",
+  "utcs_mi_id": "EstándarUniversal:EstadoCuantico-QUBO-02.00-AAA-CI-X-0001-v1.0-Programa-AIR-Bloc-Unit-9a3f2b1c-RestoDeVidaUtil",
+  "det_ref": "DET:QS:AAA:CI:X:V1",
+  "signature": "PQC-Dilithium3"
+}
