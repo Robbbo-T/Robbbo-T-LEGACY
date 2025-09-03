@@ -1,0 +1,28 @@
+{
+  "det_id": "DET:TRIPS:CQH:monitoring:V1.0",
+  "timestamp": "2025-09-03T00:12:06.647506+00:00",
+  "phase": "TRIPS",
+  "artifact_type": "Track",
+  "inputs": [
+    "sha256:456f2b5402c4768e966f7c1818fe35598c0fd4d87132d57ff75381bbaee79ffc"
+  ],
+  "outputs": [
+    "sha256:ceeaa692069c70aba5bb59e8e8db0d79d03bb62e44c53327ae60c627da6b7caa"
+  ],
+  "refs": {
+    "ce": "CE-TRIPS-CQH-monitoring",
+    "ci": "CI-TRIPS-CQH-monitoring"
+  },
+  "processing": {
+    "tool": "agua-trips-cli",
+    "version": "1.0.0",
+    "params": {
+      "real_time": true,
+      "domain": "CQH"
+    }
+  },
+  "signature": {
+    "algorithm": "Ed25519",
+    "hash": "db55acc328084a73491d8b2bb7675c3b2b7be6d3a569feb11d981237cac3dc60"
+  }
+}
