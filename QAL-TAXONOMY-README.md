@@ -2,6 +2,12 @@
 
 A complete Node.js-based automation system for managing the QAL (Quantum Applied Learning) taxonomy in the C-AMEDEO framework. This system provides automated index generation, event emission, and validation for BWB-Q100 program artifacts.
 
+## 📖 Complete Documentation
+
+**🎯 Main Reference**: [QAL Taxonomía Extendida — BWB-Q100](docs/QAL-TAXONOMIA-EXTENDIDA-BWB-Q100.md)
+
+**📋 Quick Reference**: [Documentation Index](docs/index.md)
+
 ## Quick Start
 
 ```bash
@@ -16,6 +22,7 @@ npm run gen         # Generate index & placeholders
 npm run emit        # Emit QS events from YAML
 npm run validate:qs # Validate QS.Published events
 npm run validate:det # Validate DET references
+npm run validate:taxonomy # Full UTCS-MI v5.0 compliance
 ```
 
 ## Features
