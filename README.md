@@ -1,4 +1,7 @@
-# Amedeo Pelliccia — Portfolio (QAL‑conforme)
+# Amedeo Pelliccia — Product Portfolio Quantum Lifecycle Assurance Testbench
+
+https://chatgpt.com/s/m_68ba240ac5d08191b8c9cdbf2f9abed5
+
 
 Aerospace Systems Engineer · Digital‑Twin Architecture · Risk‑Optimized Design  
 Project Coordinator — Capgemini Engineering (Madrid) · Founder of AQUA, GAIA AIR y AMPEL360  
