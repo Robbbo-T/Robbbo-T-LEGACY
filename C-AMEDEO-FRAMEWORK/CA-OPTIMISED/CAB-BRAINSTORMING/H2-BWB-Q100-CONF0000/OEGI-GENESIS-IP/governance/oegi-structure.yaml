@@ -1,0 +1,140 @@
+---
+oegi_structure:
+  version: "1.0"
+  governance_model: "multi_stakeholder"
+  
+  council:
+    composition:
+      european_commission: 2
+      euipo_representative: 1
+      epo_observer: 1
+      standards_bodies:
+        cen: 1
+        cenelec: 1
+        etsi: 1
+      academia: 3
+      industry: 3
+      civil_society: 2
+    
+    responsibilities:
+      - "Policy framework development"
+      - "Budget approval and oversight"
+      - "Strategic direction setting"
+      - "Conflict resolution escalation"
+    
+    meeting_frequency: "quarterly"
+    decision_threshold: "simple_majority"
+    supermajority_items:
+      - "tariff_structure_changes"
+      - "license_framework_updates"
+      - "governance_amendments"
+
+  operational_units:
+    registry_certification:
+      head: "Director of Registry Services"
+      staff: 12
+      responsibilities:
+        - "Genesis Artifact eligibility assessment"
+        - "Certification level determination"
+        - "Opposition process management"
+        - "Registry maintenance and search"
+    
+    clearing_licensing:
+      head: "Director of Clearing Services" 
+      staff: 8
+      responsibilities:
+        - "Royalty collection and distribution"
+        - "License compliance monitoring"
+        - "Tariff calculation and updates"
+        - "Financial reporting and auditing"
+    
+    technical_genesismap:
+      head: "Chief Technology Officer"
+      staff: 6
+      responsibilities:
+        - "Provenance graph maintenance"
+        - "Hash verification systems"
+        - "GI² scoring algorithm development"
+        - "Technical infrastructure management"
+    
+    ethics_privacy:
+      head: "Chief Privacy Officer"
+      staff: 4
+      responsibilities:
+        - "GDPR compliance monitoring"
+        - "Data Protection Impact Assessments"
+        - "Opt-out mechanism management"
+        - "Transparency reporting"
+    
+    dispute_resolution:
+      head: "Chief Mediation Officer"
+      staff: 5
+      responsibilities:
+        - "Mediation services"
+        - "Arbitration coordination"
+        - "Appeal process management"
+        - "Legal liaison activities"
+
+  advisory_bodies:
+    technical_advisory_board:
+      members: 7
+      expertise_areas:
+        - "Quantum computing and AI"
+        - "Intellectual property law"
+        - "Economics and innovation policy"  
+        - "Software engineering and open source"
+        - "Standards development and interoperability"
+        - "Ethics and privacy"
+        - "Industry applications and use cases"
+      
+      meeting_frequency: "bi_monthly"
+      advisory_scope:
+        - "Technical standard recommendations"
+        - "Emerging technology impact assessment"
+        - "Best practices development"
+        - "Industry trend analysis"
+
+  conflict_management:
+    firewalls:
+      - "Competing artifact holders excluded from specific decisions"
+      - "Financial interests disclosed and managed"
+      - "Independent dispute resolution processes"
+      - "Transparent decision-making records"
+    
+    antitrust_safeguards:
+      - "Public tariff schedules"
+      - "Non-discriminatory treatment"
+      - "Regular competition authority consultations"
+      - "Open governance participation"
+
+  accountability_mechanisms:
+    transparency_reporting:
+      frequency: "annual"
+      content:
+        - "Financial summaries (collections, distributions)"
+        - "Registry statistics (certifications, oppositions)"
+        - "Dispute resolution outcomes"
+        - "Governance decision summaries"
+    
+    external_auditing:
+      financial_audit: "annual"
+      compliance_audit: "bi_annual"  
+      governance_review: "every_3_years"
+    
+    stakeholder_feedback:
+      public_consultation_period: "30_days_minimum"
+      feedback_incorporation_requirement: "documented_response"
+      annual_stakeholder_survey: true
+
+  budget_allocation:
+    operations: 0.45
+    registry_certification: 0.25
+    clearing_licensing: 0.15
+    technology_development: 0.10
+    dispute_resolution: 0.05
+    
+  funding_sources:
+    operational_fees: 0.10  # from clearing activities
+    eu_budget_allocation: 0.60
+    member_state_contributions: 0.20
+    industry_contributions: 0.10
