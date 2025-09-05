@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Resource-Capacity-Map.xml - General CAO Template -->
+<!-- UniversalStandard: CAO-ResourceCapacity-QAL-Template-v1.0-AmedeoPelliccia -->
+
+<resource_capacity_map>
+  <metadata>
+    <version>1.0.0</version>
+    <scope>General CAO Resource Template</scope>
+    <last_updated>2024-09-05</last_updated>
+  </metadata>
+  
+  <human_resources>
+    <resource_category name="Leadership">
+      <role name="Program Manager" count="TBD" availability="100%" />
+      <role name="Technical Director" count="TBD" availability="100%" />
+      <role name="Quality Manager" count="TBD" availability="100%" />
+    </resource_category>
+    
+    <resource_category name="Engineering">
+      <role name="Systems Engineers" count="TBD" availability="TBD%" />
+      <role name="Design Engineers" count="TBD" availability="TBD%" />
+      <role name="Test Engineers" count="TBD" availability="TBD%" />
+    </resource_category>
+    
+    <resource_category name="Support">
+      <role name="Quality Assurance" count="TBD" availability="TBD%" />
+      <role name="Documentation" count="TBD" availability="TBD%" />
+      <role name="Configuration Management" count="TBD" availability="TBD%" />
+    </resource_category>
+  </human_resources>
+  
+  <facility_resources>
+    <facility name="Main Engineering Center" location="TBD" capacity="TBD" />
+    <facility name="Test Facilities" location="TBD" capacity="TBD" />
+    <facility name="Manufacturing Facilities" location="TBD" capacity="TBD" />
+  </facility_resources>
+  
+  <technology_resources>
+    <category name="CAD/CAE Tools">
+      <tool name="Design Software" licenses="TBD" utilization="TBD%" />
+      <tool name="Analysis Software" licenses="TBD" utilization="TBD%" />
+    </category>
+    
+    <category name="Quantum Computing">
+      <resource name="Quantum Computing Access" type="Cloud/On-premise" capacity="TBD hours/month" />
+      <resource name="Quantum Algorithms" type="Software" availability="TBD" />
+    </category>
+    
+    <category name="Testing Equipment">
+      <equipment name="Test Rigs" count="TBD" availability="TBD%" />
+      <equipment name="Measurement Systems" count="TBD" availability="TBD%" />
+    </category>
+  </technology_resources>
+  
+  <capacity_planning>
+    <planning_horizon>10 years</planning_horizon>
+    <review_frequency>Quarterly</review_frequency>
+    <optimization_method>Quantum-enhanced resource allocation</optimization_method>
+  </capacity_planning>
+</resource_capacity_map>

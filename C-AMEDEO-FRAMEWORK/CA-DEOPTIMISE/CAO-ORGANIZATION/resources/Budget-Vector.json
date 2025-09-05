@@ -1,0 +1,55 @@
+{
+  "budget_vector": {
+    "program": "Generic Program Template",
+    "version": "1.0.0",
+    "total_budget": "TBD",
+    "currency": "EUR",
+    "planning_horizon_years": 10,
+    "last_updated": "2024-09-05",
+    
+    "allocation_framework": {
+      "strategic_reserves": {
+        "percentage": 15,
+        "purpose": "Risk mitigation and opportunity investment"
+      },
+      "operational_costs": {
+        "percentage": 35,
+        "purpose": "Day-to-day program operations"
+      },
+      "technical_development": {
+        "percentage": 40,
+        "purpose": "Core technical development activities"
+      },
+      "quality_assurance": {
+        "percentage": 10,
+        "purpose": "Quality and compliance activities"
+      }
+    },
+    
+    "annual_distribution": {
+      "note": "To be customized per program requirements",
+      "template": "Even distribution with front-loading for development phases"
+    },
+    
+    "cost_categories": [
+      "Personnel costs",
+      "Equipment and facilities",
+      "Materials and supplies", 
+      "External services",
+      "Travel and training",
+      "Overhead costs"
+    ],
+    
+    "quantum_allocation": {
+      "enabled": true,
+      "percentage": 5,
+      "purpose": "Quantum computing resources and algorithms"
+    },
+    
+    "governance": {
+      "approval_authority": "Board/Finance Committee",
+      "change_control": "Program Management Office",
+      "review_frequency": "Quarterly"
+    }
+  }
+}
