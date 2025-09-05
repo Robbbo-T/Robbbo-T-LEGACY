@@ -34,6 +34,7 @@ graph TD
 | **Adaptive Governance** | Policy assessment; Framework evolution; Decision optimization; Feedback integration | Governance-Evolution.yaml; Policy-Effectiveness.json |
 | **Learning Integration** | Lessons integration; Best practice propagation; Knowledge capture; Improvement cycles | Learning-Repository.db; Best-Practices-Registry.yaml |
 | **Resource Reallocation** | Dynamic reallocation; Capacity optimization; Portfolio rebalancing; Resource sharing | Resource-Optimization.json; Investment-Rebalance.yaml |
+| **GRPO (Group Resource Planning & Optimization)** | Multi-group resource allocation; Cross-functional team planning; Resource pooling; Conflict resolution; Group-level utilization metrics | GRPO-Resource-Plan.yaml; Group-Allocation-Matrix.json; Resource-Pool-Registry.yaml |
 | **Compliance Evolution** | Compliance optimization; Risk mitigation evolution; Audit integration; Automation | Compliance-Evolution.json; Risk-Mitigation-Updates.yaml |
 
 ## 3. Restoration & Evolution Lifecycle Integration
@@ -163,11 +164,88 @@ CAO-ORGANIZATION/ (CA-OPTIMISED)
 ├── resources/
 │   ├── Resource-Optimization.json
 │   ├── Investment-Rebalance.yaml
-│   └── capacity-planning/
+│   ├── capacity-planning/
+│   └── grpo/
+│       ├── GRPO-Resource-Plan.yaml
+│       ├── Group-Allocation-Matrix.json
+│       ├── Resource-Pool-Registry.yaml
+│       ├── Resource-Conflict-Resolution.json
+│       └── Group-Utilization-Metrics.csv
 └── compliance/
     ├── Compliance-Evolution.json
     ├── Risk-Mitigation-Updates.yaml
     └── automation-enhancements/
+```
+
+## 7.1. GRPO (Group Resource Planning & Optimization)
+
+The GRPO module provides advanced group-level resource management capabilities, enabling optimal allocation and utilization of resources across multiple teams, domains, and organizational units.
+
+### GRPO Core Capabilities:
+
+#### Multi-Group Resource Allocation:
+- **Cross-Domain Planning:** Coordinate resources across CAD, CAE, CAT, CAM, CAI, CAS domains
+- **Priority-Based Allocation:** Dynamic allocation based on project priorities and strategic objectives
+- **Resource Pool Management:** Manage shared resource pools accessible across multiple groups
+- **Capacity Balancing:** Balance resource capacity across groups to maximize utilization
+
+#### Advanced Optimization Algorithms:
+- **Quantum-Enhanced Optimization:** Use QAOA and VQE for complex resource allocation problems
+- **Multi-Objective Optimization:** Balance cost, efficiency, quality, and timeline objectives
+- **Constraint Satisfaction:** Resolve resource conflicts while respecting organizational constraints
+- **Predictive Allocation:** Use AI/ML to predict future resource needs and proactive allocation
+
+#### Group Coordination Features:
+- **Resource Sharing Protocols:** Define rules and processes for inter-group resource sharing  
+- **Conflict Resolution:** Automated conflict detection and resolution for resource contention
+- **Utilization Monitoring:** Real-time tracking of group-level resource utilization metrics
+- **Performance Analytics:** Analyze resource allocation effectiveness across groups
+
+### GRPO Artifacts:
+
+| Artifact | Purpose | Content Structure |
+|----------|---------|-------------------|
+| **GRPO-Resource-Plan.yaml** | Master resource planning document | Groups, resources, allocations, timelines, constraints |
+| **Group-Allocation-Matrix.json** | Current resource allocation state | Resource-to-group mappings, utilization levels, conflicts |
+| **Resource-Pool-Registry.yaml** | Shared resource pool definitions | Pool definitions, access rules, capacity limits |
+| **Resource-Conflict-Resolution.json** | Conflict resolution records | Conflict incidents, resolution strategies, outcomes |
+| **Group-Utilization-Metrics.csv** | Performance metrics by group | Utilization rates, efficiency scores, SLA compliance |
+
+### GRPO DET Integration:
+
+```json
+{
+  "det_id": "DET:CAO:GRPO:<DOMAIN>:<SNS>:<activity>:V<rev>",
+  "phase": "CAO-OPT",
+  "artifact_type": "ResourcePlan|Allocation|Optimization|Metrics",
+  "inputs": [
+    "sha256:<resource-requirements>", 
+    "sha256:<capacity-constraints>",
+    "sha256:<group-priorities>"
+  ],
+  "outputs": [
+    "sha256:<grpo-resource-plan>", 
+    "sha256:<allocation-matrix>",
+    "sha256:<utilization-metrics>"
+  ],
+  "refs": {
+    "ce": "CE-CAO-GRPO-<DOMAIN>-<SNS>-<descriptor>",
+    "ci": "CI-CAO-GRPO-<DOMAIN>-<SNS>-<descriptor>"
+  },
+  "grpo": {
+    "algorithm": "QAOA|VQE|MultiObjective",
+    "optimization_target": "utilization|cost|efficiency|multi_objective",
+    "groups_involved": ["<group-list>"],
+    "resources_allocated": "<resource-count>",
+    "conflicts_resolved": "<conflict-count>",
+    "utilization_improvement": "<percentage>"
+  },
+  "quantum": {
+    "algo": "QAOA",
+    "backend": "quantum_simulator",
+    "params": {"p": 4, "optimization": "resource_allocation"}
+  }
+}
 ```
 
 ## 8. Integration with Forward Flow

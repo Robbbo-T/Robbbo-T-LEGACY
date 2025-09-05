@@ -1,0 +1,262 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Robbbo-T/Robbbo-T/schemas/cao_grpo.schema.json",
+  "title": "CAO GRPO (Group Resource Planning & Optimization) Schema",
+  "description": "Validation schema for CAO GRPO artifacts including resource plans, allocation matrices, and optimization results",
+  "type": "object",
+  "properties": {
+    "utcs_mi_id": {
+      "type": "string",
+      "pattern": "^EstándarUniversal:",
+      "description": "UTCS-MI v5.0 Universal Identifier"
+    },
+    "matrix_metadata": {
+      "type": "object",
+      "properties": {
+        "version": {"type": "string"},
+        "timestamp": {"type": "string", "format": "date-time"},
+        "program": {"type": "string"},
+        "configuration": {"type": "string"},
+        "det_ref": {"type": "string", "pattern": "^DET:CAO:GRPO:"}
+      },
+      "required": ["version", "timestamp", "program", "det_ref"],
+      "additionalProperties": true
+    },
+    "plan_metadata": {
+      "type": "object",
+      "properties": {
+        "version": {"type": "string"},
+        "created_date": {"type": "string", "format": "date"},
+        "last_updated": {"type": "string", "format": "date-time"},
+        "program": {"type": "string"},
+        "configuration": {"type": "string"},
+        "det_ref": {"type": "string", "pattern": "^DET:CAO:GRPO:"}
+      },
+      "required": ["version", "program", "det_ref"],
+      "additionalProperties": true
+    },
+    "registry_metadata": {
+      "type": "object",
+      "properties": {
+        "version": {"type": "string"},
+        "created_date": {"type": "string", "format": "date"},
+        "last_updated": {"type": "string", "format": "date-time"},
+        "program": {"type": "string"},
+        "configuration": {"type": "string"},
+        "det_ref": {"type": "string", "pattern": "^DET:CAO:GRPO:"}
+      },
+      "required": ["version", "program", "det_ref"],
+      "additionalProperties": true
+    },
+    "resource_pools": {
+      "type": "object",
+      "properties": {
+        "human_resources": {
+          "$ref": "#/definitions/resourcePool"
+        },
+        "computational_resources": {
+          "$ref": "#/definitions/resourcePool"
+        },
+        "laboratory_resources": {
+          "$ref": "#/definitions/resourcePool"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/resourcePool"
+      }
+    },
+    "groups": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Z]{3}_": {
+          "$ref": "#/definitions/resourceGroup"
+        }
+      }
+    },
+    "optimization_config": {
+      "type": "object",
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["QAOA", "VQE", "MultiObjective", "GeneticAlgorithm"]
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["maximize_utilization", "minimize_conflicts", "meet_deadlines", "balance_workload", "minimize_cost"]
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "quantum_backend": {"type": "string"}
+      },
+      "required": ["algorithm", "objectives"]
+    },
+    "performance_metrics": {
+      "type": "object",
+      "properties": {
+        "overall_utilization_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "conflict_rate": {
+          "type": "number",
+          "minimum": 0
+        },
+        "resource_efficiency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sla_compliance_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "cost_optimization_eur": {
+          "type": "number",
+          "minimum": 0
+        },
+        "quantum_advantage": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/resourceConflict"
+      }
+    },
+    "sharing_transactions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/sharingTransaction"
+      }
+    }
+  },
+  "required": ["utcs_mi_id"],
+  "additionalProperties": true,
+  
+  "definitions": {
+    "resourcePool": {
+      "type": "object",
+      "properties": {
+        "pool_id": {"type": "string"},
+        "capacity": {"type": "number", "minimum": 0},
+        "available_capacity": {"type": "number", "minimum": 0},
+        "units": {"type": "string"},
+        "access_policy": {
+          "type": "object",
+          "properties": {
+            "sharing_enabled": {"type": "boolean"},
+            "approval_level": {"type": "string"},
+            "max_allocation_per_group": {"type": "number", "minimum": 0}
+          }
+        },
+        "cost_model": {
+          "type": "object",
+          "properties": {
+            "hourly_rate": {"type": "number", "minimum": 0},
+            "currency": {"type": "string"},
+            "billing_unit": {"type": "string"}
+          }
+        }
+      },
+      "required": ["pool_id", "capacity", "units"]
+    },
+    
+    "resourceGroup": {
+      "type": "object",
+      "properties": {
+        "group_id": {"type": "string"},
+        "domain": {"type": "string", "pattern": "^[A-Z]{3}$"},
+        "priority": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"]
+        },
+        "resource_allocation": {"type": "object"},
+        "performance_metrics": {
+          "type": "object",
+          "properties": {
+            "sla_compliance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "utilization_rate": {
+              "type": "number", 
+              "minimum": 0,
+              "maximum": 1
+            },
+            "efficiency_score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      },
+      "required": ["group_id", "domain", "priority"]
+    },
+    
+    "resourceConflict": {
+      "type": "object",
+      "properties": {
+        "conflict_id": {"type": "string"},
+        "timestamp_detected": {"type": "string", "format": "date-time"},
+        "conflict_type": {
+          "type": "string",
+          "enum": ["resource_contention", "facility_scheduling", "human_resource_overlap", "budget_allocation", "priority_conflicts"]
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["detected", "resolving", "resolved", "escalated"]
+        },
+        "competing_groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "group_id": {"type": "string"},
+              "domain": {"type": "string"},
+              "priority_score": {"type": "number", "minimum": 0, "maximum": 1}
+            },
+            "required": ["group_id", "domain"]
+          }
+        },
+        "resolution_strategy": {"type": "object"}
+      },
+      "required": ["conflict_id", "timestamp_detected", "conflict_type", "status"]
+    },
+    
+    "sharingTransaction": {
+      "type": "object",
+      "properties": {
+        "transaction_id": {"type": "string"},
+        "resource_type": {"type": "string"},
+        "resource": {"type": "string"},
+        "from_group": {"type": "string"},
+        "to_group": {"type": "string"},
+        "quantity": {"type": "number", "minimum": 0},
+        "duration": {"type": "string"},
+        "start_date": {"type": "string", "format": "date"},
+        "end_date": {"type": "string", "format": "date"},
+        "status": {
+          "type": "string",
+          "enum": ["active", "completed", "cancelled", "scheduled"]
+        }
+      },
+      "required": ["transaction_id", "from_group", "to_group", "quantity", "status"]
+    }
+  }
+}
