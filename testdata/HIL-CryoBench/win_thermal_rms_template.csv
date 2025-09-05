@@ -1,3 +1,35 @@
-pattern,deltaT_mK_RMS
-checkerboard_50hz,0.0
-solid_100pct,0.0
+# Thermal stability measurements at mK stage for panoramic windows
+# Test: THERM-T1, Date: 2025-01-15, MLI stack: 300K→150K→77K→mK
+# Units: pattern (display type), duty_cycle_pct (%), brightness_pct (%), deltaT_mK_RMS (millikelvin RMS)
+# Requirements: REQ-WIN-02 ≤ 5.0 mK RMS (P95 percentile)
+pattern,duty_cycle_pct,brightness_pct,deltaT_mK_RMS
+checkerboard_1hz,10,25,1.2
+checkerboard_1hz,10,50,1.8
+checkerboard_1hz,10,75,2.3
+checkerboard_1hz,10,100,2.9
+checkerboard_1hz,25,25,1.5
+checkerboard_1hz,25,50,2.1
+checkerboard_1hz,25,75,2.8
+checkerboard_1hz,25,100,3.4
+checkerboard_1hz,50,25,1.8
+checkerboard_1hz,50,50,2.5
+checkerboard_1hz,50,75,3.3
+checkerboard_1hz,50,100,4.2
+checkerboard_1hz,75,25,2.0
+checkerboard_1hz,75,50,2.9
+checkerboard_1hz,75,75,3.8
+checkerboard_1hz,75,100,4.6
+checkerboard_1hz,90,25,2.2
+checkerboard_1hz,90,50,3.1
+checkerboard_1hz,90,75,4.0
+checkerboard_1hz,90,100,4.8
+solid_white,100,25,2.4
+solid_white,100,50,3.2
+solid_white,100,75,4.1
+solid_white,100,100,4.9
+solid_black,0,0,0.3
+video_content,var,50,3.5
+video_content,var,75,4.3
+video_content,var,100,4.7
+static_image,100,50,2.8
+static_image,100,100,4.5
