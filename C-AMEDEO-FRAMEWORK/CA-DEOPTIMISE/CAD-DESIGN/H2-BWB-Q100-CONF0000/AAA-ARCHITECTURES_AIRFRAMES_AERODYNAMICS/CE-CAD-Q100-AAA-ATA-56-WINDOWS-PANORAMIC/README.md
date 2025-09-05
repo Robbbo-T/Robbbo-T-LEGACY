@@ -114,8 +114,9 @@ Supporting models:
 - **ICD (machine‑readable)**: architecture/icd.signals.yaml  
 - **RTM**: matrices/rtm.yaml
 <!-- END:S1000D-Q -->
-Supporting models:
-- **Hierarchy**: architecture/hierarchy.yaml  
-- **ICD (machine‑readable)**: architecture/icd.signals.yaml  
-- **RTM**: matrices/rtm.yaml
-<!-- END:S1000D-Q -->
+
+<!-- BEGIN:OPEN-CALL-ATA56 -->
+#### Open Call (R1) — ATA‑56
+- Relevant bounty: `bounties/B-ATA56-S1000DQ-001.yaml`
+- Ensure BREX PASS and RTM/ICD sync before submission.
+<!-- END:OPEN-CALL-ATA56 -->

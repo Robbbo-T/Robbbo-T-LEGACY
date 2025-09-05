@@ -1,0 +1,10 @@
+{
+  "event": "OpenCall.RoyaltySplitSet",
+  "ts": "2025-01-26T10:00:00.000Z",
+  "oegi_id": "OEGI-AG-TBD",
+  "splits": [
+    { "to": "0xTBD_FOUNDATION", "share": 0.90 },
+    { "to": "POOL:Bounties", "share": 0.10 }
+  ],
+  "det_ref": "DET:OpenCall:royalty_split_set:v1"
+}

@@ -1,0 +1,28 @@
+---
+name: Open Call — Lint & Validate
+
+on:
+  pull_request:
+    paths:
+      - "docs/OPEN-CALL/**"
+      - "bounties/**.yaml"
+      - "payments/**.yaml"
+      - "scripts/open_call_validate.mjs"
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install yamllint
+        run: sudo pip install yamllint
+      - name: YAML lint
+        run: |
+          yamllint -s docs/OPEN-CALL bounties payments
+      - name: Bounty validate
+        run: |
+          node scripts/open_call_validate.mjs $(git ls-files 'bounties/*.yaml')

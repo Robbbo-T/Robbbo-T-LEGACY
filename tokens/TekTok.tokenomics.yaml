@@ -1,0 +1,30 @@
+---
+tokenomics:
+  network_phase: "R1 testnet → R2 mainnet/UTCS-L2"
+  initial_supply: "0"
+  emission:
+    mode: "on-demand (governed mint)"
+    caps:
+      annual_mint_cap_percent: 5.0
+      emergency_mint_cap_percent: 0.5
+      emergency_requires_quorum: true
+  allocations:
+    treasury_ops: 0.0
+    community_bounties: 0.0
+    market_making: 0.0
+  pricing_policy:
+    rail_dual: true
+    rails:
+      - "stablecoins (EURC/USDC) — operational payouts"
+      - "TTK valuta — circular royalties, incentives, governance"
+  royalty_bridge:
+    enabled: true
+    router_contract: "GenesisRoyaltyRouter"
+    default_split:
+      - {share: 0.90, to: "0xTBD_FOUNDATION"}
+      - {share: 0.10, to: "POOL:Bounties"}
+  governance:
+    model: "multisig + timelock; option to evolve to DAO"
+    quorum_rules:
+      mint_emission: "≥ 3 of 5 signers + 24h timelock"
+      router_splits: "≥ 3 of 5 signers + 24h timelock"

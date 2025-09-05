@@ -1,0 +1,38 @@
+---
+name: "Open Call task"
+description: "Propose or claim an Open Call bounty"
+labels: [open-call, bounty]
+body:
+  - type: input
+    id: bounty_id
+    attributes:
+      label: Bounty ID
+      description: E.g., B-ATA56-S1000DQ-001
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What you will change and why.
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: Files/paths to touch and test strategy.
+  - type: input
+    id: wallet
+    attributes:
+      label: Wallet address (non-custodial)
+      description: 0x... (or leave TBD for later KYC)
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - passes ci (lint/schema/tests)
+        - english-only, markdown links for DI/CE/CC/CI/CP
+        - DET updates for EBOM/MBOM/analysis/integration/requirements/compliance
+        - BREX validator PASS (if DM-*.yaml)
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & mitigations

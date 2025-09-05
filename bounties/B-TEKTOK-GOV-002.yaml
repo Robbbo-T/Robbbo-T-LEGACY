@@ -1,0 +1,19 @@
+---
+bounty:
+  id: "B-TEKTOK-GOV-002"
+  title: "Treasury multisig + timelock + runbook"
+  focus: "Safe setup, roles, emission rules"
+  scope:
+    - "Define signers/quorum; map roles to addresses"
+    - "Runbook for mint/emergency circuit-breakers"
+  deliverables:
+    - "docs/UTCS-CHAIN/treasury.md"
+    - "Updated tokens/TekTok.tokenomics.yaml"
+  acceptance:
+    - "docs complete; CI unaffected"
+  remuneration:
+    stablecoin_amount: "1200_EUR_equivalent"
+    royalty_share_percent: 0.02
+  timeline:
+    start: "T0"
+    deadline_days: 7
