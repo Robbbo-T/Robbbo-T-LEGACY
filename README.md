@@ -465,6 +465,17 @@ DET:
 
 ---
 
+<!-- BEGIN:OPEN-PATHS-CC-FE -->
+### Open Collaboration (CC→FE)
+
+Este repositorio admite contribuciones **públicas** en niveles **CC/CI/CP/FE**
+(los PRs deben llevar la etiqueta `open-collab:cc-fe`). Cambios en **CE** o
+**QS** no están permitidos por este canal y serán rechazados por CI.
+Guía: `policy/OPEN-PATHS-CC-FE.md`
+<!-- END:OPEN-PATHS-CC-FE -->
+
+---
+
 ## Sugerencia de siguiente iteración
 
 Añadir un *micro‑gantt* (Mermaid `gantt`) para **BWB\_Q100** (milestones: *ICD freeze → AMPEL360 batch → CAT campaign → CAV dossier → TEKTOK mint*) y una **frontera de Pareto** resumida (tres KPIs) como *tooltips* en CADET/AMPEL360 para inspección rápida.

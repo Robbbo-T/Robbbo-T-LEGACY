@@ -5,3 +5,17 @@
 # S1000D changes require tech pubs review
 C-AMEDEO-FRAMEWORK/*/CAS-SUSTAINMENT/**/S1000D/**  @your-team/techpubs
 **/(S1000D|DMRL|DMC)/**                             @your-team/techpubs
+
+# BEGIN:OPEN-PATHS-CC-FE
+# Reemplaza @best-contributor y @maintainers/cc-fe por los handles reales.
+# AAA Airframes — CE components: limit to CC/CI/CP/FE subtrees
+/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/**/CE-*/CC/**  @best-contributor @maintainers/cc-fe
+/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/**/CE-*/CI/**  @best-contributor @maintainers/cc-fe
+/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/**/CE-*/CP/**  @best-contributor @maintainers/cc-fe
+/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/**/CE-*/FE/**  @best-contributor @maintainers/cc-fe
+# También cubre layouts que usan subcarpetas nominales 'CC/CI/cp/fe' en minúscula
+/**/CE-*/CC/**  @best-contributor @maintainers/cc-fe
+/**/CE-*/CI/**  @best-contributor @maintainers/cc-fe
+/**/CE-*/cp/**  @best-contributor @maintainers/cc-fe
+/**/CE-*/FE/**  @best-contributor @maintainers/cc-fe
+# END:OPEN-PATHS-CC-FE
