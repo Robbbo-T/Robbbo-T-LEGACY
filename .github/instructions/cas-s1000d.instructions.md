@@ -23,3 +23,19 @@ They are **forbidden** anywhere else (CAD/CAE/CAO/CAP/CAT/CAM/CAI/CAEV).
 - PRs touching `S1000D/` must include:
   - Evidence references (DET ids) to upstream changes.
   - No new S1000D files outside the allowed CAS path.
+
+<!-- BEGIN:S1000D-CAS-GOVERN -->
+## S1000D Governance (CAS)
+
+- Profile: `docs/S1000D-GOV/CAS/PROFILE-CAS.yaml`  
+- Business Rules (BREX): `docs/S1000D-GOV/CAS/BREX-CAS.yaml`  
+- Decision Points (BRDP): `docs/S1000D-GOV/CAS/BRDP-CAS.yaml`  
+- CI Workflow: `.github/workflows/s1000d-cas-govern.yml`  
+- Validator: `scripts/s1000d_brex_validate.mjs`
+
+Scope:
+- Governs DM‑ARCH/ICD/V&V and procedures relevant to CAS.
+- Enforces: language/security, no binaries, DM code policy, applicability rules,
+  and CE→…→QS traceability hooks.
+
+<!-- END:S1000D-CAS-GOVERN -->

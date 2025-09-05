@@ -1,0 +1,64 @@
+---
+hierarchy:
+  model: "CE→CC→CI→CP→FE→QS"
+  ce:
+    id: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+    contains: ["CC-PORT", "CC-STBD", "CC-QPROC", "CC-THERM", "CC-EMI"]
+    properties:
+      reliability_target: 0.99999
+      view_coverage_deg: 180
+      qco_thermal_rms_mK_max: 5
+  cc:
+    - id: "CC-PORT"
+      parent: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      designation: "Port Window Array"
+      contains: ["CI-P01", "CI-P02", "CI-P03", "CI-P04", "CI-P05"]
+      coherence_min: 0.92
+    - id: "CC-STBD"
+      parent: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      designation: "Starboard Window Array"
+      contains: ["CI-S01", "CI-S02", "CI-S03", "CI-S04", "CI-S05"]
+      coherence_min: 0.92
+    - id: "CC-QPROC"
+      parent: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      designation: "Quantum Processing Subsystem"
+      contains: ["CI-Q01", "CI-Q02"]
+    - id: "CC-THERM"
+      parent: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      designation: "Thermal Management Subsystem"
+      contains: ["CI-T01", "CI-T02", "CI-T03"]
+    - id: "CC-EMI"
+      parent: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      designation: "EMI/Safety Protection Subsystem"
+      contains: ["CI-E01", "CI-E02"]
+  ci:
+    - {id: "CI-P01", parent: "CC-PORT", designation: "Window #1",
+       contains: ["CP-P01", "CP-P02", "CP-P03", "CP-P04"]}
+    - {id: "CI-Q01", parent: "CC-QPROC", designation: "Edge Quantum CPU",
+       contains: ["CP-Q01", "CP-Q02", "CP-Q03"]}
+    - {id: "CI-T01", parent: "CC-THERM", designation: "MLI Barrier Assy",
+       contains: ["CP-T01", "CP-T02", "CP-T03", "CP-T04"]}
+    - {id: "CI-E01", parent: "CC-EMI", designation: "Shield & Filters",
+       contains: ["CP-E01", "CP-E02"]}
+  cp:
+    - {id: "CP-P01", parent: "CI-P01", designation: "OLED Matrix Panel",
+       contains: ["FE-P01", "FE-P02", "FE-P03"]}
+    - {id: "CP-Q01", parent: "CI-Q01", designation: "Photonic QPU",
+       contains: ["FE-Q01", "FE-Q02", "FE-Q03", "FE-Q04"]}
+    - {id: "CP-T01", parent: "CI-T01", designation: "Aluminized Mylar Layer",
+       contains: ["FE-T01", "FE-T02"]}
+  fe:
+    - {id: "FE-P01", parent: "CP-P01", designation: "Quantum Dot Layer",
+       contains: ["QS-P01", "QS-P02", "QS-P03"]}
+    - {id: "FE-Q01", parent: "CP-Q01", designation: "Waveguide",
+       contains: ["QS-Q01", "QS-Q02"]}
+    - {id: "FE-T01", parent: "CP-T01", designation: "Aluminum Coating",
+       contains: ["QS-T01", "QS-T02"]}
+  qs:
+    - {id: "QS-P01", parent: "FE-P01", type: "exciton"}
+    - {id: "QS-Q01", parent: "FE-Q01", type: "photon"}
+    - {id: "QS-T01", parent: "FE-T01", type: "electron"}
+rules:
+  completeness: "Every parent fully contains its children; no orphans."
+  requirement_flow: "Tolerance tightens down the hierarchy; evidence bubbles up."
+  coherence_cascade: "coherence(QS) ≥ coherence(FE) ≥ … ≥ coherence(CE)"

@@ -1,0 +1,28 @@
+---
+brdp:
+  id: "BRDP-CAS-v1"
+  decisions:
+    - id: "BR-001"
+      topic: "Language and security"
+      decision: "English only; security ≤ restricted"
+      rationale: "Consistency and export control"
+    - id: "BR-002"
+      topic: "Media"
+      decision: "No binaries; SVG allowed; prefer ASCII"
+      rationale: "Diff-safe repo policy"
+    - id: "BR-003"
+      topic: "DM codes"
+      decision: "Info codes limited to 018/022/024/040/060"
+      rationale: "Architecture, ICD, V&V, procedures, parts"
+    - id: "BR-004"
+      topic: "Applicability"
+      decision: "Use effectivity keys (aircraft_sn, config, mod_state)"
+      rationale: "Clear product configuration control"
+    - id: "BR-005"
+      topic: "Hierarchy links"
+      decision: "Each DM must cite CE id and (where relevant) a child node"
+      rationale: "Traceability CE→…→QS"
+  meta:
+    owner: "docs-governance@aqua-os"
+    last_updated: "2025-01-15T16:45:00Z"
+    change_ref: "S1000D-CAS-GOVERN-v1"
