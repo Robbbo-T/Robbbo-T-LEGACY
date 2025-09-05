@@ -38,6 +38,7 @@ DET:CAO:BWB:<SNS>:<activity>:<version>
 
 ## Files
 - [DET-CAO-BWB-96-template-V1.json](DET-CAO-BWB-96-template-V1.json) - Strategic governance evidence template
+- [DET-CAO-GRPO-BWB-96-template-V1.json](DET-CAO-GRPO-BWB-96-template-V1.json) - GRPO resource optimization evidence template
 
 ## Integration with QAL Framework
 

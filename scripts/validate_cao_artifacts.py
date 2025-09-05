@@ -45,7 +45,8 @@ class CAOValidator:
             'budget_vector': 'cao_budget_vector.schema.json',
             'risk_register': 'cao_risk_register.schema.json',
             'qal_bus_events': 'cao_qal_bus_events.schema.json',
-            'det_template': 'det_template.schema.json'
+            'det_template': 'det_template.schema.json',
+            'grpo': 'cao_grpo.schema.json'
         }
         
         for name, filename in schema_files.items():
@@ -74,6 +75,11 @@ class CAOValidator:
             return 'qal_bus_events'
         elif 'det_id' in data and 'object_ref' in data:
             return 'det_template'
+        elif ('resource_pools' in data or 'current_allocations' in data or 'allocation_summary' in data or 
+              'optimization_config' in data or 'grpo' in data or 'matrix_metadata' in data or
+              'conflict_resolution_framework' in data or 'active_conflicts' in data or
+              'resolved_conflicts' in data or 'resolution_metadata' in data):
+            return 'grpo'
         return None
     
     def validate_file(self, filepath: pathlib.Path) -> Tuple[bool, List[str]]:
