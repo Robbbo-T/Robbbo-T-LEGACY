@@ -1,0 +1,55 @@
+---
+brex:
+  id: "BREX-CAS-v1"
+  severity:
+    error: ["brx-100", "brx-110", "brx-200", "brx-300"]
+    warn: ["brx-400", "brx-410", "brx-420"]
+    info: ["brx-900"]
+  rules:
+    - code: "brx-100"
+      title: "Language & security"
+      must:
+        language: ["en"]
+        security: ["unclassified", "restricted"]
+    - code: "brx-110"
+      title: "No binaries"
+      must_not:
+        media_types: ["bmp", "png", "jpg", "pdf", "zip"]
+      allow: ["svg", "md", "yaml"]
+    - code: "brx-200"
+      title: "DM code policy"
+      must:
+        info_codes: ["018", "022", "024", "040", "060"]
+        item_location_code: "Q"
+    - code: "brx-300"
+      title: "Trace to CE and requirement"
+      must:
+        fields_present: ["links.ce", "title", "issue.number", "status"]
+    - code: "brx-400"
+      title: "Applicability present for procedures"
+      when:
+        info_code_any_of: ["040", "060"]
+      should:
+        fields_present: ["applicability"]
+    - code: "brx-410"
+      title: "Effectivity keys format"
+      should:
+        effectivity_keys: ["aircraft_sn", "config", "mod_state"]
+    - code: "brx-420"
+      title: "Hierarchy reference"
+      should:
+        fields_present: ["links.hierarchy"]
+    - code: "brx-900"
+      title: "Comment length"
+      may:
+        guidance: "Keep lines ≤ 120 chars; wrap using folded scalars"
+  applies_to_paths:
+    - "docs/S1000D-Q/**/DM-*.yaml"
+    - "docs/S1000D-GOV/CAS/*.yaml"
+  references:
+    profile: "./PROFILE-CAS.yaml"
+    brdp: "./BRDP-CAS.yaml"
+  meta:
+    owner: "docs-governance@aqua-os"
+    last_updated: "2025-01-15T16:45:00Z"
+    change_ref: "S1000D-CAS-GOVERN-v1"

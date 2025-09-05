@@ -1,0 +1,34 @@
+---
+dm:
+  code:
+    model_ident_code: "AMPEL360"
+    system_code: "56"
+    info_code: "024"
+    info_code_variant: "C"
+    item_location_code: "Q"
+  title: "Panoramic Windows — V&V Plan (HIL CryoBench)"
+  issue: {number: "001", in_work: "00"}
+  language: "en"
+  status: "baselined"
+  links:
+    ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+    testspec: "testplans/HIL-CryoBench/TP-WIN-QCO-v0.1.md"
+    requirements:
+      - "REQ-WIN-01"
+      - "REQ-WIN-02"
+      - "REQ-WIN-03"
+      - "REQ-WIN-05"
+  content:
+    tests:
+      - id: "EMI-M1"
+        objective: "EMI ≤ 100 nT/√Hz @ 1 Hz; margin ≥ 20%"
+        verify: ["REQ-WIN-01"]
+      - id: "THERM-T1"
+        objective: "ΔT_RMS ≤ 5 mK at mK stage"
+        verify: ["REQ-WIN-02"]
+      - id: "FALL-F1"
+        objective: "ABU triggers degrade ≤ 100 ms; recovery ≤ 60 s"
+        verify: ["REQ-WIN-03"]
+      - id: "SEC-S1"
+        objective: "Edge‑only processing; zero PII exfiltration"
+        verify: ["REQ-WIN-05"]
