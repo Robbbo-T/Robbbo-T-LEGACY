@@ -1,0 +1,194 @@
+{
+  "_template_info": {
+    "name": "DET Evidence Template",
+    "version": "1.0",
+    "utcs_mi": "EstándarUniversal:Especificacion-Definicion-ARP4754A+DO178C+DO254+S1000D+CS25-00.00-DigitalEvidenceTwinTemplate-0001-v1.0-Aerospace and Quantum United Agency-GeneracionHybrida-CROSS-Amedeo Pelliccia-[REPLACE-HASH]-RestoDeVidaUtil",
+    "description": "Template for Digital Evidence Twin packages in C-AMEDEO framework"
+  },
+  "det_id": "DET:[CAX]:[DOMAIN]:[SNS]:[activity]:[version]",
+  "ts": "[ISO-8601-timestamp]Z",
+  "refs": {
+    "ce": "CE-[CAX]-Q100-[DOMAIN]-ATA-[SNS]-[NAME]",
+    "cc": "CE-CC-[CAX]-Q100-[DOMAIN]-ATA-[SNS]-[NAME]",
+    "ci": "CE-CC-CI-[CAX]-Q100-[DOMAIN]-ATA-[SNS]-[ITEM]",
+    "cadet_chain": "CADET:[DOMAIN]:[CAX]:V[version]",
+    "parent_det": "[Parent DET ID if applicable]"
+  },
+  "inputs": {
+    "domain": "[DOMAIN-CODE]",
+    "domain_name": "[FULL-DOMAIN-NAME]",
+    "cax_pillar": "[CAX]",
+    "cax_description": "[CAX-FULL-NAME]",
+    "ata_sns": "[ATA-SNS-CODE]",
+    "configuration": "H2-BWB-Q100-CONF0000",
+    "activity_type": "[design/analysis/test/manufacturing/integration/sustainment]",
+    "data_sources": [
+      "[List of input data sources]"
+    ],
+    "assumptions": [
+      "[Key assumptions for this evidence]"
+    ]
+  },
+  "processing": {
+    "tool": "[TOOL-NAME]:[version]",
+    "tool_config": "[configuration-identifier]",
+    "params": {
+      "domain_owner": "[domain-code]",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true,
+      "verification_level": "[Level-1/2/3/4/5]",
+      "custom_params": {
+        "_note": "Add tool-specific parameters here"
+      }
+    },
+    "execution": {
+      "start_time": "[ISO-8601-timestamp]Z",
+      "end_time": "[ISO-8601-timestamp]Z",
+      "duration_seconds": "[execution-time]",
+      "operator": "[responsible-person]",
+      "environment": "[execution-environment]"
+    }
+  },
+  "outputs": {
+    "primary_results": {
+      "status": "[PASS/FAIL/INCOMPLETE/NA]",
+      "summary": "[Brief description of results]",
+      "key_findings": [
+        "[List of important findings or outcomes]"
+      ]
+    },
+    "measurements": {
+      "_note": "Include all quantitative results with units",
+      "example_metric": {
+        "value": "[numeric-value]",
+        "unit": "[SI-unit]",
+        "tolerance": "[±tolerance-value]",
+        "confidence": "[confidence-level]%"
+      }
+    },
+    "deliverables": [
+      {
+        "name": "[deliverable-name]",
+        "type": "[document/data/model/report]",
+        "location": "[file-path-or-reference]",
+        "hash": "sha256:[file-hash]"
+      }
+    ],
+    "compliance_status": {
+      "standards": [
+        {
+          "standard": "[e.g., CS-25.783]",
+          "status": "[compliant/non-compliant/not-applicable]",
+          "evidence": "[reference-to-supporting-evidence]"
+        }
+      ],
+      "regulations": "[regulatory-compliance-status]"
+    },
+    "traceability_links": [
+      "[List of traceable elements]"
+    ],
+    "circularity_metrics": {
+      "reuse_potential": "[high/medium/low/TBD]",
+      "sustainability_score": "[numeric-score]",
+      "lifecycle_stage": "[DESIGN/MANUFACTURING/OPERATION/DISPOSAL]",
+      "environmental_impact": "[assessment-summary]"
+    },
+    "units": "[primary-units-used]"
+  },
+  "verification": {
+    "independent_check": {
+      "performed": "[true/false]",
+      "reviewer": "[reviewer-name]",
+      "date": "[YYYY-MM-DD]",
+      "status": "[verified/rejected/conditional]",
+      "comments": "[reviewer-comments]"
+    },
+    "peer_review": {
+      "reviewers": [
+        "[list-of-peer-reviewers]"
+      ],
+      "consensus": "[achieved/pending/disputed]"
+    }
+  },
+  "traces": {
+    "upstream_refs": [
+      "[References to parent/source DET packages]"
+    ],
+    "downstream_refs": [
+      "[References to child/derived DET packages]"  
+    ],
+    "cross_domain_refs": [
+      "[References to other domain DET packages]"
+    ],
+    "bidirectional": true,
+    "trace_matrix": {
+      "_note": "Optional detailed traceability matrix",
+      "requirements": "[requirement-trace-info]",
+      "design": "[design-trace-info]",
+      "verification": "[verification-trace-info]"
+    }
+  },
+  "quality": {
+    "review_status": "[draft/in-review/approved/archived]",
+    "approvals": [
+      {
+        "role": "[approver-role]",
+        "name": "[approver-name]", 
+        "date": "[approval-date]",
+        "signature": "[digital-signature-hash]"
+      }
+    ],
+    "audit_trail": [
+      {
+        "timestamp": "[ISO-8601-timestamp]Z",
+        "action": "[created/modified/approved/archived]",
+        "actor": "[person-or-system]",
+        "details": "[action-details]"
+      }
+    ]
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "resource_efficiency": "[metric-value]",
+      "waste_minimization": "[metric-value]", 
+      "lifecycle_optimization": "[metric-value]"
+    },
+    "digital_twin_fidelity": {
+      "model_accuracy": "[percentage]",
+      "data_completeness": "[percentage]",
+      "temporal_validity": "[time-range]"
+    },
+    "evidence_strength": {
+      "confidence_level": "[1-5-scale]",
+      "data_quality": "[high/medium/low]",
+      "reproducibility": "[true/false]"
+    }
+  },
+  "attachments": [
+    {
+      "name": "[attachment-name]",
+      "type": "[CSV/JSON/PDF/XML/other]",
+      "description": "[attachment-description]",
+      "location": "[file-path-or-url]",
+      "hash": "sha256:[file-hash]",
+      "size_bytes": "[file-size]"
+    }
+  ],
+  "metadata": {
+    "created_by": "[creator-name]",
+    "created_date": "[YYYY-MM-DD]",
+    "last_modified": "[YYYY-MM-DD]",
+    "version_history": [
+      {
+        "version": "[version-number]",
+        "date": "[change-date]",
+        "changes": "[summary-of-changes]"
+      }
+    ],
+    "keywords": [
+      "[relevant-keywords-for-search]"
+    ],
+    "classification": "[public/restricted/confidential]"
+  }
+}
