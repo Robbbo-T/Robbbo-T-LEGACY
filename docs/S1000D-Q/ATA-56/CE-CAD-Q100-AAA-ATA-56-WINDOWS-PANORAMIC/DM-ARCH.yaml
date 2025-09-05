@@ -17,15 +17,14 @@ dm:
   language: "en"
   security: "unclassified"
   status: "baselined"
-  # ... rest of file continues
-  issue:
-    number: "001"
-    in_work: "00"
-  language: "en"
-  security: "unclassified"
-  status: "baselined"
   links:
     ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+    det_chain:
+      - "DET:CAB:H2-BWB-Q100:CONF0000:concept_selection:V1.0"
+      - "DET:CAD:AAA:ATA56:integration:V1.0"
+    upstream_concepts:
+      multi_bubble: "BWB-H2-001"
+      bli_propulsion: "BWB-H2-002"
     requirements:
       - "REQ-WIN-01"
       - "REQ-WIN-02"
