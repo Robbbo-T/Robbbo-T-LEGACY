@@ -1,0 +1,31 @@
+---
+# BRK-DS UAS (Drones) Requirements
+# Domain: UAS - Drones (Regs 2019/947 ops & 2019/945 product)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-UAS-001
+    text: >-
+      Classify operations (Open/Specific/Certified), perform SORA/STS/PDRA
+      as required, maintain LUC or authorisations; DET holds geo‑zone
+      controls.
+    source: "EASA Regulations 2019/947 (operations) & 2019/945 (products)"
+    driver: "safety"
+    acceptance: >-
+      UAS operations classified correctly (Open/Specific/Certified),
+      appropriate SORA/STS/PDRA assessment completed, LUC or authorisations
+      maintained, and DET evidence includes geo-zone control measures.
+    verification: "Process"
+    links:
+      ce: "TBD-UAS-OPERATIONS-CE"
+      cc: "TBD-UAS-OPERATIONS-CC"
+      ci: "TBD-UAS-OPERATIONS-CI"
+    status: "baselined"
+    owner: "uas-operations@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "uas-operations@aqua-os"
+  reviewer: "safety-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

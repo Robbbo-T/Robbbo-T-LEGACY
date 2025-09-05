@@ -1,0 +1,34 @@
+---
+# BRK-DS Information Security Requirements
+# Domain: IS - Information Security (Part‑IS)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-IS-001
+    text: >-
+      Operate an ISMS that identifies, assesses, and mitigates info‑security
+      risks with potential safety impact; integrate with safety occurrence
+      reporting and emergency response. Track the Feb 22, 2026 applicability
+      (or earlier where specified).
+    source: "EASA Part-IS Commission Implementing Regulation (EU) 2023/203"
+    driver: "safety"
+    acceptance: >-
+      ISMS operational with documented risk identification, assessment,
+      and mitigation processes for information security risks affecting
+      aviation safety. Integration with safety occurrence reporting and
+      emergency response procedures established. Compliance achieved by
+      Feb 22, 2026 applicability date.
+    verification: "Process"
+    links:
+      ce: "TBD-ISMS-DETAIL-CE"
+      cc: "TBD-ISMS-DETAIL-CC"
+      ci: "TBD-ISMS-DETAIL-CI"
+    status: "baselined"
+    owner: "infosec-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "infosec-lead@aqua-os"
+  reviewer: "safety-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

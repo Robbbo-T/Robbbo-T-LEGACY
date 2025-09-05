@@ -1,0 +1,51 @@
+---
+# BRK-DS Basic Regulation Requirements
+# Domain: BASIC - Basic Regulation (EU) 2018/1139 umbrella
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-BASIC-001
+    text: >-
+      Identify scope (design, production, maintenance, operations, ATM/ANS,
+      aerodromes, UAS) and confirm competence and oversight model under
+      the Basic Regulation; record cross‑domain dependencies.
+    source: "Basic Regulation (EU) 2018/1139"
+    driver: "safety"
+    acceptance: >-
+      Scope of activities clearly documented with applicable Basic Regulation
+      annexes identified, competence model defined, and cross-domain
+      dependencies mapped and maintained.
+    verification: "Inspection"
+    links:
+      ce: "TBD-BASIC-REG-SCOPE-CE"
+      cc: "TBD-BASIC-REG-SCOPE-CC"
+      ci: "TBD-BASIC-REG-SCOPE-CI"
+    status: "baselined"
+    owner: "regulatory-affairs@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-BASIC-002
+    text: >-
+      For every product/organisation approval pursued, trace to the correct
+      Annex/Part and implementing regulation; DET must include the legal
+      basis citation in each compliance claim.
+    source: "Basic Regulation (EU) 2018/1139 Annexes"
+    driver: "safety"
+    acceptance: >-
+      Each product or organisational approval mapped to specific Basic
+      Regulation Annex/Part with implementing regulation reference,
+      and DET evidence includes legal basis citations.
+    verification: "Process"
+    links:
+      ce: "TBD-APPROVAL-MAPPING-CE"
+      cc: "TBD-APPROVAL-MAPPING-CC"
+      ci: "TBD-APPROVAL-MAPPING-CI"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "regulatory-affairs@aqua-os"
+  reviewer: "compliance-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"
