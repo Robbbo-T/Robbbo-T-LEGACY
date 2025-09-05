@@ -1,6 +1,9 @@
 ---
 name: Open Collab — CC→FE Scope Gate
 
+permissions:
+  contents: read
+
 on:
   pull_request:
     types: [opened, synchronize, reopened, labeled, unlabeled]
