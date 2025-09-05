@@ -1,0 +1,143 @@
+---
+# BRK-DS Registry - Master index of regulatory requirements domains
+# Base Regulatory Knowledge Data Set (BRK‑DS) Requirements Library
+# Version: 1.0.0
+# Generated: 2025-01-15T12:00:00Z
+
+version: "1.0.0"
+generated_timestamp: "2025-01-15T12:00:00Z"
+description: >-
+  Master registry for Base Regulatory Knowledge Data Set (BRK‑DS)
+  providing structured regulatory requirements that can be dropped
+  straight into SRS/SDD and compliance matrices.
+
+registry:
+  total_domains: 39
+  implemented_domains: 6
+  status: "initial_implementation"
+
+domains:
+  # Global governance (applies to all domains)
+  GOV:
+    name: "Global Governance"
+    description: "Global governance requirements applying to all domains"
+    requirements_count: 5
+    file: "GOV/requirements.yaml"
+    status: "implemented"
+    source: "EASA Basic Regulation, Part-IS, EU 376/2014"
+
+  # Basic Regulation (EU) 2018/1139 — umbrella
+  BASIC:
+    name: "Basic Regulation"
+    description: "Basic Regulation (EU) 2018/1139 umbrella requirements"
+    requirements_count: 2
+    file: "BASIC/requirements.yaml"
+    status: "implemented"
+    source: "Basic Regulation (EU) 2018/1139"
+
+  # Initial Airworthiness (Part 21, Reg. 748/2012)
+  IA:
+    name: "Initial Airworthiness"
+    description: "Initial Airworthiness Part 21 requirements"
+    requirements_count: 3
+    file: "IA/requirements.yaml"
+    status: "implemented"
+    source: "Part 21 Commission Regulation (EU) No 748/2012"
+
+  # Additional Airworthiness Specifications (CS‑XX)
+  CS:
+    name: "Additional Airworthiness Specifications"
+    description: "CS-XX airworthiness specifications requirements"
+    requirements_count: 1
+    file: "CS/requirements.yaml"
+    status: "implemented"
+    source: "EASA Certification Specifications"
+
+  # Continuing Airworthiness (Reg. 1321/2014)
+  CAW:
+    name: "Continuing Airworthiness"
+    description: "Continuing airworthiness requirements"
+    requirements_count: 2
+    file: "CAW/requirements.yaml"
+    status: "implemented"
+    source: "Commission Regulation (EU) No 1321/2014"
+
+  # Information Security (Part‑IS)
+  IS:
+    name: "Information Security"
+    description: "Part-IS information security requirements"
+    requirements_count: 1
+    file: "IS/requirements.yaml"
+    status: "implemented"
+    source: "EASA Part-IS Commission Implementing Regulation (EU) 2023/203"
+
+  # Drones (UAS)
+  UAS:
+    name: "UAS Drones"
+    description: "UAS operations and product requirements"
+    requirements_count: 1
+    file: "UAS/requirements.yaml"
+    status: "implemented"
+    source: "EASA Regulations 2019/947 & 2019/945"
+
+  # Planned domains (not yet implemented)
+  OPS:
+    name: "Air Operations"
+    description: "Air operations requirements"
+    requirements_count: 2
+    file: "OPS/requirements.yaml"
+    status: "planned"
+    source: "Commission Regulation (EU) No 965/2012"
+
+  FCL:
+    name: "Aircrew & Medical"
+    description: "Aircrew licensing and medical requirements"
+    requirements_count: 1
+    file: "FCL/requirements.yaml"
+    status: "planned"
+    source: "Commission Regulation (EU) No 1178/2011 & Part-MED"
+
+  FSTD:
+    name: "Flight Simulation Training Devices"
+    description: "FSTD qualification requirements"
+    requirements_count: 1
+    file: "FSTD/requirements.yaml"
+    status: "planned"
+    source: "CS‑FSTD(A)/(H)"
+
+# Integration patterns with C-AMEDEO framework
+integration:
+  det_patterns:
+    - "DET:CAD:<MIC>:<SNS>:req_add:V<rev>"
+    - "DET:CAD:<MIC>:<SNS>:req_update:V<rev>"
+    - "DET:CAD:<MIC>:<SNS>:req_baseline:V<rev>"
+
+  traces_integration:
+    bidirectional: true
+    cross_domain_refs: true
+    requirement_mapping: true
+
+  cadet_integration:
+    circular_assurance: true
+    sustainability_tracking: true
+    lifecycle_closure: true
+
+# Usage guidance
+usage:
+  implementation_steps:
+    1: "Select applicable domain packs for your project"
+    2: "Copy relevant requirements.yaml files to component requirements"
+    3: "Map to appropriate DET patterns for evidence tracking"
+    4: "Link to EASA regulatory sources for audit trail"
+    5: "Integrate with existing compliance matrix"
+
+  file_format: "YAML following repository requirements.instructions.md"
+  validation: "Use yamllint -s . for format validation"
+
+meta:
+  owner: "regulatory-affairs@aqua-os"
+  reviewer: "compliance-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"
+  repository: "Robbbo-T/Robbbo-T"
+  framework: "C-AMEDEO"

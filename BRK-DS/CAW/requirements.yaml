@@ -1,0 +1,49 @@
+---
+# BRK-DS Continuing Airworthiness Requirements
+# Domain: CAW - Continuing Airworthiness (Reg. 1321/2014)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-CAW-001
+    text: >-
+      Define CAMO/CAO responsibilities, contracts, and interfaces; DET shows
+      control of AMP, ADs/SBs, reliability programme, and ARC cycle.
+    source: "Commission Regulation (EU) No 1321/2014"
+    driver: "safety"
+    acceptance: >-
+      CAMO/CAO responsibilities documented with contracts and interfaces
+      defined, DET evidence of AMP control, AD/SB management, reliability
+      programme implementation, and ARC cycle management.
+    verification: "Process"
+    links:
+      ce: "TBD-CAMO-CAO-CE"
+      cc: "TBD-CAMO-CAO-CC"
+      ci: "TBD-CAMO-CAO-CI"
+    status: "baselined"
+    owner: "continuing-airworthiness@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-CAW-002
+    text: >-
+      Maintain occurrence reporting hooks from maintenance/operations into
+      EU 376/2014 channels.
+    source: "EU Regulation 376/2014 on Occurrence Reporting"
+    driver: "safety"
+    acceptance: >-
+      Occurrence reporting system integrated with maintenance and operations
+      activities, feeding into EU 376/2014 reporting channels with
+      documented procedures and performance monitoring.
+    verification: "Process"
+    links:
+      ce: "TBD-MAINTENANCE-REPORTING-CE"
+      cc: "TBD-MAINTENANCE-REPORTING-CC"
+      ci: "TBD-MAINTENANCE-REPORTING-CI"
+    status: "baselined"
+    owner: "maintenance-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "continuing-airworthiness@aqua-os"
+  reviewer: "maintenance-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

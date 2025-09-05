@@ -1,0 +1,70 @@
+---
+# BRK-DS Initial Airworthiness Requirements
+# Domain: IA - Initial Airworthiness (Part 21, Reg. 748/2012)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-IA-001
+    text: >-
+      Establish and maintain a certification programme covering certification
+      basis selection (CS/Amendment), means of compliance, and verification
+      plan; show EASA/NAA agreement.
+    source: "Part 21 Commission Regulation (EU) No 748/2012"
+    driver: "safety"
+    acceptance: >-
+      Certification programme documented with CS/Amendment basis selection,
+      means of compliance defined, verification plan established,
+      and EASA/NAA agreement obtained and maintained.
+    verification: "Process"
+    links:
+      ce: "TBD-CERT-PROGRAMME-CE"
+      cc: "TBD-CERT-PROGRAMME-CC"
+      ci: "TBD-CERT-PROGRAMME-CI"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-IA-002
+    text: >-
+      Operate a Design Organisation Approval (DOA) or ADOA path; define
+      Design Assurance System, privileges, and Terms of Approval.
+      Evidence: DOA certificate & procedures.
+    source: "Part 21 Subpart J - Design Organisation Approval"
+    driver: "safety"
+    acceptance: >-
+      DOA or ADOA operational with Design Assurance System implemented,
+      privileges clearly defined, Terms of Approval documented,
+      and DOA certificate maintained with current procedures.
+    verification: "Process"
+    links:
+      ce: "TBD-DOA-SYSTEM-CE"
+      cc: "TBD-DOA-SYSTEM-CC"
+      ci: "TBD-DOA-SYSTEM-CI"
+    status: "baselined"
+    owner: "design-assurance@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-IA-003
+    text: >-
+      Changes & Repairs: classify (major/minor) and route via Subpart D/E;
+      DET must show classification rationale and approval path.
+    source: "Part 21 Subpart D/E - Changes and Repairs"
+    driver: "safety"
+    acceptance: >-
+      Change and repair classification system operational with documented
+      rationale for major/minor determinations, appropriate routing via
+      Subpart D/E processes, and DET evidence of approval paths.
+    verification: "Process"
+    links:
+      ce: "TBD-CHANGE-REPAIR-CE"
+      cc: "TBD-CHANGE-REPAIR-CC"
+      ci: "TBD-CHANGE-REPAIR-CI"
+    status: "baselined"
+    owner: "configuration-mgmt@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "certification-lead@aqua-os"
+  reviewer: "design-assurance@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"
