@@ -124,6 +124,22 @@ Unificar el ciclo aeroespacial —diseño (CAD/CAM/CAE/PLM), producción (SCADA/
 | [CAS](#cas---sustainment)         | Sustainment        | In-service support, IPC/IETP (S1000D), SBs/PHM           |
 | [CAEpost](#caepost---end-of-life) | End-of-Life        | Decommissioning, recovery, circularity                   |
 
+### 📐 Lifecycle Level Codes — Definiciones
+
+| Código | Nombre completo                              | Descripción breve |
+|--------|----------------------------------------------|-------------------|
+| **TFA** | Tail‑Fined Aircraft                         | Nivel global de referencia del programa o aeronave completa. |
+| **SI**  | System Integration                          | Integración de sistemas y subsistemas a nivel de plataforma. |
+| **CV**  | Component Vendor                            | Gestión y control de proveedores de componentes. |
+| **SE**  | Station Entanglement / Envelop              | Integración física y funcional en estaciones o entornos de montaje. |
+| **DI**  | Domain Invariant / Interfaces               | Interfaces y elementos invariantes entre dominios. |
+| **CE**  | Component Equipped / Envelop                | Componente equipado y su envolvente funcional/física. |
+| **CC**  | Configuration Cell / Component              | Célula o unidad de configuración de un componente. |
+| **CI**  | Configuration / Component Item              | Ítem de configuración o elemento individual del componente. |
+| **CP**  | Component Part                              | Parte física específica de un componente o configuración. |
+| **FE**  | Element / Extent / Endpoint                 | Elemento fundamental, su extensión o punto terminal. |
+| **QS**  | Quantum Superposition State                 | Estado cuántico de superposición aplicado a modelado/simulación. |
+
 ### Aerospace Project Domain × Level Navigation Matrix (TFA → QS)
 
 > Cada celda salta a su ancla `#<nivel>-<dom>`; **TFA** es global (`#tfa-bwb`).  
