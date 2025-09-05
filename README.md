@@ -7,6 +7,9 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 
 ---
 
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/64ed5457-a8d7-4c45-9cf2-89dabb923064" />
+
+
 **EstándarUniversal:** DocumentoTecnico-Difusion-ISO9001-01.00-PersonalPortfolioReadme-0001-v1.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-CROSS-Amedeo Pelliccia-4a4596d0-RestoDeVidaUtil
 
 > Identificador UTCS‑MI v5.0 (13 campos) aplicado a este artefacto público.
@@ -267,10 +270,6 @@ End-of-life plan, including material recovery and recycling processes.
 * **Sistemas complejos**: **C‑AMEDEO** (DI→CE→CC→CI→CP) + **ARP4754A/4761**.
 * **Materiales/Nano → MMM**: CMH‑17, nano‑coatings, metamateriales; **CAM** aditiva (NADCAP).
 
-  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9bbe2293-8d43-42d8-9d9b-8b57b1140239" />
-```prompt
-Blended Wing Body (BWB) hydrogen-powered passenger aircraft — AMPEL360 BwbQ100. Generate a pure wireframe / blueprint-style model of the external geometry only. Show continuous wing–body integration; wingspan ~52 m; length ~40 m; slight outer-wing anhedral; elevons along trailing edge. Six BLI ducted fans (Ø 3 m) at rear upper body (3+3) with blended intakes, drawn as clean cylindrical/torus ducts. No shading, no textures: single-color linework; uniform line thickness; orthographic-friendly geometry; emphasize topology and edge flow. Model must remain manifold and closed (suitable for downstream CAD), but visualize in wireframe/blueprint style. Negative: "no interior, no textures, no photoreal shading, no decals, no annotations or dimensions rendered onto the mesh"
-```
 
 ---
 
