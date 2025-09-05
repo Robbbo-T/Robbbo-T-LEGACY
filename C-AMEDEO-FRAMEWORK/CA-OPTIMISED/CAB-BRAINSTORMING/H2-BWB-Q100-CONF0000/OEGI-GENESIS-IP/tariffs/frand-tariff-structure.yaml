@@ -1,0 +1,19 @@
+---
+oegi_tariffs:
+  version: "2025-01"
+  models:
+    saas:
+      rate_min: 0.002
+      rate_max: 0.005
+      cap_per_ag_eur: 250000
+    distributed_sw:
+      rate_min: 0.001
+      rate_max: 0.003
+      cap_per_ag_eur: 250000
+    public_procurement:
+      rate_min: 0.001
+      rate_max: 0.003
+  thresholds:
+    revenue_min_eur: 100000
+    de_minimis_eur: 0
+  opex_fee_share: 0.10

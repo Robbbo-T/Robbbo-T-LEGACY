@@ -1,0 +1,123 @@
+{
+  "utcs_id": "EstándarUniversal:EvidenciaDigital-LiquidacionOEGI-CAB-01.00-RoyaltyClearing-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-oegiclr1-RestoDeVidaUtil",
+  "phase": "CAB",
+  "artifact_type": "OEGI_Clearing",
+  "inputs": [
+    "sha256:usage_declarations_aggregated_hash_placeholder_64_chars_hex",
+    "sha256:tariff_calculations_verified_hash_placeholder_64_chars_hex",
+    "sha256:collection_records_validated_hash_placeholder_64_chars_hex"
+  ],
+  "outputs": [
+    "sha256:distribution_record_signed_hash_placeholder_64_chars_hexadec",
+    "sha256:clearing_report_published_hash_placeholder_64_chars_hexadec"
+  ],
+  "req_trace": [
+    {
+      "req_id": "OEGI-CLEAR-ACCURACY",
+      "status": "pass", 
+      "evidence": "sha256:calculation_accuracy_verified_independent_audit_evidence"
+    },
+    {
+      "req_id": "OEGI-FRAND-COMPLIANCE",
+      "status": "pass",
+      "evidence": "sha256:non_discriminatory_rates_applied_evidence_hash_placeholder"
+    }
+  ],
+  "risk": {
+    "cvar_alpha": 0.95,
+    "cvar_value": 0.02,
+    "hazards": [
+      "Currency fluctuation impact on cross-border payments",
+      "Self-declaration accuracy dependent on licensee honesty",
+      "Technical integration challenges with clearing agents"
+    ]
+  },
+  "quantum": {
+    "algo": "Classical",
+    "seed": null,
+    "p": null,
+    "backend": "classical_computation",
+    "confidence_score": 0.99,
+    "quantum_advantage": "None - financial clearing uses classical algorithms"
+  },
+  "pqc_signature": {
+    "alg": "Dilithium3", 
+    "sig": "0x456def789abc012345def6789abc0123456def789abc0123456def789abc0123"
+  },
+  "provenance": {
+    "tool": "OEGI-Clearing-System",
+    "version": "v2.1.0",
+    "agent": "OEGI-Financial-Bot",
+    "time_utc": "2025-03-31T23:59:59Z"
+  },
+  "oegi_clearing": {
+    "clearing_period": {
+      "quarter": "Q1-2025",
+      "start_date": "2025-01-01T00:00:00Z",
+      "end_date": "2025-03-31T23:59:59Z",
+      "processing_date": "2025-04-15T12:00:00Z"
+    },
+    "aggregate_metrics": {
+      "total_artifacts_with_royalties": 47,
+      "total_licensees_reporting": 156,
+      "gross_royalties_collected_eur": 2847563.42,
+      "oegi_operational_fee_eur": 284756.34,
+      "net_distribution_eur": 2562807.08,
+      "average_royalty_per_artifact_eur": 54524.29
+    },
+    "top_artifacts": [
+      {
+        "oegi_id": "OEGI-AG-2025-000001",
+        "title": "Quantum-Enhanced Aerospace Control Framework",
+        "royalties_eur": 847562.15,
+        "licensees_count": 23,
+        "primary_use_cases": ["SaaS", "distributed_software"]
+      },
+      {
+        "oegi_id": "OEGI-AG-2025-000007",
+        "title": "Multi-Bubble Pressure Vessel Design Matrix",
+        "royalties_eur": 456789.33,
+        "licensees_count": 12,
+        "primary_use_cases": ["public_procurement", "standards"]
+      }
+    ],
+    "distribution_breakdown": {
+      "by_license_type": {
+        "GL-EU-BY-RF": {
+          "artifacts": 47,
+          "royalties_eur": 2847563.42
+        },
+        "GL-EU-BY": {
+          "artifacts": 134,
+          "royalties_eur": 0.00
+        },
+        "GL-EU-BY-RC": {
+          "artifacts": 89,
+          "royalties_eur": 0.00
+        }
+      },
+      "by_use_case": {
+        "saas_api": {
+          "royalties_eur": 1423456.78,
+          "share_percent": 50.0
+        },
+        "distributed_software": {
+          "royalties_eur": 854234.12,
+          "share_percent": 30.0
+        },
+        "public_procurement": {
+          "royalties_eur": 569872.52,
+          "share_percent": 20.0
+        }
+      }
+    },
+    "compliance_metrics": {
+      "audit_sample_size": 15,
+      "audit_accuracy_percent": 97.3,
+      "disputed_calculations": 2,
+      "resolved_disputes": 2,
+      "payment_delays_count": 3,
+      "currency_hedge_effectiveness": 0.94
+    }
+  }
+}
