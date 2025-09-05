@@ -1,0 +1,26 @@
+---
+name: Open Collab — CC→FE Scope Gate
+
+'on':
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs:
+  gate:
+    if: contains(join(github.event.pull_request.labels.*.name, ','), 'open-collab:cc-fe')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Compute changed files
+        run: |
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.sha }}"
+          git fetch --no-tags --prune --depth=200 origin ${BASE_SHA} || true
+          git fetch --no-tags --prune --depth=200 origin ${HEAD_SHA} || true
+          git diff --name-only ${BASE_SHA} ${HEAD_SHA} > changed.txt
+          echo "Changed files:" && cat changed.txt
+      - name: Verify CC→FE scope
+        run: node .github/scripts/verify_open_paths.mjs changed.txt
