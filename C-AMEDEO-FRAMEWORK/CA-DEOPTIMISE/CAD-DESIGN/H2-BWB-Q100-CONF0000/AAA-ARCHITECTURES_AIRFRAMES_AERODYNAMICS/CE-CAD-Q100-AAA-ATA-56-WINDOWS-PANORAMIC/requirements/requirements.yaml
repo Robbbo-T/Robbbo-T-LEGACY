@@ -15,7 +15,7 @@ requirements:
     verification: "HIL-EMI Test"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "ABU-QuantumProtect"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "HIL CryoBench"
     status: "baselined"
     owner: "windows-lead@aqua-os"
@@ -30,7 +30,7 @@ requirements:
     verification: "HIL-Thermal"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "QCO-Thermal-Management"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
       ci: "OLED-Stack-Assembly"
     status: "baselined"
     owner: "thermal-lead@aqua-os"
@@ -49,7 +49,7 @@ requirements:
     verification: "Injected turbulence/EMI; verify mode switch & recovery"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "ABU-QuantumProtect"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "Windows-UI-Controller"
     status: "baselined"
     owner: "safety-lead@aqua-os"
@@ -66,7 +66,7 @@ requirements:
     verification: "Chamber + calorimetry"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "Thermal-Gradient-Stack"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
       ci: "MLI-Thermal-Barrier"
     status: "baselined"
     owner: "thermal-lead@aqua-os"
@@ -83,7 +83,7 @@ requirements:
     verification: "Security testing; dataflow review"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "Edge-Processing-Controller"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "Biometric-Calibration-Engine"
     status: "baselined"
     owner: "security-lead@aqua-os"
@@ -103,7 +103,7 @@ requirements:
     verification: "Process"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "Structural-Compliance"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "Windows-Structure-Analysis"
     status: "baselined"
     owner: "certification-lead@aqua-os"
@@ -122,7 +122,7 @@ requirements:
     verification: "Security testing; dataflow review"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "Edge-Processing-Controller"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "Security-Architecture"
     status: "baselined"
     owner: "security-lead@aqua-os"

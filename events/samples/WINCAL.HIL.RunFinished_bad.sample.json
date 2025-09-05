@@ -1,0 +1,12 @@
+{
+  "event": "QS.Published",
+  "ts": "2025-01-15T16:50:00.000Z",
+  "program": "BWB-Q100-INVALID",
+  "domain": "AAA",
+  "level": "CI",
+  "entity": "WINCAL.HIL.RunFinished",
+  "qs_type": "QML",
+  "utcs_mi_id": "EstándarUniversal:EstadoCuantico-QML-56.01-PANORAMIC-WINDOWS-HIL-CRYOBENCH-RestoDeVidaUtil",
+  "det_ref": "DET:QS:AAA:56-01:hil_test_complete:V1.0",
+  "signature": "PQC-BadAlgo"
+}
