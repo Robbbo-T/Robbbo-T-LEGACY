@@ -1,0 +1,17 @@
+Role,CAO,CAB,CAD,CAE,CAT,CAV,CAM,CAP,CAS
+Strategic Planning,R,C,C,C,I,C,C,C,I
+Policy Management,R,I,C,I,I,C,I,I,C
+Budget Management,R,C,C,C,C,C,C,C,C
+Risk Management,R,C,C,C,C,A,C,C,C
+Compliance Oversight,A,I,C,C,C,R,C,C,C
+Resource Allocation,R,C,C,C,C,C,C,C,I
+Performance Monitoring,R,C,C,C,C,C,C,C,C
+Stakeholder Management,R,I,C,I,I,I,I,I,C
+Knowledge Management,R,C,C,C,C,C,C,C,A
+Security Management,A,C,C,C,C,C,C,C,C
+
+# Legend:
+# R = Responsible (does the work)
+# A = Accountable (signs off)
+# C = Consulted (provides input)
+# I = Informed (kept in the loop)

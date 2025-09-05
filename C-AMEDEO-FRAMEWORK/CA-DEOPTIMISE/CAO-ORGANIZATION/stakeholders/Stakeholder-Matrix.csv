@@ -1,0 +1,9 @@
+Stakeholder ID,Name,Organization,Role,Interest Level,Influence Level,Engagement Strategy,Contact Information,Last Contact
+STK-001,Board Chairman,Organization Board,Decision Maker,High,High,Regular briefings,chairman@organization.com,TBD
+STK-002,Program Manager,Program Office,Operational Lead,High,High,Daily coordination,pm@organization.com,TBD
+STK-003,Technical Director,Engineering Division,Technical Authority,High,Medium,Weekly reviews,tech.director@organization.com,TBD
+STK-004,Quality Manager,Quality Assurance,Compliance Lead,Medium,Medium,Monthly reviews,quality@organization.com,TBD
+STK-005,Finance Director,Finance Department,Budget Authority,High,High,Budget reviews,finance@organization.com,TBD
+STK-006,Regulatory Liaison,Compliance Office,Regulatory Expert,Medium,High,Compliance updates,regulatory@organization.com,TBD
+STK-007,Customer Representative,Customer Organization,User Representative,High,Medium,Requirements reviews,customer@organization.com,TBD
+STK-008,Supplier Manager,Procurement,Supply Chain,Medium,Medium,Supplier meetings,procurement@organization.com,TBD
