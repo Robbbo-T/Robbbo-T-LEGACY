@@ -114,3 +114,8 @@ Supporting models:
 - **ICD (machine‑readable)**: architecture/icd.signals.yaml  
 - **RTM**: matrices/rtm.yaml
 <!-- END:S1000D-Q -->
+Supporting models:
+- **Hierarchy**: architecture/hierarchy.yaml  
+- **ICD (machine‑readable)**: architecture/icd.signals.yaml  
+- **RTM**: matrices/rtm.yaml
+<!-- END:S1000D-Q -->

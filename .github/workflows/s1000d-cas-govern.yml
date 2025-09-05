@@ -1,0 +1,30 @@
+---
+name: S1000D CAS Governance
+
+on:
+  pull_request:
+    paths:
+      - "docs/S1000D-GOV/CAS/**"
+      - "docs/S1000D-Q/**/DM-*.yaml"
+      - "C-AMEDEO-FRAMEWORK/**/ATA-56-WINDOWS-PANORAMIC/**.yaml"
+      - "cas-s1000d.instructions.md"
+
+jobs:
+  lint-and-govern:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install yamllint
+        run: sudo pip install yamllint
+      - name: YAML lint
+        run: |
+          yamllint -s docs/S1000D-GOV/CAS
+          yamllint -s docs/S1000D-Q || true
+      - name: BREX validate
+        run: |
+          node scripts/s1000d_brex_validate.mjs $(git ls-files 'docs/S1000D-Q/**/DM-*.yaml')

@@ -1,0 +1,14 @@
+{
+  "event": "S1000D.BREX.Validated",
+  "ts": "2025-01-15T17:00:00.000Z",
+  "domain": "CAS",
+  "status": "PASS",
+  "files_checked": 7,
+  "ruleset": "BREX-CAS-v1",
+  "det_ref": "DET:S1000D:CAS:brex_validated:V1.0",
+  "signature": "PQC-Dilithium3",
+  "meta": {
+    "pr": "TBD",
+    "branch": "feat/s1000d-govern-cas"
+  }
+}
