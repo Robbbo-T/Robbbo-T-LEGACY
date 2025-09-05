@@ -1,0 +1,61 @@
+{
+  "det_id": "DET:CAB:AAA:56:template:V1",
+  "ts": "2025-09-01T06:24:54.447974Z",
+  "refs": {
+    "ce": "CE-CAB-Q100-AAA-ATA-56-TEMPLATE",
+    "ci": "CE-CC-CI-CAB-Q100-AAA-ATA-56-01-TEMPLATE-CONCEPT",
+    "cadet_chain": "CADET:AAA:CAB:V1"
+  },
+  "inputs": {
+    "domain": "AAA",
+    "domain_name": "ARCHITECTURES_AIRFRAMES_AERODYNAMICS",
+    "cax_pillar": "CAB",
+    "cax_description": "Computer-Aided Brainstorming",
+    "ata_sns": "56",
+    "configuration": "H2-BWB-Q100-CONF0000"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cab-registry@1.0",
+    "params": {
+      "domain_owner": "AAA",
+      "quantum_algorithms": true,
+      "concept_generation": true,
+      "feasibility_scoring": true
+    }
+  },
+  "outputs": {
+    "registry_status": "TEMPLATE_CREATED",
+    "concept_categories": ["structural", "propulsion", "integration"],
+    "quantum_confidence": "TBD",
+    "feasibility_metrics": {
+      "technical_score": "TBD",
+      "innovation_potential": "TBD",
+      "integration_complexity": "TBD"
+    },
+    "units": "dimensionless"
+  },
+  "traces": {
+    "upstream_refs": [],
+    "downstream_refs": [],
+    "cross_domain_refs": [],
+    "bidirectional": true
+  },
+  "cadet_metrics": {
+    "circular_assurance": {
+      "concept_reuse_percentage": null,
+      "innovation_sustainability": null,
+      "quantum_efficiency_gain": null,
+      "lifecycle_impact_reduction": null
+    },
+    "sustainability_kpis": {
+      "iso14001_compliance": "PENDING",
+      "csrd_reporting": "ENABLED",
+      "gri_alignment": "TRACKED"
+    }
+  },
+  "hash": "SHA256_PLACEHOLDER_CAB_AAA_56",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "cadet-registry@aaa"
+  }
+}
