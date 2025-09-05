@@ -1,0 +1,37 @@
+---
+name: S1000D‑Q ATA‑56 Pack
+
+on:
+  pull_request:
+    paths:
+      - "docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/**.yaml"
+      - "C-AMEDEO-FRAMEWORK/**/ATA-56-WINDOWS-PANORAMIC/**.yaml"
+      - "scripts/validate_s1000d_q_ata56.mjs"
+
+jobs:
+  lint-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install yamllint
+        run: sudo pip install yamllint
+      - name: YAML lint (DMs)
+        run: yamllint -s docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC
+      - name: YAML lint (Models)
+        run: |
+          yamllint -s C-AMEDEO-FRAMEWORK/**/ATA-56-WINDOWS-PANORAMIC/architecture || true
+          yamllint -s C-AMEDEO-FRAMEWORK/**/ATA-56-WINDOWS-PANORAMIC/matrices || true
+      - name: Validate ATA‑56 S1000D‑Q pack
+        run: node scripts/validate_s1000d_q_ata56.mjs
+      - name: Optional CAS BREX validate (if present)
+        run: |
+          if [ -f scripts/s1000d_brex_validate.mjs ]; then
+            node scripts/s1000d_brex_validate.mjs $(git ls-files 'docs/S1000D-Q/**/DM-*.yaml')
+          else
+            echo "BREX validator not present; skipping."
+          fi
