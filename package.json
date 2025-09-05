@@ -12,6 +12,7 @@
     "validate:events": "node scripts/validate_qs_events.mjs events/samples/*.json",
     "validate:det": "node scripts/validate_det_refs_in_kits.mjs qal/**/kit.yaml",
     "validate:taxonomy": "bash scripts/validate_qal_taxonomy.sh",
+    "create-brk-dropin": "python3 scripts/create_brk_ds_dropin.py",
     "all": "npm run gen && npm run emit && npm run validate:qs && npm run validate:det && npm run validate:taxonomy"
   },
   "dependencies": {
