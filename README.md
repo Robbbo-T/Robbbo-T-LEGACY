@@ -124,6 +124,15 @@ Unificar el ciclo aeroespacial —diseño (CAD/CAM/CAE/PLM), producción (SCADA/
 | [CAS](#cas---sustainment)         | Sustainment        | In-service support, IPC/IETP (S1000D), SBs/PHM           |
 | [CAEpost](#caepost---end-of-life) | End-of-Life        | Decommissioning, recovery, circularity                   |
 
+### 🔄 Pipeline Automation
+
+For comprehensive automation infrastructure details, see: **[Pipeline Automation Report](pipeline_automation.md)**
+
+- **12 Active GitHub Actions workflows** for validation, testing, and evidence generation
+- **15+ Automation scripts** for DET validation, QS events, and CAO artifacts
+- **Integrated QAL framework** with sophisticated evidence traceability
+- **Industry-standard compliance** supporting ARP4754A, DO-178C, S1000D
+
 ### 📐 Lifecycle Level Codes — Definiciones
 
 | Código | Nombre completo                              | Descripción breve |
@@ -427,6 +436,7 @@ DET:
 ## Contribución & Contacto
 
 * **Issues & Roadmap:** GitHub Issues/Projects (repos públicos).
+* **Pipeline Automation:** See [pipeline_automation.md](pipeline_automation.md) for complete CI/CD documentation.
 * **Charlas/Advisory:** LinkedIn.
 * **Licencias:** Código MIT; documentación CC BY‑SA 4.0 salvo indicación.
 
