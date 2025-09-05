@@ -9,9 +9,12 @@ dm:
   title: "Panoramic Windows — Interface Control (QCO/ANMN/Thermal)"
   issue: {number: "001", in_work: "00"}
   language: "en"
+  security: "unclassified"
   status: "baselined"
   links:
     ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+  content:
+    # ... rest of content continues
   content:
     interfaces:
       - name: "QCO_Bridge"

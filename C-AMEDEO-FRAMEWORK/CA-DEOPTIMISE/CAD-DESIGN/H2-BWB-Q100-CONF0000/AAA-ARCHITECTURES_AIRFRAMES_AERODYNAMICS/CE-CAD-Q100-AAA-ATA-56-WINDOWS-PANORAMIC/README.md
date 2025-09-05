@@ -102,10 +102,18 @@ The requirements are organized in a hierarchical structure:
 <!-- BEGIN:S1000D-Q -->
 ### S1000D‑Q Pack
 
-- **DM‑ARCH**: docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-ARCH.yaml  
-- **DM‑ICD**:  docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-ICD.yaml  
-- **DM‑VV**:   docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-VV.yaml  
+- **DM‑ARCH**:
+  docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-ARCH.yaml  
+- **DM‑ICD**:
+  docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-ICD.yaml  
+- **DM‑VV**:
+  docs/S1000D-Q/ATA-56/CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC/DM-VV.yaml  
 
+Supporting models:
+- **Hierarchy**: architecture/hierarchy.yaml  
+- **ICD (machine‑readable)**: architecture/icd.signals.yaml  
+- **RTM**: matrices/rtm.yaml
+<!-- END:S1000D-Q -->
 Supporting models:
 - **Hierarchy**: architecture/hierarchy.yaml  
 - **ICD (machine‑readable)**: architecture/icd.signals.yaml  

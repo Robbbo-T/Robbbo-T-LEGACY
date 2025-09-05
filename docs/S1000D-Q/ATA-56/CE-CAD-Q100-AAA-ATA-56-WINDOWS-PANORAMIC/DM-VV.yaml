@@ -9,6 +9,7 @@ dm:
   title: "Panoramic Windows — V&V Plan (HIL CryoBench)"
   issue: {number: "001", in_work: "00"}
   language: "en"
+  security: "unclassified"
   status: "baselined"
   links:
     ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"

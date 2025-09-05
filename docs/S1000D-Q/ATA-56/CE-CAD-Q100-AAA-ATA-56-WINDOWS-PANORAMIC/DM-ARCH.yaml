@@ -8,7 +8,16 @@ dm:
     info_code: "018"
     info_code_variant: "A"
     item_location_code: "Q"
-  title: "Panoramic Windows System — System Architecture and Requirements (QCO‑integrated)"
+  title: >-
+    Panoramic Windows System — System Architecture and Requirements
+    (QCO‑integrated)
+  issue:
+    number: "001"
+    in_work: "00"
+  language: "en"
+  security: "unclassified"
+  status: "baselined"
+  # ... rest of file continues
   issue:
     number: "001"
     in_work: "00"
