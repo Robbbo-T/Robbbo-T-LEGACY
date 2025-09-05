@@ -1,0 +1,27 @@
+---
+# BRK-DS Aircrew & Medical (FCL/MED) – minimal pack for ops exposure
+requirements:
+  - id: BRK-FCL-001
+    text: >-
+      For any passenger-facing system influencing workload or crew attention,
+      define crew procedures and training; reflect in OM-A/B and recurrent
+      training curriculum where applicable.
+    source: "Reg. (EU) 1178/2011 Part-FCL; Operator's manuals"
+    driver: "safety"
+    acceptance: >-
+      Procedures and training items listed in OM-A/B; training records show
+      inclusion; hazard analysis shows residual risk acceptable.
+    verification: "Process"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+    status: "baselined"
+    owner: "flight-ops-training@aqua-os"
+    last_updated: "2025-01-15T16:10:00Z"
+
+meta:
+  owner: "regulatory-affairs@aqua-os"
+  reviewer: "compliance-lead@aqua-os"
+  last_updated: "2025-01-15T16:10:00Z"
+  change_ref: "BRK-DS-R1"

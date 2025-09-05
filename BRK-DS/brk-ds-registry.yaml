@@ -13,7 +13,7 @@ description: >-
 
 registry:
   total_domains: 39
-  implemented_domains: 6
+  implemented_domains: 8
   status: "initial_implementation"
 
 domains:
@@ -96,7 +96,7 @@ domains:
     description: "Aircrew licensing and medical requirements"
     requirements_count: 1
     file: "FCL/requirements.yaml"
-    status: "planned"
+    status: "implemented"
     source: "Commission Regulation (EU) No 1178/2011 & Part-MED"
 
   FSTD:
@@ -104,7 +104,7 @@ domains:
     description: "FSTD qualification requirements"
     requirements_count: 1
     file: "FSTD/requirements.yaml"
-    status: "planned"
+    status: "implemented"
     source: "CS‑FSTD(A)/(H)"
 
 # Integration patterns with C-AMEDEO framework
