@@ -38,8 +38,52 @@ requirements:
     owner: "config-mgmt@aqua-os"
     last_updated: "2025-01-14T10:00:00Z"
 
+  # BRK-DS Regulatory Requirements Integration
+  - id: BRK-IA-001
+    text: >-
+      Establish and maintain a certification programme covering certification
+      basis selection (CS/Amendment), means of compliance, and verification
+      plan; show EASA/NAA agreement.
+    source: "Part 21 Commission Regulation (EU) No 748/2012"
+    driver: "safety"
+    acceptance: >-
+      Certification programme documented with CS/Amendment basis selection,
+      means of compliance defined, verification plan established,
+      and EASA/NAA agreement obtained and maintained.
+    verification: "Process"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-02-10-MASS-PROPERTIES"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-02-10-01-MASS-PROPS-MASTER"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+    brk_source: "BRK-DS/IA/requirements.yaml"
+
+  - id: BRK-CS-001
+    text: >-
+      For the applicable category (e.g., CS‑25 large aeroplanes), maintain
+      a CS compliance map with paragraph‑level MoC and evidence linkage.
+    source: "EASA Certification Specifications CS-25"
+    driver: "safety"
+    acceptance: >-
+      CS-25 compliance map maintained for large aeroplanes with
+      paragraph-level means of compliance documented and evidence linkage
+      established for mass properties requirements.
+    verification: "Process"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-02-WEIGHT-BALANCE"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-02-10-MASS-PROPERTIES"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-02-10-01-MASS-PROPS-MASTER"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+    brk_source: "BRK-DS/CS/requirements.yaml"
+
 meta:
   owner: "wb-lead@aqua-os"
   reviewer: "systems-lead@aqua-os"
-  last_updated: "2025-01-14T10:00:00Z"
-  change_ref: "TBD-001-RESOLUTION"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-INTEGRATION-DEMO"
+  brk_integration: true
+  regulatory_compliance: ["EASA Part 21", "CS-25"]
