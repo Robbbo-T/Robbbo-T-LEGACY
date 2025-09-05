@@ -17,7 +17,8 @@ requirements:
       and mitigation processes for information security risks affecting
       aviation safety. Integration with safety occurrence reporting and
       emergency response procedures established. Compliance achieved by
-      Feb 22, 2026 applicability date.
+      Feb 22, 2026 applicability date. Edge-only processing for personalization
+      implemented with no PII exfiltration.
     verification: "Process"
     links:
       ce: "TBD-ISMS-DETAIL-CE"

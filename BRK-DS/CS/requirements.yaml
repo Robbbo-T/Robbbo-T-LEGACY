@@ -14,7 +14,8 @@ requirements:
     acceptance: >-
       CS compliance map maintained for applicable aircraft category with
       paragraph-level means of compliance documented and evidence linkage
-      established for each applicable CS requirement.
+      established for each applicable CS requirement. CS-25.775/773
+      paragraph-level MoC maintained for ATA-56 windows.
     verification: "Process"
     links:
       ce: "TBD-CS-COMPLIANCE-CE"
