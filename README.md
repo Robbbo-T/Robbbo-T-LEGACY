@@ -271,7 +271,6 @@ End-of-life plan, including material recovery and recycling processes.
 ```
 
 > **Nota:** El evento debe validarse con `schemas/qal_bus.schema.json` y el ID UTCS con `UTCS-BLOCKCHAIN/validate_utcs_mi.py`.
-> Blended Wing Body (BWB) hydrogen-powered passenger aircraft — AMPEL360 BwbQ100. Generate a pure wireframe / blueprint-style model of the external geometry only. Show continuous wing–body integration; wingspan ~52 m; length ~40 m; slight outer-wing anhedral; elevons along trailing edge. Six BLI ducted fans (Ø 3 m) at rear upper body (3+3) with blended intakes, drawn as clean cylindrical/torus ducts. No shading, no textures: single-color linework; uniform line thickness; orthographic-friendly geometry; emphasize topology and edge flow. Model must remain manifold and closed (suitable for downstream CAD), but visualize in wireframe/blueprint style. Negative: "no interior, no textures, no photoreal shading, no decals, no annotations or dimensions rendered onto the mesh"
 
 ---
 
