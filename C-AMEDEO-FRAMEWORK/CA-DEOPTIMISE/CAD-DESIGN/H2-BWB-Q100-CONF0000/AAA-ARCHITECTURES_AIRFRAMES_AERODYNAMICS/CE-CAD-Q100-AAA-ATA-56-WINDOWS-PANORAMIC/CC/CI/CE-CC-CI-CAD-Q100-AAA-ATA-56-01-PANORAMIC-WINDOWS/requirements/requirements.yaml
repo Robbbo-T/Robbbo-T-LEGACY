@@ -11,7 +11,7 @@ requirements:
     verification: "Component EMI test per DO-160 Section 20"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-PANORAMIC-CONTROL"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-01"
     status: "baselined"
@@ -26,7 +26,7 @@ requirements:
     verification: "Filter characterization test + system EMI measurement"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-PANORAMIC-CONTROL"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-01"
     status: "baselined"
@@ -41,7 +41,7 @@ requirements:
     verification: "Calorimetry test with thermal modeling correlation"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-THERMAL-MGMT"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-02"
     status: "baselined"
@@ -56,7 +56,7 @@ requirements:
     verification: "Vacuum chamber thermal conductance measurement"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-THERMAL-STACK"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-04"
     status: "baselined"
@@ -71,7 +71,7 @@ requirements:
     verification: "Hardware-in-loop safety response test"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-SAFETY-CTRL"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-03"
     status: "baselined"
@@ -86,7 +86,7 @@ requirements:
     verification: "Security architecture review + penetration test"
     links:
       ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
-      cc: "CE-CC-CAD-Q100-AAA-ATA-56-EDGE-PROC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
       ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
       up: "REQ-WIN-05"
     status: "baselined"
