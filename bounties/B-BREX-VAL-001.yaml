@@ -1,0 +1,23 @@
+---
+bounty:
+  id: "B-BREX-VAL-001"
+  title: "BREX validator hardening + rule coverage"
+  focus: "brx-100..420 coverage; false positive reduction"
+  scope:
+    - "Extend scripts/s1000d_brex_validate.mjs with extra checks"
+    - "Add tests + fixtures for PASS/FAIL"
+  deliverables:
+    - "Validator diff + tests + CI green"
+  acceptance:
+    - "yamllint -s PASS"
+    - "Node tests PASS"
+  remuneration:
+    stablecoin_amount: "1500_EUR_equivalent"
+    royalty_share_percent: 0.03
+    royalty_ref: "OEGI-AG-TBD"
+  timeline:
+    start: "T0"
+    deadline_days: 10
+  contacts:
+    owner: "docs-governance@aqua-os"
+  notes: "No external deps beyond Node stdlib."

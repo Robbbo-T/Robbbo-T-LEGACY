@@ -440,6 +440,14 @@ DET:
 * **Charlas/Advisory:** LinkedIn.
 * **Licencias:** Código MIT; documentación CC BY‑SA 4.0 salvo indicación.
 
+<!-- BEGIN:OPEN-CALL -->
+### Open Call · Genesis Bounties (R1)
+- Announcement: `docs/OPEN-CALL/OPEN-CALL.md`  
+- Bounties: `bounties/*.yaml`  
+- Royalties: `payments/royalty.registry.yaml`  
+- Payout policy: `payments/policy.md`
+<!-- END:OPEN-CALL -->
+
 ---
 
 ## Acrónimos (curado para UTCS‑MI)

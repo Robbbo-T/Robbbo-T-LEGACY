@@ -1,0 +1,28 @@
+---
+royalties:
+  version: "2025-01"
+  treasury:
+    network: "TBD"
+    multisig_address: "0xTBD_SAFE_MULTISIG"
+  artifacts:
+    - oegi_id: "OEGI-AG-TBD"
+      title: "Genesis Artifact: ATA-56 QCO windows framework"
+      splits:
+        - {share: 0.90, to: "0xTBD_FOUNDATION"}   # foundation/project ops
+        - {share: 0.10, to: "POOL:Bounties"}      # shared pool
+  bounties:
+    - bounty_id: "B-ATA56-S1000DQ-001"
+      stablecoin: "EURC_or_USDC"
+      escrow: "0xTBD_SAFE_MULTISIG"
+      royalty_share_percent: 0.05
+    - bounty_id: "B-GENESISMAP-INGEST-001"
+      stablecoin: "EURC_or_USDC"
+      escrow: "0xTBD_SAFE_MULTISIG"
+      royalty_share_percent: 0.05
+    - bounty_id: "B-BREX-VAL-001"
+      stablecoin: "EURC_or_USDC"
+      escrow: "0xTBD_SAFE_MULTISIG"
+      royalty_share_percent: 0.03
+  notes: >
+    Splits are FRAND-like; payouts are non-custodial stablecoin transfers.
+    Replace TBD addresses before publication.

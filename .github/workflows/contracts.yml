@@ -1,0 +1,29 @@
+---
+name: Contracts — Build & Test
+
+on:
+  pull_request:
+    paths:
+      - "contracts/**"
+      - "tokens/**.yaml"
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install deps
+        run: |
+          cd contracts/hardhat
+          npm ci
+      - name: Compile
+        run: |
+          cd contracts/hardhat
+          npm run build
+      - name: Test
+        run: |
+          cd contracts/hardhat
+          npm test --silent

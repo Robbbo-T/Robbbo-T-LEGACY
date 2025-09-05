@@ -1,0 +1,24 @@
+---
+bounty:
+  id: "B-GENESISMAP-INGEST-001"
+  title: "GenesisMap: arXiv/Crossref/Git ingestion pipeline (MVP)"
+  focus: "Provenance graph (W3C PROV), GI² scoring hooks"
+  scope:
+    - "Implement `src/ingestion/*` stubs with allow-list & robots compliance"
+    - "Export PROV-JSON + hash notarization"
+  deliverables:
+    - "CLI: gm_ingest / gm_rank / gm_export minimally functional"
+    - "schemas filled + sample exports under exports/"
+  acceptance:
+    - "Unit tests for fingerprints (sha256/simhash) PASS"
+    - "yamllint -s PASS on configs and policies"
+  remuneration:
+    stablecoin_amount: "3000_EUR_equivalent"
+    royalty_share_percent: 0.05
+    royalty_ref: "OEGI-AG-TBD"
+  timeline:
+    start: "T0"
+    deadline_days: 21
+  contacts:
+    owner: "oegi-mvp@aqua-os"
+  notes: "No scraping of disallowed sources; log opt-outs."

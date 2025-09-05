@@ -14,7 +14,7 @@ proof_of_innovation:
     co2_saved_kg: {weight: 0.02, normalize: "per_10k_kg"}
     life_ext_months: {weight: 0.50, normalize: "per_12m"}
     risk_reduction: {weight: 0.80, normalize: "delta_cvar"}
-    recouped_funds_usd: {weight: 0.90, normalize: "per_1M_usd"} # anti-corruption recoveries
+    recouped_funds_usd: {weight: 0.90, normalize: "per_1M_usd"}  # anti-corruption recoveries
   guards:
     min_signers: 3
     min_sources: 2
@@ -32,8 +32,17 @@ revenue_sources:
       - sanctions_check: true
     netting: {max_legal_costs_pct: 20%}
 allocations:
-  innovation_weekly: {innovators_rewards: 55%, ecosystem_treasury: 25%, sustainability_fund: 10%, long_term_vesting: 10%}
-  recoveries: {whistleblowers_and_investigators: 25%, adopting_organization: 30%, ecosystem_treasury: 20%, sustainability_fund: 15%, antifraud_r_and_d: 10%}
+  innovation_weekly:
+    innovators_rewards: 55%
+    ecosystem_treasury: 25%
+    sustainability_fund: 10%
+    long_term_vesting: 10%
+  recoveries:
+    whistleblowers_and_investigators: 25%
+    adopting_organization: 30%
+    ecosystem_treasury: 20%
+    sustainability_fund: 15%
+    antifraud_r_and_d: 10%
 governance:
   dao: TekDAO
   voting: {model: "token + reputation", quorum: 8%, timelock_days: 3, emergency_veto: true}
