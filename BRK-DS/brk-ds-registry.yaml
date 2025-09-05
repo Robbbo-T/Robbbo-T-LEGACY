@@ -47,11 +47,12 @@ domains:
   # Additional Airworthiness Specifications (CS‑XX)
   CS:
     name: "Additional Airworthiness Specifications"
-    description: "CS-XX airworthiness specifications requirements"
+    description: "CS-XX airworthiness specifications including ATA-56 windows requirements"
     requirements_count: 1
     file: "CS/requirements.yaml"
     status: "implemented"
     source: "EASA Certification Specifications"
+    ata_coverage: ["ATA-56"]
 
   # Continuing Airworthiness (Reg. 1321/2014)
   CAW:
@@ -65,11 +66,12 @@ domains:
   # Information Security (Part‑IS)
   IS:
     name: "Information Security"
-    description: "Part-IS information security requirements"
+    description: "Part-IS information security including edge-only processing for personalization"
     requirements_count: 1
     file: "IS/requirements.yaml"
     status: "implemented"
     source: "EASA Part-IS Commission Implementing Regulation (EU) 2023/203"
+    do326a_compliance: true
 
   # Drones (UAS)
   UAS:
