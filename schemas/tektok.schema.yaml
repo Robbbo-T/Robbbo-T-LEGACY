@@ -65,5 +65,5 @@ properties:
           greenscore: { type: number, minimum: 0, maximum: 1 }
     rights: { type: object, properties: { license: { type: string }, usage: { type: string } } }
     rie: { type: object, properties: { events: { type: array, items: { type: string } } } }
-    date_issued: { type: string, format: date-time }
+    date_issued: { type: string, format: 'date-time' }
     signature: { type: string }
