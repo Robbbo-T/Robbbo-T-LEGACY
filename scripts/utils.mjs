@@ -21,7 +21,7 @@ export function expandInputs(args, defaults = []) {
         const full = path.join(dir, f);
         if (fs.statSync(full).isFile() &&
             (f.toLowerCase().endsWith(".yaml") || f.toLowerCase().endsWith(".yml")) &&
-            (ext === "yaml" || ext === "yml" || true)) {
+            (ext === "yaml" || ext === "yml")) {
           files.push(full);
         }
       }
