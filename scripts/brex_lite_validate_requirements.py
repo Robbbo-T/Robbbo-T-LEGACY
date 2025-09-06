@@ -15,7 +15,11 @@ Usage:
 Exit codes:
   0 on success; 1 on validation error.
 """
-import sys, re, json, subprocess, pathlib
+import sys
+import re
+import json
+import subprocess
+import pathlib
 from typing import List, Dict, Any
 try:
     import yaml
