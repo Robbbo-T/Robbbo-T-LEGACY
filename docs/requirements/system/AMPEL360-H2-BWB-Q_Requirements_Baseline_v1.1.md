@@ -120,7 +120,7 @@ requirements:
     priority: "high"
     rationale: "Cryogenic hydrogen containment is critical for aircraft safety"
     assumptions: "Materials and joints rated for LH2; vacuum‑jacketed design"
-    constraints: "Operating temperature approx. −253 °C; verified vent routing and inerting"
+    constraints: "Operating temperature approx. -253 °C; verified vent routing and inerting"
     verification_methods:
       - method: "Test"
         description: "Pressure test with fault injection; verify interlock actuation time"
