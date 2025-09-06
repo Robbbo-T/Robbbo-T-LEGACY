@@ -88,7 +88,7 @@ requirements:
     priority: "high"
     rationale: "Flight‑critical systems require deterministic timing and partitioning"
     assumptions: "Hardware provides timing guarantees and partitioning support"
-    constraints: "Maximum scheduling latency 50 µs"
+    constraints: "Maximum scheduling latency 50 μs"
     verification_methods:
       - method: "Analysis"
         description: "Static timing analysis, WCET, and multicore interference assessment (CAST‑32A)"
