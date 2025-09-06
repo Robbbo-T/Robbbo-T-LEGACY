@@ -14,8 +14,6 @@ dm:
   links:
     ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
   content:
-    # ... rest of content continues
-  content:
     interfaces:
       - name: "QCO_Bridge"
         type: "quantum-classical"
