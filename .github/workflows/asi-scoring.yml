@@ -42,51 +42,45 @@ jobs:
           ls -la UTCS-BLOCKCHAIN/ASI/leaderboards/
 
           # Validate JSON structure
-          python -c "
-import json
-with open('UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json') as f:
-  data = json.load(f)
-  print(f'Generated {len(data)} ASI scores')
-"
+          leaderboard_file="UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json"
+          python3 -c "import json; data=json.load(open('$leaderboard_file')); print(f'Generated {len(data)} scores')"
 
       - name: Generate DET events
         run: |
           # Create DET event for ASI scoring run
           mkdir -p UTCS-BLOCKCHAIN/DET/ASI/$(date +%Y)/$(date +%m)
-
-          cat > UTCS-BLOCKCHAIN/DET/ASI/$(date +%Y)/$(date +%m)/det_packet.json << EOF
-{
-  "det_id": "DET:ASI:SCORE:$(date +%Y%m%d):score_publish:V1",
-  "ts": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-  "activity": "score_publish",
-  "inputs": {
-    "provenance": {
-      "git_url": "https://github.com/Robbbo-t/Robbbo-t",
-      "workflow": "asi-scoring"
-    }
-  },
-  "outputs": {
-    "metrics": {
-      "artifacts_scored": $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | jq length),
-      "computation_duration_sec": 0
-    },
-    "units": {
-      "artifacts_scored": "count",
-      "computation_duration_sec": "seconds"
-    }
-  },
-  "refs": {
-    "ce": "CE-ASI-ORACLE-001",
-    "ci": "CI-ASI-SCORING-001"
-  },
-  "hash": "$(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | sha256sum | cut -d' ' -f1)",
-  "sig": {
-    "alg": "Ed25519",
-    "by": "asi-oracle@github-actions",
-    "sig_b64": "placeholder-signature-for-demonstration"
-  }
-}
-EOF
+          # Create DET packet JSON file
+          echo '{
+            "det_id": "DET:ASI:SCORE:'$(date +%Y%m%d)':score_publish:V1",
+            "ts": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'",
+            "activity": "score_publish",
+            "inputs": {
+              "provenance": {
+                "git_url": "https://github.com/Robbbo-t/Robbbo-t",
+                "workflow": "asi-scoring"
+              }
+            },
+            "outputs": {
+              "metrics": {
+                "artifacts_scored": '$(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | jq length)',
+                "computation_duration_sec": 0
+              },
+              "units": {
+                "artifacts_scored": "count",
+                "computation_duration_sec": "seconds"
+              }
+            },
+            "refs": {
+              "ce": "CE-ASI-ORACLE-001",
+              "ci": "CI-ASI-SCORING-001"
+            },
+            "hash": "'$(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | sha256sum | cut -d' ' -f1)'",
+            "sig": {
+              "alg": "Ed25519",
+              "by": "asi-oracle@github-actions",
+              "sig_b64": "placeholder-signature-for-demonstration"
+            }
+          }' > UTCS-BLOCKCHAIN/DET/ASI/$(date +%Y)/$(date +%m)/det_packet.json
 
       - name: Commit and push results
         run: |
@@ -110,8 +104,10 @@ EOF
           echo "## ASI Scoring Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Execution Date**: $(date -u +%Y-%m-%d\ %H:%M:%S\ UTC)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Artifacts Scored**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | jq length)" >> $GITHUB_STEP_SUMMARY
-          echo "- **Top Performer**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | jq -r '.[0].anchor // "None"')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Artifacts Scored**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | \
+            jq length)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Top Performer**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | \
+            jq -r '.[0].anchor // "None"')" >> $GITHUB_STEP_SUMMARY
           echo "- **Leaderboards**: Updated in \`UTCS-BLOCKCHAIN/ASI/leaderboards/\`" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Recent Changes" >> $GITHUB_STEP_SUMMARY
