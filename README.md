@@ -31,33 +31,46 @@ Master's Candidate — Project Management (EAE Business School, 2025–2028)
 flowchart LR
 
 subgraph STRATEGY["QAL Strategy & Ideation"]
-  CAO(["CAO (Org/Gov)\n🏛️ Strategy, Req. & Budget"])
-  CAB(["CAB (Ideation)\n💡 Brainstorm, Concepts"])
+  CAO["`CAO (Org/Gov)
+🏛️ Strategy, Requirements & Budget`"]
+  CAB["`CAB (Ideation)
+💡 Brainstorm, Concepts`"]
 end
 
 subgraph UTCS_BLOCKCHAIN["UTCS_BLOCKCHAIN"]
-  CADET(["CADET (KPI Ledger)\nQC:0.79 | Risk:0.10"])
-  DET["DET (Evidence Pkg)"]
-  TRACES{{"TRACES (Req. linking)\nCobertura 94%"}}
-  QAUDIT(("QAUDIT\nPQC-Dilithium3\nsha3-256"))
+  CADET["`CADET (KPI Ledger)
+QC: 0.79 | Risk: 0.10`"]
+  DET["DET (Evidence Package)"]
+  TRACES{"`TRACES (Requirement Linking)
+Cobertura 94%`"}
+  QAUDIT["`QAUDIT
+PQC-Dilithium3
+sha3-256`"]
 end
 
-TEKTOK(["🪙 TekTok Tokenization\nMilestone DAO Rewards"])
+TEKTOK["`🪙 TekTok Tokenization
+Milestone DAO Rewards`"]
 
 subgraph BWB_Q100["BWB_Q100"]
-  GAMMA["⚙️ Gamma Conf. (QC 0.79)\nICDs, CVaR, DETs"]
-  CAT{{"CAT (Test/Sensors)\n🧪 QAOA DoE Sensors"}}
-  CAV(("📑 CAV (Cert Dossier)\n• CAE Results\n• Test DET\n• QAUDIT Sign"))
+  GAMMA["`⚙️ Gamma Config (QC 0.79)
+ICDs, CVaR, DETs`"]
+  CAT{"`CAT (Test/Sensors)
+🧪 QAOA DoE Sensors`"}
+  CAV["`📑 CAV (Cert Dossier)
+• CAE Results
+• Test DET
+• QAUDIT Signature`"]
 end
 
-AMPEL360["AMPEL360 CAE Pipeline:\nCVaR opt. & Gamma Sim"]
+AMPEL360["`AMPEL360 CAE Pipeline:
+CVaR Optimization & Gamma Simulation`"]
 
 %% Relations
 CAO -- "Governance, Budget" --> TRACES
 CAB -- "Concepts, Risk Vector" --> TRACES
-CAO -.->|Inputs, KPI Strat.| CADET
+CAO -.->|Inputs, KPI Strategy| CADET
 CAB -.->|Portfolio, Risk| CADET
-CAO -.->|Audit Pol.| QAUDIT
+CAO -.->|Audit Policies| QAUDIT
 
 CAV -- "Findings/Policy" --> CAO
 CADET -- "KPI Insights" --> CAO
@@ -65,28 +78,28 @@ CADET -- "KPI Signals" --> CAB
 
 CADET -- KPIs --> GAMMA
 DET -- "Anchors Evidence" --> GAMMA
-TRACES -- "Links Req." --> GAMMA
+TRACES -- "Links Requirements" --> GAMMA
 
 GAMMA -- "Simulation" --> AMPEL360
 AMPEL360 -- "CAE Results" --> DET
-DET -- "Pkg CAE/ICD/Test" --> CAV
+DET -- "Package CAE/ICD/Test" --> CAV
 CAT -- "Test Result DET" --> CAV
 
 GAMMA -- "Test Plan & Sensors" --> CAT
-AMPEL360 -- "Loads & Env." --> CAT
-TRACES -- "Req→Test Map" --> CAT
-QAUDIT -.->|Fixture Sign| CAT
+AMPEL360 -- "Loads & Environment" --> CAT
+TRACES -- "Requirement → Test Map" --> CAT
+QAUDIT -.->|Fixture Signature| CAT
 
 DET -->|"Submit for Signing"| QAUDIT
-QAUDIT -. "Signature+Hash, Auditable" .-> DET
+QAUDIT -. "Signature + Hash, Auditable" .-> DET
 QAUDIT -. "Non-repudiation" .-> CAV
 CAV -. "Sealing" .-> QAUDIT
 
-TEKTOK -- "Tokens for events" --> GAMMA
-CAV -- "Milestone Cert." --> TEKTOK
+TEKTOK -- "Tokens for Events" --> GAMMA
+CAV -- "Milestone Certification" --> TEKTOK
 
-%% UNIVERSAL HIGH CONTRAST & LARGE FONT
-classDef default fill:#fff,stroke:#222,stroke-width:3px,color:#1a237e,font-size:22px,font-weight:bold;
+%% Universal high contrast & large font for compatible renderers
+classDef default fill:#fff,stroke:#222,stroke-width:3px,color:#1a237e;
 ```
 
 ---
