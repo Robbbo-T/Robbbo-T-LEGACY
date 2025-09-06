@@ -33,7 +33,18 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 REQ_SCHEMA_PATH = ROOT / "schemas" / "requirements.item.schema.json"
 UTCS_VALIDATOR = ROOT / "UTCS-BLOCKCHAIN" / "validate_utcs_mi.py"
 
-ID_RE = re.compile(r"^REQ-[A-Z0-9]{2,}-[0-9]{2}-[0-9]{2}-[0-9]{3}$|^REQ-[A-Z0-9-]{6,}$")
+# ID format 1: Structured, e.g. REQ-XX-12-34-567
+ID_RE_FORMAT1 = re.compile(r"^REQ-[A-Z0-9]{2,}-[0-9]{2}-[0-9]{2}-[0-9]{3}$")
+# ID format 2: Looser, e.g. REQ-XXXXXX or longer, allows hyphens
+ID_RE_FORMAT2 = re.compile(r"^REQ-[A-Z0-9-]{6,}$")
+
+def is_valid_id(id_str: str) -> bool:
+    """
+    Returns True if id_str matches either allowed ID format.
+    Format 1: REQ-[A-Z0-9]{2,}-[0-9]{2}-[0-9]{2}-[0-9]{3}
+    Format 2: REQ-[A-Z0-9-]{6,}
+    """
+    return bool(ID_RE_FORMAT1.match(id_str) or ID_RE_FORMAT2.match(id_str))
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 LINK_RE = re.compile(r"^CE-[A-Z]{2,3}[A-Z]-Q100-[A-Z0-9]{3}-\d{2}-\d{2}-[A-Z0-9-]+$")
 DAL_SET = {"DAL-A","DAL-B","DAL-C","DAL-D","DAL-E"}
