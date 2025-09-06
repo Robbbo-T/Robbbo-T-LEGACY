@@ -1,0 +1,814 @@
+---
+# Digital Data Organization Rules for CA Pillars and Aerospace Domains
+# UTCS-MI v5.0 Identifier:
+# EstándarUniversal:Especificacion-Definicion-DO178C+ARP4754A+ISO9001+IEEE12207-00.00-DigitalDataOrganizationRules-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-f3a1b2c3-RestoDeVidaUtil
+
+requirements:
+  # Global directory taxonomy (CA pillars × Aerospace domains)
+  - id: "REQ-DATA-00-00-00-001"
+    text: >-
+      All digital data (documentation and code) SHALL be organized by CA pillar
+      (CAO…CAEpost) and Aerospace Domain (AAA…PPP) using the canonical paths:
+      docs/<pillar>/<domain>/ for documentation and qal/<domain>/<level>/
+      and src/<dal-level>/<domain>/ for code.
+    source: "IEEE 12207:2017; QAL Framework; AGENTS.md"
+    driver: "regulatory"
+    acceptance: >-
+      Repository contains pillar and domain-aligned directories with no orphan
+      artifacts outside these roots
+    verification: "Inspection"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-REPO-TAXONOMY"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-PILLAR-DOMAIN"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-PATHS"
+    status: "baselined"
+    owner: "configuration-manager"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "high"
+    rationale: "Enables automated tooling, traceability, and scalable reviews"
+    assumptions: "15-domain taxonomy and 11-level ladder are stable"
+    constraints: "Must align with DI→CE→CC→CI→CP level hierarchy"
+    verification_methods:
+      - method: "Inspection"
+        description: "Review tree structure and ensure all artifacts reside under declared roots"
+        success_criteria: "100% artifacts mapped to pillar and domain paths"
+    traces:
+      upstream:
+        - "QAL Framework Architecture"
+        - "AGENTS.md"
+      downstream:
+        - "REQ-DATA-00-00-00-010"
+    compliance:
+      standards: "IEEE 12207, ISO 9001"
+      regulations: "DO-178C Section 11"
+
+  # UTCS-MI identifier embedding
+  - id: "REQ-DATA-00-00-00-002"
+    text: >-
+      Every artifact (Markdown, YAML, JSON, source files with header comments)
+      SHALL embed a UTCS-MI v5.0 identifier with 13 fields; Markdown uses
+      a visible header, code/artifacts use a header comment or YAML frontmatter.
+    source: "UTCS-MI v5.0 Specification"
+    driver: "regulatory"
+    acceptance: "All files pass UTCS-BLOCKCHAIN/validate_utcs_mi.py"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-UTCS-ID"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-FRONTMATTER"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-HEADERS"
+    status: "baselined"
+    owner: "quality-assurance"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Provides immutable traceability and configuration control"
+    assumptions: "UTCS validator available in CI"
+    constraints: "Program/Category fields in CamelCase without acronyms"
+    verification_methods:
+      - method: "Test"
+        description: "Run UTCS-BLOCKCHAIN/validate_utcs_mi.py on repository"
+        success_criteria: "0 validation errors"
+    traces:
+      upstream:
+        - "UTCS-MI v5.0"
+      downstream:
+        - "REQ-DATA-00-00-00-012"
+    compliance:
+      standards: "UTCS-MI v5.0"
+      regulations: "Internal QAL"
+
+  # Domain×Level mapping for product data
+  - id: "REQ-DATA-00-00-00-003"
+    text: >-
+      Product data SHALL follow DI→CE→CC→CI→CP level decomposition with ATA iSpec 2200
+      (SNS) classification in names and paths (e.g., qal/aaa/ce/53-10/...).
+    source: "ATA iSpec 2200; AGENTS.md"
+    driver: "regulatory"
+    acceptance: >-
+      All component directories include ATA SNS and level anchors;
+      no unclassified components
+    verification: "Inspection"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-DI-CE-CC-CI-CP"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-ATA-SNS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-PBS"
+    status: "baselined"
+    owner: "plm-architect"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "high"
+    rationale: "Ensures compatibility with certification and logistics documentation"
+    assumptions: "SNS codes are available for all items"
+    constraints: "Use hyphenated SNS (CC-SS-SS) consistently"
+    verification_methods:
+      - method: "Inspection"
+        description: "Sample check of 20 items for SNS presence and level alignment"
+        success_criteria: "≥ 95% compliance; plan remediation for remainder"
+    traces:
+      upstream:
+        - "ATA iSpec 2200"
+      downstream:
+        - "REQ-DATA-00-00-00-018"
+    compliance:
+      standards: "ATA iSpec 2200, S1000D"
+      regulations: "Part 21 Subpart H"
+
+  # DAL partitioning for code
+  - id: "REQ-DATA-00-00-00-004"
+    text: >-
+      Source code SHALL be physically partitioned by DAL criticality under
+      src/dal-a, src/dal-b, src/dal-c and SHALL not allow cross-imports from
+      higher to lower DAL without defined interfaces.
+    source: "DO-178C Section 5.1.1"
+    driver: "safety"
+    acceptance: >-
+      No direct dependencies from higher DAL code into lower DAL partitions;
+      build rules enforce boundaries
+    verification: "Analysis"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-DAL-PARTITION"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-BUILD-GUARDS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-INTERFACES"
+    status: "baselined"
+    owner: "software-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-A"
+    priority: "high"
+    rationale: "Prevents contamination of safety-critical software"
+    assumptions: "Build system supports dependency rules"
+    constraints: "Shared APIs must be defined in IDLs with versioning"
+    verification_methods:
+      - method: "Analysis"
+        description: "Static dependency graph analysis"
+        success_criteria: "0 violations of DAL boundary rules"
+    traces:
+      upstream:
+        - "DO-178C 5.1.1"
+      downstream:
+        - "REQ-DATA-00-00-00-015"
+    compliance:
+      standards: "DO-178C"
+      regulations: "CS-25.1309"
+
+  # Documentation standards and frontmatter
+  - id: "REQ-DATA-00-00-00-005"
+    text: >-
+      All documentation SHALL be Markdown with YAML frontmatter including
+      UTCS-MI, pillar, domain, level, ATA SNS, owner, DAL, and version.
+    source: "Internal Documentation Standards"
+    driver: "performance"
+    acceptance: "markdownlint and yamllint pass; frontmatter schema validates"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-DOC-FRONTMATTER"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-LINTING"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-SCHEMA"
+    status: "baselined"
+    owner: "documentation-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-D"
+    priority: "medium"
+    rationale: "Enables search, automation, and audits"
+    assumptions: "Schema defined in schemas/doc_frontmatter.schema.json"
+    constraints: "English/Spanish bilingual allowed; UTCS fields in Spanish"
+    verification_methods:
+      - method: "Test"
+        description: "CI validates Markdown and frontmatter schema"
+        success_criteria: "0 linter errors; 0 schema violations"
+    traces:
+      upstream:
+        - "AGENTS.md Style Guide"
+      downstream:
+        - "REQ-DATA-00-00-00-016"
+    compliance:
+      standards: "CommonMark, YAML 1.2"
+      regulations: "N/A"
+
+  # Evidence co-location and signing
+  - id: "REQ-DATA-00-00-00-006"
+    text: >-
+      Each artifact SHALL co-locate its DET evidence and QAL Bus event references
+      in UTCS-BLOCKCHAIN/DET/<pillar>/<domain>/ and events/<pillar>/<domain>/
+      with hash links and QAUDIT signatures (Dilithium3).
+    source: "QAL Framework; UTCS-BLOCKCHAIN"
+    driver: "regulatory"
+    acceptance: >-
+      For any changed artifact, a corresponding DET and event file exists
+      with valid signature
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-DET-COLOCATE"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-QAL-EVENTS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-QAUDIT"
+    status: "baselined"
+    owner: "security-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-A"
+    priority: "high"
+    rationale: "Establishes immutable audit chains"
+    assumptions: "QAUDIT service reachable in CI"
+    constraints: "SHA3-256 hashing; PQC Dilithium3 signing"
+    verification_methods:
+      - method: "Test"
+        description: "Run npm run validate:events and signature verification"
+        success_criteria: "All changed artifacts have valid DET and events"
+    traces:
+      upstream:
+        - "QAL Bus schema"
+      downstream:
+        - "REQ-DATA-00-00-00-017"
+    compliance:
+      standards: "NIST PQC"
+      regulations: "DO-178C 11.3"
+
+  # LFS and large file policy
+  - id: "REQ-DATA-00-00-00-007"
+    text: >-
+      Binary/large files (>10 MB) SHALL be stored via Git LFS with pointer files
+      in repo; raw binaries are prohibited except in LFS-managed paths.
+    source: "Pre-commit policy"
+    driver: "performance"
+    acceptance: "Pre-commit rejects >10 MB non-LFS additions"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-LFS-POLICY"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-PRECOMMIT"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-BINARY-GATE"
+    status: "baselined"
+    owner: "devops-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-D"
+    priority: "medium"
+    rationale: "Keeps repo lean; ensures reproducibility"
+    assumptions: "Git LFS configured in CI and local dev"
+    constraints: "All CAE meshes/results archived outside repo or via LFS"
+    verification_methods:
+      - method: "Test"
+        description: "Attempt to commit >10MB non-LFS test file"
+        success_criteria: "Commit blocked; LFS alternative suggested"
+    traces:
+      upstream:
+        - "Repo governance policy"
+      downstream:
+        - "REQ-DATA-00-00-00-019"
+    compliance:
+      standards: "Git LFS"
+      regulations: "N/A"
+
+  # Secrets and credentials
+  - id: "REQ-DATA-00-00-00-008"
+    text: >-
+      Secrets and credentials SHALL never be committed; use GitHub Actions
+      secrets/HashiCorp Vault and pre-commit secret scanning.
+    source: "NIST SP 800-53; Internal Security Policy"
+    driver: "safety"
+    acceptance: >-
+      0 secrets detected by scanners; all pipelines use secret stores
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-SECRETS"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-SCANNING"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-VARIABLES"
+    status: "baselined"
+    owner: "security-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-A"
+    priority: "high"
+    rationale: "Prevents credential leakage"
+    assumptions: "Secret scanners in CI"
+    constraints: "Use env injection; no plaintext in config"
+    verification_methods:
+      - method: "Test"
+        description: "Run secret scan on full repo"
+        success_criteria: "0 findings; exceptions formally documented"
+    traces:
+      upstream:
+        - "DO-326A/ED-202A"
+      downstream:
+        - "REQ-DATA-00-00-00-020"
+    compliance:
+      standards: "NIST 800-53"
+      regulations: "CS-25.1309 (cybersecurity context)"
+
+  # Config management and schemas
+  - id: "REQ-DATA-00-00-00-009"
+    text: >-
+      All configurations SHALL be YAML with JSON Schema definitions in schemas/;
+      environment overlays in config/environments/<env>.yaml.
+    source: "ISO/IEC 19770-1"
+    driver: "performance"
+    acceptance: "jsonschema validation passes for all YAML files"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-CONFIG"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-SCHEMAS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-ENV"
+    status: "baselined"
+    owner: "devops-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "medium"
+    rationale: "Reduces misconfigurations and drift"
+    assumptions: "Schema linting integrated in CI"
+    constraints: "No secrets in YAML files"
+    verification_methods:
+      - method: "Test"
+        description: "jsonschema -i for each YAML with linked schema"
+        success_criteria: "0 schema errors"
+    traces:
+      upstream:
+        - "Configuration Management Plan"
+      downstream:
+        - "REQ-DATA-00-00-00-021"
+    compliance:
+      standards: "YAML 1.2, JSON Schema"
+      regulations: "N/A"
+
+  # ICD storage and naming
+  - id: "REQ-DATA-00-00-00-010"
+    text: >-
+      Interface Control Documents (ICDs) SHALL reside under docs/<pillar>/icd/<from>-to-<to>/<sns>/ with versioned
+      filenames and UTCS-MI; changes trigger DET and @mentions to owning domains.
+    source: "ARP4754A"
+    driver: "regulatory"
+    acceptance: "ICDs consistently named and traced; notifications recorded in PRs"
+    verification: "Review"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-ICD"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-INTERFACE"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-NOTIFY"
+    status: "baselined"
+    owner: "systems-engineering-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Prevents interface drift across domains"
+    assumptions: "Owning domain mapping defined"
+    constraints: "SNS must match interface chapter/section"
+    verification_methods:
+      - method: "Review"
+        description: "Audit 10 recent ICD changes for DET and notifications"
+        success_criteria: "100% have DET and cross-domain notices"
+    traces:
+      upstream:
+        - "ARP4754A Section 5"
+      downstream:
+        - "REQ-DATA-00-00-00-022"
+    compliance:
+      standards: "ARP4754A"
+      regulations: "CS-25"
+
+  # QAL Bus events and schema
+  - id: "REQ-DATA-00-00-00-011"
+    text: >-
+      QAL Bus events SHALL be emitted to events/<pillar>/<domain>/ and validate against schemas/qal_bus.schema.json;
+      events must include quantum, risk, and provenance blocks.
+    source: "QAL Bus Schema"
+    driver: "regulatory"
+    acceptance: "npm run validate:events passes; random sample includes all blocks"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-QAL-BUS"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-EVENTS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-PROVENANCE"
+    status: "baselined"
+    owner: "evidence-architect"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Supports audit and reproducibility"
+    assumptions: "Schema stored and versioned in repo"
+    constraints: "Include PQC signature (Dilithium3)"
+    verification_methods:
+      - method: "Test"
+        description: "Run event validator on all event files"
+        success_criteria: "0 schema violations"
+    traces:
+      upstream:
+        - "schemas/qal_bus.schema.json"
+      downstream:
+        - "REQ-DATA-00-00-00-023"
+    compliance:
+      standards: "JSON Schema"
+      regulations: "DO-178C 11.3"
+
+  # Naming conventions for files and folders
+  - id: "REQ-DATA-00-00-00-012"
+    text: >-
+      Names SHALL use kebab-case for folders/files, CamelCase for Category fields, include ATA SNS where applicable,
+      and end with semantic versions where versioned (e.g., icd-aaa-cqh-52-53-v1.2.md).
+    source: "Internal Style Guide"
+    driver: "performance"
+    acceptance: "linters validate naming; sample audit passes"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-NAMING"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-CONVENTIONS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-VERSIONING"
+    status: "baselined"
+    owner: "documentation-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-D"
+    priority: "medium"
+    rationale: "Predictable naming simplifies automation"
+    assumptions: "Naming linter available"
+    constraints: "No spaces in file/dir names"
+    verification_methods:
+      - method: "Test"
+        description: "Run naming checker against repo"
+        success_criteria: "≥ 98% compliance"
+    traces:
+      upstream:
+        - "AGENTS.md"
+      downstream:
+        - "REQ-DATA-00-00-00-024"
+    compliance:
+      standards: "Common practice"
+      regulations: "N/A"
+
+  # Commit/branch and PR metadata
+  - id: "REQ-DATA-00-00-00-013"
+    text: >-
+      Commit messages SHALL include UTCS reference; branches follow feat/fix/refactor patterns; PRs SHALL use the
+      standard template with DET updates and certification impact.
+    source: "Repository Governance"
+    driver: "regulatory"
+    acceptance: "Commit/branch naming checks pass; PR template completeness = 100%"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-GIT-CONVENTIONS"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-PR-TEMPLATE"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-COMMIT-HOOKS"
+    status: "baselined"
+    owner: "configuration-manager"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "medium"
+    rationale: "Ensures consistent change control"
+    assumptions: "Hooks and CI checks installed"
+    constraints: "Max diff 300 lines (docs exempt)"
+    verification_methods:
+      - method: "Test"
+        description: "Run governance checks in CI"
+        success_criteria: "0 violations on mainline"
+    traces:
+      upstream:
+        - "AGENTS.md"
+      downstream:
+        - "REQ-DATA-00-00-00-025"
+    compliance:
+      standards: "ISO 9001"
+      regulations: "DO-178C 7.2/7.3"
+
+  # API and interface definitions
+  - id: "REQ-DATA-00-00-00-014"
+    text: >-
+      Public APIs SHALL have OpenAPI 3.0 specs under docs/api/<service>/ with json/yaml; generate client stubs and
+      include in DET.
+    source: "IEEE 1012"
+    driver: "performance"
+    acceptance: "openapi validators pass; stubs generated; DET present"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-OPENAPI"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-API"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-STUBS"
+    status: "baselined"
+    owner: "integration-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "medium"
+    rationale: "Enables safe integration and testing"
+    assumptions: "OpenAPI tooling available"
+    constraints: "Schemas versioned semantically"
+    verification_methods:
+      - method: "Test"
+        description: "swagger-cli validate and stub generation in CI"
+        success_criteria: "0 validation errors; artifacts in DET"
+    traces:
+      upstream:
+        - "API design policy"
+      downstream:
+        - "REQ-DATA-00-00-00-026"
+    compliance:
+      standards: "OpenAPI 3.0"
+      regulations: "N/A"
+
+  # Static analysis, formatting, and coverage
+  - id: "REQ-DATA-00-00-00-015"
+    text: >-
+      Code SHALL pass formatting, linting, security SAST, and achieve coverage thresholds: DAL-A/B ≥ 80%, DAL-C/D ≥
+      70%.
+    source: "DO-178C; Internal Coding Standards"
+    driver: "safety"
+    acceptance: "CI gates enforce thresholds; reports stored in DET"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-QUALITY-GATES"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-COVERAGE"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-SAST"
+    status: "baselined"
+    owner: "software-quality-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Assures code quality and safety"
+    assumptions: "Toolchain licensed and configured"
+    constraints: "Record exact tool versions in provenance"
+    verification_methods:
+      - method: "Test"
+        description: "Run CI pipelines with gates; collect artifacts"
+        success_criteria: "All gates green on mainline"
+    traces:
+      upstream:
+        - "DO-178C Verif. Process"
+      downstream:
+        - "REQ-DATA-00-00-00-027"
+    compliance:
+      standards: "DO-178C"
+      regulations: "CS-25.1309"
+
+  # S1000D publication boundary
+  - id: "REQ-DATA-00-00-00-016"
+    text: >-
+      Only CAS pillar may publish S1000D IETP/IETM; all other pillars must store pointers/DMRL references and SHALL
+      NOT embed S1000D content.
+    source: "Project Publication Policy"
+    driver: "regulatory"
+    acceptance: "Non-CAS dirs contain only pointers; CAS validates schema"
+    verification: "Review"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-S1000D-BOUNDARY"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-DMRL"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-POINTERS"
+    status: "baselined"
+    owner: "documentation-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-D"
+    priority: "medium"
+    rationale: "Avoids duplication and ensures compliance"
+    assumptions: "CAS pipeline operational"
+    constraints: "Pointers include UTCS IDs"
+    verification_methods:
+      - method: "Review"
+        description: "Audit non-CAS directories for S1000D content"
+        success_criteria: "0 violations"
+    traces:
+      upstream:
+        - "S1000D Issue 5.0"
+      downstream:
+        - "REQ-DATA-00-00-00-028"
+    compliance:
+      standards: "S1000D"
+      regulations: "Part 21 H"
+
+  # SBOM, licenses, and pinning
+  - id: "REQ-DATA-00-00-00-017"
+    text: >-
+      All builds SHALL emit SBOM (CycloneDX or SPDX), pin dependencies, and pass license compatibility checks;
+      artifacts archived in UTCS-BLOCKCHAIN/DET.
+    source: "Supply Chain Security Guidelines"
+    driver: "safety"
+    acceptance: "SBOM present per module; license scan = 0 high-risk"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-SBOM"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-LICENSING"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-PINNING"
+    status: "baselined"
+    owner: "supply-chain-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Mitigates supply chain risk"
+    assumptions: "SBOM tooling integrated"
+    constraints: "Include transitive dependencies"
+    verification_methods:
+      - method: "Test"
+        description: "Run SBOM+license scan on CI"
+        success_criteria: "0 critical/high license conflicts"
+    traces:
+      upstream:
+        - "Executive Order 14028 (context)"
+      downstream:
+        - "REQ-DATA-00-00-00-029"
+    compliance:
+      standards: "SLSA, SPDX, CycloneDX"
+      regulations: "DO-178C 12.1"
+
+  # Archival and retention
+  - id: "REQ-DATA-00-00-00-018"
+    text: >-
+      Certification-relevant data SHALL be archived with WORM retention ≥10 years; archives store hashes, signatures,
+      and provenance.
+    source: "ISO 15489; CS-25"
+    driver: "regulatory"
+    acceptance: "Random retrieval proves integrity and availability"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-ARCHIVE"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-RETENTION"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-PROVENANCE"
+    status: "baselined"
+    owner: "records-manager"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Meets regulatory retention obligations"
+    assumptions: "WORM storage available"
+    constraints: "Periodic fixity checks"
+    verification_methods:
+      - method: "Test"
+        description: "Quarterly integrity and retrieval test"
+        success_criteria: "100% successful retrieval; 0 hash mismatches"
+    traces:
+      upstream:
+        - "CS-25; ISO 15489"
+      downstream:
+        - "REQ-DATA-00-00-00-030"
+    compliance:
+      standards: "ISO 15489"
+      regulations: "CS-25, Part 21"
+
+  # Quantum reproducibility metadata
+  - id: "REQ-DATA-00-00-00-019"
+    text: >-
+      Any artifact influenced by quantum computation SHALL record quantum.seed, algo parameters, backend, and
+      classical fallback result delta.
+    source: "QAL Reproducibility"
+    driver: "regulatory"
+    acceptance: "Events and DET include complete quantum blocks"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-QUANTUM-META"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-REPRODUCIBILITY"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-FALLBACK"
+    status: "baselined"
+    owner: "quantum-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "medium"
+    rationale: "Supports determinism for certification"
+    assumptions: "Quantum workflows integrated"
+    constraints: "Deterministic seeds required for simulators"
+    verification_methods:
+      - method: "Test"
+        description: "Check quantum blocks across events"
+        success_criteria: "0 missing fields"
+    traces:
+      upstream:
+        - "QAL Framework"
+      downstream:
+        - "REQ-DATA-00-00-00-031"
+    compliance:
+      standards: "Internal QAL"
+      regulations: "N/A"
+
+  # Access control and CODEOWNERS
+  - id: "REQ-DATA-00-00-00-020"
+    text: >-
+      Critical paths SHALL be protected with CODEOWNERS and required reviews; DAL-A/B directories require dual
+      approval (domain + safety).
+    source: "ISO 9001; DO-178C"
+    driver: "safety"
+    acceptance: "Branch protection enforces dual review; audits show compliance"
+    verification: "Review"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-ACCESS"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-CODEOWNERS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-BRANCH-PROTECTION"
+    status: "baselined"
+    owner: "configuration-manager"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Ensures qualified oversight on safety-critical changes"
+    assumptions: "GitHub branch protection available"
+    constraints: "All approvals recorded in PR"
+    verification_methods:
+      - method: "Review"
+        description: "Quarterly audit of approvals"
+        success_criteria: "100% DAL-A/B merges have dual approval"
+    traces:
+      upstream:
+        - "DO-178C Reviews"
+      downstream:
+        - "REQ-DATA-00-00-00-032"
+    compliance:
+      standards: "ISO 9001"
+      regulations: "DO-178C"
+
+  # Test assets and coverage artifacts
+  - id: "REQ-DATA-00-00-00-021"
+    text: >-
+      Automated tests and datasets SHALL reside under tests/<module>/ with generated coverage and reports archived in
+      UTCS-BLOCKCHAIN/DET.
+    source: "DO-178C"
+    driver: "safety"
+    acceptance: "Coverage and reports exist for each module; links present in PRs"
+    verification: "Test"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-TEST-ASSETS"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-COVERAGE-REPORTS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-ARCHIVAL"
+    status: "baselined"
+    owner: "test-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-B"
+    priority: "high"
+    rationale: "Evidence of verification credit"
+    assumptions: "CI produces reports"
+    constraints: "Sensitive test data redacted"
+    verification_methods:
+      - method: "Test"
+        description: "CI step checks for coverage artifacts and DET upload"
+        success_criteria: "0 missing artifacts on mainline"
+    traces:
+      upstream:
+        - "DO-178C Verification"
+      downstream:
+        - "REQ-DATA-00-00-00-033"
+    compliance:
+      standards: "DO-178C"
+      regulations: "CS-25.1309"
+
+  # Schema evolution and migration
+  - id: "REQ-DATA-00-00-00-022"
+    text: >-
+      Schemas SHALL be versioned; breaking changes require migration scripts and deprecation notes stored under
+      schemas/migrations/ with DET.
+    source: "Configuration Management Plan"
+    driver: "performance"
+    acceptance: "All schema changes include version bump and migration doc"
+    verification: "Review"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-SCHEMA-VERSIONING"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-MIGRATIONS"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-DEPRECATION"
+    status: "baselined"
+    owner: "data-architect"
+    last_updated: "2025-09-06"
+    criticality: "DAL-C"
+    priority: "medium"
+    rationale: "Avoids breaking pipelines"
+    assumptions: "Change control process active"
+    constraints: "Semantic versioning for schemas"
+    verification_methods:
+      - method: "Review"
+        description: "PR template requires migration checklist"
+        success_criteria: "100% schema PRs include migration artifacts"
+    traces:
+      upstream:
+        - "ISO 9001 Change Control"
+      downstream:
+        - "REQ-DATA-00-00-00-034"
+    compliance:
+      standards: "SemVer"
+      regulations: "N/A"
+
+  # Language and localization
+  - id: "REQ-DATA-00-00-00-023"
+    text: >-
+      Documentation SHALL be authored in English; UTCS-MI reserved fields remain in Spanish per spec; bilingual
+      glossaries permitted.
+    source: "Internal Documentation Standard"
+    driver: "performance"
+    acceptance: "Docs use English; UTCS fields use Spanish; glossaries present where needed"
+    verification: "Review"
+    links:
+      ce: "CE-CAX-Q100-SYS-00-00-LANGUAGE"
+      cc: "CE-CC-CAX-Q100-SYS-00-00-GLOSSARY"
+      ci: "CE-CC-CI-CAX-Q100-SYS-00-00-LOCALE"
+    status: "baselined"
+    owner: "documentation-lead"
+    last_updated: "2025-09-06"
+    criticality: "DAL-E"
+    priority: "low"
+    rationale: "Clarity for international teams while preserving UTCS compliance"
+    assumptions: "Glossary maintained"
+    constraints: "No machine-only localized versions without review"
+    verification_methods:
+      - method: "Review"
+        description: "Spot check of UTCS fields and language"
+        success_criteria: "0 deviations"
+    traces:
+      upstream:
+        - "UTCS-MI v5.0"
+      downstream:
+        - "N/A"
+    compliance:
+      standards: "Internal"
+      regulations: "N/A"
+
+# DET Evidence Integration
+# This requirements document generates the following DET evidence:
+# - DET:CAD:CROSS:00-00:req_add:V1.0 — When new rules are added
+# - DET:CAD:CROSS:00-00:req_update:V1.0 — When rules are modified
+# - DET:CAD:CROSS:00-00:req_baseline:V1.0 — When this baseline is approved
+
+meta:
+  owner: "configuration-manager"
+  reviewer: "Chief-Architect"
+  last_updated: "2025-09-06"
+  change_ref: "INIT-DIGITAL-DATA-ORG-RULES-V1"
