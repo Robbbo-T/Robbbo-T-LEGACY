@@ -1,0 +1,271 @@
+---
+# Evidence Validation Oracles Specification
+# MBA High Tech & Strategic Developments
+
+oracles_framework:
+  version: "1.0"
+  purpose: "Automated validation of student evidence for RIE calculation"
+  integration: "DET_QAUDIT_ecosystem"
+
+github_oracle:
+  name: "GitHub Academic Validation Oracle"
+  endpoint: "https://api.github.com/v4/graphql"
+  authentication: "GitHub_App_with_educational_scope"
+
+  validation_targets:
+    utcs_mi_compliance:
+      check: "UTCS-MI headers in all committed files"
+      pattern: "^EstándarUniversal:"
+      confidence: "high"
+
+    ci_lint_status:
+      check: "Passing CI/CD pipeline with quality gates"
+      required_checks: ["yamllint", "eslint", "pytest", "security_scan"]
+      confidence: "high"
+
+    contribution_metrics:
+      commits: "meaningful_commit_messages_and_frequency"
+      pull_requests: "accepted_PRs_to_external_repositories"
+      issues: "resolved_issues_and_community_engagement"
+      stars_forks: "community_impact_metrics"
+      confidence: "medium"
+
+    repository_quality:
+      documentation: "README_completeness_and_clarity"
+      license: "appropriate_open_source_license"
+      structure: "professional_repository_organization"
+      confidence: "medium"
+
+  api_calls:
+    rate_limits: "5000_requests_per_hour"
+    caching: "24_hour_cache_for_static_data"
+    error_handling: "graceful_degradation_with_manual_fallback"
+
+  evidence_output:
+    format: "DET_compatible_JSON"
+    signature: "Ed25519_oracle_signature"
+    timestamp: "RFC3339_UTC"
+    confidence_score: "0_to_1_float"
+
+zenodo_oracle:
+  name: "Zenodo FAIR Data Validation Oracle"
+  endpoint: "https://zenodo.org/api/"
+  authentication: "Zenodo_API_token"
+
+  validation_targets:
+    doi_verification:
+      check: "Valid DOI issued and accessible"
+      verification: "DOI_resolution_and_metadata_retrieval"
+      confidence: "high"
+
+    fair_compliance:
+      findable: "rich_metadata_with_keywords_and_description"
+      accessible: "open_access_with_clear_license"
+      interoperable: "standard_formats_and_vocabularies"
+      reusable: "clear_usage_license_and_attribution"
+      confidence: "high"
+
+    academic_quality:
+      peer_review: "evidence_of_review_or_validation_process"
+      citations: "citation_count_and_academic_references"
+      version_control: "proper_versioning_and_change_documentation"
+      confidence: "medium"
+
+    impact_metrics:
+      downloads: "download_count_and_geographic_distribution"
+      views: "view_statistics_and_engagement"
+      references: "external_references_and_citations"
+      confidence: "medium"
+
+  api_calls:
+    rate_limits: "100_requests_per_minute"
+    bulk_operations: "batch_validation_for_efficiency"
+    error_handling: "retry_logic_with_exponential_backoff"
+
+  evidence_output:
+    format: "DET_compatible_JSON"
+    includes: ["doi", "metadata", "fair_scores", "impact_metrics"]
+    signature: "Ed25519_oracle_signature"
+    confidence_score: "weighted_average_of_checks"
+
+cordis_oracle:
+  name: "CORDIS EU Projects Validation Oracle"
+  endpoint: "https://cordis.europa.eu/api/"
+  authentication: "public_api_no_auth_required"
+
+  validation_targets:
+    proposal_status:
+      submitted: "proposal_registered_in_system"
+      evaluated: "evaluation_completed_with_scores"
+      funded: "grant_agreement_signed_and_active"
+      confidence: "high"
+
+    project_participation:
+      coordinator_role: "leading_consortium_member"
+      partner_role: "active_consortium_participant"
+      work_package_lead: "responsible_for_specific_deliverables"
+      confidence: "high"
+
+    deliverable_contributions:
+      authored_deliverables: "primary_author_of_project_deliverables"
+      co_authored: "significant_contributor_to_deliverables"
+      reviewed: "formal_reviewer_of_deliverables"
+      confidence: "medium"
+
+    impact_assessment:
+      citation_in_reports: "referenced_in_project_reports"
+      follow_on_projects: "work_leading_to_subsequent_projects"
+      policy_influence: "contribution_to_policy_documents"
+      confidence: "medium"
+
+  api_calls:
+    rate_limits: "unlimited_for_public_data"
+    search_optimization: "targeted_queries_with_filters"
+    data_freshness: "daily_updates_from_ec_systems"
+
+  evidence_output:
+    format: "DET_compatible_JSON"
+    includes: ["project_ids", "roles", "deliverables", "impact_indicators"]
+    signature: "Ed25519_oracle_signature"
+    cross_reference: "links_to_cordis_public_pages"
+
+standards_bodies_oracle:
+  name: "Technical Standards Contribution Oracle"
+  endpoints:
+    easa: "https://www.easa.europa.eu/certification-framework"
+    etsi: "https://portal.etsi.org/Services/API"
+    iso: "https://www.iso.org/standards-catalogue"
+    ieee: "https://standards.ieee.org/apis/"
+
+  authentication:
+    varies_by_organization: "API_keys_or_institutional_access"
+
+  validation_targets:
+    standards_participation:
+      committee_membership: "active_member_of_technical_committees"
+      document_contributions: "authored_or_reviewed_standard_documents"
+      meeting_participation: "attendance_at_standardization_meetings"
+      confidence: "high"
+
+    contribution_impact:
+      adopted_proposals: "proposals_adopted_into_published_standards"
+      cited_research: "research_cited_in_standard_development"
+      implementation_feedback: "feedback_from_standard_implementation"
+      confidence: "medium"
+
+    expertise_recognition:
+      expert_invitations: "invited_as_domain_expert"
+      editorial_roles: "editorial_or_leadership_positions"
+      peer_recognition: "recognition_from_standardization_community"
+      confidence: "medium"
+
+  api_calls:
+    varies_by_organization: "different_rate_limits_and_capabilities"
+    manual_verification: "some_checks_require_manual_verification"
+    institutional_validation: "verification_through_institutional_affiliations"
+
+  evidence_output:
+    format: "DET_compatible_JSON"
+    includes: ["standard_ids", "contribution_types", "recognition_metrics"]
+    manual_components: "some_evidence_requires_human_verification"
+
+industry_partnership_oracle:
+  name: "Industry Partnership Validation Oracle"
+  integration: "CRM_and_partnership_management_systems"
+
+  validation_targets:
+    letter_of_intent:
+      verification: "cryptographic_signature_validation"
+      authenticity: "company_domain_verification"
+      content_analysis: "commitment_level_and_scope_assessment"
+      confidence: "high"
+
+    pilot_agreements:
+      legal_validation: "contract_authenticity_and_terms"
+      scope_verification: "technical_scope_and_deliverables"
+      progress_tracking: "milestone_completion_and_outcomes"
+      confidence: "high"
+
+    mentorship_quality:
+      engagement_frequency: "meeting_logs_and_interaction_metrics"
+      feedback_quality: "mentor_assessment_scores"
+      career_impact: "placement_and_advancement_outcomes"
+      confidence: "medium"
+
+  validation_methods:
+    digital_signatures: "cryptographic_verification_of_documents"
+    company_verification: "domain_ownership_and_business_registration"
+    reference_checks: "direct_contact_with_industry_partners"
+
+  evidence_output:
+    format: "DET_compatible_JSON"
+    includes: ["partner_info", "agreement_terms", "engagement_metrics"]
+    privacy_protection: "anonymized_company_data_where_required"
+
+oracle_coordination:
+  aggregation_engine:
+    name: "Multi-Oracle Evidence Aggregator"
+    functionality: "combine_evidence_from_all_oracles"
+
+    confidence_weighting:
+      github: "25%"
+      zenodo: "20%"
+      cordis: "25%"
+      standards: "20%"
+      industry: "10%"
+
+    conflict_resolution:
+      threshold_agreement: "require_2_out_of_5_oracles_for_validation"
+      manual_review: "human_review_for_conflicting_evidence"
+      conservative_scoring: "lower_confidence_when_oracles_disagree"
+
+  validation_pipeline:
+    trigger_events:
+      - "student_submits_evidence"
+      - "assessment_period_ends"
+      - "manual_validation_request"
+
+    processing_steps:
+      1. "evidence_ingestion_and_parsing"
+      2. "parallel_oracle_queries"
+      3. "confidence_scoring_and_aggregation"
+      4. "conflict_detection_and_resolution"
+      5. "det_packet_generation"
+      6. "qaudit_signature_and_storage"
+
+    performance_targets:
+      response_time: "under_5_minutes_for_standard_validation"
+      availability: "99.9%_uptime_target"
+      accuracy: "over_95%_validation_accuracy"
+
+quality_assurance:
+  oracle_monitoring:
+    health_checks: "continuous_monitoring_of_oracle_availability"
+    accuracy_tracking: "regular_validation_of_oracle_results"
+    performance_metrics: "response_time_and_error_rate_monitoring"
+
+  human_oversight:
+    expert_review: "domain_experts_review_edge_cases"
+    appeal_process: "students_can_appeal_oracle_decisions"
+    continuous_improvement: "oracle_algorithms_improved_based_on_feedback"
+
+  security_measures:
+    api_security: "secure_authentication_and_encryption"
+    data_integrity: "cryptographic_verification_of_all_evidence"
+    audit_logging: "comprehensive_logging_of_all_oracle_activities"
+
+integration_with_rie:
+  evidence_scoring:
+    automatic_scoring: "oracles_provide_quantitative_evidence_scores"
+    manual_adjustment: "human_experts_can_adjust_scores_with_justification"
+    transparency: "all_scoring_decisions_logged_and_auditable"
+
+  real_time_updates:
+    trigger_recalculation: "rie_scores_updated_when_new_evidence_validated"
+    notification_system: "students_notified_of_score_changes"
+    version_control: "all_score_changes_tracked_with_full_history"
+
+  dispute_resolution:
+    appeal_mechanism: "formal_process_for_challenging_oracle_decisions"
+    expert_panels: "independent_experts_review_disputed_cases"
+    final_arbitration: "clear_process_for_final_decision_making"
