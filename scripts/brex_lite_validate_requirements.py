@@ -65,16 +65,17 @@ def validate_utcs_mi(md_text: str) -> List[str]:
         return errors
     # Write to temp file and run validator
     tmp = ROOT / ".tmp_utcs_id.txt"
-    tmp.write_text(utcs_line, encoding="utf-8")
-    if UTCS_VALIDATOR.exists():
-        try:
-            subprocess.run([sys.executable, str(UTCS_VALIDATOR), str(tmp)], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        except subprocess.CalledProcessError as e:
-            errors.append(f"UTCS-MI validation failed: {e.stderr.decode('utf-8', errors='ignore') or e.stdout.decode('utf-8', errors='ignore')}")
-        finally:
-            tmp.unlink(missing_ok=True)
-    else:
-        errors.append(f"UTCS validator not found at {UTCS_VALIDATOR}")
+    try:
+        tmp.write_text(utcs_line, encoding="utf-8")
+        if UTCS_VALIDATOR.exists():
+            try:
+                subprocess.run([sys.executable, str(UTCS_VALIDATOR), str(tmp)], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError as e:
+                errors.append(f"UTCS-MI validation failed: {e.stderr.decode('utf-8', errors='ignore') or e.stdout.decode('utf-8', errors='ignore')}")
+        else:
+            errors.append(f"UTCS validator not found at {UTCS_VALIDATOR}")
+    finally:
+        tmp.unlink(missing_ok=True)
     return errors
 
 def unit_warnings(text_fields: List[str]) -> List[str]:
