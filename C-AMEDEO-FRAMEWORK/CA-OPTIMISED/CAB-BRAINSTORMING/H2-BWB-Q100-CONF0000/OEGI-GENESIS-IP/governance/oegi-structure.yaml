@@ -2,7 +2,7 @@
 oegi_structure:
   version: "1.0"
   governance_model: "multi_stakeholder"
-  
+
   council:
     composition:
       european_commission: 2
@@ -15,13 +15,13 @@ oegi_structure:
       academia: 3
       industry: 3
       civil_society: 2
-    
+
     responsibilities:
       - "Policy framework development"
       - "Budget approval and oversight"
       - "Strategic direction setting"
       - "Conflict resolution escalation"
-    
+
     meeting_frequency: "quarterly"
     decision_threshold: "simple_majority"
     supermajority_items:
@@ -38,16 +38,16 @@ oegi_structure:
         - "Certification level determination"
         - "Opposition process management"
         - "Registry maintenance and search"
-    
+
     clearing_licensing:
-      head: "Director of Clearing Services" 
+      head: "Director of Clearing Services"
       staff: 8
       responsibilities:
         - "Royalty collection and distribution"
         - "License compliance monitoring"
         - "Tariff calculation and updates"
         - "Financial reporting and auditing"
-    
+
     technical_genesismap:
       head: "Chief Technology Officer"
       staff: 6
@@ -56,7 +56,7 @@ oegi_structure:
         - "Hash verification systems"
         - "GI² scoring algorithm development"
         - "Technical infrastructure management"
-    
+
     ethics_privacy:
       head: "Chief Privacy Officer"
       staff: 4
@@ -65,7 +65,7 @@ oegi_structure:
         - "Data Protection Impact Assessments"
         - "Opt-out mechanism management"
         - "Transparency reporting"
-    
+
     dispute_resolution:
       head: "Chief Mediation Officer"
       staff: 5
@@ -81,12 +81,12 @@ oegi_structure:
       expertise_areas:
         - "Quantum computing and AI"
         - "Intellectual property law"
-        - "Economics and innovation policy"  
+        - "Economics and innovation policy"
         - "Software engineering and open source"
         - "Standards development and interoperability"
         - "Ethics and privacy"
         - "Industry applications and use cases"
-      
+
       meeting_frequency: "bi_monthly"
       advisory_scope:
         - "Technical standard recommendations"
@@ -100,7 +100,7 @@ oegi_structure:
       - "Financial interests disclosed and managed"
       - "Independent dispute resolution processes"
       - "Transparent decision-making records"
-    
+
     antitrust_safeguards:
       - "Public tariff schedules"
       - "Non-discriminatory treatment"
@@ -115,12 +115,12 @@ oegi_structure:
         - "Registry statistics (certifications, oppositions)"
         - "Dispute resolution outcomes"
         - "Governance decision summaries"
-    
+
     external_auditing:
       financial_audit: "annual"
-      compliance_audit: "bi_annual"  
+      compliance_audit: "bi_annual"
       governance_review: "every_3_years"
-    
+
     stakeholder_feedback:
       public_consultation_period: "30_days_minimum"
       feedback_incorporation_requirement: "documented_response"
@@ -132,7 +132,7 @@ oegi_structure:
     clearing_licensing: 0.15
     technology_development: 0.10
     dispute_resolution: 0.05
-    
+
   funding_sources:
     operational_fees: 0.10  # from clearing activities
     eu_budget_allocation: 0.60
