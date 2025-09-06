@@ -7,14 +7,21 @@
   "entity": "WINCAL.HIL.RunFinished",
   "qs_type": "QML",
   "utcs_mi_id": "EstándarUniversal:EstadoCuantico-QML-56.01-PANORAMIC-WINDOWS-HIL-CRYOBENCH-RestoDeVidaUtil",
-  "det_ref": "DET:QS:AAA:56-01:hil_test_complete:V1.0",
+  "det_ref": "DET:QS:AAA:5601:hil_test_complete:V1.0",
   "signature": "PQC-Dilithium3",
   "meta": {
     "program": "WINCAL",
     "test_facility": "HIL-CryoBench",
     "test_type": "RunFinished",
+    "test_id": "WINCAL-HIL-20250115-001",
+    "status": "PASS",
     "window_id": "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS",
     "pattern_id": "checkerboard_50hz",
+    "metrics": {
+      "emi_nT_sqrt_hz_1hz": 48.5,
+      "deltaT_rms_mK": 4.2
+    },
+    "duration_s": 1800,
     "B_psd_nT_per_sqrtHz": {
       "1Hz": 72.0,
       "10Hz": 14.2
