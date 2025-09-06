@@ -1,0 +1,23 @@
+---
+# MBOM for CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02
+mbom:
+  ci_id: "CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02"
+  routing:
+    - op: "ASSEMBLE"
+      workcenter: "WC-OLED-ASSEMBLY"
+      process: "OLED panel integration and electrical connection"
+      time_min: 45
+      qa_gates:
+        - type: "FAI"
+          checkpoint: "Electrical continuity and pixel function test"
+    - op: "TEST"
+      workcenter: "WC-HIL-WINDOWS"
+      process: "EMI and thermal qualification per HIL-CryoBench protocol"
+      time_min: 120
+      qa_gates:
+        - type: "SPC"
+          checkpoint: "EMI emissions ≤ 50 nT/√Hz validation"
+    - op: "PACKAGE"
+      workcenter: "WC-PACKAGE-CLEAN"
+      process: "Clean room packaging for installation"
+      time_min: 15

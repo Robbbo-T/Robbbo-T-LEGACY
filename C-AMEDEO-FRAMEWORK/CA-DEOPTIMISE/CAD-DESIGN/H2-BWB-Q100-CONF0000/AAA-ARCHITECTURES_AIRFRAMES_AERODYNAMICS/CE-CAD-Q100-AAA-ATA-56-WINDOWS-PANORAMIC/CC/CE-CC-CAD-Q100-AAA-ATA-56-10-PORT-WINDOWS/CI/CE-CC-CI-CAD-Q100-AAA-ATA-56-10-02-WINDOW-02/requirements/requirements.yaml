@@ -1,0 +1,52 @@
+---
+# Requirements for CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02
+requirements:
+  - id: "REQ-WIN02-EMI-001"
+    text: "PORT Window #2 OLED system shall limit EMI emissions to ≤ 50 nT/√Hz at 1-100 Hz."
+    source: "System EMI allocation from [CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC](../../../../../README.md)"
+    driver: "safety"
+    acceptance: "Measured EMI ≤ 50 nT/√Hz in quantum-sensitive bands per HIL-CryoBench test."
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-PORT-WINDOWS"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02"
+    status: "draft"
+    owner: "windows-engineer@aqua-os"
+    last_updated: "2025-01-15T16:00:00Z"
+
+  - id: "REQ-WIN02-DISPLAY-001"
+    text: "PORT Window #2 shall provide 7680x4320 pixel resolution at ≥120 Hz refresh rate."
+    source: "Display performance requirements from passenger experience specifications"
+    driver: "performance"
+    acceptance: "Display controller demonstrates 7680x4320@120Hz operation without frame drops."
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-PORT-WINDOWS"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02"
+    status: "draft"
+    owner: "display-engineer@aqua-os"
+    last_updated: "2025-01-15T16:00:00Z"
+
+  - id: "REQ-WIN02-POWER-001"
+    text: "PORT Window #2 power consumption shall not exceed 200 W/m² during normal operation."
+    source: "Power budget allocation from thermal management requirements"
+    driver: "performance"
+    acceptance: "Power density measured ≤ 200 W/m² for standard display patterns."
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-PORT-WINDOWS"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-10-02-WINDOW-02"
+    status: "draft"
+    owner: "power-engineer@aqua-os"
+    last_updated: "2025-01-15T16:00:00Z"
+
+meta:
+  owner: "windows-ci-lead@aqua-os"
+  reviewer: "windows-lead@aqua-os"
+  last_updated: "2025-01-15T16:00:00Z"
+  change_ref: "B-ATA56-S1000DQ-CCFE-001"
+  hierarchy_level: "CI"
+  parent_component: "CE-CC-CAD-Q100-AAA-ATA-56-10-PORT-WINDOWS"

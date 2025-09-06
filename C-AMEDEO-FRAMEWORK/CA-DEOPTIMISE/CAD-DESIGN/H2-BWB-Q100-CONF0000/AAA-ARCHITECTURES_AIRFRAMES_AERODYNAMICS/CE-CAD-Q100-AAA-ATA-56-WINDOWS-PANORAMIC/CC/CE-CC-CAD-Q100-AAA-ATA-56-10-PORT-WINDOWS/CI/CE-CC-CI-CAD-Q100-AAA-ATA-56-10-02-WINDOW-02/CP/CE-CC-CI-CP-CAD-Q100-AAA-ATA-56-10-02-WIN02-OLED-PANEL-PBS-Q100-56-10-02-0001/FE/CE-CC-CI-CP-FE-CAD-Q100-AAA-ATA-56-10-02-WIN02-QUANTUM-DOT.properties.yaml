@@ -1,0 +1,11 @@
+---
+# FE Quantum Dot properties for Window #2 (PORT)
+fe:
+  id: "FE-WIN02-QDOT"
+  material: "CdSe/ZnS core–shell"
+  thickness_nm: 100
+  emission_peak_nm: 530
+  quantum_yield: 0.95
+  test_methods: ["TRPL", "UV-Vis"]
+  notes: >
+    Values for simulation placeholders. Replace with measured data if available.
