@@ -7,7 +7,7 @@ properties:
     type: object
     required: [id, items, rules]
     properties:
-      id: { type: string }
+      id: {type: string}
       items:
         type: array
         minItems: 2
@@ -15,25 +15,25 @@ properties:
           type: object
           required: [id, alpha, nv]
           properties:
-            id: { type: string }
-            alpha: { type: number, minimum: 0, maximum: 1 }
-            nv: { type: number, minimum: 0, maximum: 1 }
+            id: {type: string}
+            alpha: {type: number, minimum: 0, maximum: 1}
+            nv: {type: number, minimum: 0, maximum: 1}
       rules:
         type: object
         required: [min_nv, dedup_by_sha256]
         properties:
-          min_nv: { type: number, minimum: 0, maximum: 1 }
-          dedup_by_sha256: { type: boolean }
+          min_nv: {type: number, minimum: 0, maximum: 1}
+          dedup_by_sha256: {type: boolean}
           synergy:
             type: object
             properties:
-              type: { type: string }
-              delta_max: { type: number, minimum: 0, maximum: 0.1 }
-              applied: { type: number, minimum: 0, maximum: 0.1 }
-      nv_portfolio: { type: number, minimum: 0, maximum: 1 }
+              type: {type: string}
+              delta_max: {type: number, minimum: 0, maximum: 0.1}
+              applied: {type: number, minimum: 0, maximum: 0.1}
+      nv_portfolio: {type: number, minimum: 0, maximum: 1}
       anchors:
         type: object
         properties:
           cdtl:
             type: object
-            properties: { network: { type: string }, tx_id: { type: string }, block_hash: { type: string }, height: { type: integer } }
+            properties: {network: {type: string}, tx_id: {type: string}, block_hash: {type: string}, height: {type: integer}}
