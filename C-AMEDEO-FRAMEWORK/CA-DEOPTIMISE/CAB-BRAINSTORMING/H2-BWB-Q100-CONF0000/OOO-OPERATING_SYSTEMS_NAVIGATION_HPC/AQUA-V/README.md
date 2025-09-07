@@ -558,7 +558,7 @@ kernel/scheduler/classical-scheduler_0241.c
 
 kernel/scheduler/hybrid-orchestrator_0242.py
 
-kernel/scheduler/neur
+kernel/scheduler/neural-predictor_0243.py
 ```
 
 *Part of the C-AMEDEO Framework for quantum software conceptual exploration*
