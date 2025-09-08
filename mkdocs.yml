@@ -58,3 +58,38 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/your-repo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourprofile
+  analytics:
+    # google:
+    #   tracking_id: UA-XXXXXXXXX-X
+  copyright: 'Copyright © 2025 Teknia Tokens. Todos los derechos reservados.'
+  theme_color: '#ffffff'
+  background_color: '#000000'
+  display_header_text: true
+  header_text_color: '#000000'
+  logo: 'images/logo.png'
+  favicon: 'images/favicon.ico'
+  repo_name: 'Teknia Tokens'
+  repo_url: 'https://github.com/yourusername/your-repo'
+  edit_uri: 'edit/main/docs/'
+  extra_css:
+    - 'stylesheets/extra.css'
+  extra_javascript:
+    - 'javascripts/extra.js'
+  search:
+    language: 'es'
+  sitemap:
+    changefreq: daily
+    priority: 0.7
+  robots:
+    - User-agent: '*'
+      Disallow: '/admin/'
+      Allow: '/'
+  custom404: '404.html'
+  custom500: '500.html'

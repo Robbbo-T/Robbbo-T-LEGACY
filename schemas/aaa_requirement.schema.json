@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AAARequirement",
+  "type": "object",
+  "required": ["id","text","source","driver","acceptance","verification","links","status","owner","last_updated"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^REQ-AAA-"},
+    "text": {"type": "string", "minLength": 10},
+    "source": {"type": "string"},
+    "driver": {"type": "string"},
+    "acceptance": {"type": "object"},
+    "verification": {"type": "object", "required": ["method"], "properties": {"method": {"type": "string"}}},
+    "links": {"type": "object"},
+    "status": {"type": "string"},
+    "owner": {"type": "string"},
+    "last_updated": {"type": "string", "format": "date"}
+  },
+  "additionalProperties": true
+}
