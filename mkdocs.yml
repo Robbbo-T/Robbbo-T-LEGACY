@@ -9,6 +9,8 @@ theme:
 
 nav:
   - Inicio: index.md
+  - 05 · Architectures (Diagrams):
+    - AMPEL360 V Transponder · Heuritma: diagrams/ampel360-v-transponder.md
   - 00 · Introducción:
     - Alcance y objetivos: 00-introduccion/alcance.md
     - Conceptos clave: 00-introduccion/conceptos.md
