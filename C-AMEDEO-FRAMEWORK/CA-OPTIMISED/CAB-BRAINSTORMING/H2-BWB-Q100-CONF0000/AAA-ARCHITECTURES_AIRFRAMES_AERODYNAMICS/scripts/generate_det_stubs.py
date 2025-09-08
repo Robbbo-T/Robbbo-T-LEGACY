@@ -18,7 +18,7 @@ def sha256_bytes(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 def det_pack(req: dict, action: str) -> dict:
-    now = datetime.datetime.utcnow().isoformat() + "Z"
+    now = f"{datetime.datetime.now(datetime.timezone.utc).isoformat()}Z"
     rid = req.get("id")
     text = req.get("text", "")
     meta = {
