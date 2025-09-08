@@ -56,8 +56,7 @@ def collect_ontology_nodes(domain_cfg):
     return nodes
 
 def collect_goals(domain_cfg):
-    goals = set(domain_cfg.get("goals", {}).get("list", {}).keys())
-    return goals
+    return set(domain_cfg.get("goals", {}).get("list", {}).keys())
 
 def collect_interfaces(domain_cfg):
     ifaces = set()
