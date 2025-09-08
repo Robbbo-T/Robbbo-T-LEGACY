@@ -138,8 +138,7 @@ def main():
     rtm_errors = validate_rtm(domain_cfg, req_ids, nodes, goals, ifaces)
     heur_errors = validate_heur_cycles(heur_schema)
 
-    all_errors = req_errors + rtm_errors + heur_errors
-    if all_errors:
+    if all_errors := req_errors + rtm_errors + heur_errors:
         print("VALIDATION FAILURES:")
         for e in all_errors:
             print(" -", e)
