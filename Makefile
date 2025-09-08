@@ -10,7 +10,7 @@ emit:
 	node scripts/emit_qs_from_yaml.mjs
 
 validate:
-	node scripts/validate_qs_events.mjs events/out/*.json
+	node scripts/validate_qs_events.mjs events/out/.json
 
 all: install gen emit validate
 
