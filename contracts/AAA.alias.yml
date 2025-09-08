@@ -1,0 +1,19 @@
+version: 1
+domain: AAA
+interfaces:
+  - name: BLI_Interface
+    provider: EEE.PropulsionControl
+    consumer: AAA.ExecutionLayer
+    schema_ref: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/domain-config.yaml#/ontology/interfaced_classes/EEE/interfaces/0
+  - name: CryoComposite_Interface
+    provider: MMM.MaterialsDB
+    consumer: AAA.HeuritmaticsLayer
+    schema_ref: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/domain-config.yaml#/ontology/interfaced_classes/MMM/interfaces/0
+  - name: OpsSafety_Interface
+    provider: OOO.SafetyOps
+    consumer: AAA.ModeManager
+    schema_ref: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/domain-config.yaml#/ontology/interfaced_classes/OOO/interfaces/0
+  - name: QuantumKernel_Interface
+    provider: QCSAA.QService
+    consumer: AAA.HeurPipeline
+    schema_ref: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/domain-config.yaml#/ontology/interfaced_classes/QCSAA/interfaces/0

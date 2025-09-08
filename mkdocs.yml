@@ -58,3 +58,71 @@ markdown_extensions:
 
 plugins:
   - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/your-repo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourprofile
+  analytics:
+    google:
+      tracking_id: UA-XXXXXXXXX-X
+  copyright: 'Copyright © 2023 Teknia Tokens. Todos los derechos reservados.'
+  theme_color: '#ffffff'
+  background_color: '#000000'
+  display_header_text: true
+  header_text_color: '#000000'
+  logo: 'images/logo.png'
+  favicon: 'images/favicon.ico'
+  repo_name: 'Teknia Tokens'
+  repo_url: 'https://github.com/yourusername/your-repo'
+  edit_uri: 'edit/main/docs/'
+  extra_css:
+    - 'stylesheets/extra.css'
+  extra_javascript:
+    - 'javascripts/extra.js'
+  search:
+    language: 'es'
+  sitemap:
+    changefreq: daily
+    priority: 0.7
+  robots:
+    - User-agent: '*'
+      Disallow: '/admin/'
+      Allow: '/'
+  ip_restriction:
+    - 192.168.1.1
+    - 203.0.113.0/24
+  custom_domain: 'www.teknia-tokens.com'
+  ssl:
+    enabled: true
+    certificate: '/etc/ssl/certs/teknia_tokens.crt'
+    certificate_key: '/etc/ssl/private/teknia_tokens.key'
+  http_headers:
+    - Strict-Transport-Security: 'max-age=31536000; includeSubDomains'
+    - X-Content-Type-Options: 'nosniff'
+    - X-Frame-Options: 'DENY'
+    - X-XSS-Protection: '1; mode=block'
+  performance:
+    lazyload_images: true
+    minify_html: true
+    minify_css: true
+    minify_javascript: true
+  backup:
+    frequency: daily
+    time: '02:00'
+    retention: 30
+  notifications:
+    email:
+      enabled: true
+      to: 'admin@teknia-tokens.com'
+      subject: 'Notificaciones de Teknia Tokens'
+    slack:
+      enabled: true
+      webhook_url: 'https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX'
+  custom404: '404.html'
+  custom500: '500.html'
+  maintenance_mode:
+    enabled: false
+    message: 'El sitio está en mantenimiento. Vuelve más tarde.'

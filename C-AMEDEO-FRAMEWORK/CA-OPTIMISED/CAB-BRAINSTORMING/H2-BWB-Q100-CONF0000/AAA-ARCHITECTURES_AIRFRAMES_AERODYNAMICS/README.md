@@ -87,3 +87,36 @@ AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/
 
 ---
 *Part of the C-AMEDEO Framework for conceptual exploration of airframe structures, aerodynamic surfaces, and architectural systems*
+
+---
+
+## AMPEL360 V Transponder — Heuritma Integration (AQUA V OS)
+
+Context
+
+This addition establishes the AMPEL360 V Transponder as a multimodal sensorial synthesizer at the core of AQUA V’s operating system. By uniting 360° vision fusion with Heuritmatic synthesis and execution layers, sensor data is no longer siloed by modality (lidar, radar, optical, structural, cognitive) but optimised into a unified state vector.
+
+What this changes
+
+- Transponders evolve from simple comms relays into cognitive system nodes.
+- Sensor fusion is elevated from linear filtering to Heuritmatic processing (Amplify → Modulate → Mix → Ponder).
+- Execution is coupled directly to synthesis, enabling real-time autonomous control and AI copilot augmentation.
+- Networking gains trust and traceability through GAIA AIR Infranet and QUAChain notarisation.
+
+Why this matters
+
+- Provides full-spectrum situational awareness for AMPEL360 airframes, essential for hydrogen-powered BWB safety envelopes.
+- Creates scalable intelligence kernels: every transponder is both a sensor node and a decision node.
+- Ensures traceable evidence flows (DET) that close the loop between sensing, synthesis, execution, and evaluation.
+- Forms a foundational building block of AQUA V OS, embedding sensorial synthesis directly into aircraft architectures and domain ontologies.
+
+Reference
+
+- AMPEL360 V Transponder · Heuritma architecture diagram and legend: [docs/diagrams/ampel360-v-transponder.md](../../../../../docs/diagrams/ampel360-v-transponder.md)
+
+### Before CAD — Heuritmatics Binding
+
+- Ontology (internal & interfaced), goals, RTM, and interface contracts are defined in `domain-config.yaml` under keys: `ontology`, `goals`, `rtm`, `interfaces`.
+- Heuritma cycle validation schema: [`schemas/heur_schema.json`](../../../../../schemas/heur_schema.json)
+- AAA requirement entry schema: [`schemas/aaa_requirement.schema.json`](../../../../../schemas/aaa_requirement.schema.json)
+- Requirements matrix lives in: [`requirements/requirements.yaml`](requirements/requirements.yaml)

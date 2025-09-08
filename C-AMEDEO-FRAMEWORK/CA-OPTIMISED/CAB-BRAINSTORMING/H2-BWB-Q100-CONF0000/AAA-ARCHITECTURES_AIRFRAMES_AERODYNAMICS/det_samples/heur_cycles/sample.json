@@ -1,0 +1,14 @@
+{
+  "cycle_id": "HRT-AAA-MSN001-000123",
+  "timestamp_utc": "2025-09-08T13:45:12.345Z",
+  "axes": {
+    "Intent": "Maintain hydrogen safety envelope in crosswind climb",
+    "Constraint": {"strain_microstrain": 420, "tank_skin_K": 83.5, "DAL": "B"},
+    "Pattern": {"chain": ["Amplify", "Modulate", "Mix", "Ponder"]},
+    "Mapping": {"decision": "climb_rate -8%", "yaw_damper_gain": 1.03},
+    "Evaluation": {"confidence": 0.91, "outcome": "Nominal"}
+  },
+  "state_vector": {"dim": 256, "checksum": "sha256:deadbeef", "norm": 1.0},
+  "trust": {"Lidar": 0.93, "Radar": 0.88, "OpticalIR": 0.81, "Strain": 0.97, "Thermal": 0.95},
+  "req_refs": ["REQ-AAA-HEUR-5D-003", "REQ-AAA-HEUR-CHAIN-004", "REQ-AAA-DET-TRACE-014"]
+}

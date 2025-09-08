@@ -1,0 +1,305 @@
+# UTCS-MI UniversalStandard: v5.0
+# Domain: AAA — ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+# Lifecycle: CA-OPTIMISED / CAB-BRAINSTORMING
+# Configuration: H2-BWB-Q100 / CONF0000
+
+meta:
+  domain: AAA
+  aircraft: H2-BWB-Q100
+  configuration: CONF0000
+  lifecycle_flow: CA-OPTIMISED
+  cax_pillar: CAB-BRAINSTORMING
+  last_updated: 2025-09-08
+  owner: AAA Domain Lead
+
+requirements:
+  # -----------------------------
+  # Sensing & Collection Layer
+  # -----------------------------
+  - id: REQ-AAA-SENSE-360FOV-001
+    text: The Sensing Layer shall provide 360° azimuth coverage with vertical FOV ≥ 120° via fused lidar, radar, and optical/IR sensors, with end-to-end fusion latency ≤ 30 ms (P95) and sensor time-sync jitter ≤ 2 ms RMS.
+    source: AAA Domain Charter; AMPEL360 V Transponder architecture
+    driver: Full-spectrum situational awareness for hydrogen BWB safety envelopes
+    acceptance:
+      - Flight/bench test demonstrates panoramic coverage; blind-spot audit shows 0° ± 2° max azimuth gap.
+      - Measured fusion pipeline latency P95 ≤ 30 ms; sync jitter ≤ 2 ms RMS over 10 min.
+    verification:
+      method: test
+      artifacts:
+        - fusion_latency_report.csv (units: ms)
+        - fov_coverage_map.svg (units: deg)
+    links:
+      ce: CECABAAA-ATA56-AMPEL360V
+      cc: CCCABAAA-ATA56-Transponder-360
+      ci: CICABAAA-ATA56-360FusionUnit-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-SENSE-SYNC-002
+    text: The Sensing Layer shall implement deterministic time synchronization (PTP or equivalent) with clock drift ≤ 50 µs over 1 hour and provide per-sample timestamps at sensor and fusion nodes.
+    source: Safety envelope timing; GAIA AIR RTOS sync profile
+    driver: Deterministic fusion and control timing
+    acceptance:
+      - Synchronization drift measured ≤ 50 µs over 1 hour ambient 0–40°C.
+      - All data records include monotonic timestamps with ≤ 1 µs resolution.
+    verification:
+      method: analysis
+      artifacts:
+        - time_sync_drift.log (units: µs)
+    links:
+      ce: CECABAAA-ATA18-TimeBase
+      cc: CCCABAAA-ATA18-TimeSyncNet
+      ci: CICABAAA-ATA18-PTPGrandmaster-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Heuritmatic Synthesis Layer
+  # -----------------------------
+  - id: REQ-AAA-HEUR-5D-003
+    text: The Heuritmatics core shall encode each decision cycle as a Heuritma with minimum five axes—Intent, Constraint, Pattern, Mapping, Evaluation—and persist the state vector per cycle.
+    source: Heuritma definition; AMPEL360 V Transponder Heuritma legend
+    driver: Structured sensorial synthesis for automation
+    acceptance:
+      - Data model shows 5 mandatory fields (I,C,P,M,E) with schema validation passing on 1,000 sample cycles.
+      - Each cycle persisted with unique ID and monotonic timestamp.
+    verification:
+      method: analysis
+      artifacts:
+        - heur_schema.json
+        - heur_sample_cycles.parquet
+    links:
+      ce: CECABAAA-ATA56-HeuritmaKernel
+      cc: CCCABAAA-ATA56-HeurEngine
+      ci: CICABAAA-ATA56-HeurCore-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-HEUR-CHAIN-004
+    text: The Synthesis chain shall implement Amplify → Modulate → Mix → Ponder stages with configurable trust weights and produce a unified state vector of size 128–1024 dims per cycle.
+    source: AMPEL360 V Transponder synthesis chain
+    driver: Robust cross-modal fusion and reasoning
+    acceptance:
+      - Pipeline stages observable with telemetry; trust weights logged per input modality.
+      - Output vector within specified dimensional bounds; cosine similarity stability ≥ 0.98 over repeated stimuli.
+    verification:
+      method: test
+      artifacts:
+        - heur_pipeline_trace.jsonl
+        - state_vector_stats.csv
+    links:
+      ce: CECABAAA-ATA56-HeuritmaKernel
+      cc: CCCABAAA-ATA56-HeurPipeline
+      ci: CICABAAA-ATA56-HeurMixer-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-HEUR-TRUST-005
+    text: The system shall apply a trust metric that preferentially weights corroborated, high-quality sources (peer-reviewed, calibrated sensors) and suppresses low-trust inputs, with thresholds tunable per mission profile.
+    source: Heuritmatics trust filtering
+    driver: Reliability under variable signal quality
+    acceptance:
+      - Trust scores ∈ [0,1] emitted per source; down-weighted sources reduce influence ≥ 80% when score < 0.2.
+      - Mission profile can modify thresholds and weightings at runtime with audit log.
+    verification:
+      method: test
+      artifacts:
+        - trust_scores.log
+        - mission_profile_changes.yaml
+    links:
+      ce: CECABAAA-ATA20-TrustProfile
+      cc: CCCABAAA-ATA20-SourceWeighting
+      ci: CICABAAA-ATA20-TrustFilter-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Execution Layer (AI Copilot & Autonomous Control)
+  # -----------------------------
+  - id: REQ-AAA-EXEC-LATENCY-006
+    text: The Execution Layer shall close perception→decision→actuation loop within 50 ms (P95) for collision-avoidance and within 100 ms (P95) for trajectory adjustments.
+    source: Safety envelope; BWB maneuvering constraints
+    driver: Real-time autonomy
+    acceptance:
+      - Hardware-in-the-loop tests show loop timings within budgets across temperature and vibration ranges.
+    verification:
+      method: test
+      artifacts:
+        - hil_loop_timing.csv (units: ms)
+    links:
+      ce: CECABAAA-ATA22-ExecKernel
+      cc: CCCABAAA-ATA22-FlightCtrlAI
+      ci: CICABAAA-ATA22-ExecNode-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-EXEC-FALLBACK-007
+    text: The system shall provide deterministic fallback modes (AI Copilot degrade and Safe-State Autonomous Control) upon confidence < threshold or sensor failure, with pilot override always available.
+    source: Certification safety practices
+    driver: Fail-operational, fail-safe behavior
+    acceptance:
+      - Fault-injection tests demonstrate graceful degradation; pilot override latency ≤ 200 ms.
+    verification:
+      method: test
+      artifacts:
+        - fault_injection_report.md
+        - override_latency.csv (units: ms)
+    links:
+      ce: CECABAAA-ATA27-Fallback
+      cc: CCCABAAA-ATA27-ModeManager
+      ci: CICABAAA-ATA27-OverrideIface-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Networking Layer (Transponder)
+  # -----------------------------
+  - id: REQ-AAA-NET-QNET-008
+    text: The Transponder shall support GAIA AIR Infranet and Quantum/Classical links with end-to-end telemetry bandwidth ≥ 50 Mbps and control latency ≤ 40 ms (P95) on classical channels.
+    source: AMPEL360 V Transponder networking
+    driver: Fleet knowledge sharing and control
+    acceptance:
+      - Link tests confirm sustained bandwidth and latency budgets; QoS policies enforce control-plane prioritization.
+    verification:
+      method: test
+      artifacts:
+        - link_benchmark.csv (units: Mbps, ms)
+    links:
+      ce: CECABAAA-ATA23-Transponder
+      cc: CCCABAAA-ATA23-GAIA-Infranet
+      ci: CICABAAA-ATA23-QNetRadio-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-NET-QUACHAIN-009
+    text: All critical decisions and key state vectors shall be notarized on QUAChain with cryptographic proofs and DET references, ensuring tamper-evident traceability.
+    source: DET governance; QUAChain policy
+    driver: Evidence integrity and traceability
+    acceptance:
+      - For each mission segment, ≥ 95% of critical events have notarized entries with verifiable hashes.
+    verification:
+      method: analysis
+      artifacts:
+        - det_registry.json
+        - quachain_audit.csv
+    links:
+      ce: CECABAAA-ATA31-DET
+      cc: CCCABAAA-ATA31-Notary
+      ci: CICABAAA-ATA31-DETAgent-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Structural/Thermal Monitoring
+  # -----------------------------
+  - id: REQ-AAA-STRUCT-THERM-010
+    text: The system shall integrate structural strain and thermal sensors with sampling ≥ 200 Hz and route anomalies into the Heuritma Constraint axis within 20 ms.
+    source: Constraint axis integration
+    driver: Airframe integrity during hydrogen operations
+    acceptance:
+      - End-to-end anomaly path validated; detection-to-heuritma injection ≤ 20 ms (P95).
+    verification:
+      method: test
+      artifacts:
+        - structural_anomaly_latency.csv (units: ms)
+    links:
+      ce: CECABAAA-ATA51-StructHealth
+      cc: CCCABAAA-ATA51-SHM
+      ci: CICABAAA-ATA51-StrainBus-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Compute/RTOS Resources
+  # -----------------------------
+  - id: REQ-AAA-RES-RTOS-011
+    text: GAIA AIR RTOS partitions shall allocate ≥ 4 CPU cores to fusion/synthesis, ≥ 2 CPU cores to execution, and ≥ 1 GPU/NPU with 8 TOPS effective, with worst-case execution time (WCET) budgets documented.
+    source: Resource planning for real-time autonomy
+    driver: Deterministic compute for AAA mission set
+    acceptance:
+      - Partition schedule and WCET analysis approved; runtime telemetry shows headroom ≥ 20% under peak load.
+    verification:
+      method: analysis
+      artifacts:
+        - rtos_partition_plan.yaml
+        - wcet_report.pdf
+    links:
+      ce: CECABAAA-ATA22-ComputePlan
+      cc: CCCABAAA-ATA22-RTOS-Part
+      ci: CICABAAA-ATA22-GPUAccel-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  - id: REQ-AAA-RES-STORAGE-012
+    text: The system shall retain at least 6 hours of rolling sensor-fusion and Heuritma state logs at ≥ 100 MB/s aggregate write throughput, with authenticated compression and lossless paths for safety-critical channels.
+    source: DET retention and post-mission analysis
+    driver: Evidence and diagnostics
+    acceptance:
+      - Storage benchmarks meet throughput; integrity checks (hashes) pass for all critical channels.
+    verification:
+      method: test
+      artifacts:
+        - storage_benchmark.csv (units: MB/s)
+        - integrity_hash_check.log
+    links:
+      ce: CECABAAA-ATA21-DataPlane
+      cc: CCCABAAA-ATA21-Storage
+      ci: CICABAAA-ATA21-LogArray-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # Safety/Criticality & Compliance
+  # -----------------------------
+  - id: REQ-AAA-SAF-DAL-013
+    text: Functions influencing flight path and collision avoidance shall meet criticality DAL-B; supporting synthesis and logging functions shall meet DAL-C or better, with assurance cases and traceable tests.
+    source: Certification guidance
+    driver: Safety and compliance
+    acceptance:
+      - Safety case includes DAL allocations, hazard analysis, and verification matrix; audits show full traceability.
+    verification:
+      method: analysis
+      artifacts:
+        - safety_case.md
+        - verification_matrix.xlsx
+    links:
+      ce: CECABAAA-ATA00-SafetyCase
+      cc: CCCABAAA-ATA00-DALAlloc
+      ci: CICABAAA-ATA00-AssurancePkg-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
+
+  # -----------------------------
+  # DET (Digital Evidence Twin)
+  # -----------------------------
+  - id: REQ-AAA-DET-TRACE-014
+    text: Each Heuritma cycle shall emit a DET record with refs.ce and refs.ci, including units for all numeric fields, and register notarized hashes on QUAChain at mission segment boundaries.
+    source: DET governance; Heuritma evaluation axis
+    driver: End-to-end evidence and learning loop
+    acceptance:
+      - Random sample of 200 cycles shows complete DET records; segment boundary notarizations match local hashes.
+    verification:
+      method: analysis
+      artifacts:
+        - det_sample_records.json
+        - quachain_hash_compare.csv
+    links:
+      ce: CECABAAA-ATA31-DET
+      cc: CCCABAAA-ATA31-DETFlow
+      ci: CICABAAA-ATA31-DETAgent-A
+    status: proposed
+    owner: AAA Domain Lead
+    last_updated: 2025-09-08
