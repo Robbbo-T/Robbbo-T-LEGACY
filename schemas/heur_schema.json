@@ -1,39 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "HeuritmaCycle",
   "type": "object",
-  "required": ["cycle_id", "timestamp_utc", "axes", "state_vector", "trust", "req_refs"],
   "properties": {
-    "cycle_id": {"type": "string", "minLength": 3},
-    "timestamp_utc": {"type": "string", "format": "date-time"},
-    "axes": {
+    "id": { "type": "string" },
+    "description": { "type": "string" },
+    "parameters": {
       "type": "object",
-      "required": ["Intent", "Constraint", "Pattern", "Mapping", "Evaluation"],
-      "properties": {
-        "Intent": {"type": "string", "minLength": 1},
-        "Constraint": {"type": "object"},
-        "Pattern": {"type": "object"},
-        "Mapping": {"type": "object"},
-        "Evaluation": {"type": "object"}
-      },
-      "additionalProperties": false
-    },
-    "state_vector": {
-      "type": "object",
-      "required": ["dim", "checksum"],
-      "properties": {
-        "dim": {"type": "integer", "minimum": 128, "maximum": 1024},
-        "checksum": {"type": "string", "minLength": 8},
-        "norm": {"type": "number"}
-      },
-      "additionalProperties": true
-    },
-    "trust": {"type": "object"},
-    "req_refs": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"type": "string", "pattern": "^REQ-AAA-"}
+      "additionalProperties": { "type": "number" }
     }
   },
-  "additionalProperties": true
+  "required": ["id", "description", "parameters"]
 }
