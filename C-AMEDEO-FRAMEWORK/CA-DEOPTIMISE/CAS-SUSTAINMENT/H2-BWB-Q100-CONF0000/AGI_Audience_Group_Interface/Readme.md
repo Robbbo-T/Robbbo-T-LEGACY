@@ -487,3 +487,165 @@ Cuando lo quieras, te paso los **YAML de esquemas** y los **stubs de API** listo
 | AAP | Airports Adaptations | APT | 10.0 | ParkingMooringAndStorage | 1 | 10.00-ParkingMooringAndStorage-0001 | NEstándarUniversal:Artefacto-DesgloseDeProducto-ATA+S1000D-10.00-ParkingMooringAndStorage-0001-v1.0-AQUA-BWB-Q100-CAS-AmedeoPelliccia-7f40f729-RVU |
 | AAP | Airports Adaptations | APT | 12.3 | GroundSupportEquipmentInterfaces | 1 | 12.30-GroundSupportEquipmentInterfaces-0001 | NEstándarUniversal:Artefacto-DesgloseDeProducto-ATA+S1000D-12.30-GroundSupportEquipmentInterfaces-0001-v1.0-AQUA-BWB-Q100-CAS-AmedeoPelliccia-bd39527e-RVU |
 | AAP | Airports Adaptations | SAFE | 7.0 | LiftingAndShoringProcedures | 1 | 07.00-LiftingAndShoringProcedures-0001 | NEstándarUniversal:Artefacto-DesgloseDeProducto-ATA+S1000D-07.00-LiftingAndShoringProcedures-0001-v1.0-AQUA-BWB-Q100-CAS-AmedeoPelliccia-023254d1-RVU |
+
+# AGENT UI — Audience Group Environment for Networking & Team Usage
+
+**(Interfaz para equipos por audiencia · FLT/LINE/BASE/AIRW/SAFE/IT/SUP/APT)**
+
+**ID UTCS-MI (plantilla):**
+`NEstándarUniversal:Especificacion-Interfaz-UTCSMI-00.00-AgentUI-AudienceGroupEnvironment-0001-v1.0-AQUA-ASI-OS-OPS-AmedeoPelliccia-XXXXXXXX-RVU`
+
+## 1) Objetivo
+
+Una interfaz única para que **cada audiencia operativa** trabaje con su **DMRL**, flujos de **OPS/SRV**, y agentes (LLMs/herramientas) con **evidencia y cumplimiento** integrados. Minimalista, rápida, audit-ready.
+
+## 2) Personas y ámbitos
+
+* **FLT**: operaciones de vuelo (briefing, nav DB, advisories).
+* **LINE/BASE**: mantenimiento en línea / base (tareas, RI/FI, SRM).
+* **AIRW**: ingeniería de aeronavegabilidad (cambios, fatiga, conformidad).
+* **SAFE**: safety & compliance (lógica 31, checklists, auditorías).
+* **IT**: IMA/OS, parches, ciber. **SUP**: trazabilidad y SLAs. **APT**: H₂/GSE.
+
+## 3) Arquitectura de la UI (información y navegación)
+
+* **Header**: selector `(Programa/Config/Planta)`, estado de conexión, identidad (OIDC + firma PQ).
+* **Selector de audiencia** (pestañas): FLT · LINE · BASE · AIRW · SAFE · IT · SUP · APT.
+* **Panel lateral**:
+
+  * **DMRL** filtrado por audiencia+dominio (AAA…ppp…).
+  * Búsqueda (ATA, título, estado).
+* **Área de trabajo** (pestañas):
+
+  * **DM Viewer/Editor** (Top-Level + anexos).
+  * **Agent Chat** (herramientas acopladas).
+  * **Evidence** (DET, QUAChain, validaciones).
+  * **Tasks/Jobs** (asignaciones, estados).
+* **Pie**: métricas (latencia, cola de jobs), versión de esquemas.
+
+## 4) Módulos clave
+
+1. **DMRL Browser**
+
+   * Filtros: audiencia, dominio, ATA mayor, texto.
+   * Estados: `draft/released/superseded`.
+   * Acción rápida: **Validar ID**, **Abrir**, **Asignar**.
+
+2. **Agent Chat (toolformer)**
+   Herramientas disponibles (todas registran evidencia):
+
+   * `FetchDMRL(audience, domain, filters)`
+   * `OpenDM(full_id)`
+   * `ValidateID(full_id)` (regex + ATA↔dominio + audiencia)
+   * `GenerateDraft(full_id, template)` (inserta anexo, respeta UTCS)
+   * `PublishEvidence(full_id, det_packet)` (DET + QUAChain)
+   * `RunChecklist(safety_pack)` (SAFE)
+   * `PlanSlots(line/base)` (CVaR)
+   * `PartsTrace(s2000m_ref)` (LIB/SUP)
+
+3. **Evidence Panel**
+
+   * **DET** (inputs, hashes, tool-versions, seeds).
+   * **Anchors** QUAChain + firma post-cuántica (Dilithium).
+   * Semáforos: `ID_REGEX_OK · ATA_ALLOWED · AUDIENCE_MATCH · AI_ANNEX_OK`.
+
+4. **AI-Readiness Annex (si aplica ML)**
+
+   * `level (L1/L2) · hat (2A/2B) · conops_ref · od/odd · assurance_notes · mitigations[]`.
+   * Bloque obligatorio para publicar DM con ML (IIS/SAFE/OOO).
+
+## 5) Contratos de datos (mínimos)
+
+**DM item (JSON):**
+
+```json
+{
+  "program":"AQUA-BWB-Q100","phase":"CAS","config":"CONF0000",
+  "audience":"LINE","domain":"AAA","ata":"53.10",
+  "title":"FuselageInspectionProgram","nnnn":"0001",
+  "full_id":"NEstándarUniversal:Artefacto-DesgloseDeProducto-ATA+S1000D-53.10-FuselageInspectionProgram-0001-v1.0-AQUA-BWB-Q100-CAS-AmedeoPelliccia-XXXXXXXX-RVU",
+  "status":"draft",
+  "trace":{"det_id":null,"quachain_anchor":null}
+}
+```
+
+**AI Annex (cuando ML):**
+
+```json
+{
+  "level": "L1",
+  "hat": "2A",
+  "conops_ref": "CONOPS-CAS-OPS-001",
+  "od": "LineOps-Day/VMC",
+  "odd": null,
+  "assurance_notes": "Model validated on representative operational data; performance meets safety threshold.",
+  "mitigations": [
+    {
+      "id": "MIT-001",
+      "description": "Fallback to manual inspection in case of model uncertainty above threshold.",
+      "status": "implemented"
+    }
+  ]
+}
+```
+
+**Regex `full_id`:**
+
+```
+^NEstándarUniversal:Artefacto-DesgloseDeProducto-ATA\+S1000D-
+(?P<ata>\d{2}\.\d{2})-(?P<cat>[A-Za-z0-9]+)-(?P<num>\d{4})-
+v1\.0-AQUA-BWB-Q100-CAS-AmedeoPelliccia-(?P<stub>[0-9a-f]{8})-RVU$
+```
+
+## 6) APIs (esqueleto)
+
+* `GET /v1/dmrl?audience=LINE&domain=AAA&ata_major=53` → lista DM.
+* `POST /v1/validate/id` `{full_id}` → `{ok:true, issues:[]}`.
+* `POST /v1/dm/:id/publish-evidence` `{det, anchors}` → `{ok, anchor}`.
+* `POST /v1/agent/run` `{tool, args}` → `{result, det_ref}`.
+
+## 7) Seguridad y cumplimiento
+
+* **RBAC** por audiencia + dominios; **audit log** por acción.
+* **PQ-Crypto** (Kyber para KEM, Dilithium para firmas).
+* **Privacidad**: secretos fuera del prompt; redacción automática de PII en evidencia.
+* **Trazabilidad**: cada acción del agente genera **DET** (no negociable).
+
+## 8) Estados y fallos
+
+* **Offline degradado** (solo lectura de DMRL cacheado).
+* **Conflictos de edición**: bloqueo optimista + merge asistido.
+* **Errores críticos**: nunca publicar sin `ID_REGEX_OK` ni `AI_ANNEX_OK` (si ML).
+
+## 9) Accesibilidad e i18n
+
+* WCAG 2.1 AA, atajos teclado, modo alto contraste.
+* i18n: ES/EN de interfaz y plantillas; contenidos técnicos no se traducen automáticamente.
+
+## 10) Métricas y telemetría
+
+* Tiempo a primer DM, latencia de validación, % DMs con AI-Annex, ratio `evidence/publish`, tasa de conflictos.
+
+---
+
+### Wireframe (texto)
+
+```
+[Header: Prog/Conf | Audience Tabs | User(PQ-signed) | Conn ]
+[Sidebar: Filters (Domain, ATA, Search) | DMRL List           ]
+[Main Tabs: DM Viewer | Agent Chat | Evidence | Tasks          ]
+[DM Viewer: Top-Level MD + Annexes | Actions: Validate/Publish]
+[Agent Chat: prompt  | Tool palette | Results -> Evidence     ]
+[Evidence: DET packets (timeline) | Anchors | Download        ]
+```
+
+---
+
+## Checklist MVP (2 semanas)
+
+1. DMRL Browser con filtros + **validación de ID**.
+2. Agent Chat con **`FetchDMRL`**, **`ValidateID`**, **`PublishEvidence`**.
+3. Evidence Panel con **DET timeline** y anclaje QUAChain simulado.
+4. AI-Annex editor (plantilla fija) y bloqueo de publicación si falta.
+5. RBAC por audiencia + registro de auditoría.
+
