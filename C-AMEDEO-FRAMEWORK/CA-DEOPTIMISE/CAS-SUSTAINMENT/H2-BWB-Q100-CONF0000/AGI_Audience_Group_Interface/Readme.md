@@ -572,7 +572,21 @@ Una interfaz única para que **cada audiencia operativa** trabaje con su **DMRL*
 **AI Annex (cuando ML):**
 
 ```json
-{"level":"L1","hat":"2A","conops_ref":"CONOPS-CAS-OPS-001","od":"LineOps-Day/VMC","odd":null,"assurance_notes":"","mitigations":[]}
+{
+  "level": "L1",
+  "hat": "2A",
+  "conops_ref": "CONOPS-CAS-OPS-001",
+  "od": "LineOps-Day/VMC",
+  "odd": null,
+  "assurance_notes": "Model validated on representative operational data; performance meets safety threshold.",
+  "mitigations": [
+    {
+      "id": "MIT-001",
+      "description": "Fallback to manual inspection in case of model uncertainty above threshold.",
+      "status": "implemented"
+    }
+  ]
+}
 ```
 
 **Regex `full_id`:**
