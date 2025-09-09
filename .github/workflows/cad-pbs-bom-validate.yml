@@ -1,6 +1,8 @@
 ---
 # .github/workflows/cad-pbs-bom-validate.yml
 name: CAD PBS/BOM Validate
+permissions:
+  contents: read
 
 on:
   push: {}
