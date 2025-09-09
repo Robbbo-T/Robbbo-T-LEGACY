@@ -1,5 +1,8 @@
 ---
 name: asi-decision-diff
+permissions:
+  contents: read
+  issues: write
 "on":
   pull_request:
     paths:
