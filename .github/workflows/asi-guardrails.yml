@@ -1,5 +1,7 @@
 ---
 name: asi-guardrails
+permissions:
+  contents: read
 "on":
   pull_request:
     paths:
