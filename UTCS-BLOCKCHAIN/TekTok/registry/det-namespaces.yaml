@@ -1,0 +1,27 @@
+---
+namespaces:
+  DET:CAD:AAA: "Digital Evidence Twin - Computer-Aided Design - Architectures Airframes Aerodynamics"
+  DET:CAE:AAA: "Digital Evidence Twin - Computer-Aided Engineering - Architectures Airframes Aerodynamics"
+  DET:CAM:AAA: "Digital Evidence Twin - Computer-Aided Manufacturing - Architectures Airframes Aerodynamics"
+  DET:CAT:AAA: "Digital Evidence Twin - Computer-Aided Testing - Architectures Airframes Aerodynamics"
+  DET:CAI:AAA: "Digital Evidence Twin - Computer-Aided Integration - Architectures Airframes Aerodynamics"
+  DET:CAS:AAA: "Digital Evidence Twin - Computer-Aided Sustainment - Architectures Airframes Aerodynamics"
+  DET:CAO:AAA: "Digital Evidence Twin - Computer-Aided Organization - Architectures Airframes Aerodynamics"
+
+  DET:CAD:PPP: "Digital Evidence Twin - Computer-Aided Design - Propulsion and Fuel"
+  DET:CAE:PPP: "Digital Evidence Twin - Computer-Aided Engineering - Propulsion and Fuel"
+  DET:CAM:PPP: "Digital Evidence Twin - Computer-Aided Manufacturing - Propulsion and Fuel"
+  DET:CAT:PPP: "Digital Evidence Twin - Computer-Aided Testing - Propulsion and Fuel"
+  DET:CAI:PPP: "Digital Evidence Twin - Computer-Aided Integration - Propulsion and Fuel"
+  DET:CAS:PPP: "Digital Evidence Twin - Computer-Aided Sustainment - Propulsion and Fuel"
+  DET:CAO:PPP: "Digital Evidence Twin - Computer-Aided Organization - Propulsion and Fuel"
+
+  DET:TOK:EMIT: "Digital Evidence Twin - Token Emission Events"
+  DET:TOK:RECOVER: "Digital Evidence Twin - Anti-Corruption Recovery Events"
+
+meta:
+  version: "1.0.0"
+  total_namespaces: 105
+  total_domains: 15
+  total_cax_pillars: 7
+  additional_token_namespaces: 2

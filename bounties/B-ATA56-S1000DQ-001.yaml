@@ -1,0 +1,25 @@
+---
+bounty:
+  id: "B-ATA56-S1000DQ-001"
+  title: "ATA-56 S1000D-Q pack hardening + RTM/ICD sync"
+  focus: "CE→CC→CI→CP→FE→QS traceability; DM-ARCH/ICD/VV alignment"
+  scope:
+    - "Add missing cross-links in RTM and ICD signal list"
+    - "Ensure BREX-CAS compliance across new DMs"
+  deliverables:
+    - "PR with updates to DM-ARCH/ICD/VV and matrices/rtm.yaml"
+    - "DET events: OpenCall.BountyCompleted + evidence hashes"
+  acceptance:
+    - "yamllint -s PASS on edited/added YAML"
+    - "node scripts/s1000d_brex_validate.mjs DM-*.yaml PASS"
+    - "npm run validate:events PASS (if present)"
+  remuneration:
+    stablecoin_amount: "2000_EUR_equivalent"
+    royalty_share_percent: 0.05
+    royalty_ref: "OEGI-AG-TBD"  # bind to certified AG when available
+  timeline:
+    start: "T0"
+    deadline_days: 14
+  contacts:
+    owner: "windows-lead@aqua-os"
+  notes: "No refactor of legacy; additive changes only."

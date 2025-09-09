@@ -1,0 +1,90 @@
+# qal/LIB/kit.yaml
+dom: LIB                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-LIB-10
+    objetivo: "LIB primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-LIB-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-LIB-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:LIB:10:SE-LIB-10:V1.0"
+  - id: SE-LIB-20
+    objetivo: "LIB integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-LIB-02" ]
+    kits:
+      bom_ref: "MBOM-LIB-20-v1.0"
+    det_ref: "DET:SE:LIB:20:SE-LIB-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-LIB↔AAA-01
+    tipo: ICD
+    descripcion: "LIB to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:LIB:ICD:DI-LIB-AAA:V1.0"
+  - id: DI-LIB↔EDI-02
+    tipo: ICD
+    descripcion: "LIB electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:LIB:ICD:DI-LIB-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-LIB-PRIMARY
+    scope: "Primary LIB components with kit and vendor"
+    as_built: "EBOM-LIB-PRIMARY-v1.0"
+    vendor_pack: "AVL-LIB-2025Q3"
+    det_ref: "DET:CE:LIB:PRIMARY:CE-LIB-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "LIB01"
+    proveedor: "LIB Vendor Primary"
+    alcance: [ "LIB main components", "LIB materials" ]
+    ppap: "PPAP-LIB01-001-v1.0"
+    fai:  "FAI-LIB01-001-v1.0"
+    lt_dias: 45
+  - cage: "LIB02"
+    proveedor: "LIB Vendor Secondary"
+    alcance: [ "LIB secondary components", "LIB consumables" ]
+    ppap: "PPAP-LIB02-002-v1.0"
+    fai:  "FAI-LIB02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-LIB-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-LIB-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:LIB:CI:PRIMARY:V1.0"
+    note: "VQE for LIB primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-LIB-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-LIB-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:LIB:SE:10:V1.0"
+    note: "QML surrogate for LIB station optimization"
+
+# Metadata
+metadata:
+  owner: "LIB Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:LIB:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-lib -> #se-lib"
+  di_invariant: "#dinv-lib -> #di-lib"
+  ce_envelope: "#cenv-lib -> #ce-lib"

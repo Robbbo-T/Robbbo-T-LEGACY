@@ -1,0 +1,52 @@
+---
+# BRK-DS Air Operations Requirements
+# Domain: OPS - Air Operations (Reg. 965/2012)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-OPS-001
+    text: >-
+      For CAT/NCC/NCO/SPO operations, implement Part‑ORO/CAT/SPO/SPA as
+      applicable, with manuals, training, FTL (where applicable), and
+      operational control; DET logs revision control (EAR Rev. 22 or later).
+    source: "Commission Regulation (EU) No 965/2012"
+    driver: "safety"
+    acceptance: >-
+      Operations manuals implemented for applicable operation types
+      (CAT/NCC/NCO/SPO), training programmes established, FTL compliance
+      maintained where applicable, operational control procedures documented,
+      and DET evidence shows revision control EAR Rev. 22 or later.
+    verification: "Process"
+    links:
+      ce: "TBD-AIR-OPERATIONS-CE"
+      cc: "TBD-AIR-OPERATIONS-CC"
+      ci: "TBD-AIR-OPERATIONS-CI"
+    status: "baselined"
+    owner: "flight-operations@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-OPS-002
+    text: >-
+      Integrate Passenger safety and Special Categories of Passengers
+      procedures in ORO/CC; record drills and competency checks.
+    source: "Part-ORO and Part-CC passenger safety requirements"
+    driver: "safety"
+    acceptance: >-
+      Passenger safety procedures integrated in operations manuals,
+      Special Categories of Passengers procedures documented,
+      crew drills recorded, and competency checks maintained with
+      evidence in DET.
+    verification: "Process"
+    links:
+      ce: "TBD-PASSENGER-SAFETY-CE"
+      cc: "TBD-PASSENGER-SAFETY-CC"
+      ci: "TBD-PASSENGER-SAFETY-CI"
+    status: "baselined"
+    owner: "cabin-operations@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "flight-operations@aqua-os"
+  reviewer: "safety-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

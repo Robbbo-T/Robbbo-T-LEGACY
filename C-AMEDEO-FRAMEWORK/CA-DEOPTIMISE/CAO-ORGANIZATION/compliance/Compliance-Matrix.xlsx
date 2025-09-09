@@ -1,0 +1,11 @@
+Standard,Organization,Applicability,Compliance Level,Verification Method,Status,Last Review
+ISO 9001,ISO,Quality Management,Mandatory,Audit,Active,TBD
+AS9100,SAE International,Aerospace Quality,Mandatory,Audit,Active,TBD
+ISO 14001,ISO,Environmental Management,Recommended,Assessment,Active,TBD
+ISO 27001,ISO,Information Security,Mandatory,Audit,Active,TBD
+DO-178C,RTCA,Software Considerations,Conditional,Assessment,TBD,TBD
+DO-254,RTCA,Hardware Considerations,Conditional,Assessment,TBD,TBD
+CS-25,EASA,Airworthiness Standards,Conditional,Certification,TBD,TBD
+FAR Part 25,FAA,Airworthiness Standards,Conditional,Certification,TBD,TBD
+ICAO CORSIA,ICAO,Environmental,Future,Monitoring,Planning,TBD
+EU ETS,European Union,Environmental,Future,Monitoring,Planning,TBD

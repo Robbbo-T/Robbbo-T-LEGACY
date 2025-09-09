@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASI Score Entry",
+  "type": "object",
+  "required": ["anchor", "domain", "composite", "metrics", "provenance"],
+  "properties": {
+    "anchor": {
+      "type": "string",
+      "description": "Grouping key (refs.ci or refs.ce)"
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "Domain code (AAA, EDI, etc.)"
+    },
+    "composite": {
+      "type": "number",
+      "description": "Certification-agnostic core score"
+    },
+    "cert_bonus": {
+      "type": "number",
+      "description": "[0..max_cert_bonus] capped bonus"
+    },
+    "display_score": {
+      "type": "number",
+      "description": "composite + cert_bonus (for display only)"
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Individual metric scores",
+      "properties": {
+        "cav_reuse_multiplier": {"type": "number"},
+        "cav_energy_efficiency": {"type": "number"},
+        "cav_spillover_effect": {"type": "number"},
+        "cli_novelty_score": {"type": "number"},
+        "cli_coherence": {"type": "number"},
+        "cli_emergence_rate": {"type": "number"},
+        "baf_roi_projection": {"type": "number"},
+        "baf_sustainability_alignment": {"type": "number"},
+        "baf_risk_mitigation": {"type": "number"}
+      },
+      "additionalProperties": {"type": "number"}
+    },
+    "clusters": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Cluster memberships"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "repo": {"type": "string"},
+        "signer": {"type": "string"},
+        "det_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "required": ["repo", "det_ids"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Score computation timestamp"
+    }
+  }
+}

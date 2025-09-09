@@ -1,0 +1,102 @@
+---
+# Component-level requirements for CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS
+# Component item requirements with links up/down hierarchy
+
+requirements:
+  - id: REQ-WIN-CI-EMI-001
+    text: "OLED display electronics shall be shielded to limit EMI emissions to ≤ 50 nT/√Hz in 1-100 Hz band."
+    source: "EMI budget decomposition from REQ-WIN-01"
+    driver: "safety"
+    acceptance: "Measured OLED stack EMI ≤ 50 nT/√Hz in quantum-sensitive frequency bands."
+    verification: "Component EMI test per DO-160 Section 20"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-01"
+    status: "baselined"
+    owner: "emi-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-CI-EMI-002
+    text: "Display power conditioning shall include common-mode filtering effective > 40 dB from 1-1000 Hz."
+    source: "EMI budget decomposition from REQ-WIN-01"
+    driver: "safety"
+    acceptance: "Common-mode filter insertion loss > 40 dB verified by test; EMI contribution ≤ 25 nT/√Hz."
+    verification: "Filter characterization test + system EMI measurement"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-01"
+    status: "baselined"
+    owner: "power-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-CI-THERM-001
+    text: "OLED display power dissipation shall not exceed 2 W/m² average under normal operation patterns."
+    source: "Thermal budget decomposition from REQ-WIN-02"
+    driver: "performance"
+    acceptance: "Measured OLED power density ≤ 2 W/m² for standard display patterns; thermal contribution verified."
+    verification: "Calorimetry test with thermal modeling correlation"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-02"
+    status: "baselined"
+    owner: "thermal-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-CI-THERM-002
+    text: "MLI thermal barrier shall maintain < 0.3 W/K conductance per window in vacuum conditions."
+    source: "Thermal budget decomposition from REQ-WIN-04"
+    driver: "performance"
+    acceptance: "MLI stack thermal conductance ≤ 0.3 W/K measured in vacuum chamber at design temperatures."
+    verification: "Vacuum chamber thermal conductance measurement"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-04"
+    status: "baselined"
+    owner: "materials-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-CI-SAFE-001
+    text: "Windows controller shall respond to ABU-QuantumProtect signals within 100 ms."
+    source: "Safety timing budget from REQ-WIN-03"
+    driver: "safety"
+    acceptance: "ABU signal receipt to display mode change ≤ 100 ms; verified by stimulated test."
+    verification: "Hardware-in-loop safety response test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-03"
+    status: "baselined"
+    owner: "safety-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-CI-SEC-001
+    text: "Biometric processing hardware shall implement secure enclave with hardware root of trust."
+    source: "Security architecture from REQ-WIN-05"
+    driver: "security"
+    acceptance: "HSM-based secure enclave operational; biometric data never leaves secure boundary."
+    verification: "Security architecture review + penetration test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+      up: "REQ-WIN-05"
+    status: "baselined"
+    owner: "security-engineer@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+meta:
+  owner: "windows-ci-lead@aqua-os"
+  reviewer: "windows-lead@aqua-os"
+  last_updated: "2025-01-15T14:00:00Z"
+  change_ref: "BWB-Q100-U-BAY-QCO-ATA56"
+  hierarchy_level: "CI"
+  parent_component: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"

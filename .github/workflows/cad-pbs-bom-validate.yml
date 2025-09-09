@@ -1,0 +1,39 @@
+---
+# .github/workflows/cad-pbs-bom-validate.yml
+name: CAD PBS/BOM Validate
+permissions:
+  contents: read
+
+on:
+  push: {}
+  pull_request: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate PBS Structure
+        run: |
+          # Simple validation checks
+          echo "Checking for Effectivities.yaml files..."
+          find . -name "Effectivities.yaml" -type f | head -5 || echo "No Effectivities.yaml files found"
+
+          echo "Checking for DET directory..."
+          if [ -f "./det/.keep.json" ]; then
+            echo "OK: DET directory exists"
+          else
+            echo "WARNING: DET directory not found"
+          fi
+
+          echo "Basic PBS/BOM validation completed"

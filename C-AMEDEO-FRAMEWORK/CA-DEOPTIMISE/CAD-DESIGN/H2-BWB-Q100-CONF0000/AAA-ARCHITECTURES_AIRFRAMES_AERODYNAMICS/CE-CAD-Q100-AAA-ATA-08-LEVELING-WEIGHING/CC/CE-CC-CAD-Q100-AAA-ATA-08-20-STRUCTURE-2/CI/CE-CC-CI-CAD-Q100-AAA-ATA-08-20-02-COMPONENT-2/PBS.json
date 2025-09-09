@@ -1,0 +1,12 @@
+{
+  "wbs_id": "Q100-08-20-02",
+  "name": "2",
+  "owner_domain": "AAA",
+  "cax": "CAD",
+  "sns": "Q100082002",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-08-20-STRUCTURE-2",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-08-20-02-COMPONENT-2",
+  "description": "Component 2 for ATA 08",
+  "effectivity": "CONF0000",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

@@ -1,0 +1,19 @@
+---
+version: 1
+meta:
+  owner: structures@aqua-os
+  last_updated: 2025-09-01
+
+applies_to:
+  ci_id: CE-CC-CI-CAD-Q100-AAA-ATA-57-10-07-COMPONENT-7
+  description: "Component 7 for ATA 57"
+
+inherited_from:
+  - CE-CC-CAD-Q100-AAA-ATA-57-10-STRUCTURE-1
+
+standards:
+  - id: CS-25.783
+    org: EASA
+    title: Structures
+    level: MUST
+    verification: [Analysis, Test]

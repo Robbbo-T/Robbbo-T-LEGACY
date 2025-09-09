@@ -1,0 +1,83 @@
+---
+# QAL kit — Dominio AAA (Arquitecturas/Aeroestructuras/Aerodinámica)
+dom: AAA
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+tfa_ref: "#tfa-bwb"
+
+metadata:
+  owner: "Structure Domain Lead"
+  version: "v1.0"
+  qaudit_rollup: "QAUDIT:AAA:KIT:V1.0"
+
+se:  # Station Envelop (alias SA→SE)
+  - id: SE-AAA-10
+    name: "Wing-box lower assembly"
+    takt: "3d"
+    resources: {operators: 6, robots: 2, area_m2: 320}
+    kits: ["KIT-AA-LOWER-01", "KIT-AA-FAST-01"]
+    det_ref: "DET:SE:AAA:10:SE-AAA-10:V1.0"
+  - id: SE-AAA-20
+    name: "Multi-bubble array mate"
+    takt: "3d"
+    resources: {operators: 8, fixtures: 3, area_m2: 450}
+    kits: ["KIT-AA-BUBBLE-SET", "KIT-AA-ADH-01"]
+    det_ref: "DET:SE:AAA:20:SE-AAA-20:V1.0"
+  - id: SE-AAA-30
+    name: "Systems routing (structural)"
+    takt: "2d"
+    resources: {operators: 5, area_m2: 260}
+    det_ref: "DET:SE:AAA:30:SE-AAA-30:V1.0"
+
+di:  # Domain Interface (ICDs)
+  - id: ICD_AAA_CQH_001
+    title: "Cryo tank to structure — thermal contraction & attachments"
+    version: "v1.0"
+    det_ref: "DET:DI:AAA:ICD:ICD_AAA_CQH_001:V1.0"
+  - id: ICD_AAA_ppp_002
+    title: "BLI propulsion hardpoints & wake zone definition"
+    version: "v1.0"
+    det_ref: "DET:DI:AAA:ICD:ICD_AAA_ppp_002:V1.0"
+  - id: ICD_AAA_EDI_003
+    title: "Primary power routing (540 VDC) penetrations"
+    version: "v1.0"
+    det_ref: "DET:DI:AAA:ICD:ICD_AAA_EDI_003:V1.0"
+
+ce:  # Component Equipped (as-built con vendor kit)
+  - id: CE-AAA-53-30
+    desc: "Multi-bubble container (3 cells) equipped"
+    items: ["CI-53-30-TIES", "CI-53-30-RINGS", "CI-53-30-MATE"]
+    vendor_kit: ["AVL-TORAY-T800M21", "AVL-TI-64-AMS4928"]
+    as_built_rev: "AB1"
+    det_ref: "DET:CE:AAA:53:CE-AAA-53-30:V1.0"
+
+cv:  # Component Vendor (AVL)
+  avl:
+    - supplier: "Toray Advanced Composites"
+      cage: "1ABC2"
+      scope: "CFRP T800/M21"
+      ppap: "PPAP-L3"
+      lt_weeks: 10
+    - supplier: "TIMET"
+      cage: "7Z9D5"
+      scope: "Ti-6Al-4V forgings"
+      ppap: "PPAP-L3"
+      lt_weeks: 14
+
+# Hooks QS que transformará scripts/emit_qs_from_yaml.mjs → eventos QS.Published + DET stub
+qs_hooks:
+  - ref: >
+      EstándarUniversal:EstadoCuantico-VQE-02.00-AAA-CI-53-30-TIES-0003-v1.0-BlendedWingBodyQ100-GeneracionHybrida-AIR-Amedeo Pelliccia-7b821d44-RestoDeVidaUtil
+    det_ref: "DET:QS:AAA:CI:53-30-TIES:V1.0"
+    note: "VQE para microfisurado CFRP@20K"
+  - ref: >
+      EstándarUniversal:EstadoCuantico-QML-02.00-AAA-CI-53-30-RINGS-0002-v1.0-BlendedWingBodyQ100-GeneracionHybrida-AIR-Amedeo Pelliccia-9a3f2b1c-RestoDeVidaUtil
+    det_ref: "DET:QS:AAA:CI:53-30-RINGS:V1.0"
+    note: "QML surrogate para tensiones de junta"
+
+# Notas de compatibilidad (alias)
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa10: "#sa-aaa -> #se-aaa"

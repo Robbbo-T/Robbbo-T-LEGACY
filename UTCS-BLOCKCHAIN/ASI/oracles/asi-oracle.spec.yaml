@@ -1,0 +1,103 @@
+---
+# ASI Oracle Specification
+
+version: 1.0
+updated: "2025-09-01T00:00:00Z"
+
+oracle:
+  name: "ASI Oracle"
+  description: "Autonomous Sustainable Intelligence scoring and ranking oracle"
+  type: "off-chain"
+
+inputs:
+  det_evidence:
+    glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+    validation:
+      signature_alg: "Ed25519"
+      hash_length: 64
+      units_required: true
+
+  cadet_kpis:
+    glob: "UTCS-BLOCKCHAIN/CADET/kpis/*.yaml"
+    validation:
+      schema_ref: "UTCS-BLOCKCHAIN/DET/schemas/cadet-record.schema.json"
+
+  tekTok_feeds:
+    poi_feed: "UTCS-BLOCKCHAIN/TekTok/oracle/feed.json"
+    recovery_feed: "UTCS-BLOCKCHAIN/TekTok/oracle/recovery_feed.json"
+
+  traces:
+    glob: "UTCS-BLOCKCHAIN/TRACES/**/*.trace.yaml"
+
+outputs:
+  scores:
+    path: "UTCS-BLOCKCHAIN/ASI/leaderboards/"
+    formats: ["json", "markdown"]
+
+  det_events:
+    patterns:
+      - "DET:ASI:SCORE:*:score_publish:V*"
+      - "DET:ASI:CLUSTER:*:cluster_update:V*"
+      - "DET:ASI:PROPOSAL:*:proposal_submit:V*"
+
+  proposals:
+    path: "UTCS-BLOCKCHAIN/ASI/proposals/"
+    template_ref: "templates/weight-change-proposal.md"
+
+processing:
+  schedule: "weekly"
+  trigger_day: "sunday"
+  trigger_time: "03:00:00Z"
+
+  steps:
+    - name: "collect_evidence"
+      description: "Gather DET packets, CADET KPIs, TekTok feeds"
+
+    - name: "validate_provenance"
+      description: "Check repository eligibility and signatures"
+
+    - name: "compute_metrics"
+      description: "Calculate CAV, CLI, BAF scores"
+
+    - name: "normalize_scores"
+      description: "Apply normalization and weighting"
+
+    - name: "detect_clusters"
+      description: "Identify innovation clusters"
+
+    - name: "generate_leaderboards"
+      description: "Create ranked output files"
+
+    - name: "emit_det_events"
+      description: "Publish scoring evidence to DET"
+
+    - name: "check_proposal_triggers"
+      description: "Generate proposals for significant changes"
+
+security:
+  signature:
+    algorithm: "Ed25519"
+    signer_id: "asi-oracle@tek"
+
+  integrity:
+    hash_algorithm: "SHA-256"
+    canonical_json: true
+
+  access_control:
+    read_only_inputs: true
+    output_validation: true
+
+guards:
+  rate_limiting:
+    max_computations_per_hour: 1
+
+  resource_limits:
+    max_packets_per_run: 10000
+    max_clusters_detected: 100
+
+  outlier_detection:
+    sigma_threshold: 3
+
+  quality_gates:
+    min_evidence_threshold: 3
+    min_signature_validity: 0.95

@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for PPP (CAB-BRAINSTORMING)
+aliases:
+  cqh_integration: "ALIAS:PPP:CQH:INTEGRATION-CONCEPTS"
+  eer_integration: "ALIAS:PPP:EER:INTEGRATION-CONCEPTS"
+  aaa_integration: "ALIAS:PPP:AAA:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:PPP:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:PPP:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:PPP:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:PPP:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:PPP:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:PPP:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:PPP:MAXENT:NOVELTY-SEARCH"

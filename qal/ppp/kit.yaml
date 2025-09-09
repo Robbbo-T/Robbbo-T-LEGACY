@@ -1,0 +1,42 @@
+---
+# QAL kit — Dominio ppp (Propulsión/Combustibles)
+dom: ppp
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+tfa_ref: "#tfa-bwb"
+
+metadata:
+  owner: "Propulsion Domain Lead"
+  version: "v1.0"
+  qaudit_rollup: "QAUDIT:ppp:KIT:V1.0"
+
+se:  # Station Envelop
+  - id: SE-ppp-71
+    name: "Engine mount assembly"
+    takt: "5d"
+    resources: {operators: 12, cranes: 2, area_m2: 800}
+    kits: ["KIT-PP-ENGINE-01", "KIT-PP-MOUNT-01"]
+    det_ref: "DET:SE:ppp:71:SE-ppp-71:V1.0"
+
+di:  # Domain Interface
+  - id: ICD_ppp_AAA_001
+    title: "Engine mount to fuselage interface"
+    version: "v1.0"
+    det_ref: "DET:DI:ppp:ICD:ICD_ppp_AAA_001:V1.0"
+
+ce:  # Component Equipped
+  - id: CE-ppp-71-10
+    desc: "Hydrogen fuel cell stack equipped"
+    items: ["CI-71-10-STACK", "CI-71-10-COOLING"]
+    vendor_kit: ["AVL-BALLARD-FC"]
+    as_built_rev: "AB1"
+    det_ref: "DET:CE:ppp:71:CE-ppp-71-10:V1.0"
+
+# QS hooks para propulsión
+qs_hooks:
+  - ref: >
+      EstándarUniversal:EstadoCuantico-QUBO-02.00-ppp-CI-71-10-STACK-0001-v1.0-BlendedWingBodyQ100-GeneracionHybrida-AIR-Amedeo Pelliccia-abc123ef-RestoDeVidaUtil
+    det_ref: "DET:QS:ppp:CI:71-10-STACK:V1.0"
+    note: "QUBO optimization for fuel cell efficiency"

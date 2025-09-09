@@ -1,0 +1,112 @@
+---
+# BRK-DS Global Governance Requirements
+# Domain: GOV - Global governance (applies to all domains)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-GOV-001
+    text: >-
+      The organisation shall maintain a live compliance baseline mapped to
+      the Basic Regulation and all applicable Implementing/Delegated rules
+      and CS/AMC/GM, with versioning and impact analysis on every change;
+      DET must record the rule ID, version, and evidence reference.
+    source: "EASA Basic Regulation (EU) 2018/1139"
+    driver: "safety"
+    acceptance: >-
+      Compliance baseline database must be maintained with current versions
+      of all applicable regulations, with DET evidence tracking rule changes
+      and impact analysis completed within 30 days of regulation updates.
+    verification: "Process"
+    links:
+      ce: "TBD-COMPLIANCE-BASELINE-CE"
+      cc: "TBD-COMPLIANCE-BASELINE-CC"
+      ci: "TBD-COMPLIANCE-BASELINE-CI"
+    status: "baselined"
+    owner: "compliance-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-GOV-002
+    text: >-
+      AMC/GM adoption: for each rule, select AMC/GM or propose AltMoC,
+      including rationale, safety assessment, and authority acceptance record.
+    source: "EASA AMC/GM Guidelines"
+    driver: "safety"
+    acceptance: >-
+      For each applicable regulation, either adopt published AMC/GM or
+      document alternative means of compliance with EASA acceptance.
+    verification: "Inspection"
+    links:
+      ce: "TBD-AMC-SELECTION-CE"
+      cc: "TBD-AMC-SELECTION-CC"
+      ci: "TBD-AMC-SELECTION-CI"
+    status: "baselined"
+    owner: "compliance-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-GOV-003
+    text: >-
+      LoI gating: for every certification item define Level of Involvement
+      (risk‑based compliance verification), show the LoI criteria and
+      resulting EASA/NAA engagement in the plan of activities.
+    source: "EASA Level of Involvement Guidelines"
+    driver: "safety"
+    acceptance: >-
+      LoI worksheet completed for each certification item with documented
+      criteria and EASA/NAA engagement level. Evidence: LoI worksheet +
+      acceptance.
+    verification: "Process"
+    links:
+      ce: "TBD-LOI-ASSESSMENT-CE"
+      cc: "TBD-LOI-ASSESSMENT-CC"
+      ci: "TBD-LOI-ASSESSMENT-CI"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-GOV-004
+    text: >-
+      Part‑IS (Information Security): operate an ISMS proportionate to risks
+      with potential impact on aviation safety; integrate with safety
+      management and occurrence reporting; meet applicability dates
+      (Oct 2025/Feb 2026) and keep a live SoA (statement of applicability).
+    source: "EASA Part-IS Commission Implementing Regulation (EU) 2023/203"
+    driver: "safety"
+    acceptance: >-
+      ISMS implemented and operational by applicable dates with documented
+      SoA, integrated safety management procedures, and occurrence reporting
+      capabilities for information security events.
+    verification: "Process"
+    links:
+      ce: "TBD-ISMS-CE"
+      cc: "TBD-ISMS-CC"
+      ci: "TBD-ISMS-CI"
+    status: "baselined"
+    owner: "infosec-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+  - id: BRK-GOV-005
+    text: >-
+      Occurrence & Confidential Reporting: implement mandatory & voluntary
+      occurrence reporting per EU 376/2014 and enable Confidential Safety
+      Reporting; DET must show just‑culture protections and 72‑hour
+      reporting performance.
+    source: "EU Regulation 376/2014 on Occurrence Reporting"
+    driver: "safety"
+    acceptance: >-
+      Occurrence reporting system operational with 72-hour reporting
+      capability, confidential safety reporting channel established,
+      and just-culture protections documented and implemented.
+    verification: "Process"
+    links:
+      ce: "TBD-OCCURRENCE-REPORTING-CE"
+      cc: "TBD-OCCURRENCE-REPORTING-CC"
+      ci: "TBD-OCCURRENCE-REPORTING-CI"
+    status: "baselined"
+    owner: "safety-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "compliance-lead@aqua-os"
+  reviewer: "regulatory-affairs@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

@@ -1,0 +1,39 @@
+{
+  "det_id": "DET:CAS:EDI:22-00:design:V1",
+  "ts": "2025-09-01T05:11:27.182691Z",
+  "inputs": {
+    "domain": "EDI",
+    "domain_name": "ELECTRONICS_DIGITAL_INSTRUMENTS",
+    "cax_pillar": "CAS",
+    "cax_description": "Computer-Aided Sustainment",
+    "ata_sns": "22-00",
+    "configuration": "H2-BWB-Q100-CONF0000",
+    "activity_type": "design"
+  },
+  "processing": {
+    "tool": "AQUA-OS:cas-registry@1.0",
+    "params": {
+      "domain_owner": "EDI",
+      "cross_domain_refs": true,
+      "ata_compliance": true,
+      "circular_assurance": true,
+      "blockchain_enabled": true
+    }
+  },
+  "outputs": {
+    "registry_status": "NODE_CREATED",
+    "traceability_links": [],
+    "compliance_status": "ATA_ALIGNED",
+    "circularity_metrics": {
+      "reuse_potential": "TBD",
+      "sustainability_score": "TBD",
+      "lifecycle_stage": "DESIGN"
+    },
+    "units": "dimensionless"
+  },
+  "hash": "SHA256_PLACEHOLDER_CAS_EDI_22_00",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "utcs-blockchain@edi"
+  }
+}

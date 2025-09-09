@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UTCS-MI Universal Standard Identifier",
+  "description": "Schema for validating UTCS-MI v5.0 identifiers with 13 required fields",
+  "type": "string",
+  "pattern": "^EstándarUniversal:.*-GeneracionHybrida-.+$",
+  "examples": [
+    "EstándarUniversal:Politica-QAL-01.00-PolicyPack-0007-v1.0-BlendedWingBodyProgramQ100-GeneracionHybrida-CROSS-Amedeo Pelliccia-b2c1f3a4d5e6f709-RestoDeVidaUtil",
+    "EstándarUniversal:Presupuesto-QAL-01.00-BudgetVector-0022-v1.0-BlendedWingBodyProgramQ100-GeneracionHybrida-CROSS-Amedeo Pelliccia-c001d00dcafecafe-RestoDeVidaUtil"
+  ]
+}

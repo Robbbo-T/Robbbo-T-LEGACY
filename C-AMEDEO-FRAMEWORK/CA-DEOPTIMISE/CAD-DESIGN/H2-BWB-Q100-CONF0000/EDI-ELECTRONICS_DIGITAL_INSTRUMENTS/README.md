@@ -1,54 +1,53 @@
-# EDI - Electronics & Digital Instruments
+# EDI - ELECTRONICS_DIGITAL_INSTRUMENTS
 
-**Domain:** EDI - Electronics & Digital Instruments  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: EDI  
+**Name**: ELECTRONICS_DIGITAL_INSTRUMENTS  
+**Description**: Electronic systems and digital instrumentation
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-22, ATA-23, ATA-31, ATA-34, ATA-42
 
-This domain covers electronic systems, digital displays, instrumentation, and electrical wiring systems.
+## Cross-Domain References
+Co-domains that reference this domain:
+[LCC](../LCC-*/), [IIS](../IIS-*/), [OOO](../OOO-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Electronic flight displays
-- Digital instrumentation
-- Electrical wiring and interconnect systems (EWIS)
-- Lighting systems
-- Electronic control units
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:EDI:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 23 - Communications**
-- **ATA 31 - Indicating/Recording**
-- **ATA 33 - Lights**
-- **ATA 45 - EWIS**
-- **ATA 46 - Information Systems**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-EDI-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-EDI-ATA-23-COMMS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-23-COMMS) — ATA 23 - Communications
-* [CE-CAD-Q100-EDI-ATA-31-DISPLAYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-31-DISPLAYS) — ATA 31 - Indicating/Recording
-* [CE-CAD-Q100-EDI-ATA-33-LIGHTS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-33-LIGHTS) — ATA 33 - Lights
-* [CE-CAD-Q100-EDI-ATA-45-EWIS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-45-EWIS) — ATA 45 - EWIS
-* [CE-CAD-Q100-EDI-ATA-46-INFOSYS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/CE-CAD-Q100-EDI-ATA-46-INFOSYS) — ATA 46 - Information Systems
-
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+EDI-ELECTRONICS_DIGITAL_INSTRUMENTS/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Electronic systems and digital instrumentation*

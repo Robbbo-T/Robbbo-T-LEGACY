@@ -1,0 +1,26 @@
+---
+# Alias definitions for cross-domain references and quantum tools
+
+# QS/quantum anchors for cross-referencing
+quantum_systems:
+  qco_thermal_budget: "docs/ANMN-QCO/Specs/BWB-Q100-U-BAY-QCO-SRS.md#performance-budgets-thermal-mk-emi-nthz-g-vibration"
+  qrs_scheduler: "docs/ANMN-QCO/Specs/QRS-Quantum-Resource-Scheduler-SDD.md"
+  abu_quantum_protect: "docs/ANMN-QCO/Specs/BWB-Q100-U-BAY-QCO-SRS.md#abu-quantumprotect"
+
+# Cross-domain interfaces
+interfaces:
+  ata28_fuel: "C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/CQH-CRYOGENICS_QUANTUM_INTERFACES_HYDROGEN_CELLS/"
+  ata53_fuselage: "C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/"
+  ata30_ice: "C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/PPP-PROPULSION_AND_FUEL/"
+
+# BRK-DS compliance references
+regulatory:
+  cs25_windows: "BRK-DS/CS/requirements.yaml"
+  do160_emi: "BRK-DS/IS/requirements.yaml"
+  do326a_security: "BRK-DS/IS/requirements.yaml"
+  basic_regulation: "BRK-DS/BASIC/requirements.yaml"
+
+# Test and validation references
+testing:
+  hil_cryobench: "testplans/HIL-CryoBench/TP-WIN-QCO-v0.1.md"
+  det_validation: "scripts/validate_qs_events.mjs"

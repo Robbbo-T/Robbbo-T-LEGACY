@@ -1,0 +1,28 @@
+{
+  "name": "qal-taxonomy-repo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "scripts": {
+    "gen": "node scripts/gen_index_and_anchors.mjs && node scripts/gen_placeholders.mjs",
+    "gen:mermaid": "bash scripts/mermaid_to_svg.sh",
+    "emit": "node scripts/emit_qs_from_yaml.mjs",
+    "validate:qs": "node scripts/validate_qs_events.mjs events/out/*.json",
+    "validate:events": "node scripts/validate_qs_events.mjs events/samples/*.json",
+    "validate:det": "node scripts/validate_det_refs_in_kits.mjs qal/**/kit.yaml",
+    "validate:taxonomy": "bash scripts/validate_qal_taxonomy.sh",
+    "create-brk-dropin": "python3 scripts/create_brk_ds_dropin.py",
+    "all": "npm run gen && npm run emit && npm run validate:qs && npm run validate:det && npm run validate:taxonomy"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1",
+    "glob": "^11.0.0",
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.9.1",
+    "ajv": "^8.17.1"
+  }
+}

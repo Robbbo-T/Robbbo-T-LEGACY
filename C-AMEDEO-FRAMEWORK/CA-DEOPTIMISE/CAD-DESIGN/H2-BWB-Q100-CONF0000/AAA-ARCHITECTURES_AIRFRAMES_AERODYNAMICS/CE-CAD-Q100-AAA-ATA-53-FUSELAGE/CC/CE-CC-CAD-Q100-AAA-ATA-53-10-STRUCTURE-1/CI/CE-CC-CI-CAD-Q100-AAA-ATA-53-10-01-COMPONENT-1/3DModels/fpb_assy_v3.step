@@ -1,0 +1,69 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Q100-53-10-01-001 Forward Pressure Bulkhead Assembly','STEP AP242 ed2 with Validation Properties'),'2;1');
+FILE_NAME('fpb_assy_v3.step','2025-09-01T00:00:00Z',('CAD Engineer'),('AAA Domain'),'CATIA V5R30','STEP AP242 Exporter','');
+FILE_SCHEMA(('AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF { 1 0 10303 442 1 1 4 }'));
+ENDSEC;
+
+DATA;
+#1 = APPLICATION_CONTEXT('managed model based 3d engineering');
+#2 = APPLICATION_PROTOCOL_DEFINITION('international standard','ap242_managed_model_based_3d_engineering_mim_lf',2014,$);
+
+/* Validation Properties - Mass */
+#100 = PROPERTY_DEFINITION('MASS','Mass property',#200);
+#101 = PROPERTY_DEFINITION_REPRESENTATION(#100,#102);
+#102 = REPRESENTATION('mass representation',(#103),#104);
+#103 = MEASURE_REPRESENTATION_ITEM('MASS',REAL(412.5),#105);
+#104 = REPRESENTATION_CONTEXT('mass context','kg');
+#105 = NAMED_UNIT(*,#106,#107);
+
+/* Validation Properties - Center of Gravity */
+#200 = PROPERTY_DEFINITION('CG_X','Center of gravity X coordinate',#300);
+#201 = PROPERTY_DEFINITION_REPRESENTATION(#200,#202);
+#202 = REPRESENTATION('cg_x representation',(#203),#204);
+#203 = MEASURE_REPRESENTATION_ITEM('CG_X',REAL(15120.0),#205);
+#204 = REPRESENTATION_CONTEXT('cg context','mm');
+#205 = NAMED_UNIT(*,#206,#207);
+
+#210 = PROPERTY_DEFINITION('CG_Y','Center of gravity Y coordinate',#300);
+#211 = PROPERTY_DEFINITION_REPRESENTATION(#210,#212);
+#212 = REPRESENTATION('cg_y representation',(#213),#214);
+#213 = MEASURE_REPRESENTATION_ITEM('CG_Y',REAL(0.0),#215);
+#214 = REPRESENTATION_CONTEXT('cg context','mm');
+#215 = NAMED_UNIT(*,#216,#217);
+
+#220 = PROPERTY_DEFINITION('CG_Z','Center of gravity Z coordinate',#300);
+#221 = PROPERTY_DEFINITION_REPRESENTATION(#220,#222);
+#222 = REPRESENTATION('cg_z representation',(#223),#224);
+#223 = MEASURE_REPRESENTATION_ITEM('CG_Z',REAL(2340.0),#225);
+#224 = REPRESENTATION_CONTEXT('cg context','mm');
+#225 = NAMED_UNIT(*,#226,#227);
+
+/* Validation Properties - Bounding Box */
+#300 = PROPERTY_DEFINITION('BBOX_X','Bounding box X dimension',#400);
+#301 = PROPERTY_DEFINITION_REPRESENTATION(#300,#302);
+#302 = REPRESENTATION('bbox_x representation',(#303),#304);
+#303 = MEASURE_REPRESENTATION_ITEM('BBOX_X',REAL(5200.0),#305);
+#304 = REPRESENTATION_CONTEXT('bbox context','mm');
+#305 = NAMED_UNIT(*,#306,#307);
+
+#310 = PROPERTY_DEFINITION('BBOX_Y','Bounding box Y dimension',#400);
+#311 = PROPERTY_DEFINITION_REPRESENTATION(#310,#312);
+#312 = REPRESENTATION('bbox_y representation',(#313),#314);
+#313 = MEASURE_REPRESENTATION_ITEM('BBOX_Y',REAL(5200.0),#315);
+#314 = REPRESENTATION_CONTEXT('bbox context','mm');
+#315 = NAMED_UNIT(*,#316,#317);
+
+#320 = PROPERTY_DEFINITION('BBOX_Z','Bounding box Z dimension',#400);
+#321 = PROPERTY_DEFINITION_REPRESENTATION(#320,#322);
+#322 = REPRESENTATION('bbox_z representation',(#323),#324);
+#323 = MEASURE_REPRESENTATION_ITEM('BBOX_Z',REAL(180.0),#325);
+#324 = REPRESENTATION_CONTEXT('bbox context','mm');
+#325 = NAMED_UNIT(*,#326,#327);
+
+/* Product Definition */
+#400 = PRODUCT('Q100-53-10-01-001','Forward Pressure Bulkhead Assembly','',(#401));
+#401 = PRODUCT_CONTEXT('',#1,'mechanical');
+
+ENDSEC;
+END-ISO-10303-21;

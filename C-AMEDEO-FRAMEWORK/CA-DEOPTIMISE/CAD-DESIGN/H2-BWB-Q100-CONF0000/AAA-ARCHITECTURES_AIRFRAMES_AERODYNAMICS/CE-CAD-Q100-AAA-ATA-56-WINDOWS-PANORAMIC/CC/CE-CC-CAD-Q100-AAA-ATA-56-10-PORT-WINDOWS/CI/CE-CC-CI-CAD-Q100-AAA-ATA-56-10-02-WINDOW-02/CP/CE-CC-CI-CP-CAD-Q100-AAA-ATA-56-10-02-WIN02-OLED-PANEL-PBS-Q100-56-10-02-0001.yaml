@@ -1,0 +1,13 @@
+---
+# CP OLED Panel specification for Window #2 (PORT)
+cp:
+  id: "CP-WIN02-OLED-PANEL"
+  designation: "OLED Matrix Panel — Window #2 (PORT)"
+  params:
+    pixel_count: "7680x4320"
+    refresh_hz_min: 120
+    power_density_W_m2_max: 200
+  links:
+    fe_layers:
+      - "./FE/CE-CC-CI-CP-FE-CAD-Q100-AAA-ATA-56-10-02-WIN02-QUANTUM-DOT.properties.yaml"
+      - "./FE/CE-CC-CI-CP-FE-CAD-Q100-AAA-ATA-56-10-02-WIN02-TRANSPARENT-CONDUCTOR.properties.yaml"

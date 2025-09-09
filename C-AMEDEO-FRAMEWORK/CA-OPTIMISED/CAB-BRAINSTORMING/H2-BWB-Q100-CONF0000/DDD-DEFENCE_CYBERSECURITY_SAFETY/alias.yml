@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for DDD (CAB-BRAINSTORMING)
+aliases:
+  edi_integration: "ALIAS:DDD:EDI:INTEGRATION-CONCEPTS"
+  lcc_integration: "ALIAS:DDD:LCC:INTEGRATION-CONCEPTS"
+  iis_integration: "ALIAS:DDD:IIS:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:DDD:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:DDD:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:DDD:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:DDD:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:DDD:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:DDD:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:DDD:MAXENT:NOVELTY-SEARCH"

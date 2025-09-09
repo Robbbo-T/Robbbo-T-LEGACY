@@ -1,0 +1,15 @@
+{
+  "wbs_id": "Q100-52-20-03",
+  "name": "DOOR",
+  "owner_domain": "AAA",
+  "co_domains": ["EDI", "OOO"],
+  "cax": "CAD",
+  "sns": "Q100522003",
+  "ce_id": "CE-CAD-Q100-AAA-ATA-52-DOORS",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-52-20-CARGO-DOORS",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-52-20-03-BULK-CARGO-DOOR",
+  "description": "DOOR",
+  "effectivity": "CONF0000",
+  "certification_basis": ["CS-25.783"],
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

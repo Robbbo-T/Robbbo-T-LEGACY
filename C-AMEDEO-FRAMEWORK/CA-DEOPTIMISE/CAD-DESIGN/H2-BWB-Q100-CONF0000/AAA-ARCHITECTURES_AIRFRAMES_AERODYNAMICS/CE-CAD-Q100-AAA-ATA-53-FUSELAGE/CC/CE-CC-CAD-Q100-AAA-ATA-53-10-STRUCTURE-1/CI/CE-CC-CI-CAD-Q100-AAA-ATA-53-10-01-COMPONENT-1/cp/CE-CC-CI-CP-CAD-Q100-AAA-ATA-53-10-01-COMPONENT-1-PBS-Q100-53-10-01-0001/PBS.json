@@ -1,0 +1,14 @@
+{
+  "pb_leaf_id": "Q100-53-10-01-0001",
+  "ci_ref": "CE-CC-CI-CAD-Q100-AAA-ATA-53-10-01-COMPONENT-1",
+  "pn": "Q100-53-10-01-001",
+  "rev": "A",
+  "trace": {
+    "ebom": "../EBOM.yaml",
+    "mbom": "../MBOM.yaml"
+  },
+  "signoff": {
+    "owner": "AAA-Domain-Lead",
+    "date": "2025-09-01T00:00:00Z"
+  }
+}

@@ -1,0 +1,21 @@
+---
+icd:
+  qco_bridge:
+    signals:
+      - name: "coherence_status"
+        direction: "in"
+        rate_hz: 1000
+      - name: "display_mode_cmd"
+        direction: "out"
+        bandwidth_gbps: 10
+    constraints:
+      emi_nt_sqrt_hz_1hz: 100
+      thermal_rms_mK: 5
+  anmn_bus:
+    signals:
+      - {name: "abu_protect", direction: "in", max_latency_ms: 10}
+      - {name: "pax_state_local", direction: "out", privacy: "edge-only"}
+  thermal_boundary:
+    params:
+      - {name: "equiv_conductance_W_per_K", max: 0.5}
+      - {name: "gradient_zones", values: ["300K", "150K", "77K"]}

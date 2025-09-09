@@ -1,0 +1,75 @@
+# Requirements Template
+# Replace with actual requirement name
+# UTCS-MI v5.0 Identifier:
+# EstándarUniversal:Especificacion-Definicion-[applicable-standards]-
+# 00.00-[requirement-name]-[sequence]-v[version]-Aerospace and Quantum
+# United Agency-GeneracionHybrida-CROSS-Amedeo Pelliccia-[hash]-
+# RestoDeVidaUtil
+
+# Requirements Specification
+---
+requirements:
+  - id: "REQ-[DOMAIN]-[ATA-SNS]-[SEQUENCE]"  # e.g., REQ-AAA-52-10-01-001
+    text: "[Requirement statement in clear, testable language]"
+    source: "[regulation/standard/reference]"  # e.g., CS-25.783, ARP4754A
+    driver: "[performance/safety/sustainability/regulatory]"
+    acceptance: "[Pass/fail criteria or acceptance statements]"
+    verification: "[Analysis/Test/Inspection/Review]"
+    links:
+      ce: "[CE-CAX-Q100-DOMAIN-ATA-SNS-NAME]"
+      cc: "[CE-CC-CAX-Q100-DOMAIN-ATA-SNS-NAME]"
+      ci: "[CE-CC-CI-CAX-Q100-DOMAIN-ATA-SNS-NAME]"
+    status: "[draft/baselined/archived]"
+    owner: "[domain-owner-or-responsible-engineer]"
+    last_updated: "[YYYY-MM-DD]"
+    criticality: "DAL-[A/B/C/D/E]"  # Never use CAT-x
+    priority: "[high/medium/low]"
+    rationale: "[Why this requirement is necessary]"
+    assumptions: "[Key assumptions underlying the requirement]"
+    constraints: "[Technical or operational constraints]"
+    verification_methods:
+      - method: "[Analysis/Test/Inspection/Review]"
+        description: "[How verification will be performed]"
+        success_criteria: "[What constitutes successful verification]"
+    traces:
+      upstream:
+        - "[Parent requirements or standards]"
+      downstream:
+        - "[Derived requirements or design elements]"
+    compliance:
+      standards: "[List of applicable standards]"
+      regulations: "[Applicable regulatory requirements]"
+
+# Add additional requirements as needed following the same structure
+
+# DET Evidence Integration
+# This requirements document generates the following DET evidence:
+# - DET:CAD:[DOMAIN]:[SNS]:req_add:V[rev] - When new requirements are added
+# - DET:CAD:[DOMAIN]:[SNS]:req_update:V[rev] - When requirements are modified
+# - DET:CAD:[DOMAIN]:[SNS]:req_baseline:V[rev] - When requirements baselined
+
+# Usage Instructions:
+# 1. Copy this template to your domain/component directory
+# 2. Replace all bracketed placeholders with actual values
+# 3. Update UTCS-MI identifier with specific details
+# 4. Complete all required fields in the YAML structure
+# 5. Validate using yamllint -s .
+# 6. Review links to CE/CC/CI elements for correctness
+# 7. Baseline when requirements are approved
+
+# Required Reviews:
+# - Technical accuracy review by domain expert
+# - Traceability review to standards and regulations
+# - Links validation to CE/CC/CI elements
+# - Criticality assessment (DAL level assignment)
+# - Verification method feasibility review
+# - Final approval by requirements owner
+
+# Related Documents:
+# - Style Guide (../STYLE-GUIDE.md) - Formatting and language requirements
+# - Document Control Procedures (../DOCUMENT-CONTROL-PROCEDURES.md)
+# - Compliance Mapping (../compliance/standards.yaml)
+
+# This template supports ARP4754A, DO178C, DO254, S1000D, and CS25
+# compliance requirements.
+# Generated from C-AMEDEO framework template system.

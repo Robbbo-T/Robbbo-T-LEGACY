@@ -1,0 +1,302 @@
+---
+# Resource Pool Registry for GRPO
+# Defines shared resource pools and access policies
+
+utcs_mi_id: >-
+  EstándarUniversal:RegistroRecursos-GRPO-01.00-PoolRegistry-0003-v1.0-BlendedWingBodyProgramQ100-GeneracionHybrida-CROSS-Amedeo Pelliccia-c2d3e4f5g6h7i8j9-RestoDeVidaUtil
+
+registry_metadata:
+  version: "1.0"
+  created_date: "2025-01-22"
+  last_updated: "2025-01-22T10:00:00Z"
+  program: "BWB-Q100"
+  configuration: "CONF0000"
+  det_ref: "DET:CAO:GRPO:BWB:96:pool_registry:V1.0"
+
+# Human Resource Pools
+human_resource_pools:
+  aerospace_engineers_pool:
+    pool_id: "HR-AE-BWB-Q100"
+    pool_name: "Aerospace Engineers"
+    total_capacity: 40
+    available_capacity: 17
+    skill_levels:
+      senior: 15
+      mid: 18
+      junior: 7
+    specializations:
+      - aerodynamics: 12
+      - structures: 10
+      - propulsion: 8
+      - avionics: 6
+      - systems_integration: 4
+    access_policy:
+      sharing_enabled: true
+      approval_level: "team_lead"
+      max_allocation_per_group: 15
+      min_notice_period: "1_week"
+      max_sharing_duration: "8_weeks"
+    cost_model:
+      hourly_rate_range: [85, 150]
+      currency: "EUR"
+      billing_unit: "hours"
+
+  quantum_specialists_pool:
+    pool_id: "HR-QS-BWB-Q100"
+    pool_name: "Quantum Specialists"
+    total_capacity: 15
+    available_capacity: 7
+    skill_levels:
+      expert: 8
+      senior: 5
+      mid: 2
+    specializations:
+      - quantum_algorithms: 8
+      - quantum_computing: 5
+      - quantum_sensing: 2
+    access_policy:
+      sharing_enabled: true
+      approval_level: "program_manager"
+      max_allocation_per_group: 5
+      min_notice_period: "2_weeks"
+      max_sharing_duration: "12_weeks"
+    cost_model:
+      hourly_rate_range: [120, 200]
+      currency: "EUR"
+      billing_unit: "hours"
+
+  systems_engineers_pool:
+    pool_id: "HR-SE-BWB-Q100"
+    pool_name: "Systems Engineers"
+    total_capacity: 25
+    available_capacity: 11
+    skill_levels:
+      senior: 12
+      mid: 10
+      junior: 3
+    specializations:
+      - systems_architecture: 8
+      - integration: 7
+      - verification: 6
+      - requirements: 4
+    access_policy:
+      sharing_enabled: true
+      approval_level: "domain_lead"
+      max_allocation_per_group: 10
+      min_notice_period: "1_week"
+      max_sharing_duration: "6_weeks"
+    cost_model:
+      hourly_rate_range: [75, 130]
+      currency: "EUR"
+      billing_unit: "hours"
+
+# Computational Resource Pools
+computational_resource_pools:
+  quantum_simulators_pool:
+    pool_id: "COMP-QS-BWB-Q100"
+    pool_name: "Quantum Simulators"
+    total_capacity: 1000
+    available_capacity: 620
+    units: "core_hours"
+    hardware_specs:
+      - type: "IBM_Qiskit_Simulator"
+        capacity: 400
+        qubits: 64
+        location: "DataCenter_A"
+      - type: "Google_Cirq_Simulator"
+        capacity: 300
+        qubits: 32
+        location: "DataCenter_B"
+      - type: "Rigetti_Forest_Simulator"
+        capacity: 300
+        qubits: 48
+        location: "DataCenter_C"
+    access_policy:
+      sharing_enabled: true
+      approval_level: "resource_manager"
+      allocation_quantum: 50
+      max_allocation_per_group: 500
+      priority_levels: ["critical", "high", "medium", "low"]
+    cost_model:
+      hourly_rate: 25
+      currency: "EUR"
+      billing_unit: "core_hours"
+
+  hpc_clusters_pool:
+    pool_id: "COMP-HPC-BWB-Q100"
+    pool_name: "HPC Clusters"
+    total_capacity: 7000
+    available_capacity: 2770
+    units: "core_hours"
+    hardware_specs:
+      - cluster: "HPC-Alpha"
+        cores: 2048
+        memory: "8TB"
+        capacity: 3000
+        specialized_for: ["CFD", "FEA", "optimization"]
+      - cluster: "HPC-Beta"
+        cores: 1536
+        memory: "6TB"
+        capacity: 2500
+        specialized_for: ["CAD_rendering", "simulation"]
+      - cluster: "HPC-Gamma"
+        cores: 1024
+        memory: "4TB"
+        capacity: 1500
+        specialized_for: ["data_analysis", "ML_training"]
+    access_policy:
+      sharing_enabled: true
+      approval_level: "automatic"
+      allocation_quantum: 100
+      max_allocation_per_group: 2500
+      auto_rebalancing: true
+    cost_model:
+      hourly_rate: 2.5
+      currency: "EUR"
+      billing_unit: "core_hours"
+
+  cad_workstations_pool:
+    pool_id: "COMP-CAD-BWB-Q100"
+    pool_name: "CAD Workstations"
+    total_capacity: 1500
+    available_capacity: 1120
+    units: "core_hours"
+    hardware_specs:
+      - type: "Dell_Precision_7000"
+        count: 12
+        capacity: 600
+        gpu: "NVIDIA_RTX_A6000"
+        memory: "64GB"
+      - type: "HP_ZBook_Studio"
+        count: 8
+        capacity: 400
+        gpu: "NVIDIA_RTX_A5000"
+        memory: "32GB"
+      - type: "Lenovo_ThinkPad_P1"
+        count: 10
+        capacity: 500
+        gpu: "NVIDIA_RTX_4080"
+        memory: "32GB"
+    access_policy:
+      sharing_enabled: true
+      approval_level: "team_lead"
+      allocation_quantum: 50
+      max_allocation_per_group: 500
+      booking_required: true
+    cost_model:
+      hourly_rate: 8
+      currency: "EUR"
+      billing_unit: "core_hours"
+
+# Laboratory Resource Pools
+laboratory_resource_pools:
+  wind_tunnel_pool:
+    pool_id: "LAB-WT-BWB-Q100"
+    pool_name: "Wind Tunnel Facilities"
+    total_capacity: 8
+    available_capacity: 3
+    units: "facility_hours"
+    facilities:
+      - name: "Subsonic_Wind_Tunnel_A"
+        capacity: 4
+        max_speed: "Mach_0.8"
+        test_section: "3m x 2.4m"
+        location: "Building_A"
+      - name: "Transonic_Wind_Tunnel_B"
+        capacity: 4
+        max_speed: "Mach_1.2"
+        test_section: "2m x 1.5m"
+        location: "Building_B"
+    access_policy:
+      sharing_enabled: true
+      approval_level: "facility_manager"
+      min_booking_duration: 4
+      max_booking_duration: 24
+      advance_booking_required: "2_weeks"
+    cost_model:
+      hourly_rate: 500
+      currency: "EUR"
+      billing_unit: "facility_hours"
+
+  materials_lab_pool:
+    pool_id: "LAB-MAT-BWB-Q100"
+    pool_name: "Materials Testing Laboratory"
+    total_capacity: 6
+    available_capacity: 2
+    units: "facility_hours"
+    facilities:
+      - name: "Materials_Characterization_Lab"
+        capacity: 3
+        equipment: ["SEM", "XRD", "DSC", "tensile_tester"]
+        location: "Building_C"
+      - name: "Cryogenic_Materials_Lab"
+        capacity: 3
+        equipment: ["cryogenic_chamber", "LN2_system", "thermal_cycling"]
+        location: "Building_D"
+    access_policy:
+      sharing_enabled: true
+      approval_level: "lab_manager"
+      min_booking_duration: 2
+      max_booking_duration: 16
+      advance_booking_required: "1_week"
+    cost_model:
+      hourly_rate: 200
+      currency: "EUR"
+      billing_unit: "facility_hours"
+
+  quantum_lab_pool:
+    pool_id: "LAB-QUAN-BWB-Q100"
+    pool_name: "Quantum Technology Laboratory"
+    total_capacity: 3
+    available_capacity: 1
+    units: "facility_hours"
+    facilities:
+      - name: "Quantum_Sensing_Lab"
+        capacity: 2
+        equipment: ["NV_centers", "atomic_magnetometers", "quantum_gravimeters"]
+        location: "Building_E"
+      - name: "Quantum_Computing_Lab"
+        capacity: 1
+        equipment: ["ion_trap_system", "superconducting_qubits"]
+        location: "Building_F"
+    access_policy:
+      sharing_enabled: true
+      approval_level: "quantum_lead"
+      min_booking_duration: 4
+      max_booking_duration: 12
+      advance_booking_required: "3_weeks"
+      security_clearance_required: true
+    cost_model:
+      hourly_rate: 1000
+      currency: "EUR"
+      billing_unit: "facility_hours"
+
+# Global Sharing Policies
+global_sharing_policies:
+  conflict_resolution:
+    priority_override: true
+    escalation_path: ["team_lead", "domain_lead", "program_manager", "steering_committee"]
+    resolution_sla: "24_hours"
+
+  resource_constraints:
+    max_total_sharing_percentage: 25
+    min_reserve_percentage: 10
+    emergency_override_level: "program_manager"
+
+  cost_allocation:
+    billing_frequency: "monthly"
+    cost_center_mapping: "by_domain"
+    shared_cost_distribution: "proportional_to_usage"
+
+# Performance Monitoring
+monitoring_config:
+  utilization_tracking: true
+  cost_tracking: true
+  sla_monitoring: true
+  predictive_analytics: true
+
+  alerts:
+    low_utilization_threshold: 0.60
+    high_utilization_threshold: 0.95
+    cost_overrun_threshold: 1.1
+    sla_breach_threshold: 0.9

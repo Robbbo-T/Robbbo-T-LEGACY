@@ -1,0 +1,220 @@
+---
+# UTCS-BLOCKCHAIN/CADET/cadet-config.yaml
+# CADET — Circular Assurance by Digital Evolutive Twin
+# Configuration for computing monthly KPI cuts from DET evidence.
+
+meta:
+  spec: CADET-CONFIG-1.0
+  owner: "sustainability@your-org"
+  updated: "2025-02-01T00:00:00Z"
+  notes: >
+    CADET records are monthly KPI cuts derived from signed DET packets.
+    Tokenomics normalization/weights belong to TekTok (PoI oracle).
+    CADET keeps raw, SI-based KPIs with light aggregation and quality gates.
+
+storage:
+  kpi_dir: "UTCS-BLOCKCHAIN/CADET/kpis"
+  filename_template: "%Y-%m.yaml" # e.g., 2025-09.yaml
+  schema_ref: "UTCS-BLOCKCHAIN/DET/schemas/cadet-record.schema.json"
+  write_signature:
+    enabled: false # set true if you want to sign CADET files off-chain
+    alg: "Ed25519"
+    signer_id: "cadet-signer@your-org"
+
+time:
+  # All cuts use UTC month boundaries.
+  timezone: "UTC"
+  period: "monthly"
+  close_policy: "end_of_month_23_59_59Z"
+  grace_window_days: 2 # allow late-arriving DET packets within 2 days
+
+sources:
+  det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+  # Map KPI to the DET activities that are allowed to contribute.
+  kpi_activity_map:
+    # Original KPIs
+    reuse_percent: ["design", "save_model", "baseline_freeze"]
+    energy_saved_kwh: ["baseline_freeze", "process_update", "wo_close"]
+    co2_saved_kg: ["baseline_freeze", "process_update", "wo_close"]
+    life_extension_months: ["baseline_freeze", "wo_close", "baseline_freeze"] # sustainment/prolongation
+    risk_reduction: ["feasibility_run", "trade_study", "solver_run", "risk_review"]
+    # BWB-Q100 v2.1.1 specific KPIs
+    mli_degradation_factor: ["thermal_analysis", "aging_test", "flight_monitoring"]
+    boiloff_recovery_efficiency: ["cas_monitoring", "fuel_cell_integration", "baseline_freeze"]
+    redundancy_weight_savings_kg: ["design_optimization", "trade_study", "structural_analysis"]
+    fsi_modal_margin: ["structural_analysis", "vibration_test", "modal_analysis"]
+    thermal_cycling_damage: ["fatigue_test", "inspection_report", "maintenance_check"]
+    zbo_power_consumption_kw: ["thermal_analysis", "flight_monitoring", "power_audit"]
+    h2_detection_threshold_pct: ["safety_test", "sensor_calibration", "flight_monitoring"]
+    ventilation_ach: ["flow_test", "cfd_analysis", "flight_monitoring"]
+  # Mandatory packet fields and constraints
+  packet_requirements:
+    require_refs:
+      ce: true
+      ci: false
+      cc: false
+    require_units_in_outputs: true       # outputs.units must be present (SI)
+    signature:
+      alg: "Ed25519"
+      required: true
+    hash:
+      algo: "sha256"
+      hex_length: 64
+    timestamp_monotonic: true
+
+guards:
+  min_packets_per_cut: 3
+  min_independent_sources: 2             # distinct CE IDs or domains contributing
+  sigma_outlier: 3                       # discard points beyond ±3σ per KPI
+  deduplicate_by_det_id: true
+  # If a DET packet contributes to multiple KPIs, it is allowed; to the same KPI twice, it is not.
+  forbid_duplicate_kpi_contribution: true
+
+units:
+  # Expected SI units for the metrics payload (DET -> outputs.units)
+  # Original units
+  reuse_percent: "%"                     # 0..100 (percentage points)
+  energy_saved_kwh: "kWh"
+  co2_saved_kg: "kg"
+  life_extension_months: "months"
+  risk_reduction: "fraction"             # e.g., ΔCVaR in [-1..+1]
+  # BWB-Q100 v2.1.1 units
+  mli_degradation_factor: "dimensionless" # 1.0 = no degradation, 2.0 = 100% degradation
+  boiloff_recovery_efficiency: "%"        # 0-100 efficiency
+  redundancy_weight_savings_kg: "kg"
+  fsi_modal_margin: "Hz"                  # margin above 60 Hz requirement
+  thermal_cycling_damage: "cycles"        # cycles to failure
+  zbo_power_consumption_kw: "kW"
+  h2_detection_threshold_pct: "%"         # volume percent
+  ventilation_ach: "h^-1"                 # air changes per hour
+
+aggregation:
+  # CADET keeps raw values with light aggregation. PoI oracle will normalize/weight for tokenomics.
+  # Original aggregations
+  reuse_percent:
+    method: "avg"                   # average across window
+    decimals: 1
+    floor: 0.0
+    ceil: 100.0
+  energy_saved_kwh:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  co2_saved_kg:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  life_extension_months:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  risk_reduction:
+    method: "avg"                   # average ΔCVaR
+    decimals: 3
+  # BWB-Q100 v2.1.1 aggregations
+  mli_degradation_factor:
+    method: "exponential_avg"       # weight recent data more heavily
+    decimals: 3
+    floor: 1.0
+    ceil: 2.0
+  boiloff_recovery_efficiency:
+    method: "avg"
+    decimals: 1
+    floor: 0.0
+    ceil: 100.0
+  redundancy_weight_savings_kg:
+    method: "sum"
+    decimals: 0
+    min_value: 0
+  fsi_modal_margin:
+    method: "min"                   # worst case margin
+    decimals: 1
+    min_value: -10.0               # can be negative if below requirement
+  thermal_cycling_damage:
+    method: "min"                   # worst case cycles
+    decimals: 0
+    min_value: 0
+  zbo_power_consumption_kw:
+    method: "avg"
+    decimals: 1
+    floor: 0.0
+    ceil: 50.0
+  h2_detection_threshold_pct:
+    method: "min"                   # most sensitive detection
+    decimals: 2
+    floor: 0.0
+    ceil: 4.0
+  ventilation_ach:
+    method: "avg"
+    decimals: 1
+    floor: 0.0
+
+cross_domain:
+  enabled: true
+  # Allow contributions from other domains to AAA's cut when referenced through TRACES and canonical aliases.
+  require_trace_record: false       # set true if you want mandatory TRACES links for cross-domain claims
+  alias_validation: true
+
+traceability:
+  traces_glob: "UTCS-BLOCKCHAIN/TRACES/**/*.trace.yaml"
+  require_bidirectional: false      # if true, CADET includes only artifacts with verified req↔artifact traces
+
+output_policy:
+  include_evidence_list: true       # add the list of contributing DET IDs under `evidence`
+  include_methodology_block: true   # add a short methodology summary block in each KPI cut
+  rounding: "bankers"               # bankers|floor|ceil for display rounding of decimals
+
+validation:
+  # Hard errors that abort the cut generation:
+  hard:
+    - "missing_units"
+    - "invalid_signature"
+    - "invalid_hash"
+  # Soft warnings logged but not aborting:
+  soft:
+    - "late_packet_within_grace_window"
+    - "non_monotonic_timestamp"
+    - "cross_domain_without_trace"
+
+governance:
+  dao_contact: "dao@your-org"
+  change_control:
+    proposal_required: true
+    min_reviewers: 2
+    cooldown_days: 3
+  audit:
+    keep_history: true
+    history_dir: "UTCS-BLOCKCHAIN/CADET/history"
+    include_diff_hash: true
+
+# Example of how a generated cut will look like (for human reference only):
+example_cut:
+  namespace: "DET:CAD:CQH"
+  cut: "2025-02"
+  kpis:
+    # Original KPIs
+    reuse_percent: 65.0
+    energy_saved_kwh: 5400
+    co2_saved_kg: 7200
+    life_extension_months: 36
+    risk_reduction: 0.21
+    # BWB-Q100 v2.1.1 KPIs
+    mli_degradation_factor: 1.035      # 3.5% degradation
+    boiloff_recovery_efficiency: 10.0  # 10% efficiency
+    redundancy_weight_savings_kg: 351
+    fsi_modal_margin: -1.3             # 58.7 Hz vs 60 Hz requirement
+    thermal_cycling_damage: 8500       # cycles remaining
+    zbo_power_consumption_kw: 25.0
+    h2_detection_threshold_pct: 0.28
+    ventilation_ach: 22.1
+  evidence:
+    - "DET:CAD:CQH:28:design:V21"
+    - "DET:CAE:CQH:28:thermal_analysis:V7"
+    - "DET:CAS:CQH:28:baseline_freeze:V6"
+    - "DET:CAT:DDD:25-981:test_execute:V2"
+  methodology: |
+    Aggregation window: month-end UTC. Reuse% averaged across valid packets;
+    energy and CO₂ summed; life extension summed; ΔCVaR averaged.
+    MLI degradation uses exponential averaging for trend detection.
+    Modal margin reports worst-case (minimum) value.
+    Packets failing signature/hash/units checks or beyond ±3σ were excluded.

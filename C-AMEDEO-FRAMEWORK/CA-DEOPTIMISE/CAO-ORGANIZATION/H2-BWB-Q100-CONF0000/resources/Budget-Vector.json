@@ -1,0 +1,303 @@
+{
+  "UniversalStandard": "CAO-BudgetVector-BWB-Q100-ResourceAllocation-v1.0-C-AMEDEO-Framework-QuantumOptimizedFinance-AmedeoPelliccia-ca-deoptimise-BudgetDefinition",
+  "budget_vector_id": "BUDGET-BWB-Q100-V1.0",
+  "version": "1.0.0",
+  "fiscal_year": "FY2025-2035",
+  "configuration": "H2-BWB-Q100-CONF0000",
+  "total_program_budget": {
+    "amount": 2500000000,
+    "currency": "EUR",
+    "period": "10 years (2025-2035)"
+  },
+  "primary_allocation": {
+    "multi_bubble_vessel": {
+      "percentage": 40,
+      "amount_eur": 1000000000,
+      "domains": ["AAA", "MMM", "CQH"],
+      "description": "Multi-bubble pressure vessel development, testing, and certification",
+      "key_activities": [
+        "Pressure vessel design and analysis",
+        "Fatigue testing to 180k cycles",
+        "Cryogenic material qualification",
+        "Manufacturing process development"
+      ],
+      "quantum_optimization": {
+        "qaoa_budget": 15000000,
+        "description": "QAOA for vessel geometry and material optimization"
+      }
+    },
+    "aerodynamics_bwb": {
+      "percentage": 35,
+      "amount_eur": 875000000,
+      "domains": ["AAA", "EDI", "OOO"],
+      "description": "Blended Wing Body aerodynamic development and validation",
+      "key_activities": [
+        "BWB configuration optimization",
+        "Wind tunnel testing program",
+        "CFD validation and correlation",
+        "Flight test validation"
+      ],
+      "quantum_optimization": {
+        "qaoa_budget": 20000000,
+        "description": "QAOA for aerodynamic shape optimization and BLI control"
+      }
+    },
+    "cryogenic_h2_systems": {
+      "percentage": 25,
+      "amount_eur": 625000000,
+      "domains": ["CQH", "EER", "DDD"],
+      "description": "Hydrogen fuel system and cryogenic infrastructure",
+      "key_activities": [
+        "H₂ fuel system design",
+        "Cryogenic storage optimization",
+        "Safety system development",
+        "Ground support equipment"
+      ],
+      "quantum_optimization": {
+        "qubo_budget": 15000000,
+        "description": "QUBO for thermal management and safety system optimization"
+      }
+    }
+  },
+  "quantum_computing_allocation": {
+    "total_quantum_budget": {
+      "amount_eur": 50000000,
+      "percentage": 2.0,
+      "period": "10 years"
+    },
+    "quantum_platforms": {
+      "hardware_access": {
+        "amount_eur": 25000000,
+        "providers": ["IBM Quantum", "D-Wave", "IonQ"],
+        "usage": "Production optimization runs"
+      },
+      "development_tools": {
+        "amount_eur": 15000000,
+        "tools": ["Qiskit", "D-Wave Ocean", "PennyLane"],
+        "purpose": "Algorithm development and testing"
+      },
+      "personnel": {
+        "amount_eur": 10000000,
+        "positions": [
+          "Quantum optimization engineers (4 FTE)",
+          "Quantum algorithm developers (3 FTE)",
+          "Classical-quantum interface specialists (2 FTE)"
+        ]
+      }
+    },
+    "algorithm_specific_budgets": {
+      "qaoa_portfolio_optimization": {
+        "amount_eur": 20000000,
+        "applications": [
+          "Multi-bubble vessel design selection",
+          "BWB configuration optimization",
+          "Material selection optimization"
+        ]
+      },
+      "cvar_risk_optimization": {
+        "amount_eur": 15000000,
+        "applications": [
+          "Tail risk assessment",
+          "Safety system redundancy optimization",
+          "Financial risk management"
+        ]
+      },
+      "quantum_annealing_scheduling": {
+        "amount_eur": 15000000,
+        "applications": [
+          "Resource allocation optimization",
+          "Test facility scheduling",
+          "Supply chain optimization"
+        ]
+      }
+    }
+  },
+  "domain_specific_budgets": {
+    "AAA_architectures_airframes_aerodynamics": {
+      "total_eur": 700000000,
+      "breakdown": {
+        "design_development": 250000000,
+        "testing_validation": 300000000,
+        "manufacturing_tooling": 100000000,
+        "certification_support": 50000000
+      },
+      "quantum_allocation": 25000000
+    },
+    "MMM_mechanical_material_monitoring": {
+      "total_eur": 400000000,
+      "breakdown": {
+        "material_development": 150000000,
+        "structural_testing": 200000000,
+        "monitoring_systems": 50000000
+      },
+      "quantum_allocation": 10000000
+    },
+    "CQH_cryogenics_quantum_hydrogen": {
+      "total_eur": 500000000,
+      "breakdown": {
+        "cryogenic_systems": 200000000,
+        "h2_fuel_systems": 200000000,
+        "quantum_interfaces": 100000000
+      },
+      "quantum_allocation": 15000000
+    },
+    "EDI_electronics_digital_instruments": {
+      "total_eur": 200000000,
+      "breakdown": {
+        "flight_controls": 100000000,
+        "digital_systems": 75000000,
+        "instrumentation": 25000000
+      }
+    },
+    "DDD_defense_cybersecurity_safety": {
+      "total_eur": 150000000,
+      "breakdown": {
+        "safety_systems": 100000000,
+        "cybersecurity": 30000000,
+        "defense_applications": 20000000
+      }
+    },
+    "EER_energy_renewable": {
+      "total_eur": 100000000,
+      "breakdown": {
+        "energy_management": 60000000,
+        "renewable_integration": 40000000
+      }
+    }
+  },
+  "contingency_and_reserves": {
+    "technical_contingency": {
+      "percentage": 10,
+      "amount_eur": 250000000,
+      "purpose": "Unforeseen technical challenges"
+    },
+    "schedule_contingency": {
+      "percentage": 5,
+      "amount_eur": 125000000,
+      "purpose": "Schedule recovery activities"
+    },
+    "inflation_reserve": {
+      "percentage": 3,
+      "amount_eur": 75000000,
+      "purpose": "Inflation protection over 10-year period"
+    }
+  },
+  "budget_controls": {
+    "approval_thresholds": {
+      "level_1": {
+        "amount_eur": 1000000,
+        "authority": "Program Manager"
+      },
+      "level_2": {
+        "amount_eur": 10000000,
+        "authority": "Chief Technology Officer"
+      },
+      "level_3": {
+        "amount_eur": 50000000,
+        "authority": "Executive Board"
+      }
+    },
+    "budget_reviews": {
+      "frequency": "Monthly",
+      "variance_threshold": "5%",
+      "escalation_trigger": "10% variance"
+    },
+    "quantum_budget_governance": {
+      "quantum_steering_committee": "Monthly reviews",
+      "algorithm_efficiency_tracking": "Quarterly assessments",
+      "roi_evaluation": "Annual optimization return analysis"
+    }
+  },
+  "funding_sources": {
+    "internal_funding": {
+      "percentage": 60,
+      "amount_eur": 1500000000,
+      "source": "Corporate R&D budget"
+    },
+    "government_grants": {
+      "percentage": 25,
+      "amount_eur": 625000000,
+      "programs": ["Horizon Europe", "Clean Aviation Partnership"]
+    },
+    "private_investment": {
+      "percentage": 15,
+      "amount_eur": 375000000,
+      "investors": ["Venture capital", "Strategic partners"]
+    }
+  },
+  "budget_timeline": {
+    "2025": {
+      "amount_eur": 150000000,
+      "focus": "Design and early development"
+    },
+    "2026": {
+      "amount_eur": 200000000,
+      "focus": "Material testing and quantum algorithm development"
+    },
+    "2027": {
+      "amount_eur": 250000000,
+      "focus": "Component testing and integration"
+    },
+    "2028": {
+      "amount_eur": 300000000,
+      "focus": "System testing and quantum optimization deployment"
+    },
+    "2029": {
+      "amount_eur": 350000000,
+      "focus": "Full-scale testing and certification preparation"
+    },
+    "2030": {
+      "amount_eur": 400000000,
+      "focus": "Certification and production preparation"
+    },
+    "2031-2035": {
+      "amount_eur": 850000000,
+      "focus": "Production ramp-up and continuous improvement"
+    }
+  },
+  "cvar_risk_budgeting": {
+    "risk_adjusted_budget": {
+      "cvar_alpha": 0.95,
+      "risk_premium": "15% of base budget",
+      "amount_eur": 375000000
+    },
+    "risk_categories": {
+      "technical_risk": {
+        "budget_impact": "CVaR ≤ 0.10",
+        "reserve_eur": 150000000
+      },
+      "schedule_risk": {
+        "budget_impact": "CVaR ≤ 0.05",
+        "reserve_eur": 100000000
+      },
+      "market_risk": {
+        "budget_impact": "CVaR ≤ 0.08",
+        "reserve_eur": 125000000
+      }
+    }
+  },
+  "metadata": {
+    "owner_domain": "CAO",
+    "sns": "96",
+    "ce_id": "CE-CAO-Q100-BWB-ATA-96-BUDGET-VECTOR",
+    "cc_id": "CC-CAO-Q100-BWB-ATA-96-BUDGET-FRAMEWORK",
+    "ci_id": "CI-CAO-Q100-BWB-ATA-96-01-BUDGET-VECTOR-ITEM",
+    "criticality": "DAL-A",
+    "effectivity": "All BWB-Q100 variants",
+    "last_updated": "2025-01-01T00:00:00Z",
+    "owner": "CAO Finance Team",
+    "reviewer": "Chief Financial Officer"
+  },
+  "provenance": {
+    "tool": "CAO-Budget-Optimizer",
+    "version": "v1.0",
+    "agent": "GAIA AIR v4.0",
+    "time_utc": "2025-01-01T00:00:00Z",
+    "quantum_optimization": {
+      "algorithm": "QAOA",
+      "backend": "simulator",
+      "optimization_time": "12h",
+      "convergence_criteria": "0.01% budget variance"
+    }
+  }
+}

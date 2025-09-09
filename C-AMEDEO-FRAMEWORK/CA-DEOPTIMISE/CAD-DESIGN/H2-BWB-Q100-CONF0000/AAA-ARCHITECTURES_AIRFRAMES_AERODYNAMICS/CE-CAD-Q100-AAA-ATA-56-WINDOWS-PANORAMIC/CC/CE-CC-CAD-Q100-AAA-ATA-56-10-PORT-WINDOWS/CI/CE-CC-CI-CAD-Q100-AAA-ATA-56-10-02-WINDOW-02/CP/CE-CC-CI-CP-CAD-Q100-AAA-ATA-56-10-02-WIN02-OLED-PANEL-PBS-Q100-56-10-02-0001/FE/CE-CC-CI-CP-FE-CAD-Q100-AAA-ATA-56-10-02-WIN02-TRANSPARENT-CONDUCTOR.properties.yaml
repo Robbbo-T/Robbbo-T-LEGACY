@@ -1,0 +1,9 @@
+---
+# FE Transparent Conductor properties for Window #2 (PORT)
+fe:
+  id: "FE-WIN02-TCF"
+  material: "ITO on glass"
+  thickness_nm: 150
+  sheet_resistance_ohm_sq: 12
+  optical_transmittance_pct: 90
+  test_methods: ["4PP", "Spectrophotometry"]

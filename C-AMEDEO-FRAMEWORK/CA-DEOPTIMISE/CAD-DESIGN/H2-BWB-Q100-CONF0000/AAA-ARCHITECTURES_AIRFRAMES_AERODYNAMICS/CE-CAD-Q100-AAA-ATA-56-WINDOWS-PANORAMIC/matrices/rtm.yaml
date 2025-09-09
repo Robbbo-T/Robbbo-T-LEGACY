@@ -1,0 +1,27 @@
+---
+rtm:
+  items:
+    - req: "REQ-WIN-01"
+      dms: ["DM-ARCH.yaml", "DM-ICD.yaml", "DM-VV.yaml"]
+      tests: ["EMI-M1"]
+      evidence: ["events/samples/WINCAL.HIL.RunFinished_sample.json"]
+    - req: "REQ-WIN-02"
+      dms: ["DM-ARCH.yaml", "DM-VV.yaml"]
+      tests: ["THERM-T1"]
+      evidence: []
+    - req: "REQ-WIN-03"
+      dms: ["DM-ARCH.yaml", "DM-VV.yaml"]
+      tests: ["FALL-F1"]
+      evidence: []
+    - req: "REQ-WIN-04"
+      dms: ["DM-ARCH.yaml", "DM-ICD.yaml"]
+      tests: ["THERM-T1"]
+      evidence: []
+    - req: "REQ-WIN-05"
+      dms: ["DM-ARCH.yaml", "DM-VV.yaml"]
+      tests: ["SEC-S1"]
+      evidence: []
+meta:
+  owner: "windows-lead@aqua-os"
+  last_updated: "2025-01-15T16:30:00Z"
+  change_ref: "ATA56-S1000D-Q-RTM-v1"

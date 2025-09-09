@@ -1,0 +1,49 @@
+---
+domain:
+  code: LIB
+  name: LOGISTICS_INTEGRATED_BLOCKCHAIN
+  description: Conceptual exploration of logistics optimization and blockchain integration
+  version: 1.0.0
+cax_integration:
+  pillar: CAB-BRAINSTORMING
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '05'
+  - '06'
+  - '10'
+  - '12'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - IIF
+  - DDD
+  - LCC
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAB:LIB:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519
+cab_specific:
+  concept_generation:
+    quantum_ml: true
+    grover_search: true
+    entropy_maximization: true
+  feasibility_analysis:
+    multi_criteria: true
+    trade_studies: true
+    risk_assessment: CVaR
+  artifact_types:
+  - concept_sketches
+  - feasibility_scorecards
+  - trade_study_reports
+  - rationale_graphs
+  - selected_concept_sets
+  focus_area: "Blockchain supply chains, logistics automation, and distributed ledger concepts"

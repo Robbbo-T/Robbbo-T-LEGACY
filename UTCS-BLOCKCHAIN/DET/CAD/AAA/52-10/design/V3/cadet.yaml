@@ -1,0 +1,7 @@
+---
+namespace: "DET:CAD:AAA"
+cut: "2025-09"
+kpis:
+  reuse_percent: 41.8
+evidence:
+  - "DET:CAD:AAA:52-10:design:V3"

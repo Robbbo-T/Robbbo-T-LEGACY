@@ -1,0 +1,57 @@
+---
+version: 1
+meta:
+  owner: windows-lead@aqua-os
+  reviewer: certification-lead@aqua-os
+  last_updated: "2025-01-15T16:00:00Z"
+  change_ref: "BWB-Q100-U-BAY-QCO-ATA56-v1"
+
+applies_to:
+  cc_id: CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC
+  description: "Panoramic windows integrated with QCO (ATA-56)"
+
+standards:
+  - id: CS-25.775
+    org: EASA
+    title: "Windows and Windshields"
+    clause: "All paragraphs"
+    applicability: "ATA-56"
+    level: MUST
+    verification: [Test, Analysis, Inspection]
+    brk_requirements: [BRK-CS-WIN-001, REQ-WIN-01, REQ-WIN-04]
+
+  - id: CS-25.773
+    org: EASA
+    title: "Pilot Compartment View"
+    clause: "Transparency (applicable paragraphs)"
+    applicability: "ATA-56"
+    level: MUST
+    verification: [Test, Analysis]
+    brk_requirements: [BRK-CS-WIN-001]
+
+  - id: CS-25.1309
+    org: EASA
+    title: "Equipment, Systems and Installations"
+    clause: "Hazard analysis and EMI"
+    applicability: "ATA-56/QCO"
+    level: MUST
+    verification: [Analysis, Test]
+    brk_requirements: [REQ-WIN-01, REQ-WIN-03]
+
+  - id: DO-160
+    org: RTCA
+    title: "Environmental Conditions and Test Procedures"
+    clause: "§4 Temperature; §20 EMI; §24 Icing"
+    applicability: "ATA-56/QCO"
+    level: MUST
+    verification: [Test]
+    brk_requirements: [REQ-WIN-01, REQ-WIN-02, REQ-WIN-04]
+
+  - id: DO-326A
+    org: RTCA
+    title: "Airworthiness Security Process"
+    clause: "Lifecycle security"
+    applicability: "ATA-56 Edge Processing"
+    level: MUST
+    verification: [Inspection, Test]
+    brk_requirements: [REQ-WIN-05, BRK-IS-WIN-001]

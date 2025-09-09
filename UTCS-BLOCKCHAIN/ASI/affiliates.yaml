@@ -1,0 +1,18 @@
+---
+# Official, affiliated repositories allowed for ranking (strict provenance).
+version: 1
+orgs:
+  - name: Robbbo-T
+    repos:
+      - url: "https://github.com/Robbbo-t/Robbbo-t"        # foundational repo
+      # add more repos/orgs as you affiliate them
+signers:
+  # Optional allowlist of DET signers for stronger provenance
+  - id: "wb-bot@aqua"
+  - id: "oracle1@tek"
+  - id: "dao-bot@tek"
+rules:
+  require_repo_match: true         # DET packets must reference a listed repo
+  require_signer_match: false      # set true to enforce signer allowlist
+  require_signed_commits: false    # enable if you also verify VCS signatures upstream
+  repo_evidence_field: "inputs.provenance.git_url"  # path inside det_packet.json to find repo URL

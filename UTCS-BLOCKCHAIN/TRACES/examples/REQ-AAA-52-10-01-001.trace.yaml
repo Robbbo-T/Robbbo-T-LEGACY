@@ -1,0 +1,7 @@
+---
+requirement_id: REQ-AAA-52-10-01-001
+artifacts:
+  - det_id: "DET:CAD:AAA:52-10:design:V3"
+    file: "UTCS-BLOCKCHAIN/DET/CAD/AAA/52-10/design/V3/det_packet.json"
+status: Verified
+last_updated: 2025-09-01T12:00:00Z

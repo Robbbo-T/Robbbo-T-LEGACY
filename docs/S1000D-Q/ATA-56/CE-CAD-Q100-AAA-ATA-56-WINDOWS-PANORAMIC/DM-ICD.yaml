@@ -1,0 +1,35 @@
+---
+dm:
+  code:
+    model_ident_code: "AMPEL360"
+    system_code: "56"
+    info_code: "022"
+    info_code_variant: "B"
+    item_location_code: "Q"
+  title: "Panoramic Windows — Interface Control (QCO/ANMN/Thermal)"
+  issue: {number: "001", in_work: "00"}
+  language: "en"
+  security: "unclassified"
+  status: "baselined"
+  links:
+    ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+  content:
+    interfaces:
+      - name: "QCO_Bridge"
+        type: "quantum-classical"
+        signals:
+          - {name: "coherence_status", dir: "QCO→Window", update_hz: 1000}
+          - {name: "display_mode_cmd", dir: "Window→QCO", bw_gbps: 10}
+        constraints:
+          emi_nt_sqrt_hz_1hz: 100
+          thermal_rms_mK: 5
+      - name: "ANMN_Bus"
+        type: "neural-bus"
+        signals:
+          - {name: "abu_protect", dir: "ANMN→Window", max_latency_ms: 10}
+          - {name: "pax_state_local", dir: "Window→ANMN", privacy: "edge-only"}
+      - name: "Thermal_Boundary"
+        type: "cryo-boundary"
+        parameters:
+          - {name: "gradient_zones", values: ["300K", "150K", "77K"]}
+          - {name: "equiv_conductance_W_per_K", max: 0.5}

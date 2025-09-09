@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for OOO (CAB-BRAINSTORMING)
+aliases:
+  edi_integration: "ALIAS:OOO:EDI:INTEGRATION-CONCEPTS"
+  iis_integration: "ALIAS:OOO:IIS:INTEGRATION-CONCEPTS"
+  aaa_integration: "ALIAS:OOO:AAA:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:OOO:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:OOO:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:OOO:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:OOO:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:OOO:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:OOO:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:OOO:MAXENT:NOVELTY-SEARCH"

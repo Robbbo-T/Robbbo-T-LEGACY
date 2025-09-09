@@ -1,0 +1,40 @@
+---
+UniversalStandard: UTCS-MI v5.0
+alias_version: 1.0.0
+owner_domain: OOO
+domain_name: OPERATING_SYSTEMS_NAVIGATION_HPC
+description: Operating systems, navigation, and high-performance computing
+co_domains:
+- IIS
+- EDI
+- LCC
+canonical_path: >
+  C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/OOO-OPERATING_SYSTEMS_NAVIGATION_HPC/
+cross_references:
+  IIS: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/IIS-*/
+  EDI: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/EDI-*/
+  LCC: ../../../CAS-SUSTAINMENT/H2-BWB-Q100-CONF0000/LCC-*/
+ata_sns_primary:
+- '22'
+- '31'
+- '34'
+- '42'
+- '46'
+cadet_integration:
+  enabled: true
+  circularity_tracking: true
+  sustainability_metrics: true
+det_registry:
+  pattern: DET:CAS:OOO:<SNS>:<activity>:V<rev>
+  evidence_types:
+  - design
+  - analysis
+  - test
+  - integration
+  - sustainment
+  - organization
+meta:
+  owner: OOO-Domain-Lead
+  reviewer: Chief-Architect
+  last_updated: '2025-01-14T12:00:00Z'
+  change_ref: INIT-OOO-DOMAIN-V1

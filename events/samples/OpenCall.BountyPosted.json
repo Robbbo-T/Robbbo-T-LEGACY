@@ -1,0 +1,8 @@
+{
+  "event": "OpenCall.BountyPosted",
+  "ts": "2025-01-15T17:00:00.000Z",
+  "bounty_id": "B-ATA56-S1000DQ-001",
+  "det_ref": "DET:OpenCall:bounty_posted:v1",
+  "signature": "PQC-Dilithium3",
+  "meta": { "branch": "feat/open-call-genesis-r1" }
+}

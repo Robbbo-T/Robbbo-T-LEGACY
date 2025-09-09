@@ -1,0 +1,34 @@
+---
+domain:
+  code: OOO
+  name: OPERATING_SYSTEMS_NAVIGATION_HPC
+  description: Operating systems, navigation, and high-performance computing
+  version: 1.0.0
+cax_integration:
+  pillar: CAI-INTEGRATIONS
+  flow: CA-DEOPTIMISE
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '22'
+  - '31'
+  - '34'
+  - '42'
+  - '46'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - IIS
+  - EDI
+  - LCC
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAI:OOO:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

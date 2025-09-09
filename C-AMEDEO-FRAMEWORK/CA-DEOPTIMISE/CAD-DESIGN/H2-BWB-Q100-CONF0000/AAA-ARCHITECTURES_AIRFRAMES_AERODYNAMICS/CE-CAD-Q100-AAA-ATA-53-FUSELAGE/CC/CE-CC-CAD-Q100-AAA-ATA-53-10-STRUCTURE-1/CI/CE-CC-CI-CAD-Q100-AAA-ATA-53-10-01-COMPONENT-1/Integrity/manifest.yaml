@@ -1,0 +1,98 @@
+---
+metadata:
+  ci_id: CE-CC-CI-CAD-Q100-AAA-ATA-53-10-01-COMPONENT-1
+  part_number: Q100-53-10-01-001
+  name: Forward Pressure Bulkhead Assembly
+  revision: A
+  weight_kg: 412.5
+  units: EA
+  generated: '2025-09-01T20:39:53Z'
+  schema_version: '1.0'
+artifacts:
+  3d_models:
+  - file: 3DModels/fpb_assy_v3.CATPart
+    format: CATIA V5R30
+    description: Native CATIA part file
+    sha256: 521f08e35ad8c141355130bbc7454360629f7119330a9992f0b788865bf58737
+    size_bytes: 528
+  - file: 3DModels/fpb_assy_v3.CATProduct
+    format: CATIA V5R30
+    description: Native CATIA assembly file
+    sha256: 8046a05915207b5a51e12827d2617c204993f41996421aa0b17669a4e3585f8d
+    size_bytes: 464
+  - file: 3DModels/fpb_assy_v3.step
+    format: STEP AP242 ed2+VP
+    description: 3D Master with Validation Properties
+    sha256: ff4514886e7b84a037aa2b247595354f17d0d57459eb0faedac173a8823b7f56
+    size_bytes: 3173
+    validation:
+      units: mm
+      mass_kg: 412.5
+      cg_mm:
+      - 15120.0
+      - 0.0
+      - 2340.0
+      bbox_mm:
+      - 5200.0
+      - 5200.0
+      - 180.0
+      vp_keys:
+      - mass_kg
+      - cg_x_mm
+      - cg_y_mm
+      - cg_z_mm
+      - bbox_x_mm
+      - bbox_y_mm
+      - bbox_z_mm
+      cg_x_mm: 15120.0
+      cg_y_mm: 0.0
+      cg_z_mm: 2340.0
+      bbox_x_mm: 5200.0
+      bbox_y_mm: 5200.0
+      bbox_z_mm: 180.0
+  drawings:
+  - file: Drawings/fpb_assy_v3.dwg
+    format: AutoCAD DWG
+    description: Native AutoCAD drawing
+    sha256: 1711ac7276c7f2fdcdbaf13c1289c0419b2a93f5eaa3a008991f4dffaf579581
+    size_bytes: 441
+  - file: Drawings/fpb_assy_v3.dxf
+    format: DXF
+    description: Neutral DXF format
+    sha256: 649d3e6eee248dddad71509563102a05ed6221bf34b5f4b54fb3658e68f79ade
+    size_bytes: 509
+  - file: Drawings/fpb_assy_v3.pdf
+    format: PDF/A-2b
+    description: PDF/A-2b signed drawing
+    sha256: ed77b509d6c11aa8d9726111f4533487a45d4dd6d70e9d86cbdd21e9187bf57b
+    size_bytes: 934
+breakdown:
+- id: '010'
+  description: Skin panel CFRP (CFRP-T800)
+  quantity: 1
+  material: CFRP-T800
+- id: '020'
+  description: Core sandwich (PMI Foam 18 mm)
+  quantity: 1
+  material: PMI Foam
+  thickness_mm: 18
+- id: '030'
+  description: Peripheral flange (CFRP-T800)
+  quantity: 1
+  material: CFRP-T800
+- id: '040'
+  description: Hardpoint inserts (Ti-6Al-4V)
+  quantity: 8
+  material: Ti-6Al-4V
+compliance:
+  standards:
+  - ASME Y14.5-2018 (GD&T)
+  - EASA CS-25.365
+  - EASA CS-25.571
+  - AS9102 (First Article Inspection)
+  - STEP AP242 ed2 with Validation Properties
+  integrity_checks:
+  - SHA256 hash verification
+  - File size validation
+  - STEP VP extraction
+  - JSON/YAML syntax validation

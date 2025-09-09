@@ -1,52 +1,53 @@
-# EER - Energy & Renewable
+# EER - ENERGY_AND_RENEWABLE
 
-**Domain:** EER - Energy & Renewable  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: EER  
+**Name**: ENERGY_AND_RENEWABLE  
+**Description**: Energy systems and renewable power generation
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-24, ATA-26, ATA-60, ATA-61
 
-This domain covers electrical power systems, energy management, and renewable energy integration for the hydrogen-powered BWB aircraft.
+## Cross-Domain References
+Co-domains that reference this domain:
+[PPP](../PPP-*/), [CQH](../CQH-*/), [EDI](../EDI-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Electrical power generation and distribution
-- Energy management systems
-- Renewable energy integration
-- Hydrogen fuel cell systems
-- Energy efficiency optimization
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:EER:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 24 - Electrical Power**
-- **ATA 36 - Pneumatic (Energy)**
-- **ATA 49 - APU**
-- **ATA 73 - Engine Fuel & Control (H₂)**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-EER-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-24-ELECTRICAL-POWER) — ATA 24 - Electrical Power
-* [CE-CAD-Q100-EER-ATA-36-PNEUMATIC](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-36-PNEUMATIC) — ATA 36 - Pneumatic (Energy)
-* [CE-CAD-Q100-EER-ATA-49-APU](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-49-APU) — ATA 49 - APU
-* [CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/EER-ENERGY_AND_RENEWABLE/CE-CAD-Q100-EER-ATA-73-H2-FUEL-CONTROL) — ATA 73 - Engine Fuel & Control (H₂)
-
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+EER-ENERGY_AND_RENEWABLE/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Energy systems and renewable power generation*

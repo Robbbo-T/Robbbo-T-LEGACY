@@ -1,0 +1,32 @@
+---
+domain:
+  code: DDD
+  name: DEFENCE_CYBERSECURITY_SAFETY
+  description: Defense systems, cybersecurity protocols, and safety assurance
+  version: 1.0.0
+cax_integration:
+  pillar: CAM-MANUFACTURING
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '20'
+  - '46'
+  - '97'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - EDI
+  - IIS
+  - OOO
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAM:DDD:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

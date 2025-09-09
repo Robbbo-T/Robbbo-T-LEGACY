@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for LIB (CAB-BRAINSTORMING)
+aliases:
+  iif_integration: "ALIAS:LIB:IIF:INTEGRATION-CONCEPTS"
+  ddd_integration: "ALIAS:LIB:DDD:INTEGRATION-CONCEPTS"
+  lcc_integration: "ALIAS:LIB:LCC:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:LIB:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:LIB:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:LIB:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:LIB:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:LIB:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:LIB:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:LIB:MAXENT:NOVELTY-SEARCH"

@@ -1,49 +1,53 @@
-# AAP - Airports Adaptations
+# AAP - AIRPORTS_ADAPTATIONS
 
-**Domain:** AAP - Airports Adaptations  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: AAP  
+**Name**: AIRPORTS_ADAPTATIONS  
+**Description**: Airport infrastructure interfaces and ground operation adaptations
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-01, ATA-07, ATA-12, ATA-96
 
-This domain covers airport infrastructure adaptations required for BWB aircraft operations and ground handling procedures.
+## Cross-Domain References
+Co-domains that reference this domain:
+[IIF](../IIF-*/), [LIB](../LIB-*/), [EDI](../EDI-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- Airport infrastructure modifications
-- Ground handling procedures
-- Gate and parking adaptations
-- Ground power and service interfaces
-- Emergency response procedures
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:AAP:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 09 - Ground Handling**
-- **ATA 10 - Parking/Mooring**
-- **ATA 49 - GPU/Power Interfaces**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-AAP-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-AAP-ATA-09-GROUND](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-09-GROUND) — Ground Handling
-* [CE-CAD-Q100-AAP-ATA-10-PARKING](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-10-PARKING) — Parking/Mooring
-* [CE-CAD-Q100-AAP-ATA-49-GPU](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/AAP-AIRPORTS_ADAPTATIONS/CE-CAD-Q100-AAP-ATA-49-GPU) — GPU/Power Interfaces
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+AAP-AIRPORTS_ADAPTATIONS/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Airport infrastructure interfaces and ground operation adaptations*

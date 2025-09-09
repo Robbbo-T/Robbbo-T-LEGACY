@@ -1,0 +1,183 @@
+---
+meta:
+  spec: ASI-1.0
+  owner: "asi@your-org"
+  updated: "2025-09-01T00:00:00Z"
+
+windows:
+  lookback_days: 90
+  weekly_cycle_day_utc: "SUN"
+
+eligibility:
+  # Reuse CADET affiliates allowlist to ensure official provenance
+  affiliates_ref: "UTCS-BLOCKCHAIN/ASI/affiliates.yaml"
+  det_glob: "UTCS-BLOCKCHAIN/DET/**/det_packet.json"
+  require_si_units: true
+  require_ed25519: true
+
+grouping:
+  # Score granularity
+  artifact_key: "refs.ci"     # fallback to refs.ce
+  cluster_by:
+    - "domain"                # AAA, EDI, etc.
+    - "pillar"                # CAD, CAE, etc.
+    - "ata_sns"               # ATA chapter codes
+    - "sustainability_theme"  # energy, co2, reuse, life_ext
+
+metrics:
+  # Catalyze Additional Value (CAV)
+  cav_reuse_multiplier:
+    weight: 1.00
+    normalize: "zscore"
+    description: "Reuse uplift * downstream adoption factor"
+
+  cav_energy_efficiency:
+    weight: 0.80
+    normalize: "zscore"
+    description: "Energy saved per unit effort invested"
+
+  cav_spillover_effect:
+    weight: 0.60
+    normalize: "domain_norm"
+    description: "Cross-domain innovation adoption rate"
+
+  # Cluster Innovation (CLI)
+  cli_novelty_score:
+    weight: 0.70
+    normalize: "minmax01"
+    description: "First-of-kind methods or breakthrough approaches"
+
+  cli_coherence:
+    weight: 0.50
+    normalize: "zscore"
+    description: "Internal cluster consistency and synergy"
+
+  cli_emergence_rate:
+    weight: 0.40
+    normalize: "inv_days_norm"
+    description: "Speed of cluster formation and growth"
+
+  # Boost Auto Finance (BAF)
+  baf_roi_projection:
+    weight: 0.90
+    normalize: "zscore"
+    description: "Projected return on investment efficiency"
+
+  baf_sustainability_alignment:
+    weight: 0.85
+    normalize: "minmax01"
+    description: "Alignment with sustainability goals"
+
+  baf_risk_mitigation:
+    weight: 0.75
+    normalize: "zscore"
+    description: "Risk reduction and robustness measures"
+
+  # Sustainability Focus (SUS)
+  sus:
+    energy_per_decision_kwh:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.energy_kwh"   # fallback if breakdown missing
+      weight: 0.25
+      normalize: "inv_energy_norm"
+      min_evidence: 3
+    pattern_reuse_pct:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.pattern_reuse_pct"
+      weight: 0.25
+      normalize: "minmax01"
+      min_evidence: 3
+    co2e_per_decision_kg:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.co2e_kg"
+      weight: 0.30
+      normalize: "inv_energy_norm"
+      min_evidence: 3
+    learning_efficiency:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.learning_efficiency"
+      weight: 0.20
+      normalize: "zscore"
+      min_evidence: 5
+
+  # Decision Quality (DQ)
+  dq:
+    autonomy_level:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.autonomy_level"
+      weight: 0.20
+      normalize: "minmax01"
+    sustainability_of_choice:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.sustainability_score"
+      weight: 0.30
+      normalize: "minmax01"
+    resource_optimization_intelligence:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.resource_opt_score"
+      weight: 0.30
+      normalize: "zscore"
+    improvement_rate:
+      source: "DET:ASI:decision"
+      field: "outputs.metrics.improvement_rate"
+      weight: 0.20
+      normalize: "zscore"
+
+guards:
+  signature_required: true
+  units_required: true
+  sigma_outlier: 3
+  deduplicate_by_det_id: true
+  cap_per_ci: 50
+  min_namespaces: 1
+  english_only: true
+
+weights:
+  composite:
+    cav: 0.40
+    cli: 0.20
+    baf: 0.20
+    sus: 0.10   # +SUS cap 10%
+    dq: 0.10   # +DQ cap 10%
+
+normalizers:
+  inv_energy_norm: {fn: "inverse", H: 0.25}   # ~0.25 kWh/decision = neutral
+
+autonomy_levels:
+  A0: 0.0  # Human-only
+  A1: 0.2  # Agent suggests
+  A2: 0.4  # Agent recommends w/ rationale
+  A3: 0.6  # Agent decides in tight constraints
+  A4: 0.8  # Agent decides in loose constraints
+  A5: 1.0  # Agent fully autonomous (watchdog on)
+
+scoring:
+  composite: "weighted_sum"
+  domain_balancing: true
+  tie_breaker: ["baf_sustainability_alignment", "cli_novelty_score", "earliest_ts"]
+
+outputs:
+  out_dir: "UTCS-BLOCKCHAIN/ASI/leaderboards"
+  files:
+    - "leaderboard-global.json"
+    - "leaderboard-global.md"
+    - "leaderboard-cav.md"      # CAV-focused ranking
+    - "leaderboard-cli.md"      # CLI-focused ranking
+    - "leaderboard-baf.md"      # BAF-focused ranking
+  schema_ref: "UTCS-BLOCKCHAIN/ASI/schemas/asi-score.schema.json"
+
+proposals:
+  auto_generate: true
+  threshold_changes:
+    major_weight_shift: 0.20    # trigger proposal if weight changes exceed 20%
+    new_high_performer: 0.90    # trigger if new artifact scores above 90th percentile
+    cluster_emergence: 5        # trigger if new cluster has 5+ high-scoring artifacts
+  template_ref: "UTCS-BLOCKCHAIN/ASI/proposals/templates/weight-change-proposal.md"
+
+certification:
+  enabled: true
+  mode: "bonus_only"              # NEVER inside core composite; for display/ties only
+  mapping_ref: "UTCS-BLOCKCHAIN/ASI/cert/cert-mapping.yaml"
+  max_cert_bonus: 0.10            # ≤10% of composite score (hard cap)
+  decay_days: 365                 # recent certifications weigh more; decays to avoid legacy lock-in
+  tiebreaker: true                # use bonus only as final tiebreaker

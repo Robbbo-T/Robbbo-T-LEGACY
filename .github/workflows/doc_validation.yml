@@ -1,0 +1,45 @@
+name: AAA Doc & Schema Validation
+
+on:
+  push:
+    paths:
+      - "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/domain-config.yaml"
+      - "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/requirements/**"
+      - "schemas/**"
+      - "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/det_samples/heur_cycles/**"
+      - ".github/workflows/doc_validation.yml"
+      - "C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/scripts/validate_aaa.py"
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema ruamel.yaml
+
+      - name: Run AAA validator
+        working-directory: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+        run: |
+          chmod +x scripts/validate_aaa.py
+          scripts/validate_aaa.py
+
+      - name: Generate DET packs
+        working-directory: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+        run: |
+          make det-aaa || python scripts/generate_det_stubs.py
+
+      - name: Upload DET packs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AAA-det-packs
+          path: C-AMEDEO-FRAMEWORK/CA-OPTIMISED/CAB-BRAINSTORMING/H2-BWB-Q100-CONF0000/AAA-ARCHITECTURES_AIRFRAMES_AERODYNAMICS/det_samples/det_packs

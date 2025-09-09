@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for EDI (CAB-BRAINSTORMING)
+aliases:
+  ccc_integration: "ALIAS:EDI:CCC:INTEGRATION-CONCEPTS"
+  ddd_integration: "ALIAS:EDI:DDD:INTEGRATION-CONCEPTS"
+  ooo_integration: "ALIAS:EDI:OOO:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:EDI:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:EDI:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:EDI:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:EDI:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:EDI:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:EDI:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:EDI:MAXENT:NOVELTY-SEARCH"

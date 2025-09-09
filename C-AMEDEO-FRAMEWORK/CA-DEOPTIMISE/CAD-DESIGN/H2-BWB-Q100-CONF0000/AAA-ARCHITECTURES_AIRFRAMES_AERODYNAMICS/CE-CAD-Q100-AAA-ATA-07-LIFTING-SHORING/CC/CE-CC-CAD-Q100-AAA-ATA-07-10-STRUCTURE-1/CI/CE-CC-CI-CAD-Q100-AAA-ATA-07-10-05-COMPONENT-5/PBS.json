@@ -1,0 +1,12 @@
+{
+  "wbs_id": "Q100-07-10-05",
+  "name": "5",
+  "owner_domain": "AAA",
+  "cax": "CAD",
+  "sns": "Q100071005",
+  "cc_id": "CE-CC-CAD-Q100-AAA-ATA-07-10-STRUCTURE-1",
+  "ci_id": "CE-CC-CI-CAD-Q100-AAA-ATA-07-10-05-COMPONENT-5",
+  "description": "Component 5 for ATA 07",
+  "effectivity": "CONF0000",
+  "lifecycle_phase": "CA-DEOPTIMISE"
+}

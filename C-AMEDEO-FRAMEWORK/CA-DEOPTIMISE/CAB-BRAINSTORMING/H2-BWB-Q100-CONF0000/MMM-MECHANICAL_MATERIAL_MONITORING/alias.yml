@@ -1,0 +1,11 @@
+---
+# Cross-Domain References for MMM (CAB-BRAINSTORMING)
+aliases:
+  innovation_concepts: "ALIAS:MMM:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:MMM:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:MMM:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:MMM:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:MMM:MAXENT:NOVELTY-SEARCH"

@@ -1,0 +1,32 @@
+---
+# BRK-DS Additional Airworthiness Specifications Requirements
+# Domain: CS - Additional Airworthiness Specifications (CS‑XX)
+# Following CAD requirements rules per instructions
+
+requirements:
+  - id: BRK-CS-001
+    text: >-
+      For the applicable category (e.g., CS‑25 large aeroplanes, CS‑27/29
+      rotorcraft), maintain a CS compliance map with paragraph‑level MoC
+      and evidence linkage.
+    source: "EASA Certification Specifications (CS-25, CS-27, CS-29, etc.)"
+    driver: "safety"
+    acceptance: >-
+      CS compliance map maintained for applicable aircraft category with
+      paragraph-level means of compliance documented and evidence linkage
+      established for each applicable CS requirement. CS-25.775/773
+      paragraph-level MoC maintained for ATA-56 windows.
+    verification: "Process"
+    links:
+      ce: "TBD-CS-COMPLIANCE-CE"
+      cc: "TBD-CS-COMPLIANCE-CC"
+      ci: "TBD-CS-COMPLIANCE-CI"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T12:00:00Z"
+
+meta:
+  owner: "certification-lead@aqua-os"
+  reviewer: "technical-lead@aqua-os"
+  last_updated: "2025-01-15T12:00:00Z"
+  change_ref: "BRK-DS-IMPLEMENTATION-001"

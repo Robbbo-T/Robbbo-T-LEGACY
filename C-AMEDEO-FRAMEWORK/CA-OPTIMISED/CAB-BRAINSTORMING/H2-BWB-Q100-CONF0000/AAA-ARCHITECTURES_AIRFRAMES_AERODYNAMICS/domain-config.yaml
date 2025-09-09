@@ -1,0 +1,222 @@
+---
+domain:
+  code: AAA
+  name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+  description: Conceptual exploration of airframe structures, aerodynamic surfaces, and architectural systems
+  version: 1.0.0
+cax_integration:
+  pillar: CAB-BRAINSTORMING
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '02'
+  - '06'
+  - '11'
+  - '18'
+  - '20'
+  - '51'
+  - '52'
+  - '53'
+  - '55'
+  - '56'
+  - '57'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - MMM
+  - EEE
+  - OOO
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAB:AAA:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519
+cab_specific:
+  concept_generation:
+    quantum_ml: true
+    grover_search: true
+    entropy_maximization: true
+  feasibility_analysis:
+    multi_criteria: true
+    trade_studies: true
+    risk_assessment: CVaR
+  artifact_types:
+  - concept_sketches
+  - feasibility_scorecards
+  - trade_study_reports
+  - rationale_graphs
+  focus_area: "Advanced composites, structural health monitoring, and mechanical innovations"
+
+ontology:
+  version: AAA_Ontology_v1
+  domain:
+    code: AAA
+    name: ARCHITECTURES_AIRFRAMES_AERODYNAMICS
+    scope: "Airframe architectures, aerodynamic systems, hydrogen integration for BWB-Q100"
+  internal_classes:
+    SensingLayer:
+      nodes: [Lidar, Radar, OpticalIR, StrainSensors, ThermalSensors, Fusion360, TimeSyncNet]
+      attributes: [coverage_azimuth_deg, coverage_vertical_deg, fusion_latency_ms_p95, sync_jitter_ms_rms, timestamp_resolution_us]
+    HeuritmaticsLayer:
+      nodes: [HeuritmaKernel, HeurPipeline, HeurMixer, TrustFilter]
+      attributes: [axes, state_vector_dim, trust_weights, cycle_id, cycle_timestamp]
+    ExecutionLayer:
+      nodes: [ExecKernel, FlightCtrlAI, ModeManager, SafeStateAutonomy]
+      attributes: [loop_latency_ms_p95, pilot_override_latency_ms, confidence_threshold]
+    NetworkingLayer:
+      nodes: [GAIA_Infranet, QNetRadio, QUAChainNotary]
+      attributes: [telemetry_bandwidth_mbps, control_latency_ms_p95, notarization_coverage_pct]
+    EvidenceAndCompute:
+      nodes: [DETAgent, DataPlane, LogArray, RTOSPartitions, GPUAccel]
+      attributes: [wcet_budgets, storage_throughput_mb_s, retention_hours, integrity_hash]
+  interfaced_classes:
+    EEE:
+      interfaces:
+        - name: BLI_Interface
+          direction: bidirectional
+          payloads: [WakeFields, InletDistortionMap, PropSetCommands]
+    MMM:
+      interfaces:
+        - name: CryoComposite_Interface
+          direction: inbound
+          payloads: [AllowablesDB, ProcessWindow, DamageToleranceCurves]
+    OOO:
+      interfaces:
+        - name: OpsSafety_Interface
+          direction: bidirectional
+          payloads: [HazardStates, MEL_CDL_Constraints, MissionProfiles]
+    QCSAA:
+      interfaces:
+        - name: QuantumKernel_Interface
+          direction: bidirectional
+          payloads: [LatentSpaceModel, GroverOracle, EntropyDiversityStats]
+    CADET:
+      interfaces:
+        - name: Circularity_Interface
+          direction: outbound
+          payloads: [LifecycleMetrics, RecoveryRoutes]
+    TRACES:
+      interfaces:
+        - name: Trace_Link_Interface
+          direction: bidirectional
+          payloads: [ReqRefs, ArtifactRefs, AuditTrail]
+
+goals:
+  version: AAA_Domain_Goals
+  list:
+    G1: "Panoramic, time-deterministic sensing & fusion"
+    G2: "Heuritma 5-axis encoding per decision cycle"
+    G3: "Trust-weighted synthesis with stable state vectors"
+    G4: "Real-time execution for avoidance and trajectory"
+    G5: "Deterministic fallback + pilot override"
+    G6: "Fleet networking with bandwidth/latency QoS"
+    G7: "QUAChain notarization of critical decisions"
+    G8: "Structural/Thermal anomalies drive Constraint axis"
+    G9: "Deterministic compute & storage budgets"
+    G10: "Safety DAL allocation & assurance case"
+    G11: "DET completeness per cycle and segment"
+
+rtm:
+  version: AAA_RTM
+  rows:
+    - req: REQ-AAA-SENSE-360FOV-001
+      goals: [G1]
+      ontology_nodes: [SensingLayer.Fusion360, SensingLayer.Lidar, SensingLayer.Radar, SensingLayer.OpticalIR]
+      interfaces: []
+      det_artifacts: [fusion_latency_report.csv, fov_coverage_map.svg]
+    - req: REQ-AAA-SENSE-SYNC-002
+      goals: [G1]
+      ontology_nodes: [SensingLayer.TimeSyncNet]
+      interfaces: [TRACES.Trace_Link_Interface]
+      det_artifacts: [time_sync_drift.log]
+    - req: REQ-AAA-HEUR-5D-003
+      goals: [G2]
+      ontology_nodes: [HeuritmaticsLayer.HeuritmaKernel]
+      interfaces: [TRACES.Trace_Link_Interface]
+      det_artifacts: [heur_schema.json, heur_sample_cycles.parquet]
+    - req: REQ-AAA-HEUR-CHAIN-004
+      goals: [G3]
+      ontology_nodes: [HeuritmaticsLayer.HeurPipeline, HeuritmaticsLayer.HeurMixer]
+      interfaces: [QCSAA.QuantumKernel_Interface]
+      det_artifacts: [heur_pipeline_trace.jsonl, state_vector_stats.csv]
+    - req: REQ-AAA-HEUR-TRUST-005
+      goals: [G3]
+      ontology_nodes: [HeuritmaticsLayer.TrustFilter]
+      interfaces: [OOO.OpsSafety_Interface]
+      det_artifacts: [trust_scores.log, mission_profile_changes.yaml]
+    - req: REQ-AAA-EXEC-LATENCY-006
+      goals: [G4]
+      ontology_nodes: [ExecutionLayer.ExecKernel, ExecutionLayer.FlightCtrlAI]
+      interfaces: []
+      det_artifacts: [hil_loop_timing.csv]
+    - req: REQ-AAA-EXEC-FALLBACK-007
+      goals: [G5]
+      ontology_nodes: [ExecutionLayer.ModeManager, ExecutionLayer.SafeStateAutonomy]
+      interfaces: [OOO.OpsSafety_Interface]
+      det_artifacts: [fault_injection_report.md, override_latency.csv]
+    - req: REQ-AAA-NET-QNET-008
+      goals: [G6]
+      ontology_nodes: [NetworkingLayer.GAIA_Infranet, NetworkingLayer.QNetRadio]
+      interfaces: [EEE.BLI_Interface, QCSAA.QuantumKernel_Interface]
+      det_artifacts: [link_benchmark.csv]
+    - req: REQ-AAA-NET-QUACHAIN-009
+      goals: [G7]
+      ontology_nodes: [NetworkingLayer.QUAChainNotary, EvidenceAndCompute.DETAgent]
+      interfaces: [TRACES.Trace_Link_Interface, CADET.Circularity_Interface]
+      det_artifacts: [det_registry.json, quachain_audit.csv]
+    - req: REQ-AAA-STRUCT-THERM-010
+      goals: [G8]
+      ontology_nodes: [SensingLayer.StrainSensors, SensingLayer.ThermalSensors, HeuritmaticsLayer.HeuritmaKernel]
+      interfaces: [MMM.CryoComposite_Interface]
+      det_artifacts: [structural_anomaly_latency.csv]
+    - req: REQ-AAA-RES-RTOS-011
+      goals: [G9]
+      ontology_nodes: [EvidenceAndCompute.RTOSPartitions, EvidenceAndCompute.GPUAccel]
+      interfaces: []
+      det_artifacts: [rtos_partition_plan.yaml, wcet_report.pdf]
+    - req: REQ-AAA-RES-STORAGE-012
+      goals: [G9, G11]
+      ontology_nodes: [EvidenceAndCompute.DataPlane, EvidenceAndCompute.LogArray]
+      interfaces: [TRACES.Trace_Link_Interface]
+      det_artifacts: [storage_benchmark.csv, integrity_hash_check.log]
+    - req: REQ-AAA-SAF-DAL-013
+      goals: [G10]
+      ontology_nodes: [ExecutionLayer.ExecKernel, HeuritmaticsLayer.HeuritmaKernel, EvidenceAndCompute.DETAgent]
+      interfaces: [OOO.OpsSafety_Interface]
+      det_artifacts: [safety_case.md, verification_matrix.xlsx]
+    - req: REQ-AAA-DET-TRACE-014
+      goals: [G11, G7]
+      ontology_nodes: [EvidenceAndCompute.DETAgent, NetworkingLayer.QUAChainNotary]
+      interfaces: [TRACES.Trace_Link_Interface, CADET.Circularity_Interface]
+      det_artifacts: [det_sample_records.json, quachain_hash_compare.csv]
+
+interfaces:
+  version: Interfaces_v1
+  contracts:
+    BLI_Interface:
+      provider: EEE.PropulsionControl
+      consumer: AAA.ExecutionLayer
+      qos: {latency_ms_p95: 20, availability: "99.99%"}
+      schema: {wake_field_grid: "NxMxK float32", inlet_distortion: "vector<float32>"}
+    CryoComposite_Interface:
+      provider: MMM.MaterialsDB
+      consumer: AAA.HeuritmaticsLayer
+      cadence: "on-change / preflight"
+      schema: {allowables: "JSON", dt_curves: "CSV"}
+    OpsSafety_Interface:
+      provider: OOO.SafetyOps
+      consumer: AAA.ModeManager
+      qos: {latency_ms_p95: 50}
+      schema: {hazard_state: "enum", constraints: "JSON"}
+    QuantumKernel_Interface:
+      provider: QCSAA.QService
+      consumer: AAA.HeurPipeline
+      qos: {batch_window_ms: 100}
+      schema: {latent_model_id: "string", oracle_id: "string", entropy_stats: "JSON"}

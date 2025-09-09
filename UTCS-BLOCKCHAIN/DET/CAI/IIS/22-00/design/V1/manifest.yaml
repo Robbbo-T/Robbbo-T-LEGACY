@@ -1,0 +1,13 @@
+activity: design
+cax: CAI
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: IIS-Domain-Lead
+  sns_code: 22-00
+created: '2025-09-01T05:11:27.244147Z'
+det_id: DET:CAI:IIS:22-00:design:V1
+domain: IIS
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 22-00
+version: V1

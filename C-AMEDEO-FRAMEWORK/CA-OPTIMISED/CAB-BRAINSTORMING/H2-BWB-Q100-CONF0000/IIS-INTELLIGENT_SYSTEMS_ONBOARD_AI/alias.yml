@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for IIS (CAB-BRAINSTORMING)
+aliases:
+  edi_integration: "ALIAS:IIS:EDI:INTEGRATION-CONCEPTS"
+  ooo_integration: "ALIAS:IIS:OOO:INTEGRATION-CONCEPTS"
+  ddd_integration: "ALIAS:IIS:DDD:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:IIS:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:IIS:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:IIS:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:IIS:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:IIS:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:IIS:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:IIS:MAXENT:NOVELTY-SEARCH"

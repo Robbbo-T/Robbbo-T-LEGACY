@@ -1,0 +1,18 @@
+---
+version: 1
+inputs:
+  det_streams: ["UTCS-BLOCKCHAIN/DET/**/DET:*"]
+  cadet_cuts: ["UTCS-BLOCKCHAIN/CADET/kpis/**.yaml"]
+normalization:
+  reuse_percent: {fn: "avg_delta", window_days: 30}
+  energy_saved_kwh: {fn: "sum_delta", window_days: 30, scale: 0.00001}
+  co2_saved_kg: {fn: "sum_delta", window_days: 30, scale: 0.0001}
+  life_ext_months: {fn: "sum_delta", window_days: 180, scale: 0.08333}
+  risk_reduction: {fn: "avg_delta", window_days: 30}
+aggregation:
+  signers: ["oracle1@tek", "oracle2@tek", "oracle3@tek"]
+  signature: "Ed25519"
+output:
+  file: "UTCS-BLOCKCHAIN/TekTok/oracle/feed.json"
+  fields: [timestamp, kpis, score, previous_hash, signature]
+guards: {sigma_outlier: 3, min_sources: 2}

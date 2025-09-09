@@ -1,0 +1,22 @@
+---
+name: asi-guardrails
+permissions:
+  contents: read
+"on":
+  pull_request:
+    paths:
+      - "UTCS-BLOCKCHAIN/**"
+  schedule:
+    - cron: "0 0 * * 0"   # weekly Sunday 00:00 UTC
+  workflow_dispatch: {}
+jobs:
+  validate-guardrails:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Install deps
+        run: pip install pyyaml
+      - name: Run guardrails validator
+        run: python UTCS-BLOCKCHAIN/ASI/tools/validate_guardrails.py

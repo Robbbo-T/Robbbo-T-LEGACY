@@ -1,0 +1,20 @@
+---
+QAUDIT:
+  rollup_id: QAUDIT:MIGRATION:V1.0
+  entries:
+    - target: "#ta-bwb -> #tfa-bwb"
+      type: "alias"
+      scheme: "PQC-Dilithium3"
+      signature: "base64:..."
+    - target: "#sa-<dom>-NN -> #se-<dom>-NN"
+      type: "alias"
+      scheme: "PQC-Dilithium3"
+      signature: "base64:..."
+    - target: "#di-<dom>(invariant) -> #dinv-<dom>"
+      type: "alias"
+      scheme: "PQC-Dilithium3"
+      signature: "base64:..."
+    - target: "#ce-<dom>(envelope) -> #cenv-<dom>"
+      type: "alias"
+      scheme: "PQC-Dilithium3"
+      signature: "base64:..."

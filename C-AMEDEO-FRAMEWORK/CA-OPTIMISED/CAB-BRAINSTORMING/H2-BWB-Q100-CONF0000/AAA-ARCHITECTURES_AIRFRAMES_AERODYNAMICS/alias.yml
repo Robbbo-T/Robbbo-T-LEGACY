@@ -1,0 +1,22 @@
+---
+# Cross-Domain References for AAA (CAB-BRAINSTORMING)
+aliases:
+  structural_analysis: "ALIAS:AAA:MMM:STRUCTURAL-ANALYSIS"
+  materials_concepts: "ALIAS:AAA:MMM:MATERIAL-CONCEPTS"
+  environmental_impact: "ALIAS:AAA:EEE:ENVIRONMENTAL-ASSESSMENT"
+  sustainability_metrics: "ALIAS:AAA:EEE:CIRCULARITY-INDICATORS"
+  computational_requirements: "ALIAS:AAA:OOO:COMPUTATIONAL-RESOURCES"
+  quantum_processing: "ALIAS:AAA:OOO:QUANTUM-INTERFACES"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_configurations: "ALIAS:AAA:BWB:CONFIGURATION-SPACE"
+  pressure_vessels: "ALIAS:AAA:CQH:HYDROGEN-STORAGE"
+  aerodynamic_surfaces: "ALIAS:AAA:AERO:SURFACE-CONCEPTS"
+  structural_optimization: "ALIAS:AAA:STRUCT:OPTIMIZATION-CONCEPTS"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:AAA:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:AAA:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:AAA:MAXENT:NOVELTY-SEARCH"

@@ -1,0 +1,177 @@
+---
+# EBOM — UTCS-MI canónico (original AQUA v9.0 reference)
+# EstándarUniversal:Artefacto-ListaMateriales-ATA+S1000D-72.10-EngineeringBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-9a8b7c6d-RestoDeVidaUtil
+# DET:CAD:ppp:72-10:FAN1-EBOM:V9.0
+
+utcs_mi_header: "EstándarUniversal:Artefacto-ListaMateriales-ATA+S1000D-72.10-EngineeringBOM-0001-v9.0-Aerospace and Quantum United Advanced Venture-GeneracionHybrida-ppp-Amedeo Pelliccia-9a8b7c6d-RestoDeVidaUtil"
+det_reference: "DET:CAD:ppp:72-10:FAN1-EBOM:V9.0"
+
+part_number: Q100-72-10-01-FAN1
+description: Fan Section Assembly - Engineering BOM
+revision: V9.0
+program: BWB-Q100
+domain: ppp
+ata_chapter: "72.10"
+owner_domain: "PPP-PROPULSION_AND_FUELS"
+sns: "72-10"
+ce_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+cc_id: "CE-CC-CAD-Q100-PPP-ATA-72-10-FAN-SECTION"
+ci_id: "CE-CC-CI-CAD-Q100-PPP-ATA-72-10-01-FAN1"
+criticality: "DAL-B"
+effectivity: "All serial numbers"
+units: EA
+quantity: 1
+weight_kg: 850.5
+
+# Engineering BOM structure (design perspective)
+components:
+  - ci_code: "BLD1"
+    pn: "Q100-72-10-01-010"
+    description: "Pala fan"
+    qty: 24
+    material: "CFRP-T800/M21"
+    weight_kg: 1.85
+    process: "AFP + autoclave"
+    design_notes: "Aerodynamic profile optimized for H2 combustion"
+
+  - ci_code: "HUB2"
+    pn: "Q100-72-10-01-020"
+    description: "Cubo"
+    qty: 1
+    material: "Ti-6Al-4V"
+    weight_kg: 125.5
+    process: "Forged + machined"
+    design_notes: "Central hub for blade attachment"
+
+  - ci_code: "BRH6"
+    pn: "Q100-72-10-01-030"
+    description: "Aloj. raíz"
+    qty: 24
+    material: "Ti-6Al-4V"
+    weight_kg: 2.8
+    process: "Investment casting"
+    design_notes: "Blade root housing integrated to hub"
+
+  - ci_code: "FST7"
+    pn: "Q100-72-10-01-040"
+    description: "Juego fijaciones"
+    qty: 1
+    material: "Ti-Hi-Lok"
+    weight_kg: 8.5
+    process: "Standard fasteners"
+    design_notes: "Complete fastener set for blade attachment"
+    kit_contents: "288 pieces total (bolts, nuts, washers)"
+
+  - ci_code: "CWL3"
+    pn: "Q100-72-10-01-050"
+    description: "Cowl"
+    qty: 2
+    material: "CFRP-T800"
+    weight_kg: 45.2
+    process: "RTM molding"
+    design_notes: "Aerodynamic cowling, paired units"
+
+  - ci_code: "SPN4"
+    pn: "Q100-72-10-01-060"
+    description: "Spinner"
+    qty: 1
+    material: "Al-7075-T6"
+    weight_kg: 12.8
+    process: "Machined from billet"
+    design_notes: "Central nose cone"
+
+  - ci_code: "SHR8"
+    pn: "Q100-72-10-01-070"
+    description: "Shroud"
+    qty: 1
+    material: "CFRP-T800"
+    weight_kg: 25.3
+    process: "Hand layup + autoclave"
+    design_notes: "Fan containment shroud"
+
+  - ci_code: "QSN5"
+    pn: "Q100-72-10-01-080"
+    description: "Nodo sensor"
+    qty: 4
+    material: "Silicon-quantum"
+    weight_kg: 0.3
+    process: "Quantum fabrication"
+    design_notes: "Quantum sensors for performance monitoring"
+    special_req: "Clean room assembly required"
+
+  - ci_code: "QIC9"
+    pn: "Q100-72-10-01-090"
+    description: "Cable cuántico"
+    qty: 2
+    material: "Quantum-fiber optic"
+    weight_kg: 0.8
+    process: "Quantum fiber drawing"
+    design_notes: "Quantum communication cables"
+    special_req: "Minimum bend radius: 4×diameter"
+
+# Interface definitions
+interfaces:
+  - interface_id: "ICD-FAN1-ENG"
+    description: "Fan to engine interface"
+    type: "Mechanical mounting"
+
+  - interface_id: "ICD-FAN1-CTRL"
+    description: "Fan control interface"
+    type: "Electrical/quantum"
+
+# Design constraints and requirements
+design_requirements:
+  performance:
+    max_thrust_n: 285000
+    efficiency_target: 0.92
+    noise_db: "<85 dB at 150m"
+
+  environmental:
+    temp_range_c: "-55 to +125"
+    humidity: "95% RH"
+    vibration: "Per DO-160G"
+
+  quantum_performance:
+    sensor_accuracy: "±0.1%"
+    quantum_coherence_time: ">1ms"
+    emi_susceptibility: "Per DO-160G Section 20"
+
+# Compliance and standards
+compliance:
+  standards:
+    - "ATA iSpec 2200"
+    - "DO-160G"
+    - "FAA Part 25"
+    - "EASA CS-25"
+
+  quantum_standards:
+    - "NIST Quantum Standards"
+    - "ISO/IEC 4789 (Quantum sensors)"
+
+# Traceability to requirements
+requirements_trace:
+  - req_id: "REQ-FAN-PERF-001"
+    description: "Fan thrust requirement"
+    verification: "Analysis + Test"
+
+  - req_id: "REQ-FAN-ENV-001"
+    description: "Environmental conditions"
+    verification: "Test"
+
+  - req_id: "REQ-FAN-QNT-001"
+    description: "Quantum sensor performance"
+    verification: "Calibration + Test"
+
+# DET linkages
+det_refs:
+  ebom_baseline: "DET:CAD:ppp:72-10:FAN1-EBOM:V9.0"
+  design_model: "DET:CAD:ppp:72-10:FAN1-MODEL:V9.0"
+  analysis: "DET:CAE:ppp:72-10:FAN1-ANALYSIS:V9.0"
+
+# Metadata
+meta:
+  owner: "Design Engineering Lead"
+  reviewer: "CAD Authority"
+  last_updated: "2025-12-02T10:00:00Z"
+  change_ref: "ECO-FAN1-EBOM-V9.0"
+  qaudit_status: "baselined"

@@ -1,0 +1,116 @@
+---
+name: asi-scoring
+
+on:
+  schedule:
+    - cron: "0 3 * * 0"  # Every Sunday at 03:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  compute-asi-scores:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml jsonschema
+
+      - name: Create leaderboards directory
+        run: |
+          mkdir -p UTCS-BLOCKCHAIN/ASI/leaderboards
+
+      - name: Compute ASI scores
+        run: |
+          python UTCS-BLOCKCHAIN/ASI/tools/compute_asi.py \
+            --root UTCS-BLOCKCHAIN \
+            --config UTCS-BLOCKCHAIN/ASI/asi-config.yaml
+
+      - name: Validate outputs
+        run: |
+          # Check that output files were created
+          ls -la UTCS-BLOCKCHAIN/ASI/leaderboards/
+
+          # Validate JSON structure
+          leaderboard_file="UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json"
+          python3 -c "import json; data=json.load(open('$leaderboard_file')); print(f'Generated {len(data)} scores')"
+
+      - name: Generate DET events
+        run: |
+          # Create DET event for ASI scoring run
+          mkdir -p UTCS-BLOCKCHAIN/DET/ASI/$(date +%Y)/$(date +%m)
+          # Create DET packet JSON file
+          echo '{
+            "det_id": "DET:ASI:SCORE:'$(date +%Y%m%d)':score_publish:V1",
+            "ts": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'",
+            "activity": "score_publish",
+            "inputs": {
+              "provenance": {
+                "git_url": "https://github.com/Robbbo-t/Robbbo-t",
+                "workflow": "asi-scoring"
+              }
+            },
+            "outputs": {
+              "metrics": {
+                "artifacts_scored": '$(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | jq length)',
+                "computation_duration_sec": 0
+              },
+              "units": {
+                "artifacts_scored": "count",
+                "computation_duration_sec": "seconds"
+              }
+            },
+            "refs": {
+              "ce": "CE-ASI-ORACLE-001",
+              "ci": "CI-ASI-SCORING-001"
+            },
+            "hash": "'$(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | sha256sum | cut -d' ' -f1)'",
+            "sig": {
+              "alg": "Ed25519",
+              "by": "asi-oracle@github-actions",
+              "sig_b64": "placeholder-signature-for-demonstration"
+            }
+          }' > UTCS-BLOCKCHAIN/DET/ASI/$(date +%Y)/$(date +%m)/det_packet.json
+
+      - name: Commit and push results
+        run: |
+          git config --local user.email "asi-oracle@users.noreply.github.com"
+          git config --local user.name "ASI Oracle"
+
+          # Add generated files
+          git add UTCS-BLOCKCHAIN/ASI/leaderboards/ || true
+          git add UTCS-BLOCKCHAIN/DET/ASI/ || true
+
+          # Commit if there are changes
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(asi): update ASI scores and leaderboards [$(date +%Y-%m-%d)]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Create summary
+        run: |
+          echo "## ASI Scoring Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Execution Date**: $(date -u +%Y-%m-%d\ %H:%M:%S\ UTC)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Artifacts Scored**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | \
+            jq length)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Top Performer**: $(cat UTCS-BLOCKCHAIN/ASI/leaderboards/leaderboard-global.json | \
+            jq -r '.[0].anchor // "None"')" >> $GITHUB_STEP_SUMMARY
+          echo "- **Leaderboards**: Updated in \`UTCS-BLOCKCHAIN/ASI/leaderboards/\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Recent Changes" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          git log --oneline -5 --grep="chore(asi)" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY

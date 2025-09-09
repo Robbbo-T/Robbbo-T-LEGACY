@@ -1,0 +1,45 @@
+---
+version: 1
+meta:
+  owner_domain: AAA
+  co_domains: [MMM, EEE, EDI, OOO]
+  description: "AAA Domain Configuration Index for H2-BWB-Q100-CONF0000"
+  last_updated: 2025-09-01
+  universal_standard: "TechnicalDomain-Design-iSpec2200-StructuresAerodynamics-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-HybridGeneration-AIR-AmedeoPelliccia-7c1c55d2-RemainingUsefulLife"
+
+configuration:
+  mic: Q100
+  conf: CONF0000
+  lifecycle: CA-DEOPTIMISE
+  cax: CAD
+  
+domain_scope:
+  ata_chapters:
+    - "02": "Weight & Balance"
+    - "04": "Airworthiness Limitations"
+    - "05": "Time Limits & Checks"
+    - "06": "Dimensions & Areas"
+    - "07": "Lifting & Shoring"
+    - "08": "Leveling & Weighing"
+    - "09": "Towing & Taxiing"
+    - "11": "Placards & Markings"
+    - "18": "Vibration & Noise"
+    - "20": "Standard Practices"
+    - "50": "Cargo Access"
+    - "51": "Structures"
+    - "52": "Doors"
+    - "53": "Fuselage"
+    - "54": "Nacelles/Pylons"
+    - "55": "Stabilizers"
+    - "56": "Windows"
+    - "57": "Wings"
+
+statistics:
+  total_ces: 18
+  total_ccs: 43
+  total_cis: 247
+  
+digital_evidence:
+  det_enabled: true
+  cadet_monitoring: true
+  compliance_tracking: true

@@ -1,0 +1,13 @@
+activity: design
+cax: CAT
+compliance:
+  ata_spec: ATA iSpec 2200
+  domain_owner: IIF-Domain-Lead
+  sns_code: 07-00
+created: '2025-09-01T05:11:27.226228Z'
+det_id: DET:CAT:IIF:07-00:design:V1
+domain: IIF
+node_type: DET_REGISTRY_NODE
+previous_hash: SHA256_GENESIS
+sns: 07-00
+version: V1

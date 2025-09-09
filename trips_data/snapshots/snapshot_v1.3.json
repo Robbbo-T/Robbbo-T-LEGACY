@@ -1,0 +1,35 @@
+{
+  "event_type": "TRIPS.Record",
+  "timestamp": "2025-09-03T00:11:34.431312+00:00",
+  "program": "BWB-Q100",
+  "domain": "SYS",
+  "version": "v1.3",
+  "producer": "TRIPS.RecordService",
+  "payload": {
+    "snapshot_id": "v1.3",
+    "context": "Test baseline",
+    "det_hash": "0xd3456afab85c892a23d7ae2fb99b1b10cba919c9cb518e71c02454846e11c704",
+    "qaudit_signature": "PQC-Dilithium3-25a4bbc2d9a9c0b2",
+    "system_state": {
+      "cad_models": {
+        "count": 147,
+        "size_gb": 2.3
+      },
+      "cae_results": {
+        "count": 89,
+        "size_gb": 1.8
+      },
+      "requirements": {
+        "count": 234,
+        "traced": 234
+      },
+      "quantum_metrics": {
+        "confidence": 0.79,
+        "cvar": 0.1
+      },
+      "timestamp": "2025-09-03T00:11:34.430906+00:00"
+    }
+  },
+  "det_ref": "DET:TRIPS:SYS:snapshot:V1.3",
+  "signature": "0x0975a65a1d37bd7496d5a3477f267a0a79a32600b2b5d86e3c4ada09fedd5baa"
+}

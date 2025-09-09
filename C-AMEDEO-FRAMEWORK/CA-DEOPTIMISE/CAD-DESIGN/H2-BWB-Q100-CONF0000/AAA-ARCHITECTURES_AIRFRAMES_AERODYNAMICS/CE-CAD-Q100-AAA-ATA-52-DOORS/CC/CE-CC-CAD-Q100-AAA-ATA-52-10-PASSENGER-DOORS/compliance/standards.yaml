@@ -1,0 +1,37 @@
+---
+version: 1
+meta:
+  owner: structures@aqua-os
+  reviewer: airworthiness@aqua-os
+  last_updated: 2025-09-01
+  change_ref: CDR-AAA-2025-09
+
+applies_to:
+  cax: CAD
+  mic: Q100
+  sns: "52-10"
+  id: CE-CC-CAD-Q100-AAA-ATA-52-10-PASSENGER-DOORS
+  description: "Passenger Doors Component Cell"
+
+inherited_from:
+  - CE-CAD-Q100-AAA-ATA-52-DOORS
+
+co_domains: [EDI, OOO]  # Door warning systems
+
+standards:
+  - id: CS-25.783
+    org: EASA
+    title: Doors - Passenger
+    clause: 25.783(a)(b)(c)
+    applicability: [Design, Analysis, Test]
+    level: MUST
+    verification: [FEA, Static Test, Fatigue Test]
+    acceptance:
+      - "Ultimate load: 1.5 x limit load with no failure"
+      - "Limit load: No permanent deformation"
+      - "Pressure differential: 56.7 kPa ultimate"
+    evidence:
+      det_patterns:
+        - DET:CAD:Q100:52-10-*:design:V*
+        - DET:CAE:Q100:52-10-*:fea_ultimate:V*
+        - DET:CAT:Q100:52-10-*:test_static:V*

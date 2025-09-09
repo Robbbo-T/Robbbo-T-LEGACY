@@ -1,0 +1,35 @@
+---
+domain:
+  code: CCC
+  name: COCKPIT_CABIN_CARGO_SYSTEMS
+  description: Cockpit controls, cabin systems, and cargo handling
+  version: 1.0.0
+cax_integration:
+  pillar: CAD-DESIGN
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '11'
+  - '21'
+  - '25'
+  - '33'
+  - '44'
+  - '45'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - EDI
+  - IIS
+  - AAA
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAD:CCC:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519

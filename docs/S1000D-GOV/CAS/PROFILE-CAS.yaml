@@ -1,0 +1,22 @@
+---
+profile:
+  id: "S1000D-PROFILE-CAS-v1"
+  model_ident_code: "AMPEL360"
+  languages: ["en"]
+  security_classes: ["unclassified", "restricted"]
+  dm_code_policy:
+    allowed_info_codes: ["018", "022", "024", "040", "060"]
+    allowed_variants: ["A", "B", "C"]
+    item_location_code: "Q"
+  status_values: ["draft", "in_work", "baselined"]
+  applicability:
+    effectivity_keys: ["aircraft_sn", "config", "mod_state"]
+    examples:
+      - {aircraft_sn: "Q100-0001", config: "BWB-H2", mod_state: "MS1"}
+  media:
+    allow_binaries: false
+    allow_svg: true
+    notes: "Use ASCII diagrams or SVG only."
+  references:
+    brex: "./BREX-CAS.yaml"
+    brdp: "./BRDP-CAS.yaml"

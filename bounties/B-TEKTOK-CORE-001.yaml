@@ -1,0 +1,19 @@
+---
+bounty:
+  id: "B-TEKTOK-CORE-001"
+  title: "TekTok R1: contracts audit-hardening + tests"
+  focus: "TTKToken + RoyaltyRouter + DetAnchor"
+  scope:
+    - "Add solhint + static checks; fuzz tests for splits"
+    - "Gas benchmarks; transferFrom safety in router"
+  deliverables:
+    - "PR with tests and docs; CI green"
+  acceptance:
+    - "npm run build/test PASS"
+  remuneration:
+    stablecoin_amount: "2500_EUR_equivalent"
+    royalty_share_percent: 0.03
+    royalty_ref: "OEGI-AG-TBD"
+  timeline:
+    start: "T0"
+    deadline_days: 10

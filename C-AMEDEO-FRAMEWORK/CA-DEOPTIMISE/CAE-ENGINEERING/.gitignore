@@ -1,0 +1,38 @@
+# AMPEL360 + CAE Pipeline - Ignore build artifacts and temporary files
+
+# Output directories
+ampel360_results/
+cae_pipeline_results/
+ampel360_cae_results/
+demo_results/
+test_results/
+test_cae_results/
+*_results/
+
+# Temporary files
+/tmp/CAE_CAMPAIGN_*
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# MkDocs build output
+site/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Configuration overrides
+local_config.yaml
+override_config.yaml

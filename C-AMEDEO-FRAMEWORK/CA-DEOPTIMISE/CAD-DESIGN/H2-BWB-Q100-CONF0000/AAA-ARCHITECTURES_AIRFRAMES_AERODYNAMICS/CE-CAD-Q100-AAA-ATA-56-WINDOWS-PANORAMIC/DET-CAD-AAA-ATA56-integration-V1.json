@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "det_id": "DET:CAD:AAA:ATA56:integration:V1.0",
+    "created": "2025-01-15T18:00:00Z",
+    "flow": "CA-DEOPTIMISE",
+    "pillar": "CAD-DESIGN",
+    "references": ["DET:CAB:H2-BWB-Q100:CONF0000:concept_selection:V1.0"]
+  },
+  "integration_constraints": {
+    "from_multi_bubble": {
+      "window_exclusion_zones": "vessel_connection_points",
+      "structural_allowables": "derived_from_FEA",
+      "thermal_boundaries": "20K_isolation_required",
+      "pressure_differential_impact": "28_bar_internal_affects_window_sealing",
+      "load_path_modifications": "wing_root_attachment_influences_frame_stress"
+    },
+    "from_bli_propulsion": {
+      "vibration_spectrum": "10-10000Hz",
+      "acoustic_environment": "140dB_peak",
+      "emi_constraints": "fan_motor_harmonics",
+      "aerodynamic_integration": "window_placement_must_not_disrupt_BLI_efficiency",
+      "noise_benefits": "reduced_noise_footprint_improves_passenger_experience"
+    }
+  },
+  "cae_seeding_inherited": {
+    "mesh_density": {
+      "window_frames": "fine",
+      "thermal_barriers": "ultra_fine_at_boundaries",
+      "display_mounting": "medium",
+      "pressure_vessel_interfaces": "ultra_fine",
+      "bli_inlet_regions": "ultra_fine"
+    },
+    "boundary_conditions": {
+      "thermal_cycling": "20K_to_300K_inherited_from_H2_storage",
+      "pressure_loads": "ultimate_2.5g_plus_28bar_differential",
+      "vibration_environment": "BLI_induced_10_10000Hz_spectrum",
+      "acoustic_loads": "140dB_peak_with_noise_reduction_benefits"
+    }
+  },
+  "traceability": {
+    "concept_mapping": {
+      "BWB-H2-001": {
+        "impact_areas": ["window_frame_structure", "thermal_management", "sealing"],
+        "key_benefits": "15_percent_weight_reduction_improved_fatigue_life",
+        "constraints": "vessel_connection_points_create_exclusion_zones"
+      },
+      "BWB-H2-002": {
+        "impact_areas": ["vibration_environment", "acoustic_comfort", "EMI"],
+        "key_benefits": "8_percent_fuel_efficiency_reduced_noise",
+        "constraints": "window_placement_aerodynamic_considerations"
+      }
+    },
+    "requirements_flow": {
+      "from_cab": ["technical_feasibility", "BWB_integration", "quantum_confidence"],
+      "to_cad": ["structural_integration", "thermal_management", "passenger_experience"]
+    }
+  },
+  "outputs": {
+    "design_modifications": {
+      "window_frame_reinforcement": "required_for_pressure_vessel_loads",
+      "thermal_barrier_enhancement": "MLI_integration_with_H2_system",
+      "vibration_isolation": "BLI_induced_spectrum_mitigation"
+    },
+    "performance_impacts": {
+      "weight_savings": "inherited_15_percent_from_multi_bubble_design",
+      "thermal_performance": "enhanced_by_H2_cryogenic_integration",
+      "passenger_comfort": "improved_by_BLI_noise_reduction"
+    },
+    "verification_requirements": {
+      "structural": "FEA_with_combined_pressure_and_vibration_loads",
+      "thermal": "HIL_thermal_with_20K_to_300K_cycling",
+      "acoustic": "HIL_acoustic_with_BLI_spectrum_validation"
+    }
+  },
+  "handoff_to_CAE": {
+    "analysis_matrix": [
+      "combined_structural_pressure_vibration_analysis",
+      "thermal_cycling_with_cryogenic_integration", 
+      "acoustic_comfort_with_BLI_noise_modeling"
+    ],
+    "mesh_refinements": "inherited_from_CAB_seeding_plus_window_specific",
+    "boundary_conditions": "multi_physics_H2_BLI_window_interaction"
+  }
+}

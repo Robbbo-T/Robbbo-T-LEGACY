@@ -1,51 +1,53 @@
-# IIS - Intelligent Systems Onboard AI
+# IIS - INTELLIGENT_SYSTEMS_ONBOARD_AI
 
-**Domain:** IIS - Intelligent Systems Onboard AI  
-**Classification:** Domain Invariant (DI)  
-**Configuration:** H2-BWB-Q100-CONF0000  
+## Domain Overview
+**Code**: IIS  
+**Name**: INTELLIGENT_SYSTEMS_ONBOARD_AI  
+**Description**: Intelligent systems and onboard artificial intelligence
 
-## Overview
+## ATA SNS Coverage
+Primary ATA codes owned by this domain:
+ATA-22, ATA-31, ATA-42, ATA-46
 
-This domain covers artificial intelligence systems, machine learning algorithms, and intelligent automation for the BWB aircraft.
+## Cross-Domain References
+Co-domains that reference this domain:
+[EDI](../EDI-*/), [OOO](../OOO-*/), [LCC](../LCC-*/)
 
-## Scope
+## CAX Pillar Integration
+This domain participates in **CAD DESIGN** activities within the **CA-DEOPTIMISE** lifecycle flow.
 
-- AI-powered flight assistance
-- Machine learning for predictive maintenance
-- Intelligent system optimization
-- AI safety and verification
-- Autonomous system functions
+## Digital Evidence Twin (DET) Registry
+All activities within this domain generate DET evidence packs with the pattern:
+```
+DET:CAD:IIS:<SNS>:<activity>:V<rev>
+```
 
-## ATA iSpec 2200 Coverage
+## CADET Integration
+- **Circular Assurance**: Sustainability and circularity metrics tracking
+- **Evolutionary Capability**: Evidence evolution and lifecycle closure
+- **Cross-Domain Traceability**: Bidirectional references via TRACES framework
 
-This domain includes Configuration Envelopes (CE) covering the following chapters:
-
-- **ATA 22 - Auto Flight (AI control assist)**
-- **ATA 31 - Indicating/Recording (AI analytics)**
-- **ATA 34 - Navigation (AI assistance)**
-- **ATA 46 - Information Systems (AI/RTOS)**
-
-## Configuration Envelopes (CE)
-
-Each CE follows the naming convention: `CE-CAD-Q100-IIS-ATA-XX-DESCRIPTION`
-
-All CEs in this domain generate S1000D Data Module Codes (DMC) with:
-- **MIC (Model Identification Code):** Q100
-- **SNS (Subject Numbering System):** Per ATA iSpec 2200
-- **Lifecycle Phase:** CA-DEOPTIMISE (Forward Creation Flow)
-
-### Navigation — Configuration Envelopes
-
-* [CE-CAD-Q100-IIS-ATA-22-AI-AF](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-22-AI-AF) — Auto Flight (AI control assist)
-* [CE-CAD-Q100-IIS-ATA-31-AI-IR](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-31-AI-IR) — Indicating/Recording (AI analytics)
-* [CE-CAD-Q100-IIS-ATA-34-AI-NAV](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-34-AI-NAV) — Navigation (AI assistance)
-* [CE-CAD-Q100-IIS-ATA-46-AI-RTOS](https://github.com/Robbbo-T/Robbbo-T/tree/main/C-AMEDEO-FRAMEWORK/CA-DEOPTIMISE/CAD-DESIGN/H2-BWB-Q100-CONF0000/IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/CE-CAD-Q100-IIS-ATA-46-AI-RTOS) — Information Systems (AI/RTOS)
+## Configuration
+- **Aircraft**: H2-BWB-Q100 (Hydrogen-powered Blended Wing Body)
+- **Configuration**: CONF0000 (Baseline configuration)
+- **Lifecycle Flow**: CA-DEOPTIMISE
+- **CAX Pillar**: CAD-DESIGN
 
 ## Dependencies
+- **AQUA-OS BRIDGE**: Deterministic execution environment
+- **GAIA AIR RTOS**: Safety-critical partitioning
+- **CADET**: Circular assurance tracking
+- **TRACES**: Traceability framework
+- **DET Registry**: Evidence management
 
-- **Digital Evidence Twin (DET):** All design changes and analyses generate DET evidence packs
-- **CADET:** Circularity metrics for material reuse and lifecycle optimization
+## Structure
+```
+IIS-INTELLIGENT_SYSTEMS_ONBOARD_AI/
+├── README.md (this file)
+├── alias.yml (cross-domain references)
+├── domain-config.yaml (domain configuration)
+└── [CE directories will be created as needed]
+```
 
 ---
-
-*This README is part of the C-AMEDEO framework for the AMPEL360-BWB-Q Program.*
+*Part of the C-AMEDEO Framework for Intelligent systems and onboard artificial intelligence*

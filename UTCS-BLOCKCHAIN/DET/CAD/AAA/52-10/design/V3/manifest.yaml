@@ -1,0 +1,9 @@
+det_id: "DET:CAD:AAA:52-10:design:V3"
+cax: CAD
+domain: AAA
+sns: "52-10"
+activity: design
+version: V3
+owner: "AAA-Domain-Lead"
+created: "2025-09-01T12:00:00Z"
+compliance: { ata_sns: "52-10", certification_level: "DAL-C" }

@@ -1,0 +1,26 @@
+---
+# BRK-DS Flight Simulation Training Devices (FSTD) – minimal pack
+requirements:
+  - id: BRK-FSTD-001
+    text: >-
+      Define FSTD scenarios to train ABU-QuantumProtect responses, EMI/thermal
+      degradations, and windows static-mode transitions.
+    source: "CS-FSTD(A); Operator training program"
+    driver: "safety"
+    acceptance: >-
+      Scenario pack documented (EMI, thermal, vibration cases); validation
+      runs recorded; debrief materials published to training records.
+    verification: "Test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS"
+    status: "baselined"
+    owner: "training-devices@aqua-os"
+    last_updated: "2025-01-15T16:10:00Z"
+
+meta:
+  owner: "regulatory-affairs@aqua-os"
+  reviewer: "compliance-lead@aqua-os"
+  last_updated: "2025-01-15T16:10:00Z"
+  change_ref: "BRK-DS-R1"

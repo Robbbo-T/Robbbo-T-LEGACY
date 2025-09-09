@@ -1,0 +1,87 @@
+{
+  "utcs_id": "EstándarUniversal:EvidenciaDigital-CertificacionOEGI-CAB-01.00-GenesisArtifactCertification-0001-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-oegicrt1-RestoDeVidaUtil",
+  "phase": "CAB",
+  "artifact_type": "OEGI_Certification",
+  "inputs": [
+    "sha256:artifact_content_hash_placeholder_64_chars_hexadecimal_string",
+    "sha256:eligibility_assessment_hash_placeholder_64_chars_hexadecimal",
+    "sha256:opposition_resolution_hash_placeholder_64_chars_hexadecimal"
+  ],
+  "outputs": [
+    "sha256:certification_document_hash_placeholder_64_chars_hexadecimal"
+  ],
+  "req_trace": [
+    {
+      "req_id": "OEGI-ELIG-001",
+      "status": "pass",
+      "evidence": "sha256:eligibility_criteria_3_of_5_met_evidence_hash_placeholder"
+    },
+    {
+      "req_id": "OEGI-GI2-THRESHOLD",
+      "status": "pass",
+      "evidence": "sha256:gi2_score_above_0_6_evidence_hash_placeholder_64_chars"
+    }
+  ],
+  "risk": {
+    "cvar_alpha": 0.95,
+    "cvar_value": 0.05,
+    "hazards": [
+      "Potential attribution disputes in opposition period",
+      "Prior art claims requiring technical review",
+      "License compatibility issues with existing frameworks"
+    ]
+  },
+  "quantum": {
+    "algo": "Grover_PatentSearch",
+    "seed": 42,
+    "p": 4,
+    "backend": "simulator",
+    "confidence_score": 0.94,
+    "quantum_advantage": "Accelerated prior art search O(√N) vs O(N)"
+  },
+  "pqc_signature": {
+    "alg": "Dilithium3",
+    "sig": "0xabc123def456789abcdef0123456789abcdef0123456789abcdef0123456789ab"
+  },
+  "provenance": {
+    "tool": "OEGI-Certification-System",
+    "version": "v1.0.0",
+    "agent": "OEGI-Registry-Bot",
+    "time_utc": "2025-01-15T14:30:00Z"
+  },
+  "oegi_specific": {
+    "certification_details": {
+      "oegi_id": "OEGI-AG-2025-000001",
+      "artifact_title": "Quantum-Enhanced Aerospace Control Framework",
+      "certification_level": "Pro",
+      "license_selected": "GL-EU-BY-RF-1.0",
+      "processing_time_days": 18,
+      "opposition_count": 0,
+      "gi2_score": 0.87,
+      "eligibility_checks_passed": ["originalidad", "aplicabilidad", "verificabilidad", "trazabilidad", "direccionalidad"]
+    },
+    "rights_information": {
+      "attribution_required": true,
+      "royalty_bearing": true,
+      "duration_years": 8,
+      "territory": "European Union",
+      "exclusivity": "none_remunerative_only",
+      "expires_at": "2033-01-15T14:30:00Z"
+    },
+    "tariff_configuration": {
+      "saas_rate_percent": 0.3,
+      "distributed_sw_rate_percent": 0.2,
+      "public_procurement_rate_percent": 0.15,
+      "minimum_threshold_eur": 100000,
+      "annual_cap_eur": 250000,
+      "clearing_fee_percent": 10
+    },
+    "technical_metadata": {
+      "provenance_graph_uri": "prov://oegi.eu/artifacts/OEGI-AG-2025-000001/prov.json",
+      "hash_algorithm": "SHA-256",
+      "signature_algorithm": "PQC-Dilithium3",
+      "blockchain_anchor": "qaudit://chain/blocks/12345/txn/67890",
+      "registry_url": "https://registry.oegi.eu/artifacts/OEGI-AG-2025-000001"
+    }
+  }
+}

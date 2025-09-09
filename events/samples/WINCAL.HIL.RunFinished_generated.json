@@ -1,0 +1,49 @@
+{
+  "event": "QS.Published",
+  "ts": "2025-09-05T15:34:10.664381Z",
+  "program": "BWB-Q100",
+  "domain": "AAA",
+  "level": "CI",
+  "entity": "WINCAL.HIL.RunFinished",
+  "qs_type": "QML",
+  "utcs_mi_id": "EstándarUniversal:EstadoCuantico-QML-56.01-PANORAMIC-WINDOWS-HIL-CRYOBENCH-RestoDeVidaUtil",
+  "det_ref": "DET:QS:AAA:5601:hil_test_complete:V1.0",
+  "signature": "PQC-Dilithium3",
+  "meta": {
+    "program": "WINCAL",
+    "test_facility": "HIL-CryoBench",
+    "test_type": "RunFinished",
+    "window_id": "CE-CC-CI-CAD-Q100-AAA-ATA-56-01-PANORAMIC-WINDOWS",
+    "pattern_id": "checkerboard_50hz",
+    "B_psd_nT_per_sqrtHz": {
+      "1Hz": 72.0,
+      "10Hz": 14.2
+    },
+    "deltaT_mK_RMS": 4.2,
+    "vibration_ug_RMS": 8.5,
+    "ABU_protection": {
+      "triggered": false,
+      "response_time_ms": null,
+      "recovery_time_s": null
+    },
+    "pass": true,
+    "test_duration_s": 1800,
+    "requirements_verified": [
+      "REQ-WIN-01",
+      "REQ-WIN-02",
+      "REQ-WIN-03",
+      "REQ-WIN-04",
+      "REQ-WIN-05"
+    ],
+    "thermal_gradient_K": {
+      "cabin_side": 295,
+      "mli_interface": 148,
+      "cryo_buffer": 77.1
+    },
+    "security_test_status": {
+      "pii_exfiltration_detected": false,
+      "penetration_test_passed": true,
+      "edge_processing_verified": true
+    }
+  }
+}

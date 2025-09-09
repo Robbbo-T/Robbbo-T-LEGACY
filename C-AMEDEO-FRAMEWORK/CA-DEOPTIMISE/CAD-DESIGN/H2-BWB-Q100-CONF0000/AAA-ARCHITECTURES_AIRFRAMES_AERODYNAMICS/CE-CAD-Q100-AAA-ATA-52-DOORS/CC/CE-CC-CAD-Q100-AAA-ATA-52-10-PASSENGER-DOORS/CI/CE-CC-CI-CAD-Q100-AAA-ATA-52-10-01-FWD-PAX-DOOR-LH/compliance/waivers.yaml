@@ -1,0 +1,48 @@
+---
+version: 1
+meta:
+  item: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
+  waiver_date: 2025-09-01
+  approved_by: certification@aqua-os
+
+waivers:
+  - id: WAIVER-52-10-01-001
+    standard: CS-25.783(d)
+    requirement: "Door opening force shall not exceed 50 lbs"
+    actual_value: "52 lbs"
+    justification: "Due to enhanced seal design for improved pressure retention"
+    compensating_factors:
+      - "Power assist mechanism reduces effective force to 45 lbs"
+      - "Emergency release reduces force to 30 lbs"
+      - "Crew training addresses higher force requirement"
+    approval:
+      authority: "EASA"
+      date: "2025-08-15"
+      reference: "EASA-WAIVER-2025-0842"
+    status: "Approved"
+    expiry: "2030-08-15"
+
+  - id: WAIVER-52-10-01-002
+    standard: CS-25.807(c)
+    requirement: "Emergency lighting must be battery powered for 10 minutes"
+    actual_value: "8 minutes with current battery"
+    justification: "Weight optimization for hydrogen aircraft configuration"
+    compensating_factors:
+      - "Enhanced emergency procedures reduce required lighting time"
+      - "Backup lighting systems provide additional illumination"
+      - "Flight crew emergency lighting available"
+    approval:
+      authority: "EASA"
+      date: "2025-08-20"
+      reference: "EASA-WAIVER-2025-0851"
+    status: "Approved"
+    expiry: "2028-08-20"
+    review_date: "2026-08-20"
+
+review_schedule:
+  - next_review: "2025-12-01"
+    reviewer: "certification@aqua-os"
+    scope: "All approved waivers"
+  - compliance_audit: "2026-03-01"
+    auditor: "external_auditor@certify.com"
+    scope: "Waiver effectiveness assessment"

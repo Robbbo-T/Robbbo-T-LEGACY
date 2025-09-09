@@ -1,0 +1,19 @@
+---
+# Cross-Domain References for MMM (CAB-BRAINSTORMING)
+aliases:
+  aaa_integration: "ALIAS:MMM:AAA:INTEGRATION-CONCEPTS"
+  eee_integration: "ALIAS:MMM:EEE:INTEGRATION-CONCEPTS"
+  cqh_integration: "ALIAS:MMM:CQH:INTEGRATION-CONCEPTS"
+
+# CAB-specific aliases for concept exploration
+concept_references:
+  bwb_integration: "ALIAS:MMM:BWB:INTEGRATION-CONCEPTS"
+  hydrogen_compatibility: "ALIAS:MMM:H2:COMPATIBILITY-ANALYSIS"
+  innovation_concepts: "ALIAS:MMM:INNOVATION:CONCEPT-SPACE"
+  performance_trade: "ALIAS:MMM:PERFORMANCE:TRADE-STUDIES"
+
+# Quantum algorithm references
+quantum_tools:
+  qml_models: "ALIAS:MMM:QML:LATENT-SPACE-MODELS"
+  grover_search: "ALIAS:MMM:GROVER:PATENT-SEARCH"
+  entropy_maximization: "ALIAS:MMM:MAXENT:NOVELTY-SEARCH"

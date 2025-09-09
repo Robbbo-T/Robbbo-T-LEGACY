@@ -1,0 +1,80 @@
+{
+  "det_id": "DET:TOK:RECOVER:TEMPLATE:recovery_attest:V1",
+  "ts": "2025-09-01T00:00:00Z",
+  "refs": {
+    "ce": "CE-TOK-RECOVERY-SYSTEM",
+    "ci": "CI-TOK-RECOVERY-ATTESTATION",
+    "cadet_chain": "CADET:TOK:RECOVERY:V1"
+  },
+  "inputs": {
+    "recovery_case_id": "<RECOVERY_CASE_ID>",
+    "corruption_type": "<CORRUPTION_TYPE>",
+    "affected_components": [],
+    "detection_timestamp": "<ISO8601_TIMESTAMP>",
+    "recovery_initiator": "<INITIATOR_ID>",
+    "severity_level": "<CRITICAL|HIGH|MEDIUM|LOW>",
+    "estimated_impact_usd": 0,
+    "configuration": "TekTok-Monetary-Policy"
+  },
+  "processing": {
+    "tool": "TekTok-Recovery-Oracle@1.0",
+    "params": {
+      "recovery_method": "<AUTOMATED|MANUAL|HYBRID>",
+      "validation_threshold": 0.95,
+      "multi_sig_required": true,
+      "consensus_mechanism": "Ed25519-Multi-Sig",
+      "oracle_consensus": true
+    }
+  },
+  "outputs": {
+    "recovery_status": "<PENDING|IN_PROGRESS|COMPLETED|FAILED>",
+    "assets_recovered_usd18": 0,
+    "recovery_percentage": 0.0,
+    "time_to_recovery_minutes": 0,
+    "corruption_prevented": true,
+    "integrity_restored": true,
+    "units": "USD18, percentage, minutes",
+    "metrics": {
+      "recovery_efficiency": 0.0,
+      "prevention_score": 0.0,
+      "system_resilience": 0.0
+    }
+  },
+  "mandatory_attachments": [
+    {
+      "type": "corruption_evidence",
+      "filename": "corruption-evidence.json",
+      "required": true,
+      "description": "Detailed evidence of corruption or compromise detected"
+    },
+    {
+      "type": "recovery_plan",
+      "filename": "recovery-plan.yaml",
+      "required": true,
+      "description": "Step-by-step recovery execution plan"
+    },
+    {
+      "type": "oracle_consensus",
+      "filename": "oracle-consensus.json",
+      "required": true,
+      "description": "Multi-oracle agreement on recovery action"
+    },
+    {
+      "type": "signature_verification",
+      "filename": "multi-sig-verification.json",
+      "required": true,
+      "description": "Multi-signature verification of recovery authorization"
+    },
+    {
+      "type": "post_recovery_audit",
+      "filename": "post-recovery-audit.json",
+      "required": false,
+      "description": "Post-recovery system integrity audit"
+    }
+  ],
+  "hash": "SHA256_PLACEHOLDER_TOK_RECOVER_TEMPLATE",
+  "sig": {
+    "alg": "Ed25519",
+    "by": "tektop-recovery-system@utcs"
+  }
+}

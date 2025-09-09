@@ -1,0 +1,96 @@
+{
+  "utcs_id": "EstándarUniversal:Artefacto-SeleccionConceptos-CAB-BWB-Q100-v1.0-AerospaceAndQuantumUnitedAdvancedVenture-GeneracionHybrida-CROSS-AmedeoPelliccia-bwbcab01-RestoDeVidaUtil",
+  "selected_concepts": [
+    {
+      "id": "BWB-Q100-MB-v3.2",
+      "type": "Tetrahedral multi-bubble array",
+      "quantum_score": 0.87,
+      "key_features": [
+        "12 interconnected pressure vessels",
+        "Distributed load paths",
+        "15% weight reduction vs. conventional",
+        "Enhanced fatigue life through load distribution"
+      ],
+      "feasibility_score": 8.5,
+      "innovation_index": 9.5,
+      "safety_score": 9.1,
+      "economic_viability": 7.2
+    },
+    {
+      "id": "BWB-Q100-TC-v1.1",
+      "type": "Twin-cylinder conventional",
+      "quantum_score": 0.72,
+      "key_features": [
+        "Proven technology baseline",
+        "Lower manufacturing risk",
+        "Established certification path"
+      ],
+      "feasibility_score": 9.8,
+      "innovation_index": 3.0,
+      "safety_score": 9.5,
+      "economic_viability": 9.0
+    }
+  ],
+  "rationale_graph": {
+    "multi_bubble_selection": {
+      "requirement_origin": "24.7% MTOW structure weight target",
+      "trade_decisions": [
+        {
+          "criteria": "fatigue_life",
+          "weight": 0.35,
+          "quantum_optimization": "CVaR_minimized"
+        },
+        {
+          "criteria": "volume_efficiency",
+          "weight": 0.30,
+          "quantum_optimization": "QML_latent_space"
+        },
+        {
+          "criteria": "manufacturing_complexity",
+          "weight": 0.20,
+          "quantum_optimization": "entropy_maximized"
+        },
+        {
+          "criteria": "safety_margins",
+          "weight": 0.15,
+          "quantum_optimization": "robust_optimization"
+        }
+      ],
+      "DET_evidence": "DET:CAB:AAA:52-10:concept_selection:V1.2"
+    }
+  },
+  "cae_seeding": {
+    "key_load_paths": [
+      "Vessel-to-fuselage attach points",
+      "Inter-bubble manifold connections",
+      "Pressure relief system interfaces"
+    ],
+    "mesh_density_hints": {
+      "high_density_regions": [
+        "Manifold junctions",
+        "Attachment bracket interfaces",
+        "Pressure vessel intersections"
+      ],
+      "medium_density_regions": [
+        "Curved vessel surfaces",
+        "Load transfer regions"
+      ]
+    },
+    "boundary_condition_hints": [
+      "Internal pressure: 350 bar H₂",
+      "Thermal boundary: -253°C to +70°C",
+      "External loads: 9G ultimate load factor",
+      "Fatigue: 180,000 pressure cycles"
+    ]
+  },
+  "quantum_provenance": {
+    "qml_confidence": 0.87,
+    "grover_searches": 147,
+    "entropy_maximization_iterations": 23,
+    "algorithm_seeds": [12345, 67890, 11111],
+    "backend": "quantum_simulator"
+  },
+  "det_hash": "sha256:3f4a8b2c1d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
+  "timestamp": "2025-01-15T10:30:00Z",
+  "transfer_status": "ready_for_cad"
+}

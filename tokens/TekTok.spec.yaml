@@ -1,0 +1,20 @@
+---
+token:
+  name: "TekTok"
+  symbol: "TTK"
+  standard: "TeknIA-20 (ERC-20 compatible)"
+  decimals: 18
+  permit: true            # EIP-2612 style
+  pausability: true
+  roles: ["DEFAULT_ADMIN", "MINTER", "PAUSER", "TREASURER"]
+  mint_policy:
+    type: "governed"
+    authority: "Genesis Treasury (multisig/timelock)"
+  burn_policy:
+    allowed: true
+    by: ["holder", "treasury"]
+  compliance:
+    blocklist_hook: false   # keep false; use off-chain KYC gating if needed
+    notes: >-
+      MiCA-aligned usage; no investment promise. TekTok is a utility/payment
+      valuta for circular-economy flows and genesis royalties.

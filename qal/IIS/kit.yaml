@@ -1,0 +1,90 @@
+# qal/IIS/kit.yaml
+dom: IIS                     # dominio
+programa: Ampel Treinta Sesenta Hidrogeno Blended Wing Body Q100  # canonical (sin siglas)
+programa_alias:
+  - BWB-Q100
+  - AMPEL360
+
+# — Station Envelop (SE) —
+se:
+  - id: SE-IIS-10
+    objetivo: "IIS primary assembly"
+    takt_h: 6
+    recursos:
+      operadores: 8
+      robots: 2
+      utillajes: [ "JIG-IIS-10-A", "VAC-INF-01" ]
+    kits:
+      bom_ref: "MBOM-IIS-10-v1.0"
+      lote_min: 1
+    det_ref: "DET:SE:IIS:10:SE-IIS-10:V1.0"
+  - id: SE-IIS-20
+    objetivo: "IIS integration assembly"
+    takt_h: 8
+    recursos:
+      operadores: 10
+      fixtures: [ "FIX-IIS-02" ]
+    kits:
+      bom_ref: "MBOM-IIS-20-v1.0"
+    det_ref: "DET:SE:IIS:20:SE-IIS-20:V1.0"
+
+# — Domain Interface (DI) —
+di:
+  - id: DI-IIS↔AAA-01
+    tipo: ICD
+    descripcion: "IIS to structure interfaces"
+    version: "v1.0"
+    verificaciones: [ "fit-check", "load-path" ]
+    det_ref: "DET:DI:IIS:ICD:DI-IIS-AAA:V1.0"
+  - id: DI-IIS↔EDI-02
+    tipo: ICD
+    descripcion: "IIS electrical interfaces"
+    version: "v1.0"
+    verificaciones: [ "power-budget", "signal-integrity" ]
+    det_ref: "DET:DI:IIS:ICD:DI-IIS-EDI:V1.0"
+
+# — Component Equipped (CE) —
+ce:
+  - id: CE-IIS-PRIMARY
+    scope: "Primary IIS components with kit and vendor"
+    as_built: "EBOM-IIS-PRIMARY-v1.0"
+    vendor_pack: "AVL-IIS-2025Q3"
+    det_ref: "DET:CE:IIS:PRIMARY:CE-IIS-PRIMARY:V1.0"
+
+# — Component Vendor (CV) —
+cv:
+  - cage: "IIS01"
+    proveedor: "IIS Vendor Primary"
+    alcance: [ "IIS main components", "IIS materials" ]
+    ppap: "PPAP-IIS01-001-v1.0"
+    fai:  "FAI-IIS01-001-v1.0"
+    lt_dias: 45
+  - cage: "IIS02"
+    proveedor: "IIS Vendor Secondary"
+    alcance: [ "IIS secondary components", "IIS consumables" ]
+    ppap: "PPAP-IIS02-002-v1.0"
+    fai:  "FAI-IIS02-002-v1.0"
+    lt_dias: 30
+
+# — QS hooks (opcional, referenciados desde eventos) —
+qs_hooks:
+  - ref: "EstándarUniversal:EstadoCuantico-VQE-02.00-IIS-CI-PRIMARY-0001-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-AIR-AMPEL360-CAE-IIS-7b821d44-RestoDeVidaUtil"
+    det_ref: "DET:QS:IIS:CI:PRIMARY:V1.0"
+    note: "VQE for IIS primary component analysis"
+  - ref: "EstándarUniversal:EstadoCuantico-QML-02.00-IIS-SE-10-0002-v1.0-AmpelTreintaSesentaHidrogenoBlendedWingBodyQ100-GeneracionHybrida-AMPEL360-CAE-IIS-9a3f2b1c-RestoDeVidaUtil"
+    det_ref: "DET:QS:IIS:SE:10:V1.0"
+    note: "QML surrogate for IIS station optimization"
+
+# Metadata
+metadata:
+  owner: "IIS Domain Lead"
+  version: "v1.0"
+  last_updated: "2025-09-03"
+  qaudit_rollup: "QAUDIT:IIS:KIT:V1.0"
+
+# Aliases para compatibilidad
+aliases:
+  ta: "#ta-bwb -> #tfa-bwb"
+  sa: "#sa-iis -> #se-iis"
+  di_invariant: "#dinv-iis -> #di-iis"
+  ce_envelope: "#cenv-iis -> #ce-iis"

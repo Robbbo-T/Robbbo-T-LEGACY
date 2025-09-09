@@ -1,0 +1,6 @@
+load_case,max_stress_mpa,safety_factor,critical_location,displacement_mm
+LC1_2.5g,425.3,1.12,inter_bubble_joint_3,15.7
+LC2_neg1g,178.9,2.68,fuselage_crown,6.2
+LC3_pressure,312.1,1.45,pressure_bulkhead,8.9
+LC4_thermal,267.4,1.78,cfrp_ti_interface,12.3
+combined_envelope,456.2,1.05,inter_bubble_joint_3,18.1

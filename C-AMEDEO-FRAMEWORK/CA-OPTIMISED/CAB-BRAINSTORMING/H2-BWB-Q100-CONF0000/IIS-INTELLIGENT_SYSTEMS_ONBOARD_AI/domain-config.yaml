@@ -1,0 +1,49 @@
+---
+domain:
+  code: IIS
+  name: INTELLIGENT_SYSTEMS_ONBOARD_AI
+  description: Conceptual exploration of AI systems and intelligent automation
+  version: 1.0.0
+cax_integration:
+  pillar: CAB-BRAINSTORMING
+  flow: CA-OPTIMISED
+  configuration: H2-BWB-Q100-CONF0000
+ata_coverage:
+  primary_codes:
+  - '22'
+  - '31'
+  - '34'
+  - '42'
+  compliance_frameworks:
+  - ATA iSpec 2200
+  - S1000D
+  - DO-178C
+  - DO-254
+traceability:
+  cross_domain_refs:
+  - EDI
+  - OOO
+  - DDD
+  traces_enabled: true
+  bidirectional: true
+evidence:
+  det_pattern: DET:CAB:IIS:<SNS>:<activity>:V<rev>
+  cadet_tracking: true
+  hash_algorithm: SHA-256
+  signature_algorithm: Ed25519
+cab_specific:
+  concept_generation:
+    quantum_ml: true
+    grover_search: true
+    entropy_maximization: true
+  feasibility_analysis:
+    multi_criteria: true
+    trade_studies: true
+    risk_assessment: CVaR
+  artifact_types:
+  - concept_sketches
+  - feasibility_scorecards
+  - trade_study_reports
+  - rationale_graphs
+  - selected_concept_sets
+  focus_area: "AI-driven flight systems, autonomous operations, and machine learning integration"

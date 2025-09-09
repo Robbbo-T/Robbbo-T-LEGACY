@@ -1,0 +1,12 @@
+{
+  "event": "S1000D.BREX.Validated",
+  "ts": "2025-01-15T17:02:00.000Z",
+  "domain": "CAS",
+  "status": "FAIL",
+  "violations": [
+    {"code":"brx-200","detail":"info_code 019 not allowed"},
+    {"code":"brx-300","detail":"missing links.ce"}
+  ],
+  "det_ref": "DET:S1000D:CAS:brex_violation:V1.0",
+  "signature": "PQC-Dilithium3"
+}

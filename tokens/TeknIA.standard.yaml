@@ -1,0 +1,12 @@
+---
+teknia:
+  standards:
+    - id: "TT-20"
+      alias: "TeknIA-20"
+      base: "ERC-20 + EIP-2612 permit + AccessControl + Pausable"
+    - id: "TT-1155"
+      alias: "TeknIA-1155"
+      purpose: "Genesis certificates / attestations"
+  notes: >-
+    TeknIA defines repo/contract conventions for UTCS-valuta assets and genesis
+    attestations, interoperable with ERC standards.

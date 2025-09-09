@@ -1,0 +1,139 @@
+---
+# Requirements for CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC
+# Panoramic windows system integrated with Quantum Cryogenic Oasis (QCO)
+
+requirements:
+  - id: REQ-WIN-01
+    text: >-
+      Panoramic window system shall not generate EMI > 100 nT/√Hz @ 1 Hz
+      inside the QCO volume (maps to QCO EMI budget).
+    source: "CS-25.1309, DO-160 §20; QCO EMI budget"
+    driver: "safety"
+    acceptance: >-
+      Measured PSD ≤ 100 nT/√Hz@1 Hz and ≤ 20 nT/√Hz@10 Hz inside QCO cavity;
+      20% margin.
+    verification: "HIL-EMI Test"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "HIL CryoBench"
+    status: "baselined"
+    owner: "windows-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-02
+    text: "Display/OLED stack shall not degrade QCO thermal stability beyond 5 mK RMS."
+    source: "QCO Thermal Budget; DO-160 §4"
+    driver: "performance"
+    acceptance: >-
+      ΔT_RMS at mK stage ≤ 5 mK (P95) under worst-case display patterns.
+    verification: "HIL-Thermal"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
+      ci: "OLED-Stack-Assembly"
+    status: "baselined"
+    owner: "thermal-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-03
+    text: >-
+      Windows UI shall integrate with ABU-QuantumProtect to auto-degrade to
+      static/low-refresh and suspend Q compute on protection trigger;
+      recovery ≤ 60 s.
+    source: "System Safety; QRS/ABU"
+    driver: "safety"
+    acceptance: >-
+      Refresh reduces to ≤10 Hz; Q tasks suspended; recovery ≤60 s after
+      stimulus removal.
+    verification: "Injected turbulence/EMI; verify mode switch & recovery"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "Windows-UI-Controller"
+    status: "baselined"
+    owner: "safety-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-04
+    text: >-
+      Thermal gradient stack shall implement 300 K → 150 K (MLI) → 77 K
+      buffer to U-bay; no cabin fogging at OAT −40 °C.
+    source: "ATA-30; DO-160 §24"
+    driver: "performance"
+    acceptance: >-
+      Equivalent conductance ≤ 0.5 W/K per window; no internal condensation.
+    verification: "Chamber + calorimetry"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-10-STRUCTURE-1"
+      ci: "MLI-Thermal-Barrier"
+    status: "baselined"
+    owner: "thermal-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  - id: REQ-WIN-05
+    text: >-
+      All biometric/personalized calibration logic shall run locally
+      (edge-QCO) with no PII exfiltration; comply with DO-326A.
+    source: "Part-IS; DO-326A"
+    driver: "security"
+    acceptance: >-
+      Zero PII outbound; logs DET without PII; pen-test pass report.
+    verification: "Security testing; dataflow review"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "Biometric-Calibration-Engine"
+    status: "baselined"
+    owner: "security-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+
+  # BRK-DS Regulatory Requirements Integration
+  - id: BRK-CS-WIN-001
+    text: >-
+      CS-25.775/773 paragraph-level MoC maintained for ATA-56 windows
+      structural integrity and transparency requirements.
+    source: "EASA Certification Specifications CS-25"
+    driver: "safety"
+    acceptance: >-
+      CS-25.775/773 compliance map maintained with paragraph-level means
+      of compliance documented and evidence linkage established for windows
+      structural requirements.
+    verification: "Process"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "Windows-Structure-Analysis"
+    status: "baselined"
+    owner: "certification-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+    brk_source: "BRK-DS/CS/requirements.yaml"
+
+  - id: BRK-IS-WIN-001
+    text: >-
+      Edge-only processing for personalization (maps to REQ-WIN-05) with
+      information security controls per DO-326A.
+    source: "DO-326A Airworthiness Security Process Specification"
+    driver: "security"
+    acceptance: >-
+      Edge processing implementation verified with no PII exfiltration;
+      security testing passed; DO-326A compliance demonstrated.
+    verification: "Security testing; dataflow review"
+    links:
+      ce: "CE-CAD-Q100-AAA-ATA-56-WINDOWS-PANORAMIC"
+      cc: "CE-CC-CAD-Q100-AAA-ATA-56-20-STRUCTURE-2"
+      ci: "Security-Architecture"
+    status: "baselined"
+    owner: "security-lead@aqua-os"
+    last_updated: "2025-01-15T14:00:00Z"
+    brk_source: "BRK-DS/IS/requirements.yaml"
+
+meta:
+  owner: "windows-lead@aqua-os"
+  reviewer: "systems-lead@aqua-os"
+  last_updated: "2025-01-15T14:00:00Z"
+  change_ref: "BWB-Q100-U-BAY-QCO-ATA56"
+  regulatory_compliance: ["CS-25.775", "CS-25.773", "CS-25.1309", "DO-160", "DO-326A"]
+  qco_integration: true
+  abu_protection: true

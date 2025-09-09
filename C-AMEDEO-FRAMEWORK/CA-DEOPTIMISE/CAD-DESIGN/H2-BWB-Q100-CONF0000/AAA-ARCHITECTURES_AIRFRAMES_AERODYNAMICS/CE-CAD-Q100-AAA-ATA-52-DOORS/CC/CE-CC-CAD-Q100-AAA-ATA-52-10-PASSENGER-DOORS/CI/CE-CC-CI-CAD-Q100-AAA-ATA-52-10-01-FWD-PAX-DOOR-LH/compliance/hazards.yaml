@@ -1,0 +1,65 @@
+---
+version: 1
+meta:
+  item: CE-CC-CI-CAD-Q100-AAA-ATA-52-10-01-FWD-PAX-DOOR-LH
+  analysis_date: 2025-09-01
+  analyst: safety@aqua-os
+
+hazards:
+  - id: HAZ-52-10-01-001
+    description: "Door inadvertent opening during flight"
+    category: "Catastrophic"
+    probability: "Extremely Remote"
+    risk_level: "Acceptable"
+    mitigation:
+      - "Dual redundant latching system"
+      - "Pressure differential prevents opening"
+      - "Pilot door warning system"
+    verification:
+      - "Fail-safe analysis"
+      - "Pressure test"
+    status: "Closed"
+
+  - id: HAZ-52-10-01-002
+    description: "Door structural failure under pressure"
+    category: "Catastrophic"
+    probability: "Extremely Remote"
+    risk_level: "Acceptable"
+    mitigation:
+      - "Fail-safe structural design"
+      - "Multiple load paths"
+      - "Regular inspection requirements"
+    verification:
+      - "Ultimate load test"
+      - "Fatigue test"
+    status: "Closed"
+
+  - id: HAZ-52-10-01-003
+    description: "Door jamming preventing emergency egress"
+    category: "Hazardous"
+    probability: "Remote"
+    risk_level: "Acceptable"
+    mitigation:
+      - "Robust mechanism design"
+      - "Emergency release provisions"
+      - "Crew training procedures"
+    verification:
+      - "Mechanism reliability test"
+      - "Emergency procedure validation"
+    status: "Open"
+    actions:
+      - "Complete emergency release testing by 2025-09-30"
+
+  - id: HAZ-52-10-01-004
+    description: "Door seal failure causing rapid decompression"
+    category: "Major"
+    probability: "Remote"
+    risk_level: "Acceptable"
+    mitigation:
+      - "Redundant seal design"
+      - "Pressure monitoring system"
+      - "Emergency descent procedures"
+    verification:
+      - "Seal integrity test"
+      - "Pressure decay test"
+    status: "Closed"

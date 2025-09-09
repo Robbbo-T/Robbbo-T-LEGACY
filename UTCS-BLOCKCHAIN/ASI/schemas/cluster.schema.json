@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Innovation Cluster",
+  "type": "object",
+  "required": ["cluster_id", "theme", "members", "coherence_score"],
+  "properties": {
+    "cluster_id": {
+      "type": "string",
+      "description": "Unique cluster identifier"
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["energy", "co2", "reuse", "life_ext", "risk", "cross_domain"],
+      "description": "Primary sustainability theme"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "anchor": {"type": "string"},
+          "score": {"type": "number"},
+          "contribution": {"type": "number"}
+        },
+        "required": ["anchor", "score"]
+      },
+      "minItems": 2
+    },
+    "coherence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Internal cluster coherence (0-1)"
+    },
+    "emergence_metrics": {
+      "type": "object",
+      "properties": {
+        "formation_speed_days": {"type": "number"},
+        "growth_rate": {"type": "number"},
+        "stability_index": {"type": "number"}
+      }
+    },
+    "innovation_indicators": {
+      "type": "object",
+      "properties": {
+        "novelty_count": {"type": "integer"},
+        "breakthrough_potential": {"type": "number"},
+        "adoption_velocity": {"type": "number"}
+      }
+    },
+    "domains": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Participating domains"
+    },
+    "pillars": {
+      "type": "array", 
+      "items": {"type": "string"},
+      "description": "Participating CAX pillars"
+    }
+  }
+}
