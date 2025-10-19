@@ -1,4 +1,3 @@
----
 name: asi-guardrails
 permissions:
   contents: read
