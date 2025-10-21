@@ -1,0 +1,180 @@
+{
+  "utcs_mi": "Est\u00e1ndarUniversal:AssessmentExample-RIECalculation-MBA-Demo-01.00-ExampleStudentAssessment-0001-v1.0-Aerospace And Quantum United Advanced Venture-GeneracionHybrida-CROSS-Amedeo Pelliccia-example01-RestoDeVidaUtil",
+  "student_id": "MBA-2025-STUDENT-001",
+  "cohort": "2025-2026",
+  "assessment_period": {
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  "metrics": {
+    "M1": {
+      "raw_value": 2,
+      "multiplier": 1.2,
+      "adjusted_value": 2.4,
+      "evidence_items": [
+        {
+          "id": "HORIZON-DIGITAL-2025-001",
+          "type": "proposal",
+          "status": "stage1_passed",
+          "evidence_hash": "d4e5f67890123456789012345678901234567890123456789012345679abc120"
+        },
+        {
+          "id": "CLEAN-AVIATION-BWB-H2",
+          "type": "proposal",
+          "status": "submitted",
+          "evidence_hash": "e5f67890123456789012345678901234567890123456789012345679abc123d0"
+        }
+      ]
+    },
+    "M2": {
+      "raw_value": 4,
+      "multiplier": 1.0,
+      "adjusted_value": 4.0,
+      "evidence_items": [
+        {
+          "id": "zenodo.12345678",
+          "type": "repo",
+          "status": "delivered_on_time",
+          "evidence_hash": "f67890123456789012345678901234567890123456789012345679abc123de00"
+        },
+        {
+          "id": "github.com/student/h2-bwb-optimizer",
+          "type": "repo",
+          "status": "delivered_on_time",
+          "evidence_hash": "67890123456789012345678901234567890123456789012345679abc123def00"
+        }
+      ]
+    },
+    "M3": {
+      "raw_value": 1,
+      "multiplier": 1.6,
+      "adjusted_value": 1.6,
+      "evidence_items": [
+        {
+          "id": "EASA-CRI-H2-SYSTEMS",
+          "type": "standard",
+          "status": "funded",
+          "evidence_hash": "7890123456789012345678901234567890123456789012345679abc123def000"
+        }
+      ]
+    },
+    "M4": {
+      "raw_value": 3,
+      "multiplier": 1.6,
+      "adjusted_value": 4.8,
+      "evidence_items": [
+        {
+          "id": "AIRBUS-LOI-H2-BWB-2025",
+          "type": "loi",
+          "status": "funded",
+          "evidence_hash": "890123456789012345678901234567890123456789012345679abc123def0100"
+        },
+        {
+          "id": "THALES-PILOT-QUANTUM-NAV",
+          "type": "pilot",
+          "status": "funded",
+          "evidence_hash": "90123456789012345678901234567890123456789012345679abc123def01200"
+        }
+      ]
+    },
+    "M5": {
+      "raw_value": 8,
+      "multiplier": 2.0,
+      "adjusted_value": 16.0,
+      "evidence_items": [
+        {
+          "id": "DET-PACKAGE-COMPLETE-V1",
+          "type": "workshop",
+          "status": "delivered_on_time",
+          "evidence_hash": "0123456789012345678901234567890123456789012345679abc123def012300"
+        }
+      ]
+    },
+    "M6": {
+      "raw_value": 2,
+      "multiplier": 1.6,
+      "adjusted_value": 3.2,
+      "evidence_items": [
+        {
+          "id": "EU-POLICY-BRIEF-H2-AVIATION",
+          "type": "workshop",
+          "status": "funded",
+          "evidence_hash": "123456789012345678901234567890123456789012345679abc123def0123400"
+        }
+      ]
+    }
+  },
+  "evidence": {
+    "det_references": [
+      "DET:CAB:MBA:RIE:student_assessment:V1",
+      "DET:CAB:MBA:RIE:proposal_submission:V2",
+      "DET:CAB:MBA:RIE:standards_contribution:V1"
+    ],
+    "oracle_validations": {
+      "github": {
+        "validated": true,
+        "timestamp": "2025-12-31T23:59:59Z",
+        "source": "github_api_v4",
+        "confidence": 0.95
+      },
+      "zenodo": {
+        "validated": true,
+        "timestamp": "2025-12-31T23:59:59Z",
+        "source": "zenodo_api",
+        "confidence": 0.98
+      },
+      "cordis": {
+        "validated": true,
+        "timestamp": "2025-12-31T23:59:59Z",
+        "source": "cordis_api",
+        "confidence": 0.92
+      },
+      "standards_bodies": {
+        "validated": true,
+        "timestamp": "2025-12-31T23:59:59Z",
+        "source": "easa_registry",
+        "confidence": 0.88
+      }
+    },
+    "supporting_documents": [
+      {
+        "type": "proposal",
+        "hash": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+        "source": "horizon_europe_portal"
+      },
+      {
+        "type": "publication",
+        "hash": "234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef0",
+        "source": "zenodo_repository"
+      }
+    ]
+  },
+  "calculation": {
+    "raw_scores": {
+      "M1": 2.4,
+      "M2": 4.0,
+      "M3": 1.6,
+      "M4": 4.8,
+      "M5": 16.0,
+      "M6": 3.2
+    },
+    "normalized_scores": {
+      "M1": 0.15,
+      "M2": 0.25,
+      "M3": 0.1,
+      "M4": 0.3,
+      "M5": 1.0,
+      "M6": 0.2
+    },
+    "weighted_scores": {
+      "M1": 0.045,
+      "M2": 0.05,
+      "M3": 0.015,
+      "M4": 0.045,
+      "M5": 0.1,
+      "M6": 0.02
+    },
+    "final_rie": 275.0,
+    "timestamp": "2025-12-31T23:59:59Z"
+  }
+}

@@ -1,0 +1,224 @@
+---
+# Teknia Token System Specification
+# Dual-layer educational token economy compliant with MiCA/GDPR
+
+version: "1.0"
+framework: "MBA_HighTech_Strategic"
+
+tokens:
+  teknia_m:
+    name: "Teknia Merit Token"
+    symbol: "TEKNIA-M"
+    type: "soulbound"
+    description: "Non-transferable merit recording token"
+
+    properties:
+      transferable: false
+      tradeable: false
+      monetary_value: false
+      burnable: false
+      mintable: true
+
+    purpose:
+      - "Record RIE points and achievements"
+      - "Store evidence of academic contributions"
+      - "Provide reputation scoring"
+      - "Enable governance participation"
+
+    compliance:
+      mica_classification: "utility_non_financial"
+      gdpr_considerations:
+        - "Pseudonymized student IDs only"
+        - "Right to erasure via token burn"
+        - "Data minimization in metadata"
+        - "Consent required for minting"
+
+    minting_triggers:
+      - event: "RIE_assessment_complete"
+        condition: "validated_evidence && det_signed"
+        amount: "rie_score_points"
+      - event: "proposal_submission"
+        condition: "eu_call_eligible && part_b_complete"
+        amount: "base_proposal_points * quality_multiplier"
+      - event: "standards_contribution"
+        condition: "accepted_by_standards_body"
+        amount: "contribution_impact_score"
+
+  teknia_c:
+    name: "Teknia Credit Voucher"
+    symbol: "TEKNIA-C"
+    type: "internal_voucher"
+    description: "Educational service credit voucher"
+
+    properties:
+      transferable: false
+      tradeable: false
+      external_exchange: false
+      burnable: true
+      mintable: false
+
+    purpose:
+      - "Redeem tuition fee discounts"
+      - "Access to premium services"
+      - "Fund research trips/conferences"
+      - "Purchase educational materials"
+
+    compliance:
+      mica_classification: "internal_voucher_non_emt"
+      gdpr_considerations:
+        - "Transaction logging pseudonymized"
+        - "Spending history aggregated only"
+        - "No personal data in voucher metadata"
+
+    allocation_mechanism:
+      source: "scholarship_pool"
+      conversion_rate: "100_RIE_points = 1_TEKNIA_C"
+      funding_sources:
+        - "EU_grant_allocations"
+        - "industry_sponsorships"
+        - "project_overheads"
+        - "institutional_matching_funds"
+
+    redemption_rules:
+      burn_on_use: true
+      expiration: "24_months_from_allocation"
+      minimum_redemption: "0.1_TEKNIA_C"
+      allowed_services:
+        - "tuition_reduction"
+        - "research_travel"
+        - "conference_attendance"
+        - "premium_mentoring"
+        - "certification_programs"
+
+conversion_mechanics:
+  rie_to_teknia_m:
+    formula: "1:1 (1 RIE point = 1 TEKNIA-M)"
+    frequency: "quarterly_assessment"
+    validation: "oracle_confirmed && det_signed"
+
+  teknia_m_to_teknia_c:
+    formula: "100:1 (100 TEKNIA-M = 1 TEKNIA-C)"
+    frequency: "on_demand"
+    constraints:
+      - "pool_availability > requested_amount"
+      - "student_active_status == true"
+      - "governance_approval_if_amount > threshold"
+
+governance_integration:
+  tetknia_m_voting_weight:
+    formula: "sqrt(teknia_m_balance) * tenure_multiplier"
+    max_individual_weight: "5%"
+
+  proposal_types:
+    - "curriculum_modifications"
+    - "assessment_criteria_updates"
+    - "partnership_approvals"
+    - "budget_allocation_preferences"
+
+  voting_mechanics:
+    quorum: "30% of active students"
+    approval_threshold: "60% for standard proposals"
+    veto_threshold: "75% for major changes"
+    timelock: "7_days_implementation_delay"
+
+oracles:
+  rie_assessment_oracle:
+    source: "RIE_calculation_engine"
+    validation: "multi_source_evidence_verification"
+    frequency: "quarterly"
+
+  evidence_validation_oracle:
+    sources:
+      - "github_api"
+      - "zenodo_api"
+      - "cordis_api"
+      - "standards_registries"
+    validation: "cryptographic_signature_verification"
+
+  scholarship_pool_oracle:
+    source: "funding_management_system"
+    validation: "financial_audit_trail"
+    update_frequency: "monthly"
+
+security_measures:
+  evidence_integrity:
+    hash_algorithm: "SHA256"
+    signature_scheme: "Ed25519"
+    timestamp_service: "RFC3161_compliant"
+
+  access_control:
+    student_permissions: ["view_own_balance", "redeem_credits", "vote"]
+    faculty_permissions: ["view_cohort_stats", "validate_evidence"]
+    admin_permissions: ["mint_tokens", "manage_pools", "system_maintenance"]
+
+  audit_trail:
+    all_transactions_logged: true
+    immutable_history: true
+    quarterly_audit_reports: true
+    independent_verification: true
+
+privacy_protection:
+  data_minimization:
+    - "Only essential academic data stored"
+    - "Personal identifiers pseudonymized"
+    - "Aggregate statistics preferred"
+
+  consent_management:
+    - "Explicit opt-in for token participation"
+    - "Granular consent for data uses"
+    - "Easy withdrawal mechanisms"
+
+  anonymization:
+    - "k-anonymity for cohort reporting"
+    - "Differential privacy for analytics"
+    - "Zero-knowledge proofs for verification"
+
+compliance_monitoring:
+  mica_compliance:
+    regular_classification_review: "quarterly"
+    legal_opinion_updates: "annually"
+    regulatory_change_monitoring: "continuous"
+
+  gdpr_compliance:
+    privacy_impact_assessments: "before_major_changes"
+    data_subject_rights_handling: "automated_where_possible"
+    breach_notification_procedures: "24_hour_protocol"
+
+  audit_schedule:
+    internal_audits: "monthly"
+    external_audits: "quarterly"
+    regulatory_reviews: "annually"
+
+risk_mitigation:
+  gaming_prevention:
+    - "Multi-oracle evidence validation"
+    - "Peer review mechanisms"
+    - "Statistical anomaly detection"
+    - "Penalty mechanisms for fraud"
+
+  technical_risks:
+    - "Multi-signature requirements"
+    - "Circuit breaker mechanisms"
+    - "Disaster recovery procedures"
+    - "Key rotation protocols"
+
+  regulatory_risks:
+    - "Conservative token design"
+    - "Legal review processes"
+    - "Regulatory sandbox participation"
+    - "Compliance buffer mechanisms"
+
+integration_endpoints:
+  tetknia_token_api:
+    base_url: "https://api.tetknia.edu/v1/"
+    authentication: "Ed25519_signed_requests"
+    rate_limits: "standard_academic_usage"
+
+  det_integration:
+    pattern: "DET:CAB:MBA:TOK:<action>:V<version>"
+    required_fields: ["student_id", "amount", "evidence_hash", "timestamp"]
+
+  qaudit_integration:
+    signature_requirement: true
+    hash_chaining: true
+    immutable_history: true

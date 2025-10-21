@@ -1,4 +1,6 @@
 name: AGUA-TRIPS Protocol Validation
+permissions:
+  contents: read
 
 on:
   push:

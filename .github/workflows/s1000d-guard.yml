@@ -21,7 +21,8 @@ jobs:
           fi
           echo "Found S1000D-like paths:"
           printf "%s\n" "$MATCHES"
-          BAD="$(echo "$MATCHES" | grep -vE '^C-AMEDEO-FRAMEWORK/(CA-DEOPTIMISE|CA-OPTIMISED)/CAS-SUSTAINMENT/.*/S1000D/' || true)"
+          BAD="$(echo "$MATCHES" | \
+            grep -vE '^C-AMEDEO-FRAMEWORK/(CA-DEOPTIMISE|CA-OPTIMISED)/CAS-SUSTAINMENT/.*/S1000D/' || true)"
           if [ -n "$BAD" ]; then
             echo "::error::S1000D/DMRL/DMC paths outside CAS-SUSTAINMENT are forbidden:"
             printf "%s\n" "$BAD"

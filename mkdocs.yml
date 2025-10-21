@@ -1,0 +1,95 @@
+site_name: Teknia Tokens · Documentación S1000D-ready
+site_description: Portal MkDocs para Teknia Tokens con estructura compatible con S1000D y trazabilidad UTCS‑MI v5.0
+site_author: Aqua Technologies
+repo_url: https://example.com/teknia-tokens
+docs_dir: docs
+
+theme:
+  name: mkdocs
+
+nav:
+  - Inicio: index.md
+  - 05 · Architectures (Diagrams):
+    - AMPEL360 V Transponder · Heuritma: diagrams/ampel360-v-transponder.md
+  - 00 · Introducción:
+    - Alcance y objetivos: 00-introduccion/alcance.md
+    - Conceptos clave: 00-introduccion/conceptos.md
+  - 10 · Conformidad S1000D:
+    - Guía de conformidad: 10-conformidad/guia-s1000d.md
+    - Mapeo rápido (S1000D → MkDocs): 10-conformidad/mapeo.md
+  - 20 · CSDB (Repositorio fuente):
+    - Estructura y control: 20-csdb/estructura.md
+    - Flujo de trabajo: 20-csdb/workflow.md
+  - 25 · Dominios:
+    - AAP — AIRPORTS_ADAPTATIONS: domains/AAP_AIRPORTS_ADAPTATIONS.md
+  - 30 · Nomenclatura y Códigos:
+    - UTCS‑MI v5.0: 30-nomenclatura/utcs-mi-v5.md
+    - S1000D · Data Module Code (DMC): 30-nomenclatura/s1000d-dmc.md
+    - ICN · Ilustraciones: 30-nomenclatura/icn.md
+  - 40 · DMRL (Lista de Requisitos de Módulos de Datos):
+    - DMRL · Descripción: 40-dmrl/dmrl.md
+    - DMRL · Catálogo: _data/dmrl.csv
+  - 50 · Módulos de Datos:
+    - Vista general: 50-modulos/README.md
+    - DES · Descriptivo: 50-modulos/des/ejemplo-des.md
+    - PRC · Procedimiento: 50-modulos/prc/ejemplo-prc.md
+    - FSC · Fallos: 50-modulos/fsc/ejemplo-fsc.md
+  - 60 · Ilustraciones y Medios:
+    - ICN y formatos: 60-ilustraciones/icn.md
+  - 70 · Publicación (IETP estático):
+    - Ensamblado y build: 70-publicacion/ietp.md
+  - 80 · Mantenimiento y Control de Cambios:
+    - Cambios y versionado: 80-mantenimiento/cambios.md
+  - 90 · Anexos:
+    - Glosario: 90-anexos/glosario.md
+    - Esquema JSON (metadatos DM): 90-anexos/esquemas/s1000d_dm_meta.schema.json
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - def_list
+  - attr_list
+  - footnotes
+  - tables
+  - fenced_code
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/your-repo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/yourprofile
+  analytics:
+    # google:
+    #   tracking_id: UA-XXXXXXXXX-X
+  copyright: 'Copyright © 2025 Teknia Tokens. Todos los derechos reservados.'
+  theme_color: '#ffffff'
+  background_color: '#000000'
+  display_header_text: true
+  header_text_color: '#000000'
+  logo: 'images/logo.png'
+  favicon: 'images/favicon.ico'
+  repo_name: 'Teknia Tokens'
+  repo_url: 'https://github.com/yourusername/your-repo'
+  edit_uri: 'edit/main/docs/'
+  extra_css:
+    - 'stylesheets/extra.css'
+  extra_javascript:
+    - 'javascripts/extra.js'
+  search:
+    language: 'es'
+  sitemap:
+    changefreq: daily
+    priority: 0.7
+  robots:
+    - User-agent: '*'
+      Disallow: '/admin/'
+      Allow: '/'
+  custom404: '404.html'
+  custom500: '500.html'

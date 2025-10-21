@@ -1,0 +1,158 @@
+---
+# MBA High Tech & Strategic Developments Domain Configuration
+# CAB-specific configuration for educational innovation framework
+
+domain:
+  id: "MBA-HIGHTECH-STRATEGIC"
+  name: "MBA High Tech & Strategic Developments"
+  description: "Educational innovation framework for STEM-to-business leaders"
+  version: "1.0.0"
+  pillar: "CAB"
+
+utcs_mi:
+  standard: >-
+    EstándarUniversal:CanvasEstrategico-PropuestaInicial-MiCA+GDPR+HorizonEurope+
+    ErasmusPlus-2.3-ModeloHibridoEscuelaEuropaTokenMeritocracia-0001-v1.0-Aerospace
+    And Quantum United Advanced Venture-GeneracionHybrida-CROSS-Amedeo Pelliccia-
+    a1b2c3d4-2025-2028
+
+framework_integration:
+  cao_inputs:
+    - "QAL-Policy-Pack"
+    - "Strategic-Objectives.yaml"
+    - "EU-Funding-Landscape.yaml"
+    - "Market-Needs-Analysis.json"
+
+  cad_outputs:
+    - "Selected-Concept-Set.json"
+    - "Student-Proposals.yaml"
+    - "Industry-Partnerships.yaml"
+    - "Standards-Contributions.yaml"
+
+  evidence_chain:
+    det_patterns:
+      - "DET:CAB:MBA:RIE:student_assessment:V<rev>"
+      - "DET:CAB:MBA:RIE:proposal_submission:V<rev>"
+      - "DET:CAB:MBA:RIE:consortium_participation:V<rev>"
+      - "DET:CAB:MBA:RIE:standards_contribution:V<rev>"
+      - "DET:CAB:MBA:TOK:merit_token_emission:V<rev>"
+      - "DET:CAB:MBA:TOK:credit_token_allocation:V<rev>"
+
+rie_configuration:
+  metrics:
+    - id: "M1"
+      name: "EU_Proposals"
+      weight: 0.30
+      description: "Proposals presented by student/team (Part B quality, TRL fit, support letters)"
+    - id: "M2"
+      name: "Open_Science_Tech"
+      weight: 0.20
+      description: "Zenodo DOI, FAIR datasets, accepted PRs, UTCS-MI repos"
+    - id: "M3"
+      name: "Standardization"
+      weight: 0.15
+      description: "Contributions to EASA/ETSI/ISO/IEEE, BREX/S1000D-Q packs"
+    - id: "M4"
+      name: "Industry_Impact"
+      weight: 0.15
+      description: "LOIs, pilots, MoUs, SME/startup adoption"
+    - id: "M5"
+      name: "Evidence_Quality"
+      weight: 0.10
+      description: "Complete DET, UTCS traceability, BREX/CI lint coverage"
+    - id: "M6"
+      name: "Ecosystem_Impact"
+      weight: 0.10
+      description: "Workshops, policy briefs, educational/documentary impact"
+
+  state_multipliers:
+    delivered_submitted: 1.00
+    stage1_passed: 1.20
+    funded_adopted: 1.60
+    delivered_on_time_kpis: 2.00
+
+  normalization:
+    method: "min_max_by_cohort"
+    formula: "(M_k_i - min(M_k)) / (max(M_k) - min(M_k))"
+
+token_economy:
+  teknia_m:
+    type: "soulbound"
+    transferable: false
+    monetary_value: false
+    purpose: "Merit recording and evidence tracking"
+
+  teknia_c:
+    type: "internal_voucher"
+    transferable: false
+    exchangeable_externally: false
+    purpose: "Educational service credits"
+    conversion_rate: "100 RIE points = 1 Teknia-C"
+    burn_on_use: true
+
+  funding_sources:
+    - "EU_grants"
+    - "industry_sponsorships"
+    - "project_overheads"
+    - "partnership_agreements"
+
+oracles:
+  github_integration:
+    endpoint: "github_api"
+    validation: "UTCS-MI_lint_CI_coverage"
+
+  zenodo_integration:
+    endpoint: "zenodo_api"
+    validation: "DOI_verification_FAIR_compliance"
+
+  cordis_integration:
+    endpoint: "cordis_api"
+    validation: "proposal_status_funding_verification"
+
+  standards_integration:
+    endpoints: ["EASA", "ETSI", "ISO"]
+    validation: "contribution_ID_verification"
+
+governance:
+  councils:
+    academic:
+      members: ["faculty", "researchers", "ethics_board"]
+      responsibilities: ["curriculum", "quality_assurance", "ethics_oversight"]
+
+    eu_standards:
+      members: ["EU_representatives", "standards_experts", "policy_advisors"]
+      responsibilities: ["EU_alignment", "best_practices", "integrity_monitoring"]
+
+    industry:
+      members: ["industry_partners", "SME_representatives", "startup_advisors"]
+      responsibilities: ["relevance_assessment", "employability", "pilot_programs"]
+
+compliance:
+  frameworks:
+    - "MiCA"
+    - "GDPR"
+    - "Horizon_Europe_regulations"
+    - "ASI_v2.0"
+
+  privacy:
+    data_minimization: true
+    pseudonymization: true
+    consent_management: true
+
+  security:
+    evidence_integrity: "sha256_Ed25519"
+    audit_trail: "DET_QAUDIT_chain"
+    access_control: "role_based"
+
+deployment:
+  phases:
+    pilot: "0-3_months"
+    phase_1: "4-9_months"
+    phase_2: "10-15_months"
+    phase_3: "16-24_months"
+
+  success_criteria:
+    rie_score_threshold: 800
+    eu_funding_success_rate: 0.15
+    industry_engagement_rate: 0.80
+    employment_rate: 0.90
